@@ -470,35 +470,56 @@ border: 1px solid #fff;
 			{
 				background: none;
 			}
-			.carousel-control.right
+.carousel-control.right
 			{
 				background: none;
 			}
+
 
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   bottom: 3rem;
   z-index: 10;
-	padding-top: 10px;
-	padding-bottom: 10px;
-  	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+  padding-left: 5px;
 	color: #fff;
 	text-align: center;
 	background: rgba(0,0,0,0.4);
 }
 
+.carousel-caption > h1 {
+  text-align: left;
+  font-weight: 1000;
+  font-size: 20px;
+  padding: 5px 0px 10px;
+}
+
+.carousel-caption > p {
+  text-align: left;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: 20rem;
- background-color: #777;
+ background-color: #31363B;
 }
+
+
+
 .carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 20rem;
-}
+position: relative;
+margin-left: 45%;
+width:  250px;
+height: auto;
+background-position: center top;
+background-repeat:   no-repeat;
+background-attachment: fixed;
+background-size:     contain;
+      }
 
 @media (min-width: 40em) {
   /* Bump up size of carousel content */
@@ -508,6 +529,11 @@ border: 1px solid #fff;
     line-height: 1.1;
   }
 
+  .carousel-caption h1 {
+    margin-bottom: 1.25rem;
+    font-size: 2.25rem;
+    line-height: 1.1;
+  }
 
   .button {
       padding: 15px 32px;
@@ -524,3 +550,4 @@ border: 1px solid #fff;
       display: inline-block;
       font-size: 10px;
   }
+}

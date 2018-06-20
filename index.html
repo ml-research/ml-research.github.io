@@ -13,6 +13,8 @@
 
 <link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="./css/jquery.dataTables.min.css" rel="stylesheet" media="screen">
+<link href="./css/dataTables.bootstrap4.min.css" rel="stylesheet" media="screen">
+
 <link href="./css/style.css" rel="stylesheet">
 
 <script src="./build/jquery.min.js"></script>
@@ -120,19 +122,18 @@ $("a").on('click', function(event) {
             <div class="carousel-inner">
 
             <div class="carousel-item active">
-              <img class="first-slide" src="./carousel/sumProduct.png" alt="">
+              <img class="d-block" src="./carousel/sumProduct.png" alt="">
               <div class="container">
                 <div class="carousel-caption text-left">
-                  <h1>Deep Probabilistic Learning</h1>
-                  <p>How can probabilistic machine learners decide autonomously which representation is best for the data at hand?
-                  How much can they benefit from deep architectures? Can deep models expliticely quantify uncertainties?</p>
+                  <h1>Deep Generative Models</h1>
+                  <p>How can probabilistic models decide autonomously which representation is best for the data?</p>
                 </div>
               </div>
             </div>
 
 
               <div class="carousel-item ">
-              <img class="second-slide" src="./carousel/starai.png" alt="">
+              <img class="d-block" src="./carousel/starai.png" alt="">
                 <div class="container">
                   <div class="carousel-caption text-left">
                     <h1>Statistical Relational AI </h1>
@@ -142,12 +143,11 @@ $("a").on('click', function(event) {
               </div>
 
             <div class="carousel-item">
-              <img class="third-slide" src="./carousel/code.png" alt="">
+              <img class="d-block" src="./carousel/code.png" alt="">
               <div class="container">
                 <div class="carousel-caption text-left">
                   <h1>Probabilistic Programming</h1>
-                  <p>How should high-level programming languages for advancing ML and AI look like?
-                  What are good programmatic abstractions of data and models for probabilistic inference and learning?</p>
+                  <p>How to use programmatic abstractions of data and models for advancing ML and AI?</p>
                 </div>
               </div>
             </div>
@@ -156,12 +156,11 @@ $("a").on('click', function(event) {
 
 
               <div class="carousel-item">
-                <img class="third-slide" src="./carousel/argumentative.png" alt="">
+                <img class="d-block" src="./carousel/argumentative.png" alt="">
                 <div class="container">
                   <div class="carousel-caption text-left">
                     <h1>Argumentative Machine Learning</h1>
-                    <p>Can learned results be made understandable for us?
-                    How can humans understand the reasons behind computations, assess how learners work and, in turn, build trust.</p>
+                    <p>How can humans assess how learners work and, in turn, build trust?</p>
                   </div>
                 </div>
               </div>
@@ -169,7 +168,7 @@ $("a").on('click', function(event) {
 
 
               <div class="carousel-item">
-                <img class="third-slide" src="./carousel/plants.png" alt="">
+                <img class="d-block" src="./carousel/plants.png" alt="">
                 <div class="container">
                   <div class="carousel-caption text-left">
                     <h1>Deep Plant Phenotpying</h1>
@@ -179,22 +178,21 @@ $("a").on('click', function(event) {
               </div>
 
                 <div class="carousel-item">
-                  <img class="third-slide" src="./carousel/ehr.png" alt="">
+                  <img class="d-block" src="./carousel/ehr.png" alt="">
                   <div class="container">
                     <div class="carousel-caption text-left">
                       <h1>Data-Driven Medicine</h1>
-                      <p>How can computers help us to understand electronic healt records?
-                     How can they help to improve our health?</p>
+                      <p>How can computers extract healthy knowledge from electronic healt records?</p>
                     </div>
                   </div>
                 </div>
 
                 <div class="carousel-item">
-                  <img class="third-slide" src="./carousel/compilation.png" alt="">
+                  <img class="d-block" src="./carousel/compilation.png" alt="">
                   <div class="container">
                     <div class="carousel-caption text-left">
                       <h1>Lifted Statistical Inference</h1>
-                      <p>How can machines detect and exploit computational redundancies to solve ML and AI models faster?</p>
+                      <p>How can machines exploit computational redundancies to solve ML and AI models faster?</p>
                     </div>
                   </div>
                 </div>
@@ -214,20 +212,20 @@ $("a").on('click', function(event) {
 </div>
 
 
-<br>
+
 <div class="container" id ="research">
-<table style="text-align: left">
-  <td>
+<div class="row">
+<div class="col-md-7">
   <div id="htname">Machine Learning Lab </div>
-  <div id="htem">Computer Science Department and Centre for Cognitive Science, TU Darmstadt</div>
-  <div id="htem">Altes Hauptgebäude, Room 074, Hochschulstrasse 1, 64289 Darmstadt, Germany</div>
-  <div id="htem"><img src="./images/phone.png" style="height:15px"> +49-6151-16-24411 <img src="./images/mail.jpg" style="height:15px"> kersting _at_ cs.tu-darmstadt.de</div>
-</td>
-<td valign="top">
-  <img id="logo" src="./images/FB20TUDAlogo.png" style="text-align: right; margin: 19px 20px 10px 30px;height:55px"></a>
-  <img id="logo" src="./images/ccsLogo.jpg" style="text-align: right; margin: 19px 10px 10px 10px;height:60px"></a>
-</td>
-</table>
+  <div id="htem">Computer Science Department and Centre for Cognitive Science, TU Darmstadt, Altes Hauptgebäude, Room 074, Hochschulstrasse 1, 64289 Darmstadt, Germany
+    <br><img src="./images/phone.png" style="height:15px"> +49-6151-16-24411 <img src="./images/mail.jpg" style="height:15px"> kersting _at_ cs.tu-darmstadt.de</div>
+</div>
+<div class="col-md-4">
+  <img id="logo" class="imgsm" src="./images/FB20TUDAlogo.png" style="text-align: right; margin: 10px 5px 5px 3px;height:55px"></a>
+
+  <img id="logo" class="imgsm" src="./images/ccsLogo.jpg" style="text-align: right; margin: 10px 1px 10px 1px;height:60px"></a>
+</div>
+</div>
 <br>
 <b> Meetings by appointment, general consultation: thursdays, 13:30-14:30 o'clock</b>
 </div>
@@ -457,105 +455,170 @@ techniques as well as (deep) (un)supervised and reinforcement learning methods.
 <br><br>
 <h2>People's Infos</h2>
 
-<TABLE BORDER="0" width="100%" >
-<col width="130px"><col width="250px"><col width="130px"><col width="250px"><col width="130px"><col width="250px">
-
-<TR>
-
-  <TD height="150px" ><a href="https://kristiankersting.github.io/academicWebPage/" target="_blank"> <img src="./images/kersting3.jpg" class="rounded-circle imgme" style="height:100px"></a></TD>
-  <TD><span class="t2what">  <a href="https://kristiankersting.github.io/academicWebPage/" target="_blank"> Prof. Dr. Kristian Kersting</a>
-    <br><span class="t2where"> Head of the ML group</span>
-    <br><button type="button" class="btn btn-danger btn-xs disabled" style="font-size:12px;background-color: #900">
-      <a href="https://kristiankersting.github.io/academicWebPage/" target="_blank"> <font color="white">more info</font></a></span></TD>
-
-
-
-</TR>
-
-
-<TR>
-
-  <TD height="150px" ><img src="./images/elenaErdmann.jpg" class="rounded-circle imgme" style="height:100px"></TD>
-  <TD><span class="t2what">  Elena Erdmann (PhD)<br><span class="t2where"> currently</span></span></TD>
-
-
-  <TD><img src="./images/iconFemale.png" class="rounded-circle imgme" style="height:100px"></TD>
-  <TD><span class="t2what"> Dr. Jing Feng (PostDoc) <br><span class="t2where"> currently</span></span></TD>
-
-
-<TD><img src="./images/alejandroMolina.png" class="rounded-circle imgme" style="height:100px"></TD>
-<TD><span class="t2what">  Alejandro Molina (PhD)<br><span class="t2where"> currently</span></span></TD>
+<div class="row">
+  <div class="col-md-4">
+    <div class="pp">
+      <a href="https://kristiankersting.github.io/academicWebPage/" target="_blank"> <img src="./images/kersting3.jpg" class="rounded-circle imgme" style="height:100px"></a>
+      <div class="pp">
+        <span class="t2what"> <a href="https://kristiankersting.github.io/academicWebPage/" target="_blank"> Prof. Dr. Kristian Kersting</a></span>
+        <br><span class="t2where">Head of the ML group
+        <br><button type="button" class="btn btn-danger btn-xs disabled" style="font-size:12px;background-color: #900">
+        <a href="https://kristiankersting.github.io/academicWebPage/" target="_blank"> <font color="white">more info</font></a></span>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
-</TR>
-
-<TR>
-
-<TD><img src="./images/patrickSchramowski.png" class="rounded-circle imgme" style="height:100px"></TD>
-<TD><span class="t2what">  Patrick Schramowski (PhD)<br><span class="t2where"> currently</span></span></TD>
-
-<TD><img src="./images/Xiaoting_Shao.jpg" class="rounded-circle imgme" style="height:100px"></TD>
-<TD><span class="t2what">  Xiaoting Shao (PhD)<br><span class="t2where"> currently</span></span></TD>
-
-
-<TD><img src="./images/karlStelzner.jpg" class="rounded-circle imgme" style="height:100px"></TD>
-<TD><span class="t2what">  Karl Stelzner (PhD)<br><span class="t2where"> currently</span></span></TD>
-
-
-</TR>
-
-
-
-<TR>
-
-
-  <TD height="150px"><img src="./images/fabrizioVentola.jpg" class="rounded-circle imgme" style="height:100px"></TD>
-  <TD><span class="t2what">  Fabrizio Ventola (PhD)<br><span class="t2where"> currently</span></span></TD>
-
-
-
-</TR>
-
-
-<TR>
-<TD height="150px"><img src="./images/babakAhmadi.jpg" class="rounded-circle imgme" style="height:100px"></TD>
-<TD><span class="t2what">  Babak Ahmadi (PhD)<br><span class="t2when"> BitStar</span></span></TD>
-
-<TD><img src="./images/fabianHadiji.jpg" class="rounded-circle imgme" style="height:100px"></TD>
-<TD><span class="t2what">  Fabian Hadiji (PhD)<br><span class="t2when"> goedle.io</span></span></TD>
-
-<TD><img src="./images/ahmedJawad.jpg" class="rounded-circle imgme" style="height:100px"></TD>
-<TD><span class="t2what">  Ahmed Jawad (PhD)<br><span class="t2when"> Allianz</span></span></TD>
-</TR>
-
-<TR>
-<TD height="150px"><img src="./images/marionNeumann.jpg" class="rounded-circle imgme" style="height:100px"></TD>
-<TD><span class="t2what">  Marion Neumann (PhD)<br><span class="t2when"> Washington University, St. Louis</span></span></TD>
-
-<TD><img src="./images/mirwaesWahabzada.jpg" class="rounded-circle imgme" style="height:100px"></TD>
-<TD><span class="t2what">  Mirwaes Wahabzada (PhD)<br><span class="t2when"> University of Bonn</span></span></TD>
-
-<TD><img src="./images/martinMladenov.jpg" class="rounded-circle imgme" style="height:100px"></TD>
-<TD><span class="t2what">  Martin Mladenov <br><span class="t2when"> Google Research</span></span></TD>
-
-</TR>
-
-<TR>
-  <TD><img src="./images/zhaoXu.jpg" class="rounded-circle imgme" style="height:100px"></TD>
-  <TD><span class="t2what">  Dr. Zhao Xu (PostDoc)<br><span class="t2when"> NEC</span></span></TD>
-
-
-</TR>
+<div class="row">
+  <div class="col-md-4">
+    <div class="pp">
+      <img src="./images/elenaErdmann.jpg" class="rounded-circle imgme" style="height:100px">
+      <div class="pp">
+        <span class="t2what"> Elena Erdmann (PhD)</span>
+        <br><span class="t2where"> currently</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="pp">
+        <img src="./images/iconFemale.png" class="rounded-circle imgme" style="height:100px">
+        <div class="pp">
+          <span class="t2what"> Dr. Jing Feng (PostDoc)</span>
+          <br><span class="t2where"> currently</span>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="pp">
+      <img src="./images/alejandroMolina.png" class="rounded-circle imgme" style="height:100px">
+          <div class="pp">
+          <span class="t2what"> Alejandro Molina (PhD)</span>
+          <br><span class="t2where"> currently</span>
+        </div>
+    </div>
+  </div>
+</div>
 
 
 
-</table>
+<div class="row">
+  <div class="col-md-4">
+    <div class="pp">
+      <img src="./images/patrickSchramowski.png" class="rounded-circle imgme" style="height:100px">
+      <div class="pp">
+        <span class="t2what"> Patrick Schramowski (PhD)</span>
+        <br><span class="t2where"> currently</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="pp">
+        <img src="./images/Xiaoting_Shao.jpg" class="rounded-circle imgme" style="height:100px">
+        <div class="pp">
+          <span class="t2what"> Xiaoting Shao (PhD)</span>
+          <br><span class="t2where"> currently</span>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="pp">
+      <img src="./images/karlStelzner.jpg" class="rounded-circle imgme" style="height:100px">
+          <div class="pp">
+          <span class="t2what"> Karl Stelzner (PhD)</span>
+          <br><span class="t2where"> currently</span>
+        </div>
+    </div>
+  </div>
+</div>
 
-<br>
-<br><br>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="pp">
+      <img src="./images/fabrizioVentola.jpg" class="rounded-circle imgme" style="height:100px">
+      <div class="pp">
+        <span class="t2what"> Fabrizio Ventola (PhD)</span>
+        <br><span class="t2where"> currently</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="pp">
+      <img src="./images/babakAhmadi.jpg" class="rounded-circle imgme" style="height:100px">
+      <div class="pp">
+        <span class="t2what"> Dr. Babak Ahmadi (PhD)</span>
+        <br><span class="t2when"> BitStar</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="pp">
+        <img src="./images/fabianHadiji.jpg" class="rounded-circle imgme" style="height:100px">
+        <div class="pp">
+          <span class="t2what"> Dr. Fabian Hadiji(PhD)</span>
+          <br><span class="t2when"> goedle.io</span>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="pp">
+      <img src="./images/ahmedJawad.jpg" class="rounded-circle imgme" style="height:100px">
+          <div class="pp">
+          <span class="t2what"> Dr. Ahmed Jawad (PhD)</span>
+          <br><span class="t2when"> Allianz</span>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="pp">
+      <img src="./images/marionNeumann.jpg" class="rounded-circle imgme" style="height:100px">
+      <div class="pp">
+        <span class="t2what"> Dr. Marion Neumann (PhD)</span>
+        <br><span class="t2when"> Univ. of Washington, St. Louis</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="pp">
+        <img src="./images/mirwaesWahabzada.jpg" class="rounded-circle imgme" style="height:100px">
+        <div class="pp">
+          <span class="t2what"> Dr. Mirwaes Wahabzada (PhD)</span>
+          <br><span class="t2when"> Univ. of Bonn</span>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="pp">
+      <img src="./images/martinMladenov.jpg" class="rounded-circle imgme" style="height:100px">
+          <div class="pp">
+          <span class="t2what"> Martin Mladenov (PhD)</span>
+          <br><span class="t2when"> Google Research</span>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="pp">
+      <img src="./images/zhaoXu.jpg" class="rounded-circle imgme" style="height:100px">
+      <div class="pp">
+        <span class="t2what"> Dr. Zhao Xu (PostDoc)</span>
+        <br><span class="t2when"> Fraunhofer FIT</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -691,7 +754,7 @@ techniques as well as (deep) (un)supervised and reinforcement learning methods.
       </style>
 </noscript>
 
-<table id="pubTable" class="display"></table>
+<table id="pubTable" class="table table-striped table-bordered dt-responsive" ></table>
 
 <br>
 

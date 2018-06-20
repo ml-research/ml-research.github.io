@@ -2354,7 +2354,7 @@ var bibtexify = (function($) {
                                                }
                                             ],
                                'bPaginate': true,
-                               "pageLength": 20,
+                               "pageLength": 10,
                                "lengthMenu": [ [10, 20, 50, -1], [10, 20, 50, "All"] ],
                                "drawCallback": function ( settings ) {
                                  var api = this.api();
@@ -2364,7 +2364,7 @@ var bibtexify = (function($) {
                                  api.column(0, {page:'current'} ).data().each( function ( group, i ) {
                                    if ( last !== group ) {
                                      $(rows).eq( i ).before(
-                                       '<tr class="group" style="background-color:#EAE0C8;font-weight:bold;"><td colspan="2">'+group+'</td></tr>'
+                                       '<tr class="group" style="background-color:rgba(0,0,0,0.4);font-weight:bold;"><td colspan="2">'+group+'</td></tr>'
                                      );
                                      $(".biblink", this.$pubTable).on('click', EventHandlers.showbib);
                                      $(".bibclose", this.$pubTable).on('click', EventHandlers.hidebib);
