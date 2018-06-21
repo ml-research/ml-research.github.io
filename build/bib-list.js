@@ -1919,7 +1919,7 @@ var bibtexify = (function($) {
             }
             var itemStr = htmlify(bib2html[type](entryData));
             itemStr += "<div class='publ'><ul class='list-unstyled'>"
-            itemStr += bib2html.links(entryData);
+            itemStr += "<br>" + bib2html.links(entryData);
             itemStr += bib2html.bibtex(entryData);
             //itemStr +=  "<span class='pubd'>" + " "+ entryData.note + "<\/span>";
             //  }
@@ -1945,14 +1945,14 @@ var bibtexify = (function($) {
             //                 itemStr + '<\/div><\/div><\/div>'
             // }
             if(entryData.anote){ // image is given
-                itemStr = '<div class="mypubwrap"><div class="row"><div class="col-md-3"><span class="pubimg"><img src="' +
-                            entryData.anote + '" style="max-width: 100%; height: auto;vertical-align: middle;"><\/span><\/div>' +
+                itemStr = '<div class="mypubwrap"><div class="row"><div class="col-md-3"><img src="' +
+                            entryData.anote + '" class="pubimg" style="max-width: 120px; height: auto;vertical-align: left;"><\/div>' +
                 '<div class="col-md-9">' +
                     itemStr + '<\/div>' +
                      '<\/div><\/div><\/div>'
             } else {
               itemStr = '<div class="mypubwrap"><div class="row"><div class="col-md-2"><span class="pubimg"><img src="' +
-                          "./images/whiteImage.png" + '" style="max-width: 100%; height: auto;vertical-align: middle;"><\/span><\/div>' +
+                          "./images/whiteImage.png" + '" style="max-width: 120px; height: auto;vertical-align: middle;"><\/span><\/div>' +
               '<div class="col-md-10">' +
                   itemStr + '<\/div>' +
                    '<\/div><\/div><\/div>'
@@ -1975,11 +1975,11 @@ var bibtexify = (function($) {
         links: function(entryData) {
             var itemStr = '';
             if (entryData.url && entryData.url.match(/.*\.pdf/)) {
-                itemStr += ' <li><a title="PDF of this article" href="' +
-                            entryData.url + '" target="_blank">.pdf (draft)<\/a><\/li>';
+            itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
+                      entryData.url + '" target="_blank"><font color="white">.pdf (draft)<\/font><\/a><\/button>';
             } else if (entryData.url) {
-                itemStr += ' <li><a title="This article online" href="' + entryData.url +
-                            '" target="_blank">url (draft)<\/a><\/li>';
+              itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
+                        entryData.url + '" target="_blank"><font color="white">.url (draft)<\/font><\/a><\/button>';
             }
             return itemStr;
         },
@@ -1987,8 +1987,10 @@ var bibtexify = (function($) {
         // adds the bibtex link and the opening div with bibtex content
         bibtex: function(entryData) {
             var itemStr = '';
-            itemStr += ' <li><a title="This article as BibTeX" href="#" class="biblink">' +
-                        '.bib</a><div class="bibinfo hidden">';
+            itemStr += '&nbsp;&nbsp;<button type="button" class="biblink btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="This article as BibTeX" href="#">' +
+                       '<font color="white">.bib<\/font><\/a><\/button><div class="bibinfo hidden">';
+//            itemStr += ' <li><a title="This article as BibTeX" href="#" class="biblink">' +
+//                        '.bib</a><div class="bibinfo hidden">';
             itemStr += '<a href="#" class="bibclose" title="Close">x</a><pre>';
             itemStr += '@' + entryData.entryType + "{" + entryData.cite + ",\n";
             $.each(entryData, function(key, value) {
@@ -2033,8 +2035,8 @@ var bibtexify = (function($) {
         // helper functions for formatting different types of bibtex entries
         inproceedings: function(entryData) {
             s = "<div class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
-                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span> <br>" +
-                "<span class='pubt'>" + entryData.title + ".<\/span>  <br>" +
+                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span>" +
+                "<span class='pubt'>" + entryData.title + ".<\/span> " +
                 "<span class='pubv'>In " + entryData.booktitle + ((entryData.pages)?", "+entryData.pages:"");
             s = s + ((entryData.address)?entryData.address:"")
             s = s + ".<\/span>";
@@ -2046,8 +2048,8 @@ var bibtexify = (function($) {
         },
         article: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
-                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span> <br>" +
-                "<span class='pubt'>" + entryData.title + ".<\/span>  <br>" +
+                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span>" +
+                "<span class='pubt'>" + entryData.title + ".<\/span>" +
                 "<span class='pubv'>" + entryData.journal +
                 ((entryData.volume)?" "+entryData.volume:"");
             if(entryData.number){
@@ -2073,8 +2075,8 @@ var bibtexify = (function($) {
         },
         misc: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
-                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span> <br>" +
-                "<span class='pubt'>" + entryData.title + ".<\/span>  <br>" +
+                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span>" +
+                "<span class='pubt'>" + entryData.title + ".<\/span>" +
                 "<span class='pubv'>" + ((entryData.howpublished)?entryData.howpublished:"") +
                 " " + ((entryData.volume)?entryData.volume:"");
             s = s + ".<\/span>";
@@ -2086,8 +2088,8 @@ var bibtexify = (function($) {
         },
         mastersthesis: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
-                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span> <br>" +
-                "<span class='pubt'>" + entryData.title + ".<\/span>  <br>" +
+                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span>" +
+                "<span class='pubt'>" + entryData.title + ".<\/span>" +
                 "<span class='pubv'>" + entryData.type +
                 ((entryData.organization)?", " + entryData.organization:"") +
                 ((entryData.school)?", " + entryData.school:"");
@@ -2100,8 +2102,8 @@ var bibtexify = (function($) {
         },
         techreport: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
-                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span> <br>" +
-                "<span class='pubt'>" + entryData.title + ".<\/span>  <br>" +
+                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span>" +
+                "<span class='pubt'>" + entryData.title + ".<\/span>" +
                 "<span class='pubv'>" + entryData.type +
                 ((entryData.institution)?", " + entryData.institution:"") + entryData.number;
             s = s + ".<\/span>";
@@ -2113,8 +2115,8 @@ var bibtexify = (function($) {
         },
         book: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
-                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span> <br>" +
-                "<span class='pubt'>" + entryData.title + ".<\/span>  <br>" +
+                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span>" +
+                "<span class='pubt'>" + entryData.title + ".<\/span>" +
                 "<span class='pubv'>" +
                 ((entryData.series)?entryData.series+", ":"") +
                 entryData.publisher +
@@ -2128,8 +2130,8 @@ var bibtexify = (function($) {
         },
         inbook: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
-                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span> <br>" +
-                "<span class='pubt'>" + entryData.title + ".<\/span>  <br>" +
+                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span>" +
+                "<span class='pubt'>" + entryData.title + ".<\/span>" +
                 "<span class='pubv'>" + entryData.booktitle + ", " +
                 ((entryData.editor)?entryData.editor + " (eds.), ":"") +
                 entryData.publisher +
@@ -2157,8 +2159,8 @@ var bibtexify = (function($) {
         },
         incollection: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
-                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span> <br>" +
-                "<span class='pubt'>" + entryData.title + ".<\/span>  <br>" +
+                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span> " +
+                "<span class='pubt'>" + entryData.title + ".<\/span>" +
                 "<span class='pubv'>In " + entryData.booktitle +
                 ((entryData.editor)?", " + entryData.editor + " (eds.), ":"") +
                 ((entryData.editor)?entryData.publisher:"") +
@@ -2285,6 +2287,8 @@ var bibtexify = (function($) {
             return ((item1 < item2) ? 1 : ((item1 > item2) ?  -1 : 0));
         };
        var table = this.$pubTable.dataTable($.extend({
+                              'responsive' : true,
+                              'autoWidth': false,
                               'aaData': bibentries,
                               //'aaSorting': this.options.sorting,
                               'order':  [[0,'desc'], [2,'desc']],
@@ -2293,12 +2297,18 @@ var bibtexify = (function($) {
                                             { "sTitle": "Publication", "bSortable": false, "targets": [1] },
                                             { "sTitle": "Tags", "sType": "type-sort", "targets": [2] },
 
+                                            { responsivePriority: 1, targets: 1 },
+                                            { responsivePriority: 2, targets: 2 },
+                                            { responsivePriority: 3, targets: 0 },
+
                             //                ],
                             //  "columnDefs": [
                                               { "visible": false, "targets": 0 },
+                                          //    { "visible": false, "targets": 2 },
 
-                                              { "width": "80%",  "targets": [1]},
-                                              { "width": "20%",  "targets": [2]},
+
+                        //                      { "width": "50%",  "targets": [1]},
+                          //                    { "width": "10%",  "targets": [2]},
 
 
 
@@ -2308,8 +2318,8 @@ var bibtexify = (function($) {
                                                 "targets":[2],
                                                 "fnCreatedCell": function(nTd, sData, oData, iRow, iCol)
                                                 {
-                                                  //$(nTd).addClass('mytag');
-                                                  $(nTd).css('max-width','170px').css('font-weight','normal').css('font-size', 'smaller').css('background-color', 'white').css('vertical-align','top');
+                                                  //$(nTd).addClass('mytag');.css('max-width','100px')
+                                                  $(nTd).css('max-width','120px').css('font-weight','normal').css('font-size', 'smaller').css('background-color', 'white').css('vertical-align','top');
                                                   var sDataSplit = sData.split(",");
 
                                                   s = '';
@@ -2317,25 +2327,25 @@ var bibtexify = (function($) {
                                                   case 'Journal':
                                                   //  $(nTd).css('background-color', '#900');
 
-                                                    s = s + '<button type="button" class="btn btn-danger btn-xs disabled" style="font-size:11px;background-color: #900">' +  sDataSplit[0] +'</button>';
+                                                    s = s + '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;font-size:11px;background-color: coral">' +  sDataSplit[0] +'</button>';
                                                     break;
                                                   case 'Conference':
                                                   //  $(nTd).css('background-color', '#090'); // You can use hex code as well
-                                                    s = s + '<button type="button" class="btn btn-success btn-xs disabled" style="font-size:11px;background-color: #090">' +  sDataSplit[0] +'</button>';
+                                                    s = s + '<button type="button" class="btn btn-success btn-xs disabled" style="border: none;font-size:11px;background-color: #090">' +  sDataSplit[0] +'</button>';
 
                                                     break;
                                                   case 'Collection':
                                                   //  $(nTd).css('background-color', '#1a8cff'); // You can use hex code as well
-                                                    s = s + '<button type="button" class="btn btn-info btn-xs disabled" style="font-size:11px;background-color:1a8cff">' +  sDataSplit[0] +'</button>';
+                                                    s = s + '<button type="button" class="btn btn-info btn-xs disabled" style="border: none;font-size:11px;background-color:1a8cff">' +  sDataSplit[0] +'</button>';
 
                                                     break;
                                                   case 'Book':
                                                   //  $(nTd).css('background-color', '#e68a00'); // You can use hex code as well
-                                                    s = s + '<button type="button" class="btn btn-warning btn-xs disabled" style="font-size:11px;background-color:#e68a00">' +  sDataSplit[0] +'</button>';
+                                                    s = s + '<button type="button" class="btn btn-warning btn-xs disabled" style="border: none;font-size:11px;background-color:#e68a00">' +  sDataSplit[0] +'</button>';
 
                                                     break;
                                                   default:
-                                                    s = s + '<button type="button" class="btn btn-xs disabled" style="font-size:11px;background-color:#696969;color:white;">' +  sDataSplit[0] +'</button>';
+                                                    s = s + '<button type="button" class="btn btn-xs disabled" style="border: none;font-size:11px;background-color:#696969;color:white;">' +  sDataSplit[0] +'</button>';
 
 
                                                   }
@@ -2345,7 +2355,7 @@ var bibtexify = (function($) {
 
                                                   var len = sDataSplit.length;
                                                   for (var index = 0; index < len; index++) {
-                                                    s = s + '<button type="button" class="btn btn-default btn-xs disabled" style="font-size:11px;font-weight:normal;background-color:#E8E8E8;color:black;margin:2px;border:none;margin-left:2px;">' +  sDataSplit[index] +'</button>';
+                                                    s = s + '<button type="button" class="btn btn-default btn-xs disabled" style="border: none;font-size:11px;font-weight:normal;background-color:#E8E8E8;color:black;margin:2px;border:none;margin-left:2px;">' +  sDataSplit[index] +'</button>';
                                                     //s = s +  sDataSplit[0] +'</button>');
                                                   }
                                                   //s = s+'</TD>'
