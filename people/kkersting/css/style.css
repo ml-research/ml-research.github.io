@@ -233,7 +233,6 @@ hr.soft {
 }
 .pubimg img {
   max-width: 150px;
-
   vertical-align: left;
 }
 .puba {
@@ -271,7 +270,7 @@ hr.soft {
 }
 .pubwrap {
   padding-bottom: 10px;
-  line-height: 120%;
+  line-height: 100%;
   margin-bottom: 10px;
   border-bottom: 1px solid #DDD;
 }
