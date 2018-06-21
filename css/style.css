@@ -46,6 +46,7 @@ a:focus span
   float: left;
 }
 
+
 .imgme {
   border: 3px solid black;
   float: left;
@@ -283,7 +284,7 @@ hr.soft {
   margin-bottom: 60px;
 }
 .pp img {
-  border: 3px solid #FFF;
+  border: 3px solid black;
   box-shadow: #BBB 0px 0px 5px 0px;
 }
 .imgb {
