@@ -514,7 +514,7 @@ border: 1px solid #fff;
 
 .carousel-item > img {
 position: relative;
-margin-left: 30%;
+margin-left: 20%;
 width:  250px;
 height: auto;
 background-position: center top;
@@ -524,7 +524,7 @@ background-size:     contain;
       }
 
       .btn {
-          padding: 1px 1px;
+          padding: 2px 2px;
           text-align: left;
           text-decoration: none;
           display: inline-block;
@@ -547,7 +547,7 @@ background-size:     contain;
 
 
   .btn {
-      padding: 1px 1px;
+      padding: 2px 2px;
       text-align: left;
       text-decoration: none;
       display: inline-block;
