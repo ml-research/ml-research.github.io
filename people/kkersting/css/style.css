@@ -40,8 +40,6 @@ a:focus span
 }*/
 
 
-
-
 .imgme2 {
   float: left;
 }
@@ -233,6 +231,7 @@ hr.soft {
 }
 .pubimg img {
   max-width: 150px;
+  padding-bottom: 10px;
   vertical-align: left;
 }
 .puba {

@@ -272,7 +272,7 @@ hr.soft {
 }
 .pubwrap {
   padding-bottom: 10px;
-  line-height: 120%;
+  line-height: 100%;
   margin-bottom: 10px;
   border-bottom: 1px solid #DDD;
 }
@@ -283,13 +283,24 @@ hr.soft {
   text-align: center;
   margin-bottom: 60px;
 }
-.pp img {
+
+.pp .img {
   border: 3px solid black;
   box-shadow: #BBB 0px 0px 5px 0px;
 }
+
+.pp img2 {
+  border: 3px solid white;
+  box-shadow: #BBB 0px 0px 5px 0px;
+}
+
+
+
 .imgb {
   max-width: 100%;
   border-radius: 5px;
+  border: 3px solid white;
+  box-shadow: #BBB 0px 0px 5px 0px;
 }
 .imgsm {
   max-width: 100%;
