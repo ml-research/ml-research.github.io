@@ -1919,7 +1919,7 @@ var bibtexify = (function($) {
             }
             var itemStr = htmlify(bib2html[type](entryData));
             itemStr += "<div class='publ'><ul class='list-unstyled'>"
-            itemStr += "<br>" + bib2html.links(entryData);
+            itemStr += bib2html.links(entryData);
             itemStr += bib2html.bibtex(entryData);
             //itemStr +=  "<span class='pubd'>" + " "+ entryData.note + "<\/span>";
             //  }
@@ -1975,20 +1975,26 @@ var bibtexify = (function($) {
         links: function(entryData) {
             var itemStr = '';
             if (entryData.url && entryData.url.match(/.*\.pdf/)) {
-            itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
-                      entryData.url + '" target="_blank"><font color="white">.pdf (draft)<\/font><\/a><\/button>';
+            itemStr += '<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="PDF of this article" href="'+  entryData.url +'target="_blank"><font color="black">&nbsp;.pdf (draft)<\/font><\/a>&nbsp;<\/span>';
+          //  itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
+          //            entryData.url + '" target="_blank"><font color="white">.pdf (draft)<\/font><\/a><\/button>';
             } else if (entryData.url) {
-              itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
-                        entryData.url + '" target="_blank"><font color="white">.url (draft)<\/font><\/a><\/button>';
+              itemStr += '<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="Link to this article" href="'+  entryData.url +'target="_blank"><font color="black">.url (draft)<\/font><\/a>&nbsp;<\/span>';
+
+            //  itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
+            //            entryData.url + '" target="_blank"><font color="white">.url (draft)<\/font><\/a><\/button>';
             }
+            itemStr += '&nbsp;';
             return itemStr;
         },
         // <div class="publ"><ul>
         // adds the bibtex link and the opening div with bibtex content
         bibtex: function(entryData) {
             var itemStr = '';
-            itemStr += '&nbsp;&nbsp;<button type="button" class="biblink btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="This article as BibTeX" href="#">' +
-                       '<font color="white">.bib<\/font><\/a><\/button><div class="bibinfo hidden">';
+            itemStr += '<span style="color:white;font-size:12px;background-color:#FFCECE"> <a style="color:black;" title="This article as BibTeX" href=#"' + '<font color=white>&nbsp;.bib &nbsp;<\/font><\/a><\/span><div class="bibinfo hidden">';
+
+            //itemStr += '&nbsp;&nbsp;<button type="button" class="biblink btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="This article as BibTeX" href="#">' +
+            //           '<font color="white">.bib<\/font><\/a><\/button><div class="bibinfo hidden">';
 //            itemStr += ' <li><a title="This article as BibTeX" href="#" class="biblink">' +
 //                        '.bib</a><div class="bibinfo hidden">';
             itemStr += '<a href="#" class="bibclose" title="Close">x</a><pre>';
@@ -2307,8 +2313,8 @@ var bibtexify = (function($) {
                                           //    { "visible": false, "targets": 2 },
 
 
-                        //                      { "width": "50%",  "targets": [1]},
-                          //                    { "width": "10%",  "targets": [2]},
+                                             { "width": "75%",  "targets": [1]},
+                                              { "width": "25%",  "targets": [2]},
 
 
 
@@ -2326,26 +2332,30 @@ var bibtexify = (function($) {
                                                   switch(sDataSplit[0]){
                                                   case 'Journal':
                                                   //  $(nTd).css('background-color', '#900');
-
-                                                    s = s + '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;font-size:11px;background-color: coral">' +  sDataSplit[0] +'</button>';
+                                                    s = s + '<span style="color:white;font-size:11px;background-color: coral">'+  sDataSplit[0] +'&nbsp;</span>';
+                                                  //  s = s + '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;font-size:11px;background-color: coral">' +  sDataSplit[0] +'</button>';
                                                     break;
                                                   case 'Conference':
                                                   //  $(nTd).css('background-color', '#090'); // You can use hex code as well
-                                                    s = s + '<button type="button" class="btn btn-success btn-xs disabled" style="border: none;font-size:11px;background-color: #090">' +  sDataSplit[0] +'</button>';
+                                                    s = s + '<span style="color:white;font-size:11px;background-color: #090">'+  sDataSplit[0] +'&nbsp;</span>';
+                                                  //  s = s + '<button type="button" class="btn btn-success btn-xs disabled" style="border: none;font-size:11px;background-color: #090">' +  sDataSplit[0] +'</button>';
 
                                                     break;
                                                   case 'Collection':
                                                   //  $(nTd).css('background-color', '#1a8cff'); // You can use hex code as well
-                                                    s = s + '<button type="button" class="btn btn-info btn-xs disabled" style="border: none;font-size:11px;background-color:1a8cff">' +  sDataSplit[0] +'</button>';
+                                                    s = s + '<span style="color:white;font-size:11px;background-color: #1a8cff">'+  sDataSplit[0] +'&nbsp;</span>';
+                                                    //s = s + '<button type="button" class="btn btn-info btn-xs disabled" style="border: none;font-size:11px;background-color:1a8cff">' +  sDataSplit[0] +'</button>';
 
                                                     break;
                                                   case 'Book':
                                                   //  $(nTd).css('background-color', '#e68a00'); // You can use hex code as well
-                                                    s = s + '<button type="button" class="btn btn-warning btn-xs disabled" style="border: none;font-size:11px;background-color:#e68a00">' +  sDataSplit[0] +'</button>';
+                                                    s = s + '<span style="color:white;font-size:11px;background-color: #e68a00">'+  sDataSplit[0] +'&nbsp;</span>';
+                                                  //  s = s + '<button type="button" class="btn btn-warning btn-xs disabled" style="border: none;font-size:11px;background-color:#e68a00">' +  sDataSplit[0] +'</button>';
 
                                                     break;
                                                   default:
-                                                    s = s + '<button type="button" class="btn btn-xs disabled" style="border: none;font-size:11px;background-color:#696969;color:white;">' +  sDataSplit[0] +'</button>';
+                                                    s = s + '<span style="color:white;font-size:11px;background-color: #696969">'+  sDataSplit[0] +'&nbsp;</span>';
+                                                    //s = s + '<button type="button" class="btn btn-xs disabled" style="border: none;font-size:11px;background-color:#696969;color:white;">' +  sDataSplit[0] +'</button>';
 
 
                                                   }
@@ -2354,11 +2364,14 @@ var bibtexify = (function($) {
                                                   sDataSplit.sort();
 
                                                   var len = sDataSplit.length;
-                                                  for (var index = 0; index < len; index++) {
-                                                    s = s + '<button type="button" class="btn btn-default btn-xs disabled" style="border: none;font-size:11px;font-weight:normal;background-color:#E8E8E8;color:black;margin:2px;border:none;margin-left:2px;">' +  sDataSplit[index] +'</button>';
+                                                  for (var index = 0; index < len-1; index++) {
+                                                    s = s + '<span style="color:black;font-size:11px;background-color: #E8E8E8">'+  sDataSplit[index] +',</span>&nbsp;';
+                                                    //s = s + '<button type="button" class="btn btn-default btn-xs disabled" style="border: none;font-size:11px;font-weight:normal;background-color:#E8E8E8;color:black;margin:2px;border:none;margin-left:2px;">' +  sDataSplit[index] +'</button>';
                                                     //s = s +  sDataSplit[0] +'</button>');
                                                   }
                                                   //s = s+'</TD>'
+                                                  s = s + '<span style="color:black;font-size:11px;background-color: #E8E8E8">'+  sDataSplit[index] +'</span>';
+
                                                   $(nTd).html(s);
                                                  }
                                                }
