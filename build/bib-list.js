@@ -1975,11 +1975,11 @@ var bibtexify = (function($) {
         links: function(entryData) {
             var itemStr = '';
             if (entryData.url && entryData.url.match(/.*\.pdf/)) {
-            itemStr += '<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="PDF of this article" href="'+  entryData.url +'target="_blank"><font color="black">&nbsp;.pdf (draft)<\/font><\/a>&nbsp;<\/span>';
+            itemStr += '<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="PDF of this article" href="'+  entryData.url +'" target="_blank"><font color="black">&nbsp;.pdf (draft)<\/font><\/a>&nbsp;<\/span>';
           //  itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
           //            entryData.url + '" target="_blank"><font color="white">.pdf (draft)<\/font><\/a><\/button>';
             } else if (entryData.url) {
-              itemStr += '<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="Link to this article" href="'+  entryData.url +'target="_blank"><font color="black">.url (draft)<\/font><\/a>&nbsp;<\/span>';
+              itemStr += '<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="Link to this article" href="'+  entryData.url +'" target="_blank"><font color="black">.url (draft)<\/font><\/a>&nbsp;<\/span>';
 
             //  itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
             //            entryData.url + '" target="_blank"><font color="white">.url (draft)<\/font><\/a><\/button>';
@@ -1991,12 +1991,12 @@ var bibtexify = (function($) {
         // adds the bibtex link and the opening div with bibtex content
         bibtex: function(entryData) {
             var itemStr = '';
-            itemStr += '<span style="color:white;font-size:12px;background-color:#FFCECE"> <a style="color:black;" title="This article as BibTeX" href=#"' + '<font color=white>&nbsp;.bib &nbsp;<\/font><\/a><\/span><div class="bibinfo hidden">';
+            itemStr += '<a style="color:black;font-size:12px;background-color:#FFCECE" title="This article as BibTeX" href="#" class="biblink">' + '&nbsp;.bib &nbsp;<\/a><div class="bibinfo hidden">';
 
-            //itemStr += '&nbsp;&nbsp;<button type="button" class="biblink btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="This article as BibTeX" href="#">' +
-            //           '<font color="white">.bib<\/font><\/a><\/button><div class="bibinfo hidden">';
-//            itemStr += ' <li><a title="This article as BibTeX" href="#" class="biblink">' +
-//                        '.bib</a><div class="bibinfo hidden">';
+          //  itemStr += '&nbsp;&nbsp;<button type="button" class="biblink btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="This article as BibTeX" href="#">' +
+          //             '<font color="white">.bib<\/font><\/a><\/button><div class="bibinfo hidden">';
+          //  itemStr += ' <li><a title="This article as BibTeX" href="#" class="biblink">' +
+          //              '.bib</a><div class="bibinfo hidden">';
             itemStr += '<a href="#" class="bibclose" title="Close">x</a><pre>';
             itemStr += '@' + entryData.entryType + "{" + entryData.cite + ",\n";
             $.each(entryData, function(key, value) {
