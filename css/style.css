@@ -435,11 +435,11 @@ tr.odd { background-color: white !important; }
 tr.even { background-color: white !important; }
 
 div.hidden { display: none;}
-div.bibinfo { width: 80%; position: fixed; top: 100px; left: 10%; background-color: #eee; border: 3px solid #ffff; padding: 10px; -moz-border-radius:10px; -webkit-border-radius:10px; -o-border-radius:10px; border-radius:10px; z-index: 50;}
-#shutter { background-color: #fff; opacity: 0.7; width:100%; height: 100%; position: fixed; top: 0; left:0; z-index: 10;}
+div.bibinfo { width: 80%; position: fixed; top: 30%; left: 10%; background-color: #eee; border: 3px solid black; padding: 10px; -moz-border-radius:10px; -webkit-border-radius:10px; -o-border-radius:10px; border-radius:10px; z-index: 50;}
 a.bibclose { background-color: #fff; border: 3px solid #fff; color: black; float: left; font-size: 20px; height: 20px; left: 0px; line-height: 10px; padding: 3px; position: relative; text-align: center; text-decoration: none; top: -5px; width: 20px; -moz-border-radius:15px; -webkit-border-radius:15px; -o-border-radius:15px; border-radius:15px; }
-div.bibinfo pre { clear:both; }
 
+div.absinfo { width: 80%; position: fixed; top: 30%; left: 10%; background-color: #eee; border: 3px solid black; padding: 10px; -moz-border-radius:10px; -webkit-border-radius:10px; -o-border-radius:10px; border-radius:10px; z-index: 50;}
+a.absclose { background-color: #fff; border: 3px solid #fff; color: black; float: left; font-size: 20px; height: 20px; left: 0px; line-height: 10px; padding: 3px; position: relative; text-align: center; text-decoration: none; top: -5px; width: 20px; -moz-border-radius:15px; -webkit-border-radius:15px; -o-border-radius:15px; border-radius:15px; }
 
 
 table.dataTable thead .sorting,

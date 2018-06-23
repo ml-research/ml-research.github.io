@@ -1919,8 +1919,11 @@ var bibtexify = (function($) {
             }
             var itemStr = htmlify(bib2html[type](entryData));
             itemStr += "<div class='publ'><ul class='list-unstyled'>"
+              itemStr += bib2html.abstex(entryData);
             itemStr += bib2html.links(entryData);
             itemStr += bib2html.bibtex(entryData);
+
+
             //itemStr +=  "<span class='pubd'>" + " "+ entryData.note + "<\/span>";
             //  }
             if (bib.options.tweet && entryData.url) {
@@ -1945,17 +1948,17 @@ var bibtexify = (function($) {
             //                 itemStr + '<\/div><\/div><\/div>'
             // }
             if(entryData.anote){ // image is given
-                itemStr = '<div class="mypubwrap"><div class="row"><div class="col-md-3"><img src="' +
-                            entryData.anote + '" class="pubimg" style="max-width: 120px; height: auto;vertical-align: left;"><\/div>' +
-                '<div class="col-md-9">' +
-                    itemStr + '<\/div>' +
-                     '<\/div><\/div><\/div>'
+                itemStr = '<div class="mypubwrap"><div class="row"><div class="col-md-2"><img src="' +
+                            entryData.anote + '" class="pubimg" style="max-width: 110px; height: auto;vertical-align: left;"><\/div>' +
+                            '<div class="col-md-10">' +
+                            itemStr + '<\/div>' +
+                            '<\/div><\/div><\/div>'
             } else {
               itemStr = '<div class="mypubwrap"><div class="row"><div class="col-md-2"><span class="pubimg"><img src="' +
-                          "./images/whiteImage.png" + '" style="max-width: 120px; height: auto;vertical-align: middle;"><\/span><\/div>' +
-              '<div class="col-md-10">' +
-                  itemStr + '<\/div>' +
-                   '<\/div><\/div><\/div>'
+                          "./images/whiteImage.png" + '" style="max-width: 110px; height: auto;vertical-align: left;"><\/span><\/div>' +
+                          '<div class="col-md-10">' +
+                          itemStr + '<\/div>' +
+                         '<\/div><\/div><\/div>'
             }
 
 
@@ -1973,13 +1976,13 @@ var bibtexify = (function($) {
         },
         // adds links to the PDF or url of the item
         links: function(entryData) {
-            var itemStr = '';
+            var itemStr = '&nbsp;';
             if (entryData.url && entryData.url.match(/.*\.pdf/)) {
-            itemStr += '<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="PDF of this article" href="'+  entryData.url +'" target="_blank"><font color="black">&nbsp;.pdf (draft)<\/font><\/a>&nbsp;<\/span>';
+            itemStr += '<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="PDF of this paper" href="'+  entryData.url +'" target="_blank"><font color="black">&nbsp;.pdf (draft)<\/font><\/a>&nbsp;<\/span>';
           //  itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
           //            entryData.url + '" target="_blank"><font color="white">.pdf (draft)<\/font><\/a><\/button>';
             } else if (entryData.url) {
-              itemStr += '<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="Link to this article" href="'+  entryData.url +'" target="_blank"><font color="black">.url (draft)<\/font><\/a>&nbsp;<\/span>';
+              itemStr += '<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="Link to this paper" href="'+  entryData.url +'" target="_blank"><font color="black">.url (draft)<\/font><\/a>&nbsp;<\/span>';
 
             //  itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
             //            entryData.url + '" target="_blank"><font color="white">.url (draft)<\/font><\/a><\/button>';
@@ -1991,27 +1994,54 @@ var bibtexify = (function($) {
         // adds the bibtex link and the opening div with bibtex content
         bibtex: function(entryData) {
             var itemStr = '';
-            itemStr += '<a style="color:black;font-size:12px;background-color:#FFCECE" title="This article as BibTeX" href="#" class="biblink">' + '&nbsp;.bib &nbsp;<\/a><div class="bibinfo hidden">';
+            itemStr += '<a style="color:black;font-size:12px;background-color:#FFCECE" title="This paper as BibTeX" href="#" class="biblink">' + '&nbsp;.bib &nbsp;<\/a><div class="bibinfo hidden">';
 
           //  itemStr += '&nbsp;&nbsp;<button type="button" class="biblink btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="This article as BibTeX" href="#">' +
           //             '<font color="white">.bib<\/font><\/a><\/button><div class="bibinfo hidden">';
           //  itemStr += ' <li><a title="This article as BibTeX" href="#" class="biblink">' +
           //              '.bib</a><div class="bibinfo hidden">';
-            itemStr += '<a href="#" class="bibclose" title="Close">x</a><pre>';
+            itemStr += '<a href="#" class="bibclose" title="Close">x</a>';
             itemStr += '@' + entryData.entryType + "{" + entryData.cite + ",\n";
+            itemStr2 = '';
             $.each(entryData, function(key, value) {
                 if (key == 'author') {
-                    itemStr += '  author = { ';
+                    itemStr2 += '  author = { ';
                     for (var index = 0; index < value.length; index++) {
-                        if (index > 0) { itemStr += " and "; }
-                        itemStr += value[index].last;
+                        if (index > 0) { itemStr2 += " and "; }
+                        itemStr2 += value[index].last;
                     }
-                    itemStr += ' },\n';
-                } else if (key != 'entryType' && key != 'cite' && key != 'url' && key != 'anote' && key != 'note' && key != 'keywords') {
-                    itemStr += '  ' + key + " = { " + value + " },\n";
+                    itemStr2 += ' },\n';
+                } else if (key != 'bdsk-url-1' && key != 'entryType' && key != 'cite' && key != 'url' && key != 'anote' && key != 'note' && key != 'keywords') {
+                    itemStr2 += '  ' + key + " = { " + value + " },\n";
                 }
             });
-            itemStr += "}</pre></div><\/li>";
+            //itemStr += itemStr2.match(/.{1,110}/g).join(" \n ");
+            itemStr += itemStr2.substring(0, itemStr2.length - 2)
+            itemStr += "\n}</div><\/li>";
+            return itemStr;
+        },
+
+        abstex: function(entryData) {
+            var itemStr = '';
+            itemStr += '<a style="color:black;font-size:12px;background-color:#ccccff" title="Abstract of this paper" href="#" class="abslink">' + '&nbsp;abstract &nbsp;<\/a><div class="absinfo hidden">';
+            itemStr += '<a href="#" class="absclose" title="Close">x</a>';
+            itemStr2 = '';
+            $.each(entryData, function(key, value) {
+                if (key == 'note') {
+                    itemStr2 += value;
+                } else { itemStr2 += '';}
+            });
+            itemStr2 += '\n';
+            //itemStr2 = itemStr2.replace(/\t/gm,' ').toString();
+            //itemStr2 = itemStr2.match(/(\w+|\W)/gm,'').join("");
+
+            //itemStr2 = itemStr2.replace(/(\r\n|\r|\n)/gm," ").toString();
+            //itemStr2 = itemStr2.match(/(.*?\s){10}/gm,'').join("\n");
+            //itemStr2 = itemStr2.replace(/\s+/gm," ").toString();
+
+            //str2 = str2.join(" ");
+            //itemStr += str2;//.match(/.{1,10}/g).join("\n");
+            itemStr += itemStr2+"</div><\/li>";
             return itemStr;
         },
 
@@ -2240,7 +2270,18 @@ var bibtexify = (function($) {
             $("#shutter").hide();
             $(".bibinfo.open").removeClass("open").addClass("hidden");
             event.preventDefault();
+        },
+        showabs: function showabs(event) {
+            $(this).next(".absinfo").removeClass('hidden').addClass("open");
+            $("#shutter").show();
+            event.preventDefault();
+        },
+        hideabs: function hideabs(event) {
+            $("#shutter").hide();
+            $(".absinfo.open").removeClass("open").addClass("hidden");
+            event.preventDefault();
         }
+
     };
 
     var Bib2HTML = function(data, $pubTable, options) {
@@ -2313,8 +2354,8 @@ var bibtexify = (function($) {
                                           //    { "visible": false, "targets": 2 },
 
 
-                                             { "width": "75%",  "targets": [1]},
-                                              { "width": "25%",  "targets": [2]},
+                                             { "width": "80%",  "targets": [1]},
+                                              { "width": "20%",  "targets": [2]},
 
 
 
@@ -2325,7 +2366,7 @@ var bibtexify = (function($) {
                                                 "fnCreatedCell": function(nTd, sData, oData, iRow, iCol)
                                                 {
                                                   //$(nTd).addClass('mytag');.css('max-width','100px')
-                                                  $(nTd).css('max-width','120px').css('font-weight','normal').css('font-size', 'smaller').css('background-color', 'white').css('vertical-align','top');
+                                                  $(nTd).css('max-width','120px').css('font-weight','normal').css('font-size', 'smaller').css('vertical-align','top');
                                                   var sDataSplit = sData.split(",");
 
                                                   s = '';
@@ -2391,6 +2432,9 @@ var bibtexify = (function($) {
                                      );
                                      $(".biblink", this.$pubTable).on('click', EventHandlers.showbib);
                                      $(".bibclose", this.$pubTable).on('click', EventHandlers.hidebib);
+                                     $(".abslink", this.$pubTable).on('click', EventHandlers.showabs);
+                                     $(".absclose", this.$pubTable).on('click', EventHandlers.hideabs);
+
                                      last = group;
                                    }
                                  } );
@@ -2422,8 +2466,11 @@ var bibtexify = (function($) {
         }
       );
         // attach the event handlers to the bib items
-        $(".biblink", this.$pubTable).on('click', EventHandlers.showbib);
-        $(".bibclose", this.$pubTable).on('click', EventHandlers.hidebib);
+        $(".biblink", this.$pubTable).on('click', EventHandlers.showabs);
+        $(".bibclose", this.$pubTable).on('click', EventHandlers.hideabs);
+        $(".abslink", this.$pubTable).on('click', EventHandlers.showabs);
+        $(".absclose", this.$pubTable).on('click', EventHandlers.hideabs);
+
     };
     // updates the stats, called whenever a new bibtex entry is parsed
     bibproto.updateStats = function updateStats(item) {
