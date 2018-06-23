@@ -865,7 +865,7 @@ function BibTex(options)
 		'article',
 		'book',
 		'booklet',
-		'confernce',
+		'conference',
 		'inbook',
 		'incollection',
 		'inproceedings',
@@ -2001,7 +2001,7 @@ var bibtexify = (function($) {
           //  itemStr += ' <li><a title="This article as BibTeX" href="#" class="biblink">' +
           //              '.bib</a><div class="bibinfo hidden">';
             itemStr += '<a href="#" class="bibclose" title="Close">x</a>';
-            itemStr += '@' + entryData.entryType + "{" + entryData.cite + ",\n";
+            itemStr += '<br><br>@' + entryData.entryType + "{" + entryData.cite + ",\n";
             itemStr2 = '';
             $.each(entryData, function(key, value) {
                 if (key == 'author') {
@@ -2017,7 +2017,7 @@ var bibtexify = (function($) {
             });
             //itemStr += itemStr2.match(/.{1,110}/g).join(" \n ");
             itemStr += itemStr2.substring(0, itemStr2.length - 2)
-            itemStr += "\n}</div><\/li>";
+            itemStr += "\n}<br></div><\/li>";
             return itemStr;
         },
 
@@ -2025,7 +2025,7 @@ var bibtexify = (function($) {
             var itemStr = '';
             itemStr += '<a style="color:black;font-size:12px;background-color:#ccccff" title="Abstract of this paper" href="#" class="abslink">' + '&nbsp;abstract &nbsp;<\/a><div class="absinfo hidden">';
             itemStr += '<a href="#" class="absclose" title="Close">x</a>';
-            itemStr2 = '';
+            itemStr2 = '<br><br><b>' + entryData.title + '</b><br><br>';
             $.each(entryData, function(key, value) {
                 if (key == 'note') {
                     itemStr2 += value;
@@ -2041,7 +2041,7 @@ var bibtexify = (function($) {
 
             //str2 = str2.join(" ");
             //itemStr += str2;//.match(/.{1,10}/g).join("\n");
-            itemStr += itemStr2+"</div><\/li>";
+            itemStr += itemStr2+"<br></div><\/li>";
             return itemStr;
         },
 
@@ -2073,7 +2073,7 @@ var bibtexify = (function($) {
             s = "<div class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
                 " (<span class='puby'>" + entryData.year + "<\/span>): <\/span>" +
                 "<span class='pubt'>" + entryData.title + ".<\/span> " +
-                "<span class='pubv'>In " + entryData.booktitle + ((entryData.pages)?", "+entryData.pages:"");
+                "<span class='pubv'> In " + entryData.booktitle + ((entryData.pages)?", "+entryData.pages:"");
             s = s + ((entryData.address)?entryData.address:"")
             s = s + ".<\/span>";
           //  if(entryData.note){
@@ -2085,7 +2085,7 @@ var bibtexify = (function($) {
         article: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
                 " (<span class='puby'>" + entryData.year + "<\/span>): <\/span>" +
-                "<span class='pubt'>" + entryData.title + ".<\/span>" +
+                "<span class='pubt'>" + entryData.title + ". <\/span>" +
                 "<span class='pubv'>" + entryData.journal +
                 ((entryData.volume)?" "+entryData.volume:"");
             if(entryData.number){
@@ -2112,7 +2112,7 @@ var bibtexify = (function($) {
         misc: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
                 " (<span class='puby'>" + entryData.year + "<\/span>): <\/span>" +
-                "<span class='pubt'>" + entryData.title + ".<\/span>" +
+                "<span class='pubt'>" + entryData.title + ". <\/span>" +
                 "<span class='pubv'>" + ((entryData.howpublished)?entryData.howpublished:"") +
                 " " + ((entryData.volume)?entryData.volume:"");
             s = s + ".<\/span>";
@@ -2125,7 +2125,7 @@ var bibtexify = (function($) {
         mastersthesis: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
                 " (<span class='puby'>" + entryData.year + "<\/span>): <\/span>" +
-                "<span class='pubt'>" + entryData.title + ".<\/span>" +
+                "<span class='pubt'>" + entryData.title + ". <\/span>" +
                 "<span class='pubv'>" + entryData.type +
                 ((entryData.organization)?", " + entryData.organization:"") +
                 ((entryData.school)?", " + entryData.school:"");
@@ -2139,7 +2139,7 @@ var bibtexify = (function($) {
         techreport: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
                 " (<span class='puby'>" + entryData.year + "<\/span>): <\/span>" +
-                "<span class='pubt'>" + entryData.title + ".<\/span>" +
+                "<span class='pubt'>" + entryData.title + ". <\/span>" +
                 "<span class='pubv'>" + entryData.type +
                 ((entryData.institution)?", " + entryData.institution:"") + entryData.number;
             s = s + ".<\/span>";
@@ -2152,7 +2152,7 @@ var bibtexify = (function($) {
         book: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
                 " (<span class='puby'>" + entryData.year + "<\/span>): <\/span>" +
-                "<span class='pubt'>" + entryData.title + ".<\/span>" +
+                "<span class='pubt'>" + entryData.title + ". <\/span>" +
                 "<span class='pubv'>" +
                 ((entryData.series)?entryData.series+", ":"") +
                 entryData.publisher +
@@ -2167,7 +2167,7 @@ var bibtexify = (function($) {
         inbook: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
                 " (<span class='puby'>" + entryData.year + "<\/span>): <\/span>" +
-                "<span class='pubt'>" + entryData.title + ".<\/span>" +
+                "<span class='pubt'>" + entryData.title + ". <\/span>" +
                 "<span class='pubv'>" + entryData.booktitle + ", " +
                 ((entryData.editor)?entryData.editor + " (eds.), ":"") +
                 entryData.publisher +
@@ -2196,7 +2196,7 @@ var bibtexify = (function($) {
         incollection: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
                 " (<span class='puby'>" + entryData.year + "<\/span>): <\/span> " +
-                "<span class='pubt'>" + entryData.title + ".<\/span>" +
+                "<span class='pubt'>" + entryData.title + ". <\/span>" +
                 "<span class='pubv'>In " + entryData.booktitle +
                 ((entryData.editor)?", " + entryData.editor + " (eds.), ":"") +
                 ((entryData.editor)?entryData.publisher:"") +
