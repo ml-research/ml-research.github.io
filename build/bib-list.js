@@ -2001,7 +2001,8 @@ var bibtexify = (function($) {
           //  itemStr += ' <li><a title="This article as BibTeX" href="#" class="biblink">' +
           //              '.bib</a><div class="bibinfo hidden">';
             itemStr += '<a href="#" class="bibclose" title="Close">x</a>';
-            itemStr += '<br><br>@' + entryData.entryType + "{" + entryData.cite + ",\n";
+            itemStr += '<br><br><b>' + entryData.title + '</b><br><br>';
+            itemStr += '@' + entryData.entryType + "{" + entryData.cite + ",\n";
             itemStr2 = '';
             $.each(entryData, function(key, value) {
                 if (key == 'author') {
@@ -2017,7 +2018,7 @@ var bibtexify = (function($) {
             });
             //itemStr += itemStr2.match(/.{1,110}/g).join(" \n ");
             itemStr += itemStr2.substring(0, itemStr2.length - 2)
-            itemStr += "\n}<br></div><\/li>";
+            itemStr += "\n}<br><br><br></div><\/li>";
             return itemStr;
         },
 
@@ -2041,7 +2042,7 @@ var bibtexify = (function($) {
 
             //str2 = str2.join(" ");
             //itemStr += str2;//.match(/.{1,10}/g).join("\n");
-            itemStr += itemStr2+"<br></div><\/li>";
+            itemStr += itemStr2+"<br><br><br></div><\/li>";
             return itemStr;
         },
 
