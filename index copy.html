@@ -317,32 +317,32 @@ $('a[href^="#"]:not(a[href="#myCarousel"])').on('click', function(event) {
                   <b>AI is "the science and engineering of making intelligent machines, especially intelligent computer programs. It is related to the similar task of using
                     computers to understand human intelligence, but AI does not have to confine itself to methods that are biologically observable." </b>
                   This is fairly generic and includes all kinds of tasks such as abstractly reasoning and generalizing about the world, solving puzzles, planning how to achieve goals, moving around in the world, recognizing objects and sounds, speaking, translating, performing social or business transactions, creative work (e.g. making art or poetry), and controlling robots.
- And, the behavior of a machine is not just the outcome of the program, it is also affected by its "body" and the enviroment it is physically embedded in. To keep it simple, however,
- if you can write a very clever program that has, say, human-like behavior, it can be AI. But unless it is automatically learned from data, it is not ML:
- <b> ML is the science that is "concerned with the question of how to construct computer programs that automatically improve with experience"</b>,
- following, e.g.,  Tom Mitchell [4].</p>
- <p>So, AI and ML are both about constructing intelligent computer programs, and deep learning, being an instance of machine learning, is no exception.
- Deep learning [5, 6], which has achieved remarkable gains in many domains spanning object recognition, speech recognition, and control,
- %One may view deep learning as a
- can be viewed as constructing computer programs, namely programming layers of abstraction in a differentiable way using reusable structures such as convolution, pooling,
- auto encoders, variational inference networks, and so on. That is, we replace the complexity of writing algorithms that cover every eventuality with the complexity of
- finding the right general outline of the algorithms - in the form of e.g. a deep neural network - and processing data. By virtue of the generality of neural
- networks - they are general function approximators - training them is data hungry and coming up with the right architecture and data is
- notoriously difficult. Benchmark training sets for object recognition store hundreds or thousands of examples per class. Learning to play video games may require
- hundreds of hours of training experience and/or very expensive compute power.
- In contrast, writing an algorithm that covers every eventuality of a task we want to solve - say, computing the shortest way to get to an airport - is a lot of manual
- work but we know what the algorithm does by design and we can study and understand more easily the complexity of the problem it solves. Especially when a machine has to
- interact with a human, this seems to be valuable.</p>
- <p> <b>This illustrates that ML and AI are indeed very similar, but not quite the same.</b> The easiest way to think of their relationship is to visualize them as concentric
+And, the behavior of a machine is not just the outcome of the program, it is also affected by its "body" and the enviroment it is physically embedded in. To keep it simple, however,
+if you can write a very clever program that has, say, human-like behavior, it can be AI. But unless it is automatically learned from data, it is not ML:
+<b> ML is the science that is "concerned with the question of how to construct computer programs that automatically improve with experience"</b>,
+following, e.g.,  Tom Mitchell [4].</p>
+<p>So, AI and ML are both about constructing intelligent computer programs, and deep learning, being an instance of machine learning, is no exception.
+Deep learning [5, 6], which has achieved remarkable gains in many domains spanning object recognition, speech recognition, and control,
+%One may view deep learning as a
+can be viewed as constructing computer programs, namely programming layers of abstraction in a differentiable way using reusable structures such as convolution, pooling,
+auto encoders, variational inference networks, and so on. That is, we replace the complexity of writing algorithms that cover every eventuality with the complexity of
+finding the right general outline of the algorithms - in the form of e.g. a deep neural network - and processing data. By virtue of the generality of neural
+networks - they are general function approximators - training them is data hungry and coming up with the right architecture and data is
+notoriously difficult. Benchmark training sets for object recognition store hundreds or thousands of examples per class. Learning to play video games may require
+hundreds of hours of training experience and/or very expensive compute power.
+In contrast, writing an algorithm that covers every eventuality of a task we want to solve - say, computing the shortest way to get to an airport - is a lot of manual
+work but we know what the algorithm does by design and we can study and understand more easily the complexity of the problem it solves. Especially when a machine has to
+interact with a human, this seems to be valuable.</p>
+<p> <b>This illustrates that ML and AI are indeed very similar, but not quite the same.</b> The easiest way to think of their relationship is to visualize them as concentric
   circles with AI first and ML sitting inside (with DL fitting inside both), since <b>ML also requires to write algorithms that cover every eventuality, namely, of the learning process</b>.
   The crucial point is that they share the idea of using computation as the language for intelligent behaviour. What kind of computation and how to program it? That remains an open question.
   Computation neither rules out search, logical, probabilistic and constraint programming techniques nor (deep) (un)supervised and reinforcement learning methods, among others,
   as computational models do contain all of them. Reconsider AlphaGo. AlphaGo and its successor AlphaGo Zero [7] both combine deep learning and tree search - ML and AI.
- Or consider the "Allen AI Science Challenge" [8]. The task is to comprehend a paragraph that states a science problem at the middle school level and then answer a multiple-choice question.
- The winning models all employed ML but did not pass yet the test at the level of a competent middle schooler. All winners argued it was clear that applying a deeper, semantic level of reasoning
- with scientific knowledge to the question and answers, i.e., AI would be the key to achieving true intelligence. That is, we have to cover knowledge, reasoning, and learning, whether just
- programmed or learning-based programmed.</p>
- <p> <small>
+Or consider the "Allen AI Science Challenge" [8]. The task is to comprehend a paragraph that states a science problem at the middle school level and then answer a multiple-choice question.
+The winning models all employed ML but did not pass yet the test at the level of a competent middle schooler. All winners argued it was clear that applying a deeper, semantic level of reasoning
+with scientific knowledge to the question and answers, i.e., AI would be the key to achieving true intelligence. That is, we have to cover knowledge, reasoning, and learning, whether just
+programmed or learning-based programmed.</p>
+<p> <small>
   [1] Jordan, M. I. and Mitchell, T. M. (2015). Machine learning: Trends, perspectives, and prospects. Science
   349, 255–260
 
@@ -357,15 +357,16 @@ $('a[href^="#"]:not(a[href="#myCarousel"])').on('click', function(event) {
   <br>[5] LeCun, Y., Bengio, Y., and Hinton, G. (2015). Deep learning. Nature 521, 436–444
 
   <br>[6] Goodfellow, I. J., Bengio, Y., and Courville, A. C. (2016). Deep Learning. Adaptive Computation and
- Machine Learning (MIT Press)
+Machine Learning (MIT Press)
 
 
- <br> [7] Silver, D., Schrittwieser, J., Simonyan, K., Antonoglou, I., Huang, A., Guez, A., et al. (2017). Mastering
- the game of Go without human knowledge. Nature 550, 354–359
+<br> [7] Silver, D., Schrittwieser, J., Simonyan, K., Antonoglou, I., Huang, A., Guez, A., et al. (2017). Mastering
+the game of Go without human knowledge. Nature 550, 354–359
 
- <br> [8] Schoenick, C., Clark, P., Tafjord, O., Turney, P. D., and Etzioni, O. (2017). Moving beyond the Turing Test
- with the Allen AI Science Challenge. Commun. ACM 60, 60–64
- </small>
+<br> [8] Schoenick, C., Clark, P., Tafjord, O., Turney, P. D., and Etzioni, O. (2017). Moving beyond the Turing Test
+with the Allen AI Science Challenge. Commun. ACM 60, 60–64
+</small>
+
                </dd>
              </dl>
            </div>
@@ -4757,24 +4758,5 @@ more_pubs_shown = false;
 <!-- Bootstrap core JavaScript
    ================================================== -->
    <!-- Placed at the end of the document so the pages load faster -->
-   <script src="./build/bootstrap.min.js"></script>
-
-<script type="text/javascript">
- var acc = document.getElementsByClassName("accordion");
- var i;
-
- for (i = 0; i < acc.length; i++) {
-   acc[i].addEventListener("click", function() {
-     this.classList.toggle("active");
-     var panel = this.nextElementSibling;
-     if (panel.style.maxHeight){
-       panel.style.maxHeight = null;
-     } else {
-       panel.style.maxHeight = panel.scrollHeight + "px";
-     }
-   });
- }
-
-   </script>
 </body>
 </html>
