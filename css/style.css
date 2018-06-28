@@ -508,7 +508,7 @@ border: 1px solid #fff;
 .accordion__Heading {
  background-color:	#303030;
    text-align:center;
-     font-weight:600;
+     font-weight:100;
     padding:1em;
     display:block;
    text-decoration:none;
@@ -519,7 +519,8 @@ border: 1px solid #fff;
 }
 
 .accordionTitle:before{
- content: "+";
+ content: "read more";
+ font-weight:600;
  font-size:1.0em;
  line-height:1.5em;
  float:right;
@@ -540,20 +541,24 @@ border: 1px solid #fff;
 }
 
 .accordionTitleActive:before {
-      transform:rotate(-225deg);
+  content: "-";
+  font-weight:600;
+  font-size:1.0em;
+  line-height:1.5em;
 }
 
 
 .accordionTitle.is-expanded:before {
-      transform:rotate(-225deg);
+    content: "-";
+    font-weight:600;
+    font-size:1.0em;
+    line-height:1.5em;
 }
 
 .accordionItem {
     height:auto;
     overflow:hidden;
     /*SHAME: magic number to allow the accordion to animate*/
-
-     max-height:50em;
     transition:max-height 1s;
 
 
