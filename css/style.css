@@ -469,18 +469,29 @@ border: 1px solid #fff;
 
 .accordion dl,
 .accordion-list {
-   border:1px solid #ddd;
-   &:after {
+   border:1px solid #00000;
+}
+
+.accordion dl:after {
        content: "";
        display:block;
        height:1em;
        width:100%;
-       background-color:darken(#111, 10%);
-     }
+       background-color:darken(#D0D0D0, 10%);
 }
+
+.accordion-list:after {
+       content: "";
+       display:block;
+       height:1em;
+       width:100%;
+       background-color:darken(#DCDCDC, 10%);
+}
+
+
 .accordion dd,
-.accordion__panel {
-   background-color:#DCDCDC;
+.accordion__panel { /*text background while unfoldung*/
+   background-color:#fff;
    font-size:1em;
    line-height:1.5em;
 }
@@ -488,52 +499,59 @@ border: 1px solid #fff;
   padding:1em 1em 1em 1em;
 }
 
-.accordion {
+.accordion { /*bottom field*/
     position:relative;
-    background-color:#404040;
+    background-color:#E8E8E8	;
 }
 
 .accordionTitle,
 .accordion__Heading {
- background-color:	#404040;
+ background-color:	#303030;
    text-align:center;
-     font-weight:700;
-          padding:1em;
-          display:block;
-          text-decoration:none;
-          color:#fff;
-          transition:background-color 0.5s ease-in-out;
-  border-bottom:1px solid darken(#fff, 5%);
+     font-weight:600;
+    padding:1em;
+    display:block;
+   text-decoration:none;
+   color:white;
+    text-align: left;
+   transition:background-color 0.5s ease-in-out;
+  border-bottom:1px solid darken(#E8E8E8, 5%);
 }
 
 .accordionTitle:before{
  content: "+";
  font-size:1.0em;
  line-height:1.5em;
- float:left;
+ float:right;
  transition: transform 0.3s ease-in-out;
 }
 
 .accordionTitle:hover{
-  background-color:darken(#fff, 10%);
+  background-color:darken(#D0D0D0, 10%);
 }
 
 .accordion__Heading:hover{
-  background-color:darken(#fff, 10%);
+  background-color:darken(#D0D0D0, 10%);
 }
 
 .accordionTitleActive,
 .accordionTitle.is-expanded {
    background-color:darken(#C0C0C0, 10%);
-    &:before {
-
-      transform:rotate(-225deg);
-    }
 }
+
+.accordionTitleActive:before {
+      transform:rotate(-225deg);
+}
+
+
+.accordionTitle.is-expanded:before {
+      transform:rotate(-225deg);
+}
+
 .accordionItem {
     height:auto;
     overflow:hidden;
-    //SHAME: magic number to allow the accordion to animate
+    /*SHAME: magic number to allow the accordion to animate*/
 
      max-height:50em;
     transition:max-height 1s;
@@ -560,6 +578,7 @@ border: 1px solid #fff;
 .animateOut {
      animation: accordionOut 0.45s alternate ease-in-out both 1;
 }
+
 @keyframes accordionIn {
   0% {
     opacity: 0;
