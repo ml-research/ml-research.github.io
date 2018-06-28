@@ -22,7 +22,7 @@
 <script type='text/javascript'>//<![CDATA[
 $(document).ready(function(){
 // Add smooth scrolling to all links
-$("a").on('click', function(event) {
+$('a[href^="#"]:not(a[href="#myCarousel"])').on('click', function(event) {
 
   // Make sure this.hash has a value before overriding default behavior
   if (this.hash !== "") {
@@ -32,17 +32,20 @@ $("a").on('click', function(event) {
     // Store hash
     var hash = this.hash;
 
+
     // Using jQuery's animate() method to add smooth page scroll
     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
     $('html, main').animate({
-      scrollTop: $(hash).offset().top
-    }, 800, function(){
+      scrollTop: $(hash).offset().top-130
+      }, 800, function(){
 
       // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
+      window.location.hash = hash-130;
+
     });
   } // End if
 });
+
 });
 </script>
 
@@ -51,6 +54,65 @@ $("a").on('click', function(event) {
     <script>
     $(function(){
       $("#includedContent").load("myBib.bib");
+
+      var d = document,
+      	accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+      	setAria,
+      	setAccordionAria,
+      	switchAccordion,
+        touchSupported = ('ontouchstart' in window),
+        pointerSupported = ('pointerdown' in window);
+
+        skipClickDelay = function(e){
+          e.preventDefault();
+          e.target.click();
+        }
+
+      		setAriaAttr = function(el, ariaType, newProperty){
+      		el.setAttribute(ariaType, newProperty);
+      	};
+      	setAccordionAria = function(el1, el2, expanded){
+      		switch(expanded) {
+            case "true":
+            	setAriaAttr(el1, 'aria-expanded', 'true');
+            	setAriaAttr(el2, 'aria-hidden', 'false');
+            	break;
+            case "false":
+            	setAriaAttr(el1, 'aria-expanded', 'false');
+            	setAriaAttr(el2, 'aria-hidden', 'true');
+            	break;
+            default:
+      				break;
+      		}
+      	};
+      //function
+      switchAccordion = function(e) {
+        console.log("triggered");
+      	e.preventDefault();
+      	var thisAnswer = e.target.parentNode.nextElementSibling;
+      	var thisQuestion = e.target;
+      	if(thisAnswer.classList.contains('is-collapsed')) {
+      		setAccordionAria(thisQuestion, thisAnswer, 'true');
+      	} else {
+      		setAccordionAria(thisQuestion, thisAnswer, 'false');
+      	}
+        	thisQuestion.classList.toggle('is-collapsed');
+        	thisQuestion.classList.toggle('is-expanded');
+      		thisAnswer.classList.toggle('is-collapsed');
+      		thisAnswer.classList.toggle('is-expanded');
+
+        	thisAnswer.classList.toggle('animateIn');
+      	};
+      	for (var i=0,len=accordionToggles.length; i<len; i++) {
+      		if(touchSupported) {
+            accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+          }
+          if(pointerSupported){
+            accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+          }
+          accordionToggles[i].addEventListener('click', switchAccordion, false);
+        }
+
     });
     </script>
 
@@ -62,7 +124,7 @@ $("a").on('click', function(event) {
 
 <body onload="start()" data-spy="scroll" data-target=".navbar" data-offset="65">
  <header>
-       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+       <nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
          <a class="navbar-brand" href="#">
            Machine Learning Lab
          </a>
@@ -223,7 +285,8 @@ $("a").on('click', function(event) {
 <div class="col-md-7">
   <div id="htname">Machine Learning Lab </div>
   <div id="htem">Computer Science Department and Centre for Cognitive Science, TU Darmstadt, Altes Hauptgebäude, Room 074, Hochschulstrasse 1, 64289 Darmstadt, Germany
-    <br><img src="./images/phone.png" style="height:15px"> +49-6151-16-24411 <img src="./images/mail.jpg" style="height:15px"> kersting _at_ cs.tu-darmstadt.de</div>
+    <br><img src="./images/phone.png" style="height:15px"> +49-6151-16-24411 <img src="./images/mail.jpg" style="height:15px"> kersting _at_ cs.tu-darmstadt.de
+    <br> <b><u> Meetings by appointment, general consultation: thursdays, 13:30-14:30 o'clock</u></b></div>
 </div>
 <div class="col-md-4">
   <img id="logo" class="imgsm" src="./images/FB20TUDAlogo.png" style="text-align: right; margin: 10px 5px 5px 3px;height:55px"></a>
@@ -231,12 +294,86 @@ $("a").on('click', function(event) {
   <img id="logo" class="imgsm" src="./images/ccsLogo.jpg" style="text-align: right; margin: 10px 1px 10px 1px;height:60px"></a>
 </div>
 </div>
-<br>
-<b> Meetings by appointment, general consultation: thursdays, 13:30-14:30 o'clock</b>
-</div>
 
 <br>
-<div id="research" class="container">
+
+
+  <div class="accordion">
+             <dl>
+               <dt>
+                 <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">Machine Learning and Artificial Intelligence: Two Fellow Travelers on the Quest for Intelligent Behaviour in Machines</a>
+               </dt>
+               <dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
+                 <p><b>Big Data is no fad</b>. The world is growing at an exponential rate, and so is the size of data collected across the globe. Data is
+                   becoming more meaningful and contextually relevant, breaks new ground for machine learning (ML), in particular for deep learning (DL),
+                   and artificial intelligence (AI), and even moves them from research labs to production [1]. The problem has shifted from
+                   collecting massive amounts of data to understanding it - turning it into knowledge, conclusions, and actions.
+                   Multiple research disciplines, from cognitive sciences to biology, finance, physics, and the social sciences, as well
+                   as many companies believe that data-driven and "intelligent" solutions are necessary in order to solve many of their key problems. <b>However, are AI, ML and DL  really the same things, as suggested by many
+                     recent news, blogs and media?</b> For example, when AlphaGo [2]
+                  defeated South Korean Master Lee Se-dol in the board game Go in 2016, the terms AI, ML, and DL were used in the media to describe how AlphaGo won.
+                  AI and ML are  very much related.
+                  <p>According to, e.g., McCarthy [3] one of the founders of the field,
+                  <b>AI is "the science and engineering of making intelligent machines, especially intelligent computer programs. It is related to the similar task of using
+                    computers to understand human intelligence, but AI does not have to confine itself to methods that are biologically observable." </b>
+                  This is fairly generic and includes all kinds of tasks such as abstractly reasoning and generalizing about the world, solving puzzles, planning how to achieve goals, moving around in the world, recognizing objects and sounds, speaking, translating, performing social or business transactions, creative work (e.g. making art or poetry), and controlling robots.
+And, the behavior of a machine is not just the outcome of the program, it is also affected by its "body" and the enviroment it is physically embedded in. To keep it simple, however,
+if you can write a very clever program that has, say, human-like behavior, it can be AI. But unless it is automatically learned from data, it is not ML:
+<b> ML is the science that is "concerned with the question of how to construct computer programs that automatically improve with experience"</b>,
+following, e.g.,  Tom Mitchell [4].</p>
+<p>So, AI and ML are both about constructing intelligent computer programs, and deep learning, being an instance of machine learning, is no exception.
+Deep learning [5, 6], which has achieved remarkable gains in many domains spanning object recognition, speech recognition, and control,
+%One may view deep learning as a
+can be viewed as constructing computer programs, namely programming layers of abstraction in a differentiable way using reusable structures such as convolution, pooling,
+auto encoders, variational inference networks, and so on. That is, we replace the complexity of writing algorithms that cover every eventuality with the complexity of
+finding the right general outline of the algorithms - in the form of e.g. a deep neural network - and processing data. By virtue of the generality of neural
+networks - they are general function approximators - training them is data hungry and coming up with the right architecture and data is
+notoriously difficult. Benchmark training sets for object recognition store hundreds or thousands of examples per class. Learning to play video games may require
+hundreds of hours of training experience and/or very expensive compute power.
+In contrast, writing an algorithm that covers every eventuality of a task we want to solve - say, computing the shortest way to get to an airport - is a lot of manual
+work but we know what the algorithm does by design and we can study and understand more easily the complexity of the problem it solves. Especially when a machine has to
+interact with a human, this seems to be valuable.</p>
+<p> <b>This illustrates that ML and AI are indeed very similar, but not quite the same.</b> The easiest way to think of their relationship is to visualize them as concentric
+  circles with AI first and ML sitting inside (with DL fitting inside both), since <b>ML also requires to write algorithms that cover every eventuality, namely, of the learning process</b>.
+  The crucial point is that they share the idea of using computation as the language for intelligent behaviour. What kind of computation and how to program it? That remains an open question.
+  Computation neither rules out search, logical, probabilistic and constraint programming techniques nor (deep) (un)supervised and reinforcement learning methods, among others,
+  as computational models do contain all of them. Reconsider AlphaGo. AlphaGo and its successor AlphaGo Zero [7] both combine deep learning and tree search - ML and AI.
+Or consider the "Allen AI Science Challenge" [8]. The task is to comprehend a paragraph that states a science problem at the middle school level and then answer a multiple-choice question.
+The winning models all employed ML but did not pass yet the test at the level of a competent middle schooler. All winners argued it was clear that applying a deeper, semantic level of reasoning
+with scientific knowledge to the question and answers, i.e., AI would be the key to achieving true intelligence. That is, we have to cover knowledge, reasoning, and learning, whether just
+programmed or learning-based programmed.</p>
+<p> <small>
+  [1] Jordan, M. I. and Mitchell, T. M. (2015). Machine learning: Trends, perspectives, and prospects. Science
+  349, 255–260
+
+  <br>[2] Silver, D., Huang, A., Maddison, C., Guez, A., Sifre, L., van den Driessche, G., et al. (2016). Mastering
+  the game of Go with deep neural networks and tree search. Nature 529, 484–489
+
+  <br>[3] McCarthy, J. (2007). What is artificial intelligence? Tech. rep., Stanford University,
+  http://jmc.stanford.edu/artificial-intelligence/what-is-ai/index.html. Accessed June 2, 2018
+
+  <br>[4] Mitchell, T. M. (1997). Machine learning. McGraw Hill series in computer science (McGraw-Hill)
+
+  <br>[5] LeCun, Y., Bengio, Y., and Hinton, G. (2015). Deep learning. Nature 521, 436–444
+
+  <br>[6] Goodfellow, I. J., Bengio, Y., and Courville, A. C. (2016). Deep Learning. Adaptive Computation and
+Machine Learning (MIT Press)
+
+
+<br> [7] Silver, D., Schrittwieser, J., Simonyan, K., Antonoglou, I., Huang, A., Guez, A., et al. (2017). Mastering
+the game of Go without human knowledge. Nature 550, 354–359
+
+<br> [8] Schoenick, C., Clark, P., Tafjord, O., Turney, P. D., and Etzioni, O. (2017). Moving beyond the Turing Test
+with the Allen AI Science Challenge. Commun. ACM 60, 60–64
+</small>
+
+               </dd>
+             </dl>
+           </div>
+
+
+
+<br>
 <b> Mission.</b> The Machine Learning lab would like to make computers learn so much about the world,
 so rapidly and flexibly, as humans. This poses many deep and fascinating scientific problems:
 How can computers learn with less help from us and data? How can computers reason about and learn with complex
@@ -4621,6 +4758,5 @@ more_pubs_shown = false;
 <!-- Bootstrap core JavaScript
    ================================================== -->
    <!-- Placed at the end of the document so the pages load faster -->
-   <script src="./build/bootstrap.min.js"></script>
 </body>
 </html>
