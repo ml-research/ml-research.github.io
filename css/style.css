@@ -519,7 +519,7 @@ border: 1px solid #fff;
 }
 
 .accordionTitle:before{
- content: "read more";
+ content: "read more +";
  font-weight:600;
  font-size:1.0em;
  line-height:1.5em;
@@ -541,7 +541,7 @@ border: 1px solid #fff;
 }
 
 .accordionTitleActive:before {
-  content: "-";
+  content: "hide -";
   font-weight:600;
   font-size:1.0em;
   line-height:1.5em;
@@ -549,7 +549,7 @@ border: 1px solid #fff;
 
 
 .accordionTitle.is-expanded:before {
-    content: "-";
+    content: "hide -";
     font-weight:600;
     font-size:1.0em;
     line-height:1.5em;
