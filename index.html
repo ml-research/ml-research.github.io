@@ -18,6 +18,7 @@
 
     <link href="./css/style.css" rel="stylesheet">
 
+
 </head>
 
 
@@ -27,7 +28,7 @@
         <a class="navbar-brand" href="#">
             Machine Learning Lab
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".main-navigation" aria-controls="navbarCollapse" aria-expanded="false"
                 aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -61,7 +62,7 @@
     </nav>
 </header>
 
-<main role="main">
+<main>
 
 
     <div class="container" id="ml">
@@ -187,9 +188,9 @@
                     <br> <b><u> Meetings by appointment, general consultation: thursdays, 13:30-14:30 o'clock</u></b></div>
             </div>
             <div class="col-md-4">
-                <img id="logo" class="imgsm" src="./images/FB20TUDAlogo.png" style="text-align: right; margin: 10px 5px 5px 3px;height:55px"></a>
+                <img id="logo" class="imgsm" src="./images/FB20TUDAlogo.png" style="text-align: right; margin: 10px 5px 5px 3px;height:55px">
 
-                <img id="logo" class="imgsm" src="./images/ccsLogo.jpg" style="text-align: right; margin: 10px 1px 10px 1px;height:60px"></a>
+                <img id="logo2" class="imgsm" src="./images/ccsLogo.jpg" style="text-align: right; margin: 10px 1px 10px 1px;height:60px">
             </div>
         </div>
 
@@ -542,7 +543,6 @@
         </div>
         <hr class="soft">
     </div>
-    <br>
 
 
     <div id="people" class="container">
@@ -581,7 +581,7 @@
                     <img src="./people/amolina/AM.png" class="rounded-circle imgme" style="height:100px">
                     <div class="pp">
                         <span class="t2what"> Alejandro Molina (PhD)</span>
-                        <br><span class="t2where"> currently</span>
+                        <br><span class="t2where"> currently
                         <br>
                         <button type="button" class="btn btn-danger btn-xs disabled" style="font-size:12px;background-color: #900">
                             <a href="./people/amolina/index.html" target="_blank"> <font color="white">more info: bio, papers, ...</font></a></button>
@@ -1282,13 +1282,42 @@
     </div>
 </footer>
 
-
-<!-- place js at end for faster loading -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
 
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="./build/bib-list.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $.get('references.bib', function (references) {
+            $("#bibtex").html(references);
+            bibtexify("#bibtex", "pubTable");
+        });
+    });
+</script>
+
+
+<script type="text/javascript">
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+
+</script>
 
 <script>
 
@@ -1387,16 +1416,6 @@
 </script>
 
 
-<script type="text/javascript">
-    $(document).ready(function () {
-
-        $.get('references.bib', function (references) {
-            $("#bibtex").html(references);
-            bibtexify("#bibtex", "pubTable");
-        });
-    });
-</script>
-
 <script>
     $(function () {
         var d = document,
@@ -1460,56 +1479,34 @@
     });
 </script>
 
-<!-- Bootstrap core JavaScript
-   ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript">
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+<script>
+    $(document).ready(function () {
+        $("#nav a").on('click', function (event) {
 
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+
+            } // End if
+
         });
-    }
-
-</script>
-<script type='text/javascript'>//<![CDATA[
-$(document).ready(function () {
-    // Add smooth scrolling to all links
-    $('a[href^="#"]:not(a[href="#myCarousel"])').on('click', function (event) {
-
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, main').animate({
-                scrollTop: $(hash).offset().top - 130
-            }, 800, function () {
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash - 130;
-
-            });
-        } // End if
     });
-
-});
 </script>
-
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121611233-1"></script>
