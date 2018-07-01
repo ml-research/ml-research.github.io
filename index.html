@@ -65,7 +65,7 @@
 <main>
 
 
-    <div class="container" id="ml">
+<div class="container" id="ml">
         <br><br><br>
         <img class="img-fluid" src="./images/banner.png" style="float: left; margin: 0px 0px 10px 10px;">
         <a href="https://www.tu-darmstadt.de" target="_blank"> <img class="img-fluid" src="./images/tud_weblogo.svg"
@@ -177,7 +177,7 @@
     </div>
 
 
-    <div class="container" id="research">
+<div class="container" id="research">
         <div class="row">
             <div class="col-md-7">
                 <div id="htname">Machine Learning Lab</div>
@@ -295,7 +295,7 @@
         </div>
 
 
-        <br>
+<br>
         <b> Mission.</b> The Machine Learning lab would like to make computers learn so much about the world,
         so rapidly and flexibly, as humans. This poses many deep and fascinating scientific problems:
         How can computers learn with less help from us and data? How can computers reason about and learn with complex
@@ -308,7 +308,7 @@
         <br><br>
 
 
-        <div class="container" id="bio" style="margin-top:1px;margin-bottom:20px;height:200px; width:auto;overflow-y:scroll;list-style-position: outside">
+<div class="container" id="news" style="margin-top:1px;margin-bottom:20px;height:200px; width:auto;overflow-y:scroll;list-style-position: outside">
             <a name="news"></a>
             <b>News</b>.
             <TABLE BORDER="0" width="100%">
@@ -541,8 +541,10 @@
                 </TR>
             </TABLE>
         </div>
-        <hr class="soft">
-    </div>
+
+</div>
+
+<hr class="soft">
 
 
     <div id="people" class="container">
@@ -865,24 +867,22 @@
         <br>
 
 
-        <noscript>
-            <!-- bibtex source hidden by default, show it if JS disabled -->
-            <style>
-                #bibtex {
-                    display: block;
-                }
-            </style>
+         <noscript>
+              <!-- bibtex source hidden by default, show it if JS disabled -->
+              <style>
+              #bibtex { display: block;}
+              </style>
         </noscript>
 
-        <table id="pubTable" class="table" style="width:100%"></table>
+        <table id="pubTable" class="table style="width:100%"" ></table>
 
         <br>
 
         <pre id="bibtex" style="display:none;">
 
 
-
         </pre>
+
         <hr class="soft">
     </div>
 
@@ -1282,18 +1282,20 @@
     </div>
 </footer>
 
+
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="./build/bib-list.js"></script>
 
+<script type="text/javascript" src="./build/bib-list.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {
 
-        $.get('references.bib', function (references) {
+        $.get('https://ml-research.github.io/references.bib', function (references) {
             $("#bibtex").html(references);
             bibtexify("#bibtex", "pubTable");
         });
@@ -1319,101 +1321,6 @@
 
 </script>
 
-<script>
-
-    var more_bio_shown = false;
-
-    var more_projects_shown = false;
-
-    var more_pubs_shown = false;
-
-
-    $(document).ready(function () {
-
-        $("#showmorebio").click(function () {
-
-            if (!more_bio_shown) {
-
-                $("#morebio").slideDown('fast', function () {
-
-                    $("#showmorebio").text('hide more bio');
-
-                });
-
-                more_bio_shown = true;
-
-            } else {
-
-                $("#morebio").slideUp('fast', function () {
-
-                    $("#showmorebio").text('show more bio');
-
-                });
-
-                more_bio_shown = false;
-
-            }
-
-        });
-
-
-        $("#showmoreprojects").click(function () {
-
-            if (!more_projects_shown) {
-
-                $("#moreprojects").slideDown('fast', function () {
-
-                    $("#showmoreprojects").text('hide');
-
-                });
-
-                more_projects_shown = true;
-
-            } else {
-
-                $("#moreprojects").slideUp('fast', function () {
-
-                    $("#showmoreprojects").text('show more projects');
-
-                });
-
-                more_projects_shown = false;
-
-            }
-
-        });
-
-
-        $("#showmorepubs").click(function () {
-
-            if (!more_pubs_shown) {
-
-                $("#morepubs").slideDown('fast', function () {
-
-                    $("#showmorepubs").text('hide older publications');
-
-                });
-
-                more_pubs_shown = true;
-
-            } else {
-
-                $("#morepubs").slideUp('fast', function () {
-
-                    $("#showmorepubs").text('show older publications');
-
-                });
-
-                more_pubs_shown = false;
-
-            }
-
-        });
-
-
-    });
-
-</script>
 
 
 <script>
