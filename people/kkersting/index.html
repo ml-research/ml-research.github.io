@@ -48,18 +48,20 @@
   </script>
 
   <script src="./../../build/jquery.min.js"></script>
-      <script>
+  <!--    <script>
       $(function(){
         $("#includedContent").load("myBib.bib");
       });
-      </script>
+    </script>-->
+
+
 
 
 </head>
 
 
 
-<body onload="start()" data-spy="scroll" data-target=".navbar" data-offset="65">
+<body data-spy="scroll" data-target=".navbar" data-offset="65">
  <header>
        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 
@@ -326,9 +328,6 @@ boards of KI, NGC, Information, and Big Data and Cognitive Computing.<br><br>
 
 <h2>Books</h2>
 
-
-<div id="pubs">
-
 <div class="pubwrap" >
 <div class="row">
 
@@ -502,6 +501,7 @@ World Wide Web, and relational databases</span>
 </div>
 </div>
 
+</div>
 
 
 <hr class="soft">
@@ -4752,122 +4752,46 @@ Germany<br><br>
 </div>
 
 
-
-<script>
-
-var more_bio_shown = false;
-
-var more_projects_shown = false;
-
-var more_pubs_shown = false;
-
-
-function start() {
-
-
-
-
-$("#showmorebio").click(function() {
-
-if(!more_bio_shown) {
-
-$("#morebio").slideDown('fast', function() {
-
-$("#showmorebio").text('hide more bio');
-
-});
-
-more_bio_shown = true;
-
-} else {
-
-$("#morebio").slideUp('fast', function() {
-
-$("#showmorebio").text('show more bio');
-
-});
-
-more_bio_shown = false;
-
-}
-
-});
-
-
-$("#showmoreprojects").click(function() {
-
-if(!more_projects_shown) {
-
-$("#moreprojects").slideDown('fast', function() {
-
-$("#showmoreprojects").text('hide');
-
-});
-
-more_projects_shown = true;
-
-} else {
-
-$("#moreprojects").slideUp('fast', function() {
-
-$("#showmoreprojects").text('show more projects');
-
-});
-
-more_projects_shown = false;
-
-}
-
-});
-
-
-
-$("#showmorepubs").click(function() {
-
-if(!more_pubs_shown) {
-
-$("#morepubs").slideDown('fast', function() {
-
-$("#showmorepubs").text('hide older publications');
-
-});
-
-more_pubs_shown = true;
-
-} else {
-
-$("#morepubs").slideUp('fast', function() {
-
-$("#showmorepubs").text('show older publications');
-
-});
-
-more_pubs_shown = false;
-
-}
-
-});
-
-
-
-}
-
-</script>
-
-
-<!-- place js at end for faster loading -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
 
 <script type="text/javascript" src="./../../build/bib-list.js"></script>
 
+
 <script type="text/javascript">
+    $(document).ready(function () {
+
+//        $.get('../../references.bib', function (data) {
+  $.get('https://ml-research.github.io/references.bib', function (data) {
+            function containsName(bib) {
+                return bib.toLowerCase().includes("kersting")
+            }
+
+            function replaceImagePath(bib) {
+                return bib.replace("./images/", "./../../images/");
+            }
+
+            bibtex = data.split(/(?=@\w+)/u);
+            my_bibtex = bibtex.filter(containsName).map(replaceImagePath);
+            $("#bibtex").html(my_bibtex.join());
+            bibtexify("#bibtex", "pubTable");
+        });
+
+
+    });
+</script>
+
+
+
+
+<!--<script type="text/javascript">
         $(document).ready(function() {
           bibtexify("#bibtex", "pubTable");
         });
-</script>
+</script>-->
 
 
 
