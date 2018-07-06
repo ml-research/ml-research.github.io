@@ -2419,7 +2419,7 @@ var bibtexify = (function($) {
                                                }
                                             ],
                                'bPaginate': true,
-                               "pageLength": 10,
+                               "pageLength": 20,
                                "lengthMenu": [ [10, 20, 50, -1], [10, 20, 50, "All"] ],
                                "drawCallback": function ( settings ) {
                                  var api = this.api();
