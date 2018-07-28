@@ -2,15 +2,21 @@
   Anote = {./images/ramanan2018kr_learningRLR.png},
   Author = {Nandini Ramanan and Gautam Kunapuli and Tushar Khot and Bahare Fatemi and Seyed Mehran Kazemi and David Poole and Kristian Kersting and Sriraam Natarajan},
   Booktitle = {Proceedings of the 16th International Conference on Principles of Knowledge Representation and Reasoning (KR)},
-  Note = {Data-driven approaches are becoming dominant problem-solving techniques in many areas of research and industry. Unfortunately, current technologies do not make it easy to use them for application experts that are not fluent in machine learning technologies. We review key efforts made by various AI communities to provide languages for high-level abstractions
-over learning and reasoning techniques needed for designing complex AI systems. We classify the existing
-frameworks based on the techniques as well as the data and knowledge representations they use, provide a
-comparative study of the way they address the challenges of programming real-world applications, and highlight
-some shortcomings and future directions.  },
+  Note = {We consider the problem of learning Relational Logistic Regression
+(RLR). Unlike standard logistic regression, the features
+of RLRs are first-order formulae with associated weight
+vectors instead of scalar weights. We turn the problem of
+learning RLR to learning these vector-weighted formulae and
+develop a learning algorithm based on the recently successful
+functional-gradient boosting methods for probabilistic logic
+models. We derive the functional gradients and show how
+weights can be learned simultaneously in an efficient manner.
+Our empirical evaluation on standard and novel data sets
+demonstrates the superiority of our approach over other methods
+for learning RLR.},
     Keywords = {Statistical relational learning, Boosting, Relational Logistic Regression},
   Pages = {},
   Title = {Structure Learning for Relational Logistic Regression:An Ensemble Approach},
-  Url = {},
   Year = {2018}}
 
 
@@ -198,6 +204,38 @@ concept are going to be presented in this talk.},
       Url = {https://arxiv.org/pdf/1801.10495.pdf},
       Year = {2018},
       Bdsk-Url-1 = {https://arxiv.org/pdf/1801.10495.pdf}}
+
+
+      @article{antanas2018auro,
+        Anote = {./images/ki2018.jpg},
+        Author = {Laura Antanas Plinio Moreno; Marion Neumann; Rui Pimentel de Figueiredo; Kristian Kersting; José Santos-Victor; Luc De Raedt},
+        Journal = {Autonomous Robots (AURO)},
+        Keywords = {Robotics, Statistical Relational Learning, Grasping, Hybrid Domains },
+        Note = {While any grasp must satisfy the grasping stability criteria, good grasps depend on the
+specific manipulation scenario: the object, its properties and functionalities, as well as
+the task and grasp constraints. We propose a probabilistic logic approach for robot
+grasping, which improves grasping capabilities by leveraging semantic object parts. It
+provides the robot with semantic reasoning skills about the most likely object part to be
+grasped, given the task constraints and object properties, while also dealing with the
+uncertainty of visual perception and grasp planning. The probabilistic logic framework
+is task-dependent. It semantically reasons about pre-grasp configurations with respect
+to the intended task and employs object-task affordances and object/task ontologies to
+encode rules that generalize over similar object parts and object/task categories. The
+use of probabilistic logic for task-dependent grasping contrasts with current
+approaches that usually learn direct mappings from visual perceptions to task-dependent
+grasping points. The logic-based module receives data from a low-level
+module that extracts semantic objects parts, and sends information to the low-level
+grasp planner. These three modules define our probabilistic logic framework, which is
+able to perform robotic grasping in realistic kitchen-related scenarios.},
+        Pages = {Accepted},
+        Publisher = {Springer},
+        Title = {Semantic and Geometric Reasoning for Robotic Grasping: A Probabilistic Logic Approach},
+        Url = {},
+        Volume = {},
+        number = {},
+        Year = {2018},
+    }
+
 
 
     @article{kersting2018ki,
