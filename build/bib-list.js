@@ -2233,7 +2233,7 @@ var bibtexify = (function($) {
             'incollection': 50,
             'proceedings': 40,
             'conference': 20,
-            'article': 90,
+            'article': 95,
             'phdthesis': 40,
             'inbook': 40,
             'book': 100,
