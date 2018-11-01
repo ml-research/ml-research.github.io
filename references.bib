@@ -1798,6 +1798,18 @@ more compact, and hence more efficient to solve.},
   	Year = {2013},
   	Bdsk-Url-1 = {https://link.springer.com/chapter/10.1007%2F978-94-007-4682-4_26}}
 
+    @inproceedings{hadiji2013aaai_reduce,
+    	Anote = {./images/hadiji2013reduce.png},
+    	Author = {Fabian Hadiji and Kristian Kersting},
+    	Booktitle = {Proceedings of the Twenty-Seventh AAAI Conference on Artificial
+               Intelligence (AAAI)},
+    	Keywords = {Statistical Relational AI, Lifted Inference, Re-lifting, MAP, Likelihood Maximization},
+    	Note = {By handling whole sets of indistinguishable objects together, lifted belief propagation approaches have rendered large, previously intractable, probabilistic inference problems quickly solvable. In this paper, we show that Kumar and Zilberstein's likelihood maximization (LM) approach to MAP inference is liftable, too, and actually provides additional structure for optimization. Specifically, it has been recognized that some pseudo marginals may converge quickly, turning intuitively into pseudo evidence. This additional evidence typically changes the structure of the lifted network: it may expand or reduce it. The current lifted network, however, can be viewed as an upper bound on the size of the lifted network required to finish likelihood maximization. Consequently, we re-lift the network only if the pseudo evidence yields a reduced network, which can efficiently be computed on the current lifted network. Our experimental results on Ising models, image segmentation and relational entity resolution demonstrate that this bootstrapped LM via ``reduce and re-lift'' finds MAP assignments comparable to those found by the original LM approach, but in a fraction of the time.},
+    	Title = {Reduce and Re-Lift: Bootstrapped Lifted Likelihood Maximization for MAP},
+    	Url = {./papers/hadiji2013reduce.pdf},
+    	Year = {2013},
+    	Bdsk-Url-1 = {./papers/hadiji2013reduce.pdf}}
+
   @incollection{hadiji2013reduce,
   	Anote = {./images/hadiji2013reduce.png},
   	Author = {Fabian Hadiji and Kristian Kersting},
@@ -3126,12 +3138,26 @@ more compact, and hence more efficient to solve.},
   	Year = {2007},
   	Bdsk-Url-1 = {./images/gutmann2007mlg.pdf}}
 
+    @inproceedings{landwehrKR05,
+    author    = {Niels Landwehr and
+                 Kristian Kersting and
+                 Luc De Raedt},
+    Anote = {./images/landwehr2007integrating.png},
+    Keywords = {Statistical Relational Learning, FOIL, Naive Bayes, Rule Learning},
+    title     = {nFOIL: Integrating Naive Bayes and {FOIL}},
+    booktitle = {Proceedings of the Twentieth National Conference on Artificial Intelligence
+                 (AAAI))},
+    pages     = {795--800},
+    year      = {2005}
+  }
+
   @article{landwehr2007integrating,
   	Anote = {./images/landwehr2007integrating.png},
   	Author = {Niels Landwehr and Kristian Kersting and Luc De Raedt},
   	Journal = {Journal of Machine Learning Research (JMLR)},
   	Keywords = {Statistical Relational Learning, FOIL, Naive Bayes, Rule Learning},
-  	Note = {A novel relational learning approach that tightly integrates the na¨ıve Bayes learning scheme with the inductive logic programming rule-learner FOIL is presented. In contrast to previous combinations that have employed na¨ıve Bayes only for post-processing the rule sets, the presented approach employs the na¨ıve Bayes criterion to guide its search directly. The proposed technique is implemented in the NFOIL and TFOIL systems, which employ standard na¨ıve Bayes and tree augmented na¨ıve Bayes models respectively. We show that these integrated approaches to probabilistic model and rule learning outperform post-processing approaches. They also yield significantly more accurate models than simple rule learning and are competitive with more sophisticated ILP systems.},
+  	Note = {A novel relational learning approach that tightly integrates the na¨ıve Bayes learning scheme with the inductive logic programming rule-learner FOIL is presented. In contrast to previous combinations that have employed na¨ıve Bayes only for post-processing the rule sets, the presented approach employs the na¨ıve Bayes criterion to guide its search directly.
+    The proposed technique is implemented in the NFOIL and TFOIL systems, which employ standard na¨ıve Bayes and tree augmented na¨ıve Bayes models respectively. We show that these integrated approaches to probabilistic model and rule learning outperform post-processing approaches. They also yield significantly more accurate models than simple rule learning and are competitive with more sophisticated ILP systems.},
   	Number = {Mar},
   	Pages = {481--507},
   	Title = {Integrating naive bayes and foil},
