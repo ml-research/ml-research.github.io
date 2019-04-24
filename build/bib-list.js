@@ -1990,6 +1990,17 @@ var bibtexify = (function($) {
             itemStr += '&nbsp;';
             return itemStr;
         },
+        // adds links to the PDF or url of the item
+        code: function(entryData) {
+          var itemStr = '';
+            if (entryData.code) {
+              var itemStr = '&nbsp;';
+              itemStr += '<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="Code related to this paper" href="'+  entryData.crossref +'" target="_blank"><font color="black">&nbsp;code)<\/font><\/a>&nbsp;<\/span>';
+          //  itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
+          //            entryData.url + '" target="_blank"><font color="white">.pdf (draft)<\/font><\/a><\/button>';
+            }
+            return itemStr;
+        },
         // <div class="publ"><ul>
         // adds the bibtex link and the opening div with bibtex content
         bibtex: function(entryData) {
