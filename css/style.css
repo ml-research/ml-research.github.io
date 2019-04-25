@@ -353,6 +353,14 @@ hr.soft {
   color: #333;
 }
 
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+}
+
 .miscitem {
   margin: 10px 0px 60px;
 }
