@@ -295,7 +295,10 @@
             }
 
             function replaceImagePath(bib) {
-                return bib.replace("./images/", "../../images/");
+                return bib.replace("./images/", "./../../images/");
+            }
+            function replacePaperPath(bib) {
+                return bib.replace("./papers/", "./../../papers/");
             }
 
             bibtex = data.split(/(?=@\w+)/u);
