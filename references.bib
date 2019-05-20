@@ -2,25 +2,35 @@
 
 
 @inproceedings{peharz2019uai_ratspns,
-          Anote = {./images/peharz2018ratspns.png},
+          Anote = {./images/peharz2019ratspns.png},
           Booktitle = {Proceedings of the Thirty-Fifth Conference on Uncertainty in Artificial Intelligence (UAI); also arXiv preprint arXiv:1806.01910},
           Author = {Robert Peharz and Antonio Vergari and Karl Stelzner and Alejandro Molina and Martin Trapp and Kristian Kersting and Zoubin Ghahramani},
           Keywords = {deep learning, probabilistic deep learning, sum product networks, random models, generative model},
-          Note = {Probabilistic deep learning currently receives an increased interest, as
-            consistent treatment of uncertainty is one of the most important goals in machine
-            learning and AI. Most current approaches, however, have severe limitations concerning
-            inference. Sum-Product networks (SPNs), although having excellent properties in that regard,
-            have so far not been explored as serious deep learning models, likely due to their special
-            structural requirements. In this paper, we make a drastic simplification and use a random
-            structure which is trained in a "classical deep learning manner" such as automatic
-            differentiation, SGD, and GPU support. The resulting models, called RAT-SPNs, yield
-            comparable prediction results to deep neural networks, but maintain well-calibrated
-            uncertainty estimates which makes them highly robust against missing data. Furthermore,
-            they successfully capture uncertainty over their inputs in a convincing manner, yielding
-            robust outlier and peculiarity detection.},
+          Note = {Sum-product networks (SPNs) are a particularly promising type
+                  of deep probabilistic model that allows an exceptionally rich
+                  set of exact and efficient inference scenarios. To achieve
+                  this, though, SPN have to obey specific structural
+                  constraints. While SPN structure learning received much
+                  attention, most of the proposed methods so far are tedious to
+                  tune, typically do not scale easily and hinder integration
+                  with deep learning frameworks. In this paper, we investigate
+                  how important structure learning in SPNs actually is. To this
+                  end, we propose a ``classical deep learning approach'', i.e.,
+                  generate an unspecialized random structure scaling up to
+                  millions of parameters, and then apply modern GPU-based
+                  optimizers with regularization. That is, we investigating the
+                  performance of SPNs in the absence of carefully selected
+                  structures. As it turns out, our models perform on par with
+                  state-of-the-art SPN structure learners and deep neural
+                  networks on a diverse range of generative and discriminative
+                  scenarios. Most importantly, they yield well-calibrated
+                  uncertainties, thus standing out among most deep generative
+                  and discriminative models in being robust to missing features
+                  and detecting anomalies.
+                 },
           Pages = {},
           Publisher = {},
-          Title = {Probabilistic Deep Learning using Random Sum-Product Networks},
+          Title = {Random Sum-Product Networks: A Simple but Effective Approach to Probabilistic Deep Learning},
           Url = {https://arxiv.org/pdf/1806.01910.pdf},
           Year = {2019},
           Bdsk-Url-1 = {https://arxiv.org/pdf/1806.01910.pdf}}
