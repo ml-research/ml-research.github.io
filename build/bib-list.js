@@ -2005,7 +2005,7 @@ var bibtexify = (function($) {
         others: function(entryData) {
           var itemStr = '';
             if (entryData.key) {
-              itemStr += '&nbsp;<span style="color:white;font-size:12px;background-color:#B1D796;cursor: pointer;"><font color="black">'+  entryData.key +'<\/font>&nbsp;<\/span>';
+              itemStr += '&nbsp;<span style="color:white;font-size:12px;background-color:#B1D796;"><font color="black">'+  entryData.key +'<\/font>&nbsp;<\/span>';
           //  itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
           //            entryData.url + '" target="_blank"><font color="white">.pdf (draft)<\/font><\/a><\/button>';
 
