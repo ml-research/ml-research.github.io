@@ -1923,7 +1923,7 @@ var bibtexify = (function($) {
             itemStr += bib2html.links(entryData);
             itemStr += bib2html.bibtex(entryData);
             itemStr += bib2html.code(entryData);
-
+            itemStr += bib2html.others(entryData);
 
             //itemStr +=  "<span class='pubd'>" + " "+ entryData.note + "<\/span>";
             //  }
