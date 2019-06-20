@@ -2002,6 +2002,16 @@ var bibtexify = (function($) {
           }
             return itemStr;
         },
+        others: function(entryData) {
+          var itemStr = '';
+            if (entryData.key) {
+              itemStr += '&nbsp;<span style="color:white;font-size:12px;background-color:#ffa5c9;cursor: pointer;"><font color="black">'+  entryData.crossref +'<\/font>&nbsp;<\/span>';
+          //  itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
+          //            entryData.url + '" target="_blank"><font color="white">.pdf (draft)<\/font><\/a><\/button>';
+
+          }
+            return itemStr;
+        },
         // <div class="publ"><ul>
         // adds the bibtex link and the opening div with bibtex content
         bibtex: function(entryData) {
