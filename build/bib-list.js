@@ -1919,10 +1919,11 @@ var bibtexify = (function($) {
             }
             var itemStr = htmlify(bib2html[type](entryData));
             itemStr += "<div class='publ'><ul class='list-unstyled'>"
-              itemStr += bib2html.abstex(entryData);
+            itemStr += bib2html.abstex(entryData);
             itemStr += bib2html.links(entryData);
             itemStr += bib2html.bibtex(entryData);
-
+            itemStr += bib2html.code(entryData);
+            itemStr += bib2html.others(entryData);
 
             //itemStr +=  "<span class='pubd'>" + " "+ entryData.note + "<\/span>";
             //  }
@@ -1976,24 +1977,45 @@ var bibtexify = (function($) {
         },
         // adds links to the PDF or url of the item
         links: function(entryData) {
-            var itemStr = '&nbsp;';
+            var itemStr = '';
             if (entryData.url && entryData.url.match(/.*\.pdf/)) {
-            itemStr += '<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="PDF of this paper" href="'+  entryData.url +'" target="_blank"><font color="black">&nbsp;.pdf (draft)<\/font><\/a>&nbsp;<\/span>';
+            itemStr += '&nbsp;<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="PDF of this paper" href="'+  entryData.url +'" target="_blank"><font color="black">&nbsp;.pdf (draft)<\/font><\/a>&nbsp;<\/span>';
           //  itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
           //            entryData.url + '" target="_blank"><font color="white">.pdf (draft)<\/font><\/a><\/button>';
             } else if (entryData.url) {
-              itemStr += '<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="Link to this paper" href="'+  entryData.url +'" target="_blank"><font color="black">.url (draft)<\/font><\/a>&nbsp;<\/span>';
+              itemStr += '&nbsp;<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="Link to this paper" href="'+  entryData.url +'" target="_blank"><font color="black">.url (draft)<\/font><\/a>&nbsp;<\/span>';
 
             //  itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
             //            entryData.url + '" target="_blank"><font color="white">.url (draft)<\/font><\/a><\/button>';
             }
-            itemStr += '&nbsp;';
+
+            return itemStr;
+        },
+        // adds links to the PDF or url of the item
+        code: function(entryData) {
+          var itemStr = '';
+            if (entryData.crossref) {
+              itemStr += '&nbsp;<span style="color:white;font-size:12px;background-color:#ffa5c9;cursor: pointer;"> <a title="Code related to this paper" href="'+  entryData.crossref +'" target="_blank"><font color="black">code<\/font><\/a>&nbsp;<\/span>';
+          //  itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
+          //            entryData.url + '" target="_blank"><font color="white">.pdf (draft)<\/font><\/a><\/button>';
+
+          }
+            return itemStr;
+        },
+        others: function(entryData) {
+          var itemStr = '';
+            if (entryData.key) {
+              itemStr += '&nbsp;<span style="color:white;font-size:12px;background-color:#B1D796;"><font color="black">'+  entryData.key +'<\/font>&nbsp;<\/span>';
+          //  itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
+          //            entryData.url + '" target="_blank"><font color="white">.pdf (draft)<\/font><\/a><\/button>';
+
+          }
             return itemStr;
         },
         // <div class="publ"><ul>
         // adds the bibtex link and the opening div with bibtex content
         bibtex: function(entryData) {
-            var itemStr = '';
+            var itemStr = '&nbsp;';
             itemStr += '<a style="color:black;font-size:12px;background-color:#FFCECE" title="This paper as BibTeX" href="#" class="biblink">' + '&nbsp;.bib &nbsp;<\/a><div class="bibinfo hidden">';
 
           //  itemStr += '&nbsp;&nbsp;<button type="button" class="biblink btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="This article as BibTeX" href="#">' +
@@ -2233,7 +2255,7 @@ var bibtexify = (function($) {
             'incollection': 50,
             'proceedings': 40,
             'conference': 20,
-            'article': 95,
+            'article': 96,
             'phdthesis': 40,
             'inbook': 40,
             'book': 100,

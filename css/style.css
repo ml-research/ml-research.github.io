@@ -40,7 +40,23 @@ a:focus span
 }*/
 
 
+.responsive-video {
+	position: relative;
+	padding-bottom: 56%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
 
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 
 .imgme2 {
   float: left;
@@ -335,6 +351,14 @@ hr.soft {
 }
 .showmore:hover {
   color: #333;
+}
+
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .miscitem {

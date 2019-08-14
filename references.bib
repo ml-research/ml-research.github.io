@@ -1,5 +1,448 @@
+@book{kersting2019springer_ml,
+  author    = {Kristian Kersting and Christoph Lampert and Constantin Rothkopf (Hrsg.)},
+  title     = {Wie Maschinen lernen - Künstliche Intelligenz verständlich erklärt},
+  publisher = {Springer (to appear)},
+  year      = {2020},
+  url       = {https://www.springer.com/de/book/9783658267629},
+  isbn       = {978-3-658-26762-9},
+  Keywords = {Künstliche Intelligenz, Maschinelles Lernen, Einführung, Verständlich, Popular Science, Von Studierenden},
+  Note    = {Wissen Sie, was sich hinter künstlicher Intelligenz und maschinellem
+Lernen verbirgt? Dieses Sachbuch erklärt Ihnen leicht verständlich und ohne komplizierte
+Formeln die grundlegenden Methoden und Vorgehensweisen des maschinellen Lernens. Mathematisches Vorwissen ist dafür nicht
+nötig. Kurzweilig und informativ illustriert Lisa, die Protagonistin des Buches, diese anhand von Alltagssituationen.
+Ein Buch für alle, die in Diskussionen über Chancen und Risiken der aktuellen Entwicklung der künstlichen Intelligenz und des maschinellen
+Lernens mit Faktenwissen punkten möchten. Auch für Schülerinnen und Schüler geeignet!
+Der Inhalt: Grundlagen der künstlichen Intelligenz: Algorithmen; maschinelles Lernen & Co; die wichtigsten Lernverfahren Schritt für Schritt anschaulich
+erklärt; Künstliche Intelligenz in der Gesellschaft: Sicherheit und Ethik.},
+  Anote = {./images/kersting2020book_simpleAI.png},
+}
 
 
+
+
+  @incollection{voelker2019ads,
+      Anote = {./images/voelker2019ads.png},
+      Author = {Claas Voelcker and Alejandro Molina and Johannes Neumann and Dirk Westermann and and Kristian Kersting},
+      Booktitle = {Working Notes of the ECML PKDD 2019 Workshop on Automating Data Science (ADS)},
+      Note = {Machine learning is taking an increasingly relevant role in
+science, business, entertainment, and other fields. However, the most
+advanced techniques are still in the hands of well-educated and -funded
+experts only. To help to democratize machine learning, we propose Deep-Notebooks as a novel way to empower a broad spectrum of users, which
+are not machine learning experts, but might have some basic programming
+skills and are interested data science. Within the DeepNotebook
+framework, users simply feed their datasets to the system. The system
+then automatically estimates a deep but tractable probabilistic model
+and then compiles an interactive Python notebook out of it that already
+contains a preliminary yet comprehensive analysis of the dataset at hand.
+If the users want to change the parameters of the interactive report or
+make different queries to the underlying model, they can quickly do that
+following the example code presented in the DeepNotebook. This
+exibility allows the users to have a feedback loop where they can discover
+patterns and dig deeper into the data using targeted questions, even if
+they are not experts in machine learning.},
+        Keywords = {Sum-Product Networks, Shapley Explanation Values, Deep Learning, Automatic Statistician, Density Estimtion, Data Reports, Jupyter Notebook},
+      Pages = {},
+      Title = {DeepNotebooks: Deep Probabilistic Models Construct Python Notebooks for Reporting Datasets},
+      Url = {./papers/voelker2019ads.pdf},
+      crossref = {https://github.com/cvoelcker/DeepNotebooks},
+      Year = {2019}}
+
+
+
+      @misc{molina2019pade,
+          Anote = {./images/molina2019pade.png},
+          Author = {Alejandro Molina and Patrick Schramowski and Kristian Kersting},
+          Howpublished = {arXiv preprint arXiv:1907.06732},
+          Note = {The performance of deep network learning strongly depends on the choice of the non-linear activation
+          function associated with each neuron. However, deciding on the best activation is non-trivial and the choice
+          depends on the architecture, hyper-parameters, and even on the dataset. Typically these activations are fixed
+          by hand before training. Here, we demonstrate how to eliminate the reliance on first picking fixed activation
+          functions by using flexible parametric rational functions instead. The resulting Padé Activation Units (PAUs)
+          can both approximate common activation functions and also learn new ones while providing compact representations.
+          Our empirical evidence shows that end-to-end learning deep networks with PAUs can increase the predictive
+          performance and reduce the training time of common deep architectures. Moreover, PAUs pave the way to
+          approximations with provable robustness.},
+            Keywords = {Deep Learning, Activation Function, End-to-end Learning, Rational Function, Padé Approximation},
+          Pages = {},
+          Title = {Padé Activation Units: End-to-end Learning of Flexible Activation Functions in Deep Networks},
+          Url = {https://arxiv.org/pdf/1907.06732.pdf},
+          Crossref = {https://github.com/ml-research/pau},
+          Year = {2019}}
+
+
+      @misc{ventola2019rspf,
+          Anote = {./images/ventola2019rspf.png},
+          Author = {Fabrizio Ventola and Karl Stelzner and Alejandro Molina and Kristian Kersting},
+          Howpublished = {arXiv preprint arXiv:1908.03250},
+          Note = {Tractable yet expressive density estimators are a key building block of probabilistic machine learning.
+          While sum-product networks (SPNs) offer attractive inference capabilities, obtaining structures large enough
+          to fit complex, high-dimensional data has proven challenging. In this paper, we present random sum-product
+          forests (RSPFs), an ensemble approach for mixing multiple randomly generated SPNs. We also introduce residual
+          links, which reference specialized substructures of other component SPNs in order to leverage the
+          context-specific knowledge encoded within them. Our empirical evidence demonstrates that RSPFs provide better
+          performance than their individual components. Adding residual links improves the models further,
+          allowing the resulting ResSPNs to be competitive with commonly used structure learning methods.},
+            Keywords = {deep learning, probabilistic deep learning, sum product networks, random forests, residual networks, generative model},
+          Pages = {},
+          Title = {Random Sum-Product Forests with Residual Links},
+          Url = {https://arxiv.org/pdf/1908.03250.pdf},
+          Crossref = {https://github.com/ml-research/resspn},
+          Year = {2019}}
+
+
+
+@inproceedings{peharz2019uai_ratspns,
+          Anote = {./images/peharz2019uai_ratspns.png},
+          Booktitle = {Proceedings of the Thirty-Fifth Conference on Uncertainty in Artificial Intelligence (UAI); a previous version also as arXiv preprint arXiv:1806.01910},
+          Author = {Robert Peharz and Antonio Vergari and Karl Stelzner and Alejandro Molina and Xiaoting Shao and Martin Trapp and Kristian Kersting and Zoubin Ghahramani},
+          Keywords = {deep learning, probabilistic deep learning, sum product networks, random models, generative model},
+          Note = {Sum-product networks (SPNs) are a particularly promising type
+                  of deep probabilistic model that allows an exceptionally rich
+                  set of exact and efficient inference scenarios. To achieve
+                  this, though, SPN have to obey specific structural
+                  constraints. While SPN structure learning received much
+                  attention, most of the proposed methods so far are tedious to
+                  tune, typically do not scale easily and hinder integration
+                  with deep learning frameworks. In this paper, we investigate
+                  how important structure learning in SPNs actually is. To this
+                  end, we propose a ``classical deep learning approach'', i.e.,
+                  generate an unspecialized random structure scaling up to
+                  millions of parameters, and then apply modern GPU-based
+                  optimizers with regularization. That is, we investigating the
+                  performance of SPNs in the absence of carefully selected
+                  structures. As it turns out, our models perform on par with
+                  state-of-the-art SPN structure learners and deep neural
+                  networks on a diverse range of generative and discriminative
+                  scenarios. Most importantly, they yield well-calibrated
+                  uncertainties, thus standing out among most deep generative
+                  and discriminative models in being robust to missing features
+                  and detecting anomalies.
+                 },
+          Pages = {},
+          Publisher = {},
+          Title = {Random Sum-Product Networks: A Simple but Effective Approach to Probabilistic Deep Learning},
+          Url = {./papers/peharz2019uai_ratspns.pdf},
+          Year = {2019}}
+
+
+
+@inproceedings{stelzner2019icml_SuPAIR,
+Anote = {./images/stelzner2019icml_SuPAIR2.png},
+Author = {Karl Stelzner and Robert Peharz and Kristian Kersting},
+  Booktitle = {Proceedings of the 36th International Conference on Machine Learning (ICML); also in Working Notes of the ICML 2019 Workshop on Tractable Probabilistic Models (TPM)},
+  Keywords = {Attend-Infer-Repeat, Sum-Product Networks, Unsupervised Scene Understanding, Deep Learning},
+  Note = {The recent attend-infer-repeat (AIR) framework marks a milestone in Bayesian scene understanding and in the promising avenue of structured probabilistic modeling.
+The AIR model expresses the composition of visual scenes from individual objects, and uses variational autoencoders to model the appearance of those objects.
+However, inference in the overall model is highly intractable, which hampers its learning speed and makes it prone to sub-optimal solutions.
+In this paper, we show that inference and learning in AIR can be considerably accelerated by replacing the intractable object representations with tractable probabilistic models.
+In particular, we opt for sum-product (SP) networks, an expressive deep probabilistic model with a rich set of tractable inference routines.
+As our empirical evidence shows, the resulting model, called SuPAIR, achieves a higher object detection accuracy than the original AIR system, while reducing the learning time by an order of magnitude.
+Moreover, SuPAIR allows one to treat object occlusions in a consistent manner and to include a background noise model, improving the robustness of Bayesian scene understanding.},
+  Pages = {},
+  Title = {Faster Attend-Infer-Repeat with Tractable Probabilistic Models},
+  Url = {http://proceedings.mlr.press/v97/stelzner19a/stelzner19a.pdf},
+  Crossref = {https://github.com/stelzner/supair},
+  Key = {Best Paper Award at TPM 2019},
+  Year = {2019}}
+
+
+  @inproceedings{kaur2019ilp,
+            Anote = {./images/kaur2019ilp.png},
+            Booktitle = {Proceedings of the 29th International Conference on Inductive Logic Programming (ILP)},
+            Author = {Navdeep Kaur and Gautam Kunapuli and Saket Joshi and Kristian Kersting and Sriraam Natarajan},
+            Keywords = {deep learning, relational random walks, parameter sharing, statistical relational learning},
+            Note = {While deep networks have been enormously successful over
+the last decade, they rely on flat-feature vector representations, which
+makes them unsuitable for richly structured domains such as those arising
+in applications like social network analysis. Such domains rely on
+relational representations to capture complex relationships between entities
+and their attributes. Thus, we consider the problem of learning neural
+networks for relational data. We distinguish ourselves from current
+approaches that rely on expert hand-coded rules by learning relational
+random-walk-based features to capture local structural interactions and
+the resulting network architecture. We further exploit parameter tying
+of the network weights of the resulting relational neural network, where
+instances of the same type share parameters. Our experimental results
+across several standard relational data sets demonstrate the effectiveness
+of the proposed approach over multiple neural net baselines as well as
+state-of-the-art statistical relational models.},
+            Pages = {},
+            Publisher = {},
+            Title = {Neural Networks for Relational Data},
+            Url = {./papers/kaur2019ilp.pdf},
+            Year = {2019}}
+
+
+            @inproceedings{luedtke2019ki,
+                      Anote = {./images/luedtke2019ki.png},
+                      Booktitle = {Proceedings of the 42nd German Conference on Artificial Intelligence (KI)},
+                      Author = {Stefan Lüdtke and Alejandro Molina and Kristian Kersting and Thomas Kirste},
+                      Keywords = {Lifted inference, Gaussian mixture, Bayesian filtering},
+                      Note = {Recently, Lifted Marginal Filtering has been proposed, an
+                      efficient Bayesian filtering algorithm for stochastic systems consisting
+                      of multiple, (inter-)acting agents and objects (entities). The algorithm
+                      achieves its efficiency by performing inference jointly over groups of sim-
+                      ilar entities (i.e. their properties follow the same distribution).
+                      In this paper, we explore the case where there are no entities that are
+                      directly suitable for grouping. We propose to use methods from Gaussian
+                      mixture fitting to identify entity groups, such that the error imposed by
+                      grouping them (by approximating their properties by a distribution) is
+                      minimal. Furthermore, we show how Gaussian mixture merging methods
+                      can be used to prevent the number of groups from growing indefinitely
+                      over time. We evaluate our approach on an activity prediction task in
+                      an online multiplayer game. The results suggest that compared to the
+                      conventional approach, where all entities are handled individually, de-
+                      crease in prediction accuracy is small, while inference runtime decreases
+                      significantly.},
+                      Pages = {},
+                      Publisher = {},
+                      Title = {Gaussian Lifted Marginal Filtering},
+                      Url = {},
+                      Year = {2019}}
+
+
+
+  @article{mahlein2019coplbi,
+          Anote = {./images/mahlein2019coplbi.gif},
+          Author = {Anne-Katrin Mahlein and Matheus Thomas Kuska and Stefan Thomas and Mirwaes Wahabzada and Jan Behmann and Uwe Rascher and Kristian Kersting},
+          Journal = {Current Opinion in Plant Biology},
+          Keywords = {Plant Phenotyping, Crop Resistance, Artificial Intelligence, Machine Learning, Genotype},
+          Note = {Determination and characterization of resistance reactions of crops against fungal pathogens
+          are essential to select resistant genotypes. In plant breeding, phenotyping of genotypes is realized
+          by time consuming and expensive visual plant ratings. During resistance reactions and during pathogenesis
+          plants initiate different structural and biochemical defence mechanisms, which partly affect the optical
+          properties of plant organs. Recently, intensive research has been conducted to develop innovative optical
+          methods for an assessment of compatible and incompatible plant pathogen interaction. These approaches,
+          combining classical phytopathology or microbiology with technology driven methods - such as sensors,
+          robotics, machine learning, and artificial intelligence — are summarized by the term digital phenotyping.
+          In contrast to common visual rating, detection and assessment methods, optical sensors in combination with
+          advanced data analysis methods are able to retrieve pathogen induced changes in the physiology of
+          susceptible or resistant plants non-invasively and objectively. Within this review, recent advances of
+          digital phenotyping technologies for the detection of subtle resistance reactions and resistance
+          breeding are highlighted and methodological requirements are critically discussed.  },
+          Pages = {},
+          Publisher = {Elsevier},
+          Title = {Quantitative and qualitative phenotyping of disease resistance of crops by hyperspectral sensors: seamless interlocking of phytopathology, sensors, and machine learning is needed!},
+          Url = {https://www.sciencedirect.com/science/article/pii/S1369526618301092?utm_campaign=STMJ_75273_AUTH_SERV_PPUB&utm_medium=email&utm_dgroup=Email1Publishing&utm_acid=1165876983&SIS_ID=-1&dgcid=STMJ_75273_AUTH_SERV_PPUB&CMX_ID=&utm_in=DM561782&utm_source=AC_30},
+          Volume = {},
+          number = {},
+          Year = {2019},
+      }
+
+
+
+@article{riguzzi2019frontiers,
+        Anote = {./images/frontiersRAI.png},
+        Author = {Fabrizio Riguzzi and Kristian Kersting and Marco Lippi and Sriraam Natarajan},
+        Journal = {Frontiers in Robotics and AI},
+        Keywords = {Artificial Intelligence, Probability, Logic, Programming, Machine Learning, Statistical Relational AI},
+        Note = {Statistical Relational Artificial Intelligence (StarAI) aims at integrating logical (or relational) AI with
+        probabilistic (or statistical) AI. Relational AI achieved impressive results in structured machine learning and data
+        mining, especially in bio- and chemo-informatics. Statistical AI is based on probabilistic (graphical) models that
+        enable efficient reasoning and learning, and that have been applied to a wide variety of fields such as diagnosis,
+        network communication, computational biology, computer vision, and robotics. Ultimately, StarAI may provide good
+        starting points for developing Systems AI—the computational and mathematical modeling of complex AI systems—and in
+        turn an engineering discipline for Artificial Intelligence and Machine Learning. This Research Topic "Statistical
+        Relational Artificial Intelligence”2aims at presenting an overview of the latest approaches in StarAI. This topic
+        was followed by a summer school1held in 2018 in Ferrara, Italy, as part of the series of Advanced Courses on AI
+        (ACAI) promoted by the European Association for Artificial Intelligence.},
+        Pages = {},
+        Publisher = {},
+        Title = {Editorial: Statistical Relational Artificial Intelligence},
+        Url = {./papers/riguzzi2019frontiers.pdf},
+        Volume = {},
+        number = {},
+        Year = {2019},
+    }
+
+
+
+
+  @article{brugger2019remoteSensing,
+          Anote = {./images/brugger2019remoteSensing.png},
+          Author = {Anna Brugger and Jan Behmann and Stefan Paulus and Hans-Georg Luigs and Matheus Thomas Kuska and Patrick Schramowski and Kristian Kersting and Ulrike Steiner and Anne-Katrin Mahlein},
+          Journal = {Remote Sensing},
+          Keywords = {Ultraviolet Range, Barley Leaves, Salt Stress, Visualization Effects, Plant Phenotyping},
+          Note = {Previous plant phenotyping studies have focused on the visible (VIS, 400-700 nm),
+near-infrared (NIR, 700-1000 nm) and short-wave infrared (SWIR, 1000-2500 nm) range. The
+ultraviolet range (UV, 200-380 nm) has not yet been used in plant phenotyping even though a number
+of plant molecules like flavones and phenol feature absorption maxima in this range. In this study an
+imaging UV line scanner in the range of 250 - 430 nm is introduced to investigate crop plants for plant
+phenotyping. Observing plants in the UV-range can provide information about important changes of
+plant substances. To record reliable and reproducible time series results, measurement conditions
+were defined that exclude phototoxic effects of UV-illumination in the plant tissue. The measurement
+quality of the UV-camera has been assessed by comparing it to a non-imaging UV-spectrometer by
+measuring six different white-colored plant-based substances. Given the findings of these preliminary
+studies, an experiment has been defined and performed monitoring the stress response of barley
+leaves to salt stress. The aim was to visualize the effects of abiotic stress within the UV-range to
+provide new insights into the stress response of plants visualizing the effects of abiotic stress within
+the UV-range to provide new insights into the stress response of plants at the example of the stress
+response of barley leaves to salt stress. Our study demonstrated the first use of a hyperspectral sensor
+in the UV-range for stress detection in plant phenotyping.},
+          Pages = {},
+          Publisher = {MDPI},
+          Title = {Extending hyperspectral imaging for plant phenotyping to the UV-range},
+          Url = {./papers/brugger2019remoteSensing.pdf},
+          Volume = {},
+          number = {},
+          Year = {2019},
+      }
+
+
+  @article{lioutikov2019,
+          Anote = {./images/lioutikov2018icra_probGramMove.png},
+          Author = {Rudolf Lioutikov and Guilherme Maeda and Filipe Veiga and Kristian Kersting and Jan Peters},
+          Journal = {International Journal of Robotics Research (IJRR)},
+          Keywords = {Robotics, Movement Primitives, Probabilistic Grammar, Bayesian Grammar Induction, Grammar Prior},
+          Note = {Movement Primitives are a well studied and
+        widely applied concept in modern robotics. Composing primitives
+        out of an existing library, however, has shown to be
+        a challenging problem. We propose the use of probabilistic
+        context-free grammars to sequence a series of primitives to
+        generate complex robot policies from a given library of primitives.
+        The rule-based nature of formal grammars allows an
+        intuitive encoding of hierarchically and recursively structured
+        tasks. This hierarchical concept strongly connects with the way
+        robot policies can be learned, organized, and re-used. However,
+        the induction of context-free grammars has proven to be a
+        complicated and yet unsolved challenge. In this work, we exploit
+        the physical nature of robot movement primitives to restrict
+        and efficiently search the grammar space. The grammar is
+        learned with Markov Chain Monte Carlo optimization over the
+        posteriors of the grammars given the observations. Restrictions
+        over operators connecting the search define the corresponding
+        proposal distributions and, therefore, guide the optimization
+        additionally. In experiments, we validate our method on a
+        redundant 7 degree-of-freedom lightweight robotic arm on tasks
+        that require the generation of complex sequences of motions out
+        of simple primitives.},
+          Pages = {},
+          Publisher = {SAGE},
+          Title = {Learning Attribute Grammars for Movement Primitive Sequencing},
+          Url = {},
+          Volume = {},
+          number = {},
+          Year = {2019},
+      }
+
+
+
+  @incollection{ramanan2019tpm,
+      Anote = {./images/ramanan2019tpm.png},
+      Author = {Nandini Ramanan and Mayukh Das and Kristian Kersting and Sriraam Natarajan},
+      Booktitle = {Working Notes of the ICML 2019 Workshop on Tractable Probabilistic Models (TPM)},
+      Note = {Arithmetic Circuits (AC) and Sum-Product Networks (SPN) have recently gained significant interest
+by virtue of being tractable deep probabilistic models. Most previous work on learning
+AC structures, however, hinges on inducing a tree-structured AC and, hence, may potentially
+break loops that may exist in the true generative model. To repair such broken loops, we propose a
+gradient-boosted method for structure learning of discriminative ACs (DACs), called DACBOOST.
+Since, in discrete domains, ACs are essentially equivalent to mixtures of trees, DACBOOST decomposes
+a large AC into smaller tree-structured ACs and learns them in a sequential, additive
+manner. The resulting non-parametric manner of learning the DACs results in a model with very
+few tuning parameters making our learned model significantly more efficient. We demonstrate on
+standard data sets and some real-world data sets, the efficiency of DACBOOST compared to the
+state-of-the-art DAC learners without sacrificing the effectiveness. This makes it possible to employ
+DACs for large scale real-world tasks.},
+        Keywords = {Sum-Product Networks, Deep Learning, Structure Learning, Gradient Boosting},
+      Pages = {},
+      Title = {Discriminative Non-Parametric Learning of Arithmetic Circuits},
+      Url = {./papers/ramanan2019tpm.pdf},
+      Year = {2019}}
+
+
+      @misc{kordjamshidi2019delbp,
+          Anote = {./images/kordjamshidi2019delbp.png},
+          Author = {Parisa Kordjamshidi and Dan Roth and Kristian Kersting},
+          Howpublished = {arXiv preprint arXiv:1906.07809},
+          Note = {Data-driven approaches are becoming more common as problem-solving techniques
+          in many areas of research and industry. In most cases, machine learning models are the
+          key component of these solutions, but a solution involves multiple such models, along
+          with significant levels of reasoning with the models' output and input. Current
+          technologies do not make such techniques easy to use for application experts who are
+          not fluent in machine learning nor for machine learning experts who aim at testing ideas
+          and models on real-world data in the context of the overall AI system. We review key
+          efforts made by various AI communities to provide languages for high-level abstractions
+          over learning and reasoning techniques needed for designing complex AI systems. We
+          classify the existing frameworks based on the type of techniques and the data and knowledge
+          representations they use, provide a comparative study of the way they address the challenges
+          of programming real-world applications, and highlight some shortcomings and future directions.},
+            Keywords = {Systems AI, AI Systems, Systems ML, Learning-based Programming, Probabilistic Programming, Deep Learning, Statistical Relational Learning, Declarative, Databases},
+          Pages = {},
+          Title = {Declarative Learning-Based Programming as an Interface to AI Systems},
+          Url = {https://arxiv.org/pdf/1906.07809.pdf},
+          Year = {2019}}
+
+
+
+    @misc{galassi2019argument,
+        Anote = {./images/galassi2019argument.png},
+        Author = {Andrea Galassi and Kristian Kersting and Marco Lippi and Xiaoting Shao and Paolo Torroni},
+        Howpublished = {arXiv preprint arXiv:1905.09103},
+        Note = {Deep learning is bringing remarkable contributions to the field of argumentation mining,
+but the existing approaches still need to fill
+the gap towards performing advanced reasoning tasks. We illustrate how neural-symbolic
+and statistical relational learning could play a
+crucial role in the integration of symbolic and
+sub-symbolic methods to achieve this goal.},
+          Keywords = {Argument Mining, Deep Learning, Statistical Relational Learning, Neural-Symbolic Learning, Reasoning},
+        Pages = {},
+        Title = {Neural-Symbolic Argumentation Mining: an Argument in Favour of Deep Learning and Reasoning},
+        Url = {https://arxiv.org/pdf/1905.09103.pdf},
+        Year = {2019}}
+
+
+        @incollection{shao2019tpm,
+            Anote = {./images/shao2019tpm.png},
+            Author = {Xiaoting Shao and Alejandro Molina and Antonio Vergari and Karl Stelzner and Robert Peharz and Thomas Liebig and Kristian Kersting },
+            Booktitle = {Working Notes of the ICML 2019 Workshop on Tractable Probabilistic Models (TPM); also arXiv preprint arXiv:1905.08550},
+            Note = {Bayesian networks are a central tool in machine learning and artificial intelligence, and make use
+of conditional independencies to impose structure on joint distributions. However, they are generally
+not as expressive as deep learning models and inference is hard and slow. In contrast, deep probabilistic
+models such as sum-product networks (SPNs) capture joint distributions in a tractable fashion, but use
+little interpretable structure. Here, we extend the notion of SPNs towards conditional distributions,
+which combine simple conditional models into highdimensional ones. As shown in our experiments,
+the resulting conditional SPNs can be naturally used to impose structure on deep probabilistic models,
+allow for mixed data types, while maintaining fast and efficient inference.},
+              Keywords = {Sum-Product Networks, Deep Learning, Structure Learning, Conditional Distribution, Gating Nodes, Neural Conditionals},
+            Pages = {},
+            Title = {Conditional Sum-Product Networks: Imposing Structure on Deep Probabilistic Architectures},
+            Url = {https://arxiv.org/pdf/1905.08550.pdf},
+            Year = {2019}}
+
+
+  @misc{kersting2019ml_bmbf,
+    Anote = {./images/kersting2019ml_bmbf.jpg},
+    Author = {Kristian Kersting and Volker Tresp},
+    Howpublished = {Whitepaper der AG 1 der Plattform Lernende Systeme des Bundesministerium für Bildung und Forschung (BMBF)},
+    Keywords = {Künstliche Intelligenz, Professuren, Investement, Infrastruktur, Bundesregierung, BMBF, Plattform Lernende Systeme, Deep Learning, Maschinelles Lernen},
+    Note = {Künstliche Intelligenz kann in vielfältiger Art und Weise die Basis für Verbesserungen der Lebensbedingungen sein. Die Herausforderung für die Gesellschaft
+    ist es, eine Zukunft mit Künstlicher Intelligenz zu gestalten, dabei Chancen zu sehen, aber auch die Risiken zu analysieren und Lösungswege anzubieten.
+    Die unterschiedlichen gesellschaftlichen Akteure müssen eine Zukunft mit Künstlicher Intelligenz gemeinsam gestalten. In diesem Whitepaper stehen primär die
+    technischen Herausforderungen und der Aufbau von Fähigkeiten im Mittelpunkt: Zu welchen Themen muss national KI-Kompetenz aufgebaut werden und in welche
+    Forschungsthemen sollte heute und morgen investiert werden?},
+      Title = {Maschinelles und Tiefes Lernen sind der Motor für „KI made in Germany“},
+    Url = {./papers/kersting2019ml_bmbf.pdf},
+    Year = {2019},
+    Bdsk-Url-1 = {}}
+
+
+@misc{kersting2019ki,
+  Anote = {./images/ai.png},
+  Author = {Kristian Kersting and Jan Peters and Constantin Rothkopf},
+  Howpublished = {arXiv preprint arXiv:1903.09516},
+  Keywords = {Künstliche Intelligenz, Professur, Begutachtung, Kriterien, DBLP, Google Scholar},
+  Note = {The Federal Government of Germany aims to boost the research
+in the field of Artificial Intelligence (AI). For instance, 100 new professorships are
+said to be established. However, the white paper of the government does not
+answer what an AI professorship is at all. In order to give colleagues, politicians, and
+citizens an idea, we present a view that is often followed when appointing
+professors for AI at German and international universities. We hope that it will help
+to establish a guideline with internationally accepted measures and thus make the
+public debate more informed.},
+    Title = {Was ist eine Professur für Künstliche Intelligenz?},
+  Url = {https://arxiv.org/pdf/1903.09516.pdf},
+  Year = {2019},
+  Bdsk-Url-1 = {https://arxiv.org/pdf/1903.09516.pdf}}
 
 
     @misc{molina2019spflow,
@@ -20,8 +463,21 @@
       computations.},
         Title = {SPFlow: An Easy and Extensible Library for Deep Probabilistic Learning using Sum-Product Networks},
       Url = {https://arxiv.org/pdf/1901.03704.pdf},
+      Crossref = {https://github.com/SPFlow/SPFlow},
       Year = {2019},
       Bdsk-Url-1 = {https://arxiv.org/pdf/1901.03704.pdf}}
+
+
+      @incollection{kulessa2019query,
+        Anote = {./images/kulessa2019query.png},
+        Author = {Moritz Kulessa and Alejandro Molina and Carsten Binnig and Benjamin Hilprecht and Kristian Kersting},
+        Booktitle = {Working Notes of the 1st International Workshop on Applied AI for Database Systems and Applications (AIDB) at VLDB 2019; also as arXiv preprint arXiv:1811.06224},
+        Keywords = {Sum-Product Networks, Deep Learning,  Databases, SQL Queries},
+        Note = {Interactive visualizations are arguably the most important tool to explore, understand and convey facts about data. In the past years, the database community has been working on different techniques for Approximate Query Processing (AQP) that aim to deliver an approximate query result given a fixed time bound to support interactive visualizations better. However, classical AQP approaches suffer from various problems that limit the applicability to support the ad-hoc exploration of a new data set: (1) Classical AQP approaches that perform online sampling can support ad-hoc exploration queries but yield low quality if executed over rare subpopulations. (2) Classical AQP approaches that rely on offline sampling can use some form of biased sampling to mitigate these problems but require a priori knowledge of the workload, which is often not realistic if users want to explore a new database. In this paper, we present a new approach to AQP called Model-based AQP that leverages generative models learned over the complete database to answer SQL queries at interactive speeds. Different from classical AQP approaches, generative models allow us to compute responses to ad-hoc queries and deliver high-quality estimates also over rare subpopulations at the same time. In our experiments with real and synthetic data sets, we show that Model-based AQP can in many scenarios return more accurate results in a shorter runtime. Furthermore, we think that our techniques of using generative models presented in this paper can not only be used for AQP in databases but also has applications for other database problems including Query Optimization as well as Data Cleaning.},
+          Title = {Model-based Approximate Query Processing},
+        Url = {https://arxiv.org/pdf/1811.06224.pdf},
+        Year = {2019},
+        Bdsk-Url-1 = {https://arxiv.org/pdf/1811.06224.pdf}}
 
 
 
@@ -45,8 +501,9 @@ recoverable and accurate imprints of our social, ethical and
 even moral choices. Our method holds promise for extracting, quantifying and comparing sources of moral choices in
 culture, including technology.},
   Pages = {},
-  Title = {The Moral Choice Machine: Semantics Derived Automatically from Language Corpora Contain Human-like Moral Choices},
+  Title = {Semantics Derived Automatically from Language Corpora Contain Human-like Moral Choices},
   Url = {./papers/jentzsch2019aies_moralChoiceMachine.pdf},
+  Crossref = {https://github.com/ml-research/moral-choice-machine},
   Year = {2019}}
 
   @inproceedings{teso2019aies_XIML,
@@ -93,6 +550,7 @@ Author = {Antonio Vergari and Alejandro Molina and Robert Peharz and Zoubin Ghah
   on top of providing accurate density estimation.},
   Pages = {},
   Title = {Automatic Bayesian Density Analysis},
+  Crossref = {https://github.com/probabilistic-learning/abda},
   Url = {./papers/vergari2019aaai_abda.pdf},
   Year = {2019}}
 
@@ -113,6 +571,7 @@ Author = {Antonio Vergari and Alejandro Molina and Robert Peharz and Zoubin Ghah
   Pages = {},
   Title = {Fast Relational Probabilistic Inference and Learning: Approximate Counting via Hypergraphs},
   Url = {./papers/das2019aaai_couting.pdf},
+  Crossref = {https://starling.utdallas.edu/software/boostsrl/wiki/},
   Year = {2019}}
 
 
@@ -198,6 +657,7 @@ sp3_probprog2018
     Pages = {},
     Url = {./papers/probProg2018_BoostSRL.pdf},
     Title = {Human-in-the-loop Learning for Probabilistic Programming},
+    Crossref = {https://starling.utdallas.edu/software/boostsrl/wiki/},
     Year = {2018}}
 
 
@@ -430,7 +890,7 @@ concept are going to be presented in this talk.},
       Bdsk-Url-1 = {https://arxiv.org/pdf/1801.10495.pdf}}
 
 
-      @article{antanas2018auro,
+      @article{antanas2019auro,
         Anote = {./images/antanas2018auro.png},
         Author = {Laura Antanas and Plinio Moreno and Marion Neumann and Rui {Pimentel de Figueiredo} and Kristian Kersting and José Santos-Victor and Luc {De Raedt}},
         Journal = {Autonomous Robots (AURO)},
@@ -451,13 +911,13 @@ grasping points. The logic-based module receives data from a low-level
 module that extracts semantic objects parts, and sends information to the low-level
 grasp planner. These three modules define our probabilistic logic framework, which is
 able to perform robotic grasping in realistic kitchen-related scenarios.},
-        Pages = { https://doi.org/10.1007/s10514-018-9784-8},
         Publisher = {Springer},
         Title = {Semantic and Geometric Reasoning for Robotic Grasping: A Probabilistic Logic Approach},
         Url = {https://link.springer.com/article/10.1007/s10514-018-9784-8},
-        Volume = {},
-        number = {},
-        Year = {2018},
+        Volume = {43},
+        Number = {6},
+        Pages = {1393--1418},
+        Year = {2019},
     }
 
 
@@ -623,6 +1083,7 @@ of simple primitives.},
       across a wide range of hybrid domains.},
     Pages = {},
     Title = {Mixed Sum-Product Networks: A Deep Architecture for Hybrid Domains},
+      Crossref = {https://github.com/SPFlow/SPFlow},
     Url = {./papers/molina2018aaai_mspns.pdf},
     Year = {2018}}
 
@@ -893,12 +1354,57 @@ tasks, which are common for many humanities use cases.},
   	Bdsk-Url-1 = {./papers/cicling2017-interactive-data-analytics.pdf}}
 
 
+    @article{hallau2018cellphone,
+      Anote = {./images/hallau2018cellphone.png},
+      Author = {Lisa Hallau and Marion Neumann and Benjamin Klatt and Benno Kleinhenz and Thomas Klein and Christian Kuhn and Manfred Röhrig and Christian Bauckhage and Kristian Kersting and Anne-Katrin Mahlein and Ulrike Steiner and Erich-Christian Oerke},
+      Journal = {Plant Pathology},
+      Keywords = {Plant Phenotyping, Smartphone, Classification, Plant Disease},
+      Note = {Cercospora leaf spot (CLS) poses a high economic risk to sugar beet production due to its potential to greatly reduce yield and quality. For
+        successful integrated management of CLS a rapid and accurate means of identifying the disease is required. Accurate diagnosis on the basis of typical symptoms is
+        often compromised by the inability to accurately differentiate CLS symptoms from those caused by other foliar pathogens of sugar beet of varying significance,
+        or from abiotic stress. An automated detection and classification of CLS and similar leaf diseases, enabling a reliable basis for decisions in disease control,
+        would be an alternative to molecular and serological methods. This paper presents an algorithm - based on a RGB-image database captured with smartphone cameras – for the identification of sugar beet leaf diseases that could be used by extension services and farmers in the field. },
+      Pages = {399-410},
+      Publisher = {Wiley},
+      Title = {Automated identification of sugar beet diseases using smartphones},
+      Url = {https://doi.org/10.1111/ppa.12741},
+      Volume = {67},
+      Number = {2},
+      Year = {2018},
+      Bdsk-Url-1 = {https://doi.org/10.1111/ppa.12741}}
+
+      @article{kriege2019unifying,
+      	Anote = {./images/expliciteFMgraphs.png},
+      	Author = {Nils Kriege and Marion Neumann and Christopher Morris and Kristian Kersting and Petra Mutzel},
+        Journal = {Data Mining and Knowledge Discovary (DAMI, to appear); a previous version also as arXiv preprint arXiv:1703.00676},
+      	Keywords = {Graph Kernels, Explicit Feature Map, Kernel Trick, Phase Transition},
+      	Note = {Non-linear kernel methods can be approximated by fast linear ones using suitable explicit feature maps
+allowing their application to large scale problems. We investigate how convolution kernels for structured
+data are composed from base kernels and construct corresponding feature maps. On this basis we propose
+exact and approximative feature maps for widely used graph kernels based on the kernel trick. We analyze
+for which kernels and graph properties computation by explicit feature maps is feasible and actually more
+efficient. In particular, we derive approximative, explicit feature maps for state-of-the-art kernels
+supporting real-valued attributes including the GraphHopper and graph invariant kernels. In extensive
+experiments we show that our approaches often achieve a classification accuracy close to the exact
+methods based on the kernel trick, but require only a fraction of their running time. Moreover, we propose
+and analyze algorithms for computing random walk, shortest-path and subgraph matching kernels by
+explicit and implicit feature maps. Our theoretical results are confirmed experimentally by observing a
+phase transition when comparing running time with respect to label diversity, walk lengths and subgraph
+size, respectively.},
+      	Title = {A Unifying View of Explicit and Implicit Feature Maps of Graph Kernels},
+      	Url = {https://arxiv.org/pdf/1703.00676.pdf},
+      	Year = {2019}}
+
   @misc{kriege2017unifying,
   	Anote = {./images/expliciteFMgraphs.png},
   	Author = {Nils Kriege and Marion Neumann and Christopher Morris and Kristian Kersting and Petra Mutzel},
   	Howpublished = {arXiv preprint arXiv:1703.00676},
   	Keywords = {Graph Kernels, Explicit Feature Map, Kernel Trick, Phase Transition},
-  	Note = {We investigate how general convolution kernels are composed from base kernels and construct corresponding feature maps. We apply our results to widely used graph kernels and analyze for which kernels and graph properties computation by explicit feature maps is feasible and actually more efficient than implicite computations. In particular, we derive feature maps for random walk and subgraph matching kernels and apply them to real-world graphs with discrete labels.},
+  	Note = {We investigate how general convolution kernels are composed from base kernels and construct
+    corresponding feature maps. We apply our results to widely used graph kernels and analyze for which kernels
+    and graph properties computation by explicit feature maps is feasible and actually more efficient than
+    implicite computations. In particular, we derive feature maps for random walk and subgraph matching kernels
+    and apply them to real-world graphs with discrete labels.},
   	Title = {A Unifying View of Explicit and Implicit Feature Maps for Structured Data: Systematic Studies of Graph Kernels},
   	Url = {https://arxiv.org/pdf/1703.00676.pdf},
   	Year = {2017},
@@ -939,6 +1445,7 @@ while remaining tractable.},
   	Pages = {1199--1205},
   	Title = {Poisson Sum-Product Networks: A Deep Architecture for Tractable Multivariate Poisson Distributions},
   	Url = {http://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14530/14416},
+      Crossref = {https://github.com/SPFlow/SPFlow},
   	Year = {2017},
   	Bdsk-Url-1 = {http://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14530/14416}}
 
@@ -1150,6 +1657,7 @@ more compact, and hence more efficient to solve.},
   	Title = {Statistical Relational Artificial Intelligence: Logic, Probability, and Computation},
   	Url = {http://www.morganclaypool.com/doi/10.2200/S00692ED1V01Y201601AIM032},
   	Year = {2016},
+    Crossref = {https://starling.utdallas.edu/software/boostsrl/wiki/},
   	Bdsk-Url-1 = {http://www.morganclaypool.com/doi/10.2200/S00692ED1V01Y201601AIM032}}
 
   @article{szymanskiKK16,
@@ -1344,6 +1852,7 @@ more compact, and hence more efficient to solve.},
   	Title = {Predicting purchase decisions in mobile free-to-play games},
   	Url = {https://www.aaai.org/ocs/index.php/AIIDE/AIIDE15/paper/viewFile/11544/11359},
   	Year = {2015},
+    Key = {Best Paper Award at AIIDE 2015},
   	Bdsk-Url-1 = {https://www.aaai.org/ocs/index.php/AIIDE/AIIDE15/paper/viewFile/11544/11359}}
 
   @inproceedings{ide2015lte,
@@ -1368,6 +1877,7 @@ more compact, and hence more efficient to solve.},
   	Title = {Archetypal analysis as an autoencoder},
   	Url = {./papers/autoencode2015nc2.pdf},
   	Year = {2015},
+    Key = {Best Presentation Award at NC^2},
   	Bdsk-Url-1 = {./papers/autoencode2015nc2.pdf}}
 
   @inbook{bauckhage2015cell,
@@ -1392,6 +1902,7 @@ more compact, and hence more efficient to solve.},
   	Publisher = {SpringerBrief},
   	Title = {Boosted Statistical Relational Learners},
   	Url = {http://www.springer.com/de/book/9783319136431},
+    Crossref = {https://starling.utdallas.edu/software/boostsrl/wiki/},
   	Year = {2015},
   	Bdsk-Url-1 = {http://www.springer.com/de/book/9783319136431}}
 
@@ -2394,6 +2905,7 @@ more compact, and hence more efficient to solve.},
   	Title = {Where traffic meets dna: mobility mining using biological sequence analysis revisited},
   	Url = {./papers/jawad2011traffic.pdf},
   	Year = {2011},
+    Key = {Best Poster Award at GIS 2011},
   	Bdsk-Url-1 = {./papers/jawad2011traffic.pdf}}
 
   @inproceedings{neumann2011markov,
@@ -3264,6 +3776,7 @@ more compact, and hence more efficient to solve.},
   	Title = {TildeCRF: Conditional random fields for logical sequences},
   	Url = {./papers/gutmann2006tildecrf.pdf},
   	Year = {2006},
+    Key = {Best Student Paper Award at ECML 2006},
   	Bdsk-Url-1 = {./papers/gutmann2006tildecrf.pdf}}
 
   @inproceedings{triebel2006robust,
@@ -3372,6 +3885,7 @@ more compact, and hence more efficient to solve.},
   	Url = {http://www.iospress.nl/book/an-inductive-logic-programming-approach-to-statistical-relational-learning/},
   	Volume = {148},
   	Year = {2006},
+    Key = {EurAI (formerly ECCAI) Dissertation Award 2006},
   	Bdsk-Url-1 = {http://www.iospress.nl/book/an-inductive-logic-programming-approach-to-statistical-relational-learning/}}
 
   @article{deraedt2006logical,

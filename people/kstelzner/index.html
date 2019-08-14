@@ -56,21 +56,11 @@
 
 
 <main role="main">
-
-    <div class="container" id="banner">
-        <br><br><br>
-        <img class="img-fluid" src="./../../images/banner.png" style="float: left; margin: 0px 0px 10px 10px;">
-        <a href="https://www.tu-darmstadt.de" target="_blank"> <img class="img-fluid"
-                                                                    src="./../../images/tud_weblogo.svg"
-                                                                    style="margin: 19px 10px 10px 10px;height:75px"></a>
-        </p>
-    </div>
-    <div class="clearfix"></div>
+    <br><br><br>
     <div class="container" id="mission">
 
         <div class="row">
             <div class="col-md-2">
-
                 <img src="karl.png" class=" rounded-circle imgme" style="height:120px">
             </div>
 
@@ -80,60 +70,65 @@
                     Hochschulstrasse 1, Room S1|03 076, 64289 Darmstadt, Germany
                     <br><img src="./../../images/phone.png" style="height:15px"> +49 6151 16 24412 <img
                             src="./../../images/mail.jpg" style="height:15px"> stelzner (at) cs (dot) tu-darmstadt (dot) de
+                            <br>Meetings by appointment.
                 </div>
             </div>
-            <div class="col-md-4">
+              <div style="float: right">
+              <a href="https://www.tu-darmstadt.de" target="_blank"> <img class="img-fluid"
+                                                                    src="./../../images/tud_weblogo.svg"
+                                                                    style="margin: 19px 10px 10px 10px;height:75px"></a>
+              </div>
+                  <!-- div class="col-md-4">
                 <img id="logo" class="imgsm" src="./../../images/FB20TUDAlogo.png"
                      style="text-align: right; margin: 10px 5px 5px 3px;height:55px"></a>
-            </div>
+            </div-->
         </div>
 
 
-        <br> <b> Meetings by appointment </b>
-
-        <br><br>
+        <br>
 
         <b>Mission.</b>
         My research is centered around the problem of obtaining useful representations from noisy, unstructured input data without requiring expensive manual labeling. Motivated by cognitive science and robotics, I work to build machines that think in a more human-like way, combining techniques from graphical models, probabilistic programming, and deep learning.       
         <br><br>
+ 
+    <!--div class="container" id="timeline">
+    <hr class="soft"-->
 
+      <b>Timeline.</b>
+      <TABLE BORDER="0" width="100%" id="awards">
+          <col width="120px">
+          <TR>
+              <TD><span class="t2when"> 2017 - now:</span></TD>
+              <TD><span class="t2where"> Ph.D. student at the Machine Learning Lab, <a
+                      href="https://www.informatik.tu-darmstadt.de/en/department/" target="_blank">CS Department, TU Darmstadt</a>, Germany</span>
+              </TD>
+          </TR>
+          <TR>
+              <TD><span class="t2when">2017:</span></TD>
+              <TD><span
+                      class="t2where">M.Sc. in computer science from TU Dortmund, Germany. </span>
+              </TD>
+          </TR>
+          <TR>
+              <TD><span class="t2when">2014 - 2015:</span></TD>
+              <TD><span
+                      class="t2where">Studied abroad at Butler University, Indianapolis, USA</span>
+              </TD>
+          </TR>
+          <TR>
+              <TD><span class="t2when">2013:</span></TD>
+              <TD><span
+                      class="t2where">B.Sc. in computer science from TU Dortmund, Germany. </span>
+              </TD>
+          </TR>
+      </TABLE>
 
+        <!--
         <b>Bio.</b> I'm a PhD student of Machine Learning at the
         <a href="https://www.informatik.tu-darmstadt.de/en/department/" target="_blank">Computer Science Department</a>
         of the <a href="https://www.tu-darmstadt.de" target="_blank">TU Darmstadt University</a>, Germany.
         After receiving my M.Sc. from TU Dortmund University in 2017, I joined the Machine Learning group at <a href="https://www.tu-darmstadt.de" target="_blank">TU Darmstadt University</a>.<br><br>
-
-
-        <b>Timeline.</b>
-        <TABLE BORDER="0" width="100%" id="awards">
-            <col width="120px">
-            <TR>
-                <TD><span class="t2when"> 2017 - now:</span></TD>
-                <TD><span class="t2where"> Ph.D. student at the Machine Learning Lab, <a
-                        href="https://www.informatik.tu-darmstadt.de/en/department/" target="_blank">CS Department, TU Darmstadt</a>, Germany</span>
-                </TD>
-            </TR>
-            <TR>
-                <TD><span class="t2when">2014 - 2015:</span></TD>
-                <TD><span
-                        class="t2where">Studying abroad at Butler University, Indianapolis, USA</span>
-                </TD>
-            </TR>
-            <TR>
-                <TD><span class="t2when">2013 - 2017:</span></TD>
-                <TD><span
-                        class="t2where">M.Sc. student of computer science at TU Dortmund, Germany. </span>
-                </TD>
-            </TR>
-            <TR>
-                <TD><span class="t2when">2011 - 2013:</span></TD>
-                <TD><span
-                        class="t2where">B.Sc. student of computer science at TU Dortmund, Germany. </span>
-                </TD>
-            </TR>
-        </TABLE>
-
-        <br><br>
+        -->
 
         <!--b>Awards.</b>
         TODO
@@ -163,14 +158,14 @@
          -->
     </div>
 
-    <hr class="soft">
+    <!-- <hr class="soft"> -->
 
 
     <div class="container" id="publications">
 
-        <h3>Publications</h3>
+      <!-- <b>Publications.</b> -->
         <br>
-                <noscript>
+        <noscript>
             <style>
                 #bibtex {
                     display: block;
@@ -178,44 +173,30 @@
             </style>
         </noscript>
 
-        <table id="pubTable" class="table" style="width:100%"></table>
-
-        <br>
-
-        <pre id="bibtex" style="display:none;">
+        <table id="pubTable" class="table" style="width:100%"
+          data-paging="false" data-searching="false" data-info="false"></table>
 
 
-        </pre>
+        <pre id="bibtex" style="display:none;"> </pre>
         
-        <div class="hht" style="font-size: 18px"> Publications can be found at <a
+        <div>Publications can be found at <a
                 href="https://dblp.uni-trier.de/pers/hd/s/Stelzner:Karl" target="_blank">DBLP</a>, <a
                 href="https://www.semanticscholar.org/author/Karl-Stelzner/51027152"
                 target="_blank">SemanticScholar</a>
         </div>
-
-        <br>
-
     </div>
+
 
     <br>
 
-    <hr class="soft">
-
     <!--div class="container" id="activities">
 
-        <h2>Activities</h2>
-
-        <h3>Conference and Event Organizations:</h3> <br>
-
+        <b>Activities.</b>
 
         <div class="row">
 
-
             <div class="col-md-6">
-                <div class="t2where">OpenReview Chair of UAI 2017</div>
-                <a href="http://auai.org/uai2017/organizingcommittee.php" target="_blank">
-                    <img src="./../../images/uai2017.png" style="border-radius:3px;width:240px">
-                </a><br>
+                <div class="t2where">TA for Introduction to Artificial Intelligence summer 2019</div>
             </div>
 
             <div class="col-md-6">
@@ -268,12 +249,19 @@
         </div>
     </div-->
 
+    <!--div class="container" id="banner">
+        <img class="img-fluid" src="./../../images/banner.png" style="float: left; margin: 0px 0px 10px 10px;">
+        <a href="https://www.tu-darmstadt.de" target="_blank"> <img class="img-fluid"
+                                                                    src="./../../images/tud_weblogo.svg"
+                                                                    style="margin: 19px 10px 10px 10px;height:75px"></a>
+        </p>
+    </div-->
+
 </main>
 <footer>
     <hr class="soft" id="legal">
 
-
-    <div class="container" id="sitefooter">
+    <div class="container" id="sitefooter" style="height: unset">
 
         <a href="https://www.informatik.tu-darmstadt.de/impressum.en.jsp">Legal info / Impressum</a>
         <br><br>
@@ -284,9 +272,7 @@
         64289 Darmstadt<br>
         Germany<br><br>
 
-
     </div>
-
 </footer>
 
 
@@ -309,11 +295,15 @@
             }
 
             function replaceImagePath(bib) {
-                return bib.replace("./images/", "../../images/");
+                return bib.replace("./images/", "./../../images/");
+            }
+            function replacePaperPath(bib) {
+                return bib.replace("./papers/", "./../../papers/");
             }
 
             bibtex = data.split(/(?=@\w+)/u);
-            my_bibtex = bibtex.filter(containsName).map(replaceImagePath);
+            my_bibtex = bibtex.filter(containsName).map(replacePaperPath);
+            my_bibtex = my_bibtex.map(replaceImagePath);
             $("#bibtex").html(my_bibtex.join());
             bibtexify("#bibtex", "pubTable");
         });
