@@ -2441,8 +2441,8 @@ var bibtexify = (function($) {
                                                }
                                             ],
                                'bPaginate': true,
-                               "pageLength": 20,
-                               "lengthMenu": [ [10, 20, 50, -1], [10, 20, 50, "All"] ],
+                               "pageLength": 25,
+                               "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
                                "drawCallback": function ( settings ) {
                                  var api = this.api();
                                  var rows = api.rows( {page:'current'} ).nodes();
