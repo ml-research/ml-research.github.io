@@ -244,6 +244,7 @@ hr.soft {
 
 
 .icon-bar {
+  z-index:1030;
   position: fixed;
   top: 50%;
   -webkit-transform: translateY(-50%);
