@@ -247,6 +247,7 @@ hr.soft {
   z-index:1030;
   position: fixed;
   top: 50%;
+  right:0%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
