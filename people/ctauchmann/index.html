@@ -254,18 +254,24 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
+
         $.get('https://ml-research.github.io/references.bib', function (data) {
+
             function containsName(bib) {
                 return bib.toLowerCase().includes("tauchmann")
             }
+
             function replaceImagePath(bib) {
                 return bib.replace("./images/", "../../images/");
             }
+
             bibtex = data.split(/(?=@\w+)/u);
             my_bibtex = bibtex.filter(containsName).map(replaceImagePath);
             $("#bibtex").html(my_bibtex.join());
             bibtexify("#bibtex", "pubTable");
         });
+
+
     });
 </script>
 
