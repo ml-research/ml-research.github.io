@@ -251,7 +251,7 @@
     $(document).ready(function () {
         $.get('https://ml-research.github.io/references.bib', function (data) {
             function containsName(bib) {
-                return bib.toLowerCase().includes("tauchmann")
+                return bib.toLowerCase().includes("molina")
             }
             function replaceImagePath(bib) {
                 return bib.replace("./images/", "../../images/");
