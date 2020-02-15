@@ -139,22 +139,7 @@
 
         <h3>Publications</h3>
         <br>
-                <noscript>
-            <style>
-                #bibtex {
-                    display: block;
-                }
-            </style>
-        </noscript>
 
-        <!--<table id="pubTable" class="table" style="width:100%"></table>-->
-
-        <br>
-
-        <pre id="bibtex" style="display:none;">
-
-
-        </pre>
         <div class="hht" style="font-size: 18px"> Publications can be found at <a
                 href="https://dblp.uni-trier.de/pers/hd/t/Tauchmann:Christopher" target="_blank">DBLP</a>, <a
                 href="https://www.semanticscholar.org/author/Christopher-Tauchmann/41127724"
@@ -162,6 +147,26 @@
         </div>
 
         <br>
+				
+        <noscript>
+        	<!-- bibtex source hidden by default, show it if JS disabled -->
+            <style>
+                #bibtex {
+                    display: block;
+                }
+            </style>
+        </noscript>
+
+        <table id="pubTable" class="table" style="width:100%"></table>
+
+        <br>
+
+        <pre id="bibtex" style="display:none;">
+
+
+        </pre>
+        
+
 
     </div>
 
@@ -249,18 +254,24 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
+
         $.get('https://ml-research.github.io/references.bib', function (data) {
+
             function containsName(bib) {
                 return bib.toLowerCase().includes("tauchmann")
             }
+
             function replaceImagePath(bib) {
                 return bib.replace("./images/", "../../images/");
             }
+
             bibtex = data.split(/(?=@\w+)/u);
             my_bibtex = bibtex.filter(containsName).map(replaceImagePath);
             $("#bibtex").html(my_bibtex.join());
             bibtexify("#bibtex", "pubTable");
         });
+
+
     });
 </script>
 
