@@ -21,11 +21,13 @@ classier can learn the target concept successfully.},
   Year      = {2020}
 }
 
-@inproceedings{hilprecht2020vldb,
+@article{hilprecht2020vldb,
   Anote = {./images/hilprecht2020vldb.png},
   author    = {Benjamin Hilprecht and Andreas Schmidt and Moritz Kulessa and Alejandro Molina and Kristian Kersting and Carsten Binnig},
   title     = {DeepDB: Learn from Data, not from Queries!},
-  booktitle = {Proceedings of the VLDB Endowement (PVLDB)},
+  journal = {PVLDB},
+  volume = {13},
+  key = {7},
   Keywords = {deep database, probabilistic deep learning, sum product networks, relational SPNs, database, probabilistic programming},
   note  = {The typical approach for learned DBMS components is to capture the behavior by running a representative set of queries and use
   the observations to train a machine learning model. This workload-driven approach, however, has two major downsides. First, collecting
@@ -35,7 +37,7 @@ classier can learn the target concept successfully.},
   supports ad-hoc queries but also updates of the data without the need to retrain when the workload or data changes.
   Indeed, one may expect that this comes at a price of lower accuracy since workload-driven models can make use of more information.
   However, asour empirical evaluation demonstrate our data-driven approach can not only provide better accuracy than state-of-the-art learned components but also generalizes better to unseen queries.},
-  pages     = {},
+  pages     = {992--1005},
   crossref = {https://github.com/DataManagementLab/deepdb-public},
   Url = {./papers/hilprecht2020vldb.pdf},
   year      = {2020}
