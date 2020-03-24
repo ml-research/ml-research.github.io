@@ -2218,7 +2218,7 @@ var bibtexify = (function($) {
         },
         proceedings: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.editor) +
-                ", eds., "
+                ", eds., " +
                 " (<span class='puby'>" + entryData.year + "<\/span>): <\/span> " +
                 "<span class='pubt'>" + entryData.title + ". <\/span>" +
                 "<span class='pubv'> " + entryData.booktitle +
