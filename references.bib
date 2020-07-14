@@ -1,5 +1,28 @@
 
-@article{schramowski2020nmi_plantxml,
+@inproceedings{shao2020pgm_cspns,
+  Anote = {./images/shao2019tpm.png},
+  Author = {Xiaoting Shao and Alejandro Molina and Antonio Vergari and Karl Stelzner and Robert Perharz and Thomas Liebig and Kristian Kersting},
+  Booktitle = {Proceedings of the 10th International Conference on Probabilistic Graphical Models (PGM)},
+  Note = {Probabilistic graphical models are a central tool in AI; however, they are generally not as expressive as deep neural models, and inference is notoriously hard and slow. In contrast, deep probabilistic models such as sum-product networks (SPNs) capture joint distributions in a tractable fashion, but still lack the expressive power of
+intractable models based on deep neural networks. Therefore, we introduce conditional SPNs (CSPNs), conditional density estimators for multivariate and potentially hybrid domains that allow harnessing the expressive power of neural networks while still maintaining tractability guarantees. One way to implement CSPNs is to use an existing SPN structure and condition its parameters on the input, e.g., via a deep neural network. Our experimental evidence demonstrates that CSPNs are competitive with other probabilistic models and yield superior performance on multilabel image classification compared to mean field and mixture density networks. Furthermore, they can successfully be employed as building blocks for structured probabilistic models, such as autoregressive image models.},
+    Keywords = {Probabilistic Circuits, Sum Product Networks, Conditional Distribution, Gating Functions, Deep Models},
+  Pages = {},
+  Url = {},
+  Title = {Conditional Sum-Product Networks: Imposing Structure on Deep Probabilistic Architectures},
+  Year = {2020}}
+
+  @inproceedings{ventola2020pgm_resspns,
+    Anote = {./images/ventola2019rspf.png},
+    Author = {Fabrizio Ventola and Karl Stelzner and Alejandro Molina and Kristian Kersting},
+    Booktitle = {Proceedings of the 10th International Conference on Probabilistic Graphical Models (PGM)},
+    Note = {Tractable yet expressive density estimators are a key building block of probabilistic machine learning. While sum-product networks (SPNs) offer attractive inference capabilities, obtaining structures large enough to fit complex, high-dimensional data has proven challenging. In this paper, we present a residual learning approach to ease the learning of SPNs, which are deeper and wider than those used previously. The main trick is to ensemble SPNs by explicitly reformulating sum nodes as residual functions. This adds references to substructures across the SPNs at different depths, which in turn helps to improve training. Our experiments demonstrate that the resulting residual SPNs (ResSPNs) are easy to optimize, gain performance from considerably increased depth and width, and are competitive to state-of-the-art SPN structure learning approaches. To combat overfitting, we introduce an iterative pruning technique that compacts models and yields better generalization.},
+      Keywords = {Probabilistic Circuits, Sum Product Networks, Residual Networks, Lottery Ticket Hypothesis, Sparse Networks},
+    Pages = {},
+    Url = {},
+    Title = {Residual Sum-Product Networks},
+    Year = {2020}}
+
+  @article{schramowski2020nmi_plantxml,
     Anote = {./images/schramowski2020arxiv_plantxml.png},
     Author = {Patrick Schramowski and Wolfgang Stammer and Stefano Teso and Anna Brugger and Franziska Herbert and Xiaoting Shao and Hans-Georg Luigs and Anne-Katrin Mahlein and Kristian Kersting},
     Journal = {Nature Machine Intelligence},
