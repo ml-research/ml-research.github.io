@@ -16,11 +16,22 @@ intractable models based on deep neural networks. Therefore, we introduce condit
     Author = {Fabrizio Ventola and Karl Stelzner and Alejandro Molina and Kristian Kersting},
     Booktitle = {Proceedings of the 10th International Conference on Probabilistic Graphical Models (PGM)},
     Note = {Tractable yet expressive density estimators are a key building block of probabilistic machine learning. While sum-product networks (SPNs) offer attractive inference capabilities, obtaining structures large enough to fit complex, high-dimensional data has proven challenging. In this paper, we present a residual learning approach to ease the learning of SPNs, which are deeper and wider than those used previously. The main trick is to ensemble SPNs by explicitly reformulating sum nodes as residual functions. This adds references to substructures across the SPNs at different depths, which in turn helps to improve training. Our experiments demonstrate that the resulting residual SPNs (ResSPNs) are easy to optimize, gain performance from considerably increased depth and width, and are competitive to state-of-the-art SPN structure learning approaches. To combat overfitting, we introduce an iterative pruning technique that compacts models and yields better generalization.},
-      Keywords = {Probabilistic Circuits, Sum Product Networks, Residual Networks, Lottery Ticket Hypothesis, Sparse Networks},
+      Keywords = {Probabilistic Circuits, Sum Product Networks, Residual Networks, Lottery Ticket Hypothesis, Sparse Deep Networks},
     Pages = {},
     Url = {},
     Title = {Residual Sum-Product Networks},
     Year = {2020}}
+
+    @inproceedings{ramanan2020pgm_boostedAC,
+      Anote = {./images/ramanan2020pgm_boostedAC.png},
+      Author = {Nandini Ramanan and Mayukh Das and Kristian Kersting and Sriraam Natarajan},
+      Booktitle = {Proceedings of the 10th International Conference on Probabilistic Graphical Models (PGM)},
+      Note = {Arithmetic Circuits (AC) and Sum-Product Networks (SPN) have recently gained significant interest by virtue of being tractable deep probabilistic models. We propose the first gradient-boosted method for structure learning of discriminative ACs (DACs), called DACBoost. In discrete domains ACs are essentially equivalent to mixtures of trees, thus DACBoost decomposes a large AC into smaller tree-structured ACs and learns them in a sequential, additive manner. The resulting non-parametric manner of learning the DACs results in a model with very few tuning parameters making our learned model significantly more efficient. We demonstrate on standard data sets and some real-world data sets, the efficiency of DACBoost compared to the state-of-the-art DAC learners without sacrificing the effectiveness.},
+        Keywords = {Arithmetic Circuits, Sum Product Networks, Structure Learning, Boosting},
+      Pages = {},
+      Url = {},
+      Title = {Discriminative Non-Parametric Learning of Arithmetic Circuits},
+      Year = {2020}}
 
   @article{schramowski2020nmi_plantxml,
     Anote = {./images/schramowski2020arxiv_plantxml.png},
