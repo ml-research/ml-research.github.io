@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)./kersting/kersting.html -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<title>Statistical Relational AI</title>
+
+
+<link href="./../../css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="./../../css/jquery.dataTables.min.css" rel="stylesheet" media="screen">
+<link href="./../../css/dataTables.bootstrap4.min.css" rel="stylesheet" media="screen">
+
+<link href="./../../css/bootstrap-social.css" rel="stylesheet" media="screen">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="./../../css/style.css" rel="stylesheet">
+
+<script src="./../../build/jquery.min.js"></script>
+
+
+
+
+    <script type='text/javascript'>//<![CDATA[
+  $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
+  </script>
+
+  <script src="./../../build/jquery.min.js"></script>
+  <!--    <script>
+      $(function(){
+        $("#includedContent").load("myBib.bib");
+      });
+    </script>-->
+
+
+
+
+</head>
+
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="65">
+ <header>
+       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+         <a class="navbar-brand" href="#">StarAI</a>
+
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="navbarCollapse">
+
+           <ul class="navbar-nav mr-auto">
+             <li class="nav-item">
+               <a class="nav-link" href="#goal">Goal</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#material">Material</a>
+             </li>
+             <li class="nav-item ">
+               <a class="nav-link" href="#logistics">Exercises</a>
+             </li>
+             <li class="nav-item ">
+               <a class="nav-link" href="#logistics">Further Material</a>
+             </li>
+
+             <li class="nav-item">
+               <a class="nav-link" href="https://ml-research.github.io/">AIML@TUDA</a>
+             </li>
+
+             <li class="nav-item">
+               <a class="nav-link" href="#legal">Legal Info</a>
+             </li>
+           </ul>
+
+         </div>
+       </nav>
+ </header>
+
+
+<main role="main">
+
+
+<div class="container" id="banner">  <br><br><br>
+    <div class="row">
+      <div class="col-md-8">
+
+      <img class="img-fluid" src="./images/starai.png" style="float: left; margin: 0px 0px 10px 10px;">
+    </div>
+   <div class="clearfix"></div>
+</div>
+</div>
+
+
+
+
+<div class="container" id="goal">
+
+
+<div class="row">
+
+  <div class="col-md-9">
+        <div id="htname">Statistical Relational AI (StarAI)</div>
+
+      </div>
+      </div>
+
+
+
+
+      <br> <b> Moodle:</b> Most communication for this class will take place on Moodle. Please sign up <a href="https://moodle.informatik.tu-darmstadt.de/course/view.php?id=1007"> here </a>.
+      <br> <b> Lecture:</b> Monday, 13:30 - 15:10 o'clock, ZOOM
+      <br> <b> Exercises:</b> Wednesday, 13:30 - 15:10 o'clock, ZOOM
+      <br> <b> Language:</b> English
+
+<br><br><b> Lectures and exercises take place via Zoom. Please visit the Moodle page to find the link.</b>
+<br><br>
+
+<p class="text-justify"><b>Motivation</b>
+  An intelligent agent interacting with the real world will encounter individual people, courses, test results, drugs prescriptions,
+  chairs, boxes, etc., and needs to reason about properties of these individuals and relations among them as well as cope with
+  uncertainty. Uncertainty has been studied in probability theory and graphical models, and relations have been studied in logic,
+  in particular in the predicate calculus and its extensions. This book examines the foundations of combining logic and probability
+  into what are called relational probabilistic models. It introduces representations, inference, and learning techniques for probability,
+  logic, and their combinations.
+
+  The course will mainly focus on two representations in detail: Markov logic networks, a relational extension of
+  undirected graphical models and weighted first-order predicate calculus formula, and Problog, a probabilistic extension of logic programs that
+  can also be viewed as a Turing-complete relational extension of Bayesian networks. We will touch upon the basics  such as logical inference,
+  inductive logic programming, graphical models and learning them, to then go for in detail on relational extension of them. In particular we
+  will touch upon lifted probabilistic inference, i.e., the question of how to employ symmetries within relational models.
+</p>
+
+
+</div>
+
+<br>
+
+
+
+<hr class="soft">
+
+<div class="container" id="Lecture">
+
+<h3>Lectures</h3>
+
+
+<p> This course consists of online lectures. We may also provide additional videos and other materials, which
+  we recommend to check out, even before the lecture. Please prepare a list of 5 questions
+   as extra homework for the videos, since we (all of you) may also try to answer your questions in class.
+
+We may also present our own work.
+We may even ask you to read papers, let's see.
+Aside from the “5-questions” homework, there are also written
+assignments involving both theory and programming. Handing in those assignments regularly will earn
+you a bonus for the final exam.</p>
+
+<p> Here are the materials. </p>
+<p><TABLE BORDER="0" width="100%" style="border-bottom: 1px solid black">
+  <colgroup>
+    <col span="1" style="width: 10%;">
+    <col span="1" style="width: 10%;">
+    <col span="1" style="width: 30%;">
+    <col span="1" style="width: 10%;">
+    <col span="1" style="width: 40%;">
+</colgroup>
+    <tr style="background-color:#F5F5F5">
+    <th>Lecture #</th>
+    <th>Date</th>
+    <th>Description</th>
+    <th>Our Slides</th>
+    <th>Videos</th>
+
+
+  </tr>
+<!--    <TR>
+        <div class="t2what" style="background-color:#F5F5F5">Seminar on Machine Learning for Computer Games. <span
+                class="t2where">winter 2008</span></div>
+    </TR>-->
+    <TR>
+        <td> 1 Introduction </td>
+        <td> Nov. 2, 2020 </td>
+        <td> Course Introduction, Intro and Motivation for StarAI</td>
+        <td> <a href="./slides/tud_starAI_01_WiSe202021_intro.pdf" target="_blank">.pdf</a></td>
+        <td>  <a href="https://www.youtube.com/watch?v=Uucdjsys_Uo"target="_blank">Applications, Lippi, Modena</a><br>
+           <a href="https://www.youtube.com/watch?v=KeFhKi-tOTs&t=2115s" target="_blank">Lifted Statistical ML, Kersting, Darmstadt</a><br>
+           <a href="https://www.youtube.com/watch?v=BosZK5E_q70" target="_blank"> Overview PGMs, Hennig, Tübingen</a>
+
+
+        </td>
+      </tr>
+
+
+      <tr style="background-color:#F5F5F5">
+
+        <td> 2 Logic Programming  </td>
+        <td> Nov. 9, 2020 </td>
+        <td> CNFs, Resolution, Skolem, First Order Logic, Prolog, ... </td>
+        <td> <a href="./slides/tud_starAI_02_WiSe202021_logicPrg.pdf" target="_blank">.pdf</a></td>
+        <td> <a href="https://www.youtube.com/watch?v=mLdPGSlgNxU&list=PLJPXEH0boeNDWTNwWTWnVffXi5XwAj1mb&index=9"target="_blank">(Probabilistic) Logic Programming, Riguzzi, Ferrara </a><br>
+             <a href="https://www.youtube.com/watch?v=6tfxnH_zFts&list=PLHbIZiLIDu-qbXqhvgkIjyIK0SbqYNcU8" target="_blank">Logic Programming/Prolog,  mathematicalmonk</a><br>
+             <a href="https://www.youtube.com/playlist?list=PLzVTusWerVcKx3crsij5wrRfIqWp3UXc7" target="_blank">Logic for CS, Ben-David, Waterloo</a><br>
+
+        </td>
+
+
+
+    </TR>
+
+
+
+
+</table>
+
+</p>
+
+</div>
+
+<br>
+
+
+
+<hr class="soft">
+
+<div class="container" id="logistics">
+
+<h3>Assignments and Exercises</h3>
+
+<p>
+Aside from the “5-questions” homework, there are also four written
+assignments involving both theory and programming. Handing in those assignments regularly will earn
+you a bonus for the final exam. Pleses visit Moodle for further information, and for submitting them.
+</p>
+
+</div>
+
+<br>
+
+<hr class="soft">
+<br>
+
+<div class="container" id="infos">
+
+<h3>Further Material and Links</h3>
+
+<p>
+
+<ul>
+
+  <li> Statistical Relational Artificial Intelligence: Logic, Probability, and Computation by Luc De Raedt, Kristian Kersting, Sriraam Natarajan, and David Poole.</li>
+
+  <li>Introduction to Statistical Relational Learning by Lise Getoor and Ben Taskar.</li>
+
+  <li> Probabilistic Graphical Models: Principles and Techniques by Daphen Koller and Nir Friedman.</li>
+
+  <li> Modeling and Reasoning with Bayesian networks by Adnan Darwiche.</li>
+
+</p>
+
+</div>
+
+
+
+<hr class="soft" id="legal">
+
+
+</main>
+<footer>
+
+
+<div class="container" id="sitefooter">
+
+
+<a href="https://www.informatik.tu-darmstadt.de/impressum.en.jsp">Legal info / Impressum</a> <br><br>
+
+Technische Universitaet Darmstadt <br>
+Fachbereich Informatik <br>
+Hochschulstr. 1 <br>
+64289 Darmstadt<br>
+Germany<br><br>
+
+</div>
+
+</footer>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript" src="./../../build/bib-list.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+  $.get('https://ml-research.github.io/references.bib', function (data) {
+  //  $.get('file:///Users/kersting/Documents/GitHub/ml-research.github.io/references.bib', function (data) {
+
+            function containsName(bib) {
+                return bib.toLowerCase().includes("kersting")
+            }
+
+            function replaceImagePath(bib) {
+                return bib.replace("./images/", "./../../images/");
+            }
+
+            function replacePaperPath(bib) {
+                return bib.replace("./papers/", "./../../papers/");
+            }
+
+            bibtex = data.split(/(?=@\w+)/u);
+            my_bibtex = bibtex.filter(containsName).map(replacePaperPath);
+            my_bibtex = my_bibtex.map(replaceImagePath);
+
+            $("#bibtex").html(my_bibtex.join());
+            bibtexify("#bibtex", "pubTable");
+        });
+
+
+    });
+</script>
+
+
+
+<!--<script type="text/javascript">
+        $(document).ready(function() {
+          bibtexify("#bibtex", "pubTable");
+        });
+</script>-->
+
+
+
+</body>
+</html>
