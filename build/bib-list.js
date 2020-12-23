@@ -2216,7 +2216,7 @@ var bibtexify = (function($) {
             s = s + "<\/span>";
             return s;
         },
-        
+
         incollection: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
                 " (<span class='puby'>" + entryData.year + "<\/span>): <\/span> " +
@@ -2260,7 +2260,7 @@ var bibtexify = (function($) {
             'phdthesis': 40,
             'inbook': 40,
             'book': 100,
-            'unpublished':40
+            'unpublished':96
         },
         // labels used for the different types of entries
         labels: {
@@ -2276,7 +2276,7 @@ var bibtexify = (function($) {
             'phdthesis': 'PhD',
             'proceedings': 'Edited Volume',
             'techreport': 'Techreport',
-            'unpublished': 'Unpublished'}
+            'unpublished': 'Newspaper'}
     };
     // format a phd thesis similarly to masters thesis
     bib2html.phdthesis = bib2html.mastersthesis;
@@ -2412,6 +2412,13 @@ var bibtexify = (function($) {
                                                     //s = s + '<button type="button" class="btn btn-info btn-xs disabled" style="border: none;font-size:11px;background-color:1a8cff">' +  sDataSplit[0] +'</button>';
 
                                                     break;
+
+                                                    case 'Newspaper':
+                                                    //  $(nTd).css('background-color', '#1a8cff'); // You can use hex code as well
+                                                      s = s + '<span style="color:white;font-size:11px;background-color: #1a8cff">'+  sDataSplit[0] +'&nbsp;</span>';
+                                                      //s = s + '<button type="button" class="btn btn-info btn-xs disabled" style="border: none;font-size:11px;background-color:1a8cff">' +  sDataSplit[0] +'</button>';
+
+                                                      break;
                                                   case 'Book':
                                                   //  $(nTd).css('background-color', '#e68a00'); // You can use hex code as well
                                                     s = s + '<span style="color:white;font-size:11px;background-color: #e68a00">'+  sDataSplit[0] +'&nbsp;</span>';
