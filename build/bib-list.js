@@ -2145,6 +2145,20 @@ var bibtexify = (function($) {
             s = s + "<\/span>";
             return s;
         },
+
+        unpublished: function(entryData) {
+            s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
+                " (<span class='puby'>" + entryData.year + "<\/span>): <\/span>" +
+                "<span class='pubt'>" + entryData.title + ". <\/span>" +
+                "<span class='pubv'>" + ((entryData.howpublished)?entryData.howpublished:"") +
+                " " + ((entryData.volume)?entryData.volume:"");
+            s = s + ".<\/span>";
+          //  if(entryData.note){
+          //      s += "<span class='pubd'>" + " " + entryData.note + "<\/span>";
+          //  }
+            s = s + "<\/span>";
+            return s;
+        },
         mastersthesis: function(entryData) {
             s = "<span class='mypub'><span class='puba'>" + this.authors2html(entryData.author) +
                 " (<span class='puby'>" + entryData.year + "<\/span>): <\/span>" +
