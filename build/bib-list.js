@@ -2415,7 +2415,7 @@ var bibtexify = (function($) {
 
                                                     case 'Newspaper':
                                                     //  $(nTd).css('background-color', '#1a8cff'); // You can use hex code as well
-                                                      s = s + '<span style="color:white;font-size:11px;background-color: #1a8cff">'+  sDataSplit[0] +'&nbsp;</span>';
+                                                      s = s + '<span style="color:white;font-size:11px;background-color:#ffa5c9;">'+  sDataSplit[0] +'&nbsp;</span>';
                                                       //s = s + '<button type="button" class="btn btn-info btn-xs disabled" style="border: none;font-size:11px;background-color:1a8cff">' +  sDataSplit[0] +'</button>';
 
                                                       break;
