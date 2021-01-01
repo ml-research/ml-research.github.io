@@ -2266,15 +2266,15 @@ var bibtexify = (function($) {
             'manual': 40,
             'techreport': 40,
             'mastersthesis': 40,
-            'inproceedings': 95,
+            'inproceedings': 80,
             'incollection': 50,
             'proceedings': 40,
             'conference': 20,
-            'article': 96,
+            'article': 90,
             'phdthesis': 40,
             'inbook': 40,
-            'book': 100,
-            'unpublished':96
+            'book': 110,
+            'unpublished':100
         },
         // labels used for the different types of entries
         labels: {
