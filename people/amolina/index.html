@@ -240,8 +240,9 @@
 
 
         <br>
-
         <h3>Selected Program Committees/Reviewer:</h3><br>
+        <div class="t2what">ICML 2020</div>
+        <div class="t2what">UAI 2020</div>
         <div class="t2what">IJCAI 2020</div>
         <div class="t2what">AISTATS 2020</div>
         <div class="t2what">SDM 2020</div>
@@ -326,7 +327,8 @@
         $.get('https://ml-research.github.io/references.bib', function (data) {
 
             function containsName(bib) {
-                return bib.toLowerCase().includes("molina")
+                author_name = bib.toLowerCase()
+                return author_name.includes("molina") && author_name.includes("alejandro")
             }
 
             function replaceImagePath(bib) {
