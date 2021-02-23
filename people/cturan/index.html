@@ -10,11 +10,54 @@
     <title>Dr. Cigdem Turan</title>
 
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" media="screen">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet" media="screen">
+    <link href="./../../css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="./../../css/jquery.dataTables.min.css" rel="stylesheet" media="screen">
+    <link href="./../../css/dataTables.bootstrap4.min.css" rel="stylesheet" media="screen">
 
-    <link href="../../css/style.css" rel="stylesheet">
+    <link href="./../../css/bootstrap-social.css" rel="stylesheet" media="screen">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="./../../css/style.css" rel="stylesheet">
+
+    <script src="./../../build/jquery.min.js"></script>
+
+
+
+
+        <script type='text/javascript'>//<![CDATA[
+      $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+      </script>
+
+      <script src="./../../build/jquery.min.js"></script>
+      <!--    <script>
+          $(function(){
+            $("#includedContent").load("myBib.bib");
+          });
+        </script>-->
 
 
 </head>
@@ -182,6 +225,7 @@
         <br>
 
         <noscript>
+            <!-- bibtex source hidden by default, show it if JS disabled -->
             <style>
                 #bibtex {
                     display: block;
@@ -189,12 +233,12 @@
             </style>
         </noscript>
 
-        <!--table id="pubTable" class="table" style="width:100%"></table-->
+        <table id="pubTable" class="table" style="width:100%"></table>
 
         <br>
 
         <pre id="bibtex" style="display:none;">
- 
+
 
         </pre>
     </div>
@@ -257,17 +301,17 @@
         <br>
         <div class="row">
             <div class="col-md-3">
-                
+
             </div>
             <div class="col-md-3">
-                
+
             </div>
 
             <div class="col-md-3">
-                
+
             </div>
             <div class="col-md-3">
-                
+
             </div>
         </div>
     </div-->
@@ -293,7 +337,6 @@
 
 </footer>
 
-
 <!-- place js at end for faster loading -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -309,7 +352,8 @@
         $.get('https://ml-research.github.io/references.bib', function (data) {
 
             function containsName(bib) {
-                return bib.toLowerCase().includes("turan")
+                author_name = bib.toLowerCase()
+                return author_name.includes("turan") && author_name.includes("cigdem")
             }
 
             function replaceImagePath(bib) {

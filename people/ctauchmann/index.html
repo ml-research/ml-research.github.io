@@ -6,17 +6,60 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Christopher Tauchmann</title>
+    <title>Christopher Tacuhmann</title>
 
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" media="screen">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet" media="screen">
+    <link href="./../../css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="./../../css/jquery.dataTables.min.css" rel="stylesheet" media="screen">
+    <link href="./../../css/dataTables.bootstrap4.min.css" rel="stylesheet" media="screen">
 
-    <link href="../../css/style.css" rel="stylesheet">
+    <link href="./../../css/bootstrap-social.css" rel="stylesheet" media="screen">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="./../../css/style.css" rel="stylesheet">
+
+    <script src="./../../build/jquery.min.js"></script>
+
+
+
+
+        <script type='text/javascript'>//<![CDATA[
+      $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+      </script>
+
+      <script src="./../../build/jquery.min.js"></script>
+      <!--    <script>
+          $(function(){
+            $("#includedContent").load("myBib.bib");
+          });
+        </script>-->
 
 </head>
+
 
 
 <body data-spy="scroll" data-target=".navbar" data-offset="65">
@@ -100,7 +143,7 @@
         <b>Bio.</b> I'm a PhD student of Machine Learning at the
         <a href="https://www.informatik.tu-darmstadt.de/fb20/index.en.jsp" target="_blank">Computer Science Department</a>
         of the <a href="https://www.tu-darmstadt.de" target="_blank">TU Darmstadt University</a>, Germany.
-	
+
 
 
         <!--<b>Timeline.</b>
@@ -140,18 +183,15 @@
         <h3>Publications</h3>
         <br>
 
-        <div class="hht" style="font-size: 18px"> Publications can be found at <a
-                href="https://dblp.uni-trier.de/pers/hd/t/Tauchmann:Christopher" target="_blank">DBLP</a>, <a
-                href="https://www.semanticscholar.org/author/Christopher-Tauchmann/41127724"
-                target="_blank">SemanticScholar</a>
+        <div class="hht" style="font-size: 18px"> Publications can be found at
+          <a href="https://dblp.uni-trier.de/pers/hd/t/Tauchmann:Christopher" target="_blank">DBLP</a>,
+          <a href="https://www.semanticscholar.org/author/Christopher-Tauchmann/41127724" target="_blank">SemanticScholar</a>
         </div>
 
         <br>
-				
-                <!-- bibtex source hidden by default, show it if JS disabled -->
-        <!--
+
         <noscript>
-        	
+            <!-- bibtex source hidden by default, show it if JS disabled -->
             <style>
                 #bibtex {
                     display: block;
@@ -166,7 +206,7 @@
         <pre id="bibtex" style="display:none;">
 
 
-        </pre>-->
+        </pre>
 
 
     </div>
@@ -208,16 +248,16 @@
         <br>
         <div class="row">
             <div class="col-md-3">
-                
+
             </div>
             <div class="col-md-3">
-                
+
             </div>
             <div class="col-md-3">
-                
+
             </div>
             <div class="col-md-3">
-                
+
             </div>
         </div>
     </div-->
@@ -259,7 +299,8 @@
         $.get('https://ml-research.github.io/references.bib', function (data) {
 
             function containsName(bib) {
-                return bib.toLowerCase().includes("tauchmann")
+                author_name = bib.toLowerCase()
+                return author_name.includes("tauchmann") && author_name.includes("christopher")
             }
 
             function replaceImagePath(bib) {
@@ -277,70 +318,127 @@
 </script>
 
 <script>
+
     var more_bio_shown = false;
+
     var more_projects_shown = false;
+
     var more_pubs_shown = false;
+
+
     $(document).ready(function () {
+
+
         $("#showmorebio").click(function () {
+
             if (!more_bio_shown) {
+
                 $("#morebio").slideDown('fast', function () {
+
                     $("#showmorebio").text('hide more bio');
+
                 });
+
                 more_bio_shown = true;
+
             } else {
+
                 $("#morebio").slideUp('fast', function () {
+
                     $("#showmorebio").text('show more bio');
+
                 });
+
                 more_bio_shown = false;
+
             }
+
         });
+
+
         $("#showmoreprojects").click(function () {
+
             if (!more_projects_shown) {
+
                 $("#moreprojects").slideDown('fast', function () {
+
                     $("#showmoreprojects").text('hide');
+
                 });
+
                 more_projects_shown = true;
+
             } else {
+
                 $("#moreprojects").slideUp('fast', function () {
+
                     $("#showmoreprojects").text('show more projects');
+
                 });
+
                 more_projects_shown = false;
+
             }
+
         });
+
+
         $("#showmorepubs").click(function () {
+
             if (!more_pubs_shown) {
+
                 $("#morepubs").slideDown('fast', function () {
+
                     $("#showmorepubs").text('hide older publications');
+
                 });
+
                 more_pubs_shown = true;
+
             } else {
+
                 $("#morepubs").slideUp('fast', function () {
+
                     $("#showmorepubs").text('show older publications');
+
                 });
+
                 more_pubs_shown = false;
+
             }
+
         });
+
+
     });
+
 </script>
 
 <script>
     $(document).ready(function () {
         $("#nav a").on('click', function (event) {
+
             // Make sure this.hash has a value before overriding default behavior
             if (this.hash !== "") {
+
                 // Prevent default anchor click behavior
                 event.preventDefault();
+
                 // Store hash
                 var hash = this.hash;
+
                 // Using jQuery's animate() method to add smooth page scroll
                 // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
                 }, 800, function () {
+
                     // Add hash (#) to URL when done scrolling (default click behavior)
                     window.location.hash = hash;
                 });
+
             } // End if
+
         });
     });
 </script>
