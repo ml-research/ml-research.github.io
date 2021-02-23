@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +10,54 @@
     <title>Hikaru Shindo</title>
 
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" media="screen">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet" media="screen">
-    
-    <link href="../../css/style.css" rel="stylesheet">
+    <link href="./../../css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="./../../css/jquery.dataTables.min.css" rel="stylesheet" media="screen">
+    <link href="./../../css/dataTables.bootstrap4.min.css" rel="stylesheet" media="screen">
 
+    <link href="./../../css/bootstrap-social.css" rel="stylesheet" media="screen">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="./../../css/style.css" rel="stylesheet">
+
+    <script src="./../../build/jquery.min.js"></script>
+
+
+
+
+        <script type='text/javascript'>//<![CDATA[
+      $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+      </script>
+
+      <script src="./../../build/jquery.min.js"></script>
+      <!--    <script>
+          $(function(){
+            $("#includedContent").load("myBib.bib");
+          });
+        </script>-->
 
 </head>
 
@@ -24,13 +67,13 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 
         <a class="navbar-brand" href="#">Hikaru Shindo</a>
-    
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-    
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
-    
+
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#mission">Mission and Bio</a>
@@ -48,7 +91,7 @@
                     <a class="nav-link" href="#legal">Legal Info</a>
                 </li>
             </ul>
-    
+
         </div>
     </nav>
 </header>
@@ -66,13 +109,13 @@
     </div>
     <div class="clearfix"></div>
     <div class="container" id="mission">
-    
+
         <div class="row">
             <div class="col-md-2">
-    
+
                 <img src="hikarushindo.jpg" class=" rounded-circle imgme" style="height:120px">
             </div>
-    
+
             <div class="col-md-6">
                 <div id="htname">Hikaru Shindo</div>
                 <div id="htem">Machine Learning Group, Computer Science Department, TU Darmstadt.
@@ -98,9 +141,9 @@
         <b>Bio.</b> I'm a PhD student of Machine Learning at the
         <a href="https://www.informatik.tu-darmstadt.de/fb20/index.en.jsp" target="_blank">Computer Science Department</a>
         of the <a href="https://www.tu-darmstadt.de" target="_blank">TU Darmstadt University</a>, Germany.
-    
+
         <br><br>
-    
+
         <b>Timeline.</b>
         <TABLE BORDER="0" width="100%" id="awards">
             <col width="120px">
@@ -113,7 +156,7 @@
             <TR>
                 <TD><span class="t2when"> 2018 - 2020:</span></TD>
                 <TD><span class="t2where"> M.Sc.,  <a
-                    href="http://www.ist.i.kyoto-u.ac.jp/en/" target="_blank"> Department of Intelligence Science and Technology,</a> 
+                    href="http://www.ist.i.kyoto-u.ac.jp/en/" target="_blank"> Department of Intelligence Science and Technology,</a>
                     <a href="http://www.i.kyoto-u.ac.jp/en/" target="_blank"> Graduate School of Informatics, Kyoto University,</a> Japan.</span>
                 </TD>
             </TR>
@@ -123,9 +166,9 @@
                 </TD>
             </TR>
         </TABLE>
-    
+
         <br><br>
-    
+
         <!--b>Awards.</b>
         TODO
         <div id="timeline"
@@ -141,15 +184,21 @@
         </div>
          -->
     </div>
-    
+
     <hr class="soft">
 
 
-    
+
     <div class="container" id="publications">
-    
+
             <h3>Publications</h3>
             <br>
+
+            <div class="hht" style="font-size: 18px"> Publications can be found at
+                <a href="https://dblp.org/pid/227/1466.html" target="_blank">DBLP</a>,
+                <a href="https://www.researchgate.net/profile/Hikaru_Shindo" target="_blank">ReseachGate</a>, and
+                <a href="https://www.hikarushindo.com/" target="_blank">Personal Website</a>.
+            </div>
                     <noscript>
                 <style>
                     #bibtex {
@@ -157,23 +206,19 @@
                     }
                 </style>
             </noscript>
-    
-        <!--<table id="pubTable" class="table" style="width:100%" data-paging="false" data-searching="false" data-info="false"> </table>-->
-    
+
+        <table id="pubTable" class="table" style="width:100%" data-paging="false" data-searching="false" data-info="false"> </table>
+
             <pre id="bibtex" style="display:none;">
             </pre>
 
-            <div class="hht" style="font-size: 18px"> Publications can be found at 
-                <a href="https://dblp.org/pid/227/1466.html" target="_blank">DBLP</a>, 
-                <a href="https://www.researchgate.net/profile/Hikaru_Shindo" target="_blank">ReseachGate</a>, and
-                <a href="https://www.hikarushindo.com/" target="_blank">Personal Website</a>.
-            </div>
+
     </div>
-    
+
     <br>
-    
+
     <hr class="soft">
-    
+
     <!--div class="container" id="activities">
         <h2>Activities</h2>
         <h3>Conference and Event Organizations:</h3> <br>
@@ -199,7 +244,7 @@
         <br>
         <br>
     </div-->
-    
+
     <!--hr class="soft">
     <div class="container" id="talks">
         <h2>Invited Talks, Panels and Training</h2>
@@ -207,16 +252,16 @@
         <br>
         <div class="row">
             <div class="col-md-3">
-    
+
             </div>
             <div class="col-md-3">
-    
+
             </div>
             <div class="col-md-3">
-    
+
             </div>
             <div class="col-md-3">
-    
+
             </div>
         </div>
     </div-->
@@ -227,10 +272,10 @@
 
 
       <div class="container" id="sitefooter">
-    
+
           <a href="https://www.informatik.tu-darmstadt.de/impressum.en.jsp">Legal info / Impressum</a>
           <br><br>
-    
+
           Technische Universität Darmstadt <br>
           Fachbereich Informatik <br>
           Hochschulstr. 1 <br>
@@ -256,21 +301,17 @@
       $(document).ready(function () {
 
           $.get('https://ml-research.github.io/references.bib', function (data) {
-    
+
               function containsName(bib) {
                   return bib.toLowerCase().includes("shindo")
               }
-    
+
               function replaceImagePath(bib) {
-                  return bib.replace("./images/", "./../../images/");
+                  return bib.replace("./images/", "../../images/");
               }
-              function replacePaperPath(bib) {
-                  return bib.replace("./papers/", "./../../papers/");
-              }
-    
+
               bibtex = data.split(/(?=@\w+)/u);
-              my_bibtex = bibtex.filter(containsName).map(replacePaperPath);
-              my_bibtex = my_bibtex.map(replaceImagePath);
+              my_bibtex = bibtex.filter(containsName).map(replaceImagePath);
               $("#bibtex").html(my_bibtex.join());
               bibtexify("#bibtex", "pubTable");
           });
@@ -282,9 +323,9 @@
   <script>
 
       var more_bio_shown = false;
-    
+
       var more_projects_shown = false;
-    
+
       var more_pubs_shown = false;
 
 
@@ -292,83 +333,83 @@
 
 
           $("#showmorebio").click(function () {
-    
+
               if (!more_bio_shown) {
-    
+
                   $("#morebio").slideDown('fast', function () {
-    
+
                       $("#showmorebio").text('hide more bio');
-    
+
                   });
-    
+
                   more_bio_shown = true;
-    
+
               } else {
-    
+
                   $("#morebio").slideUp('fast', function () {
-    
+
                       $("#showmorebio").text('show more bio');
-    
+
                   });
-    
+
                   more_bio_shown = false;
-    
+
               }
-    
+
           });
 
 
           $("#showmoreprojects").click(function () {
-    
+
               if (!more_projects_shown) {
-    
+
                   $("#moreprojects").slideDown('fast', function () {
-    
+
                       $("#showmoreprojects").text('hide');
-    
+
                   });
-    
+
                   more_projects_shown = true;
-    
+
               } else {
-    
+
                   $("#moreprojects").slideUp('fast', function () {
-    
+
                       $("#showmoreprojects").text('show more projects');
-    
+
                   });
-    
+
                   more_projects_shown = false;
-    
+
               }
-    
+
           });
 
 
           $("#showmorepubs").click(function () {
-    
+
               if (!more_pubs_shown) {
-    
+
                   $("#morepubs").slideDown('fast', function () {
-    
+
                       $("#showmorepubs").text('hide older publications');
-    
+
                   });
-    
+
                   more_pubs_shown = true;
-    
+
               } else {
-    
+
                   $("#morepubs").slideUp('fast', function () {
-    
+
                       $("#showmorepubs").text('show older publications');
-    
+
                   });
-    
+
                   more_pubs_shown = false;
-    
+
               }
-    
+
           });
 
 
@@ -382,25 +423,25 @@
 
               // Make sure this.hash has a value before overriding default behavior
               if (this.hash !== "") {
-    
+
                   // Prevent default anchor click behavior
                   event.preventDefault();
-    
+
                   // Store hash
                   var hash = this.hash;
-    
+
                   // Using jQuery's animate() method to add smooth page scroll
                   // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                   $('html, body').animate({
                       scrollTop: $(hash).offset().top
                   }, 800, function () {
-    
+
                       // Add hash (#) to URL when done scrolling (default click behavior)
                       window.location.hash = hash;
                   });
-    
+
               } // End if
-    
+
           });
       });
   </script>

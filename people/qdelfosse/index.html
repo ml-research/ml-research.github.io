@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0056)./czech/czech.html -->
+<!-- saved from url=(0056)./kersting/kersting.html -->
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -10,14 +10,58 @@
     <title>Quentin Delfosse</title>
 
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" media="screen">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet" media="screen">
+    <link href="./../../css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="./../../css/jquery.dataTables.min.css" rel="stylesheet" media="screen">
+    <link href="./../../css/dataTables.bootstrap4.min.css" rel="stylesheet" media="screen">
 
-    <link href="../../css/style.css" rel="stylesheet">
+    <link href="./../../css/bootstrap-social.css" rel="stylesheet" media="screen">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="./../../css/style.css" rel="stylesheet">
+
+    <script src="./../../build/jquery.min.js"></script>
+
+
+
+
+        <script type='text/javascript'>//<![CDATA[
+      $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+      </script>
+
+      <script src="./../../build/jquery.min.js"></script>
+      <!--    <script>
+          $(function(){
+            $("#includedContent").load("myBib.bib");
+          });
+        </script>-->
 
 
 </head>
+
 
 
 <body data-spy="scroll" data-target=".navbar" data-offset="65">
@@ -55,8 +99,54 @@
 </header>
 
 
+
+<body data-spy="scroll" data-target=".navbar" data-offset="65">
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+        <a class="navbar-brand" href="#">Meltem Subasioglu</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#mission">Mission and Bio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#publications">Publications</a>
+                </li>
+                <!--li class="nav-item">
+                    <a class="nav-link" href="#activities">Activities</a>
+                </li-->
+                <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">ML@TUDA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#legal">Legal Info</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+
+
 <main role="main">
-    <br><br><br>
+
+    <div class="container" id="banner">
+        <br><br><br>
+        <img class="img-fluid" src="./../../images/banner.png" style="float: left; margin: 0px 0px 10px 10px;">
+        <a href="https://www.tu-darmstadt.de" target="_blank"> <img class="img-fluid"
+                                                                    src="./../../images/tud_weblogo.svg"
+                                                                    style="margin: 19px 10px 10px 10px;height:75px"></a>
+        </p>
+    </div>
+    <div class="clearfix"></div>
+
     <div class="container" id="mission">
 
         <div class="row">
@@ -75,11 +165,10 @@
                             <br> <h6>Meetings by appointment.</h6>
                 </div>
             </div>
-              <div style="float: right">
-              <a href="https://www.tu-darmstadt.de" target="_blank"> <img class="img-fluid"
-                                                                    src="./../../images/tud_weblogo.svg"
-                                                                    style="margin: 19px 10px 10px 10px;height:75px"></a>
-              </div>
+            <div class="col-md-4">
+                <img id="logo" class="imgsm" src="./../../images/FB20TUDAlogo.png"
+                     style="text-align: right; margin: 10px 5px 5px 3px;height:55px"></a>
+            </div>
                   <!-- div class="col-md-4">
                 <img id="logo" class="imgsm" src="./../../images/FB20TUDAlogo.png"
                      style="text-align: right; margin: 10px 5px 5px 3px;height:55px"></a>
