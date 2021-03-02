@@ -14,6 +14,18 @@ them — they can and should learn from each other.},
   }
 
 
+  @inproceedings{czech2021icap_mcgs,
+      Anote = {./images/czech2020mcgs.png},
+      title = {{AlphaZero} with {Monte-Carlo} {Graph} {Search}},
+      Booktitle = {Proceedings of the Thirty-First International Conference on Automated Planning and Scheduling (ICAPS)},
+      Note = {The AlphaZero algorithm has been successfully applied in a range of discrete domains, most notably board games. It utilizes a neural network, that learns a value and policy function to guide the exploration in a Monte-Carlo Tree Search. Although many search improvements have been proposed for Monte-Carlo Tree Search in the past, most of them refer to an older variant of the Upper Conﬁdence bounds for Trees algorithm that does not use a policy for planning. We introduce a new, improved search algorithm for AlphaZero which generalizes the search tree to a directed acyclic graph. This enables information ﬂow across different subtrees and greatly reduces memory consumption. Along with Monte-Carlo Graph Search, we propose a number of further extensions, such as the inclusion of -greedy exploration, a revised terminal solver and the integration of domain knowledge as constraints. In our evaluations, we use the CrazyAra engine on chess and crazyhouse as examples to show that these changes bring signiﬁcant improvements to AlphaZero.},
+      author = {Johannes Czech and Patrick Korus and Kristian Kersting},
+      year = {2021},
+      Keywords = {Monte-Carlo Tree Search, Graph Search, Directed Acyclic Graphs, Epsilon-Greedy Search, Chess, Crazyhouse, Upper Confidencebounds for Trees, AlphaZero},
+      Crossref = {https://github.com/QueensGambit/CrazyAra}
+  }
+
+
 @article{brugger2021plantPythology,
           Anote = {./images/brugger2021plantPythology.png},
           Author = {Anna Brugger and Patrick Schramowski and Stefan Paulus and Ulrike Steiner and Kristian Kersting and Anne-Katrin Mahlein},
@@ -65,7 +77,7 @@ experts.},
 @inproceedings{shao2021aaai,
 Anote = {./images/shao2021aaai.png},
 Author = {Xiaoting Shao and Arseny Skryagin and Patrick Schramowski and Wolfgang Stammer and Kristian Kersting},
-Booktitle = {Proceedings of Thirty-Fifth AAAI Conference on Artificial Intelligence (AAAI)},
+Booktitle = {Proceedings of the Thirty-Fifth AAAI Conference on Artificial Intelligence (AAAI)},
 Note = {Explaining black-box models such as deep neural networks is becoming increasingly important as it helps to boost trust and debugging.
 Popular forms of explanations map the features to a vector indicating their individual importance to a decision on the instance-level.
 They can then be used to prevent the model from learning the wrong bias in data possibly due to ambiguity. For instance, Ross et al.'s
@@ -146,6 +158,18 @@ Year = {2021}}
   Pages = {},
   Url = {https://arxiv.org/pdf/2102.10440.pdf},
   Howpublished = {arXiv preprint arXiv:2102.10440}
+}
+
+@misc{ventola2021gcln,
+  Anote = {./images/gcln.png},
+  title={Generative Clausal Networks},
+  author={Fabrizio Ventola and Devendra Singh Dhami and Kristian Kersting},
+  Keywords = {Probabilitic Models, Relational Models, Tractability, Sum-Product Networks, Interpretability},
+  Note = {In many real-world applications, the i.i.d. assumption does not hold and thus capturing the interactions between instances is essential for the task at hand. Recently, a clear connection between predictive modelling such as decision trees and probabilistic circuits, a form of deep probabilistic model, has been established although is limited to propositional data. We introduce the first connection between relational rule models and probabilistic circuits, obtaining tractable inference from discriminative rule models while operating on the relational domain. Specifically, given a relational rule model, we make use of Mixed Sum-Product Networks (MSPNs)—a deep probabilistic architecture for hybrid domains—to equip them with a full joint distribution over the class and how (often) the rules fire. Our empirical evaluation shows that we can answer a wider range of probabilistic queries on relational data while being robust to missing data and partial counts. We show that our method is generalizable to different distributions outperforming strong baselines. Moreover, due to the clear probabilistic semantics of MSPNs we also have informative model interpretations.},
+  year={2021},
+  Pages = {},
+  Url = {},
+  Howpublished = {}
 }
 
 @unpublished{kersting2020welt_gpt3,
