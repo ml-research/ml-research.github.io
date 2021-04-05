@@ -1,5 +1,27 @@
 
-
+@misc{stelzner2021obsurf,
+    Anote = {./images/stelzner2021obsurf.png},
+    title = {Decomposing 3D Scenes into Objects via Unsupervised Volume Segmentation},
+    Url = {https://arxiv.org/pdf/2104.01148.pdf},
+    Howpublished = {arXiv preprint arXiv:2104.01148},
+    Note = {We present ObSuRF, a method which turns a single image of a
+    scene into a 3D model represented as a set of Neural Radiance Fields (NeRFs), with each NeRF
+    corresponding to a different object. A single forward pass of an encoder network outputs a set of
+    latent vectors describing the objects in the scene. These vectors are used independently to condition
+    a NeRF decoder, defining the geometry and appearance of each object. We make learning more
+    computationally efficient by deriving a novel loss, which allows training NeRFs on RGB-D inputs without
+    explicit ray marching. After confirming that the model performs equal or better than state of the art on
+    three 2D image segmentation benchmarks, we apply it to two multi-object 3D datasets: A multiview version
+    of CLEVR, and a novel dataset in which scenes are populated by ShapeNet models. We find that after
+    training ObSuRF on RGB-D views of training scenes, it is capable of not only recovering the 3D geometry
+    of a scene depicted in a single input image, but also to segment it into objects, despite receiving no
+    supervision in that regard.},
+    author = {Karl Stelzner and Kristian Kersting and Adam R. Kosiorek},
+    month = {April},
+    year = {2021},
+    Keywords = {Neural Radience Field, NeRF, 3D Scence, Unsupervised Segmention, Deep Learning, Multiview CLEVR},
+    Crossref = {https://stelzner.github.io/obsurf/}
+}
 
 @misc{schramowski2021moral,
     Anote = {./images/schramowski2021moral.png},
