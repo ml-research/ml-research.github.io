@@ -2274,7 +2274,7 @@ var bibtexify = (function($) {
             'phdthesis': 40,
             'inbook': 40,
             'book': 110,
-            'unpublished':100
+            'unpublished':70
         },
         // labels used for the different types of entries
         labels: {
