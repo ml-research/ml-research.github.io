@@ -19,6 +19,34 @@
 }
 
 
+@misc{wainakh2021arxiv_attack,
+  Anote = {./images/wainakh2021arxiv_attack.png},
+  title={User Label Leakage from Gradients in Federated Learning},
+  author={Aidmar Wainakh and Fabrizio Ventola and Till Müßig and Jens Keim and Carlos Garcia Cordero and Ephraim Zimmer and Tim Grube and Kristian Kersting and Max Mühlhäuser},
+  Keywords = {Adversarial attacks, Federated Learning, Label Leakage, Gradients},
+  Note = {Federated learning enables multiple users to build a joint
+model by sharing their model updates (gradients), while their raw data
+remains local on their devices. In contrast to the common belief that this
+provides privacy benefits, we here add to the very recent results on privacy
+risks when sharing gradients. Specifically, we propose Label Leakage from
+Gradients (LLG), a novel attack to extract the labels of the users’ training
+data from their shared gradients. The attack exploits the direction and
+magnitude of gradients to determine the presence or absence of any
+label. LLG is simple yet effective, capable of leaking potential sensitive
+information represented by labels, and scales well to arbitrary batch sizes
+and multiple classes. We empirically and mathematically demonstrate
+the validity of our attack under different settings. Moreover, empirical
+results show that LLG successfully extracts labels with high accuracy
+at the early stages of model training. We also discuss different defense
+mechanisms against such leakage. Our findings suggest that gradient
+compression is a practical technique to prevent our attack.},
+  year={2021},
+  Pages = {},
+  Url = {https://arxiv.org/pdf/2105.09369.pdf},
+  Howpublished = {arXiv preprint arXiv:2105.09369}
+}
+
+
 @article{ramanan2021dami,
           Anote = {./images/ramanan2021dami.png},
           Author = {Nandini Ramanan and Gautam Kunapuli and Tushar Khot and Bahare Fatemi and Seyed Mehran Kazemi nand David Poole and Kristian Kersting and Sriraam Natarajan},
