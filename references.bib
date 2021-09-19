@@ -26,12 +26,27 @@
       title={DAFNe: A One-Stage Anchor-Free Deep Model for Oriented Object Detection},
       author={Steven Lang and Fabrizio Ventola and Kristian Kersting},
       year={2021},
-      eprint={2109.06148},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
       url={https://arxiv.org/pdf/2109.06148.pdf},
-      Anote = {./images/dafne-header.png},
+      Howpublished = {arXiv preprint arXiv:2109.06148},
+      Anote = {./images/dafne-header2.png},
+      Crossref = {https://github.com/steven-lang/DAFNe},
+      Note = {Object detection is a fundamental task in computer vision. While approaches for axis-aligned bounding box detection
+have made substantial progress in recent years, they perform poorly on oriented objects which are common in several realworld scenarios such as aerial view imagery and security
+camera footage. In these cases, a large part of a predicted bounding box will, undesirably, cover non-object related areas. Therefore, oriented object detection has emerged with
+the aim of generalizing object detection to arbitrary orientations. This enables a tighter fit to oriented objects, leading to
+a better separation of bounding boxes especially in case of dense object distributions. The vast majority of the work in
+this area has focused on complex two-stage anchor-based approaches, where the detection is split into a region-of-interest
+identification step followed by the object localization and classification based on sets of predefined bounding box anchors. These anchors act as priors on the bounding box shape
+and require attentive hyper-parameter fine-tuning on a perdataset basis, increased model size, and come with computational overhead. In this work, we present DAFNe: A Dense
+one-stage Anchor-Free deep Network for oriented object detection. As a one-stage model, DAFNe performs predictions
+on a dense grid over the input image, being architecturally simpler in design, as well as easier to optimize than its twostage counterparts. Furthermore, as an anchor-free model,
+DAFNe reduces the prediction complexity by refraining from employing bounding box anchors. Moreover, we introduce
+an orientation-aware generalization of the center-ness function for arbitrarily oriented bounding boxes to down-weight
+low-quality predictions and a center-to-corner bounding box prediction strategy that improves object localization performance. Our experiments show that, to the best of our knowledge, DAFNe outperforms all previous one-stage anchor-free
+models on DOTA 1.0. DAFNe improves the prediction accuracy over the previous best results by 4.65% mAP, setting the
+new state-of-the-art results by achieving 76.95% mAP.}
 }
+
 @misc{zecevic2021rgnntscm,
   Anote = {./images/zecevic2021rgnntscm.png},
   title={Relating Graph Neural Networks to Structural Causal Models},
