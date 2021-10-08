@@ -9,6 +9,98 @@
       Anote={./images/CLEVA-Compass.png},
 }
 
+@misc{zecevic2021scit,
+  Anote = {./images/zecevic2021scit.jpg},
+  title={Structural Causal Interpretation Theorem},
+  author={Matej Zečević and Devendra Singh Dhami and Constantin A. Rothkopf and Kristian Kersting},
+  Keywords = {Causality, Neural-Causal Models, Induction, Interpretations, Human Study},
+  Note = {Human mental processes allow for qualitative reasoning about causality in terms of mechanistic relations
+  of the variables of interest, which we argue are naturally described by structural causal model (SCM). Since
+  interpretations are being derived from mental models, the same applies for SCM. By defining a metric space on SCM,
+  we provide a theoretical perspective on the comparison of mental models and thereby conclude that interpretations
+  can be used for guiding a learning system towards true causality. To this effect, we present a theoretical analysis
+  from first principles that results in a human-readable interpretation scheme consistent with the provided causality
+  that we name structural causal interpretations (SCI). Going further, we prove that any existing neural induction
+  method (NIM) is in fact interpretable. Our first experiment (E1) assesses the quality of such NIM-based SCI. In
+  (E2) we observe evidence for our conjecture on improved sample-efficiency for SCI-based learning. After conducting
+  a small user study, in (E3) we observe superiority in human-based over NIM-based SCI in support of our
+  initial hypothesis.},
+  year={2021},
+  Pages = {},
+  Url = {https://arxiv.org/abs/2110.02395},
+  Howpublished = {arXiv preprint arXiv:2110.02395}
+}
+
+@misc{schramowski2021interactively,
+    Anote = {./images/schramowski2021interactively.png},
+    title = {Interactively Generating Explanations for Transformer Language Models},
+    Url = {https://arxiv.org/pdf/2110.02058.pdf},
+    Howpublished = {arXiv preprint arXiv:2120.02058},
+    Note = {Transformer language models are state-of-the-art in a multitude of NLP tasks. Despite these successes, their opaqueness remains problematic. Recent methods aiming to provide interpretability and explainability to black-box models primarily focus on post-hoc explanations of (sometimes spurious) input-output correlations. Instead, we emphasize using prototype networks directly incorporated into the model architecture and hence explain the reasoning process behind the network's decisions. Moreover, while our architecture performs on par with several language models, it enables one to learn from user interactions. This not only offers a better understanding of language models but uses human capabilities to incorporate knowledge outside of the rigid range of purely data-driven approaches.},
+    author = {Patrick Schramowski and Felix Friedrich and Christopher Tauchmann and Kristian Kersting},
+    month = {October},
+    year = {2021},
+    Keywords = {Explainable AI, XIL, Language Models, Transformer, Prototype Networks},
+    Crossref = {}
+}
+
+@unpublished{kersting2021welt_voice,
+    Anote = {./images/dieWelt_logo.png},
+    title={AI gives people their voices back},
+    author={Kristian Kersting},
+    year={2021},
+    Howpublished = {Welt am Sonntag, September 19, 2021, page 23},
+    Publisher = {},
+    Note = {To talk to machines will soon be commonplace — Germany and Europe should have a say in this conversation.},
+    Keywords = {AI, Deep Fake, Deep Learning, Speech Synthesis, Cancer, Val Kilmer, Survivor},
+    Url={./papers/kersting2021welt_voice.pdf}
+  }
+
+
+@inproceedings{zecevic2021neurips_ispns,
+  Anote = {./images/zecevic2021neurips_ispns.png},
+  title={Interventional Sum-Product Networks: Causal Inference with Tractable Probabilistic Models},
+  author={Matej Zečević and Devendra Singh Dhami and Athresh Karanam and Sriraam Natarajan and Kristian Kersting},
+  Note = {While probabilistic models are an important tool for studying causality, doing so suffers from
+  the intractability of inference. As a step towards tractable causal models, we consider the problem
+  of learning interventional distributions using sum-product networks (SPNs) that are over-parameterized
+  by gate functions, e.g., neural networks. Providing an arbitrarily intervened causal graph as input,
+  effectively subsuming Pearl's do-operator, the gate function predicts the parameters of the SPN. The
+  resulting interventional SPNs are motivated and illustrated by a structural causal model themed around
+  personal health. Our empirical evaluation against competing methods from both generative and causal
+  modelling demonstrates that interventional SPNs indeed are both expressive and causally adequate.},
+  Keywords = {Probabilistic Circuits, Sum Product Networks, Deep Learning, Causality, Interventional Distribution, Tractable Causal Models},
+  year={2021},
+  Pages = {},
+  Crossref = {},
+  Url = {https://arxiv.org/pdf/2102.10440.pdf},
+  booktitle = {Proceedings of the 35th Conference on Neural Information Processing Systems (NeurIPS)}
+}
+
+@inproceedings{ventola2021ilp_gcn,
+  Anote = {./images/ventola2021ilp_gcn.png},
+  title={Generative Clausal Networks: Relational Decision Trees as Probabilistic Circuits},
+  author={Fabrizio Ventola and Devendra Singh Dhami and Kristian Kersting},
+  Note = {In many real-world applications, the i.i.d. assumption does not hold and thus capturing the
+  interactions between instances is essential for the task at hand. Recently, a clear connection between
+  predictive modelling such as decision trees and probabilistic circuits, a form of deep probabilistic
+  model, has been established although it is limited to propositional data.  We introduce the
+  first connection between relational rule models and probabilistic circuits, obtaining tractable
+  inference from discriminative rule models while operating on the relational domain. Specifically,
+  given a relational rule model, we make use of Mixed Sum-Product Networks (MSPNs)--—a deep probabilistic
+  architecture for hybrid domains--—to equip them with a full joint distribution over the class and how
+  (often) the rules fire. Our empirical evaluation shows that we can answer a widerange of probabilistic
+  queries on relational data while being robust to missing, out-of-domain data and partial counts. We show
+  that our method generalizes todifferent distributions outperforming strong baselines. Moreover, due to the
+  clear probabilistic semantics of MSPNs we have informative model interpretations.},
+  Keywords = {Probabilistic Circuits, Sum Product Networks, Deep Learning, Relational Learing, Relational Decision Trees, Genrative Clausal Networks},
+  year=2021,
+  Url = {./papers/ventola2021ilp_gcn.pdf},
+  booktitle = {Proceedings of the 30th International Conference on Inductive Logic Programming (ILP)}
+}
+
+
+
 @misc{yu2021span,
     Anote = {./images/yu2021span.png},
     title = {Sum-Product-Attention Networks: Leveraging Self-Attention in Probabilistic Circuits},
