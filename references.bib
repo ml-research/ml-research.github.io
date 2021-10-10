@@ -1,4 +1,52 @@
+@misc{mundt2021clevacompass,
+      title={CLEVA-Compass: A Continual Learning EValuation Assessment Compass to Promote Research Transparency and Comparability},
+      author={Martin Mundt and Steven Lang and Quentin Delfosse and Kristian Kersting},
+      year={2021},
+      eprint={2110.03331},
+      archivePrefix={arXiv},
+      Keywords={Continual Learning, Lifelong Learning, Machine Learning Evaluation},
+      primaryClass={cs.LG},
+      Anote={./images/CLEVA-Compass.png},
+      Note={What is the state of the art in continual machine learning? Although a natural question for predominant static benchmarks, the notion to train systems in a lifelong manner entails a plethora of additional challenges with respect to set-up and evaluation. The latter have recently sparked a growing amount of critiques on prominent algorithm-centric perspectives and evaluation protocols being too narrow, resulting in several attempts at constructing guidelines in favor of specific desiderata or arguing against the validity of prevalent assumptions. In this work, we depart from this mindset and argue that the goal of a precise formulation of desiderata is an ill-posed one, as diverse applications may always warrant distinct scenarios. Instead, we introduce the Continual Learning EValuation Assessment Compass, CLEVA-Compass for short. The compass provides the visual means to both identify how approaches are practically reported and how works can simultaneously be contextualized in the broader literature landscape. In addition to promoting compact specification in the spirit of recent replication trends, the CLEVA-Compass thus provides an intuitive chart to understand the priorities of individual systems, where they resemble each other, and what elements are missing towards a fair comparison.},
+      Crossref={https://github.com/ml-research/CLEVA-Compass},
+      Url={https://arxiv.org/abs/2110.03331},
+      Howpublished = {arXiv preprint arXiv:2110.03331}
+}
 
+@misc{zecevic2021scit,
+  Anote = {./images/zecevic2021scit.jpg},
+  title={Structural Causal Interpretation Theorem},
+  author={Matej Zečević and Devendra Singh Dhami and Constantin A. Rothkopf and Kristian Kersting},
+  Keywords = {Causality, Neural-Causal Models, Induction, Interpretations, Human Study},
+  Note = {Human mental processes allow for qualitative reasoning about causality in terms of mechanistic relations
+  of the variables of interest, which we argue are naturally described by structural causal model (SCM). Since
+  interpretations are being derived from mental models, the same applies for SCM. By defining a metric space on SCM,
+  we provide a theoretical perspective on the comparison of mental models and thereby conclude that interpretations
+  can be used for guiding a learning system towards true causality. To this effect, we present a theoretical analysis
+  from first principles that results in a human-readable interpretation scheme consistent with the provided causality
+  that we name structural causal interpretations (SCI). Going further, we prove that any existing neural induction
+  method (NIM) is in fact interpretable. Our first experiment (E1) assesses the quality of such NIM-based SCI. In
+  (E2) we observe evidence for our conjecture on improved sample-efficiency for SCI-based learning. After conducting
+  a small user study, in (E3) we observe superiority in human-based over NIM-based SCI in support of our
+  initial hypothesis.},
+  year={2021},
+  Pages = {},
+  Url = {https://arxiv.org/abs/2110.02395},
+  Howpublished = {arXiv preprint arXiv:2110.02395}
+}
+
+@misc{schramowski2021interactively,
+    Anote = {./images/schramowski2021interactively.png},
+    title = {Interactively Generating Explanations for Transformer Language Models},
+    Url = {https://arxiv.org/pdf/2110.02058.pdf},
+    Howpublished = {arXiv preprint arXiv:2120.02058},
+    Note = {Transformer language models are state-of-the-art in a multitude of NLP tasks. Despite these successes, their opaqueness remains problematic. Recent methods aiming to provide interpretability and explainability to black-box models primarily focus on post-hoc explanations of (sometimes spurious) input-output correlations. Instead, we emphasize using prototype networks directly incorporated into the model architecture and hence explain the reasoning process behind the network's decisions. Moreover, while our architecture performs on par with several language models, it enables one to learn from user interactions. This not only offers a better understanding of language models but uses human capabilities to incorporate knowledge outside of the rigid range of purely data-driven approaches.},
+    author = {Patrick Schramowski and Felix Friedrich and Christopher Tauchmann and Kristian Kersting},
+    month = {October},
+    year = {2021},
+    Keywords = {Explainable AI, XIL, Language Models, Transformer, Prototype Networks},
+    Crossref = {}
+}
 
 @unpublished{kersting2021welt_voice,
     Anote = {./images/dieWelt_logo.png},
@@ -50,9 +98,7 @@
   that our method generalizes todifferent distributions outperforming strong baselines. Moreover, due to the
   clear probabilistic semantics of MSPNs we have informative model interpretations.},
   Keywords = {Probabilistic Circuits, Sum Product Networks, Deep Learning, Relational Learing, Relational Decision Trees, Genrative Clausal Networks},
-  year={2021},
-  Pages = {},
-  Crossref = {},
+  year=2021,
   Url = {./papers/ventola2021ilp_gcn.pdf},
   booktitle = {Proceedings of the 30th International Conference on Inductive Logic Programming (ILP)}
 }
@@ -91,6 +137,7 @@
       Howpublished = {arXiv preprint arXiv:2109.06148},
       Anote = {./images/dafne-header2.png},
       Crossref = {https://github.com/steven-lang/DAFNe},
+      Keywords = {Computer Vision, Oriented Object Detection, One-Stage, Anchor-Free},
       Note = {Object detection is a fundamental task in computer vision. While approaches for axis-aligned bounding box detection
 have made substantial progress in recent years, they perform poorly on oriented objects which are common in several realworld scenarios such as aerial view imagery and security
 camera footage. In these cases, a large part of a predicted bounding box will, undesirably, cover non-object related areas. Therefore, oriented object detection has emerged with

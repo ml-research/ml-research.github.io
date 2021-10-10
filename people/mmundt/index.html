@@ -186,20 +186,20 @@ where I previously also received Bachelor and Master of Science degrees in Physi
 
     <br>
 
-    <noscript>
-        <!-- bibtex source hidden by default, show it if JS disabled -->
-        <style>
-            #bibtex {
-                display: block;
-            }
-        </style>
-    </noscript>
+    <!-- <noscript> -->
+    <!--     <\!-- bibtex source hidden by default, show it if JS disabled -\-> -->
+    <!--     <style> -->
+    <!--         #bibtex { -->
+    <!--             display: block; -->
+    <!--         } -->
+    <!--     </style> -->
+    <!-- </noscript> -->
 
-    <table id="pubTable" class="table" style="width:100%"></table>
+    <!-- <table id="pubTable" class="table" style="width:100%"></table> -->
 
-    <br>
+    <!-- <br> -->
 
-    <pre id="bibtex" style="display:none;">
+    <!-- <pre id="bibtex" style="display:none;"> -->
 
     </pre>
 
@@ -238,30 +238,30 @@ where I previously also received Bachelor and Master of Science degrees in Physi
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
 
-<script type="text/javascript" src="./../../build/bib-list.js"></script>
+<!-- <script type="text/javascript" src="./../../build/bib-list.js"></script> -->
 
-<script type="text/javascript">
-    $(document).ready(function () {
+<!-- <script type="text/javascript"> -->
+<!--     $(document).ready(function () { -->
 
-        $.get('https://ml-research.github.io/references.bib', function (data) {
+<!--         $.get('https://ml-research.github.io/references.bib', function (data) { -->
 
-            function containsName(bib) {
-                return bib.toLowerCase().includes("Martin Mundt")
-            }
+<!--             function containsName(bib) { -->
+<!--                 return bib.toLowerCase().includes("martin mundt") -->
+<!--             } -->
 
-            function replaceImagePath(bib) {
-                return bib.replace("./images/", "../../images/");
-            }
+<!--             function replaceImagePath(bib) { -->
+<!--                 return bib.replace("./images/", "../../images/"); -->
+<!--             } -->
 
-            bibtex = data.split(/(?=@\w+)/u);
-            my_bibtex = bibtex.filter(containsName).map(replaceImagePath);
-            $("#bibtex").html(my_bibtex.join());
-            bibtexify("#bibtex", "pubTable");
-        });
+<!--             bibtex = data.split(/(?=@\w+)/u); -->
+<!--             my_bibtex = bibtex.filter(containsName).map(replaceImagePath); -->
+<!--             $("#bibtex").html(my_bibtex.join()); -->
+<!--             bibtexify("#bibtex", "pubTable"); -->
+<!--         }); -->
 
 
-    });
-</script>
+<!--     }); -->
+<!-- </script> -->
 
 <script>
 
