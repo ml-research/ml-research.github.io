@@ -36,6 +36,65 @@
   Howpublished = {arXiv preprint arXiv:2110.12052}
 }
 
+@article{shao2021ijar,
+          Anote = {./images/shao2021ijar.png},
+          Author = {Xiaoting Shao and Alejandro Molina and Antonio Vergari and Karl Stelzner and Robert Peharz and Thomas Liebig and Kristian Kersting},
+          Journal = {International Journal of Approximate Reasoning},
+          Keywords = {Probabilistic Circuits, Differentiable Sampling, Sum Product Networks, Conditional Distribution, Gating Functions, Deep Models},
+          Note = {While probabilistic graphical models are a central tool for reasoning under uncertainty in AI, they are in general not as expressive as
+          deep neural models, and inference is notoriously hard and slow. In contrast, deep probabilistic models such as sum-product networks
+          (SPNs) capture joint distributions and ensure tractable inference, but still lack the expressive power of intractable models based
+          on deep neural networks. In this paper, we introduce conditional SPNs (CSPNs)---conditional density estimators for multivariate and
+          potentially hybrid domains---and develop a structure-learning approach that derives both the structure and parameters of CSPNs from data.
+          To harness the expressive power of deep neural networks (DNNs), we also show how to realise CSPNs by conditioning the parameters of
+          vanilla SPNs on the input using DNNs as gate functions. In experiments, we demonstrate that CSPNs are competitive with other probabilistic
+          models and yield superior performance on structured prediction, conditional density estimation, auto-regressive image modeling, and multilabel image classification.
+          In particular, we show that employing CSPNs as encoders and decoders within  variational autoencoders can help to relax the commonly used mean field assumption and in turn improve performance.},
+          Pages = {},
+          Publisher = {Elsevier},
+          Title = {Conditional Sum-Product Networks: Modular Probabilistic Circuits via Gate Functions},
+          Url = {./papers/shao2021ijar.pdf},
+          Volume = {},
+          number = {},
+          Year = {2021}
+}
+
+@unpublished{kersting2021welt_butterfly,
+    Anote = {./images/dieWelt_logo.png},
+    title={The Butterfly Effect},
+    author={Kristian Kersting},
+    year={2021},
+    Howpublished = {Welt am Sonntag, Oktober 17, 2021, page 22},
+    Publisher = {},
+    Note = {Artificial intelligence can strengthen our protection against extreme weather events and
+help us manage the impacts of climate change.},
+    Keywords = {AI, Deep Learning, Simulation, Weather Forecast, Extrem Weather, Flooding, Climate Change},
+    Url={./papers/kersting2021welt_butterfly.pdf}
+}
+
+@misc{schramowski2021inferring,
+      title={Inferring Offensiveness In Images From Natural Language Supervision},
+      author={Patrick Schramowski and Kristian Kersting},
+      year={2021},
+      Url={https://arxiv.org/pdf/2110.04222.pdf},
+      Note={Probing or fine-tuning (large-scale) pre-trained models results in state-of-the-art performance for many NLP tasks and, more recently, even for computer vision tasks when combined with image data. Unfortunately, these approaches also entail severe risks. In particular, large image datasets automatically scraped from the web may contain derogatory terms as categories and offensive images, and may also underrepresent specific classes. Consequently, there is an urgent need to carefully document datasets and curate their content. Unfortunately, this process is tedious and error-prone. We show that pre-trained transformers themselves provide a methodology for the automated curation of large-scale vision datasets. Based on human-annotated examples and the implicit knowledge of a CLIP based model, we demonstrate that one can select relevant prompts for rating the offensiveness of an image. In addition to e.g. privacy violation and pornographic content previously identified in ImageNet, we demonstrate that our approach identifies further inappropriate and potentially offensive content.},
+      Anote={./images/offensiveimages.png},
+      Howpublished = {arXiv preprint arXiv:2110.04222},
+      Keywords={Dataset Curation, Dataset Documentation, Computer Vision, Pre-trained models, Prompt-tuning, CLIP}
+}
+
+@misc{mundt2021clevacompass,
+      title={CLEVA-Compass: A Continual Learning EValuation Assessment Compass to Promote Research Transparency and Comparability},
+      author={Martin Mundt and Steven Lang and Quentin Delfosse and Kristian Kersting},
+      year={2021},
+      Keywords={Continual Learning, Lifelong Learning, Machine Learning Evaluation},
+      Anote={./images/CLEVA-Compass.png},
+      Note={What is the state of the art in continual machine learning? Although a natural question for predominant static benchmarks, the notion to train systems in a lifelong manner entails a plethora of additional challenges with respect to set-up and evaluation. The latter have recently sparked a growing amount of critiques on prominent algorithm-centric perspectives and evaluation protocols being too narrow, resulting in several attempts at constructing guidelines in favor of specific desiderata or arguing against the validity of prevalent assumptions. In this work, we depart from this mindset and argue that the goal of a precise formulation of desiderata is an ill-posed one, as diverse applications may always warrant distinct scenarios. Instead, we introduce the Continual Learning EValuation Assessment Compass, CLEVA-Compass for short. The compass provides the visual means to both identify how approaches are practically reported and how works can simultaneously be contextualized in the broader literature landscape. In addition to promoting compact specification in the spirit of recent replication trends, the CLEVA-Compass thus provides an intuitive chart to understand the priorities of individual systems, where they resemble each other, and what elements are missing towards a fair comparison.},
+      Crossref={https://github.com/ml-research/CLEVA-Compass},
+      Url={https://arxiv.org/pdf/2110.03331.pdf},
+      Howpublished = {arXiv preprint arXiv:2110.03331}
+}
+
 @misc{zecevic2021scit,
   Anote = {./images/zecevic2021scit.jpg},
   title={Structural Causal Interpretation Theorem},
@@ -54,7 +113,7 @@
   initial hypothesis.},
   year={2021},
   Pages = {},
-  Url = {https://arxiv.org/abs/2110.02395},
+  Url = {https://arxiv.org/pdf/2110.02395.pdf},
   Howpublished = {arXiv preprint arXiv:2110.02395}
 }
 
@@ -121,9 +180,7 @@
   that our method generalizes todifferent distributions outperforming strong baselines. Moreover, due to the
   clear probabilistic semantics of MSPNs we have informative model interpretations.},
   Keywords = {Probabilistic Circuits, Sum Product Networks, Deep Learning, Relational Learing, Relational Decision Trees, Genrative Clausal Networks},
-  year={2021},
-  Pages = {},
-  Crossref = {},
+  year=2021,
   Url = {./papers/ventola2021ilp_gcn.pdf},
   booktitle = {Proceedings of the 30th International Conference on Inductive Logic Programming (ILP)}
 }
@@ -162,6 +219,7 @@
       Howpublished = {arXiv preprint arXiv:2109.06148},
       Anote = {./images/dafne-header2.png},
       Crossref = {https://github.com/steven-lang/DAFNe},
+      Keywords = {Computer Vision, Oriented Object Detection, One-Stage, Anchor-Free},
       Note = {Object detection is a fundamental task in computer vision. While approaches for axis-aligned bounding box detection
 have made substantial progress in recent years, they perform poorly on oriented objects which are common in several realworld scenarios such as aerial view imagery and security
 camera footage. In these cases, a large part of a predicted bounding box will, undesirably, cover non-object related areas. Therefore, oriented object detection has emerged with
