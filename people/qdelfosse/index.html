@@ -17,6 +17,7 @@
     <link href="./../../css/bootstrap-social.css" rel="stylesheet" media="screen">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="card.css">
 
     <link href="./../../css/style.css" rel="stylesheet">
 
@@ -136,16 +137,7 @@
 
 
 <main role="main">
-
-    <div class="container" id="banner">
-        <br><br><br>
-        <img class="img-fluid" src="./../../images/banner.png" style="float: left; margin: 0px 0px 10px 10px;">
-        <a href="https://www.tu-darmstadt.de" target="_blank"> <img class="img-fluid"
-                                                                    src="./../../images/tud_weblogo.svg"
-                                                                    style="margin: 19px 10px 10px 10px;height:75px"></a>
-        </p>
-    </div>
-    <div class="clearfix"></div>
+    <br><br><br>
 
     <div class="container" id="mission">
 
@@ -165,9 +157,10 @@
                             <br> <h6>Meetings by appointment.</h6>
                 </div>
             </div>
-            <div class="col-md-4">
-                <img id="logo" class="imgsm" src="./../../images/FB20TUDAlogo.png"
-                     style="text-align: right; margin: 10px 5px 5px 3px;height:55px"></a>
+            <div style="float: right">
+            <a href="https://www.tu-darmstadt.de" target="_blank"> <img class="img-fluid"
+                                                              src="./../../images/tud_weblogo.svg"
+                                                                  style="margin: 19px 10px 10px 10px;height:75px"></a>
             </div>
                   <!-- div class="col-md-4">
                 <img id="logo" class="imgsm" src="./../../images/FB20TUDAlogo.png"
@@ -179,8 +172,7 @@
         <br>
 
         <b>Mission.</b>
-        My research is centered around using Neural Networks architectures, the topological transformation they perform
-        and Deep Reinforcement Learning models, with applications in robotics.</br>
+        My research focuses on how Explainable Reinforcement Learning. I try to understand how knowledge is represented by agents that need to model and interact with their environments.</br>
         I am also a 3D printing enthusiast. Please find more info <a href="https://quentindelfosse.me/">here</a>.
 
         <br><br>
@@ -214,6 +206,91 @@
               <TD><span
                       class="t2where"><a href="https://www.wikiwand.com/en/Classe_pr%C3%A9paratoire_aux_grandes_%C3%A9coles">Higher School Preparatory Class</a> at Lycée Buffon Paris, France </span>
               </TD>
+          </TR>
+      </TABLE>
+
+      <div class="container">
+        <br><br>
+        <b>Projects.</b>
+
+        <div class="row-container">
+          <div class="box cyan">
+            <a href="https://github.com/ml-research/rational_activations">
+            <h2>Rational Activation Functions</h2>
+            <p>Rationals as learnable activation functions,
+              trainable in an end-to-end fashion using backpropagation.</p>
+            <img src="rationals_logo.svg" alt="">
+            </a>
+          </div>
+
+          <div class="box orange">
+            <h2>Neural Plasticity for Deep RL</h2>
+            <p>Allowing learning structure to embed high plasticity (with rationals)
+              is crucial for dynamic RL environments.</p>
+            <img src="pacman.svg" alt="">
+          </div>
+
+          <div class="box blue">
+            <h2>Object Detection with Time Consistency</h2>
+            <p>Using space-time consistency to better detect and understand objects.</p>
+            <img src="pacmans.svg" alt="">
+          </div>
+
+        </div>
+        <div class="row-container">
+          <div class="box red">
+            <a href="https://github.com/k4ntz/ComicGen">
+            <h2>Comic Style Transfer</h2>
+            <p>Transforming real images into comic style ones using
+              Generative Adversarial Networks.</p>
+            <img src="mountain.jpg" alt="">
+            </a>
+          </div>
+          <div class="box red">
+            <a href="https://arxiv.org/pdf/2108.04328.pdf">
+            <h2>GANCA</h2>
+            <p>Combining Generative Adversarial Networks with Neural Cellular Automata.</p>
+            <img src="generated_smiley.gif" alt="">
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </br>
+      <b>Supervised Theses.</b>
+      <TABLE BORDER="0" width="100%" id="theses">
+          <col width="120px">
+          <TR>
+              <TD><span class="t2when"> 2021</span></TD>
+              <TD><span class="t2where"> Siyao Chen, Comic Generation with Rational Generation Model, M.Sc. Thesis, co-supervision <a
+                      href="https://www.aiml.informatik.tu-darmstadt.de/people/skryagin/" target="_blank">Arseny Skryagin</a> </span></TD>
+          </TR>
+          <TR>
+              <TD><span class="t2when"> 2021</span></TD>
+              <TD><span class="t2where"> Maximilian Otte, Creating Emojis with Generative Adversarial Neural Cellular Automata, M.Sc. Thesis, co-supervision <a
+                      href="https://www.aiml.informatik.tu-darmstadt.de/people/jczech/" target="_blank">Johannes Czech</a></span></TD>
+          </TR>
+
+          <TR>
+              <TD><span class="t2when"> 2021</span></TD>
+              <TD><span class="t2where"> Julius Zimmermann, Evaluation and Showcasing of Rational Functions, M.Sc. Thesis, co-supervision <a
+                      href="https://www.aiml.informatik.tu-darmstadt.de/people/pschramowski/" target="_blank">Patrick Schramowski</a></span></TD>
+          </TR>
+
+          <TR>
+              <TD><span class="t2when"> 2020</span></TD>
+              <TD><span class="t2where"> Patrick Vimr, Optimizing the analysis of Rational Networks applied to Deep Reinforcement Learning-Algorithms, B.Sc. Thesis</span></TD>
+          </TR>
+      </TABLE>
+
+    </br>
+      <b>Supervised Courses and Projects.</b>
+      <TABLE BORDER="0" width="100%" id="courses">
+          <col width="120px">
+          <TR>
+                <TD><span class="t2when">WS 2020/21</span></TD>
+                <TD><span class="t2where">Quentin Delfosse, Patrick Schramowski, Improving the <a href="https://github.com/ml-research/rational_activations">Rational Activation Functions library<a>, Bachelor Praktikum</span></TD>
           </TR>
       </TABLE>
 
