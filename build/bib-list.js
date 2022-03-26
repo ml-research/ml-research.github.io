@@ -2267,14 +2267,14 @@ var bibtexify = (function($) {
             'techreport': 40,
             'mastersthesis': 40,
             'inproceedings': 80,
-            'incollection': 50,
+            'incollection': 70,
             'proceedings': 40,
             'conference': 20,
             'article': 100,
             'phdthesis': 40,
             'inbook': 40,
             'book': 110,
-            'unpublished':70
+            'unpublished':60
         },
         // labels used for the different types of entries
         labels: {
