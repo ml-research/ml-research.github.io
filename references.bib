@@ -1,5 +1,4 @@
 
-
 @incollection{zecevic2022osc,
       Anote = {./images/zecevic2022osc.png},
       title={Finding Structure and Causality in Linear Programs},
@@ -25,12 +24,9 @@
       howpublished={arXiv preprint arXiv:2203.03668},
       Url={https://arxiv.org/pdf/2203.03668.pdf},
       Keywords = {Explanatory Interactive Machine Learning (XIL), Research Transparency and Comparability, Explainable Artificial Intelligence (XAI)},
-      Anote = {./images/friedrich2022xiltypology.png },
-      Note= {Recently, more and more eXplanatory Interactive machine Learning (XIL) methods have been proposed with the goal of extending a model's learning process by integrating human user supervision on the model's explanations. These methods were often developed independently, provide different motivations and stem from different applications. Notably, up to now, there has not been a comprehensive evaluation of these works. By identifying a common set of basic modules and providing a thorough discussion of these modules, our work, for the first time, comes up with a unification of the various methods into a single typology. This typology can thus be used to categorize existing and future XIL methods based on the identified modules. Moreover, our work contributes by surveying six existing XIL methods. In addition to benchmarking these methods on their overall ability to revise a model, we perform additional benchmarks regarding wrong reason revision, interaction efficiency, robustness to feedback quality, and the ability to revise a strongly corrupted model. Apart from introducing these novel benchmarking tasks, for improved quantitative evaluations, we further introduce a novel Wrong Reason (WR) metric which measures the average wrong reason activation in a model's explanations to complement a qualitative inspection. In our evaluations, all methods prove to revise a model successfully. However, we found significant differences between the methods on individual benchmark tasks, revealing valuable application-relevant aspects not only for comparing current methods but also to motivate the necessity of incorporating these benchmarks in the development of future XIL methods.},
+      Anote = {./images/friedrich2022xiltypology.png},
+      Note= {Recently, more and more eXplanatory Interactive machine Learning (XIL) methods have been proposed with the goal of extending a model's learning process by integrating human user supervision on the model's explanations. These methods were often developed independently, provide different motivations and stem from different applications. Notably, up to now, there has not been a comprehensive evaluation of these works. By identifying a common set of basic modules and providing a thorough discussion of these modules, our work, for the first time, comes up with a unification of the various methods into a single typology. This typology can thus be used to categorize existing and future XIL methods based on the identified modules. Moreover, our work contributes by surveying six existing XIL methods. In addition to benchmarking these methods on their overall ability to revise a model, we perform additional benchmarks regarding wrong reason revision, interaction efficiency, robustness to feedback quality, and the ability to revise a strongly corrupted model. Apart from introducing these novel benchmarking tasks, for improved quantitative evaluations, we further introduce a novel Wrong Reason (WR) metric which measures the average wrong reason activation in a model's explanations to complement a qualitative inspection. In our evaluations, all methods prove to revise a model successfully. However, we found significant differences between the methods on individual benchmark tasks, revealing valuable application-relevant aspects not only for comparing current methods but also to motivate the necessity of incorporating these benchmarks in the development of future XIL methods.}
 }
-
-
-
 
 
 @inproceedings{fang2022dpctgan,
@@ -64,7 +60,17 @@ a central repository.},
   Anote = {./images/schramowski2022nmi_moral.png},
   Author = {Patrick Schramowski and Cigdem Turan and Nico Andersen and Constantin Rothkopf and Kristian Kersting},
   Journal = {Nature Machine Intelligence},
-  Note = {Artificial writing is permeating our lives due to recent advances in large-scale, transformer-based languagemodels (LMs) such as BERT, GPT-2 and GPT-3, and others. Using them as pre-trained models and fine-tuningthem for specific tasks, researchers have extended the state of the art for many natural language processing (NLP)tasks and shown that they capture not only linguistic knowledge but also retain general knowledge implicitlypresent in the data. Unfortunately, LMs trained on unfiltered text corpora suffer from degenerated and biasedbehaviour. While this is well established, we show here that recent LMs also contain human-like biases of what isright and wrong to do, reflecting existing ethical and moral norms of society. We show that these norms can becaptured geometrically by a ‘moral direction’ which can be computed, e.g., by a PCA, in the embedding space. Thecomputed ‘moral direction’ can rate the normativity (or non-normativity) of arbitrary phrases without explicitlytraining the LM for this task, reflecting social norms well. We demonstrate that computing the ’moral direction’can provide a path for attenuating or even preventing toxic degeneration in LMs, showcasing this capability on theRealToxicityPrompts testbed.},
+  Note = {Artificial writing is permeating our lives due to recent advances in large-scale, transformer-based
+  language models (LMs) such as BERT, GPT-2 and GPT-3, and others. Using them as pre-trained models and fine-tuning them
+  for specific tasks, researchers have extended the state of the art for many natural language processing (NLP) tasks and
+  shown that they capture not only linguistic knowledge but also retain general knowledge implicitly present in the data.
+  Unfortunately, LMs trained on unfiltered text corpora suffer from degenerated and biased behaviour. While this is well
+  established, we show here that recent LMs also contain human-like biases of what is right and wrong to do, reflecting
+  existing ethical and moral norms of society. We show that these norms can be captured geometrically by a ‘moral direction’
+  which can be computed, e.g., by a PCA, in the embedding space. The computed ‘moral direction’ can rate the normativity
+  (or non-normativity) of arbitrary phrases without explicitlytraining the LM for this task, reflecting social norms well.
+  We demonstrate that computing the ’moral direction’can provide a path for attenuating or even preventing toxic degeneration
+  in LMs, showcasing this capability on the RealToxicityPrompts testbed.},
     Keywords = {Deep Learning, Transformer, Machine Ethics, Moral, Values, Human Bias, Stereotypes, Moral Choices},
   Publisher = {Nature Publishing Group},
   Volume = {},
@@ -73,9 +79,10 @@ a central repository.},
   crossref = {},
   Title = {Large Pre-trained Language Models Contain Human-like Biases of What is Right and Wrong to Do},
   Url = {https://arxiv.org/pdf/2103.11790.pdf},
-  Year = {2022}}
+  Year = {2022}
+}
 
-
+ 
   @article{kordjamshidi22frontiers,
     Anote = {./images/kordjamshidi22frontiers.png},
     Keywords = {Learning-Based Programming, Statistical Relatioanl AI, Neuro-symbolic AI, Abstraction, Reasoning, Learning, Systems AI},
@@ -151,7 +158,13 @@ a central repository.},
       year={2022},
       Keywords={Explanatory Interactive Learning, XAI, Concept Swapping Networks, Prototype Networks, Elementary Concept Learning},
       Anote={./images/stammer2022cvpr.png},
-      Note={Learning visual concepts from raw images without strong supervision is a challenging task. In this work, we show the advantages of prototype representations for understanding and revising the latent space of neural concept learners. For this purpose, we introduce interactive Concept Swapping Networks (iCSNs), a novel framework for learning concept-grounded representations via weak supervision and implicit prototype representations. iCSNs learn to bind conceptual information to specific prototype slots by swapping the latent representations of paired images. This semantically grounded and discrete latent space facilitates human understanding and human-machine interaction. We support this claim by conducting experiments on our novel data set ``Elementary Concept Reasoning'' (ECR), focusing on visual concepts shared by geometric objects. },
+      Note={Learning visual concepts from raw images without strong supervision is a challenging task. In this work, we show the
+      advantages of prototype representations for understanding and revising the latent space of neural concept learners. For this purpose,
+      we introduce interactive Concept Swapping Networks (iCSNs), a novel framework for learning concept-grounded representations via weak
+      supervision and implicit prototype representations. iCSNs learn to bind conceptual information to specific prototype slots by swapping
+      the latent representations of paired images. This semantically grounded and discrete latent space facilitates human
+      understanding and human-machine interaction. We support this claim by conducting experiments on our novel data set ``Elementary
+      Concept Reasoning'' (ECR), focusing on visual concepts shared by geometric objects.},
       Crossref={},
       Url={./papers/stammer2022cvpr.pdf}
 }
