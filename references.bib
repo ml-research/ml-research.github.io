@@ -41,6 +41,68 @@ performances in low-data settings},
       Url={}
 }
 
+@inproceedings{pfanschilling2022kr_spll,
+      Anote = {./images/pfanschilling2022kr_spll.png},
+      booktitle = {Proceedings of the 19th International Conference on Principles of Knowledge Representation and Reasoning (KR)},
+      title={Sum-Product Loop Programming: From Probabilistic Circuits to Loop Programming},
+      author={Viktor Pfanschilling and Hikaru Shindo and Devendra Singh Dhami and Kristian Kersting},
+      Note = {Recently, Probabilistic Circuits such as Sum-Product Networks
+have received growing attention, as they can represent
+complex features but still provide tractable inference. Although
+quite successful, unfortunately, they lack the capability
+of handling control structures, such as for and while
+loops. In this work, we introduce Sum-Product Loop Language
+(SPLL), a novel programming language that is capable
+of tractable inference on complex probabilistic code that includes
+loops. SPLL has dual semantics: every program has
+generative semantics familiar to most programmers and probabilistic
+semantics that assign a probability to each possible
+result. This way, the programmer can describe how to generate
+samples almost like in any standard programming language.
+The language takes care of computing the probability
+values of all results for free at run time. We demonstrate
+that SPLL inherits the beneficial properties of PCs, namely
+tractability and differentiability while generalizing to other
+distributions and programs.},
+      year={2022},
+      Pages = {},
+      Keywords = {probabilistic programming, probabilistic circuits, loop language, differentiable programming},
+      Url={}
+} 
+
+@inproceedings{skryagin2022kr_slash,
+      Anote = {./images/skryagin2022kr_slash.png},
+      booktitle = {Proceedings of the 19th International Conference on Principles of Knowledge Representation and Reasoning (KR)},
+      title={Neural-Probabilistic Answer Set Programming},
+      author={Arseny Skryagin and Wolfgang Stammer and Daniel Ochs and Devendra Dhami and Kristian Kersting},
+      Note = {The goal of combining the robustness of neural networks
+and the expressivity of symbolic methods has rekindled the
+interest in Neuro-Symbolic AI. One specifically interesting
+branch of research is deep probabilistic programming languages
+(DPPLs) which carry out probabilistic logical programming
+via the probability estimations of deep neural networks.
+However, recent SOTA DPPL approaches allow only
+for limited conditional probabilistic queries and do not offer
+the power of true joint probability estimation. In our work,
+we propose an easy integration of tractable probabilistic inference
+within a DPPL. To this end we introduce SLASH,
+a novel DPPL that consists of Neural-Probabilistic Predicates
+(NPPs) and a logical program, united via answer set programming.
+NPPs are a novel design principle allowing for the unification
+of all deep model types and combinations thereof to
+be represented as a single probabilistic predicate. In this context,
+we introduce a novel +/− notation for answering various
+types of probabilistic queries by adjusting the atom notations
+of a predicate. We evaluate SLASH on the benchmark
+task of MNIST addition as well as novel tasks for DPPLs
+such as missing data prediction, generative learning and set
+prediction with state-of-the-art performance, thereby showing
+the effectiveness and generality of our method.},
+      year={2022},
+      Pages = {},
+      Keywords = {probabilistic programming, deep programming, neural networks, ASP, probabilistic circuits},
+      Url={}
+}
 
 
 @inproceedings{struppek2022facct_learning,
