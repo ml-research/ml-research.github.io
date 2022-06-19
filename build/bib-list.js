@@ -2290,7 +2290,7 @@ var bibtexify = (function($) {
             'phdthesis': 'PhD',
             'proceedings': 'Edited Volume',
             'techreport': 'Techreport',
-            'unpublished': 'Newspaper'}
+            'unpublished': 'Essay'}
     };
     // format a phd thesis similarly to masters thesis
     bib2html.phdthesis = bib2html.mastersthesis;
