@@ -1,3 +1,66 @@
+@misc{mwillig2022cfm,
+  Anote = {./images/mwillig2022cfm.png},
+  title={Can Foundation Models Talk Causality?},
+  author={Moritz Willig and Matej Zečević and Kristian Kersting and Devendra Singh Dhami},
+  Keywords = {Causality, Foundation Models, AGI Discussion},
+  Note = {Foundation models are subject to an ongoing heated debate, leaving open the question of progress towards AGI and dividing the community into two camps: the ones who see the arguably impressive results as evidence to the scaling hypothesis, and the others who are worried about the lack of interpretability and reasoning capabilities. By investigating to which extent causal representations might be captured by these large scale language models, we make a humble efforts towards resolving the ongoing philosophical conflicts.},
+  year={2022},
+  Pages = {},
+  Url = {https://arxiv.org/pdf/2206.10591.pdf},
+  Howpublished = {arXiv preprint arXiv:2206.10591}
+}
+
+
+@misc{dsteinmann2022xlp,
+  Anote = {./images/dsteinmann2022xlp.png},
+  title={Machines Explaining Linear Programs},
+  author={David Steinmann and Matej Zečević and Kristian Kersting and Devendra Singh Dhami},
+  Keywords = {Attribution, XAI, Linear Programs},
+  Note = {There has been a recent push in making machine learning models more interpretable so that their performance can be trusted. Although successful, these methods have mostly focused on the deep learning methods while the fundamental optimization methods in machine learning such as linear programs (LP) have been left out. Even if LPs can be considered as whitebox or clearbox models, they are not easy to understand in terms of relationships between inputs and outputs. As a linear program only provides the optimal solution to an optimization problem, further explanations are often helpful. In this work, we extend the attribution methods for explaining neural networks to linear programs. These methods explain the model by providing relevance scores for the model inputs, to show the influence of each input on the output. Alongside using classical gradient-based attribution methods we also propose a way to adapt perturbation-based attribution methods to LPs. Our evaluations of several different linear and integer problems showed that attribution methods can generate useful explanations for linear programs. However, we also demonstrate that using a neural attribution method directly might come with some drawbacks, as the properties of these methods on neural networks do not necessarily transfer to linear programs. The methods can also struggle if a linear program has more than one optimal solution, as a solver just returns one possible solution. Our results can hopefully be used as a good starting point for further research in this direction.},
+  year={2022},
+  Pages = {},
+  Url = {https://arxiv.org/pdf/2206.07194.pdf},
+  Howpublished = {arXiv preprint arXiv:2206.07194}
+}
+
+
+@misc{fbusch2022abnn,
+  Anote = {./images/fbusch2022abnn.png},
+  title={Attributions Beyond Neural Networks: The Linear Program Case},
+  author={Florian Peter Busch and Matej Zečević and Kristian Kersting and Devendra Singh Dhami},
+  Keywords = {Attribution, XAI, Linear Programs, Neural Encoding},
+  Note = {Linear Programs (LPs) have been one of the building blocks in machine learning and have championed recent strides in differentiable optimizers for learning systems. While there exist solvers for even high-dimensional LPs, understanding said high-dimensional solutions poses an orthogonal and unresolved problem. We introduce an approach where we consider neural encodings for LPs that justify the application of attribution methods from explainable artificial intelligence (XAI) designed for neural learning systems. The several encoding functions we propose take into account aspects such as feasibility of the decision space, the cost attached to each input, or the distance to special points of interest. We investigate the mathematical consequences of several XAI methods on said neural LP encodings. We empirically show that the attribution methods Saliency and LIME reveal indistinguishable results up to perturbation levels, and we propose the property of Directedness as the main discriminative criterion between Saliency and LIME on one hand, and a perturbation-based Feature Permutation approach on the other hand. Directedness indicates whether an attribution method gives feature attributions with respect to an increase of that feature. We further notice the baseline selection problem beyond the classical computer vision setting for Integrated Gradients.},
+  year={2022},
+  Pages = {},
+  Url = {https://arxiv.org/pdf/2206.07203.pdf},
+  Howpublished = {arXiv preprint arXiv:2206.07203}
+}
+
+
+@misc{jseng2022tant,
+  Anote = {./images/jseng2022tant.png},
+  title={Tearing Apart NOTEARS: Controlling the Graph Prediction via Variance Manipulation},
+  author={Jonas Seng and Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
+  Keywords = {Structure Discovery, Causality, Variance Manipulation},
+  Note = {Simulations are ubiquitous in machine learning. Especially in graph learning, simulations of Directed Acyclic Graphs (DAG) are being deployed for evaluating new algorithms. In the literature, it was recently argued that continuous-optimization approaches to structure discovery such as NOTEARS might be exploiting the sortability of the variable's variances in the available data due to their use of least square losses. Specifically, since structure discovery is a key problem in science and beyond, we want to be invariant to the scale being used for measuring our data (e.g. meter versus centimeter should not affect the causal direction inferred by the algorithm). In this work, we further strengthen this initial, negative empirical suggestion by both proving key results in the multivariate case and corroborating with further empirical evidence. In particular, we show that we can control the resulting graph with our targeted variance attacks, even in the case where we can only partially manipulate the variances of the data.},
+  year={2022},
+  Pages = {},
+  Url = {https://arxiv.org/pdf/2206.07195.pdf},
+  Howpublished = {arXiv preprint arXiv:2206.07195}
+}
+
+
+@misc{youssef2022cbp,
+  Anote = {./images/youssef2022cbp.png},
+  title={Towards a Solution to Bongard Problems: A Causal Approach},
+  author={Salahedine Youssef and Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
+  Keywords = {Causality, Bongard Problems, Reinforcement Learning, AGI},
+  Note = {To date, Bongard Problems (BP) remain one of the few fortresses of AI history yet to be raided by the powerful models of the current era. We present a systematic analysis using modern techniques from the intersection of causality and AI/ML in a humble effort of reviving research around BPs. Specifically, we first compile the BPs into a Markov decision process, then secondly pose causal assumptions on the data generating process arguing for their applicability to BPs, and finally apply reinforcement learning techniques for solving the BPs subject to the causal assumptions.},
+  year={2022},
+  Pages = {},
+  Url = {https://arxiv.org/pdf/2206.07196.pdf},
+  Howpublished = {arXiv preprint arXiv:2206.07196}
+}
 
 @InProceedings{lang2022diff-sampling-spns,
   Anote = { ./images/lang2022diff-sampling-spns.png },
@@ -289,7 +352,7 @@ innocent users, a large variety of attacks is possible. },
       year={2022},
       Pages = {},
       Keywords = {Causality, Linear Programs, Graph Learning, Structure Discover},
-      Url = {https://openreview.net/forum?id=rc8l8SOU9ec},
+      Url = {https://arxiv.org/abs/2203.15274},
       Booktitle = {ICLR 2022 Workshop on the Elements of Reasoning: Objects, Structure and Causality (OSC)}
 }
 
@@ -639,7 +702,7 @@ recognize most of the generated facial expressions on both the robots.},
 
 @unpublished{kersting2022welt_notFunny,
     Anote = {./images/WeltAmSonntag.png},
-    title={Inadequate AI Computer Infrastructure is not Funny},
+    title={Inadequate Compute Infrastructure is not Funny for AI},
     author={Kristian Kersting},
     year={2022},
     Howpublished = {Welt am Sonntag, May 15, 2022, page 24},
