@@ -3,7 +3,12 @@
   title={Can Foundation Models Talk Causality?},
   author={Moritz Willig and Matej Zečević and Kristian Kersting and Devendra Singh Dhami},
   Keywords = {Causality, Foundation Models, AGI Discussion},
-  Note = {Foundation models are subject to an ongoing heated debate, leaving open the question of progress towards AGI and dividing the community into two camps: the ones who see the arguably impressive results as evidence to the scaling hypothesis, and the others who are worried about the lack of interpretability and reasoning capabilities. By investigating to which extent causal representations might be captured by these large scale language models, we make a humble efforts towards resolving the ongoing philosophical conflicts.},
+  Note = {Foundation models are subject to an ongoing heated debate, leaving open the question
+  of progress towards AGI and dividing the community into two camps: the ones who see the arguably
+  impressive results as evidence to the scaling hypothesis, and the others who are worried about
+  the lack of interpretability and reasoning capabilities. By investigating to which extent causal
+  representations might be captured by these large scale language models, we make a humble efforts
+  towards resolving the ongoing philosophical conflicts.},
   year={2022},
   Pages = {},
   Url = {https://arxiv.org/pdf/2206.10591.pdf},
@@ -16,7 +21,21 @@
   title={Machines Explaining Linear Programs},
   author={David Steinmann and Matej Zečević and Kristian Kersting and Devendra Singh Dhami},
   Keywords = {Attribution, XAI, Linear Programs},
-  Note = {There has been a recent push in making machine learning models more interpretable so that their performance can be trusted. Although successful, these methods have mostly focused on the deep learning methods while the fundamental optimization methods in machine learning such as linear programs (LP) have been left out. Even if LPs can be considered as whitebox or clearbox models, they are not easy to understand in terms of relationships between inputs and outputs. As a linear program only provides the optimal solution to an optimization problem, further explanations are often helpful. In this work, we extend the attribution methods for explaining neural networks to linear programs. These methods explain the model by providing relevance scores for the model inputs, to show the influence of each input on the output. Alongside using classical gradient-based attribution methods we also propose a way to adapt perturbation-based attribution methods to LPs. Our evaluations of several different linear and integer problems showed that attribution methods can generate useful explanations for linear programs. However, we also demonstrate that using a neural attribution method directly might come with some drawbacks, as the properties of these methods on neural networks do not necessarily transfer to linear programs. The methods can also struggle if a linear program has more than one optimal solution, as a solver just returns one possible solution. Our results can hopefully be used as a good starting point for further research in this direction.},
+  Note = {There has been a recent push in making machine learning models more interpretable so that their
+  performance can be trusted. Although successful, these methods have mostly focused on the deep learning
+  methods while the fundamental optimization methods in machine learning such as linear programs (LP) have
+  been left out. Even if LPs can be considered as whitebox or clearbox models, they are not easy to
+  understand in terms of relationships between inputs and outputs. As a linear program only provides the
+  optimal solution to an optimization problem, further explanations are often helpful. In this work, we
+  extend the attribution methods for explaining neural networks to linear programs. These methods explain
+  the model by providing relevance scores for the model inputs, to show the influence of each input on the
+  output. Alongside using classical gradient-based attribution methods we also propose a way to adapt
+  perturbation-based attribution methods to LPs. Our evaluations of several different linear and integer
+  problems showed that attribution methods can generate useful explanations for linear programs. However,
+  we also demonstrate that using a neural attribution method directly might come with some drawbacks, as
+  the properties of these methods on neural networks do not necessarily transfer to linear programs. The
+  methods can also struggle if a linear program has more than one optimal solution, as a solver just
+  returns one possible solution. Our results can hopefully be used as a good starting point for further research in this direction.},
   year={2022},
   Pages = {},
   Url = {https://arxiv.org/pdf/2206.07194.pdf},
@@ -75,7 +94,7 @@
   Opteditor = {Bertinetto, Luca and Henriques, João F. and Albanie, Samuel and Paganini, Michela and Varol, Gül},
   Optmonth = {11 Dec},
   Opturl = {},
-  publisher =    {PMLR},
+  publisher =  {PMLR},
   pdf = 	 {./papers/lang2022diff-sampling-spns.pdf},
   Note = 	 {Deep generative models have seen a dramatic improvement in recent years, due to the use of alternative losses based on perceptual assessment of generated samples. This improvement has not yet been applied to the model class of probabilistic circuits (PCs), presumably due to significant technical challenges concerning differentiable sampling, which is a key requirement for optimizing perceptual losses. This is unfortunate, since PCs allow a much wider range of probabilistic inference routines than main-stream generative models, such as exact and efficient marginalization and conditioning. Motivated by the success of loss reframing in deep generative models, we incorporate perceptual metrics into the PC learning objective. To this aim, we introduce a differentiable sampling procedure for PCs, where the central challenge is the non-differentiability of sampling from the categorical distribution over latent PC variables. We take advantage of the Gumbel-Softmax trick and develop a novel inference pass to smoothly interpolate child samples as a strategy to circumvent non-differentiability of sum node sampling. We initially hypothesized, that  perceptual losses, unlocked by our novel differentiable sampling procedure, will elevate the generative power of PCs and improve their sample quality to be on par with neural counterparts like probabilistic auto-encoders and generative adversarial networks. Although our experimental findings empirically reject this hypothesis for now, the results demonstrate that samples drawn from PCs optimized with perceptual losses can have similar sample quality compared to likelihood-based optimized PCs and, at the same time, can express richer contrast, colors, and details. Whereas before, PCs were restricted to likelihood-based optimization, this work has paved the way to advance PCs with loss formulations that have been built around deep neural networks in recent years.}
 }
@@ -90,7 +109,7 @@
     Howpublished = {Welt am Sonntag, June 19, 2022, page 26},
     Publisher = {},
     Note = {AI is changing the way science is done, artwork is created, and inventions are made. What does this mean for patents and intellectural property rights?},
-    Keywords = {AI, IPR, Patents, GAN, Edmond de Belamy, Imagen, DALL-E 2},
+    Keywords = {AI, IPR, Patents, GAN, Edmond de Belamy, Imagen, DALL-E2},
     Url={}
 }
 
@@ -102,8 +121,8 @@
     Note = {Transformer language models (LMs) are state of the art in a multitude of NLP tasks. Despite these successes, their opaqueness remains problematic, especially as the training data might be unfiltered and contain biases. As a result, ethical concerns about these models arise, which can have a substantial negative impact on society as they get increasingly integrated into our lives. Therefore, it is not surprising that a growing body of work aims to provide interpretability and explainability to black-box LMs: Recent evaluations of saliency or attribution methods find that, while intriguing, different methods assign importance to different inputs for the same outputs, thus encouraging misinterpretation and reporting bias. Moreover, these methods primarily focus on post-hoc explanations of (sometimes spurious) input-output correlations. Instead, we emphasize using (interactive) prototype networks directly incorporated into the model architecture and hence explain the reasoning behind the network’s decisions.},
     year={2022},
     Pages = {},
-    Keywords = {Transformer Language Models, Prototype Layers, Explainable AI, Explanatory Interactive Learning},
-    booktitle={Proceedings of the 1st Conference of Hybrid Human Artificial Intelligence (HHAI) as Short Paper},
+    Keywords = {Transformer, Large Language Models, Prototype Layers, Explainable AI, Explanatory Interactive Learning},
+    booktitle={Proceedings of the 1st Conference of Hybrid Human Artificial Intelligence (HHAI)},
     Url={./papers/friedrich2022hhai.pdf}
 }
 
@@ -117,7 +136,7 @@
     Pages = {},
     Keywords = {Short Time Fourier Transform, Whittle Likelihood, Probabilistic Circuits, Deep Neural Networks, LSTM},
     booktitle={Proceedings of the 38th Conference on Uncertainty in Artificial Intelligence (UAI)},
-    Url={}
+    Url={./papers/yu2022whittle.pdf}
 }
 
 @inproceedings{struppek2022ppa,
