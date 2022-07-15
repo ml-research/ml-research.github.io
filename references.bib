@@ -1,3 +1,19 @@
+
+
+@article{petkovic2022kbs,
+  Anote = {./images/petkovic2022kbs.png},
+	Note =  {As the complexity of data increases, so does the importance of powerful representations, such as relational and logical representations, as well as the need for machine learning methods that can learn predictive models in such representations. A characteristic of these representations is that they give rise to a huge number of features to be considered, thus drastically increasing the difficulty of learning in terms of computational complexity and the curse of dimensionality. Despite this, methods for ranking features in this context, i.e., estimating their importance are practically non-existent. Among the most well-known methods for feature ranking are those based on ensembles, and in particular tree ensembles. To develop methods for feature ranking in a relational context, we adopt the relational tree ensemble approach. We thus first develop methods for learning ensembles of relational trees, extending a wide spectrum of tree-based ensemble methods from the propositional to the relational context, resulting in methods for bagging and random forests of relational trees, as well as gradient boosted ensembles thereof. Complex relational features are considered in our ensembles: by using complex aggregates, we extend the standard collection of features that correspond to existential queries, such as `Does this person have any children?', to more complex features that correspond to aggregation queries, such as `What is the average age of this person's children?'. We also calculate feature importance scores and rankings from the different kinds of relational tree ensembles learned, with different kinds of relational features. The rankings provide insight into and explain the ensemble models, which would be otherwise difficult to understand. We compare the methods for learning single trees and different tree ensembles, using only existential qualifiers and using the whole set of relational features, against 10 state-of-the-art methods on a collection of benchmark relational datasets, deriving also the corresponding feature rankings. Overall, the bagging ensembles perform the best, with gradient boosted ensembles following closely. The use of aggregates is beneficial and in some datasets drastically improves performance: In these cases, aggregate-based features clearly stand out in the feature rankings derived from the ensembles.},
+	Author = {Matej Petkovi{\'c} and Michelangelo Ceci and Gianvito Pio and Bla{\v z} {\v S}krlj and Kristian Kersting and Sa{\v s}o D{\v z}eroski},
+	Journal = {Knowledge-Based Systems},
+	Keywords = {Relational learning, Tree ensembles, Feature ranking, Propositionalization},
+	Pages = {109254},
+	Title = {Relational tree ensembles and feature rankings},
+	Url = {https://www.sciencedirect.com/science/article/pii/S0950705122006244},
+	Volume = {251},
+	Year = {2022}
+}
+
+
 @misc{mwillig2022cfm,
   Anote = {./images/mwillig2022cfm.png},
   title={Can Foundation Models Talk Causality?},
@@ -352,7 +368,7 @@ innocent users, a large variety of attacks is possible. },
         author={Patrick Schramowski and Christopher Tauchmann and Kristian Kersting},
         booktitle = {Proceedings of the ACM Conference on Fairness, Accountability, and Transparency  (FAccT)},
         year={2022},
-        Url={https://arxiv.org/pdf/2202.06675.pdf},
+        Url={./papers/schramowski2022facct_q16.pdf},
         Note={Large datasets underlying much of current machine learning raise serious issues concerning inappropriate content such as offensive, insulting, threatening, or might otherwise cause anxiety. This calls for increased dataset documentation, e.g., using datasheets. They, among other topics, encourage to reflect on the composition of the datasets. So far, this documentation, however, is done manually and therefore can be tedious and error-prone, especially for large image datasets. Here we ask the arguably "circular" question of whether a machine can help us reflect on inappropriate content, answering Question 16 in Datasheets. To this end, we propose to use the information stored in pre-trained transformer models to assist us in the documentation process. Specifically, prompt-tuning based on a dataset of socio-moral values steers CLIP to identify potentially inappropriate content, therefore reducing human labor. We then document the inappropriate images found using word clouds, based on captions generated using a vision-language model. The documentations of two popular, large-scale computer vision datasets -- ImageNet and OpenImages -- produced this way suggest that machines can indeed help dataset creators to answer Question 16 on inappropriate image content.},
         Anote={./images/offensiveimages.jpg},
         OPTHowpublished = {arXiv preprint arXiv:2202.06675},
