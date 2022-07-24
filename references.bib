@@ -1,183 +1,5 @@
 
 
-
-@inproceedings{karanam2022pgm_exspns,
-Anote = {./images/karanam2022pgm_exspns.png},
-Author = {Bhagirath Athresh Karanam and Saurabh Mathur and Predrag Radivojac and David M. Haas and Kristian Kersting and Sriraam Natarajan},
-Booktitle = {Proceedings of the 11th International Conference on Probabilistic Graphical Models (PGM)},
-Note = {We consider the problem of explaining a class of tractable deep probabilistic models, the
-Sum-Product Networks (SPNs) and present an algorithm EXSPN to generate explanations.
-To this e ect, we de ne the notion of a context-specific independence tree (CSI-tree)
-and present an iterative algorithm that converts an SPN to a CSI-tree. The resulting
-CSI-tree is both interpretable and explainable to the domain expert. We achieve this by
-extracting the conditional independencies encoded by the SPN and approximating the local
-context speci ed by the structure of the SPN. Our extensive empirical evaluations on synthetic,
-standard, and real-world clinical data sets demonstrate that the CSI-tree exhibits
-superior explainability.},
-  Keywords = {Probabilistic Circuits, Sum Product Networks, Explainable AI, XAI, CSI-Tree, Deep Models},
-Pages = {},
-Url = {./papers/karanam2022pgm_exspns.pdf},
-Title = {Explaining Deep Tractable Probabilistic Models: The sum-product network case},
-Year = {2022}}
-
-
-@article{petkovic2022kbs,
-  Anote = {./images/petkovic2022kbs.png},
-	Note =  {As the complexity of data increases, so does the importance of powerful representations, such as relational and logical representations, as well as the need for machine learning methods that can learn predictive models in such representations. A characteristic of these representations is that they give rise to a huge number of features to be considered, thus drastically increasing the difficulty of learning in terms of computational complexity and the curse of dimensionality. Despite this, methods for ranking features in this context, i.e., estimating their importance are practically non-existent. Among the most well-known methods for feature ranking are those based on ensembles, and in particular tree ensembles. To develop methods for feature ranking in a relational context, we adopt the relational tree ensemble approach. We thus first develop methods for learning ensembles of relational trees, extending a wide spectrum of tree-based ensemble methods from the propositional to the relational context, resulting in methods for bagging and random forests of relational trees, as well as gradient boosted ensembles thereof. Complex relational features are considered in our ensembles: by using complex aggregates, we extend the standard collection of features that correspond to existential queries, such as `Does this person have any children?', to more complex features that correspond to aggregation queries, such as `What is the average age of this person's children?'. We also calculate feature importance scores and rankings from the different kinds of relational tree ensembles learned, with different kinds of relational features. The rankings provide insight into and explain the ensemble models, which would be otherwise difficult to understand. We compare the methods for learning single trees and different tree ensembles, using only existential qualifiers and using the whole set of relational features, against 10 state-of-the-art methods on a collection of benchmark relational datasets, deriving also the corresponding feature rankings. Overall, the bagging ensembles perform the best, with gradient boosted ensembles following closely. The use of aggregates is beneficial and in some datasets drastically improves performance: In these cases, aggregate-based features clearly stand out in the feature rankings derived from the ensembles.},
-	Author = {Matej Petković and Michelangelo Ceci and Gianvito Pio and Blaž Škrlj and Kristian Kersting and Sašo Džeroski},
-	Journal = {Knowledge-Based Systems},
-	Keywords = {Relational learning, Tree ensembles, Feature ranking, Propositionalization},
-	Pages = {109254},
-	Title = {Relational tree ensembles and feature rankings},
-	Url = {./papers/petkovic2022kbs.pdf},
-	Volume = {251},
-	Year = {2022}
-}
-
-
-@inproceedings{ameli2022aiai,
-  Anote = { ./images/ameli2022aiai.png},
-  title = {Unsupervised Multi-sensor Anomaly Localization with Explainable AI},
-  author = {Mina Ameli and Viktor Pfanschilling and Anar Amirli and Wolfgang Maaß and Kristian Kersting},
-  booktitle = {Proceedings of the 18th International Conference on Artificial Intelligence Applications and Innovations (AIAI)},
-  Keywords = {Anomalie localization, XAI, Multi-Sensor Data, Multivariate time-series},
-  year = {2022},
-  pages = {507--519},
-  pdf = 	 {./papers/lang2022diff-sampling-spns.pdf},
-  Note = 	 {Multivariate and Multi-sensor data acquisition for the purpose of device monitoring had a significant impact on recent research in Anomaly Detection. Despite the wide range of anomaly detection approaches, localization of detected anomalies in multivariate and Multi-sensor time-series data remains a challenge. Interpretation and anomaly attribution is critical and could improve the analysis and decision-making for many applications. With anomaly attribution, explanations can be leveraged to understand, on a per-anomaly basis, which sensors cause the root of anomaly and which features are the most important in causing an anomaly. To this end, we propose using saliency-based Explainable-AI approaches to localize the essential sensors responsible for anomalies in an unsupervised manner. While most Explainable AI methods are considered as interpreters of AI models, we show for the first time that Saliency Explainable AI can be utilized in Multi-sensor Anomaly localization applications. Our approach is demonstrated for localizing the detected anomalies in an unsupervised multi-sensor setup, and the experiments show promising results. We evaluate and compare different classes of saliency explainable AI approach on the Server Machine Data (SMD) Dataset and compared the results with the state-of-the-art OmniAnomaly Localization approach. The results of our empirical analysis demonstrate a promising performance.}
-}
-
-
-
-@misc{mwillig2022cfm,
-  Anote = {./images/mwillig2022cfm.png},
-  title={Can Foundation Models Talk Causality?},
-  author={Moritz Willig and Matej Zečević and Kristian Kersting and Devendra Singh Dhami},
-  Keywords = {Causality, Foundation Models, AGI Discussion},
-  Note = {Foundation models are subject to an ongoing heated debate, leaving open the question
-  of progress towards AGI and dividing the community into two camps: the ones who see the arguably
-  impressive results as evidence to the scaling hypothesis, and the others who are worried about
-  the lack of interpretability and reasoning capabilities. By investigating to which extent causal
-  representations might be captured by these large scale language models, we make a humble efforts
-  towards resolving the ongoing philosophical conflicts.},
-  year={2022},
-  Pages = {},
-  Url = {https://arxiv.org/pdf/2206.10591.pdf},
-  Howpublished = {arXiv preprint arXiv:2206.10591}
-}
-
-
-@misc{dsteinmann2022xlp,
-  Anote = {./images/dsteinmann2022xlp.png},
-  title={Machines Explaining Linear Programs},
-  author={David Steinmann and Matej Zečević and Kristian Kersting and Devendra Singh Dhami},
-  Keywords = {Attribution, XAI, Linear Programs},
-  Note = {There has been a recent push in making machine learning models more interpretable so that their
-  performance can be trusted. Although successful, these methods have mostly focused on the deep learning
-  methods while the fundamental optimization methods in machine learning such as linear programs (LP) have
-  been left out. Even if LPs can be considered as whitebox or clearbox models, they are not easy to
-  understand in terms of relationships between inputs and outputs. As a linear program only provides the
-  optimal solution to an optimization problem, further explanations are often helpful. In this work, we
-  extend the attribution methods for explaining neural networks to linear programs. These methods explain
-  the model by providing relevance scores for the model inputs, to show the influence of each input on the
-  output. Alongside using classical gradient-based attribution methods we also propose a way to adapt
-  perturbation-based attribution methods to LPs. Our evaluations of several different linear and integer
-  problems showed that attribution methods can generate useful explanations for linear programs. However,
-  we also demonstrate that using a neural attribution method directly might come with some drawbacks, as
-  the properties of these methods on neural networks do not necessarily transfer to linear programs. The
-  methods can also struggle if a linear program has more than one optimal solution, as a solver just
-  returns one possible solution. Our results can hopefully be used as a good starting point for further research in this direction.},
-  year={2022},
-  Pages = {},
-  Url = {https://arxiv.org/pdf/2206.07194.pdf},
-  Howpublished = {arXiv preprint arXiv:2206.07194}
-}
-
-
-@misc{fbusch2022abnn,
-  Anote = {./images/fbusch2022abnn.png},
-  title={Attributions Beyond Neural Networks: The Linear Program Case},
-  author={Florian Peter Busch and Matej Zečević and Kristian Kersting and Devendra Singh Dhami},
-  Keywords = {Attribution, XAI, Linear Programs, Neural Encoding},
-  Note = {Linear Programs (LPs) have been one of the building blocks in machine learning and have championed recent strides in differentiable optimizers for learning systems. While there exist solvers for even high-dimensional LPs, understanding said high-dimensional solutions poses an orthogonal and unresolved problem. We introduce an approach where we consider neural encodings for LPs that justify the application of attribution methods from explainable artificial intelligence (XAI) designed for neural learning systems. The several encoding functions we propose take into account aspects such as feasibility of the decision space, the cost attached to each input, or the distance to special points of interest. We investigate the mathematical consequences of several XAI methods on said neural LP encodings. We empirically show that the attribution methods Saliency and LIME reveal indistinguishable results up to perturbation levels, and we propose the property of Directedness as the main discriminative criterion between Saliency and LIME on one hand, and a perturbation-based Feature Permutation approach on the other hand. Directedness indicates whether an attribution method gives feature attributions with respect to an increase of that feature. We further notice the baseline selection problem beyond the classical computer vision setting for Integrated Gradients.},
-  year={2022},
-  Pages = {},
-  Url = {https://arxiv.org/pdf/2206.07203.pdf},
-  Howpublished = {arXiv preprint arXiv:2206.07203}
-}
-
-
-@misc{jseng2022tant,
-  Anote = {./images/jseng2022tant.png},
-  title={Tearing Apart NOTEARS: Controlling the Graph Prediction via Variance Manipulation},
-  author={Jonas Seng and Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
-  Keywords = {Structure Discovery, Causality, Variance Manipulation},
-  Note = {Simulations are ubiquitous in machine learning. Especially in graph learning, simulations of Directed Acyclic Graphs (DAG) are being deployed for evaluating new algorithms. In the literature, it was recently argued that continuous-optimization approaches to structure discovery such as NOTEARS might be exploiting the sortability of the variable's variances in the available data due to their use of least square losses. Specifically, since structure discovery is a key problem in science and beyond, we want to be invariant to the scale being used for measuring our data (e.g. meter versus centimeter should not affect the causal direction inferred by the algorithm). In this work, we further strengthen this initial, negative empirical suggestion by both proving key results in the multivariate case and corroborating with further empirical evidence. In particular, we show that we can control the resulting graph with our targeted variance attacks, even in the case where we can only partially manipulate the variances of the data.},
-  year={2022},
-  Pages = {},
-  Url = {https://arxiv.org/pdf/2206.07195.pdf},
-  Howpublished = {arXiv preprint arXiv:2206.07195}
-}
-
-
-@misc{youssef2022cbp,
-  Anote = {./images/youssef2022cbp.png},
-  title={Towards a Solution to Bongard Problems: A Causal Approach},
-  author={Salahedine Youssef and Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
-  Keywords = {Causality, Bongard Problems, Reinforcement Learning, AGI},
-  Note = {To date, Bongard Problems (BP) remain one of the few fortresses of AI history yet to be raided by the powerful models of the current era. We present a systematic analysis using modern techniques from the intersection of causality and AI/ML in a humble effort of reviving research around BPs. Specifically, we first compile the BPs into a Markov decision process, then secondly pose causal assumptions on the data generating process arguing for their applicability to BPs, and finally apply reinforcement learning techniques for solving the BPs subject to the causal assumptions.},
-  year={2022},
-  Pages = {},
-  Url = {https://arxiv.org/pdf/2206.07196.pdf},
-  Howpublished = {arXiv preprint arXiv:2206.07196}
-}
-
-@inproceedings{lang2022diff-sampling-spns,
-  Anote = { ./images/lang2022diff-sampling-spns.png },
-  title = {Elevating Perceptual Sample Quality in Probabilistic Circuits through Differentiable Sampling},
-  author = {Steven Lang and Martin Mundt and Fabrizio Ventola and Robert Peharz and Kristian Kersting},
-  booktitle = {NeurIPS 2021 Workshop on Pre-registration in Machine Learning},
-  Keywords = {Probabilistic Circuits, Sum-Product Networks, Differentiable Sampling, Deep Learning},
-  year = {2021},
-  volume = 	 {181},
-  series = 	 {Proceedings of Machine Learning Research},
-  pages = {193--220},
-  Opteditor = {Bertinetto, Luca and Henriques, João F. and Albanie, Samuel and Paganini, Michela and Varol, Gül},
-  Optmonth = {11 Dec},
-  Opturl = {},
-  publisher =  {PMLR},
-  Url = 	 {./papers/lang2022diff-sampling-spns.pdf},
-  Note = 	 {Deep generative models have seen a dramatic improvement in recent years, due to the use of alternative losses based on perceptual assessment of generated samples. This improvement has not yet been applied to the model class of probabilistic circuits (PCs), presumably due to significant technical challenges concerning differentiable sampling, which is a key requirement for optimizing perceptual losses. This is unfortunate, since PCs allow a much wider range of probabilistic inference routines than main-stream generative models, such as exact and efficient marginalization and conditioning. Motivated by the success of loss reframing in deep generative models, we incorporate perceptual metrics into the PC learning objective. To this aim, we introduce a differentiable sampling procedure for PCs, where the central challenge is the non-differentiability of sampling from the categorical distribution over latent PC variables. We take advantage of the Gumbel-Softmax trick and develop a novel inference pass to smoothly interpolate child samples as a strategy to circumvent non-differentiability of sum node sampling. We initially hypothesized, that  perceptual losses, unlocked by our novel differentiable sampling procedure, will elevate the generative power of PCs and improve their sample quality to be on par with neural counterparts like probabilistic auto-encoders and generative adversarial networks. Although our experimental findings empirically reject this hypothesis for now, the results demonstrate that samples drawn from PCs optimized with perceptual losses can have similar sample quality compared to likelihood-based optimized PCs and, at the same time, can express richer contrast, colors, and details. Whereas before, PCs were restricted to likelihood-based optimization, this work has paved the way to advance PCs with loss formulations that have been built around deep neural networks in recent years.}
-}
-
-
-
-@unpublished{kersting2022welt_AIP,
-    Anote = {./images/WeltAmSonntag.png},
-    title={Artificial Intellectual Properties},
-    author={Kristian Kersting},
-    year={2022},
-    Howpublished = {Welt am Sonntag, June 19, 2022, page 26},
-    Publisher = {},
-    Note = {AI is changing the way science is done, artwork is created, and inventions are made. What does this mean for patents and intellectural property rights?},
-    Keywords = {AI, IPR, Patents, GAN, Edmond de Belamy, Imagen, DALL-E2},
-    Url={}
-}
-
-
-@inproceedings{friedrich2022hhai,
-    Anote = {./images/friedrich2022hhai.png},
-    title={Interactively Providing Explanations for Transformer Language Models},
-    author={Felix Friedrich and Patrick Schramowski and Christopher Tauchmann and Kristian Kersting},
-    Note = {Transformer language models (LMs) are state of the art in a multitude of NLP tasks. Despite these successes, their opaqueness remains problematic, especially as the training data might be unfiltered and contain biases. As a result, ethical concerns about these models arise, which can have a substantial negative impact on society as they get increasingly integrated into our lives. Therefore, it is not surprising that a growing body of work aims to provide interpretability and explainability to black-box LMs: Recent evaluations of saliency or attribution methods find that, while intriguing, different methods assign importance to different inputs for the same outputs, thus encouraging misinterpretation and reporting bias. Moreover, these methods primarily focus on post-hoc explanations of (sometimes spurious) input-output correlations. Instead, we emphasize using (interactive) prototype networks directly incorporated into the model architecture and hence explain the reasoning behind the network’s decisions.},
-    year={2022},
-    Pages = {},
-    Keywords = {Transformer, Large Language Models, Prototype Layers, Explainable AI, Explanatory Interactive Learning},
-    booktitle={Proceedings of the 1st Conference of Hybrid Human Artificial Intelligence (HHAI)},
-    Url={./papers/friedrich2022hhai.pdf}
-}
-
-
 @inproceedings{yu2022whittle,
     Anote = {./images/yu2022whittle.png},
     title={Predictive Whittle Networks for Time Series},
@@ -189,6 +11,40 @@ Year = {2022}}
     booktitle={Proceedings of the 38th Conference on Uncertainty in Artificial Intelligence (UAI)},
     Url={./papers/yu2022whittle.pdf}
 }
+
+
+@inproceedings{mundt2022clevacompass,
+    booktitle = {Proceedings of the International Conference on Representation Learning (ICLR) },
+      title={CLEVA-Compass: A Continual Learning EValuation Assessment Compass to Promote Research Transparency and Comparability},
+      author={Martin Mundt and Steven Lang and Quentin Delfosse and Kristian Kersting},
+      year={2022},
+      Keywords={Continual Learning, Lifelong Learning, Machine Learning Evaluation},
+      Anote={./images/CLEVA-Compass.png},
+      Note={What is the state of the art in continual machine learning? Although a natural question for predominant static benchmarks, the notion to train systems in a lifelong manner entails a plethora of additional challenges with respect to set-up and evaluation. The latter have recently sparked a growing amount of critiques on prominent algorithm-centric perspectives and evaluation protocols being too narrow, resulting in several attempts at constructing guidelines in favor of specific desiderata or arguing against the validity of prevalent assumptions. In this work, we depart from this mindset and argue that the goal of a precise formulation of desiderata is an ill-posed one, as diverse applications may always warrant distinct scenarios. Instead, we introduce the Continual Learning EValuation Assessment Compass, CLEVA-Compass for short. The compass provides the visual means to both identify how approaches are practically reported and how works can simultaneously be contextualized in the broader literature landscape. In addition to promoting compact specification in the spirit of recent replication trends, the CLEVA-Compass thus provides an intuitive chart to understand the priorities of individual systems, where they resemble each other, and what elements are missing towards a fair comparison.},
+      Crossref={https://github.com/ml-research/CLEVA-Compass},
+      Url={https://arxiv.org/pdf/2110.03331.pdf}
+}
+
+
+
+@inproceedings{stammer2022cvpr,
+      booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+      title={Interactive Disentanglement: Learning Concepts by Interacting with their Prototype Representations},
+      author={Wolfgang Stammer and Marius Memmel and Patrick Schramowski and Kristian Kersting},
+      year={2022},
+      Keywords={Explanatory Interactive Learning, XAI, Concept Swapping Networks, Prototype Networks, Elementary Concept Learning},
+      Anote={./images/stammer2022cvpr.png},
+      Note={Learning visual concepts from raw images without strong supervision is a challenging task. In this work, we show the
+      advantages of prototype representations for understanding and revising the latent space of neural concept learners. For this purpose,
+      we introduce interactive Concept Swapping Networks (iCSNs), a novel framework for learning concept-grounded representations via weak
+      supervision and implicit prototype representations. iCSNs learn to bind conceptual information to specific prototype slots by swapping
+      the latent representations of paired images. This semantically grounded and discrete latent space facilitates human
+      understanding and human-machine interaction. We support this claim by conducting experiments on our novel data set ``Elementary
+      Concept Reasoning'' (ECR), focusing on visual concepts shared by geometric objects.},
+      Crossref={},
+      Url={./papers/stammer2022cvpr.pdf}
+}
+
 
 @inproceedings{struppek2022ppa,
       Anote = {./images/struppek_ppa.jpg},
@@ -410,6 +266,184 @@ innocent users, a large variety of attacks is possible. },
         Keywords={Dataset Curation, Dataset Documentation, Computer Vision, Pre-trained models, Prompt-tuning, CLIP}
   }
 
+@inproceedings{karanam2022pgm_exspns,
+Anote = {./images/karanam2022pgm_exspns.png},
+Author = {Bhagirath Athresh Karanam and Saurabh Mathur and Predrag Radivojac and David M. Haas and Kristian Kersting and Sriraam Natarajan},
+Booktitle = {Proceedings of the 11th International Conference on Probabilistic Graphical Models (PGM)},
+Note = {We consider the problem of explaining a class of tractable deep probabilistic models, the
+Sum-Product Networks (SPNs) and present an algorithm EXSPN to generate explanations.
+To this e ect, we de ne the notion of a context-specific independence tree (CSI-tree)
+and present an iterative algorithm that converts an SPN to a CSI-tree. The resulting
+CSI-tree is both interpretable and explainable to the domain expert. We achieve this by
+extracting the conditional independencies encoded by the SPN and approximating the local
+context speci ed by the structure of the SPN. Our extensive empirical evaluations on synthetic,
+standard, and real-world clinical data sets demonstrate that the CSI-tree exhibits
+superior explainability.},
+  Keywords = {Probabilistic Circuits, Sum Product Networks, Explainable AI, XAI, CSI-Tree, Deep Models},
+Pages = {},
+Url = {./papers/karanam2022pgm_exspns.pdf},
+Title = {Explaining Deep Tractable Probabilistic Models: The sum-product network case},
+Year = {2022}}
+
+
+@article{petkovic2022kbs,
+  Anote = {./images/petkovic2022kbs.png},
+	Note =  {As the complexity of data increases, so does the importance of powerful representations, such as relational and logical representations, as well as the need for machine learning methods that can learn predictive models in such representations. A characteristic of these representations is that they give rise to a huge number of features to be considered, thus drastically increasing the difficulty of learning in terms of computational complexity and the curse of dimensionality. Despite this, methods for ranking features in this context, i.e., estimating their importance are practically non-existent. Among the most well-known methods for feature ranking are those based on ensembles, and in particular tree ensembles. To develop methods for feature ranking in a relational context, we adopt the relational tree ensemble approach. We thus first develop methods for learning ensembles of relational trees, extending a wide spectrum of tree-based ensemble methods from the propositional to the relational context, resulting in methods for bagging and random forests of relational trees, as well as gradient boosted ensembles thereof. Complex relational features are considered in our ensembles: by using complex aggregates, we extend the standard collection of features that correspond to existential queries, such as `Does this person have any children?', to more complex features that correspond to aggregation queries, such as `What is the average age of this person's children?'. We also calculate feature importance scores and rankings from the different kinds of relational tree ensembles learned, with different kinds of relational features. The rankings provide insight into and explain the ensemble models, which would be otherwise difficult to understand. We compare the methods for learning single trees and different tree ensembles, using only existential qualifiers and using the whole set of relational features, against 10 state-of-the-art methods on a collection of benchmark relational datasets, deriving also the corresponding feature rankings. Overall, the bagging ensembles perform the best, with gradient boosted ensembles following closely. The use of aggregates is beneficial and in some datasets drastically improves performance: In these cases, aggregate-based features clearly stand out in the feature rankings derived from the ensembles.},
+	Author = {Matej Petković and Michelangelo Ceci and Gianvito Pio and Blaž Škrlj and Kristian Kersting and Sašo Džeroski},
+	Journal = {Knowledge-Based Systems},
+	Keywords = {Relational learning, Tree ensembles, Feature ranking, Propositionalization},
+	Pages = {109254},
+	Title = {Relational tree ensembles and feature rankings},
+	Url = {./papers/petkovic2022kbs.pdf},
+	Volume = {251},
+	Year = {2022}
+}
+
+
+@inproceedings{ameli2022aiai,
+  Anote = { ./images/ameli2022aiai.png},
+  title = {Unsupervised Multi-sensor Anomaly Localization with Explainable AI},
+  author = {Mina Ameli and Viktor Pfanschilling and Anar Amirli and Wolfgang Maaß and Kristian Kersting},
+  booktitle = {Proceedings of the 18th International Conference on Artificial Intelligence Applications and Innovations (AIAI)},
+  Keywords = {Anomalie localization, XAI, Multi-Sensor Data, Multivariate time-series},
+  year = {2022},
+  pages = {507--519},
+  pdf = 	 {./papers/lang2022diff-sampling-spns.pdf},
+  Note = 	 {Multivariate and Multi-sensor data acquisition for the purpose of device monitoring had a significant impact on recent research in Anomaly Detection. Despite the wide range of anomaly detection approaches, localization of detected anomalies in multivariate and Multi-sensor time-series data remains a challenge. Interpretation and anomaly attribution is critical and could improve the analysis and decision-making for many applications. With anomaly attribution, explanations can be leveraged to understand, on a per-anomaly basis, which sensors cause the root of anomaly and which features are the most important in causing an anomaly. To this end, we propose using saliency-based Explainable-AI approaches to localize the essential sensors responsible for anomalies in an unsupervised manner. While most Explainable AI methods are considered as interpreters of AI models, we show for the first time that Saliency Explainable AI can be utilized in Multi-sensor Anomaly localization applications. Our approach is demonstrated for localizing the detected anomalies in an unsupervised multi-sensor setup, and the experiments show promising results. We evaluate and compare different classes of saliency explainable AI approach on the Server Machine Data (SMD) Dataset and compared the results with the state-of-the-art OmniAnomaly Localization approach. The results of our empirical analysis demonstrate a promising performance.}
+}
+
+
+
+@misc{mwillig2022cfm,
+  Anote = {./images/mwillig2022cfm.png},
+  title={Can Foundation Models Talk Causality?},
+  author={Moritz Willig and Matej Zečević and Kristian Kersting and Devendra Singh Dhami},
+  Keywords = {Causality, Foundation Models, AGI Discussion},
+  Note = {Foundation models are subject to an ongoing heated debate, leaving open the question
+  of progress towards AGI and dividing the community into two camps: the ones who see the arguably
+  impressive results as evidence to the scaling hypothesis, and the others who are worried about
+  the lack of interpretability and reasoning capabilities. By investigating to which extent causal
+  representations might be captured by these large scale language models, we make a humble efforts
+  towards resolving the ongoing philosophical conflicts.},
+  year={2022},
+  Pages = {},
+  Url = {https://arxiv.org/pdf/2206.10591.pdf},
+  Howpublished = {arXiv preprint arXiv:2206.10591}
+}
+
+
+@misc{dsteinmann2022xlp,
+  Anote = {./images/dsteinmann2022xlp.png},
+  title={Machines Explaining Linear Programs},
+  author={David Steinmann and Matej Zečević and Kristian Kersting and Devendra Singh Dhami},
+  Keywords = {Attribution, XAI, Linear Programs},
+  Note = {There has been a recent push in making machine learning models more interpretable so that their
+  performance can be trusted. Although successful, these methods have mostly focused on the deep learning
+  methods while the fundamental optimization methods in machine learning such as linear programs (LP) have
+  been left out. Even if LPs can be considered as whitebox or clearbox models, they are not easy to
+  understand in terms of relationships between inputs and outputs. As a linear program only provides the
+  optimal solution to an optimization problem, further explanations are often helpful. In this work, we
+  extend the attribution methods for explaining neural networks to linear programs. These methods explain
+  the model by providing relevance scores for the model inputs, to show the influence of each input on the
+  output. Alongside using classical gradient-based attribution methods we also propose a way to adapt
+  perturbation-based attribution methods to LPs. Our evaluations of several different linear and integer
+  problems showed that attribution methods can generate useful explanations for linear programs. However,
+  we also demonstrate that using a neural attribution method directly might come with some drawbacks, as
+  the properties of these methods on neural networks do not necessarily transfer to linear programs. The
+  methods can also struggle if a linear program has more than one optimal solution, as a solver just
+  returns one possible solution. Our results can hopefully be used as a good starting point for further research in this direction.},
+  year={2022},
+  Pages = {},
+  Url = {https://arxiv.org/pdf/2206.07194.pdf},
+  Howpublished = {arXiv preprint arXiv:2206.07194}
+}
+
+
+@misc{fbusch2022abnn,
+  Anote = {./images/fbusch2022abnn.png},
+  title={Attributions Beyond Neural Networks: The Linear Program Case},
+  author={Florian Peter Busch and Matej Zečević and Kristian Kersting and Devendra Singh Dhami},
+  Keywords = {Attribution, XAI, Linear Programs, Neural Encoding},
+  Note = {Linear Programs (LPs) have been one of the building blocks in machine learning and have championed recent strides in differentiable optimizers for learning systems. While there exist solvers for even high-dimensional LPs, understanding said high-dimensional solutions poses an orthogonal and unresolved problem. We introduce an approach where we consider neural encodings for LPs that justify the application of attribution methods from explainable artificial intelligence (XAI) designed for neural learning systems. The several encoding functions we propose take into account aspects such as feasibility of the decision space, the cost attached to each input, or the distance to special points of interest. We investigate the mathematical consequences of several XAI methods on said neural LP encodings. We empirically show that the attribution methods Saliency and LIME reveal indistinguishable results up to perturbation levels, and we propose the property of Directedness as the main discriminative criterion between Saliency and LIME on one hand, and a perturbation-based Feature Permutation approach on the other hand. Directedness indicates whether an attribution method gives feature attributions with respect to an increase of that feature. We further notice the baseline selection problem beyond the classical computer vision setting for Integrated Gradients.},
+  year={2022},
+  Pages = {},
+  Url = {https://arxiv.org/pdf/2206.07203.pdf},
+  Howpublished = {arXiv preprint arXiv:2206.07203}
+}
+
+
+@misc{jseng2022tant,
+  Anote = {./images/jseng2022tant.png},
+  title={Tearing Apart NOTEARS: Controlling the Graph Prediction via Variance Manipulation},
+  author={Jonas Seng and Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
+  Keywords = {Structure Discovery, Causality, Variance Manipulation},
+  Note = {Simulations are ubiquitous in machine learning. Especially in graph learning, simulations of Directed Acyclic Graphs (DAG) are being deployed for evaluating new algorithms. In the literature, it was recently argued that continuous-optimization approaches to structure discovery such as NOTEARS might be exploiting the sortability of the variable's variances in the available data due to their use of least square losses. Specifically, since structure discovery is a key problem in science and beyond, we want to be invariant to the scale being used for measuring our data (e.g. meter versus centimeter should not affect the causal direction inferred by the algorithm). In this work, we further strengthen this initial, negative empirical suggestion by both proving key results in the multivariate case and corroborating with further empirical evidence. In particular, we show that we can control the resulting graph with our targeted variance attacks, even in the case where we can only partially manipulate the variances of the data.},
+  year={2022},
+  Pages = {},
+  Url = {https://arxiv.org/pdf/2206.07195.pdf},
+  Howpublished = {arXiv preprint arXiv:2206.07195}
+}
+
+
+@misc{youssef2022cbp,
+  Anote = {./images/youssef2022cbp.png},
+  title={Towards a Solution to Bongard Problems: A Causal Approach},
+  author={Salahedine Youssef and Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
+  Keywords = {Causality, Bongard Problems, Reinforcement Learning, AGI},
+  Note = {To date, Bongard Problems (BP) remain one of the few fortresses of AI history yet to be raided by the powerful models of the current era. We present a systematic analysis using modern techniques from the intersection of causality and AI/ML in a humble effort of reviving research around BPs. Specifically, we first compile the BPs into a Markov decision process, then secondly pose causal assumptions on the data generating process arguing for their applicability to BPs, and finally apply reinforcement learning techniques for solving the BPs subject to the causal assumptions.},
+  year={2022},
+  Pages = {},
+  Url = {https://arxiv.org/pdf/2206.07196.pdf},
+  Howpublished = {arXiv preprint arXiv:2206.07196}
+}
+
+@inproceedings{lang2022diff-sampling-spns,
+  Anote = { ./images/lang2022diff-sampling-spns.png },
+  title = {Elevating Perceptual Sample Quality in Probabilistic Circuits through Differentiable Sampling},
+  author = {Steven Lang and Martin Mundt and Fabrizio Ventola and Robert Peharz and Kristian Kersting},
+  booktitle = {NeurIPS 2021 Workshop on Pre-registration in Machine Learning},
+  Keywords = {Probabilistic Circuits, Sum-Product Networks, Differentiable Sampling, Deep Learning},
+  year = {2021},
+  volume = 	 {181},
+  series = 	 {Proceedings of Machine Learning Research},
+  pages = {193--220},
+  Opteditor = {Bertinetto, Luca and Henriques, João F. and Albanie, Samuel and Paganini, Michela and Varol, Gül},
+  Optmonth = {11 Dec},
+  Opturl = {},
+  publisher =  {PMLR},
+  Url = 	 {./papers/lang2022diff-sampling-spns.pdf},
+  Note = 	 {Deep generative models have seen a dramatic improvement in recent years, due to the use of alternative losses based on perceptual assessment of generated samples. This improvement has not yet been applied to the model class of probabilistic circuits (PCs), presumably due to significant technical challenges concerning differentiable sampling, which is a key requirement for optimizing perceptual losses. This is unfortunate, since PCs allow a much wider range of probabilistic inference routines than main-stream generative models, such as exact and efficient marginalization and conditioning. Motivated by the success of loss reframing in deep generative models, we incorporate perceptual metrics into the PC learning objective. To this aim, we introduce a differentiable sampling procedure for PCs, where the central challenge is the non-differentiability of sampling from the categorical distribution over latent PC variables. We take advantage of the Gumbel-Softmax trick and develop a novel inference pass to smoothly interpolate child samples as a strategy to circumvent non-differentiability of sum node sampling. We initially hypothesized, that  perceptual losses, unlocked by our novel differentiable sampling procedure, will elevate the generative power of PCs and improve their sample quality to be on par with neural counterparts like probabilistic auto-encoders and generative adversarial networks. Although our experimental findings empirically reject this hypothesis for now, the results demonstrate that samples drawn from PCs optimized with perceptual losses can have similar sample quality compared to likelihood-based optimized PCs and, at the same time, can express richer contrast, colors, and details. Whereas before, PCs were restricted to likelihood-based optimization, this work has paved the way to advance PCs with loss formulations that have been built around deep neural networks in recent years.}
+}
+
+
+
+@unpublished{kersting2022welt_AIP,
+    Anote = {./images/WeltAmSonntag.png},
+    title={Artificial Intellectual Properties},
+    author={Kristian Kersting},
+    year={2022},
+    Howpublished = {Welt am Sonntag, June 19, 2022, page 26},
+    Publisher = {},
+    Note = {AI is changing the way science is done, artwork is created, and inventions are made. What does this mean for patents and intellectural property rights?},
+    Keywords = {AI, IPR, Patents, GAN, Edmond de Belamy, Imagen, DALL-E2},
+    Url={}
+}
+
+
+@inproceedings{friedrich2022hhai,
+    Anote = {./images/friedrich2022hhai.png},
+    title={Interactively Providing Explanations for Transformer Language Models},
+    author={Felix Friedrich and Patrick Schramowski and Christopher Tauchmann and Kristian Kersting},
+    Note = {Transformer language models (LMs) are state of the art in a multitude of NLP tasks. Despite these successes, their opaqueness remains problematic, especially as the training data might be unfiltered and contain biases. As a result, ethical concerns about these models arise, which can have a substantial negative impact on society as they get increasingly integrated into our lives. Therefore, it is not surprising that a growing body of work aims to provide interpretability and explainability to black-box LMs: Recent evaluations of saliency or attribution methods find that, while intriguing, different methods assign importance to different inputs for the same outputs, thus encouraging misinterpretation and reporting bias. Moreover, these methods primarily focus on post-hoc explanations of (sometimes spurious) input-output correlations. Instead, we emphasize using (interactive) prototype networks directly incorporated into the model architecture and hence explain the reasoning behind the network’s decisions.},
+    year={2022},
+    Pages = {},
+    Keywords = {Transformer, Large Language Models, Prototype Layers, Explainable AI, Explanatory Interactive Learning},
+    booktitle={Proceedings of the 1st Conference of Hybrid Human Artificial Intelligence (HHAI)},
+    Url={./papers/friedrich2022hhai.pdf}
+}
+
+
+
 @incollection{zecevic2022osc,
       Anote = {./images/zecevic2022osc.png},
       title={Finding Structure and Causality in Linear Programs},
@@ -550,38 +584,6 @@ url={https://doi.org/10.1038/s42256-022-00458-8}
         Howpublished = {arXiv preprint arXiv:2202.00391},
         Keywords={Clever-Hans Moments, Generative Deep Models, Interactive Learning, Debiasing}
   }
-
-@inproceedings{mundt2022clevacompass,
-    booktitle = {Proceedings of the International Conference on Representation Learning (ICLR) },
-      title={CLEVA-Compass: A Continual Learning EValuation Assessment Compass to Promote Research Transparency and Comparability},
-      author={Martin Mundt and Steven Lang and Quentin Delfosse and Kristian Kersting},
-      year={2022},
-      Keywords={Continual Learning, Lifelong Learning, Machine Learning Evaluation},
-      Anote={./images/CLEVA-Compass.png},
-      Note={What is the state of the art in continual machine learning? Although a natural question for predominant static benchmarks, the notion to train systems in a lifelong manner entails a plethora of additional challenges with respect to set-up and evaluation. The latter have recently sparked a growing amount of critiques on prominent algorithm-centric perspectives and evaluation protocols being too narrow, resulting in several attempts at constructing guidelines in favor of specific desiderata or arguing against the validity of prevalent assumptions. In this work, we depart from this mindset and argue that the goal of a precise formulation of desiderata is an ill-posed one, as diverse applications may always warrant distinct scenarios. Instead, we introduce the Continual Learning EValuation Assessment Compass, CLEVA-Compass for short. The compass provides the visual means to both identify how approaches are practically reported and how works can simultaneously be contextualized in the broader literature landscape. In addition to promoting compact specification in the spirit of recent replication trends, the CLEVA-Compass thus provides an intuitive chart to understand the priorities of individual systems, where they resemble each other, and what elements are missing towards a fair comparison.},
-      Crossref={https://github.com/ml-research/CLEVA-Compass},
-      Url={https://arxiv.org/pdf/2110.03331.pdf}
-}
-
-
-
-@inproceedings{stammer2022cvpr,
-      booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-      title={Interactive Disentanglement: Learning Concepts by Interacting with their Prototype Representations},
-      author={Wolfgang Stammer and Marius Memmel and Patrick Schramowski and Kristian Kersting},
-      year={2022},
-      Keywords={Explanatory Interactive Learning, XAI, Concept Swapping Networks, Prototype Networks, Elementary Concept Learning},
-      Anote={./images/stammer2022cvpr.png},
-      Note={Learning visual concepts from raw images without strong supervision is a challenging task. In this work, we show the
-      advantages of prototype representations for understanding and revising the latent space of neural concept learners. For this purpose,
-      we introduce interactive Concept Swapping Networks (iCSNs), a novel framework for learning concept-grounded representations via weak
-      supervision and implicit prototype representations. iCSNs learn to bind conceptual information to specific prototype slots by swapping
-      the latent representations of paired images. This semantically grounded and discrete latent space facilitates human
-      understanding and human-machine interaction. We support this claim by conducting experiments on our novel data set ``Elementary
-      Concept Reasoning'' (ECR), focusing on visual concepts shared by geometric objects.},
-      Crossref={},
-      Url={./papers/stammer2022cvpr.pdf}
-}
 
 
 @article{rawal22frontiers,
