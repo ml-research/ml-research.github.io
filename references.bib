@@ -1,5 +1,26 @@
 
 
+
+@inproceedings{karanam2022pgm_exspns,
+Anote = {./images/karanam2022pgm_exspns.png},
+Author = {Bhagirath Athresh Karanam and Saurabh Mathur and Predrag Radivojac and David M. Haas and Kristian Kersting and Sriraam Natarajan},
+Booktitle = {Proceedings of the 11th International Conference on Probabilistic Graphical Models (PGM)},
+Note = {We consider the problem of explaining a class of tractable deep probabilistic models, the
+Sum-Product Networks (SPNs) and present an algorithm EXSPN to generate explanations.
+To this e ect, we de ne the notion of a context-specific independence tree (CSI-tree)
+and present an iterative algorithm that converts an SPN to a CSI-tree. The resulting
+CSI-tree is both interpretable and explainable to the domain expert. We achieve this by
+extracting the conditional independencies encoded by the SPN and approximating the local
+context speci ed by the structure of the SPN. Our extensive empirical evaluations on synthetic,
+standard, and real-world clinical data sets demonstrate that the CSI-tree exhibits
+superior explainability.},
+  Keywords = {Probabilistic Circuits, Sum Product Networks, Explainable AI, XAI, CSI-Tree, Deep Models},
+Pages = {},
+Url = {./papers/karanam2022pgm_exspns.pdf},
+Title = {Explaining Deep Tractable Probabilistic Models: The sum-product network case},
+Year = {2022}}
+
+
 @article{petkovic2022kbs,
   Anote = {./images/petkovic2022kbs.png},
 	Note =  {As the complexity of data increases, so does the importance of powerful representations, such as relational and logical representations, as well as the need for machine learning methods that can learn predictive models in such representations. A characteristic of these representations is that they give rise to a huge number of features to be considered, thus drastically increasing the difficulty of learning in terms of computational complexity and the curse of dimensionality. Despite this, methods for ranking features in this context, i.e., estimating their importance are practically non-existent. Among the most well-known methods for feature ranking are those based on ensembles, and in particular tree ensembles. To develop methods for feature ranking in a relational context, we adopt the relational tree ensemble approach. We thus first develop methods for learning ensembles of relational trees, extending a wide spectrum of tree-based ensemble methods from the propositional to the relational context, resulting in methods for bagging and random forests of relational trees, as well as gradient boosted ensembles thereof. Complex relational features are considered in our ensembles: by using complex aggregates, we extend the standard collection of features that correspond to existential queries, such as `Does this person have any children?', to more complex features that correspond to aggregation queries, such as `What is the average age of this person's children?'. We also calculate feature importance scores and rankings from the different kinds of relational tree ensembles learned, with different kinds of relational features. The rankings provide insight into and explain the ensemble models, which would be otherwise difficult to understand. We compare the methods for learning single trees and different tree ensembles, using only existential qualifiers and using the whole set of relational features, against 10 state-of-the-art methods on a collection of benchmark relational datasets, deriving also the corresponding feature rankings. Overall, the bagging ensembles perform the best, with gradient boosted ensembles following closely. The use of aggregates is beneficial and in some datasets drastically improves performance: In these cases, aggregate-based features clearly stand out in the feature rankings derived from the ensembles.},
