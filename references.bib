@@ -579,7 +579,7 @@ Year = {2022}}
     year={2022},
     Pages = {},
     Keywords = {Transformer, Large Language Models, Prototype Layers, Explainable AI, Explanatory Interactive Learning},
-    booktitle={Proceedings of the 1st Conference of Hybrid Human Artificial Intelligence (HHAI)},
+    booktitle= {Proceedings of the 1st Conference of Hybrid Human Artificial Intelligence (HHAI) and in Frontiers in Artificial Intelligence and Applications},
     Url={./papers/friedrich2022hhai.pdf}
 }
 
@@ -614,6 +614,17 @@ Year = {2022}}
       Note= {Recently, more and more eXplanatory Interactive machine Learning (XIL) methods have been proposed with the goal of extending a model's learning process by integrating human user supervision on the model's explanations. These methods were often developed independently, provide different motivations and stem from different applications. Notably, up to now, there has not been a comprehensive evaluation of these works. By identifying a common set of basic modules and providing a thorough discussion of these modules, our work, for the first time, comes up with a unification of the various methods into a single typology. This typology can thus be used to categorize existing and future XIL methods based on the identified modules. Moreover, our work contributes by surveying six existing XIL methods. In addition to benchmarking these methods on their overall ability to revise a model, we perform additional benchmarks regarding wrong reason revision, interaction efficiency, robustness to feedback quality, and the ability to revise a strongly corrupted model. Apart from introducing these novel benchmarking tasks, for improved quantitative evaluations, we further introduce a novel Wrong Reason (WR) metric which measures the average wrong reason activation in a model's explanations to complement a qualitative inspection. In our evaluations, all methods prove to revise a model successfully. However, we found significant differences between the methods on individual benchmark tasks, revealing valuable application-relevant aspects not only for comparing current methods but also to motivate the necessity of incorporating these benchmarks in the development of future XIL methods.}
 }
 
+
+@misc{friedrich2022RiT,
+      title={Revision Transformers: Getting RiT of No-Nos},
+      author={Felix Friedrich and Wolfgang Stammer and Patrick Schramowski and Kristian Kersting},
+      year={2022},
+      howpublished={arXiv preprint arXiv:2210.10332},
+      Url={https://arxiv.org/pdf/2210.10332.pdf},
+      Keywords = {Moral, Machine Ethics, Transformer Architecture, Fair and Trustworthi AI, Interactive Learning, Human-centered AI},
+      Anote = {./images/friedrich2022RiT.png},
+      note = {Current transformer language models (LM) are large-scale models with billions of parameters. They have been shown to provide high performances on a variety of tasks but are also prone to shortcut learning and bias. Addressing such incorrect model behavior via parameter adjustments is very costly. This is particularly problematic for updating dynamic concepts, such as moral values, which vary culturally or interpersonally. In this work, we question the current common practice of storing all information in the model parameters and propose the Revision Transformer (RiT) employing information retrieval to facilitate easy model updating. The specific combination of a large-scale pre-trained LM that inherently but also diffusely encodes world knowledge with a clear-structured revision engine makes it possible to update the model's knowledge with little effort and the help of user interaction. We exemplify RiT on a moral dataset and simulate user feedback demonstrating strong performance in model revision even with small data. This way, users can easily design a model regarding their preferences, paving the way for more transparent and personalized AI models.}
+}
 
 @inproceedings{fang2022dpctgan,
     booktitle = {Proceedings of the International Conference on Artificial Intelligence in Medicine (AIME)},
