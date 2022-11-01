@@ -1449,6 +1449,82 @@ of Israel, Alexander von Humboldt-Stiftung, Carl-Zeiss-Stiftung, The Royal Socie
 <hr>
 <br>
 
+</div>
+
+<hr class="soft" id="legal">
+
+
+</main>
+<footer>
+
+
+<div class="container" id="sitefooter">
+
+
+<a href="https://www.informatik.tu-darmstadt.de/impressum.en.jsp">Legal info / Impressum</a> <br><br>
+
+Technische Universitaet Darmstadt <br>
+Fachbereich Informatik <br>
+Hochschulstr. 1 <br>
+64289 Darmstadt<br>
+Germany<br><br>
+
+</div>
+
+</footer>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript" src="./../../build/bib-list.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+  $.get('https://ml-research.github.io/references.bib', function (data) {
+  //$.get('file:///Users/kersting/Documents/GitHub/ml-research.github.io/references.bib', function (data) {
+
+            function containsName(bib) {
+                return bib.toLowerCase().includes("kersting")
+            }
+
+            function replaceImagePath(bib) {
+                return bib.replace("./images/", "./../../images/");
+            }
+
+            function replacePaperPath(bib) {
+                return bib.replace("./papers/", "./../../papers/");
+            }
+
+            bibtex = data.split(/(?=@\w+)/u);
+            my_bibtex = bibtex.filter(containsName).map(replacePaperPath);
+            my_bibtex = my_bibtex.map(replaceImagePath);
+
+            $("#bibtex").html(my_bibtex.join());
+            bibtexify("#bibtex", "pubTable");
+        });
+
+
+    });
+</script>
+
+
+
+<!--<script type="text/javascript">
+        $(document).ready(function() {
+          bibtexify("#bibtex", "pubTable");
+        });
+</script>-->
+
+
+
+</body>
+</html>
+
+
 
 
 <h3>Advisory Boards and Expert Groups</h3><br>
