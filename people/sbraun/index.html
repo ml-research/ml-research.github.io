@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Steven Lang</title>
+    <title>Steven Braun</title>
 
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -23,7 +23,7 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 
-        <a class="navbar-brand" href="#">Steven Lang</a>
+        <a class="navbar-brand" href="#">Steven Braun</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -64,11 +64,11 @@
             </div>
 
             <div class="col-md-6">
-                <div id="htname">Steven Lang</div>
+                <div id="htname">Steven Braun</div>
                 <div id="htem">Machine Learning Group, Computer Science Department, TU Darmstadt.
                     Hochschulstrasse 1, Room S1|03 076, 64289 Darmstadt, Germany
                     <br><img src="./../../images/mail.jpg" style="height:15px"> steven.lang (at) cs (dot) tu-darmstadt (dot) de
-                    <br><a href="https://www.steven-lang.com">www.steven-lang.com</a>
+                    <br><a href="https://www.steven-braun.com">www.steven-braun.com</a>
                 </div>
             </div>
               <div style="float: right">
@@ -82,11 +82,14 @@
             </div-->
         </div>
 
-
         <br>
 
         <b>Mission.</b>
         My main research interests cover a broad range of Machine Learning related topics such as deep models, tractable probabilistic circuits and their applications in computer vision. In specific, I work on bridging the gap between probabilistic circuits and deep neural networks. We want to push the limits of Sum-Product Networks and aim to combine their strengths with the modeling capacity of neural networks.
+
+        <br><br>
+
+        Note: Until 2022 known as Steven Lang.
         <br><br>
  
     <!--div class="container" id="timeline">
@@ -121,47 +124,12 @@
           </TR>
       </TABLE>
 
-        <!--
-        <b>Bio.</b> I'm a PhD student of Machine Learning at the
-        <a href="https://www.informatik.tu-darmstadt.de/en/department/" target="_blank">Computer Science Department</a>
-        of the <a href="https://www.tu-darmstadt.de" target="_blank">TU Darmstadt University</a>, Germany.
-        After receiving my M.Sc. from TU Dortmund University in 2017, I joined the Machine Learning group at <a href="https://www.tu-darmstadt.de" target="_blank">TU Darmstadt University</a>.<br><br>
-        -->
-
-        <!--b>Awards.</b>
-        TODO
-        <div id="timeline"
-             style="margin-top:1px;margin-bottom:20px;height:400px;width:auto; overflow-y:scroll;list-style-position: outside">
-
-
-            <div class="timelineitem">
-
-                <div class="tdate">2013</div>
-
-                <div class="ttitle"><span class="t2where"> MINT</div>
-
-            </div>
-
-
-            <div class="timelineitem">
-
-                <div class="tdate">2012</div>
-
-                <div class="ttitle"><span class="t2where">P5</div>
-
-            </div>
-
-
-        </div>
-         -->
     </div>
 
-    <!-- <hr class="soft"> -->
 
 
     <div class="container" id="publications">
 
-      <!-- <b>Publications.</b> -->
         <br>
         <noscript>
             <style>
@@ -180,74 +148,6 @@
 
 
     <br>
-
-    <!--div class="container" id="activities">
-
-        <b>Activities.</b>
-
-        <div class="row">
-
-            <div class="col-md-6">
-                <div class="t2where">TA for Introduction to Artificial Intelligence summer 2019</div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="t2where">Registration Chair of UAI 2018</div>
-                <a href="http://auai.org/uai2018/organizingcommittee.php" target="_blank">
-                    <img src="./../../images/uai2018.png" style="border-radius:3px;width:240px">
-                </a><br>
-            </div>
-
-
-        </div>
-        <br>
-
-        <br>
-
-        <br>
-
-        <h3>Selected Program Committees/Reviewer:</h3><br>
-        <div class="t2what">AAAI 2019</div>
-        <br>
-
-
-        <br>
-
-    </div-->
-
-    <!--hr class="soft">
-
-    <div class="container" id="talks">
-
-
-        <h2>Invited Talks, Panels and Training</h2>
-
-        <h3>Talks and Panels</h3><br>
-        <br>
-        <div class="row">
-            <div class="col-md-3">
-                
-            </div>
-            <div class="col-md-3">
-                
-            </div>
-
-            <div class="col-md-3">
-                
-            </div>
-            <div class="col-md-3">
-                
-            </div>
-        </div>
-    </div-->
-
-    <!--div class="container" id="banner">
-        <img class="img-fluid" src="./../../images/banner.png" style="float: left; margin: 0px 0px 10px 10px;">
-        <a href="https://www.tu-darmstadt.de" target="_blank"> <img class="img-fluid"
-                                                                    src="./../../images/tud_weblogo.svg"
-                                                                    style="margin: 19px 10px 10px 10px;height:75px"></a>
-        </p>
-    </div-->
 
 </main>
 <footer>
@@ -283,7 +183,7 @@
         $.get('https://ml-research.github.io/references.bib', function (data) {
 
             function containsName(bib) {
-                return bib.toLowerCase().includes("steven lang")
+                return bib.toLowerCase().includes("steven lang") || bib.toLowerCase().includes("steven braun")
             }
 
             function replaceImagePath(bib) {
