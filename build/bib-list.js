@@ -2016,7 +2016,7 @@ var bibtexify = (function($) {
         // adds the bibtex link and the opening div with bibtex content
         bibtex: function(entryData) {
             var itemStr = '&nbsp;';
-            itemStr += '<a style="color:black;font-size:12px;background-color:#FFCECE" title="This paper as BibTeX" href="#" class="biblink">' + '&nbsp;.bib &nbsp;<\/a><div class="bibinfo hidden">';
+            itemStr += '<a style="color:black;font-size:12px;background-color:#FFCECE" title="This paper as BibTeX" href="#" class="biblink">' + '&nbsp;bibtex &nbsp;<\/a><div class="bibinfo hidden">';
 
           //  itemStr += '&nbsp;&nbsp;<button type="button" class="biblink btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="This article as BibTeX" href="#">' +
           //             '<font color="white">.bib<\/font><\/a><\/button><div class="bibinfo hidden">';
