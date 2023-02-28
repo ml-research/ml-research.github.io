@@ -1979,11 +1979,11 @@ var bibtexify = (function($) {
         links: function(entryData) {
             var itemStr = '';
             if (entryData.url && entryData.url.match(/.*\.pdf/)) {
-            itemStr += '&nbsp;<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="PDF of this paper" href="'+  entryData.url +'" target="_blank"><font color="black">&nbsp;.pdf (draft)<\/font><\/a>&nbsp;<\/span>';
+            itemStr += '&nbsp;<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="PDF of this paper" href="'+  entryData.url +'" target="_blank"><font color="black">pdf<\/font><\/a>&nbsp;<\/span>';
           //  itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
           //            entryData.url + '" target="_blank"><font color="white">.pdf (draft)<\/font><\/a><\/button>';
             } else if (entryData.url) {
-              itemStr += '&nbsp;<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="Link to this paper" href="'+  entryData.url +'" target="_blank"><font color="black">.url (draft)<\/font><\/a>&nbsp;<\/span>';
+              itemStr += '&nbsp;<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="Link to this paper" href="'+  entryData.url +'" target="_blank"><font color="black">url<\/font><\/a>&nbsp;<\/span>';
 
             //  itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
             //            entryData.url + '" target="_blank"><font color="white">.url (draft)<\/font><\/a><\/button>';
