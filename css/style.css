@@ -66,6 +66,7 @@ a:focus span
 .imgme {
   border: 1px solid black;
   height: 125px;
+  width: 125px;
   /* float: left; */
 }
 #htname {
