@@ -1,3 +1,51 @@
+@article{friedrich2023xiltypology,
+  Anote = {./images/friedrich2023xiltypology.png},
+  title = {A typology for exploring the mitigation of shortcut behaviour},
+  author={Felix Friedrich and Wolfgang Stammer and Patrick Schramowski and Kristian Kersting},
+  Journal = {Nature Machine Intelligence},
+  Note = {As machine learning models become larger, and are increasingly trained on large and uncurated datasets in weakly supervised mode, it becomes important to establish mechanisms for inspecting, interacting with and revising models. These are necessary to mitigate shortcut learning effects and to guarantee that the model’s learned knowledge is aligned with human knowledge. Recently, several explanatory interactive machine learning methods have been developed for this purpose, but each has different motivations and methodological details. In this work, we provide a unification of various explanatory interactive machine learning methods into a single typology by establishing a common set of basic modules. We discuss benchmarks and other measures for evaluating the overall abilities of explanatory interactive machine learning methods. With this extensive toolbox, we systematically and quantitatively compare several explanatory interactive machine learning methods. In our evaluations, all methods are shown to improve machine learning models in terms of accuracy and explainability. However, we found remarkable differences in individual benchmark tasks, which reveal valuable application-relevant aspects for the integration of these benchmarks in the development of future methods.},
+  Keywords = {Explanatory Interactive Machine Learning (XIL), Research Transparency and Comparability, Explainable Artificial Intelligence (XAI), Human-AI Interaction, Human-guided AI},
+  Publisher = {Nature Publishing Group},
+  year={2023},
+month={Mar},
+day={09},
+issn={2522-5839},
+doi={10.1038/s42256-023-00612-w},
+url={https://doi.org/10.1038/s42256-023-00612-w}
+}
+
+@misc{friedrich2023fair,
+      Anote = {./images/ffriedrich_fair_2023.png},
+      title={Fair Diffusion: Instructing Text-to-Image Generation Models on Fairness},
+      author={Felix Friedrich and Manuel Brack and Dominik Hintersdorf and Lukas Struppek and Patrick Schramowski and Sasha Luccioni and Kristian Kersting},
+      Howpublished = {arXiv preprint arXiv:2302.10893},
+      year = {2023},
+      month={Feb},
+      Note = {Generative AI models have recently achieved astonishing results in quality and are consequently employed in a fast-growing number of applications. However, since they are highly data-driven, relying on billion-sized datasets randomly scraped from the internet, they also suffer from degenerated and biased human behavior, as we demonstrate. In fact, they may even reinforce such biases. To not only uncover but also combat these undesired effects, we present a novel strategy, called Fair Diffusion, to attenuate biases after the deployment of generative text-to-image models. Specifically, we demonstrate shifting a bias, based on human instructions, in any direction yielding arbitrarily new proportions for, e.g., identity groups. As our empirical evaluation demonstrates, this introduced control enables instructing generative image models on fairness, with no data filtering and additional training required.},
+      Pages = {},
+      Keywords = {Fairness, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, AI Ethics},
+      Url={https://arxiv.org/abs/2302.10893}
+}
+
+
+@misc{ventola-braun2023tdi,
+  Anote={./images/ventola-braun2023tdi.png},
+  Url = {https://arxiv.org/abs/2302.06544},
+  abbr={arXiv},
+  eprint={2302.06544},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  author = {Ventola, Fabrizio and Braun, Steven and Yu, Zhongjie and Mundt, Martin and Kersting, Kristian},
+  keywords = {Machine Learning (cs.LG), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences, I.2.0; G.3},
+  title = {Probabilistic Circuits That Know What They Don't Know},
+  publisher = {arXiv},
+  year = {2023},
+  copyright = {Creative Commons Attribution 4.0 International},
+  journal={arXiv preprint, arXiv:2302.06544},
+  Howpublished={arXiv preprint, arXiv:2302.06544},
+  Crossref={https://github.com/ml-research/tractable-dropout-inference},
+}
+
 @article{pfeuffer2023xil,
 Anote = {./images/pfeuffer2023xil.png},
 title = {Explanatory Interactive Machine Learning: Establishing an Action Design Research Process for Machine Learning Projects},
@@ -174,14 +222,14 @@ keywords = {Virtual Met Mast (VMM), Wind power, Machine learning, Reanalysis dat
 Note = {As wind is the basis of all wind energy projects, a precise knowledge about its availability is needed. For an analysis of the site-specific wind conditions, Virtual Meteorological Masts (VMMs) are frequently used. VMMs make use of site calibrated numerical data to provide precise wind estimates during all phases of a wind energy project. Typically, numerical data are used for the long-term correlation that is required for estimating the yield of new wind farm projects. However, VMMs can also be used to fill data gaps or during the operational phase as an additional reference data set to detect degrading sensors. The value of a VMM directly depends on its ability and precision to reproduce site-specific environmental conditions. Commonly, linear regression is used as state of the art to correct reference data to the site-specific conditions. In this study, a framework of 10 different machine-learning methods is tested to investigated the benefit of more advanced methods on two offshore and one onshore site. We find significantly improving correlations between the VMMs and the reference data when using more advanced methods and present the most promising ones. The K-Nearest Neighbors and AdaBoost regressors show the best results in our study, but Multi-Output Mixture of Gaussian Processes is also very promising. The use of more advanced regression models lead to decreased uncertainties; hence those methods should find its way into industrial applications. The recommended regression models can serve as a starting point for the development of end-user applications and services.}
 }
 
-@misc{struppek22biasedartist,
+@misc{struppek22homoglyphs,
   Anote = {./images/struppek_biased_artist.jpg},
-  author = {Lukas Struppek and Dominik Hintersdorf and Kristian Kersting},
-  title = {The Biased Artist: Exploiting Cultural Biases via Homoglyphs in Text-Guided Image Generation Models},
+  author = {Lukas Struppek and Dominik Hintersdorf and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting},
+  title = {Exploiting Cultural Biases via Homoglyphs in Text-to-Image Synthesis},
   Howpublished = {arXiv preprint arXiv:2209.08891},
   year = {2022},
   month={Sep},
-  Note = {Text-guided image generation models, such as DALL-E 2 and Stable Diffusion, have recently received much attention from academia and the general public. Provided with textual descriptions, these models are capable of generating high-quality images depicting various concepts and styles. However, such models are trained on large amounts of public data and implicitly learn relationships from their training data that are not immediately apparent. We demonstrate that common multimodal models implicitly learned cultural biases that can be triggered and injected into the generated images by simply replacing single characters in the textual description with visually similar non-Latin characters. These so-called homoglyph replacements enable malicious users or service providers to induce biases into the generated images and even render the whole generation process useless. We practically illustrate such attacks on DALL-E 2 and Stable Diffusion as text-guided image generation models and further show that CLIP also behaves similarly. Our results further indicate that text encoders trained on multilingual data provide a way to mitigate the effects of homoglyph replacements.},
+  Note = {Models for text-to-image synthesis, such as DALL-E 2 and Stable Diffusion, have recently drawn a lot of interest from academia and the general public. These models are capable of producing high-quality images that depict a variety of concepts and styles when conditioned on textual descriptions. However, these models adopt cultural characteristics associated with specific Unicode scripts from their vast amount of training data, which may not be immediately apparent. We show that by simply inserting single non-Latin characters in a textual description, common models reflect cultural stereotypes and biases in their generated images. We analyze this behavior both qualitatively and quantitatively, and identify a model’s text encoder as the root cause of the phenomenon. Additionally, malicious users or service providers may try to intentionally bias the image generation to create racist stereotypes by replacing Latin characters with similarly-looking characters from non-Latin scripts, so-called homoglyphs. To mitigate such unnoticed script attacks, we propose a novel homoglyph unlearning method to fine-tune a text encoder, making it robust against homoglyph manipulations.},
   Pages = {},
   Keywords = {Text-to-Image Synthesis, Text-Guided Image Generation, DALL-E 2, Stable Diffusion, Computer Vision},
   Url={https://arxiv.org/pdf/2209.08891.pdf}
@@ -189,12 +237,12 @@ Note = {As wind is the basis of all wind energy projects, a precise knowledge ab
 
 @misc{hintersdorf2022clipping_privacy,
       Anote = {./images/hintersdorf2022clipping_privacy.png},
-      title={CLIPping Privacy: Identity Inference Attacks on Multi-Modal Machine Learning Models},
-      author={Dominik Hintersdorf and Lukas Struppek and Kristian Kersting},
+      title={Does CLIP Know My Face?},
+      author={Dominik Hintersdorf and Lukas Struppek and Manuel Brack and Felix Friedrich and Patrick Schramowski and Kristian Kersting},
       year={2022},
       month={Sep},
       Howpublished = {arXiv preprint arXiv:2209.07341},
-      Note = {As deep learning is now used in many real-world applications, research has focused increasingly on the privacy of deep learning models and how to prevent attackers from obtaining sensitive information about the training data. However, image-text models like CLIP have not yet been looked at in the context of privacy attacks. While membership inference attacks aim to tell whether a specific data point was used for training, we introduce a new type of privacy attack, named identity inference attack (IDIA), designed for multi-modal image-text models like CLIP. Using IDIAs, an attacker can reveal whether a particular person, was part of the training data by querying the model in a black-box fashion with different images of the same person. Letting the model choose from a wide variety of possible text labels, the attacker can probe the model whether it recognizes the person and, therefore, was used for training. Through several experiments on CLIP, we show that the attacker can identify individuals used for training with very high accuracy and that the model learns to connect the names with the depicted people. Our experiments show that a multi-modal image-text model indeed leaks sensitive information about its training data and, therefore, should be handled with care.},
+      Note = {With the rise of deep learning in various applications, privacy concerns around the protection of training data has become a critical area of research. Whereas prior studies have focused on privacy risks in single-modal models, we introduce a novel method to assess privacy for multi-modal models, specifically vision-language models like CLIP. The proposed Identity Inference Attack (IDIA) reveals whether an individual was included in the training data by querying the model with images of the same person. Letting the model choose from a wide variety of possible text labels, the model reveals whether it recognizes the person and, therefore, was used for training. Our large-scale experiments on CLIP demonstrate that individuals used for training can be identified with very high accuracy. We confirm that the model has learned to associate names with depicted individuals, implying the existence of sensitive information that can be extracted by adversaries. Our results highlight the need for stronger privacy protection in large-scale models and suggest that IDIAs can be used to prove the unauthorized use of data for training and to enforce privacy laws.},
       Pages = {},
       Keywords = {Identity Inference Attacks, Privacy, Computer Vision, Pre-trained models, CLIP, Deep Learning},
       Url={https://arxiv.org/pdf/2209.07341.pdf}
@@ -286,7 +334,7 @@ random selection },
       Anote={./images/CLEVA-Compass.png},
       Note={What is the state of the art in continual machine learning? Although a natural question for predominant static benchmarks, the notion to train systems in a lifelong manner entails a plethora of additional challenges with respect to set-up and evaluation. The latter have recently sparked a growing amount of critiques on prominent algorithm-centric perspectives and evaluation protocols being too narrow, resulting in several attempts at constructing guidelines in favor of specific desiderata or arguing against the validity of prevalent assumptions. In this work, we depart from this mindset and argue that the goal of a precise formulation of desiderata is an ill-posed one, as diverse applications may always warrant distinct scenarios. Instead, we introduce the Continual Learning EValuation Assessment Compass, CLEVA-Compass for short. The compass provides the visual means to both identify how approaches are practically reported and how works can simultaneously be contextualized in the broader literature landscape. In addition to promoting compact specification in the spirit of recent replication trends, the CLEVA-Compass thus provides an intuitive chart to understand the priorities of individual systems, where they resemble each other, and what elements are missing towards a fair comparison.},
       Crossref={https://github.com/ml-research/CLEVA-Compass},
-      Url={https://arxiv.org/pdf/2110.03331.pdf}
+      Url={https://openreview.net/pdf?id=rHMaBYbkkRJ}
 }
 
 
@@ -1175,18 +1223,6 @@ help us manage the impacts of climate change.},
       Anote={./images/offensiveimages.jpg},
       Howpublished = {arXiv preprint arXiv:2110.04222},
       Keywords={Dataset Curation, Dataset Documentation, Computer Vision, Pre-trained models, Prompt-tuning, CLIP}
-}
-
-@misc{mundt2021clevacompass,
-      title={CLEVA-Compass: A Continual Learning EValuation Assessment Compass to Promote Research Transparency and Comparability},
-      author={Martin Mundt and Steven Lang and Quentin Delfosse and Kristian Kersting},
-      year={2021},
-      Keywords={Continual Learning, Lifelong Learning, Machine Learning Evaluation},
-      Anote={./images/CLEVA-Compass.png},
-      Note={What is the state of the art in continual machine learning? Although a natural question for predominant static benchmarks, the notion to train systems in a lifelong manner entails a plethora of additional challenges with respect to set-up and evaluation. The latter have recently sparked a growing amount of critiques on prominent algorithm-centric perspectives and evaluation protocols being too narrow, resulting in several attempts at constructing guidelines in favor of specific desiderata or arguing against the validity of prevalent assumptions. In this work, we depart from this mindset and argue that the goal of a precise formulation of desiderata is an ill-posed one, as diverse applications may always warrant distinct scenarios. Instead, we introduce the Continual Learning EValuation Assessment Compass, CLEVA-Compass for short. The compass provides the visual means to both identify how approaches are practically reported and how works can simultaneously be contextualized in the broader literature landscape. In addition to promoting compact specification in the spirit of recent replication trends, the CLEVA-Compass thus provides an intuitive chart to understand the priorities of individual systems, where they resemble each other, and what elements are missing towards a fair comparison.},
-      Crossref={https://github.com/ml-research/CLEVA-Compass},
-      Url={https://arxiv.org/pdf/2110.03331.pdf},
-      Howpublished = {arXiv preprint arXiv:2110.03331}
 }
 
 @misc{zecevic2021scit,
@@ -2157,22 +2193,10 @@ of our approach},
   Note = {Probabilistic circuits (PCs) are a promising avenue for probabilistic modeling, as they permit a wide range of exact and efficient inference routines. Recent ``deep-learning-style'' implementations of PCs strive for a better scalability, but are still difficult to train on real-world data, due to their sparsely connected computational graphs. In this paper, we propose Einsum Networks (EiNets), a novel implementation design for PCs, improving prior art in several regards. At their core, EiNets combine a large number of arithmetic operations in a single monolithic einsum-operation, leading to speedups and memory savings of up to two orders of magnitude, in comparison to previous implementations. As an algorithmic contribution, we show that the implementation of Expectation-Maximization (EM) can be simplified for PCs, by leveraging automatic differentiation. Furthermore, we demonstrate that EiNets scale well to datasets which were previously out of reach, such as SVHN and CelebA, and that they can be used as faithful generative image models.},
   Pages = {},
   Title = {Einsum Networks: Fast and Scalable Learning of Tractable Probabilistic Circuits},
-  Url = {https://arxiv.org/pdf/2004.06231.pdf},
+  Url = {http://proceedings.mlr.press/v119/peharz20a/peharz20a.pdf},
   Crossref = {https://github.com/cambridge-mlg/EinsumNetworks},
   Year = {2020}}
 
-
-@misc{peharz2020arxiv_einsum,
-    Anote = {./images/peharz2020arxiv_einsum.png},
-    title={Einsum Networks: Fast and Scalable Learning of Tractable Probabilistic Circuits},
-    author={Robert Peharz and Steven Lang and Antonio Vergari and Karl Stelzner and Alejandro Molina and Martin Trapp and Guy Van den Broeck and Kristian Kersting and Zoubin Ghahramani},
-    year={2020},
-    Howpublished = {arXiv preprint arXiv:2004.06231},
-    Note = {Probabilistic circuits (PCs) are a promising avenue for probabilistic modeling, as they permit a wide range of exact and efficient inference routines. Recent ``deep-learning-style'' implementations of PCs strive for a better scalability, but are still difficult to train on real-world data, due to their sparsely connected computational graphs. In this paper, we propose Einsum Networks (EiNets), a novel implementation design for PCs, improving prior art in several regards. At their core, EiNets combine a large number of arithmetic operations in a single monolithic einsum-operation, leading to speedups and memory savings of up to two orders of magnitude, in comparison to previous implementations. As an algorithmic contribution, we show that the implementation of Expectation-Maximization (EM) can be simplified for PCs, by leveraging automatic differentiation. Furthermore, we demonstrate that EiNets scale well to datasets which were previously out of reach, such as SVHN and CelebA, and that they can be used as faithful generative image models.},
-      Keywords = {Deep Learning, Probabilistic Circuits, Sum Product Networks, Einsum Operation, Scaling },
-    Pages = {},
-    Url={https://arxiv.org/pdf/2004.06231.pdf}
-}
 
 @article{schramowski2020moral,
     Anote = {./images/schramowski2020moral.png},
