@@ -1,3 +1,52 @@
+@misc{struppek23caia,
+  Anote={./images/caia.jpeg},
+  author = {Lukas Struppek and Dominik Hintersdorf and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting},  
+  title = {Image Classifiers Leak Sensitive Attributes About Their Classes},
+  Howpublished = {arXiv preprint arXiv:2303.09289},
+  year = {2023},
+  Url = {https://arxiv.org/pdf/2303.09289},
+  Pages = {},
+  Note = {Neural network-based image classifiers are powerful tools for computer vision tasks, but they inadvertently reveal sensitive 
+  attribute information about their classes, raising concerns about their privacy. To investigate this privacy leakage, we introduce the first 
+  Class Attribute Inference Attack (Caia), which leverages recent advances in text-to-image synthesis to infer sensitive attributes of individual 
+  classes in a black-box setting, while remaining competitive with related white-box attacks. Our extensive experiments in the face recognition 
+  domain show that Caia can accurately infer undisclosed sensitive attributes, such as an individual's hair color, gender and racial appearance, 
+  which are not part of the training labels. Interestingly, we demonstrate that adversarial robust models are even more vulnerable to such privacy 
+  leakage than standard models, indicating that a trade-off between robustness and privacy exists.},
+  Keywords = {Privacy, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion},
+}
+
+@article{uhlig2022anomaly_detection_fuzzy_hashes,
+      Anote = {./images/uhlig2022anomaly_detection_fuzzy_hashes.png},
+      title={Combining AI and AM – Improving Approximate Matching through Transformer Networks},
+      author={Frieder Uhlig and Lukas Struppek and Dominik Hintersdorf and Thomas Göbel and Harald Baier and Kristian Kersting},
+      year={2023},
+      month={July},
+      booktitle={Proceedings of the Annual DFRWS USA Conference 2023},
+      Note = {Approximate matching is a well-known concept in digital forensics to determine the similarity between digital artifacts. 
+      An important use case of approximate matching is the reliable and efficient detection of case-relevant data structures on a blacklist 
+      (e.g., malware or corporate secrets), if only fragments of the original are available. For instance, if only a cluster of indexed malware 
+      is still present during the digital forensic investigation, the approximate matching algorithm shall be able to assign the fragment to the 
+      blacklisted malware. However, traditional approximate matching functions like TLSH and ssdeep fail to detect files based on their fragments 
+      if the presented piece is relatively small compared to the overall file size (e.g., like one-third of the total file). A second well-known 
+      issue with traditional approximate matching algorithms is the lack of scaling due to the ever-increasing lookup databases. In this paper, 
+      we propose an improved matching algorithm based on transformer-based models from the field of natural language processing. We call our approach 
+      Deep Learning Approximate Matching (DLAM). As a concept from artificial intelligence, DLAM gets knowledge of characteristic blacklisted patterns 
+      during its training phase. Then DLAM is able to detect the patterns in a typically much larger file, that is DLAM focuses on the use case of 
+      fragment detection. Our evaluation is inspired by two widespread blacklist use cases: the detection of malware (e.g., in JavaScript) and 
+      corporate secrets (e.g., pdf or office documents). We reveal that DLAM has three key advantages compared to the prominent conventional approaches 
+      TLSH and ssdeep. First, it makes the tedious extraction of known to be bad parts obsolete, which is necessary until now before any search for 
+      them with approximate matching algorithms. This allows efficient classification of files on a much larger scale, which is important due to
+      exponentially increasing data to be investigated. Second, depending on the use case, DLAM achieves a similar (in case of mrsh-cf and mrsh-v2) or 
+      even significantly higher accuracy (in case of ssdeep and TLSH) in recovering fragments of blacklisted files. For instance, in the case of 
+      JavaScript files, our assessment shows that DLAM provides an accuracy of 93\% on our test corpus, while TLSH and ssdeep show a classification 
+      accuracy of only 50\%. Third, we show that DLAM enables the detection of file correlations in the output of TLSH and ssdeep even for fragment 
+      sizes, where the respective matching function of TLSH and ssdeep fails.},
+      Pages = {},
+      Keywords = {Approximate Matching, Fuzzy Hashes, Anomaly Detection, Deep Learning},
+      Url={https://arxiv.org/pdf/2208.11367.pdf}
+}
+
 @article{shindo2023alphailp,
 Anote={./images/shindo2023alphailp.png},
 author={Hikaru Shindo and Viktor Pfanschilling and Devendra Singh Dhami and Kristian Kersting},
@@ -280,19 +329,6 @@ Note = {As wind is the basis of all wind energy projects, a precise knowledge ab
       Pages = {},
       Keywords = {Identity Inference Attacks, Privacy, Computer Vision, Pre-trained models, CLIP, Deep Learning},
       Url={https://arxiv.org/pdf/2209.07341.pdf}
-}
-
-@misc{uhlig2022anomaly_detection_fuzzy_hashes,
-      Anote = {./images/uhlig2022anomaly_detection_fuzzy_hashes.png},
-      title={Transformer-Boosted Anomaly Detection with Fuzzy Hashes},
-      author={Frieder Uhlig and Lukas Struppek and Dominik Hintersdorf and Kristian Kersting},
-      year={2022},
-      month={Aug},
-      Howpublished = {arXiv preprint arXiv:2208.11367},
-      Note = {Fuzzy hashes are an important tool in digital forensics and are used in approximate matching to determine the similarity between digital artifacts. They translate the byte code of files into computable strings, which makes them particularly interesting for intelligent machine processing. In this work, we propose deep learning approximate matching (DLAM), which achieves much higher accuracy in detecting anomalies in fuzzy hashes than conventional approaches. In addition to the well-known application for clustering malware, we show that fuzzy hashes and deep learning are indeed well-suited to classify files according to the presence of certain content, e.g., malware. DLAM relies on transformer-based models from the field of natural language processing and outperforms existing methods. Traditional fuzzy hashes like TLSH and ssdeep have a limited size and fail to detect file anomalies if they are relatively small compared to the overall file size. DLAM, however, enables the detection of such file correlations in the computed fuzzy hashes of TLSH and ssdeep, even for anomaly sizes of less than 15%. It achieves comparable results to state-of-the-art fuzzy hashing algorithms while relying on more efficient hash computations and can, therefore, be used at a much larger scale.},
-      Pages = {},
-      Keywords = {Approximate Matching, Fuzzy Hashes, Anomaly Detection, Deep Learning},
-      Url={https://arxiv.org/pdf/2208.11367.pdf}
 }
 
 @unpublished{kersting2022welt_goodbad,
