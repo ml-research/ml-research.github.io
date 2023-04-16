@@ -1,0 +1,36 @@
+links DMML
+
+intro and ooverview
+
+https://www.youtube.com/watch?v=BfowBtIxNu4
+
+generel
+
+https://www.youtube.com/watch?v=xoA5v9AO7S0&list=PLLssT5z_DsK9JDLcT8T62VtzwyW9LNepV
+
+youtube.com/watch?v=u85j5ScpA1A
+
+https://www.youtube.com/watch?v=G_0d3w0THCc&list=PL3ukVAqSHxA20zDOQxUynkAwkiVmo-8Du
+
+association rules
+
+https://de.coursera.org/lecture/mongodb-aggregation-framework/intro-associative-role-learning-h8tFS
+https://www.coursera.org/lecture/process-mining/1-6-association-rule-learning-fk3JX
+https://www.youtube.com/watch?v=O9QnC5WJJ90
+https://www.youtube.com/watch?v=guVvtZ7ZClw
+
+CRISP
+
+https://www.youtube.com/watch?v=eAcxe3MzcVk
+
+naivee Bayes
+https://www.youtube.com/watch?v=vz_xuxYS2PM
+https://www.youtube.com/watch?v=l3dZ6ZNFjo0
+
+KNN
+
+https://www.youtube.com/watch?v=4HKqjENq9OU
+
+decisiono Tree
+
+https://www.youtube.com/watch?v=RmajweUFKvM
