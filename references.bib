@@ -1,3 +1,27 @@
+@misc{brack2023mitigating,
+  Anote={./images/brack2023mitigating.png},
+  author = {Manuel Brack and Felix Friedrich and Patrick Schramowski and Kristian Kersting},
+  title = {Mitigating Inappropriateness in Image Generation: Can there be Value in Reflecting the World's Ugliness?},
+  Howpublished = {arXiv preprint arXiv:2305.18398},
+  year = {2023},
+  Url = {https://arxiv.org/pdf/2305.18398},
+  Pages = {},
+  Note = {Text-conditioned image generation models have recently achieved astonishing results in image quality and text alignment and are consequently employed in a fast-growing number of applications. Since they are highly data-driven, relying on billion-sized datasets randomly scraped from the web, they also reproduce inappropriate human behavior. Specifically, we demonstrate inappropriate degeneration on a large-scale for various generative text-to-image models, thus motivating the need for monitoring and moderating them at deployment. To this end, we evaluate mitigation strategies at inference to suppress the generation of inappropriate content. Our findings show that we can use models' representations of the world's ugliness to align them with human preferences.},
+  Keywords = {Image Synthesis, Image Generation, Diffusion, AI Ethics, Inappropriatness, Evaluation, Mitigation},
+}
+
+@misc{bellagente2023multifusion,
+  Anote={./images/bellagente2023multifusion.png},
+  author = {Marco Bellagente and Manuel Brack and Hannah Teufel and Felix Friedrich and Björn Deiseroth and Constantin Eichenberg and Andrew Dai and Robert Baldock and Souradeep Nanda and Koen Oostermeijer and Andres Felipe Cruz-Salinas and Patrick Schramowski and Kristian Kersting and Samuel Weinbach},
+  title = {MultiFusion: Fusing Pre-Trained Models for Multi-Lingual, Multi-Modal Image Generation},
+  Howpublished = {arXiv preprint arXiv:2305.15296},
+  year = {2023},
+  Url = {https://arxiv.org/pdf/2305.15296},
+  Pages = {},
+  Note = {The recent popularity of text-to-image diffusion models (DM) can largely be attributed to the intuitive interface they provide to users. The intended generation can be expressed in natural language, with the model producing faithful interpretations of text prompts. However, expressing complex or nuanced ideas in text alone can be difficult. To ease image generation, we propose MultiFusion that allows one to express complex and nuanced concepts with arbitrarily interleaved inputs of multiple modalities and languages. MutliFusion leverages pre-trained models and aligns them for integration into a cohesive system, thereby avoiding the need for extensive training from scratch. Our experimental results demonstrate the efficient transfer of capabilities from individual modules to the downstream model. Specifically, the fusion of all independent components allows the image generation module to utilize multilingual, interleaved multimodal inputs despite being trained solely on monomodal data in a single language.},
+  Keywords = {Image Synthesis, Image Generation, Diffusion, Multimodality, Multilingualism},
+}
+
 @inproceedings{friedrich2023oneexp,
   Anote = {./images/friedrich2023xiltypology.png},
   title = {One explanation does not fit XIL},
@@ -11,18 +35,18 @@
 
 @misc{struppek23caia,
   Anote={./images/caia.jpeg},
-  author = {Lukas Struppek and Dominik Hintersdorf and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting},  
+  author = {Lukas Struppek and Dominik Hintersdorf and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting},
   title = {Image Classifiers Leak Sensitive Attributes About Their Classes},
   Howpublished = {arXiv preprint arXiv:2303.09289},
   year = {2023},
   Url = {https://arxiv.org/pdf/2303.09289},
   Pages = {},
-  Note = {Neural network-based image classifiers are powerful tools for computer vision tasks, but they inadvertently reveal sensitive 
-  attribute information about their classes, raising concerns about their privacy. To investigate this privacy leakage, we introduce the first 
-  Class Attribute Inference Attack (Caia), which leverages recent advances in text-to-image synthesis to infer sensitive attributes of individual 
-  classes in a black-box setting, while remaining competitive with related white-box attacks. Our extensive experiments in the face recognition 
-  domain show that Caia can accurately infer undisclosed sensitive attributes, such as an individual's hair color, gender and racial appearance, 
-  which are not part of the training labels. Interestingly, we demonstrate that adversarial robust models are even more vulnerable to such privacy 
+  Note = {Neural network-based image classifiers are powerful tools for computer vision tasks, but they inadvertently reveal sensitive
+  attribute information about their classes, raising concerns about their privacy. To investigate this privacy leakage, we introduce the first
+  Class Attribute Inference Attack (Caia), which leverages recent advances in text-to-image synthesis to infer sensitive attributes of individual
+  classes in a black-box setting, while remaining competitive with related white-box attacks. Our extensive experiments in the face recognition
+  domain show that Caia can accurately infer undisclosed sensitive attributes, such as an individual's hair color, gender and racial appearance,
+  which are not part of the training labels. Interestingly, we demonstrate that adversarial robust models are even more vulnerable to such privacy
   leakage than standard models, indicating that a trade-off between robustness and privacy exists.},
   Keywords = {Privacy, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion},
 }
