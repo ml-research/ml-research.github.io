@@ -61,7 +61,6 @@
     booktitle={Proceedings of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)},
     Url={}
 }
- 
 
 
 @inproceedings{mathur2023psb,
@@ -271,27 +270,11 @@ study and demonstrate the importance of the features and the causal independence
       title={Combining AI and AM – Improving Approximate Matching through Transformer Networks},
       author={Frieder Uhlig and Lukas Struppek and Dominik Hintersdorf and Thomas Göbel and Harald Baier and Kristian Kersting},
       year={2023},
-      month={July},
       booktitle={Proceedings of the Annual DFRWS USA Conference 2023},
-      Note = {Approximate matching is a well-known concept in digital forensics to determine the similarity between digital artifacts.
-      An important use case of approximate matching is the reliable and efficient detection of case-relevant data structures on a blacklist
-      (e.g., malware or corporate secrets), if only fragments of the original are available. For instance, if only a cluster of indexed malware
-      is still present during the digital forensic investigation, the approximate matching algorithm shall be able to assign the fragment to the
-      blacklisted malware. However, traditional approximate matching functions like TLSH and ssdeep fail to detect files based on their fragments
-      if the presented piece is relatively small compared to the overall file size (e.g., like one-third of the total file). A second well-known
-      issue with traditional approximate matching algorithms is the lack of scaling due to the ever-increasing lookup databases. In this paper,
-      we propose an improved matching algorithm based on transformer-based models from the field of natural language processing. We call our approach
-      Deep Learning Approximate Matching (DLAM). As a concept from artificial intelligence, DLAM gets knowledge of characteristic blacklisted patterns
-      during its training phase. Then DLAM is able to detect the patterns in a typically much larger file, that is DLAM focuses on the use case of
-      fragment detection. Our evaluation is inspired by two widespread blacklist use cases: the detection of malware (e.g., in JavaScript) and
-      corporate secrets (e.g., pdf or office documents). We reveal that DLAM has three key advantages compared to the prominent conventional approaches
-      TLSH and ssdeep. First, it makes the tedious extraction of known to be bad parts obsolete, which is necessary until now before any search for
-      them with approximate matching algorithms. This allows efficient classification of files on a much larger scale, which is important due to
-      exponentially increasing data to be investigated. Second, depending on the use case, DLAM achieves a similar (in case of mrsh-cf and mrsh-v2) or
-      even significantly higher accuracy (in case of ssdeep and TLSH) in recovering fragments of blacklisted files. For instance, in the case of
-      JavaScript files, our assessment shows that DLAM provides an accuracy of 93\% on our test corpus, while TLSH and ssdeep show a classification
-      accuracy of only 50\%. Third, we show that DLAM enables the detection of file correlations in the output of TLSH and ssdeep even for fragment
-      sizes, where the respective matching function of TLSH and ssdeep fails.},
+      Note = {Approximate matching is a well-known concept in digital forensics to determine the similarity between digital artifacts.An important use case of approximate matching is the reliable and efficient detection of case-relevant data structures on a blacklist (e.g., malware or corporate secrets), if only fragments of the original are available. For instance, if only a cluster of indexed malware is still present during the digital forensic investigation, the approximate matching algorithm shall be able to assign the fragment to the
+      blacklisted malware. However, traditional approximate matching functions like TLSH and ssdeep fail to detect files based on their fragments if the presented piece is relatively small compared to the overall file size (e.g., like one-third of the total file). A second well-known issue with traditional approximate matching algorithms is the lack of scaling due to the ever-increasing lookup databases. In this paper, we propose an improved matching algorithm based on transformer-based models from the field of natural language processing. We call our approach
+      Deep Learning Approximate Matching (DLAM). As a concept from artificial intelligence, DLAM gets knowledge of characteristic blacklisted patterns during its training phase. Then DLAM is able to detect the patterns in a typically much larger file, that is DLAM focuses on the use case of fragment detection. Our evaluation is inspired by two widespread blacklist use cases: the detection of malware (e.g., in JavaScript) and corporate secrets (e.g., pdf or office documents). We reveal that DLAM has three key advantages compared to the prominent conventional approaches TLSH and ssdeep. First, it makes the tedious extraction of known to be bad parts obsolete, which is necessary until now before any search for them with approximate matching algorithms. This allows efficient classification of files on a much larger scale, which is important due to exponentially increasing data to be investigated. Second, depending on the use case, DLAM achieves a similar (in case of mrsh-cf and mrsh-v2) or
+      even significantly higher accuracy (in case of ssdeep and TLSH) in recovering fragments of blacklisted files. For instance, in the case of JavaScript files, our assessment shows that DLAM provides an accuracy of 93\% on our test corpus, while TLSH and ssdeep show a classification accuracy of only 50%. Third, we show that DLAM enables the detection of file correlations in the output of TLSH and ssdeep even for fragment sizes, where the respective matching function of TLSH and ssdeep fails.},
       Pages = {},
       Keywords = {Approximate Matching, Fuzzy Hashes, Anomaly Detection, Deep Learning},
       Url={https://arxiv.org/pdf/2208.11367.pdf}
@@ -337,16 +320,14 @@ keywords={Neuro-Symbolic AI, Differentiable Reasoning, Inductive Logic Programmi
   author={Felix Friedrich and Wolfgang Stammer and Patrick Schramowski and Kristian Kersting},
   Journal = {Nature Machine Intelligence},
   Note = {As machine learning models become larger, and are increasingly trained on large and uncurated datasets in weakly supervised mode, it becomes important to establish mechanisms for inspecting, interacting with and revising models. These are necessary to mitigate shortcut learning effects and to guarantee that the model’s learned knowledge is aligned with human knowledge. Recently, several explanatory interactive machine learning methods have been developed for this purpose, but each has different motivations and methodological details. In this work, we provide a unification of various explanatory interactive machine learning methods into a single typology by establishing a common set of basic modules. We discuss benchmarks and other measures for evaluating the overall abilities of explanatory interactive machine learning methods. With this extensive toolbox, we systematically and quantitatively compare several explanatory interactive machine learning methods. In our evaluations, all methods are shown to improve machine learning models in terms of accuracy and explainability. However, we found remarkable differences in individual benchmark tasks, which reveal valuable application-relevant aspects for the integration of these benchmarks in the development of future methods.},
-  Keywords = {Explanatory Interactive Machine Learning (XIL), Research Transparency and Comparability, Explainable Artificial Intelligence (XAI), Human-AI Interaction, Human-guided AI},
+  Keywords = {Explanatory Interactive Machine Learning, XIL, Research Transparency, Research Comparability, Explainable Artificial Intelligence, XAI, Human-AI Interaction, Human-guided AI},
   Publisher = {Nature Publishing Group},
   year={2023},
-month={Mar},
-day={09},
-volume={5},
-pages={319-330},
-issn={2522-5839},
-doi={10.1038/s42256-023-00612-w},
-url={https://doi.org/10.1038/s42256-023-00612-w}
+  volume={5},
+  pages={319-330},
+  issn={2522-5839},
+  doi={10.1038/s42256-023-00612-w},
+  url={https://doi.org/10.1038/s42256-023-00612-w}
 }
 
 @misc{friedrich2023fair,
