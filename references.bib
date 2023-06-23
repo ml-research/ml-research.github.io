@@ -1,5 +1,5 @@
 
-@inproceedings{brack2023illume,
+@inproceedings{brack2023illume, 
   url = {https://arxiv.org/abs/2208.08241},
   author = {Manuel Brack and Patrick Schramowski and Björn Deiseroth and Kristian Kersting},
   title = {ILLUME: Rationalizing Vision-Language Models through Human Interactions},
@@ -23,6 +23,20 @@
       Keywords = {Safety, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Ethics},
       Url={https://arxiv.org/abs/2211.05105}
 }
+
+
+@inproceedings{delfosse2023ecml,
+    Anote = {./images/delfosse2023ecml.png},
+    title={Boosting Object Representation Learning via Motion and Object Continuity},
+    author={Quentin Delfosse and Wolfgang Stammer and Thomas Rothenbächer and Dwarak Vittal and Kristian Kersting},
+    Note = {Recent unsupervised multi-object detection models have shown impressive performance improvements, largely attributed to novel architectural inductive biases. Unfortunately, despite their good object localization and segmentation capabilities, their object encodings may still be suboptimal for downstream reasoning tasks, such as reinforcement learning. To overcome this, we propose to exploit object motion and continuity (objects do not pop in and out of existence). This is accomplished through two mechanisms: (i) providing temporal loss-based priors on object locations, and (ii) a contrastive object continuity loss across consecutive frames. Rather than developing an explicit deep architecture, the resulting unsupervised Motion and Object Continuity (MOC) training scheme can be instantiated using any object detection model baseline. Our results show large improvements in the performances of variational and slot-based models in terms of object discovery, convergence speed and overall latent object representations, particularly for playing Atari games. Overall, we show clear benefits of integrating motion and object continuity for downstream reasoning tasks, moving beyond object representation learning based only on reconstruction as well as evaluation based only on instance segmentation quality.},
+    year={2023},
+    Pages = {},
+    Keywords = {Object Continuity, Object-Centric Deep Learning, Reinforcement Learning, Motion Supervision },
+    booktitle={Proceedings of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)},
+    Url={}
+}
+
 
 
 
@@ -59,7 +73,7 @@ study and demonstrate the importance of the features and the causal independence
   We present OCAtari, a set of environment that provides object-centric state representations of
   Atari games, the most-used evaluation framework for deep RL approaches. OCAtari also allows for
   RAM state manipulations of the games to change and create specific or even novel situations.},
-  Keywords = {Object-centric, Atari, Benchmarks, Reinforcement Learning},
+  Keywords = {Object-centric, Atari, Benchmarks, Reinforcement Learning}
 }
 
 @misc{braun2023cake,
@@ -99,7 +113,7 @@ study and demonstrate the importance of the features and the causal independence
   year={2023},
   Pages={},
   Note={In combination with Reinforcement Learning, Monte-Carlo Tree Search has shown to outperform human grandmasters in games such as Chess, Shogi and Go with little to no prior domain knowledge. However, most classical use cases only feature up to two players. Scaling the search to an arbitrary number of players presents a computational challenge, especially if decisions have to be planned over a longer time horizon. In this work, we investigate techniques that transform general-sum multiplayer games into single-player and two-player games that consider other agents to act according to given opponent models. For our evaluation, we focus on the challenging Pommerman environment which involves partial observability, a long time horizon and sparse rewards. In combination with our search methods, we investigate the phenomena of opponent modeling using heuristics and self-play. Overall, we demonstrate the effectiveness of our multiplayer search variants both in a supervised learning and reinforcement learning setting.},
-  Keywords={Multi-Agent Planning, Supervised Learning, Reinforcement Learning},
+  Keywords={Multi-Agent Planning, Supervised Learning, Reinforcement Learning}
 }
 
 @article{bluml2023alphaze,
@@ -126,7 +140,7 @@ study and demonstrate the importance of the features and the causal independence
   Pages = {},
   Crossref = {https://github.com/QueensGambit/CrazyAra},
   Note = {While transformers have gained the reputation as the "Swiss army knife of AI", no one has challenged them to master the game of chess, one of the classical AI benchmarks. Simply using vision transformers (ViTs) within AlphaZero does not master the game of chess, mainly because ViTs are too slow. Even making them more efficient using a combination of MobileNet and NextViT does not beat what actually matters: a simple change of the input representation and value loss, resulting in a greater boost of up to 180 Elo points over AlphaZero.},
-  Keywords = {Transformer, Input Representation, Loss Formulation, Chess, Monte-Carlo Tree Search, AlphaZero},
+  Keywords = {Transformer, Input Representation, Loss Formulation, Chess, Monte-Carlo Tree Search, AlphaZero}
 }
 
 @misc{weil2023know,
@@ -161,7 +175,7 @@ study and demonstrate the importance of the features and the causal independence
   pages={149--156},
   year={2021},
   organization={IEEE},
-  Keywords = {Accurate Global Positioning, Sensing, Vision, and Perception, Simulation and Modeling},
+  Keywords = {Accurate Global Positioning, Sensing, Vision, and Perception, Simulation and Modeling}
 }
 
 @misc{buhler2018dynamic,
@@ -172,7 +186,7 @@ study and demonstrate the importance of the features and the causal independence
   Pages = {},
   Howpublished={Universit{\"a}ts-und Landesbibliothek Darmstadt},
   Url = {https://core.ac.uk/download/pdf/187766572.pdf},
-  Keywords = {Simulation and Modeling, Autonomous Sailing},
+  Keywords = {Simulation and Modeling, Autonomous Sailing}
 }
 
 @misc{brack2023mitigating,
@@ -184,7 +198,7 @@ study and demonstrate the importance of the features and the causal independence
   Url = {https://arxiv.org/pdf/2305.18398},
   Pages = {},
   Note = {Text-conditioned image generation models have recently achieved astonishing results in image quality and text alignment and are consequently employed in a fast-growing number of applications. Since they are highly data-driven, relying on billion-sized datasets randomly scraped from the web, they also reproduce inappropriate human behavior. Specifically, we demonstrate inappropriate degeneration on a large-scale for various generative text-to-image models, thus motivating the need for monitoring and moderating them at deployment. To this end, we evaluate mitigation strategies at inference to suppress the generation of inappropriate content. Our findings show that we can use models' representations of the world's ugliness to align them with human preferences.},
-  Keywords = {Image Synthesis, Image Generation, Diffusion, AI Ethics, Inappropriatness, Evaluation, Mitigation},
+  Keywords = {Image Synthesis, Image Generation, Diffusion, AI Ethics, Inappropriatness, Evaluation, Mitigation}
 }
 
 @misc{bellagente2023multifusion,
@@ -196,14 +210,14 @@ study and demonstrate the importance of the features and the causal independence
   Url = {https://arxiv.org/pdf/2305.15296},
   Pages = {},
   Note = {The recent popularity of text-to-image diffusion models (DM) can largely be attributed to the intuitive interface they provide to users. The intended generation can be expressed in natural language, with the model producing faithful interpretations of text prompts. However, expressing complex or nuanced ideas in text alone can be difficult. To ease image generation, we propose MultiFusion that allows one to express complex and nuanced concepts with arbitrarily interleaved inputs of multiple modalities and languages. MutliFusion leverages pre-trained models and aligns them for integration into a cohesive system, thereby avoiding the need for extensive training from scratch. Our experimental results demonstrate the efficient transfer of capabilities from individual modules to the downstream model. Specifically, the fusion of all independent components allows the image generation module to utilize multilingual, interleaved multimodal inputs despite being trained solely on monomodal data in a single language.},
-  Keywords = {Image Synthesis, Image Generation, Diffusion, Multimodality, Multilingualism},
+  Keywords = {Image Synthesis, Image Generation, Diffusion, Multimodality, Multilingualism}
 }
 
-@inproceedings{friedrich2023oneexp,
+@incollection{friedrich2023oneexp,
   Anote = {./images/friedrich2023xiltypology.png},
   title = {One explanation does not fit XIL},
   author={Felix Friedrich and David Steinmann and Kristian Kersting},
-  booktitle = {Proceedings of the International Conference on Representation Learning (ICLR), Tiny Paper},
+  booktitle = {Tiny Paper in the Proceedings of the International Conference on Representation Learning (ICLR)},
   Note = {Current machine learning models produce outstanding results in many areas but, at the same time, suffer from shortcut learning and spurious correlations. To address such flaws, the explanatory interactive machine learning (XIL) framework has been proposed to revise a model by employing user feedback on a model's explanation. This work sheds light on the explanations used within this framework. In particular, we investigate simultaneous model revision through multiple explanation methods. To this end, we identified that one explanation does not fit XIL and propose considering multiple ones when revising models via XIL.},
   Keywords = {Explanatory Interactive Machine Learning (XIL), Explainable Artificial Intelligence (XAI), Human-AI Interaction, Human-guided AI},
   year={2023},
@@ -225,7 +239,7 @@ study and demonstrate the importance of the features and the causal independence
   domain show that Caia can accurately infer undisclosed sensitive attributes, such as an individual's hair color, gender and racial appearance,
   which are not part of the training labels. Interestingly, we demonstrate that adversarial robust models are even more vulnerable to such privacy
   leakage than standard models, indicating that a trade-off between robustness and privacy exists.},
-  Keywords = {Privacy, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion},
+  Keywords = {Privacy, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion}
 }
 
 @inproceedings{uhlig2022dlam,
@@ -340,7 +354,7 @@ url={https://doi.org/10.1038/s42256-023-00612-w}
   copyright = {Creative Commons Attribution 4.0 International},
   journal={arXiv preprint, arXiv:2302.06544},
   Howpublished={arXiv preprint, arXiv:2302.06544},
-  Crossref={https://github.com/ml-research/tractable-dropout-inference},
+  Crossref={https://github.com/ml-research/tractable-dropout-inference}
 }
 
 @article{pfeuffer2023xil,
@@ -1568,7 +1582,7 @@ help us manage the impacts of climate change.},
     Note = {Probabilistic circuits (PCs) have become the de-facto standard for learning and inference in probabilistic modeling. We introduce Sum-Product-Attention Networks (SPAN), a new generative model that integrates probabilistic circuits with Transformers. SPAN uses self-attention to select the most relevant parts of a probabilistic circuit, here sum-product networks, to improve the modeling capability of the underlying sum-product network. We show that while modeling, SPAN focuses on a specific set of independent assumptions in every product layer of the sum-product network. Our empirical evaluations show that SPAN outperforms state-of-the-art probabilistic generative models on various benchmark data sets as well is an efficient generative image model.},
     author = {Zhongjie Yu and Devendra Singh Dhami and Kristian Kersting},
     year = {2021},
-    Keywords = {Self-Attention, Probabilistic Circuits, Sum-Product-Attention Network, Transformer},
+    Keywords = {Self-Attention, Probabilistic Circuits, Sum-Product-Attention Network, Transformer}
 }
 
 
@@ -1580,7 +1594,7 @@ help us manage the impacts of climate change.},
     Url = {https://arxiv.org/pdf/2106.04148.pdf},
     Howpublished = {arXiv preprint arXiv:2106.04148},
     Note = {Time series forecasting is a relevant task that is performed in several real-world scenarios such as product sales analysis and prediction of energy demand. Given their accuracy performance, currently, Recurrent Neural Networks (RNNs) are the models of choice for this task. Despite their success in time series forecasting, less attention has been paid to make the RNNs trustworthy. For example, RNNs can not naturally provide an uncertainty measure to their predictions. This could be extremely useful in practice in several cases e.g. to detect when a prediction might be completely wrong due to an unusual pattern in the time series. Whittle Sum-Product Networks (WSPNs), prominent deep tractable probabilistic circuits (PCs) for time series, can assist an RNN with providing meaningful probabilities as uncertainty measure. With this aim, we propose RECOWN, a novel architecture that employs RNNs and a discriminant variant of WSPNs called Conditional WSPNs (CWSPNs). We also formulate a Log-Likelihood Ratio Score as an estimation of uncertainty that is tailored to time series and Whittle likelihoods. In our experiments, we show that RECOWNs are accurate and trustworthy time series predictors, able to "know when they do not know".},
-    Keywords = {Whittle Likelihood, Time Series Forecasting, Uncertainty, Fourier Transform, Whittle Sum-Product Network, Spectral RNN, Probabilistic Circuits},
+    Keywords = {Whittle Likelihood, Time Series Forecasting, Uncertainty, Fourier Transform, Whittle Sum-Product Network, Spectral RNN, Probabilistic Circuits}
 }
 
 
@@ -4009,7 +4023,7 @@ non-invasive analysis of wounds using hyperspectral imagery.},
     Title = {Monitoring Wound Healing in a 3D Wound Model by Hyperspectral Imaging and Efficient Clustering},
     Url = {./papers/wahabzada2017plosone_woundHealing.pdf},
     Volume = {},
-    Year = {2017},
+    Year = {2017}
 }
 
 
