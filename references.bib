@@ -25,6 +25,49 @@
 }
 
 
+
+@inproceedings{sidheekh2023uai,
+  Anote={./images/sidheekh2023uai.png},
+  Url = {./papers/sidheekh2023uai.pdf},
+  author = {Sahil Sidheekh and Kristian Kersting and Sriraam Natarajan},
+  title = {Probabilistic Flow Circuits: Towards Unified Deep Models for Tractable Probabilistic Inference},
+  Note = {We consider the problem of increasing the expressivity of probabilistic circuits by augmenting them with the successful generative models of normalizing flows. To this effect, we theoretically establish the requirement of decomposability for such combinations to retain tractability of the learned models. Our model, called Probabilistic Flow Circuits, essentially extends circuits by allowing for normalizing flows at the leaves. Our empirical evaluation clearly establishes the expressivity and tractability of this new class of probabilistic circuits},
+    year={2023},
+    Pages = {},
+    Keywords = {Probabilistic Circuits, Normalizing Flows, Deep Learning, Tractablity,
+    booktitle={Proceedings of the 39th Conference on Uncertainty in Artificial Intelligence (UAI)},
+
+  }
+
+
+@inproceedings{ventola2023uai,
+  Anote={./images/ventola-braun2023tdi.png},
+  Url = {https://arxiv.org/abs/2302.06544},
+  author = {Fabrizio Ventola and Steven Braun and Zhongjie Yu and Martin Mundt and Kristian Kersting},
+  title = {Probabilistic Circuits That Know What They Don't Know},
+   Note = {Probabilistic circuits (PCs) are models that allow exact and tractable probabilistic inference. In contrast to neural networks, they are often assumed to be well-calibrated and robust to out-of-distribution (OOD) data. In this paper, we show that PCs are in fact not robust to OOD data, i.e., they don’t know what they don’t know. We then show how this challenge can be overcome by model uncertainty quantification. To this end, we propose tractable dropout inference (TDI), an inference procedure to estimate uncertainty by deriving an analytical solution to Monte Carlo dropout (MCD) through variance propagation. Unlike MCD in neural networks, which comes at the cost of multiple network evaluations, TDI provides tractable sampling-free uncertainty estimates in a single forward pass. TDI improves the robustness of PCs to distribution shift and OOD data, demonstrated through a series of experiments evaluating the classification confidence and uncertainty estimates on real-world data.},
+    year={2023},
+    Pages = {},
+    Keywords = {Probabilistic Circuits, Dropout, Out-Of-Distribution, Tractable Dropput Inference},
+    booktitle={Proceedings of the 39th Conference on Uncertainty in Artificial Intelligence (UAI)},
+
+  }
+
+
+@inproceedings{yu2022whittle,
+    Anote = {./images/yu2022whittle.png},
+    title={Predictive Whittle Networks for Time Series},
+    author={Zhongjie Yu and Fabrizio Ventola and Nils Thoma and Devendra Singh Dhami and Martin Mundt and Kristian Kersting},
+    Note = {Recent developments have shown that modeling in the spectral domain improves the accuracy in time series forecasting. However, state-of-the-art neural spectral forecasters do not generally yield trustworthy predictions. In particular, they lack the means to gauge predictive likelihoods and provide uncertainty estimates. We propose predictive Whittle networks to bridge this gap, which exploit both the advances of neural forecasting in the spectral domain and leverage tractable likelihoods of probabilistic circuits. For this purpose, we propose a novel Whittle forecasting loss that makes use of these predictive likelihoods to guide the training of the neural forecasting component. We demonstrate how predictive Whittle networks improve real-world forecasting accuracy, while also allowing a transformation back into the time domain, in order to provide the necessary feedback of when the model's prediction may become erratic.},
+    year={2022},
+    Pages = {},
+    Keywords = {Short Time Fourier Transform, Whittle Likelihood, Probabilistic Circuits, Deep Neural Networks, LSTM},
+    booktitle={Proceedings of the 38th Conference on Uncertainty in Artificial Intelligence (UAI), PMLR 180:2320-2330},
+    Url={./papers/yu2022whittle.pdf}
+}
+
+
+
 @inproceedings{delfosse2023ecml,
     Anote = {./images/delfosse2023ecml.png},
     title={Boosting Object Representation Learning via Motion and Object Continuity},
@@ -36,6 +79,7 @@
     booktitle={Proceedings of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)},
     Url={}
 }
+
 
 
 
