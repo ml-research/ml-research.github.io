@@ -8,7 +8,7 @@
   Note = {Bootstrapping from pre-trained language models has been proven to be an efficient approach for building vision-language models (VLM) for tasks such as image captioning or visual question answering. However, outputs of these models rarely align with user's rationales for specific answers. In order to improve this alignment and reinforce commonsense reasons, we propose a tuning paradigm based on human interactions with machine generated data. Our ILLUME executes the following loop: Given an image-question-answer prompt, the VLM samples multiple candidate rationales, and a human critic provides minimal feedback via preference selection, used for fine-tuning. This loop increases the training data and gradually carves out the VLM's rationalization capabilities that are aligned with human intend. Our exhaustive experiments demonstrate that ILLUME is competitive with standard supervised fine-tuning while using significantly fewer training data and only requiring minimal feedback.},
   year={2023},
   booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML)},
-  Url = {https://arxiv.org/pdf/2208.08241.pdf},
+  Url = {https://arxiv.org/pdf/2208.08241.pdf}
 }
 
 @inproceedings{schramowski2022safe,
@@ -51,7 +51,14 @@ study and demonstrate the importance of the features and the causal independence
   Url = {https://arxiv.org/abs/2306.08649},
   Pages = {},
   Crossref={https://github.com/k4ntz/OC_Atari},
-  Note = {Cognitive science and psychology suggest that object-centric representations of complex scenes are a promising step towards enabling efficient abstract reasoning from low-level perceptual features. Yet, most deep reinforcement learning approaches rely on only pixel-based representations that do not capture the compositional properties of natural scenes. For this, we need environments and datasets that allow us to work and evaluate object-centric approaches. We present OCAtari, a set of environment that provides object-centric state representations of Atari games, the most-used evaluation framework for deep RL approaches. OCAtari also allows for RAM state manipulations of the games to change and create specific or even novel situations.},
+  Note = {Cognitive science and psychology suggest that object-centric representations of complex
+  scenes are a promising step towards enabling efficient abstract reasoning from low-level
+  perceptual features. Yet, most deep reinforcement learning approaches rely on only pixel-based
+  representations that do not capture the compositional properties of natural scenes. For this,
+  we need environments and datasets that allow us to work and evaluate object-centric approaches.
+  We present OCAtari, a set of environment that provides object-centric state representations of
+  Atari games, the most-used evaluation framework for deep RL approaches. OCAtari also allows for
+  RAM state manipulations of the games to change and create specific or even novel situations.},
   Keywords = {Object-centric, Atari, Benchmarks, Reinforcement Learning},
 }
 
@@ -68,12 +75,21 @@ study and demonstrate the importance of the features and the causal independence
   journal={arXiv preprint, arXiv:2306.02090},
   Howpublished={arXiv preprint, arXiv:2306.02090},
   Url={https://arxiv.org/pdf/2306.02090.pdf},
-  Note={Access to pre-trained models has recently emerged as a standard across numerous machine learning domains. Unfortunately, access to the original data the models were trained on may not equally be granted. This makes it tremendously challenging to fine-tune, compress models, adapt continually, or to do any other type of data-driven update. We posit that original data access may however not be required. Specifically, we propose Contrastive Abductive Knowledge Extraction (CAKE), a model-agnostic knowledge distillation procedure that mimics deep classifiers without access to the original data. To this end, CAKE generates pairs of noisy synthetic samples and diffuses them contrastively toward a model's decision boundary. We empirically corroborate CAKE's effectiveness using several benchmark datasets and various architectural choices, paving the way for broad application.}
+  Note={Access to pre-trained models has recently emerged as a standard across numerous
+  machine learning domains. Unfortunately, access to the original data the models
+  were trained on may not equally be granted. This makes it tremendously challenging to fine-tune,
+  compress models, adapt continually, or to do any other type of data-driven update. We posit that
+  original data access may however not be required. Specifically, we propose Contrastive Abductive
+  Knowledge Extraction (CAKE), a model-agnostic knowledge distillation procedure that mimics deep
+  classifiers without access to the original data. To this end, CAKE generates pairs of noisy
+  synthetic samples and diffuses them contrastively toward a model's decision boundary. We
+  empirically corroborate CAKE's effectiveness using several benchmark datasets and various
+  architectural choices, paving the way for broad application.}
 }
 
 
 
-@inproceedings{weil2023knowYourEnemy,
+@incollection{weil2023knowYourEnemy,
   Anote={./images/weil2023knowYourEnemy.png},
   author={Jannis Weil and Johannes Czech and Tobias Meuser and Kristian Kersting},
   title={{Know your Enemy: Investigating Monte-Carlo Tree Search with Opponent Models in Pommerman}},
@@ -122,8 +138,18 @@ study and demonstrate the importance of the features and the causal independence
   Url = {https://arxiv.org/pdf/2305.13206},
   Crossref={https://github.com/jw3il/PommerLearn},
   Pages = {},
-  Note={In combination with Reinforcement Learning, Monte-Carlo Tree Search has shown to outperform human grandmasters in games such as Chess, Shogi and Go with little to no prior domain knowledge. However, most classical use cases only feature up to two players. Scaling the search to an arbitrary number of players presents a computational challenge, especially if decisions have to be planned over a longer time horizon. In this work, we investigate techniques that transform general-sum multiplayer games into single-player and two-player games that consider other agents to act according to given opponent models. For our evaluation, we focus on the challenging Pommerman environment which involves partial observability, a long time horizon and sparse rewards. In combination with our search methods, we investigate the phenomena of opponent modeling using heuristics and self-play. Overall, we demonstrate the effectiveness of our multiplayer search variants both in a supervised learning and reinforcement learning setting.},
-  Keywords={Multi-Agent Planning, Supervised Learning, Reinforcement Learning},
+  Note={In combination with Reinforcement Learning, Monte-Carlo Tree Search has shown to outperform
+  human grandmasters in games such as Chess, Shogi and Go with little to no prior domain knowledge.
+  However, most classical use cases only feature up to two players. Scaling the search to an arbitrary
+  number of players presents a computational challenge, especially if decisions have to be planned
+  over a longer time horizon. In this work, we investigate techniques that transform general-sum
+  multiplayer games into single-player and two-player games that consider other agents to act
+  according to given opponent models. For our evaluation, we focus on the challenging Pommerman
+  environment which involves partial observability, a long time horizon and sparse rewards. In
+  combination with our search methods, we investigate the phenomena of opponent modeling using
+  heuristics and self-play. Overall, we demonstrate the effectiveness of our multiplayer search
+  variants both in a supervised learning and reinforcement learning setting.},
+  Keywords={Multi-Agent Planning, Supervised Learning, Reinforcement Learning}
 }
 
 @inproceedings{flade2021error,
