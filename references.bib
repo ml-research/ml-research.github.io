@@ -1,3 +1,125 @@
+
+@inproceedings{brack2023illume, 
+  author = {Manuel Brack and Patrick Schramowski and Björn Deiseroth and Kristian Kersting},
+  title = {ILLUME: Rationalizing Vision-Language Models through Human Interactions},
+  Anote = {./images/brack2022illume.png},
+  Keywords = {Alignement, Self-Generated Explanations, XAI, Explanatory Interactive Learning},
+  Note = {Bootstrapping from pre-trained language models has been proven to be an efficient approach for building vision-language models (VLM) for tasks such as image captioning or visual question answering. However, outputs of these models rarely align with user's rationales for specific answers. In order to improve this alignment and reinforce commonsense reasons, we propose a tuning paradigm based on human interactions with machine generated data. Our ILLUME executes the following loop: Given an image-question-answer prompt, the VLM samples multiple candidate rationales, and a human critic provides minimal feedback via preference selection, used for fine-tuning. This loop increases the training data and gradually carves out the VLM's rationalization capabilities that are aligned with human intend. Our exhaustive experiments demonstrate that ILLUME is competitive with standard supervised fine-tuning while using significantly fewer training data and only requiring minimal feedback.},
+  year={2023},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML)},
+  Url = {https://arxiv.org/pdf/2208.08241.pdf}
+}
+
+@inproceedings{schramowski2022safe,
+      Anote = {./images/schramowski2022safe.png},
+      title={Safe Latent Diffusion: Mitigating Inappropriate Degeneration in Diffusion Models},
+      author={Patrick Schramowski and Manuel Brack and Björn Deiseroth and Kristian Kersting},
+      booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+      year = {2023},
+      Note = {Text-conditioned image generation models have recently achieved astonishing results in image quality and text alignment and are consequently employed in a fast-growing number of applications. Since they are highly data-driven, relying on billion-sized datasets randomly scraped from the internet, they also suffer, as we demonstrate, from degenerated and biased human behavior. In turn, they may even reinforce such biases. To help combat these undesired side effects, we present safe latent diffusion (SLD). Specifically, to measure the inappropriate degeneration due to unfiltered and imbalanced training sets, we establish a novel image generation test bed-inappropriate image prompts (I2P)-containing dedicated, real-world image-to-text prompts covering concepts such as nudity and violence. As our exhaustive empirical evaluation demonstrates, the introduced SLD removes and suppresses inappropriate image parts during the diffusion process, with no additional training required and no adverse effect on overall image quality or text alignment.},
+      Pages = {},
+      Keywords = {Safety, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Ethics},
+      Url={https://arxiv.org/abs/2211.05105}
+}
+
+
+@inproceedings{sidheekh2023uai,
+  Anote={./images/sidheekh2023uai.png},
+  Url = {./papers/sidheekh2023uai.pdf},
+  author = {Sahil Sidheekh and Kristian Kersting and Sriraam Natarajan},
+  title = {Probabilistic Flow Circuits: Towards Unified Deep Models for Tractable Probabilistic Inference},
+  Note = {We consider the problem of increasing the expressivity of probabilistic circuits by augmenting them with the successful generative models of normalizing flows. To this effect, we theoretically establish the requirement of decomposability for such combinations to retain tractability of the learned models. Our model, called Probabilistic Flow Circuits, essentially extends circuits by allowing for normalizing flows at the leaves. Our empirical evaluation clearly establishes the expressivity and tractability of this new class of probabilistic circuits},
+  year={2023},
+  Pages = {},
+  Keywords = {Probabilistic Circuits, Normalizing Flows, Deep Learning, Tractablity},
+  booktitle={Proceedings of the 39th Conference on Uncertainty in Artificial Intelligence (UAI)}
+}
+
+
+@inproceedings{ventola2023uai,
+  Anote={./images/ventola-braun2023tdi.png},
+  Url = {https://arxiv.org/abs/2302.06544},
+  author = {Fabrizio Ventola and Steven Braun and Zhongjie Yu and Martin Mundt and Kristian Kersting},
+  title = {Probabilistic Circuits That Know What They Don't Know},
+   Note = {Probabilistic circuits (PCs) are models that allow exact and tractable probabilistic inference. In contrast to neural networks, they are often assumed to be well-calibrated and robust to out-of-distribution (OOD) data. In this paper, we show that PCs are in fact not robust to OOD data, i.e., they don’t know what they don’t know. We then show how this challenge can be overcome by model uncertainty quantification. To this end, we propose tractable dropout inference (TDI), an inference procedure to estimate uncertainty by deriving an analytical solution to Monte Carlo dropout (MCD) through variance propagation. Unlike MCD in neural networks, which comes at the cost of multiple network evaluations, TDI provides tractable sampling-free uncertainty estimates in a single forward pass. TDI improves the robustness of PCs to distribution shift and OOD data, demonstrated through a series of experiments evaluating the classification confidence and uncertainty estimates on real-world data.},
+    year={2023},
+    Pages = {},
+    Keywords = {Probabilistic Circuits, Dropout, Out-Of-Distribution, Tractable Dropput Inference, Robustness},
+    booktitle={Proceedings of the 39th Conference on Uncertainty in Artificial Intelligence (UAI)}
+}
+
+
+@inproceedings{delfosse2023ecml,
+    Anote = {./images/delfosse2023ecml.png},
+    title={Boosting Object Representation Learning via Motion and Object Continuity},
+    author={Quentin Delfosse and Wolfgang Stammer and Thomas Rothenbächer and Dwarak Vittal and Kristian Kersting},
+    Note = {Recent unsupervised multi-object detection models have shown impressive performance improvements, largely attributed to novel architectural inductive biases. Unfortunately, despite their good object localization and segmentation capabilities, their object encodings may still be suboptimal for downstream reasoning tasks, such as reinforcement learning. To overcome this, we propose to exploit object motion and continuity (objects do not pop in and out of existence). This is accomplished through two mechanisms: (i) providing temporal loss-based priors on object locations, and (ii) a contrastive object continuity loss across consecutive frames. Rather than developing an explicit deep architecture, the resulting unsupervised Motion and Object Continuity (MOC) training scheme can be instantiated using any object detection model baseline. Our results show large improvements in the performances of variational and slot-based models in terms of object discovery, convergence speed and overall latent object representations, particularly for playing Atari games. Overall, we show clear benefits of integrating motion and object continuity for downstream reasoning tasks, moving beyond object representation learning based only on reconstruction as well as evaluation based only on instance segmentation quality.},
+    year={2023},
+    Pages = {},
+    Keywords = {Object Continuity, Object-Centric Deep Learning, Reinforcement Learning, Motion Supervision},
+    booktitle={Proceedings of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)},
+    Url={}
+}
+
+
+@inproceedings{mathur2023psb,
+    Anote = {./images/mathur2023psb.png},
+    title={Exploiting Domain Knowledge as Causal Independencies in Modeling Gestational Diabetes},
+    author={Saurabh Mathur and Athresh Karanam and Predrag Radivojac and David M. Haas and Kristian Kersting and Sriraam Natarajan},
+    Note = {We consider the problem of modeling gestational diabetes in a clinical study and develop
+a domain expert-guided probabilistic model that is both interpretable and explainable.
+Specifically, we construct a probabilistic model based on causal independence (Noisy-Or)
+from a carefully chosen set of features. We validate the efficacy of the model on the clinical
+study and demonstrate the importance of the features and the causal independence model.},
+    year={2023},
+    Pages = {},
+    Keywords = {Bayesian Network, Noisy-Or, Causal Independence, Gestational Diabete},
+    booktitle={Proceedings of the 28th Pacific Symposium on Biocomputing (PSB)},
+    Url={./papers/mathur2023psb.pdf}
+}
+
+@inproceedings{haemmerl2023fofindingsACL, 
+  url = {./papers/haemmerl2023fofindingsACL.pdf},
+  author = {Katharina Hämmerl and Bjoern Deiseroth and Patrick Schramowski and Jindřich Libovický and Constantin Rothkopf and Alexander Fraser and Kristian Kersting },
+  title = {Speaking Multiple Languages Affects the Moral Bias of Language Models},
+  Anote = {./images/haemmerl2023fofindingsACL.png},
+  Keywords = {Alignement, Values, Sovial Norms, LLM, multi-lingual},
+  Note = {Pre-trained multilingual language models (PMLMs) are commonly used when dealing
+with data from multiple languages and crosslingual transfer. However, PMLMs are trained
+on varying amounts of data for each language. In practice this means their performance is often much better on English than many other languages. We explore to what extent this also
+applies to moral norms. Do the models capture moral norms from English and impose them
+on other languages? Do the models exhibit random and thus potentially harmful beliefs in
+certain languages? Both these issues could negatively impact cross-lingual transfer and potentially lead to harmful outcomes. In this paper, we (1) apply the MORALDIRECTION framework to multilingual models, comparing results
+in German, Czech, Arabic, Chinese, and English, (2) analyse model behaviour on filtered
+parallel subtitles corpora, and (3) apply the models to a Moral Foundations Questionnaire,
+comparing with human responses from different countries. Our experiments demonstrate
+that PMLMs do encode differing moral biases, but these do not necessarily correspond to cultural differences or commonalities in human opinions.},
+  year={2023},
+  booktitle = {Findings of the Association for Computational Linguistics (ACL)},
+  Url = {https://arxiv.org/pdf/2208.08241.pdf}
+}
+
+
+@misc{delfosse2023ocatari,
+  Anote={./images/delfosse2023ocatari.png},
+  author = {Quentin Delfosse and Jannis Blüml and Bjarne Gregori and Sebastian Sztwiertnia and Kristian Kersting},
+  title = {OCAtari: Object-Centric Atari 2600 Reinforcement Learning Environments},
+  Howpublished = {arXiv preprint arXiv:2306.08649},
+  year = {2023},
+  Url = {https://arxiv.org/abs/2306.08649},
+  Pages = {},
+  Crossref={https://github.com/k4ntz/OC_Atari},
+  Note = {Cognitive science and psychology suggest that object-centric representations of complex
+  scenes are a promising step towards enabling efficient abstract reasoning from low-level
+  perceptual features. Yet, most deep reinforcement learning approaches rely on only pixel-based
+  representations that do not capture the compositional properties of natural scenes. For this,
+  we need environments and datasets that allow us to work and evaluate object-centric approaches.
+  We present OCAtari, a set of environment that provides object-centric state representations of
+  Atari games, the most-used evaluation framework for deep RL approaches. OCAtari also allows for
+  RAM state manipulations of the games to change and create specific or even novel situations.},
+  Keywords = {Object-centric, Atari, Benchmarks, Reinforcement Learning}
+}
+
 @misc{braun2023cake,
   Anote={./images/braun2023cake.png},
   publisher = {arXiv},
@@ -11,20 +133,31 @@
   journal={arXiv preprint, arXiv:2306.02090},
   Howpublished={arXiv preprint, arXiv:2306.02090},
   Url={https://arxiv.org/pdf/2306.02090.pdf},
-  Note={Access to pre-trained models has recently emerged as a standard across numerous machine learning domains. Unfortunately, access to the original data the models were trained on may not equally be granted. This makes it tremendously challenging to fine-tune, compress models, adapt continually, or to do any other type of data-driven update. We posit that original data access may however not be required. Specifically, we propose Contrastive Abductive Knowledge Extraction (CAKE), a model-agnostic knowledge distillation procedure that mimics deep classifiers without access to the original data. To this end, CAKE generates pairs of noisy synthetic samples and diffuses them contrastively toward a model's decision boundary. We empirically corroborate CAKE's effectiveness using several benchmark datasets and various architectural choices, paving the way for broad application.}
+  Note={Access to pre-trained models has recently emerged as a standard across numerous
+  machine learning domains. Unfortunately, access to the original data the models
+  were trained on may not equally be granted. This makes it tremendously challenging to fine-tune,
+  compress models, adapt continually, or to do any other type of data-driven update. We posit that
+  original data access may however not be required. Specifically, we propose Contrastive Abductive
+  Knowledge Extraction (CAKE), a model-agnostic knowledge distillation procedure that mimics deep
+  classifiers without access to the original data. To this end, CAKE generates pairs of noisy
+  synthetic samples and diffuses them contrastively toward a model's decision boundary. We
+  empirically corroborate CAKE's effectiveness using several benchmark datasets and various
+  architectural choices, paving the way for broad application.}
 }
 
-@inproceedings{weil2023knowYourEnemy,
+
+
+@incollection{weil2023knowYourEnemy,
   Anote={./images/weil2023knowYourEnemy.png},
   author={Jannis Weil and Johannes Czech and Tobias Meuser and Kristian Kersting},
-  title={{Know your Enemy: Investigating Monte-Carlo Tree Search with Opponent Models in Pommerman}},
-  booktitle={Proceedings of the Adaptive and Learning Agents Workshop (ALA) at AAMAS 2023},
+  title={Know your Enemy: Investigating Monte-Carlo Tree Search with Opponent Models in Pommerman},
+  booktitle={Proceedings of AAMAS Workshop Adaptive and Learning Agents (ALA)},
   Url={https://alaworkshop2023.github.io/papers/ALA2023_paper_45.pdf},
   Crossref={https://github.com/jw3il/PommerLearn},
   year={2023},
   Pages={},
   Note={In combination with Reinforcement Learning, Monte-Carlo Tree Search has shown to outperform human grandmasters in games such as Chess, Shogi and Go with little to no prior domain knowledge. However, most classical use cases only feature up to two players. Scaling the search to an arbitrary number of players presents a computational challenge, especially if decisions have to be planned over a longer time horizon. In this work, we investigate techniques that transform general-sum multiplayer games into single-player and two-player games that consider other agents to act according to given opponent models. For our evaluation, we focus on the challenging Pommerman environment which involves partial observability, a long time horizon and sparse rewards. In combination with our search methods, we investigate the phenomena of opponent modeling using heuristics and self-play. Overall, we demonstrate the effectiveness of our multiplayer search variants both in a supervised learning and reinforcement learning setting.},
-  Keywords={Multi-Agent Planning, Supervised Learning, Reinforcement Learning},
+  Keywords={Multi-Agent Planning, Supervised Learning, Reinforcement Learning}
 }
 
 @article{bluml2023alphaze,
@@ -49,8 +182,9 @@
   year = {2023},
   Url = {https://arxiv.org/pdf/2304.14918},
   Pages = {},
+  Crossref = {https://github.com/QueensGambit/CrazyAra},
   Note = {While transformers have gained the reputation as the "Swiss army knife of AI", no one has challenged them to master the game of chess, one of the classical AI benchmarks. Simply using vision transformers (ViTs) within AlphaZero does not master the game of chess, mainly because ViTs are too slow. Even making them more efficient using a combination of MobileNet and NextViT does not beat what actually matters: a simple change of the input representation and value loss, resulting in a greater boost of up to 180 Elo points over AlphaZero.},
-  Keywords = {Transformer, Input Representation, Loss Formulation, Chess, Monte-Carlo Tree Search, AlphaZero},
+  Keywords = {Transformer, Input Representation, Loss Formulation, Chess, Monte-Carlo Tree Search, AlphaZero}
 }
 
 @misc{weil2023know,
@@ -62,8 +196,18 @@
   Url = {https://arxiv.org/pdf/2305.13206},
   Crossref={https://github.com/jw3il/PommerLearn},
   Pages = {},
-  Note={In combination with Reinforcement Learning, Monte-Carlo Tree Search has shown to outperform human grandmasters in games such as Chess, Shogi and Go with little to no prior domain knowledge. However, most classical use cases only feature up to two players. Scaling the search to an arbitrary number of players presents a computational challenge, especially if decisions have to be planned over a longer time horizon. In this work, we investigate techniques that transform general-sum multiplayer games into single-player and two-player games that consider other agents to act according to given opponent models. For our evaluation, we focus on the challenging Pommerman environment which involves partial observability, a long time horizon and sparse rewards. In combination with our search methods, we investigate the phenomena of opponent modeling using heuristics and self-play. Overall, we demonstrate the effectiveness of our multiplayer search variants both in a supervised learning and reinforcement learning setting.},
-  Keywords={Multi-Agent Planning, Supervised Learning, Reinforcement Learning},
+  Note={In combination with Reinforcement Learning, Monte-Carlo Tree Search has shown to outperform
+  human grandmasters in games such as Chess, Shogi and Go with little to no prior domain knowledge.
+  However, most classical use cases only feature up to two players. Scaling the search to an arbitrary
+  number of players presents a computational challenge, especially if decisions have to be planned
+  over a longer time horizon. In this work, we investigate techniques that transform general-sum
+  multiplayer games into single-player and two-player games that consider other agents to act
+  according to given opponent models. For our evaluation, we focus on the challenging Pommerman
+  environment which involves partial observability, a long time horizon and sparse rewards. In
+  combination with our search methods, we investigate the phenomena of opponent modeling using
+  heuristics and self-play. Overall, we demonstrate the effectiveness of our multiplayer search
+  variants both in a supervised learning and reinforcement learning setting.},
+  Keywords={Multi-Agent Planning, Supervised Learning, Reinforcement Learning}
 }
 
 @inproceedings{flade2021error,
@@ -75,7 +219,7 @@
   pages={149--156},
   year={2021},
   organization={IEEE},
-  Keywords = {Accurate Global Positioning, Sensing, Vision, and Perception, Simulation and Modeling},
+  Keywords = {Accurate Global Positioning, Sensing, Vision, and Perception, Simulation and Modeling}
 }
 
 @misc{buhler2018dynamic,
@@ -86,7 +230,7 @@
   Pages = {},
   Howpublished={Universit{\"a}ts-und Landesbibliothek Darmstadt},
   Url = {https://core.ac.uk/download/pdf/187766572.pdf},
-  Keywords = {Simulation and Modeling, Autonomous Sailing},
+  Keywords = {Simulation and Modeling, Autonomous Sailing}
 }
 
 @inproceedings{brack2023mitigating,
@@ -98,7 +242,7 @@
   Url = {https://arxiv.org/pdf/2305.18398},
   Pages = {},
   Note = {Text-conditioned image generation models have recently achieved astonishing results in image quality and text alignment and are consequently employed in a fast-growing number of applications. Since they are highly data-driven, relying on billion-sized datasets randomly scraped from the web, they also reproduce inappropriate human behavior. Specifically, we demonstrate inappropriate degeneration on a large-scale for various generative text-to-image models, thus motivating the need for monitoring and moderating them at deployment. To this end, we evaluate mitigation strategies at inference to suppress the generation of inappropriate content. Our findings show that we can use models' representations of the world's ugliness to align them with human preferences.},
-  Keywords = {Image Synthesis, Image Generation, Diffusion, AI Ethics, Inappropriatness, Evaluation, Mitigation},
+  Keywords = {Image Synthesis, Image Generation, Diffusion, AI Ethics, Inappropriatness, Evaluation, Mitigation}
 }
 
 @misc{bellagente2023multifusion,
@@ -110,14 +254,14 @@
   Url = {https://arxiv.org/pdf/2305.15296},
   Pages = {},
   Note = {The recent popularity of text-to-image diffusion models (DM) can largely be attributed to the intuitive interface they provide to users. The intended generation can be expressed in natural language, with the model producing faithful interpretations of text prompts. However, expressing complex or nuanced ideas in text alone can be difficult. To ease image generation, we propose MultiFusion that allows one to express complex and nuanced concepts with arbitrarily interleaved inputs of multiple modalities and languages. MutliFusion leverages pre-trained models and aligns them for integration into a cohesive system, thereby avoiding the need for extensive training from scratch. Our experimental results demonstrate the efficient transfer of capabilities from individual modules to the downstream model. Specifically, the fusion of all independent components allows the image generation module to utilize multilingual, interleaved multimodal inputs despite being trained solely on monomodal data in a single language.},
-  Keywords = {Image Synthesis, Image Generation, Diffusion, Multimodality, Multilingualism},
+  Keywords = {Image Synthesis, Image Generation, Diffusion, Multimodality, Multilingualism}
 }
 
-@inproceedings{friedrich2023oneexp,
+@incollection{friedrich2023oneexp,
   Anote = {./images/friedrich2023xiltypology.png},
   title = {One explanation does not fit XIL},
   author={Felix Friedrich and David Steinmann and Kristian Kersting},
-  booktitle = {Proceedings of the International Conference on Representation Learning (ICLR), Tiny Paper},
+  booktitle = {Tiny Paper in the Proceedings of the International Conference on Representation Learning (ICLR)},
   Note = {Current machine learning models produce outstanding results in many areas but, at the same time, suffer from shortcut learning and spurious correlations. To address such flaws, the explanatory interactive machine learning (XIL) framework has been proposed to revise a model by employing user feedback on a model's explanation. This work sheds light on the explanations used within this framework. In particular, we investigate simultaneous model revision through multiple explanation methods. To this end, we identified that one explanation does not fit XIL and propose considering multiple ones when revising models via XIL.},
   Keywords = {Explanatory Interactive Machine Learning (XIL), Explainable Artificial Intelligence (XAI), Human-AI Interaction, Human-guided AI},
   year={2023},
@@ -127,7 +271,7 @@
 @misc{struppek23caia,
   Anote={./images/caia.jpeg},
   author = {Lukas Struppek and Dominik Hintersdorf and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting},
-  title = {Image Classifiers Leak Sensitive Attributes About Their Classes},
+  title = {Class Attribute Inference Attacks: Inferring Sensitive Class Information by Diffusion-Based Attribute Manipulations},
   Howpublished = {arXiv preprint arXiv:2303.09289},
   year = {2023},
   Url = {https://arxiv.org/pdf/2303.09289},
@@ -139,7 +283,7 @@
   domain show that Caia can accurately infer undisclosed sensitive attributes, such as an individual's hair color, gender and racial appearance,
   which are not part of the training labels. Interestingly, we demonstrate that adversarial robust models are even more vulnerable to such privacy
   leakage than standard models, indicating that a trade-off between robustness and privacy exists.},
-  Keywords = {Privacy, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion},
+  Keywords = {Privacy, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion}
 }
 
 @inproceedings{uhlig2022dlam,
@@ -147,27 +291,11 @@
       title={Combining AI and AM – Improving Approximate Matching through Transformer Networks},
       author={Frieder Uhlig and Lukas Struppek and Dominik Hintersdorf and Thomas Göbel and Harald Baier and Kristian Kersting},
       year={2023},
-      month={July},
       booktitle={Proceedings of the Annual DFRWS USA Conference 2023},
-      Note = {Approximate matching is a well-known concept in digital forensics to determine the similarity between digital artifacts. 
-      An important use case of approximate matching is the reliable and efficient detection of case-relevant data structures on a blacklist 
-      (e.g., malware or corporate secrets), if only fragments of the original are available. For instance, if only a cluster of indexed malware 
-      is still present during the digital forensic investigation, the approximate matching algorithm shall be able to assign the fragment to the 
-      blacklisted malware. However, traditional approximate matching functions like TLSH and ssdeep fail to detect files based on their fragments 
-      if the presented piece is relatively small compared to the overall file size (e.g., like one-third of the total file). A second well-known 
-      issue with traditional approximate matching algorithms is the lack of scaling due to the ever-increasing lookup databases. In this paper, 
-      we propose an improved matching algorithm based on transformer-based models from the field of natural language processing. We call our approach 
-      Deep Learning Approximate Matching (DLAM). As a concept from artificial intelligence, DLAM gets knowledge of characteristic blacklisted patterns 
-      during its training phase. Then DLAM is able to detect the patterns in a typically much larger file, that is DLAM focuses on the use case of 
-      fragment detection. Our evaluation is inspired by two widespread blacklist use cases: the detection of malware (e.g., in JavaScript) and 
-      corporate secrets (e.g., pdf or office documents). We reveal that DLAM has three key advantages compared to the prominent conventional approaches 
-      TLSH and ssdeep. First, it makes the tedious extraction of known to be bad parts obsolete, which is necessary until now before any search for 
-      them with approximate matching algorithms. This allows efficient classification of files on a much larger scale, which is important due to
-      exponentially increasing data to be investigated. Second, depending on the use case, DLAM achieves a similar (in case of mrsh-cf and mrsh-v2) or 
-      even significantly higher accuracy (in case of ssdeep and TLSH) in recovering fragments of blacklisted files. For instance, in the case of 
-      JavaScript files, our assessment shows that DLAM provides an accuracy of 93\% on our test corpus, while TLSH and ssdeep show a classification 
-      accuracy of only 50\%. Third, we show that DLAM enables the detection of file correlations in the output of TLSH and ssdeep even for fragment 
-      sizes, where the respective matching function of TLSH and ssdeep fails.},
+      Note = {Approximate matching is a well-known concept in digital forensics to determine the similarity between digital artifacts.An important use case of approximate matching is the reliable and efficient detection of case-relevant data structures on a blacklist (e.g., malware or corporate secrets), if only fragments of the original are available. For instance, if only a cluster of indexed malware is still present during the digital forensic investigation, the approximate matching algorithm shall be able to assign the fragment to the
+      blacklisted malware. However, traditional approximate matching functions like TLSH and ssdeep fail to detect files based on their fragments if the presented piece is relatively small compared to the overall file size (e.g., like one-third of the total file). A second well-known issue with traditional approximate matching algorithms is the lack of scaling due to the ever-increasing lookup databases. In this paper, we propose an improved matching algorithm based on transformer-based models from the field of natural language processing. We call our approach
+      Deep Learning Approximate Matching (DLAM). As a concept from artificial intelligence, DLAM gets knowledge of characteristic blacklisted patterns during its training phase. Then DLAM is able to detect the patterns in a typically much larger file, that is DLAM focuses on the use case of fragment detection. Our evaluation is inspired by two widespread blacklist use cases: the detection of malware (e.g., in JavaScript) and corporate secrets (e.g., pdf or office documents). We reveal that DLAM has three key advantages compared to the prominent conventional approaches TLSH and ssdeep. First, it makes the tedious extraction of known to be bad parts obsolete, which is necessary until now before any search for them with approximate matching algorithms. This allows efficient classification of files on a much larger scale, which is important due to exponentially increasing data to be investigated. Second, depending on the use case, DLAM achieves a similar (in case of mrsh-cf and mrsh-v2) or
+      even significantly higher accuracy (in case of ssdeep and TLSH) in recovering fragments of blacklisted files. For instance, in the case of JavaScript files, our assessment shows that DLAM provides an accuracy of 93\% on our test corpus, while TLSH and ssdeep show a classification accuracy of only 50%. Third, we show that DLAM enables the detection of file correlations in the output of TLSH and ssdeep even for fragment sizes, where the respective matching function of TLSH and ssdeep fails.},
       Pages = {},
       Keywords = {Approximate Matching, Fuzzy Hashes, Anomaly Detection, Deep Learning},
       Url={https://arxiv.org/pdf/2208.11367.pdf}
@@ -177,7 +305,7 @@
 Anote={./images/shindo2023alphailp.png},
 author={Hikaru Shindo and Viktor Pfanschilling and Devendra Singh Dhami and Kristian Kersting},
 title={alphaILP: Thinking Visual Scenes as Differentiable Logic Programs},
-journal={Machine Learning},
+journal={Machine Learning Journal (MLJ)},
 Publisher = {Springer Nature},
 year={2023},
 Crossref = {https://ml-research.github.io/alphailpdoc/},
@@ -213,16 +341,14 @@ keywords={Neuro-Symbolic AI, Differentiable Reasoning, Inductive Logic Programmi
   author={Felix Friedrich and Wolfgang Stammer and Patrick Schramowski and Kristian Kersting},
   Journal = {Nature Machine Intelligence},
   Note = {As machine learning models become larger, and are increasingly trained on large and uncurated datasets in weakly supervised mode, it becomes important to establish mechanisms for inspecting, interacting with and revising models. These are necessary to mitigate shortcut learning effects and to guarantee that the model’s learned knowledge is aligned with human knowledge. Recently, several explanatory interactive machine learning methods have been developed for this purpose, but each has different motivations and methodological details. In this work, we provide a unification of various explanatory interactive machine learning methods into a single typology by establishing a common set of basic modules. We discuss benchmarks and other measures for evaluating the overall abilities of explanatory interactive machine learning methods. With this extensive toolbox, we systematically and quantitatively compare several explanatory interactive machine learning methods. In our evaluations, all methods are shown to improve machine learning models in terms of accuracy and explainability. However, we found remarkable differences in individual benchmark tasks, which reveal valuable application-relevant aspects for the integration of these benchmarks in the development of future methods.},
-  Keywords = {Explanatory Interactive Machine Learning (XIL), Research Transparency and Comparability, Explainable Artificial Intelligence (XAI), Human-AI Interaction, Human-guided AI},
+  Keywords = {Explanatory Interactive Machine Learning, XIL, Research Transparency, Research Comparability, Explainable Artificial Intelligence, XAI, Human-AI Interaction, Human-guided AI},
   Publisher = {Nature Publishing Group},
   year={2023},
-month={Mar},
-day={09},
-volume={5},
-pages={319-330},
-issn={2522-5839},
-doi={10.1038/s42256-023-00612-w},
-url={https://doi.org/10.1038/s42256-023-00612-w}
+  volume={5},
+  pages={319-330},
+  issn={2522-5839},
+  doi={10.1038/s42256-023-00612-w},
+  url={https://doi.org/10.1038/s42256-023-00612-w}
 }
 
 @misc{friedrich2023fair,
@@ -254,7 +380,7 @@ url={https://doi.org/10.1038/s42256-023-00612-w}
   copyright = {Creative Commons Attribution 4.0 International},
   journal={arXiv preprint, arXiv:2302.06544},
   Howpublished={arXiv preprint, arXiv:2302.06544},
-  Crossref={https://github.com/ml-research/tractable-dropout-inference},
+  Crossref={https://github.com/ml-research/tractable-dropout-inference}
 }
 
 @article{pfeuffer2023xil,
@@ -310,22 +436,6 @@ full potential of AI-based systems for organizations and research.}
 }
 
 
-@inproceedings{mathur2023psb,
-    Anote = {./images/mathur2023psb.png},
-    title={Exploiting Domain Knowledge as Causal Independencies in Modeling Gestational Diabetes},
-    author={Saurabh Mathur and Athresh Karanam and Predrag Radivojac and David M. Haas and Kristian Kersting and Sriraam Natarajan},
-    Note = {We consider the problem of modeling gestational diabetes in a clinical study and develop
-a domain expert-guided probabilistic model that is both interpretable and explainable.
-Specifically, we construct a probabilistic model based on causal independence (Noisy-Or)
-from a carefully chosen set of features. We validate the efficacy of the model on the clinical
-study and demonstrate the importance of the features and the causal independence model.},
-    year={2023},
-    Pages = {},
-    Keywords = {Bayesian Network, Noisy-Or, Causal Independence, Gestational Diabete},
-    booktitle={Proceedings of the 28th Pacific Symposium on Biocomputing (PSB)},
-    Url={./papers/mathur2023psb.pdf}
-}
-
 
 @misc{brack2022Stable,
       Anote = {./images/sega_graphic.png},
@@ -338,18 +448,6 @@ study and demonstrate the importance of the features and the causal independence
       Pages = {},
       Keywords = {Representations, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Concepts, Semantics},
       Url={https://arxiv.org/abs/2212.06013}
-}
-@inproceedings{schramowski2022safe,
-      Anote = {./images/schramowski2022safe.png},
-      title={Safe Latent Diffusion: Mitigating Inappropriate Degeneration in Diffusion Models},
-      author={Patrick Schramowski and Manuel Brack and Björn Deiseroth and Kristian Kersting},
-      booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-      year = {2023},
-      month={Jun},
-      Note = {Text-conditioned image generation models have recently achieved astonishing results in image quality and text alignment and are consequently employed in a fast-growing number of applications. Since they are highly data-driven, relying on billion-sized datasets randomly scraped from the internet, they also suffer, as we demonstrate, from degenerated and biased human behavior. In turn, they may even reinforce such biases. To help combat these undesired side effects, we present safe latent diffusion (SLD). Specifically, to measure the inappropriate degeneration due to unfiltered and imbalanced training sets, we establish a novel image generation test bed-inappropriate image prompts (I2P)-containing dedicated, real-world image-to-text prompts covering concepts such as nudity and violence. As our exhaustive empirical evaluation demonstrates, the introduced SLD removes and suppresses inappropriate image parts during the diffusion process, with no additional training required and no adverse effect on overall image quality or text alignment.},
-      Pages = {},
-      Keywords = {Safety, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Ethics},
-      Url={https://arxiv.org/abs/2211.05105}
 }
 
 
@@ -809,17 +907,6 @@ Year = {2022}}
   Note = 	 {Multivariate and Multi-sensor data acquisition for the purpose of device monitoring had a significant impact on recent research in Anomaly Detection. Despite the wide range of anomaly detection approaches, localization of detected anomalies in multivariate and Multi-sensor time-series data remains a challenge. Interpretation and anomaly attribution is critical and could improve the analysis and decision-making for many applications. With anomaly attribution, explanations can be leveraged to understand, on a per-anomaly basis, which sensors cause the root of anomaly and which features are the most important in causing an anomaly. To this end, we propose using saliency-based Explainable-AI approaches to localize the essential sensors responsible for anomalies in an unsupervised manner. While most Explainable AI methods are considered as interpreters of AI models, we show for the first time that Saliency Explainable AI can be utilized in Multi-sensor Anomaly localization applications. Our approach is demonstrated for localizing the detected anomalies in an unsupervised multi-sensor setup, and the experiments show promising results. We evaluate and compare different classes of saliency explainable AI approach on the Server Machine Data (SMD) Dataset and compared the results with the state-of-the-art OmniAnomaly Localization approach. The results of our empirical analysis demonstrate a promising performance.}
 }
 
-@inproceedings{brack2023illume,
-  url = {https://arxiv.org/abs/2208.08241},
-  author = {Manuel Brack and Patrick Schramowski and Björn Deiseroth and Kristian Kersting},
-  title = {ILLUME: Rationalizing Vision-Language Models through Human Interactions},
-  Anote = {./images/brack2022illume.png},
-  Keywords = {Alignement, Self-Generated Explanations, XAI, Explanatory Interactive Learning},
-  Note = {Bootstrapping from pre-trained language models has been proven to be an efficient approach for building vision-language models (VLM) for tasks such as image captioning or visual question answering. However, outputs of these models rarely align with user's rationales for specific answers. In order to improve this alignment and reinforce commonsense reasons, we propose a tuning paradigm based on human interactions with machine generated data. Our ILLUME executes the following loop: Given an image-question-answer prompt, the VLM samples multiple candidate rationales, and a human critic provides minimal feedback via preference selection, used for fine-tuning. This loop increases the training data and gradually carves out the VLM's rationalization capabilities that are aligned with human intend. Our exhaustive experiments demonstrate that ILLUME is competitive with standard supervised fine-tuning while using significantly fewer training data and only requiring minimal feedback.},
-  year={2023},
-  booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML)},
-  Url = {https://arxiv.org/pdf/2208.08241.pdf},
-}
 
 @misc{mwillig2022cfm,
   Anote = {./images/mwillig2022cfm.png},
@@ -1521,7 +1608,7 @@ help us manage the impacts of climate change.},
     Note = {Probabilistic circuits (PCs) have become the de-facto standard for learning and inference in probabilistic modeling. We introduce Sum-Product-Attention Networks (SPAN), a new generative model that integrates probabilistic circuits with Transformers. SPAN uses self-attention to select the most relevant parts of a probabilistic circuit, here sum-product networks, to improve the modeling capability of the underlying sum-product network. We show that while modeling, SPAN focuses on a specific set of independent assumptions in every product layer of the sum-product network. Our empirical evaluations show that SPAN outperforms state-of-the-art probabilistic generative models on various benchmark data sets as well is an efficient generative image model.},
     author = {Zhongjie Yu and Devendra Singh Dhami and Kristian Kersting},
     year = {2021},
-    Keywords = {Self-Attention, Probabilistic Circuits, Sum-Product-Attention Network, Transformer},
+    Keywords = {Self-Attention, Probabilistic Circuits, Sum-Product-Attention Network, Transformer}
 }
 
 
@@ -1533,7 +1620,7 @@ help us manage the impacts of climate change.},
     Url = {https://arxiv.org/pdf/2106.04148.pdf},
     Howpublished = {arXiv preprint arXiv:2106.04148},
     Note = {Time series forecasting is a relevant task that is performed in several real-world scenarios such as product sales analysis and prediction of energy demand. Given their accuracy performance, currently, Recurrent Neural Networks (RNNs) are the models of choice for this task. Despite their success in time series forecasting, less attention has been paid to make the RNNs trustworthy. For example, RNNs can not naturally provide an uncertainty measure to their predictions. This could be extremely useful in practice in several cases e.g. to detect when a prediction might be completely wrong due to an unusual pattern in the time series. Whittle Sum-Product Networks (WSPNs), prominent deep tractable probabilistic circuits (PCs) for time series, can assist an RNN with providing meaningful probabilities as uncertainty measure. With this aim, we propose RECOWN, a novel architecture that employs RNNs and a discriminant variant of WSPNs called Conditional WSPNs (CWSPNs). We also formulate a Log-Likelihood Ratio Score as an estimation of uncertainty that is tailored to time series and Whittle likelihoods. In our experiments, we show that RECOWNs are accurate and trustworthy time series predictors, able to "know when they do not know".},
-    Keywords = {Whittle Likelihood, Time Series Forecasting, Uncertainty, Fourier Transform, Whittle Sum-Product Network, Spectral RNN, Probabilistic Circuits},
+    Keywords = {Whittle Likelihood, Time Series Forecasting, Uncertainty, Fourier Transform, Whittle Sum-Product Network, Spectral RNN, Probabilistic Circuits}
 }
 
 
@@ -3962,7 +4049,7 @@ non-invasive analysis of wounds using hyperspectral imagery.},
     Title = {Monitoring Wound Healing in a 3D Wound Model by Hyperspectral Imaging and Efficient Clustering},
     Url = {./papers/wahabzada2017plosone_woundHealing.pdf},
     Volume = {},
-    Year = {2017},
+    Year = {2017}
 }
 
 
@@ -6964,3 +7051,19 @@ more compact, and hence more efficient to solve.},
   	Url = {./papers/kersting2000interpreting.pdf},
   	Year = {2000},
   	Bdsk-Url-1 = {./papers/kersting2000interpreting.pdf}}
+
+  @inbook{Hansel2021,
+    anote={./images/BenchmarkingNaturalGradient.png},
+    author={Hansel, Kay and Moos, Janosch and Derstroff, Cedric},
+    editor={Belousov, Boris and Abdulsamad, Hany and Klink, Pascal and Parisi, Simone and Peters, Jan},
+    title={Benchmarking the Natural Gradient in Policy Gradient Methods and Evolution Strategies},
+    bookTitle={Reinforcement Learning Algorithms: Analysis and Applications},
+    year={2021},
+    publisher={Springer International Publishing},
+    address={Cham},
+    pages={69--84},
+    note={Reinforcement learning offers various gradient-based algorithms to tackle model-free optimization problems. However, a major drawback of such techniques is premature convergence due to a lack of exploration. This paper reviews several Evolution Strategies and policy gradient algorithms using the natural gradient in order to reach better convergence. By incorporating knowledge of second-order derivatives, the natural gradient prevents premature convergence. We will present benchmarks on the Trust Region Policy Optimization (TRPO) as a natural policy gradient algorithm and on Separable Natural Evolution Strategies (sNES) and compare results and implementations of these two algorithms. Our experience has shown that sNES performs better in most benchmarks while being easier to handle due to having less hyperparameters.},
+    isbn={978-3-030-41188-6},
+    doi={10.1007/978-3-030-41188-6_7},
+    url={https://doi.org/10.1007/978-3-030-41188-6_7},
+    keywords={Benchmarks, Reinforcement Learning, Natural Gradient, Evolution Strategies}}
