@@ -1,3 +1,15 @@
+@inproceedings{helff2023vlol, 
+  author = {Lukas Helff and Wolfgang Stammer and Hikaru Shindo and Devendra Singh Dhami and Kristian Kersting},
+  title = {V-LoL: A Diagnostic Dataset for Visual Logical Learning},
+  Anote = {./images/helff2023vlol.png},
+  Keywords = {Visual Logical Learning, Diagnostic Dataset},
+  Note = {Despite the successes of recent developments in visual AI, different shortcomings still exist; from missing exact logical reasoning, to abstract generalization abilities, to understanding complex and noisy scenes. Unfortunately, existing benchmarks, were not designed to capture more than a few of these aspects. Whereas deep learning datasets focus on visually complex data but simple visual reasoning tasks, inductive logic datasets involve complex logical learning tasks, however, lack the visual component. To address this, we propose the visual logical learning dataset, V-LoL, that seamlessly combines visual and logical challenges. Notably, we introduce the first instantiation of V-LoL, V-LoL-Trains, – a visual rendition of a classic benchmark in symbolic AI, the Michalski train problem. By incorporating intricate visual scenes and flexible logical reasoning tasks within a versatile framework, V-LoL provides a platform for investigating a wide range of visual logical learning challenges. We evaluate a variety of AI systems including traditional symbolic AI, neural AI, as well as neuro-symbolic AI. Our evaluations demonstrate that even state-of-the-art AI faces difficulties in dealing with visual logical learning challenges, highlighting unique advantages and limitations specific to each methodology. Overall, V-LoL opens up new avenues for understanding and enhancing current abilities in visual logical learning for AI systems.},
+  Howpublished = {arXiv preprint arXiv:2306.07743},
+  year = {2023},
+  Url = {https://arxiv.org/abs/2306.07743},
+  Pages = {},
+  Crossref={https://sites.google.com/view/v-lol},
+}
 
 @inproceedings{brack2023illume, 
   author = {Manuel Brack and Patrick Schramowski and Björn Deiseroth and Kristian Kersting},
@@ -233,11 +245,11 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
   Keywords = {Simulation and Modeling, Autonomous Sailing}
 }
 
-@misc{brack2023mitigating,
+@inproceedings{brack2023mitigating,
   Anote={./images/brack2023mitigating.png},
   author = {Manuel Brack and Felix Friedrich and Patrick Schramowski and Kristian Kersting},
   title = {Mitigating Inappropriateness in Image Generation: Can there be Value in Reflecting the World's Ugliness?},
-  Howpublished = {arXiv preprint arXiv:2305.18398},
+  booktitle = {ICML 2023 Workshop on Challenges of Deploying Generative AI},
   year = {2023},
   Url = {https://arxiv.org/pdf/2305.18398},
   Pages = {},
@@ -7051,3 +7063,19 @@ more compact, and hence more efficient to solve.},
   	Url = {./papers/kersting2000interpreting.pdf},
   	Year = {2000},
   	Bdsk-Url-1 = {./papers/kersting2000interpreting.pdf}}
+
+  @inbook{Hansel2021,
+    anote={./images/BenchmarkingNaturalGradient.png},
+    author={Hansel, Kay and Moos, Janosch and Derstroff, Cedric},
+    editor={Belousov, Boris and Abdulsamad, Hany and Klink, Pascal and Parisi, Simone and Peters, Jan},
+    title={Benchmarking the Natural Gradient in Policy Gradient Methods and Evolution Strategies},
+    bookTitle={Reinforcement Learning Algorithms: Analysis and Applications},
+    year={2021},
+    publisher={Springer International Publishing},
+    address={Cham},
+    pages={69--84},
+    note={Reinforcement learning offers various gradient-based algorithms to tackle model-free optimization problems. However, a major drawback of such techniques is premature convergence due to a lack of exploration. This paper reviews several Evolution Strategies and policy gradient algorithms using the natural gradient in order to reach better convergence. By incorporating knowledge of second-order derivatives, the natural gradient prevents premature convergence. We will present benchmarks on the Trust Region Policy Optimization (TRPO) as a natural policy gradient algorithm and on Separable Natural Evolution Strategies (sNES) and compare results and implementations of these two algorithms. Our experience has shown that sNES performs better in most benchmarks while being easier to handle due to having less hyperparameters.},
+    isbn={978-3-030-41188-6},
+    doi={10.1007/978-3-030-41188-6_7},
+    url={https://doi.org/10.1007/978-3-030-41188-6_7},
+    keywords={Benchmarks, Reinforcement Learning, Natural Gradient, Evolution Strategies}}
