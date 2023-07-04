@@ -1,4 +1,28 @@
-@inproceedings{helff2023vlol, 
+@misc{shindo2023neumann,
+  Anote={./images/shindo2023neumann},
+  author = {Hikaru Shindo and Viktor Pfanschilling and Devendra Singh Dhami and Kristian Kersting},
+  title = {Learning Differentiable Logic Programs for Abstract Visual Reasoning},
+  Howpublished = {arXiv preprint arXiv:2307.00928},
+  year = {2023},
+  Url = {https://arxiv.org/abs/2307.00928},
+  Pages = {},
+  Crossref={https://sites.google.com/view/neumann-tuda},
+  Note = {Visual reasoning is essential for building intelligent agents that understand the world and perform problem-solving beyond perception. Differentiable forward reasoning has been developed to integrate reasoning with gradient-based machine learning paradigms. However, due to the memory intensity, most existing approaches do not bring the best of the expressivity of first-order logic, excluding a crucial ability to solve abstract visual reasoning, where agents need to perform reasoning by using analogies on abstract concepts in different scenarios. To overcome this problem, we propose NEUro-symbolic Message-pAssiNg reasoNer (NEUMANN), which is a graph-based differentiable forward reasoner, passing messages in a memory-efficient manner and handling structured programs with functors. Moreover, we propose a computationally-efficient structure learning algorithm to perform explanatory program induction on complex visual scenes. To evaluate, in addition to conventional visual reasoning tasks, we propose a new task, visual reasoning behind-the-scenes, where agents need to learn abstract programs and then answer queries by imagining scenes that are not observed. We empirically demonstrate that NEUMANN solves visual reasoning tasks efficiently, outperforming neural, symbolic, and neuro-symbolic baselines.}
+}
+
+@inproceedings{sha2023nesy, 
+  author = {Jingyuan Sha and Hikaru Shindo and Kristian Kersting and Devendra Singh Dhami},
+  title = { Neural-Symbolic Predicate Invention: Learning Relational Concepts from Visual Scenes},
+  Anote = {./images/sha2023nesy.png},
+  Keywords = {Differentiable Reasoning,  Inductive Logic Programming,  Neuro-Symbolic AI,  Object-centric Learning},
+  Note = {The predicates used for Inductive Logic Programming (ILP) systems are usually elusive and need to be hand-crafted in advance, which limits the generalization of the system when learning new rules without sufficient background knowledge. Predicate Invention (PI) for ILP is the problem of discovering new concepts that describe hidden relationships in the domain. PI can mitigate the generalization problem for ILP by inferring new concepts, giving the system a better vocabulary to compose logic ruless. Although there are several PI approaches for symbolic ILP systems, PI for NeSy ILP systems that can handle visual input to learn logical rules using differentiable reasoning is relatively unaddressed. To this end, we propose a neural-symbolic approach, NeSy-𝜋, to invent predicates from visual scenes for NeSy ILP systems based on clustering and extension of relational concepts. (𝜋 denotes the abbrivation of Predicate Invention). NeSy-𝜋 processes visual scenes as input using deep neural networks for the visual perception and invents new concepts that support the task of classifying complex visual scenes. The invented concepts can be used by any NeSy ILP systems instead of hand-crafted background knowledge. Our experiments show that the PI model is capable of inventing high-level concepts and solving complex visual logic patterns more efficiently and accurately in the absence of explicit background knowledge.Moreover, the invented concepts are explainable and interpretable, while also providing competitive results with state-of-the-art NeSy ILP systems based on given knowledge.}
+  year={2023},
+  booktitle = {Proceedings of the 17th International Workshop on Neural-Symbolic Learning and Reasoning (NeSy)},
+  Url = {https://www.cs.ox.ac.uk/isg/conferences/tmp-proceedings/NeSy2023/paper8.pdf}
+}
+
+
+@misc{helff2023vlol, 
   author = {Lukas Helff and Wolfgang Stammer and Hikaru Shindo and Devendra Singh Dhami and Kristian Kersting},
   title = {V-LoL: A Diagnostic Dataset for Visual Logical Learning},
   Anote = {./images/helff2023vlol.png},
