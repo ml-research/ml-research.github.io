@@ -1,4 +1,43 @@
-@misc{helff2023vlol, 
+@misc{delfosse2023nudge,
+  Anote={./images/delfosse2023nudge.png},
+  author = {Quentin Delfosse and Hikaru Shindo and Devendra Singh Dhami and Kristian Kersting},
+  title = {Interpretable and Explainable Logical Policies via Neurally Guided Symbolic Abstraction},
+  Howpublished = {arXiv preprint arXiv:2306.01439},
+  year = {2023},
+  Url = {https://arxiv.org/abs/2306.01439},
+  Pages = {},
+  Crossref={https://github.com/k4ntz/LogicRL},
+  Note = {The limited priors required by neural networks make them the dominating choice to encode and learn policies using reinforcement learning (RL). However, they are also black-boxes, making it hard to understand the agent's behaviour, especially when working on the image level. Therefore, neuro-symbolic RL aims at creating policies that are interpretable in the first place. Unfortunately, interpretability is not explainability. To achieve both, we introduce Neurally gUided Differentiable loGic policiEs (NUDGE). NUDGE exploits trained neural network-based agents to guide the search of candidate-weighted logic rules, then uses differentiable logic to train the logic agents. Our experimental evaluation demonstrates that NUDGE agents can induce interpretable and explainable policies while outperforming purely neural ones and showing good flexibility to environments of different initial states and problem sizes.}
+}
+
+@misc{shindo2023neumann,
+  Anote={./images/shindo2023neumann.png},
+  author = {Hikaru Shindo and Viktor Pfanschilling and Devendra Singh Dhami and Kristian Kersting},
+  title = {Learning Differentiable Logic Programs for Abstract Visual Reasoning},
+  Howpublished = {arXiv preprint arXiv:2307.00928},
+  year = {2023},
+  Url = {https://arxiv.org/abs/2307.00928},
+  Pages = {},
+  Crossref={https://sites.google.com/view/neumann-tuda},
+  Note = {Visual reasoning is essential for building intelligent agents that understand the world and perform problem-solving beyond perception. Differentiable forward reasoning has been developed to integrate reasoning with gradient-based machine learning paradigms. However, due to the memory intensity, most existing approaches do not bring the best of the expressivity of first-order logic, excluding a crucial ability to solve abstract visual reasoning, where agents need to perform reasoning by using analogies on abstract concepts in different scenarios. To overcome this problem, we propose NEUro-symbolic Message-pAssiNg reasoNer (NEUMANN), which is a graph-based differentiable forward reasoner, passing messages in a memory-efficient manner and handling structured programs with functors. Moreover, we propose a computationally-efficient structure learning algorithm to perform explanatory program induction on complex visual scenes. To evaluate, in addition to conventional visual reasoning tasks, we propose a new task, visual reasoning behind-the-scenes, where agents need to learn abstract programs and then answer queries by imagining scenes that are not observed. We empirically demonstrate that NEUMANN solves visual reasoning tasks efficiently, outperforming neural, symbolic, and neuro-symbolic baselines.}
+}
+
+
+
+
+@incollection{sha2023nesy,
+  author = {Jingyuan Sha and Hikaru Shindo and Kristian Kersting and Devendra Singh Dhami},
+  title = { Neural-Symbolic Predicate Invention: Learning Relational Concepts from Visual Scenes},
+  Anote = {./images/sha2023nesy.png},
+  Keywords = {Differentiable Reasoning,  Inductive Logic Programming,  Neuro-Symbolic AI,  Object-centric Learning},
+  Note = {The predicates used for Inductive Logic Programming (ILP) systems are usually elusive and need to be hand-crafted in advance, which limits the generalization of the system when learning new rules without sufficient background knowledge. Predicate Invention (PI) for ILP is the problem of discovering new concepts that describe hidden relationships in the domain. PI can mitigate the generalization problem for ILP by inferring new concepts, giving the system a better vocabulary to compose logic ruless. Although there are several PI approaches for symbolic ILP systems, PI for NeSy ILP systems that can handle visual input to learn logical rules using differentiable reasoning is relatively unaddressed. To this end, we propose a neural-symbolic approach, NeSy-𝜋, to invent predicates from visual scenes for NeSy ILP systems based on clustering and extension of relational concepts. (𝜋 denotes the abbrivation of Predicate Invention). NeSy-𝜋 processes visual scenes as input using deep neural networks for the visual perception and invents new concepts that support the task of classifying complex visual scenes. The invented concepts can be used by any NeSy ILP systems instead of hand-crafted background knowledge. Our experiments show that the PI model is capable of inventing high-level concepts and solving complex visual logic patterns more efficiently and accurately in the absence of explicit background knowledge.Moreover, the invented concepts are explainable and interpretable, while also providing competitive results with state-of-the-art NeSy ILP systems based on given knowledge.},
+  year={2023},
+  booktitle = {Proceedings of the 17th International Workshop on Neural-Symbolic Learning and Reasoning (NeSy)},
+  Url = {https://www.cs.ox.ac.uk/isg/conferences/tmp-proceedings/NeSy2023/paper8.pdf}
+}
+
+
+@misc{helff2023vlol,
   author = {Lukas Helff and Wolfgang Stammer and Hikaru Shindo and Devendra Singh Dhami and Kristian Kersting},
   title = {V-LoL: A Diagnostic Dataset for Visual Logical Learning},
   Anote = {./images/helff2023vlol.png},
@@ -12,7 +51,7 @@
 }
 
 
-@inproceedings{brack2023illume, 
+@inproceedings{brack2023illume,
   author = {Manuel Brack and Patrick Schramowski and Björn Deiseroth and Kristian Kersting},
   title = {ILLUME: Rationalizing Vision-Language Models through Human Interactions},
   Anote = {./images/brack2022illume.png},
@@ -51,7 +90,7 @@
 
 @inproceedings{ventola2023uai,
   Anote={./images/ventola-braun2023tdi.png},
-  Url = {https://arxiv.org/abs/2302.06544},
+  Url = {https://proceedings.mlr.press/v216/ventola23a/ventola23a.pdf},
   author = {Fabrizio Ventola and Steven Braun and Zhongjie Yu and Martin Mundt and Kristian Kersting},
   title = {Probabilistic Circuits That Know What They Don't Know},
    Note = {Probabilistic circuits (PCs) are models that allow exact and tractable probabilistic inference. In contrast to neural networks, they are often assumed to be well-calibrated and robust to out-of-distribution (OOD) data. In this paper, we show that PCs are in fact not robust to OOD data, i.e., they don’t know what they don’t know. We then show how this challenge can be overcome by model uncertainty quantification. To this end, we propose tractable dropout inference (TDI), an inference procedure to estimate uncertainty by deriving an analytical solution to Monte Carlo dropout (MCD) through variance propagation. Unlike MCD in neural networks, which comes at the cost of multiple network evaluations, TDI provides tractable sampling-free uncertainty estimates in a single forward pass. TDI improves the robustness of PCs to distribution shift and OOD data, demonstrated through a series of experiments evaluating the classification confidence and uncertainty estimates on real-world data.},
@@ -91,7 +130,7 @@ study and demonstrate the importance of the features and the causal independence
     Url={./papers/mathur2023psb.pdf}
 }
 
-@inproceedings{haemmerl2023fofindingsACL, 
+@inproceedings{haemmerl2023fofindingsACL,
   url = {./papers/haemmerl2023fofindingsACL.pdf},
   author = {Katharina Hämmerl and Bjoern Deiseroth and Patrick Schramowski and Jindřich Libovický and Constantin Rothkopf and Alexander Fraser and Kristian Kersting },
   title = {Speaking Multiple Languages Affects the Moral Bias of Language Models},
