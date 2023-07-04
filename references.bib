@@ -174,16 +174,12 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
 
 @misc{braun2023cake,
   Anote={./images/braun2023cake.png},
-  publisher = {arXiv},
   copyright = {Creative Commons Attribution 4.0 International},
   title={Deep Classifier Mimicry without Data Access},
   author={Steven Braun and Martin Mundt and Kristian Kersting},
   year={2023},
-  eprint={2306.02090},
-  archivePrefix={arXiv},
-  primaryClass={cs.LG},
-  journal={arXiv preprint, arXiv:2306.02090},
-  Howpublished={arXiv preprint, arXiv:2306.02090},
+  Pages = {},
+  Howpublished={arXiv preprint arXiv:2306.02090},
   Url={https://arxiv.org/pdf/2306.02090.pdf},
   Note={Access to pre-trained models has recently emerged as a standard across numerous
   machine learning domains. Unfortunately, access to the original data the models
@@ -194,7 +190,9 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
   classifiers without access to the original data. To this end, CAKE generates pairs of noisy
   synthetic samples and diffuses them contrastively toward a model's decision boundary. We
   empirically corroborate CAKE's effectiveness using several benchmark datasets and various
-  architectural choices, paving the way for broad application.}
+  architectural choices, paving the way for broad application.},
+  Keywords = {Fine-Tuning, Pre-Trained Models, Knowledge Distillation, Contrastive Abductive
+  Knowledge Extraction}
 }
 
 
@@ -285,11 +283,11 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
   Keywords = {Simulation and Modeling, Autonomous Sailing}
 }
 
-@inproceedings{brack2023mitigating,
+@incollection{brack2023mitigating,
   Anote={./images/brack2023mitigating.png},
   author = {Manuel Brack and Felix Friedrich and Patrick Schramowski and Kristian Kersting},
   title = {Mitigating Inappropriateness in Image Generation: Can there be Value in Reflecting the World's Ugliness?},
-  booktitle = {ICML 2023 Workshop on Challenges of Deploying Generative AI},
+  booktitle = {ICML Workshop on Challenges of Deploying Generative AI},
   year = {2023},
   Url = {https://arxiv.org/pdf/2305.18398},
   Pages = {},
@@ -343,7 +341,7 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
       title={Combining AI and AM – Improving Approximate Matching through Transformer Networks},
       author={Frieder Uhlig and Lukas Struppek and Dominik Hintersdorf and Thomas Göbel and Harald Baier and Kristian Kersting},
       year={2023},
-      booktitle={Proceedings of the Annual DFRWS USA Conference 2023},
+      booktitle={Proceedings of the Annual Digital Forensic Research Workshop (DFRWS) USA Conference},
       Note = {Approximate matching is a well-known concept in digital forensics to determine the similarity between digital artifacts.An important use case of approximate matching is the reliable and efficient detection of case-relevant data structures on a blacklist (e.g., malware or corporate secrets), if only fragments of the original are available. For instance, if only a cluster of indexed malware is still present during the digital forensic investigation, the approximate matching algorithm shall be able to assign the fragment to the
       blacklisted malware. However, traditional approximate matching functions like TLSH and ssdeep fail to detect files based on their fragments if the presented piece is relatively small compared to the overall file size (e.g., like one-third of the total file). A second well-known issue with traditional approximate matching algorithms is the lack of scaling due to the ever-increasing lookup databases. In this paper, we propose an improved matching algorithm based on transformer-based models from the field of natural language processing. We call our approach
       Deep Learning Approximate Matching (DLAM). As a concept from artificial intelligence, DLAM gets knowledge of characteristic blacklisted patterns during its training phase. Then DLAM is able to detect the patterns in a typically much larger file, that is DLAM focuses on the use case of fragment detection. Our evaluation is inspired by two widespread blacklist use cases: the detection of malware (e.g., in JavaScript) and corporate secrets (e.g., pdf or office documents). We reveal that DLAM has three key advantages compared to the prominent conventional approaches TLSH and ssdeep. First, it makes the tedious extraction of known to be bad parts obsolete, which is necessary until now before any search for them with approximate matching algorithms. This allows efficient classification of files on a much larger scale, which is important due to exponentially increasing data to be investigated. Second, depending on the use case, DLAM achieves a similar (in case of mrsh-cf and mrsh-v2) or
