@@ -93,16 +93,42 @@
 }
 
 
-@inproceedings{sidheekh2023uai,
-  Anote={./images/sidheekh2023uai.png},
-  Url = {./papers/sidheekh2023uai.pdf},
-  author = {Sahil Sidheekh and Kristian Kersting and Sriraam Natarajan},
-  title = {Probabilistic Flow Circuits: Towards Unified Deep Models for Tractable Probabilistic Inference},
-  Note = {We consider the problem of increasing the expressivity of probabilistic circuits by augmenting them with the successful generative models of normalizing flows. To this effect, we theoretically establish the requirement of decomposability for such combinations to retain tractability of the learned models. Our model, called Probabilistic Flow Circuits, essentially extends circuits by allowing for normalizing flows at the leaves. Our empirical evaluation clearly establishes the expressivity and tractability of this new class of probabilistic circuits},
+@inproceedings{schramowski2022safe,
+      Anote = {./images/schramowski2022safe.png},
+      title={Safe Latent Diffusion: Mitigating Inappropriate Degeneration in Diffusion Models},
+      author={Patrick Schramowski and Manuel Brack and Björn Deiseroth and Kristian Kersting},
+      booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+      year = {2023},
+      Note = {Text-conditioned image generation models have recently achieved astonishing results in image quality and text alignment and are consequently employed in a fast-growing number of applications. Since they are highly data-driven, relying on billion-sized datasets randomly scraped from the internet, they also suffer, as we demonstrate, from degenerated and biased human behavior. In turn, they may even reinforce such biases. To help combat these undesired side effects, we present safe latent diffusion (SLD). Specifically, to measure the inappropriate degeneration due to unfiltered and imbalanced training sets, we establish a novel image generation test bed-inappropriate image prompts (I2P)-containing dedicated, real-world image-to-text prompts covering concepts such as nudity and violence. As our exhaustive empirical evaluation demonstrates, the introduced SLD removes and suppresses inappropriate image parts during the diffusion process, with no additional training required and no adverse effect on overall image quality or text alignment.},
+      Pages = {},
+      Keywords = {Safety, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Ethics},
+      Url={https://arxiv.org/abs/2211.05105}
+}
+
+
+@inproceedings{sudhakaran2023iccv,
+  Anote={./images/sudhakaran2023iccv.png},
+  Url = {},
+  author = {Gopika Sudhakaran and Devendra Dhami and Kristian Kersting and Stefan Roth},
+  title = {Vision Relation Transformer for Unbiased Scene Graph Generation},
+  Note = {Recent years have seen a growing interest in Scene Graph Generation (SGG), a comprehensive visual scene understanding task that aims to predict entity relationships using a relation encoder-decoder pipeline stacked on top of an object encoder-decoder backbone. Unfortunately, current SGG methods suffer from an information loss regarding the entities' parts during the relation encoding process. To address this, we introduce the Vision rElation TransfOrmer (VETO), consisting of a novel entity part-level relation encoder. We further observe that many existing SGG methods claim to be unbiased, but are still biased towards either head or tail classes. To overcome this bias, we introduce a Mutually Exclusive ExperT (MEET) learning strategy that captures important relation features without bias towards head or tail classes. Exhaustive experimental results on the VG and GQA datasets demonstrate that VETO + MEET boosts the predictive performance by up to 47% over the state of the art while being ~10x smaller.},
   year={2023},
   Pages = {},
-  Keywords = {Probabilistic Circuits, Normalizing Flows, Deep Learning, Tractablity},
-  booktitle={Proceedings of the 39th Conference on Uncertainty in Artificial Intelligence (UAI)}
+  Keywords = {Transformer, Scence Graph Generation, Relational, Objects, Multimodal},
+  booktitle={Proceedings of the 19th IEEE/CVF International Conference on Computer Vision (ICCV)}
+}
+
+
+@inproceedings{struppek2023iccv,
+  Anote={./images/struppek2023iccv.png},
+  Url = {},
+  author = {Lukas Struppel and Dominik Hintersdorf and Kristian Kersting},
+  title = {Rickrolling the Artist: Injecting Backdoors into Text Encoders for Text-to-Image Synthesis},
+  Note = {While text-to-image synthesis currently enjoys great popularity among researchers and the general public, the security of these models has been neglected so far. Many text-guided image generation models rely on pre-trained text encoders from external sources, and their users trust that the retrieved models will behave as promised. Unfortunately, this might not be the case. We introduce backdoor attacks against text-guided generative models and demonstrate that their text encoders pose a major tampering risk. Our attacks only slightly alter an encoder so that no suspicious model behavior is apparent for image generations with clean prompts. By then inserting a single character trigger into the prompt, e.g., a non-Latin character or emoji, the adversary can trigger the model to either generate images with pre-defined attributes or images following a hidden, potentially malicious description. We empirically demonstrate the high effectiveness of our attacks on Stable Diffusion and highlight that the injection process of a single backdoor takes less than two minutes. Besides phrasing our approach solely as an attack, it can also force an encoder to forget phrases related to certain concepts, such as nudity or violence, and help to make image generation safer.},
+  year={2023},
+  Pages = {},
+  Keywords = {Backdoor Attack, Generative AI, CLIP, Text2Image Synthesis, Homoglyphs},
+  booktitle={Proceedings of the 19th IEEE/CVF International Conference on Computer Vision (ICCV)}
 }
 
 
