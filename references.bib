@@ -1,16 +1,40 @@
+@incollection{yu2023tpm_cc,
+Anote = {./images/yu2023tpm_cc.png},
+Author = {Zhongjie Yu and Martin Trapp and Kristian Kersting},
+Booktitle = {Working Notes of the UAI Workshop on Tractable Probabilistic Modeling (TPM)},
+Note = {In many real-world scenarios it is crucial to be able to reliably and efficiently reason under uncertainty while capturing complex relationships in data.  Probabilistic circuits (PCs), a prominent family of tractable probabilistic models, offer a remedy to this challenge by composing simple, tractable distributions into a high-dimensional probability distribution. However, learning PCs on heterogeneous data is challenging and densities of some parametric distributions are not available in closed form, limiting their potential use.  We introduce characteristic circuits (CCs), a family of tractable probabilistic models providing a unified formalization of distributions over heterogeneous data in the spectral domain. The one-to-one relationship between characteristic functions and probability measures enables us to learn high-dimensional distributions on heterogeneous data domains and facilitates efficient probabilistic inference even when no closed-form density function is available. We show that the structure and parameters of CCs can be learned efficiently from the data and find that CCs outperform state-of-the-art density estimators for heterogeneous data domains on common benchmark data sets.},
+Keywords = {Characteristic Circuit, Characteristic Function, Probabilistic Circuit, Heterogeneous Data, Density Estimation},
+Pages = {},
+Title = {Characteristic Circuit},
+Url = {./papers/yu2023tpm_cc.pdf},
+crossref = {},
+Year = {2023}}
+
+
+ 
+
+@article{shindo2023alphailp,
+Anote={./images/shindo2023alphailp.png},
+author={Hikaru Shindo and Viktor Pfanschilling and Devendra Singh Dhami and Kristian Kersting},
+note = {Deep neural learning has shown remarkable performance at learning representations for visual object categorization. However, deep neural networks such as CNNs do not explicitly encode objects and relations among them. This limits their success on tasks that require a deep logical understanding of visual scenes, such as Kandinsky patterns and Bongard problems. To overcome these limitations, we introduce 𝛼ILP, a novel differentiable inductive logic programming framework that learns to represent scenes as logic programs—intuitively, logical atoms correspond to objects, attributes, and relations, and clauses encode high-level scene information. 𝛼ILP has an end-to-end reasoning architecture from visual inputs. Using it, 𝛼ILP performs differentiable inductive logic programming on complex visual scenes, i.e., the logical rules are learned by gradient descent. Our extensive experiments on Kandinsky patterns and CLEVR-Hans benchmarks demonstrate the accuracy and efficiency of 𝛼ILP in learning complex visual-logical concepts.}, 
+title={alphaILP: Thinking Visual Scenes as Differentiable Logic Programs},
+journal={Machine Learning Journal (MLJ)},
+Publisher = {Springer},
+year={2023},
+Crossref = {https://ml-research.github.io/alphailpdoc/},
+url={https://link.springer.com/article/10.1007/s10994-023-06320-1},
+keywords={Neuro-Symbolic AI, Differentiable Reasoning, Inductive Logic Programming, Object-centric Learning}
+}
+
+
 @misc{deb2023atman,
-  note={./images/deb2023atman.png},
-  author       = {Mayukh Deb and
-                  Bj{\"{o}}rn Deiseroth and
-                  Samuel Weinbach and
-                  Patrick Schramowski and
-                  Kristian Kersting},
-  title        = {AtMan: Understanding Transformer Predictions Through Memory Efficient
-                  Attention Manipulation},
-  Keywords = {Interpretable and Explainable AI, Transformer,  Large Scale Language Models,  Multimodal, Computer Vision},
+  Anote={./images/deb2023atman.png},
+  author       = {Mayukh Deb and Björn Deiseroth and Samuel Weinbach and Patrick Schramowski and Kristian Kersting},
+  title        = {AtMan: Understanding Transformer Predictions Through Memory Efficient Attention Manipulation},
+  Keywords = {Explainable AI, Transformer,  Large Language Models,  Multimodal, Computer Vision},
   Howpublished = {arXiv preprint arXiv:2301.08110},
   year         = {2023},
-  Url          = {https://doi.org/10.48550/arXiv.2301.08110},
+  Url          = {https://arxiv.org/pdf/2301.08110.pdf},
   Note= {Generative transformer models have become increasingly complex, with large numbers of parameters and the ability to process multiple input modalities. Current methods for explaining their predictions are resource-intensive. Most crucially, they require prohibitively large amounts of additional memory since they rely on backpropagation which allocates almost twice as much GPU memory as the forward pass. This renders it difficult, if not impossible, to use explanations in production. We present AtMan that provides explanations of generative transformer models at almost no extra cost. Specifically, AtMan is a modality-agnostic perturbation method that manipulates the attention mechanisms of transformers to produce relevance maps for the input with respect to the output prediction. Instead of using backpropagation, AtMan applies a parallelizable token-based search method relying on cosine similarity neighborhood in the embedding space. Our exhaustive experiments on text and image-text benchmarks demonstrate that AtMan outperforms current state-of-the-art gradient-based methods on several metrics and models while being computationally efficient. As such, AtMan is suitable for use in large model inference deployments.}
 }
 
@@ -93,6 +117,47 @@
 }
 
 
+
+@inproceedings{sudhakaran2023iccv,
+  Anote={./images/sudhakaran2023iccv.png},
+  Url = {},
+  author = {Gopika Sudhakaran and Devendra Dhami and Kristian Kersting and Stefan Roth},
+  title = {Vision Relation Transformer for Unbiased Scene Graph Generation},
+  Note = {Recent years have seen a growing interest in Scene Graph Generation (SGG), a comprehensive visual scene understanding task that aims to predict entity relationships using a relation encoder-decoder pipeline stacked on top of an object encoder-decoder backbone. Unfortunately, current SGG methods suffer from an information loss regarding the entities' parts during the relation encoding process. To address this, we introduce the Vision rElation TransfOrmer (VETO), consisting of a novel entity part-level relation encoder. We further observe that many existing SGG methods claim to be unbiased, but are still biased towards either head or tail classes. To overcome this bias, we introduce a Mutually Exclusive ExperT (MEET) learning strategy that captures important relation features without bias towards head or tail classes. Exhaustive experimental results on the VG and GQA datasets demonstrate that VETO + MEET boosts the predictive performance by up to 47% over the state of the art while being ~10x smaller.},
+  year={2023},
+  Pages = {},
+  Keywords = {Transformer, Scence Graph Generation, Relational, Objects, Multimodal},
+  booktitle={Proceedings of the 19th IEEE/CVF International Conference on Computer Vision (ICCV)}
+}
+
+
+@inproceedings{struppek2023iccv,
+  Anote={./images/struppek2023iccv.png},
+  author = {Lukas Struppek and Dominik Hintersdorf and Kristian Kersting},
+  title = {Rickrolling the Artist: Injecting Backdoors into Text Encoders for Text-to-Image Synthesis},
+  Note = {While text-to-image synthesis currently enjoys great popularity among researchers and the general public, the security of these models has been neglected so far. Many text-guided image generation models rely on pre-trained text encoders from external sources, and their users trust that the retrieved models will behave as promised. Unfortunately, this might not be the case. We introduce backdoor attacks against text-guided generative models and demonstrate that their text encoders pose a major tampering risk. Our attacks only slightly alter an encoder so that no suspicious model behavior is apparent for image generations with clean prompts. By then inserting a single character trigger into the prompt, e.g., a non-Latin character or emoji, the adversary can trigger the model to either generate images with pre-defined attributes or images following a hidden, potentially malicious description. We empirically demonstrate the high effectiveness of our attacks on Stable Diffusion and highlight that the injection process of a single backdoor takes less than two minutes. Besides phrasing our approach solely as an attack, it can also force an encoder to forget phrases related to certain concepts, such as nudity or violence, and help to make image generation safer.},
+  year={2023},
+  Pages = {},
+  Keywords = {Backdoor Attack, Generative AI, CLIP, Text2Image Synthesis, Homoglyphs},
+  booktitle={Proceedings of the 19th IEEE/CVF International Conference on Computer Vision (ICCV)},
+  Url = {https://arxiv.org/abs/2211.02408},
+}
+
+ 
+
+@inproceedings{friedrich2023ecai,
+  author = {Felix Friedrich and Wolfgang Stammer and Patrick Schramowski and Kristian Kersting},
+  title = {Revision Transformers: Instructing Language Models to Change their Values},
+  Anote = {./images/friedrich2023ecai.png},
+  Keywords = {Transformer, Retriever, Revisions, Machine Ethics},
+  Note = {Current transformer language models (LM) are large-scale models with billions of parameters. They have been shown to provide high performances on a variety of tasks but are also prone to shortcut learning and bias. Addressing such incorrect model behavior via parameter adjustments is very costly. This is particularly problematic for updating dynamic concepts, such as moral values, which vary culturally or interpersonally. In this work, we question the current common practice of storing all information in the model parameters and propose the Revision Transformer (RiT) employing information retrieval to facilitate easy model updating. The specific combination of a large-scale pre-trained LM that inherently but also diffusely encodes world knowledge with a clear-structured revision engine makes it possible to update the model's knowledge with little effort and the help of user interaction. We exemplify RiT on a moral dataset and simulate user feedback demonstrating strong performance in model revision even with small data. This way, users can easily design a model regarding their preferences, paving the way for more transparent and personalized AI models.},
+  year={2023},
+  booktitle = {Proceedings of the 26th European Conference on Artificial Intelligence (ECAI)},
+  Url = {https://arxiv.org/pdf/2210.10332.pdf}
+}
+
+
+
 @inproceedings{sidheekh2023uai,
   Anote={./images/sidheekh2023uai.png},
   Url = {./papers/sidheekh2023uai.pdf},
@@ -104,6 +169,7 @@
   Keywords = {Probabilistic Circuits, Normalizing Flows, Deep Learning, Tractablity},
   booktitle={Proceedings of the 39th Conference on Uncertainty in Artificial Intelligence (UAI)}
 }
+
 
 
 @inproceedings{ventola2023uai,
@@ -130,6 +196,44 @@
     booktitle={Proceedings of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)},
     Url={}
 }
+
+
+@inproceedings{kohaut2023md,
+  Anote={./images/kohaut2023md.png},
+  title={Mission Design for Unmanned Aerial Vehicles using Hybrid Probabilistic Logic Programs},
+  author={Simon Kohaut and Benedict Flade and Devendra Singh Dhami and Julian Eggert and Kristian Kersting},
+  booktitle={26th IEEE International Intelligent Transportation Systems Conference (ITSC)},
+  note = {Advanced Air Mobility (AAM) is a growing field
+that demands a deep understanding of legal, spatial and temporal
+concepts in navigation. Hence, any implementation of AAM is
+forced to deal with the inherent uncertainties of human-inhabited
+spaces. Enabling growth and innovation requires the creation of
+a system for safe and robust mission design, i.e., the way we
+formalise intentions and decide their execution as trajectories for
+the Unmanned Aerial Vehicle (UAV). Although legal frameworks
+have emerged to govern urban airspaces, their full integration
+into the decision process of autonomous agents and operators
+remains an open task. In this work we present ProMis, a system
+architecture for probabilistic mission design. It links the data
+available from various static and dynamic data sources with
+legal text and operator requirements by following principles of
+formal verification and probabilistic modeling. Using ProMis,
+combining low-level perception and high-level rules in AAM
+can be applied to the navigation frame of the UAV. To this
+end, we employ Hybrid Probabilistic Logic Programs (HPLP)
+as a unifying, intermediate representation between perception
+and action-taking. Furthermore, we present methods to connect
+ProMis with crowd-sourced map data by generating HPLP atoms
+that represent spatial relations in a probabilistic fashion. Our
+claims of the utility and generality of ProMis are supported by
+experiments on a diverse set of scenarios and a discussion of the
+computational demands associated with probabilistic missions.},
+  Url = {},
+  pages={},
+  year={2023},
+  Keywords = {Mission Design, Probabilistic Inference, Hybrid Probabilistic Logic}
+}
+
 
 
 @inproceedings{mathur2023psb,
@@ -369,17 +473,7 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
       Url={https://arxiv.org/pdf/2208.11367.pdf}
 }
 
-@article{shindo2023alphailp,
-Anote={./images/shindo2023alphailp.png},
-author={Hikaru Shindo and Viktor Pfanschilling and Devendra Singh Dhami and Kristian Kersting},
-title={alphaILP: Thinking Visual Scenes as Differentiable Logic Programs},
-journal={Machine Learning Journal (MLJ)},
-Publisher = {Springer Nature},
-year={2023},
-Crossref = {https://ml-research.github.io/alphailpdoc/},
-url={https://link.springer.com/article/10.1007/s10994-023-06320-1},
-keywords={Neuro-Symbolic AI, Differentiable Reasoning, Inductive Logic Programming, Object-centric Learning}
-}
+
 
 @misc{ye2023metalogic,
       Anote = {./images/ye2022metalogic.png},
@@ -458,7 +552,7 @@ journal = {Business & Information Systems Engineering},
 pages = {},
 year = {2023},
 url = {},
-author = {Nicolas Pfeuffer and Lorenz Baum and Wolfgang Stammer and Benjamin M. Abdel-Karim and Patrick Schramowski and Andreas M. Bucher Christian Hügel and Gernot Rohde and Kristian Kersting and Oliver Hinz},
+author = {Nicolas Pfeuffer and Lorenz Baum and Wolfgang Stammer and Benjamin M. Abdel-Karim and Patrick Schramowski and Andreas M. Bucher and Christian Hügel and Gernot Rohde and Kristian Kersting and Oliver Hinz},
 keywords = {Explainable AI, Interactive Learning, Machine Learning, Action Design Research, COVID-19, Imaging, Confounders },
 Note = {The most promising standard machine learning methods can deliver highly accurate
 classification results and often outperform standard white-box methods. However, for
