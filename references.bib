@@ -1,3 +1,15 @@
+@misc{brack2023distilling,
+      Anote = {./images/brack2023distilling.png},
+      title={Distilling Adversarial Prompts from Safety Benchmarks: Report for the Adversarial Nibbler Challenge },
+      author={Manuel Brack and Kristian Kersting},
+      Howpublished = {arXiv preprint},
+      year = {2023},
+      Note = {Text-conditioned image generation models have recently achieved astonishing image quality and alignment results. Consequently, they are employed in a fast-growing number of applications. Since they are highly data-driven, relying on billion-sized datasets randomly scraped from the web, they also produce unsafe content. As a contribution to the Adversarial Nibbler challenge, we distill a large set of over 1,000 potential adversarial inputs from existing safety benchmarks. Our analysis of the gathered prompts and corresponding images demonstrates the fragility of input filters and provides further insights into systematic safety issues in current generative image models.},
+      Pages = {},
+      Keywords = {Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Safety, Adversarial Prompting},
+      Url={./papers/brack2023distilling.pdf}
+}
+
 @incollection{yu2023tpm_cc,
 Anote = {./images/yu2023tpm_cc.png},
 Author = {Zhongjie Yu and Martin Trapp and Kristian Kersting},
@@ -9,8 +21,6 @@ Title = {Characteristic Circuit},
 Url = {./papers/yu2023tpm_cc.pdf},
 crossref = {},
 Year = {2023}}
-
-
  
 
 @article{shindo2023alphailp,
@@ -27,14 +37,14 @@ keywords={Neuro-Symbolic AI, Differentiable Reasoning, Inductive Logic Programmi
 }
 
 
-@misc{deb2023atman,
+@inproceedings{deiseroth2023atman,
   Anote={./images/deb2023atman.png},
-  author       = {Mayukh Deb and Björn Deiseroth and Samuel Weinbach and Patrick Schramowski and Kristian Kersting},
+  author       = {Björn Deiseroth and Mayukh Deb and Samuel Weinbach and Manuel Brack and Patrick Schramowski and Kristian Kersting},
   title        = {AtMan: Understanding Transformer Predictions Through Memory Efficient Attention Manipulation},
   Keywords = {Explainable AI, Transformer,  Large Language Models,  Multimodal, Computer Vision},
-  Howpublished = {arXiv preprint arXiv:2301.08110},
   year         = {2023},
-  Url          = {https://arxiv.org/pdf/2301.08110.pdf},
+  Url          = {https://arxiv.org/abs/2301.08110},
+  booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)}
   Note= {Generative transformer models have become increasingly complex, with large numbers of parameters and the ability to process multiple input modalities. Current methods for explaining their predictions are resource-intensive. Most crucially, they require prohibitively large amounts of additional memory since they rely on backpropagation which allocates almost twice as much GPU memory as the forward pass. This renders it difficult, if not impossible, to use explanations in production. We present AtMan that provides explanations of generative transformer models at almost no extra cost. Specifically, AtMan is a modality-agnostic perturbation method that manipulates the attention mechanisms of transformers to produce relevance maps for the input with respect to the output prediction. Instead of using backpropagation, AtMan applies a parallelizable token-based search method relying on cosine similarity neighborhood in the embedding space. Our exhaustive experiments on text and image-text benchmarks demonstrate that AtMan outperforms current state-of-the-art gradient-based methods on several metrics and models while being computationally efficient. As such, AtMan is suitable for use in large model inference deployments.}
 }
 
@@ -417,16 +427,16 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
   Keywords = {Image Synthesis, Image Generation, Diffusion, AI Ethics, Inappropriatness, Evaluation, Mitigation}
 }
 
-@misc{bellagente2023multifusion,
+@inproceedings{bellagente2023multifusion,
   Anote={./images/bellagente2023multifusion.png},
   author = {Marco Bellagente and Manuel Brack and Hannah Teufel and Felix Friedrich and Björn Deiseroth and Constantin Eichenberg and Andrew Dai and Robert Baldock and Souradeep Nanda and Koen Oostermeijer and Andres Felipe Cruz-Salinas and Patrick Schramowski and Kristian Kersting and Samuel Weinbach},
   title = {MultiFusion: Fusing Pre-Trained Models for Multi-Lingual, Multi-Modal Image Generation},
-  Howpublished = {arXiv preprint arXiv:2305.15296},
   year = {2023},
-  Url = {https://arxiv.org/pdf/2305.15296},
+  Url = {https://arxiv.org/abs/2305.15296},
   Pages = {},
   Note = {The recent popularity of text-to-image diffusion models (DM) can largely be attributed to the intuitive interface they provide to users. The intended generation can be expressed in natural language, with the model producing faithful interpretations of text prompts. However, expressing complex or nuanced ideas in text alone can be difficult. To ease image generation, we propose MultiFusion that allows one to express complex and nuanced concepts with arbitrarily interleaved inputs of multiple modalities and languages. MutliFusion leverages pre-trained models and aligns them for integration into a cohesive system, thereby avoiding the need for extensive training from scratch. Our experimental results demonstrate the efficient transfer of capabilities from individual modules to the downstream model. Specifically, the fusion of all independent components allows the image generation module to utilize multilingual, interleaved multimodal inputs despite being trained solely on monomodal data in a single language.},
-  Keywords = {Image Synthesis, Image Generation, Diffusion, Multimodality, Multilingualism}
+  Keywords = {Image Synthesis, Image Generation, Diffusion, Multimodality, Multilingualism},
+  booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)}
 }
 
 @incollection{friedrich2023oneexp,
@@ -572,17 +582,16 @@ projects, gain new insights on the part of the human user, and thereby help to t
 full potential of AI-based systems for organizations and research.}
 }
 
-@misc{brack2023Sega,
+@inproceedings{brack2023Sega,
       Anote = {./images/sega_graphic.png},
-      title={SEGA: Instructing Diffusion using Semantic Dimensions},
+      title={SEGA: Instructing Text-to-Image Models using Semantic Guidance},
       author={Manuel Brack and Felix Friedrich and Dominik Hintersdorf and Lukas Struppek and Patrick Schramowski and Kristian Kersting},
-      Howpublished = {arXiv preprint arXiv:2211.05105},
       year = {2023},
-      month={Jan},
-      Note = {Text-to-image diffusion models have recently received a lot of interest for their astonishing ability to produce high-fidelity images from text only. However, achieving one-shot generation that aligns with the user's intent is nearly impossible, yet small changes to the input prompt often result in very different images. This leaves the user with little semantic control. To put the user in control, we show how to interact with the diffusion process to flexibly steer it along semantic directions. This semantic guidance (SEGA) allows for subtle and extensive edits, changes in composition and style, as well as optimizing the overall artistic conception. We demonstrate SEGA's effectiveness on a variety of tasks and provide evidence for its versatility and flexibility.},
+      Note = {Text-to-image diffusion models have recently received a lot of interest for their astonishing ability to produce high-fidelity images from text only. However, achieving one-shot generation that aligns with the user’s intent is nearly impossible, yet small changes to the input prompt often result in very different images. This leaves the user with little semantic control. To put the user in control, we show how to interact with the diffusion process to flexibly steer it along semantic directions. This semantic guidance (SEGA) generalizes to any generative architecture using classifier-free guidance. More importantly, it allows for subtle and extensive edits, composition and style changes, and optimizing the overall artistic conception. We demonstrate SEGA’s effectiveness on both latent and pixel-based diffusion models such as Stable Diffusion, Paella, and DeepFloyd-IF using a variety of tasks, thus providing strong evidence for its versatility and flexibility.},
       Pages = {},
       Keywords = {Representations, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Concepts, Semantics},
-      Url={https://arxiv.org/abs/2211.05105}
+      Url={https://arxiv.org/abs/2211.05105},
+      booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)}
 }
 
 @inproceedings{ramanan2023codscomad,
