@@ -1,13 +1,14 @@
 @misc{brack2023distilling,
       Anote = {./images/brack2023distilling.png},
       title={Distilling Adversarial Prompts from Safety Benchmarks: Report for the Adversarial Nibbler Challenge },
-      author={Manuel Brack and Kristian Kersting},
+      author={Manuel Brack and Patrick Schramowski and Kristian Kersting},
       Howpublished = {arXiv preprint},
       year = {2023},
+      month ={Sep},
       Note = {Text-conditioned image generation models have recently achieved astonishing image quality and alignment results. Consequently, they are employed in a fast-growing number of applications. Since they are highly data-driven, relying on billion-sized datasets randomly scraped from the web, they also produce unsafe content. As a contribution to the Adversarial Nibbler challenge, we distill a large set of over 1,000 potential adversarial inputs from existing safety benchmarks. Our analysis of the gathered prompts and corresponding images demonstrates the fragility of input filters and provides further insights into systematic safety issues in current generative image models.},
       Pages = {},
       Keywords = {Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Safety, Adversarial Prompting},
-      Url={./papers/brack2023distilling.pdf}
+      Url={../../papers/brack2023distilling.pdf}
 }
 
 @incollection{yu2023tpm_cc,
@@ -44,7 +45,7 @@ keywords={Neuro-Symbolic AI, Differentiable Reasoning, Inductive Logic Programmi
   Keywords = {Explainable AI, Transformer,  Large Language Models,  Multimodal, Computer Vision},
   year         = {2023},
   Url          = {https://arxiv.org/abs/2301.08110},
-  booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)}
+  booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
   Note= {Generative transformer models have become increasingly complex, with large numbers of parameters and the ability to process multiple input modalities. Current methods for explaining their predictions are resource-intensive. Most crucially, they require prohibitively large amounts of additional memory since they rely on backpropagation which allocates almost twice as much GPU memory as the forward pass. This renders it difficult, if not impossible, to use explanations in production. We present AtMan that provides explanations of generative transformer models at almost no extra cost. Specifically, AtMan is a modality-agnostic perturbation method that manipulates the attention mechanisms of transformers to produce relevance maps for the input with respect to the output prediction. Instead of using backpropagation, AtMan applies a parallelizable token-based search method relying on cosine similarity neighborhood in the embedding space. Our exhaustive experiments on text and image-text benchmarks demonstrate that AtMan outperforms current state-of-the-art gradient-based methods on several metrics and models while being computationally efficient. As such, AtMan is suitable for use in large model inference deployments.}
 }
 
@@ -110,6 +111,7 @@ keywords={Neuro-Symbolic AI, Differentiable Reasoning, Inductive Logic Programmi
   Keywords = {Alignement, Self-Generated Explanations, XAI, Explanatory Interactive Learning},
   Note = {Bootstrapping from pre-trained language models has been proven to be an efficient approach for building vision-language models (VLM) for tasks such as image captioning or visual question answering. However, outputs of these models rarely align with user's rationales for specific answers. In order to improve this alignment and reinforce commonsense reasons, we propose a tuning paradigm based on human interactions with machine generated data. Our ILLUME executes the following loop: Given an image-question-answer prompt, the VLM samples multiple candidate rationales, and a human critic provides minimal feedback via preference selection, used for fine-tuning. This loop increases the training data and gradually carves out the VLM's rationalization capabilities that are aligned with human intend. Our exhaustive experiments demonstrate that ILLUME is competitive with standard supervised fine-tuning while using significantly fewer training data and only requiring minimal feedback.},
   year={2023},
+  month={Jul},
   booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML)},
   Url = {https://arxiv.org/pdf/2208.08241.pdf}
 }
@@ -120,6 +122,7 @@ keywords={Neuro-Symbolic AI, Differentiable Reasoning, Inductive Logic Programmi
       author={Patrick Schramowski and Manuel Brack and Björn Deiseroth and Kristian Kersting},
       booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
       year = {2023},
+      month={Jun},
       Note = {Text-conditioned image generation models have recently achieved astonishing results in image quality and text alignment and are consequently employed in a fast-growing number of applications. Since they are highly data-driven, relying on billion-sized datasets randomly scraped from the internet, they also suffer, as we demonstrate, from degenerated and biased human behavior. In turn, they may even reinforce such biases. To help combat these undesired side effects, we present safe latent diffusion (SLD). Specifically, to measure the inappropriate degeneration due to unfiltered and imbalanced training sets, we establish a novel image generation test bed-inappropriate image prompts (I2P)-containing dedicated, real-world image-to-text prompts covering concepts such as nudity and violence. As our exhaustive empirical evaluation demonstrates, the introduced SLD removes and suppresses inappropriate image parts during the diffusion process, with no additional training required and no adverse effect on overall image quality or text alignment.},
       Pages = {},
       Keywords = {Safety, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Ethics},
@@ -419,8 +422,9 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
   Anote={./images/brack2023mitigating.png},
   author = {Manuel Brack and Felix Friedrich and Patrick Schramowski and Kristian Kersting},
   title = {Mitigating Inappropriateness in Image Generation: Can there be Value in Reflecting the World's Ugliness?},
-  booktitle = {ICML Workshop on Challenges of Deploying Generative AI},
+  booktitle = {Workshop on Challenges of Deploying Generative AI at ICML & Workshop on Responsible Applied Artificial Intelligence (RAAIT) at ECAI},
   year = {2023},
+  month={Jul},
   Url = {https://arxiv.org/pdf/2305.18398},
   Pages = {},
   Note = {Text-conditioned image generation models have recently achieved astonishing results in image quality and text alignment and are consequently employed in a fast-growing number of applications. Since they are highly data-driven, relying on billion-sized datasets randomly scraped from the web, they also reproduce inappropriate human behavior. Specifically, we demonstrate inappropriate degeneration on a large-scale for various generative text-to-image models, thus motivating the need for monitoring and moderating them at deployment. To this end, we evaluate mitigation strategies at inference to suppress the generation of inappropriate content. Our findings show that we can use models' representations of the world's ugliness to align them with human preferences.},
@@ -434,6 +438,7 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
   year = {2023},
   Url = {https://arxiv.org/abs/2305.15296},
   Pages = {},
+  month={Dez},
   Note = {The recent popularity of text-to-image diffusion models (DM) can largely be attributed to the intuitive interface they provide to users. The intended generation can be expressed in natural language, with the model producing faithful interpretations of text prompts. However, expressing complex or nuanced ideas in text alone can be difficult. To ease image generation, we propose MultiFusion that allows one to express complex and nuanced concepts with arbitrarily interleaved inputs of multiple modalities and languages. MutliFusion leverages pre-trained models and aligns them for integration into a cohesive system, thereby avoiding the need for extensive training from scratch. Our experimental results demonstrate the efficient transfer of capabilities from individual modules to the downstream model. Specifically, the fusion of all independent components allows the image generation module to utilize multilingual, interleaved multimodal inputs despite being trained solely on monomodal data in a single language.},
   Keywords = {Image Synthesis, Image Generation, Diffusion, Multimodality, Multilingualism},
   booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)}
@@ -587,6 +592,7 @@ full potential of AI-based systems for organizations and research.}
       title={SEGA: Instructing Text-to-Image Models using Semantic Guidance},
       author={Manuel Brack and Felix Friedrich and Dominik Hintersdorf and Lukas Struppek and Patrick Schramowski and Kristian Kersting},
       year = {2023},
+      month={Dez},
       Note = {Text-to-image diffusion models have recently received a lot of interest for their astonishing ability to produce high-fidelity images from text only. However, achieving one-shot generation that aligns with the user’s intent is nearly impossible, yet small changes to the input prompt often result in very different images. This leaves the user with little semantic control. To put the user in control, we show how to interact with the diffusion process to flexibly steer it along semantic directions. This semantic guidance (SEGA) generalizes to any generative architecture using classifier-free guidance. More importantly, it allows for subtle and extensive edits, composition and style changes, and optimizing the overall artistic conception. We demonstrate SEGA’s effectiveness on both latent and pixel-based diffusion models such as Stable Diffusion, Paella, and DeepFloyd-IF using a variety of tasks, thus providing strong evidence for its versatility and flexibility.},
       Pages = {},
       Keywords = {Representations, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Concepts, Semantics},
