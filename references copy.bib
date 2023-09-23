@@ -1,23 +1,214 @@
-@inproceedings{helff2023vlol, 
+
+
+@article{shindo2023alphailp,
+Anote={./images/shindo2023alphailp.png},
+author={Hikaru Shindo and Viktor Pfanschilling and Devendra Singh Dhami and Kristian Kersting},
+note = {Deep neural learning has shown remarkable performance at learning representations for visual object categorization. However, deep neural networks such as CNNs do not explicitly encode objects and relations among them. This limits their success on tasks that require a deep logical understanding of visual scenes, such as Kandinsky patterns and Bongard problems. To overcome these limitations, we introduce 𝛼ILP, a novel differentiable inductive logic programming framework that learns to represent scenes as logic programs—intuitively, logical atoms correspond to objects, attributes, and relations, and clauses encode high-level scene information. 𝛼ILP has an end-to-end reasoning architecture from visual inputs. Using it, 𝛼ILP performs differentiable inductive logic programming on complex visual scenes, i.e., the logical rules are learned by gradient descent. Our extensive experiments on Kandinsky patterns and CLEVR-Hans benchmarks demonstrate the accuracy and efficiency of 𝛼ILP in learning complex visual-logical concepts.}, 
+title={alphaILP: Thinking Visual Scenes as Differentiable Logic Programs},
+journal={Machine Learning Journal (MLJ)},
+Publisher = {Springer},
+year={2023},
+Crossref = {https://ml-research.github.io/alphailpdoc/},
+url={https://link.springer.com/article/10.1007/s10994-023-06320-1},
+keywords={Neuro-Symbolic AI, Differentiable Reasoning, Inductive Logic Programming, Object-centric Learning}
+}
+
+
+@article{skyagin2023slash,
+    Anote = {./images/skyagin2023slash.png},
+    Author = {Arseny Skryagin and Daniel Ochs and Devendra Singh Dhami and Kristian Kersting},
+    Journal = {Journal of Artificial Intelligence Research (JAIR)},
+    Keywords = {Statistical Relational Learning, Neural ASP, Neuralsymnolic AI, Probabilistic Circuits, Neural Networks, Neural Probabilistic Predicate},
+    Note = {The goal of combining the robustness of neural networks and the expressiveness of symbolic
+methods has rekindled the interest in Neuro-Symbolic AI. Deep Probabilistic Programming
+Languages (DPPLs) have been developed for probabilistic logic programming to be carried
+out via the probability estimations of deep neural networks (DNNs). However, recent
+SOTA DPPL approaches allow only for limited conditional probabilistic queries and do
+not offer the power of true joint probability estimation. In our work, we propose an easy
+integration of tractable probabilistic inference within a DPPL. To this end, we introduce
+SLASH, a novel DPPL that consists of Neural-Probabilistic Predicates (NPPs) and a logic
+program, united via answer set programming (ASP). NPPs are a novel design principle
+allowing for combining all deep model types and combinations thereof to be represented
+as a single probabilistic predicate. In this context, we introduce a novel +/− notation
+for answering various types of probabilistic queries by adjusting the atom notations of a
+predicate. To scale well, we show how to prune the stochastically insignificant parts of the
+(ground) program, speeding up reasoning without sacrificing the predictive performance.
+We evaluate SLASH on a variety of different tasks, including the benchmark task of MNIST
+addition and Visual Question Answering (VQA).},
+    Title = {Scalable Neural-Probabilistic Answer Set Programming},
+    Url = {},
+    Year = {2023}}
+
+
+@inproceedings{willig2023consolidate,
+  Anote={./images/willig2023consolidate.png},
+  author       = {Moritz Willig and Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
+  title        = {Do Not Marginalize Mechanisms, Rather Consolidate!},
+  Keywords = {Causality, Marginalization, Consolidation, Interventions, Structural Causal Model, Simplification, Compression},
+  year         = {2023},
+  Url          = {},
+  booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
+  booktitle = {Structural causal models (SCMs) are a powerful tool for understanding the complex causal relationships that underlie many real-world systems. As these systems grow in size, the number of variables and complexity of interactions between them does, too. Thus, becoming convoluted and difficult to analyze. This is particularly true in the context of machine learning and artificial intelligence, where an ever increasing amount of data demands for new methods to simplify and compress large scale SCM. While methods for marginalizing and abstracting SCM already exist today, they may destroy the causality of the marginalized model. To alleviate this, we introduce the concept of consolidating causal mechanisms to transform large-scale SCM while preserving consistent interventional behaviour. We show consolidation is a powerful method for simplifying SCM, discuss reduction of computational complexity and give a perspective on generalizing abilities of consolidated SCM.}
+}
+
+@inproceedings{bellagente2023multifusion,
+  Anote={./images/bellagente2023multifusion.png},
+  author = {Marco Bellagente and Manuel Brack and Hannah Teufel and Felix Friedrich and Björn Deiseroth and Constantin Eichenberg and Andrew Dai and Robert Baldock and Souradeep Nanda and Koen Oostermeijer and Andres Felipe Cruz-Salinas and Patrick Schramowski and Kristian Kersting and Samuel Weinbach},
+  title = {MultiFusion: Fusing Pre-Trained Models for Multi-Lingual, Multi-Modal Image Generation},
+  year = {2023},
+  Url = {https://arxiv.org/abs/2305.15296},
+  Pages = {},
+  Note = {The recent popularity of text-to-image diffusion models (DM) can largely be attributed to the intuitive interface they provide to users. The intended generation can be expressed in natural language, with the model producing faithful interpretations of text prompts. However, expressing complex or nuanced ideas in text alone can be difficult. To ease image generation, we propose MultiFusion that allows one to express complex and nuanced concepts with arbitrarily interleaved inputs of multiple modalities and languages. MutliFusion leverages pre-trained models and aligns them for integration into a cohesive system, thereby avoiding the need for extensive training from scratch. Our experimental results demonstrate the efficient transfer of capabilities from individual modules to the downstream model. Specifically, the fusion of all independent components allows the image generation module to utilize multilingual, interleaved multimodal inputs despite being trained solely on monomodal data in a single language.},
+  Keywords = {Image Synthesis, Image Generation, Diffusion, Multimodality, Multilingualism},
+  booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)}
+}
+
+
+
+@inproceedings{deiseroth2023atman,
+  Anote={./images/deb2023atman.png},
+  author       = {Björn Deiseroth and Mayukh Deb and Samuel Weinbach and Manuel Brack and Patrick Schramowski and Kristian Kersting},
+  title        = {AtMan: Understanding Transformer Predictions Through Memory Efficient Attention Manipulation},
+  Keywords = {Explainable AI, Transformer, Large Language Models, Multimodal, Computer Vision},
+  year         = {2023},
+  Url          = {https://arxiv.org/abs/2301.08110},
+  booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
+  Note= {Generative transformer models have become increasingly complex, with large numbers of parameters and the ability to process multiple input modalities. Current methods for explaining their predictions are resource-intensive. Most crucially, they require prohibitively large amounts of additional memory since they rely on backpropagation which allocates almost twice as much GPU memory as the forward pass. This renders it difficult, if not impossible, to use explanations in production. We present AtMan that provides explanations of generative transformer models at almost no extra cost. Specifically, AtMan is a modality-agnostic perturbation method that manipulates the attention mechanisms of transformers to produce relevance maps for the input with respect to the output prediction. Instead of using backpropagation, AtMan applies a parallelizable token-based search method relying on cosine similarity neighborhood in the embedding space. Our exhaustive experiments on text and image-text benchmarks demonstrate that AtMan outperforms current state-of-the-art gradient-based methods on several metrics and models while being computationally efficient. As such, AtMan is suitable for use in large model inference deployments.}
+}
+
+
+@inproceedings{brack2023sega,
+      Anote = {./images/sega_graphic.png},
+      title={SEGA: Instructing Text-to-Image Models using Semantic Guidance},
+      author={Manuel Brack and Felix Friedrich and Dominik Hintersdorf and Lukas Struppek and Patrick Schramowski and Kristian Kersting},
+      year = {2023},
+      month={Dez},
+      Note = {Text-to-image diffusion models have recently received a lot of interest for their astonishing ability to produce high-fidelity images from text only. However, achieving one-shot generation that aligns with the user’s intent is nearly impossible, yet small changes to the input prompt often result in very different images. This leaves the user with little semantic control. To put the user in control, we show how to interact with the diffusion process to flexibly steer it along semantic directions. This semantic guidance (SEGA) generalizes to any generative architecture using classifier-free guidance. More importantly, it allows for subtle and extensive edits, composition and style changes, and optimizing the overall artistic conception. We demonstrate SEGA’s effectiveness on both latent and pixel-based diffusion models such as Stable Diffusion, Paella, and DeepFloyd-IF using a variety of tasks, thus providing strong evidence for its versatility and flexibility.},
+      Pages = {},
+      Keywords = {Representations, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Concepts, Semantics},
+      Url={https://arxiv.org/abs/2211.05105},
+      booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)}
+}
+
+@inproceedings{yu2023neurips_cc,
+  Anote = {./images/yu2023tpm_cc.png},
+  Author = {Zhongjie Yu and Martin Trapp and Kristian Kersting},
+  title  = {Characteristic Circuit},
+  Keywords = {Characteristic Circuit, Characteristic Function, Probabilistic Circuit, Heterogeneous Data, Density Estimation, Mixed Models, Hybrid Data},
+  year         = {2023},
+  Url          = {},
+  Pages = {},
+  booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
+  Note= {In many real-world scenarios it is crucial to be able to reliably and efficiently reason under uncertainty while capturing complex relationships in data.  Probabilistic circuits (PCs), a prominent family of tractable probabilistic models, offer a remedy to this challenge by composing simple, tractable distributions into a high-dimensional probability distribution. However, learning PCs on heterogeneous data is challenging and densities of some parametric distributions are not available in closed form, limiting their potential use.  We introduce characteristic circuits (CCs), a family of tractable probabilistic models providing a unified formalization of distributions over heterogeneous data in the spectral domain. The one-to-one relationship between characteristic functions and probability measures enables us to learn high-dimensional distributions on heterogeneous data domains and facilitates efficient probabilistic inference even when no closed-form density function is available. We show that the structure and parameters of CCs can be learned efficiently from the data and find that CCs outperform state-of-the-art density estimators for heterogeneous data domains on common benchmark data sets.}
+}
+
+
+@inproceedings{delfosse2023nudge,
+  Anote={./images/delfosse2023nudge.png},
+  author = {Quentin Delfosse and Hikaru Shindo and Devendra Singh Dhami and Kristian Kersting},
+  title = {Interpretable and Explainable Logical Policies via Neurally Guided Symbolic Abstraction},
+  Keywords = {Reinforcement Learning,  Neuro-Symbolic AI, Interpretable and Explainable AI},
+  booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
+  year = {2023},
+  Url = {https://arxiv.org/abs/2306.01439},
+  Pages = {},
+  Crossref={https://github.com/k4ntz/LogicRL},
+  Note = {The limited priors required by neural networks make them the dominating choice to encode and learn policies using reinforcement learning (RL). However, they are also black-boxes, making it hard to understand the agent's behaviour, especially when working on the image level. Therefore, neuro-symbolic RL aims at creating policies that are interpretable in the first place. Unfortunately, interpretability is not explainability. To achieve both, we introduce Neurally gUided Differentiable loGic policiEs (NUDGE). NUDGE exploits trained neural network-based agents to guide the search of candidate-weighted logic rules, then uses differentiable logic to train the logic agents. Our experimental evaluation demonstrates that NUDGE agents can induce interpretable and explainable policies while outperforming purely neural ones and showing good flexibility to environments of different initial states and problem sizes.}
+}
+
+
+
+@misc{brack2023distilling,
+      Anote = {./images/brack2023distilling.png},
+      title={Distilling Adversarial Prompts from Safety Benchmarks: Report for the Adversarial Nibbler Challenge },
+      author={Manuel Brack and Patrick Schramowski and Kristian Kersting},
+      Howpublished = {arXiv preprint},
+      year = {2023},
+      Note = {Text-conditioned image generation models have recently achieved astonishing image quality and alignment results. Consequently, they are employed in a fast-growing number of applications. Since they are highly data-driven, relying on billion-sized datasets randomly scraped from the web, they also produce unsafe content. As a contribution to the Adversarial Nibbler challenge, we distill a large set of over 1,000 potential adversarial inputs from existing safety benchmarks. Our analysis of the gathered prompts and corresponding images demonstrates the fragility of input filters and provides further insights into systematic safety issues in current generative image models.},
+      Pages = {},
+      Keywords = {Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Safety, Adversarial Prompting},
+      Url={../../papers/brack2023distilling.pdf}
+}
+
+
+@incollection{yu2023tpm_cc,
+  Anote = {./images/yu2023tpm_cc.png},
+  Author = {Zhongjie Yu and Martin Trapp and Kristian Kersting},
+  Booktitle = {Working Notes of the UAI Workshop on Tractable Probabilistic Modeling (TPM)},
+  Note = {In many real-world scenarios it is crucial to be able to reliably and efficiently reason under uncertainty while capturing complex relationships in data.  Probabilistic circuits (PCs), a prominent family of tractable probabilistic models, offer a remedy to this challenge by composing simple, tractable distributions into a high-dimensional probability distribution. However, learning PCs on heterogeneous data is challenging and densities of some parametric distributions are not available in closed form, limiting their potential use.  We introduce characteristic circuits (CCs), a family of tractable probabilistic models providing a unified formalization of distributions over heterogeneous data in the spectral domain. The one-to-one relationship between characteristic functions and probability measures enables us to learn high-dimensional distributions on heterogeneous data domains and facilitates efficient probabilistic inference even when no closed-form density function is available. We show that the structure and parameters of CCs can be learned efficiently from the data and find that CCs outperform state-of-the-art density estimators for heterogeneous data domains on common benchmark data sets.},
+  Keywords = {Characteristic Circuit, Characteristic Function, Probabilistic Circuit, Heterogeneous Data, Density Estimation},
+  Pages = {},
+  Title = {Characteristic Circuit},
+  Url = {./papers/yu2023tpm_cc.pdf},
+  crossref = {},
+  Year = {2023}
+}
+ 
+
+
+@misc{delfosse2023nudge,
+  Anote={./images/delfosse2023nudge.png},
+  author = {Quentin Delfosse and Hikaru Shindo and Devendra Singh Dhami and Kristian Kersting},
+  title = {Interpretable and Explainable Logical Policies via Neurally Guided Symbolic Abstraction},
+  Keywords = {Reinforcement Learning,  Neuro-Symbolic AI, Interpretable and Explainable AI},
+  Howpublished = {arXiv preprint arXiv:2306.01439},
+  year = {2023},
+  Url = {https://arxiv.org/abs/2306.01439},
+  Pages = {},
+  Crossref={https://github.com/k4ntz/LogicRL},
+  Note = {The limited priors required by neural networks make them the dominating choice to encode and learn policies using reinforcement learning (RL). However, they are also black-boxes, making it hard to understand the agent's behaviour, especially when working on the image level. Therefore, neuro-symbolic RL aims at creating policies that are interpretable in the first place. Unfortunately, interpretability is not explainability. To achieve both, we introduce Neurally gUided Differentiable loGic policiEs (NUDGE). NUDGE exploits trained neural network-based agents to guide the search of candidate-weighted logic rules, then uses differentiable logic to train the logic agents. Our experimental evaluation demonstrates that NUDGE agents can induce interpretable and explainable policies while outperforming purely neural ones and showing good flexibility to environments of different initial states and problem sizes.}
+}
+
+@misc{shindo2023neumann,
+  Anote={./images/shindo2023neumann.png},
+  author = {Hikaru Shindo and Viktor Pfanschilling and Devendra Singh Dhami and Kristian Kersting},
+  title = {Learning Differentiable Logic Programs for Abstract Visual Reasoning},
+  Keywords = {Differentiable Reasoning,  Inductive Logic Programming,  Neuro-Symbolic AI,  Object-centric Learning, Graph Neural Network},
+  Howpublished = {arXiv preprint arXiv:2307.00928},
+  year = {2023},
+  Url = {https://arxiv.org/abs/2307.00928},
+  Pages = {},
+  Crossref={https://sites.google.com/view/neumann-tuda},
+  Note = {Visual reasoning is essential for building intelligent agents that understand the world and perform problem-solving beyond perception. Differentiable forward reasoning has been developed to integrate reasoning with gradient-based machine learning paradigms. However, due to the memory intensity, most existing approaches do not bring the best of the expressivity of first-order logic, excluding a crucial ability to solve abstract visual reasoning, where agents need to perform reasoning by using analogies on abstract concepts in different scenarios. To overcome this problem, we propose NEUro-symbolic Message-pAssiNg reasoNer (NEUMANN), which is a graph-based differentiable forward reasoner, passing messages in a memory-efficient manner and handling structured programs with functors. Moreover, we propose a computationally-efficient structure learning algorithm to perform explanatory program induction on complex visual scenes. To evaluate, in addition to conventional visual reasoning tasks, we propose a new task, visual reasoning behind-the-scenes, where agents need to learn abstract programs and then answer queries by imagining scenes that are not observed. We empirically demonstrate that NEUMANN solves visual reasoning tasks efficiently, outperforming neural, symbolic, and neuro-symbolic baselines.}
+}
+
+
+
+  
+@incollection{sha2023nesy,
+  author = {Jingyuan Sha and Hikaru Shindo and Kristian Kersting and Devendra Singh Dhami},
+  title = { Neural-Symbolic Predicate Invention: Learning Relational Concepts from Visual Scenes},
+  Anote = {./images/sha2023nesypi.png},
+  Keywords = {Differentiable Reasoning,  Inductive Logic Programming,  Neuro-Symbolic AI,  Object-centric Learning},
+  Note = {The predicates used for Inductive Logic Programming (ILP) systems are usually elusive and need to be hand-crafted in advance, which limits the generalization of the system when learning new rules without sufficient background knowledge. Predicate Invention (PI) for ILP is the problem of discovering new concepts that describe hidden relationships in the domain. PI can mitigate the generalization problem for ILP by inferring new concepts, giving the system a better vocabulary to compose logic ruless. Although there are several PI approaches for symbolic ILP systems, PI for NeSy ILP systems that can handle visual input to learn logical rules using differentiable reasoning is relatively unaddressed. To this end, we propose a neural-symbolic approach, NeSy-𝜋, to invent predicates from visual scenes for NeSy ILP systems based on clustering and extension of relational concepts. (𝜋 denotes the abbrivation of Predicate Invention). NeSy-𝜋 processes visual scenes as input using deep neural networks for the visual perception and invents new concepts that support the task of classifying complex visual scenes. The invented concepts can be used by any NeSy ILP systems instead of hand-crafted background knowledge. Our experiments show that the PI model is capable of inventing high-level concepts and solving complex visual logic patterns more efficiently and accurately in the absence of explicit background knowledge.Moreover, the invented concepts are explainable and interpretable, while also providing competitive results with state-of-the-art NeSy ILP systems based on given knowledge.},
+  year={2023},
+  booktitle = {Proceedings of the 17th International Workshop on Neural-Symbolic Learning and Reasoning (NeSy)},
+  Url = {https://www.cs.ox.ac.uk/isg/conferences/tmp-proceedings/NeSy2023/paper8.pdf}
+}
+
+
+@misc{helff2023vlol,
   author = {Lukas Helff and Wolfgang Stammer and Hikaru Shindo and Devendra Singh Dhami and Kristian Kersting},
   title = {V-LoL: A Diagnostic Dataset for Visual Logical Learning},
   Anote = {./images/helff2023vlol.png},
-  Keywords = {Visual Logical Learning, Diagnostic Dataset},
+  Keywords = {Visual Logical Learning, Diagnostic Dataset, Benchmark, Dataset},
   Note = {Despite the successes of recent developments in visual AI, different shortcomings still exist; from missing exact logical reasoning, to abstract generalization abilities, to understanding complex and noisy scenes. Unfortunately, existing benchmarks, were not designed to capture more than a few of these aspects. Whereas deep learning datasets focus on visually complex data but simple visual reasoning tasks, inductive logic datasets involve complex logical learning tasks, however, lack the visual component. To address this, we propose the visual logical learning dataset, V-LoL, that seamlessly combines visual and logical challenges. Notably, we introduce the first instantiation of V-LoL, V-LoL-Trains, – a visual rendition of a classic benchmark in symbolic AI, the Michalski train problem. By incorporating intricate visual scenes and flexible logical reasoning tasks within a versatile framework, V-LoL provides a platform for investigating a wide range of visual logical learning challenges. We evaluate a variety of AI systems including traditional symbolic AI, neural AI, as well as neuro-symbolic AI. Our evaluations demonstrate that even state-of-the-art AI faces difficulties in dealing with visual logical learning challenges, highlighting unique advantages and limitations specific to each methodology. Overall, V-LoL opens up new avenues for understanding and enhancing current abilities in visual logical learning for AI systems.},
   Howpublished = {arXiv preprint arXiv:2306.07743},
   year = {2023},
   Url = {https://arxiv.org/abs/2306.07743},
   Pages = {},
-  Crossref={https://sites.google.com/view/v-lol},
-}
+  Crossref={https://sites.google.com/view/v-lol}
+} 
 
-@inproceedings{brack2023illume, 
+
+@inproceedings{brack2023illume,
   author = {Manuel Brack and Patrick Schramowski and Björn Deiseroth and Kristian Kersting},
   title = {ILLUME: Rationalizing Vision-Language Models through Human Interactions},
   Anote = {./images/brack2022illume.png},
   Keywords = {Alignement, Self-Generated Explanations, XAI, Explanatory Interactive Learning},
   Note = {Bootstrapping from pre-trained language models has been proven to be an efficient approach for building vision-language models (VLM) for tasks such as image captioning or visual question answering. However, outputs of these models rarely align with user's rationales for specific answers. In order to improve this alignment and reinforce commonsense reasons, we propose a tuning paradigm based on human interactions with machine generated data. Our ILLUME executes the following loop: Given an image-question-answer prompt, the VLM samples multiple candidate rationales, and a human critic provides minimal feedback via preference selection, used for fine-tuning. This loop increases the training data and gradually carves out the VLM's rationalization capabilities that are aligned with human intend. Our exhaustive experiments demonstrate that ILLUME is competitive with standard supervised fine-tuning while using significantly fewer training data and only requiring minimal feedback.},
   year={2023},
+  month={Jul},
   booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML)},
   Url = {https://arxiv.org/pdf/2208.08241.pdf}
 }
@@ -28,11 +219,53 @@
       author={Patrick Schramowski and Manuel Brack and Björn Deiseroth and Kristian Kersting},
       booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
       year = {2023},
+      month={Jun},
       Note = {Text-conditioned image generation models have recently achieved astonishing results in image quality and text alignment and are consequently employed in a fast-growing number of applications. Since they are highly data-driven, relying on billion-sized datasets randomly scraped from the internet, they also suffer, as we demonstrate, from degenerated and biased human behavior. In turn, they may even reinforce such biases. To help combat these undesired side effects, we present safe latent diffusion (SLD). Specifically, to measure the inappropriate degeneration due to unfiltered and imbalanced training sets, we establish a novel image generation test bed-inappropriate image prompts (I2P)-containing dedicated, real-world image-to-text prompts covering concepts such as nudity and violence. As our exhaustive empirical evaluation demonstrates, the introduced SLD removes and suppresses inappropriate image parts during the diffusion process, with no additional training required and no adverse effect on overall image quality or text alignment.},
       Pages = {},
       Keywords = {Safety, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Ethics},
       Url={https://arxiv.org/abs/2211.05105}
 }
+
+
+
+@inproceedings{sudhakaran2023iccv,
+  Anote={./images/sudhakaran2023iccv.png},
+  Url = {},
+  author = {Gopika Sudhakaran and Devendra Dhami and Kristian Kersting and Stefan Roth},
+  title = {Vision Relation Transformer for Unbiased Scene Graph Generation},
+  Note = {Recent years have seen a growing interest in Scene Graph Generation (SGG), a comprehensive visual scene understanding task that aims to predict entity relationships using a relation encoder-decoder pipeline stacked on top of an object encoder-decoder backbone. Unfortunately, current SGG methods suffer from an information loss regarding the entities' parts during the relation encoding process. To address this, we introduce the Vision rElation TransfOrmer (VETO), consisting of a novel entity part-level relation encoder. We further observe that many existing SGG methods claim to be unbiased, but are still biased towards either head or tail classes. To overcome this bias, we introduce a Mutually Exclusive ExperT (MEET) learning strategy that captures important relation features without bias towards head or tail classes. Exhaustive experimental results on the VG and GQA datasets demonstrate that VETO + MEET boosts the predictive performance by up to 47% over the state of the art while being ~10x smaller.},
+  year={2023},
+  Pages = {},
+  Keywords = {Transformer, Scence Graph Generation, Relational, Objects, Multimodal},
+  booktitle={Proceedings of the 19th IEEE/CVF International Conference on Computer Vision (ICCV)}
+}
+
+
+@inproceedings{struppek2023iccv,
+  Anote={./images/struppek2023iccv.png},
+  author = {Lukas Struppek and Dominik Hintersdorf and Kristian Kersting},
+  title = {Rickrolling the Artist: Injecting Backdoors into Text Encoders for Text-to-Image Synthesis},
+  Note = {While text-to-image synthesis currently enjoys great popularity among researchers and the general public, the security of these models has been neglected so far. Many text-guided image generation models rely on pre-trained text encoders from external sources, and their users trust that the retrieved models will behave as promised. Unfortunately, this might not be the case. We introduce backdoor attacks against text-guided generative models and demonstrate that their text encoders pose a major tampering risk. Our attacks only slightly alter an encoder so that no suspicious model behavior is apparent for image generations with clean prompts. By then inserting a single character trigger into the prompt, e.g., a non-Latin character or emoji, the adversary can trigger the model to either generate images with pre-defined attributes or images following a hidden, potentially malicious description. We empirically demonstrate the high effectiveness of our attacks on Stable Diffusion and highlight that the injection process of a single backdoor takes less than two minutes. Besides phrasing our approach solely as an attack, it can also force an encoder to forget phrases related to certain concepts, such as nudity or violence, and help to make image generation safer.},
+  year={2023},
+  Pages = {},
+  Keywords = {Backdoor Attack, Generative AI, CLIP, Text2Image Synthesis, Homoglyphs},
+  booktitle={Proceedings of the 19th IEEE/CVF International Conference on Computer Vision (ICCV)},
+  Url = {https://arxiv.org/abs/2211.02408},
+}
+
+ 
+
+@inproceedings{friedrich2023ecai,
+  author = {Felix Friedrich and Wolfgang Stammer and Patrick Schramowski and Kristian Kersting},
+  title = {Revision Transformers: Instructing Language Models to Change their Values},
+  Anote = {./images/friedrich2023ecai.png},
+  Keywords = {Transformer, Retriever, Revisions, Machine Ethics},
+  Note = {Current transformer language models (LM) are large-scale models with billions of parameters. They have been shown to provide high performances on a variety of tasks but are also prone to shortcut learning and bias. Addressing such incorrect model behavior via parameter adjustments is very costly. This is particularly problematic for updating dynamic concepts, such as moral values, which vary culturally or interpersonally. In this work, we question the current common practice of storing all information in the model parameters and propose the Revision Transformer (RiT) employing information retrieval to facilitate easy model updating. The specific combination of a large-scale pre-trained LM that inherently but also diffusely encodes world knowledge with a clear-structured revision engine makes it possible to update the model's knowledge with little effort and the help of user interaction. We exemplify RiT on a moral dataset and simulate user feedback demonstrating strong performance in model revision even with small data. This way, users can easily design a model regarding their preferences, paving the way for more transparent and personalized AI models.},
+  year={2023},
+  booktitle = {Proceedings of the 26th European Conference on Artificial Intelligence (ECAI)},
+  Url = {https://arxiv.org/pdf/2210.10332.pdf}
+}
+
 
 
 @inproceedings{sidheekh2023uai,
@@ -48,9 +281,10 @@
 }
 
 
+
 @inproceedings{ventola2023uai,
   Anote={./images/ventola-braun2023tdi.png},
-  Url = {https://arxiv.org/abs/2302.06544},
+  Url = {https://proceedings.mlr.press/v216/ventola23a/ventola23a.pdf},
   author = {Fabrizio Ventola and Steven Braun and Zhongjie Yu and Martin Mundt and Kristian Kersting},
   title = {Probabilistic Circuits That Know What They Don't Know},
    Note = {Probabilistic circuits (PCs) are models that allow exact and tractable probabilistic inference. In contrast to neural networks, they are often assumed to be well-calibrated and robust to out-of-distribution (OOD) data. In this paper, we show that PCs are in fact not robust to OOD data, i.e., they don’t know what they don’t know. We then show how this challenge can be overcome by model uncertainty quantification. To this end, we propose tractable dropout inference (TDI), an inference procedure to estimate uncertainty by deriving an analytical solution to Monte Carlo dropout (MCD) through variance propagation. Unlike MCD in neural networks, which comes at the cost of multiple network evaluations, TDI provides tractable sampling-free uncertainty estimates in a single forward pass. TDI improves the robustness of PCs to distribution shift and OOD data, demonstrated through a series of experiments evaluating the classification confidence and uncertainty estimates on real-world data.},
@@ -74,6 +308,44 @@
 }
 
 
+@inproceedings{kohaut2023md,
+  Anote={./images/kohaut2023md.png},
+  title={Mission Design for Unmanned Aerial Vehicles using Hybrid Probabilistic Logic Programs},
+  author={Simon Kohaut and Benedict Flade and Devendra Singh Dhami and Julian Eggert and Kristian Kersting},
+  booktitle={26th IEEE International Intelligent Transportation Systems Conference (ITSC)},
+  note = {Advanced Air Mobility (AAM) is a growing field
+that demands a deep understanding of legal, spatial and temporal
+concepts in navigation. Hence, any implementation of AAM is
+forced to deal with the inherent uncertainties of human-inhabited
+spaces. Enabling growth and innovation requires the creation of
+a system for safe and robust mission design, i.e., the way we
+formalise intentions and decide their execution as trajectories for
+the Unmanned Aerial Vehicle (UAV). Although legal frameworks
+have emerged to govern urban airspaces, their full integration
+into the decision process of autonomous agents and operators
+remains an open task. In this work we present ProMis, a system
+architecture for probabilistic mission design. It links the data
+available from various static and dynamic data sources with
+legal text and operator requirements by following principles of
+formal verification and probabilistic modeling. Using ProMis,
+combining low-level perception and high-level rules in AAM
+can be applied to the navigation frame of the UAV. To this
+end, we employ Hybrid Probabilistic Logic Programs (HPLP)
+as a unifying, intermediate representation between perception
+and action-taking. Furthermore, we present methods to connect
+ProMis with crowd-sourced map data by generating HPLP atoms
+that represent spatial relations in a probabilistic fashion. Our
+claims of the utility and generality of ProMis are supported by
+experiments on a diverse set of scenarios and a discussion of the
+computational demands associated with probabilistic missions.},
+  Url = {},
+  pages={},
+  year={2023},
+  Keywords = {Mission Design, Probabilistic Inference, Hybrid Probabilistic Logic}
+}
+
+
+
 @inproceedings{mathur2023psb,
     Anote = {./images/mathur2023psb.png},
     title={Exploiting Domain Knowledge as Causal Independencies in Modeling Gestational Diabetes},
@@ -90,7 +362,7 @@ study and demonstrate the importance of the features and the causal independence
     Url={./papers/mathur2023psb.pdf}
 }
 
-@inproceedings{haemmerl2023fofindingsACL, 
+@inproceedings{haemmerl2023fofindingsACL,
   url = {./papers/haemmerl2023fofindingsACL.pdf},
   author = {Katharina Hämmerl and Bjoern Deiseroth and Patrick Schramowski and Jindřich Libovický and Constantin Rothkopf and Alexander Fraser and Kristian Kersting },
   title = {Speaking Multiple Languages Affects the Moral Bias of Language Models},
@@ -134,16 +406,12 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
 
 @misc{braun2023cake,
   Anote={./images/braun2023cake.png},
-  publisher = {arXiv},
   copyright = {Creative Commons Attribution 4.0 International},
   title={Deep Classifier Mimicry without Data Access},
   author={Steven Braun and Martin Mundt and Kristian Kersting},
   year={2023},
-  eprint={2306.02090},
-  archivePrefix={arXiv},
-  primaryClass={cs.LG},
-  journal={arXiv preprint, arXiv:2306.02090},
-  Howpublished={arXiv preprint, arXiv:2306.02090},
+  Pages = {},
+  Howpublished={arXiv preprint arXiv:2306.02090},
   Url={https://arxiv.org/pdf/2306.02090.pdf},
   Note={Access to pre-trained models has recently emerged as a standard across numerous
   machine learning domains. Unfortunately, access to the original data the models
@@ -154,7 +422,9 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
   classifiers without access to the original data. To this end, CAKE generates pairs of noisy
   synthetic samples and diffuses them contrastively toward a model's decision boundary. We
   empirically corroborate CAKE's effectiveness using several benchmark datasets and various
-  architectural choices, paving the way for broad application.}
+  architectural choices, paving the way for broad application.},
+  Keywords = {Fine-Tuning, Pre-Trained Models, Knowledge Distillation, Contrastive Abductive
+  Knowledge Extraction}
 }
 
 
@@ -245,28 +515,17 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
   Keywords = {Simulation and Modeling, Autonomous Sailing}
 }
 
-@inproceedings{brack2023mitigating,
+@incollection{brack2023mitigating,
   Anote={./images/brack2023mitigating.png},
   author = {Manuel Brack and Felix Friedrich and Patrick Schramowski and Kristian Kersting},
   title = {Mitigating Inappropriateness in Image Generation: Can there be Value in Reflecting the World's Ugliness?},
-  booktitle = {ICML 2023 Workshop on Challenges of Deploying Generative AI},
+  booktitle = {Workshop on Challenges of Deploying Generative AI at ICML & Workshop on Responsible Applied Artificial Intelligence (RAAIT) at ECAI},
   year = {2023},
+  month={Jul},
   Url = {https://arxiv.org/pdf/2305.18398},
   Pages = {},
   Note = {Text-conditioned image generation models have recently achieved astonishing results in image quality and text alignment and are consequently employed in a fast-growing number of applications. Since they are highly data-driven, relying on billion-sized datasets randomly scraped from the web, they also reproduce inappropriate human behavior. Specifically, we demonstrate inappropriate degeneration on a large-scale for various generative text-to-image models, thus motivating the need for monitoring and moderating them at deployment. To this end, we evaluate mitigation strategies at inference to suppress the generation of inappropriate content. Our findings show that we can use models' representations of the world's ugliness to align them with human preferences.},
   Keywords = {Image Synthesis, Image Generation, Diffusion, AI Ethics, Inappropriatness, Evaluation, Mitigation}
-}
-
-@misc{bellagente2023multifusion,
-  Anote={./images/bellagente2023multifusion.png},
-  author = {Marco Bellagente and Manuel Brack and Hannah Teufel and Felix Friedrich and Björn Deiseroth and Constantin Eichenberg and Andrew Dai and Robert Baldock and Souradeep Nanda and Koen Oostermeijer and Andres Felipe Cruz-Salinas and Patrick Schramowski and Kristian Kersting and Samuel Weinbach},
-  title = {MultiFusion: Fusing Pre-Trained Models for Multi-Lingual, Multi-Modal Image Generation},
-  Howpublished = {arXiv preprint arXiv:2305.15296},
-  year = {2023},
-  Url = {https://arxiv.org/pdf/2305.15296},
-  Pages = {},
-  Note = {The recent popularity of text-to-image diffusion models (DM) can largely be attributed to the intuitive interface they provide to users. The intended generation can be expressed in natural language, with the model producing faithful interpretations of text prompts. However, expressing complex or nuanced ideas in text alone can be difficult. To ease image generation, we propose MultiFusion that allows one to express complex and nuanced concepts with arbitrarily interleaved inputs of multiple modalities and languages. MutliFusion leverages pre-trained models and aligns them for integration into a cohesive system, thereby avoiding the need for extensive training from scratch. Our experimental results demonstrate the efficient transfer of capabilities from individual modules to the downstream model. Specifically, the fusion of all independent components allows the image generation module to utilize multilingual, interleaved multimodal inputs despite being trained solely on monomodal data in a single language.},
-  Keywords = {Image Synthesis, Image Generation, Diffusion, Multimodality, Multilingualism}
 }
 
 @incollection{friedrich2023oneexp,
@@ -303,7 +562,7 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
       title={Combining AI and AM – Improving Approximate Matching through Transformer Networks},
       author={Frieder Uhlig and Lukas Struppek and Dominik Hintersdorf and Thomas Göbel and Harald Baier and Kristian Kersting},
       year={2023},
-      booktitle={Proceedings of the Annual DFRWS USA Conference 2023},
+      booktitle={Proceedings of the Annual Digital Forensic Research Workshop (DFRWS) USA Conference},
       Note = {Approximate matching is a well-known concept in digital forensics to determine the similarity between digital artifacts.An important use case of approximate matching is the reliable and efficient detection of case-relevant data structures on a blacklist (e.g., malware or corporate secrets), if only fragments of the original are available. For instance, if only a cluster of indexed malware is still present during the digital forensic investigation, the approximate matching algorithm shall be able to assign the fragment to the
       blacklisted malware. However, traditional approximate matching functions like TLSH and ssdeep fail to detect files based on their fragments if the presented piece is relatively small compared to the overall file size (e.g., like one-third of the total file). A second well-known issue with traditional approximate matching algorithms is the lack of scaling due to the ever-increasing lookup databases. In this paper, we propose an improved matching algorithm based on transformer-based models from the field of natural language processing. We call our approach
       Deep Learning Approximate Matching (DLAM). As a concept from artificial intelligence, DLAM gets knowledge of characteristic blacklisted patterns during its training phase. Then DLAM is able to detect the patterns in a typically much larger file, that is DLAM focuses on the use case of fragment detection. Our evaluation is inspired by two widespread blacklist use cases: the detection of malware (e.g., in JavaScript) and corporate secrets (e.g., pdf or office documents). We reveal that DLAM has three key advantages compared to the prominent conventional approaches TLSH and ssdeep. First, it makes the tedious extraction of known to be bad parts obsolete, which is necessary until now before any search for them with approximate matching algorithms. This allows efficient classification of files on a much larger scale, which is important due to exponentially increasing data to be investigated. Second, depending on the use case, DLAM achieves a similar (in case of mrsh-cf and mrsh-v2) or
@@ -313,17 +572,7 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
       Url={https://arxiv.org/pdf/2208.11367.pdf}
 }
 
-@article{shindo2023alphailp,
-Anote={./images/shindo2023alphailp.png},
-author={Hikaru Shindo and Viktor Pfanschilling and Devendra Singh Dhami and Kristian Kersting},
-title={alphaILP: Thinking Visual Scenes as Differentiable Logic Programs},
-journal={Machine Learning Journal (MLJ)},
-Publisher = {Springer Nature},
-year={2023},
-Crossref = {https://ml-research.github.io/alphailpdoc/},
-url={https://link.springer.com/article/10.1007/s10994-023-06320-1},
-keywords={Neuro-Symbolic AI, Differentiable Reasoning, Inductive Logic Programming, Object-centric Learning}
-}
+
 
 @misc{ye2023metalogic,
       Anote = {./images/ye2022metalogic.png},
@@ -402,7 +651,7 @@ journal = {Business & Information Systems Engineering},
 pages = {},
 year = {2023},
 url = {},
-author = {Nicolas Pfeuffer and Lorenz Baum and Wolfgang Stammer and Benjamin M. Abdel-Karim and Patrick Schramowski and Andreas M. Bucher Christian Hügel and Gernot Rohde and Kristian Kersting and Oliver Hinz},
+author = {Nicolas Pfeuffer and Lorenz Baum and Wolfgang Stammer and Benjamin M. Abdel-Karim and Patrick Schramowski and Andreas M. Bucher and Christian Hügel and Gernot Rohde and Kristian Kersting and Oliver Hinz},
 keywords = {Explainable AI, Interactive Learning, Machine Learning, Action Design Research, COVID-19, Imaging, Confounders },
 Note = {The most promising standard machine learning methods can deliver highly accurate
 classification results and often outperform standard white-box methods. However, for
@@ -422,18 +671,7 @@ projects, gain new insights on the part of the human user, and thereby help to t
 full potential of AI-based systems for organizations and research.}
 }
 
-@misc{brack2023Sega,
-      Anote = {./images/sega_graphic.png},
-      title={SEGA: Instructing Diffusion using Semantic Dimensions},
-      author={Manuel Brack and Felix Friedrich and Dominik Hintersdorf and Lukas Struppek and Patrick Schramowski and Kristian Kersting},
-      Howpublished = {arXiv preprint arXiv:2211.05105},
-      year = {2023},
-      month={Jan},
-      Note = {Text-to-image diffusion models have recently received a lot of interest for their astonishing ability to produce high-fidelity images from text only. However, achieving one-shot generation that aligns with the user's intent is nearly impossible, yet small changes to the input prompt often result in very different images. This leaves the user with little semantic control. To put the user in control, we show how to interact with the diffusion process to flexibly steer it along semantic directions. This semantic guidance (SEGA) allows for subtle and extensive edits, changes in composition and style, as well as optimizing the overall artistic conception. We demonstrate SEGA's effectiveness on a variety of tasks and provide evidence for its versatility and flexibility.},
-      Pages = {},
-      Keywords = {Representations, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Concepts, Semantics},
-      Url={https://arxiv.org/abs/2211.05105}
-}
+
 
 @inproceedings{ramanan2023codscomad,
     Anote = {./images/ramanan2023codscomad.jpg},
@@ -1205,9 +1443,9 @@ url={https://doi.org/10.1038/s42256-022-00458-8}
 
 
 
-  @misc{zhao2022rightLatent,
+  @misc{shao2022rightLatent,
         title={Right for the Right Latent Factors: Debiasing Generative Models via Disentanglement},
-        author={Xiaoting Zhao and Karl Stelzner and Kristian Kersting},
+        author={Xiaoting Shao and Karl Stelzner and Kristian Kersting},
         year={2022},
         Url={https://arxiv.org/pdf/2202.00391.pdf},
         Note={A key assumption of most statistical machine learning methods is that they have access to independent samples from the distribution of data they encounter at test time. As such, these methods often perform poorly in the face of biased data, which breaks this assumption. In particular, machine learning models have been shown to exhibit Clever-Hans-like behaviour, meaning that spurious correlations in the training set are inadvertently learnt. A number of works have been proposed to revise deep classifiers to learn the right correlations. However, generative models have been overlooked so far. We observe that generative models are also prone to Clever-Hans-like behaviour. To counteract this issue, we propose to debias generative models by disentangling their internal representations, which is achieved via human feedback. Our experiments show that this is effective at removing bias even when human feedback covers only a small fraction of the desired distribution. In addition, we achieve strong disentanglement results in a quantitative comparison with recent methods.},

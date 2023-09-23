@@ -1,14 +1,119 @@
+@article{shindo2023alphailp,
+Anote={./images/shindo2023alphailp.png},
+author={Hikaru Shindo and Viktor Pfanschilling and Devendra Singh Dhami and Kristian Kersting},
+note = {Deep neural learning has shown remarkable performance at learning representations for visual object categorization. However, deep neural networks such as CNNs do not explicitly encode objects and relations among them. This limits their success on tasks that require a deep logical understanding of visual scenes, such as Kandinsky patterns and Bongard problems. To overcome these limitations, we introduce 𝛼ILP, a novel differentiable inductive logic programming framework that learns to represent scenes as logic programs—intuitively, logical atoms correspond to objects, attributes, and relations, and clauses encode high-level scene information. 𝛼ILP has an end-to-end reasoning architecture from visual inputs. Using it, 𝛼ILP performs differentiable inductive logic programming on complex visual scenes, i.e., the logical rules are learned by gradient descent. Our extensive experiments on Kandinsky patterns and CLEVR-Hans benchmarks demonstrate the accuracy and efficiency of 𝛼ILP in learning complex visual-logical concepts.}, 
+title={alphaILP: Thinking Visual Scenes as Differentiable Logic Programs},
+journal={Machine Learning Journal (MLJ)},
+Publisher = {Springer},
+year={2023},
+Crossref = {https://ml-research.github.io/alphailpdoc/},
+url={https://link.springer.com/article/10.1007/s10994-023-06320-1},
+keywords={Neuro-Symbolic AI, Differentiable Reasoning, Inductive Logic Programming, Object-centric Learning}
+}
+
+
+@article{skyagin2023slash,
+    Anote = {./images/skyagin2023slash.png},
+    Author = {Arseny Skryagin and Daniel Ochs and Devendra Singh Dhami and Kristian Kersting},
+    Journal = {Journal of Artificial Intelligence Research (JAIR)},
+    Keywords = {Statistical Relational Learning, Neural ASP, Neuralsymnolic AI, Probabilistic Circuits, Neural Networks, Neural Probabilistic Predicate},
+    Note = {The goal of combining the robustness of neural networks and the expressiveness of symbolic
+methods has rekindled the interest in Neuro-Symbolic AI. Deep Probabilistic Programming
+Languages (DPPLs) have been developed for probabilistic logic programming to be carried
+out via the probability estimations of deep neural networks (DNNs). However, recent
+SOTA DPPL approaches allow only for limited conditional probabilistic queries and do
+not offer the power of true joint probability estimation. In our work, we propose an easy
+integration of tractable probabilistic inference within a DPPL. To this end, we introduce
+SLASH, a novel DPPL that consists of Neural-Probabilistic Predicates (NPPs) and a logic
+program, united via answer set programming (ASP). NPPs are a novel design principle
+allowing for combining all deep model types and combinations thereof to be represented
+as a single probabilistic predicate. In this context, we introduce a novel +/− notation
+for answering various types of probabilistic queries by adjusting the atom notations of a
+predicate. To scale well, we show how to prune the stochastically insignificant parts of the
+(ground) program, speeding up reasoning without sacrificing the predictive performance.
+We evaluate SLASH on a variety of different tasks, including the benchmark task of MNIST
+addition and Visual Question Answering (VQA).},
+    Title = {Scalable Neural-Probabilistic Answer Set Programming},
+    Url = {},
+    Year = {2023}}
+
+
+@inproceedings{willig2023consolidate,
+  Anote={./images/willig2023consolidate.png},
+  author       = {Moritz Willig and Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
+  title        = {Do Not Marginalize Mechanisms, Rather Consolidate!},
+  Keywords = {Causality, Marginalization, Consolidation, Interventions, Structural Causal Model, Simplification, Compression},
+  year         = {2023},
+  Url          = {},
+  booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
+  booktitle = {Structural causal models (SCMs) are a powerful tool for understanding the complex causal relationships that underlie many real-world systems. As these systems grow in size, the number of variables and complexity of interactions between them does, too. Thus, becoming convoluted and difficult to analyze. This is particularly true in the context of machine learning and artificial intelligence, where an ever increasing amount of data demands for new methods to simplify and compress large scale SCM. While methods for marginalizing and abstracting SCM already exist today, they may destroy the causality of the marginalized model. To alleviate this, we introduce the concept of consolidating causal mechanisms to transform large-scale SCM while preserving consistent interventional behaviour. We show consolidation is a powerful method for simplifying SCM, discuss reduction of computational complexity and give a perspective on generalizing abilities of consolidated SCM.}
+}
+
+@inproceedings{bellagente2023multifusion,
+  Anote={./images/bellagente2023multifusion.png},
+  author = {Marco Bellagente and Manuel Brack and Hannah Teufel and Felix Friedrich and Björn Deiseroth and Constantin Eichenberg and Andrew Dai and Robert Baldock and Souradeep Nanda and Koen Oostermeijer and Andres Felipe Cruz-Salinas and Patrick Schramowski and Kristian Kersting and Samuel Weinbach},
+  title = {MultiFusion: Fusing Pre-Trained Models for Multi-Lingual, Multi-Modal Image Generation},
+  year = {2023},
+  Url = {https://arxiv.org/abs/2305.15296},
+  Pages = {},
+  Note = {The recent popularity of text-to-image diffusion models (DM) can largely be attributed to the intuitive interface they provide to users. The intended generation can be expressed in natural language, with the model producing faithful interpretations of text prompts. However, expressing complex or nuanced ideas in text alone can be difficult. To ease image generation, we propose MultiFusion that allows one to express complex and nuanced concepts with arbitrarily interleaved inputs of multiple modalities and languages. MutliFusion leverages pre-trained models and aligns them for integration into a cohesive system, thereby avoiding the need for extensive training from scratch. Our experimental results demonstrate the efficient transfer of capabilities from individual modules to the downstream model. Specifically, the fusion of all independent components allows the image generation module to utilize multilingual, interleaved multimodal inputs despite being trained solely on monomodal data in a single language.},
+  Keywords = {Image Synthesis, Image Generation, Diffusion, Multimodality, Multilingualism},
+  booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)}
+}
+
+
+
+@inproceedings{deiseroth2023atman,
+  Anote={./images/deb2023atman.png},
+  author       = {Björn Deiseroth and Mayukh Deb and Samuel Weinbach and Manuel Brack and Patrick Schramowski and Kristian Kersting},
+  title        = {AtMan: Understanding Transformer Predictions Through Memory Efficient Attention Manipulation},
+  Keywords = {Explainable AI, Transformer, Large Language Models, Multimodal, Computer Vision},
+  year         = {2023},
+  Url          = {https://arxiv.org/abs/2301.08110},
+  booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
+  Note= {Generative transformer models have become increasingly complex, with large numbers of parameters and the ability to process multiple input modalities. Current methods for explaining their predictions are resource-intensive. Most crucially, they require prohibitively large amounts of additional memory since they rely on backpropagation which allocates almost twice as much GPU memory as the forward pass. This renders it difficult, if not impossible, to use explanations in production. We present AtMan that provides explanations of generative transformer models at almost no extra cost. Specifically, AtMan is a modality-agnostic perturbation method that manipulates the attention mechanisms of transformers to produce relevance maps for the input with respect to the output prediction. Instead of using backpropagation, AtMan applies a parallelizable token-based search method relying on cosine similarity neighborhood in the embedding space. Our exhaustive experiments on text and image-text benchmarks demonstrate that AtMan outperforms current state-of-the-art gradient-based methods on several metrics and models while being computationally efficient. As such, AtMan is suitable for use in large model inference deployments.}
+}
+
+
+@inproceedings{brack2023sega,
+      Anote = {./images/sega_graphic.png},
+      title={SEGA: Instructing Text-to-Image Models using Semantic Guidance},
+      author={Manuel Brack and Felix Friedrich and Dominik Hintersdorf and Lukas Struppek and Patrick Schramowski and Kristian Kersting},
+      year = {2023},
+      month={Dez},
+      Note = {Text-to-image diffusion models have recently received a lot of interest for their astonishing ability to produce high-fidelity images from text only. However, achieving one-shot generation that aligns with the user’s intent is nearly impossible, yet small changes to the input prompt often result in very different images. This leaves the user with little semantic control. To put the user in control, we show how to interact with the diffusion process to flexibly steer it along semantic directions. This semantic guidance (SEGA) generalizes to any generative architecture using classifier-free guidance. More importantly, it allows for subtle and extensive edits, composition and style changes, and optimizing the overall artistic conception. We demonstrate SEGA’s effectiveness on both latent and pixel-based diffusion models such as Stable Diffusion, Paella, and DeepFloyd-IF using a variety of tasks, thus providing strong evidence for its versatility and flexibility.},
+      Pages = {},
+      Keywords = {Representations, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Concepts, Semantics},
+      Url={https://arxiv.org/abs/2211.05105},
+      booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)}
+}
+
 @inproceedings{yu2023neurips_cc,
-Anote = {./images/yu2023tpm_cc.png},
-Author = {Zhongjie Yu and Martin Trapp and Kristian Kersting},
-Booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
-Note = {In many real-world scenarios it is crucial to be able to reliably and efficiently reason under uncertainty while capturing complex relationships in data.  Probabilistic circuits (PCs), a prominent family of tractable probabilistic models, offer a remedy to this challenge by composing simple, tractable distributions into a high-dimensional probability distribution. However, learning PCs on heterogeneous data is challenging and densities of some parametric distributions are not available in closed form, limiting their potential use.  We introduce characteristic circuits (CCs), a family of tractable probabilistic models providing a unified formalization of distributions over heterogeneous data in the spectral domain. The one-to-one relationship between characteristic functions and probability measures enables us to learn high-dimensional distributions on heterogeneous data domains and facilitates efficient probabilistic inference even when no closed-form density function is available. We show that the structure and parameters of CCs can be learned efficiently from the data and find that CCs outperform state-of-the-art density estimators for heterogeneous data domains on common benchmark data sets.},
-Keywords = {Characteristic Circuit, Characteristic Function, Probabilistic Circuit, Heterogeneous Data, Density Estimation},
-Pages = {},
-Title = {Characteristic Circuit},
-Url = {},
-crossref = {},
-Year = {2023}}
+  Anote = {./images/yu2023tpm_cc.png},
+  Author = {Zhongjie Yu and Martin Trapp and Kristian Kersting},
+  title  = {Characteristic Circuit},
+  Keywords = {Characteristic Circuit, Characteristic Function, Probabilistic Circuit, Heterogeneous Data, Density Estimation, Mixed Models, Hybrid Data},
+  year         = {2023},
+  Url          = {},
+  Pages = {},
+  booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
+  Note= {In many real-world scenarios it is crucial to be able to reliably and efficiently reason under uncertainty while capturing complex relationships in data.  Probabilistic circuits (PCs), a prominent family of tractable probabilistic models, offer a remedy to this challenge by composing simple, tractable distributions into a high-dimensional probability distribution. However, learning PCs on heterogeneous data is challenging and densities of some parametric distributions are not available in closed form, limiting their potential use.  We introduce characteristic circuits (CCs), a family of tractable probabilistic models providing a unified formalization of distributions over heterogeneous data in the spectral domain. The one-to-one relationship between characteristic functions and probability measures enables us to learn high-dimensional distributions on heterogeneous data domains and facilitates efficient probabilistic inference even when no closed-form density function is available. We show that the structure and parameters of CCs can be learned efficiently from the data and find that CCs outperform state-of-the-art density estimators for heterogeneous data domains on common benchmark data sets.}
+}
+
+
+@inproceedings{delfosse2023nudge,
+  Anote={./images/delfosse2023nudge.png},
+  author = {Quentin Delfosse and Hikaru Shindo and Devendra Singh Dhami and Kristian Kersting},
+  title = {Interpretable and Explainable Logical Policies via Neurally Guided Symbolic Abstraction},
+  Keywords = {Reinforcement Learning,  Neuro-Symbolic AI, Interpretable and Explainable AI},
+  booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
+  year = {2023},
+  Url = {https://arxiv.org/abs/2306.01439},
+  Pages = {},
+  Crossref={https://github.com/k4ntz/LogicRL},
+  Note = {The limited priors required by neural networks make them the dominating choice to encode and learn policies using reinforcement learning (RL). However, they are also black-boxes, making it hard to understand the agent's behaviour, especially when working on the image level. Therefore, neuro-symbolic RL aims at creating policies that are interpretable in the first place. Unfortunately, interpretability is not explainability. To achieve both, we introduce Neurally gUided Differentiable loGic policiEs (NUDGE). NUDGE exploits trained neural network-based agents to guide the search of candidate-weighted logic rules, then uses differentiable logic to train the logic agents. Our experimental evaluation demonstrates that NUDGE agents can induce interpretable and explainable policies while outperforming purely neural ones and showing good flexibility to environments of different initial states and problem sizes.}
+}
+
 
 @misc{brack2023distilling,
       Anote = {./images/brack2023distilling.png},
@@ -24,42 +129,19 @@ Year = {2023}}
 }
 
 @incollection{yu2023tpm_cc,
-Anote = {./images/yu2023tpm_cc.png},
-Author = {Zhongjie Yu and Martin Trapp and Kristian Kersting},
-Booktitle = {Working Notes of the UAI Workshop on Tractable Probabilistic Modeling (TPM)},
-Note = {In many real-world scenarios it is crucial to be able to reliably and efficiently reason under uncertainty while capturing complex relationships in data.  Probabilistic circuits (PCs), a prominent family of tractable probabilistic models, offer a remedy to this challenge by composing simple, tractable distributions into a high-dimensional probability distribution. However, learning PCs on heterogeneous data is challenging and densities of some parametric distributions are not available in closed form, limiting their potential use.  We introduce characteristic circuits (CCs), a family of tractable probabilistic models providing a unified formalization of distributions over heterogeneous data in the spectral domain. The one-to-one relationship between characteristic functions and probability measures enables us to learn high-dimensional distributions on heterogeneous data domains and facilitates efficient probabilistic inference even when no closed-form density function is available. We show that the structure and parameters of CCs can be learned efficiently from the data and find that CCs outperform state-of-the-art density estimators for heterogeneous data domains on common benchmark data sets.},
-Keywords = {Characteristic Circuit, Characteristic Function, Probabilistic Circuit, Heterogeneous Data, Density Estimation},
-Pages = {},
-Title = {Characteristic Circuit},
-Url = {./papers/yu2023tpm_cc.pdf},
-crossref = {},
-Year = {2023}}
+  Anote = {./images/yu2023tpm_cc.png},
+  Author = {Zhongjie Yu and Martin Trapp and Kristian Kersting},
+  Booktitle = {Working Notes of the UAI Workshop on Tractable Probabilistic Modeling (TPM)},
+  Note = {In many real-world scenarios it is crucial to be able to reliably and efficiently reason under uncertainty while capturing complex relationships in data.  Probabilistic circuits (PCs), a prominent family of tractable probabilistic models, offer a remedy to this challenge by composing simple, tractable distributions into a high-dimensional probability distribution. However, learning PCs on heterogeneous data is challenging and densities of some parametric distributions are not available in closed form, limiting their potential use.  We introduce characteristic circuits (CCs), a family of tractable probabilistic models providing a unified formalization of distributions over heterogeneous data in the spectral domain. The one-to-one relationship between characteristic functions and probability measures enables us to learn high-dimensional distributions on heterogeneous data domains and facilitates efficient probabilistic inference even when no closed-form density function is available. We show that the structure and parameters of CCs can be learned efficiently from the data and find that CCs outperform state-of-the-art density estimators for heterogeneous data domains on common benchmark data sets.},
+  Keywords = {Characteristic Circuit, Characteristic Function, Probabilistic Circuit, Heterogeneous Data, Density Estimation},
+  Pages = {},
+  Title = {Characteristic Circuit},
+  Url = {./papers/yu2023tpm_cc.pdf},
+  crossref = {},
+  Year = {2023}
+}
  
 
-@article{shindo2023alphailp,
-Anote={./images/shindo2023alphailp.png},
-author={Hikaru Shindo and Viktor Pfanschilling and Devendra Singh Dhami and Kristian Kersting},
-note = {Deep neural learning has shown remarkable performance at learning representations for visual object categorization. However, deep neural networks such as CNNs do not explicitly encode objects and relations among them. This limits their success on tasks that require a deep logical understanding of visual scenes, such as Kandinsky patterns and Bongard problems. To overcome these limitations, we introduce 𝛼ILP, a novel differentiable inductive logic programming framework that learns to represent scenes as logic programs—intuitively, logical atoms correspond to objects, attributes, and relations, and clauses encode high-level scene information. 𝛼ILP has an end-to-end reasoning architecture from visual inputs. Using it, 𝛼ILP performs differentiable inductive logic programming on complex visual scenes, i.e., the logical rules are learned by gradient descent. Our extensive experiments on Kandinsky patterns and CLEVR-Hans benchmarks demonstrate the accuracy and efficiency of 𝛼ILP in learning complex visual-logical concepts.}, 
-title={alphaILP: Thinking Visual Scenes as Differentiable Logic Programs},
-journal={Machine Learning Journal (MLJ)},
-Publisher = {Springer},
-year={2023},
-Crossref = {https://ml-research.github.io/alphailpdoc/},
-url={https://link.springer.com/article/10.1007/s10994-023-06320-1},
-keywords={Neuro-Symbolic AI, Differentiable Reasoning, Inductive Logic Programming, Object-centric Learning}
-}
-
-
-@inproceedings{deiseroth2023atman,
-  Anote={./images/deb2023atman.png},
-  author       = {Björn Deiseroth and Mayukh Deb and Samuel Weinbach and Manuel Brack and Patrick Schramowski and Kristian Kersting},
-  title        = {AtMan: Understanding Transformer Predictions Through Memory Efficient Attention Manipulation},
-  Keywords = {Explainable AI, Transformer,  Large Language Models,  Multimodal, Computer Vision},
-  year         = {2023},
-  Url          = {https://arxiv.org/abs/2301.08110},
-  booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
-  Note= {Generative transformer models have become increasingly complex, with large numbers of parameters and the ability to process multiple input modalities. Current methods for explaining their predictions are resource-intensive. Most crucially, they require prohibitively large amounts of additional memory since they rely on backpropagation which allocates almost twice as much GPU memory as the forward pass. This renders it difficult, if not impossible, to use explanations in production. We present AtMan that provides explanations of generative transformer models at almost no extra cost. Specifically, AtMan is a modality-agnostic perturbation method that manipulates the attention mechanisms of transformers to produce relevance maps for the input with respect to the output prediction. Instead of using backpropagation, AtMan applies a parallelizable token-based search method relying on cosine similarity neighborhood in the embedding space. Our exhaustive experiments on text and image-text benchmarks demonstrate that AtMan outperforms current state-of-the-art gradient-based methods on several metrics and models while being computationally efficient. As such, AtMan is suitable for use in large model inference deployments.}
-}
 
 @misc{delfosse2023nudge,
   Anote={./images/delfosse2023nudge.png},
@@ -443,19 +525,6 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
   Keywords = {Image Synthesis, Image Generation, Diffusion, AI Ethics, Inappropriatness, Evaluation, Mitigation}
 }
 
-@inproceedings{bellagente2023multifusion,
-  Anote={./images/bellagente2023multifusion.png},
-  author = {Marco Bellagente and Manuel Brack and Hannah Teufel and Felix Friedrich and Björn Deiseroth and Constantin Eichenberg and Andrew Dai and Robert Baldock and Souradeep Nanda and Koen Oostermeijer and Andres Felipe Cruz-Salinas and Patrick Schramowski and Kristian Kersting and Samuel Weinbach},
-  title = {MultiFusion: Fusing Pre-Trained Models for Multi-Lingual, Multi-Modal Image Generation},
-  year = {2023},
-  Url = {https://arxiv.org/abs/2305.15296},
-  Pages = {},
-  month={Dez},
-  Note = {The recent popularity of text-to-image diffusion models (DM) can largely be attributed to the intuitive interface they provide to users. The intended generation can be expressed in natural language, with the model producing faithful interpretations of text prompts. However, expressing complex or nuanced ideas in text alone can be difficult. To ease image generation, we propose MultiFusion that allows one to express complex and nuanced concepts with arbitrarily interleaved inputs of multiple modalities and languages. MutliFusion leverages pre-trained models and aligns them for integration into a cohesive system, thereby avoiding the need for extensive training from scratch. Our experimental results demonstrate the efficient transfer of capabilities from individual modules to the downstream model. Specifically, the fusion of all independent components allows the image generation module to utilize multilingual, interleaved multimodal inputs despite being trained solely on monomodal data in a single language.},
-  Keywords = {Image Synthesis, Image Generation, Diffusion, Multimodality, Multilingualism},
-  booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)}
-}
-
 @incollection{friedrich2023oneexp,
   Anote = {./images/friedrich2023xiltypology.png},
   title = {One explanation does not fit XIL},
@@ -599,18 +668,7 @@ projects, gain new insights on the part of the human user, and thereby help to t
 full potential of AI-based systems for organizations and research.}
 }
 
-@inproceedings{brack2023Sega,
-      Anote = {./images/sega_graphic.png},
-      title={SEGA: Instructing Text-to-Image Models using Semantic Guidance},
-      author={Manuel Brack and Felix Friedrich and Dominik Hintersdorf and Lukas Struppek and Patrick Schramowski and Kristian Kersting},
-      year = {2023},
-      month={Dez},
-      Note = {Text-to-image diffusion models have recently received a lot of interest for their astonishing ability to produce high-fidelity images from text only. However, achieving one-shot generation that aligns with the user’s intent is nearly impossible, yet small changes to the input prompt often result in very different images. This leaves the user with little semantic control. To put the user in control, we show how to interact with the diffusion process to flexibly steer it along semantic directions. This semantic guidance (SEGA) generalizes to any generative architecture using classifier-free guidance. More importantly, it allows for subtle and extensive edits, composition and style changes, and optimizing the overall artistic conception. We demonstrate SEGA’s effectiveness on both latent and pixel-based diffusion models such as Stable Diffusion, Paella, and DeepFloyd-IF using a variety of tasks, thus providing strong evidence for its versatility and flexibility.},
-      Pages = {},
-      Keywords = {Representations, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Concepts, Semantics},
-      Url={https://arxiv.org/abs/2211.05105},
-      booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)}
-}
+
 
 @inproceedings{ramanan2023codscomad,
     Anote = {./images/ramanan2023codscomad.jpg},
