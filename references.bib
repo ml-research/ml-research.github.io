@@ -49,6 +49,30 @@
   url={https://doi.org/10.1038/s42256-023-00612-w}
 }
 
+@misc{stammer2023learning,
+  Anote = {./images/stammer2023learning.png},
+  title = {Learning by Self-Explaining},
+  author={Wolfgang Stammer and Felix Friedrich and David Steinmann and Hikaru Shindo and Kristian Kersting},
+  Howpublished = {arXiv preprint arXiv:2309.08395},
+  Note = {Artificial intelligence (AI) research has a long track record of drawing inspirations from findings from biology, in particular human intelligence. In contrast to current AI research that mainly treats explanations as a means for model inspection, a somewhat neglected finding from human psychology is the benefit of self-explaining in an agents' learning process. Motivated by this, we introduce a novel learning paradigm, termed Learning by Self-Explaining (LSX). The underlying idea is that a learning module (learner) performs a base task, e.g. image classification, and provides explanations to its decisions. An internal critic module next evaluates the quality of these explanations given the original task. Finally, the learner is refined with the critic's feedback and the loop is repeated as required. The intuition behind this is that an explanation is considered "good" if the critic can perform the same task given the respective explanation. Despite many implementation possibilities the structure of any LSX instantiation can be taxonomized based on four learning modules which we identify as: Fit, Explain, Reflect and Revise. In our work, we provide distinct instantiations of LSX for two different learner models, each illustrating different choices for the various LSX components. We broadly evaluate these on several datasets and show that Learning by Self-Explaining not only boosts the generalization abilities of AI models, particularly in small-data regimes, but also aids in mitigating the influence of confounding factors, as well as leading to more task specific and faithful model explanations. Overall, our results provide experimental evidence of the potential of self-explaining within the learning phase of an AI model.},
+  Keywords = {Explanatory Interactive Machine Learning, XIL, Explainability, XAI, Interpretability},
+  year={2023},
+  pages={},
+  url={https://arxiv.org/abs/2309.08395}
+}
+
+@misc{steinmann2023learning,
+  Anote = {./images/steinmann2023learning.png},
+  title = {Learning to Intervene on Concept Bottlenecks},
+  author={David Steinmann and Wolfgang Stammer and Felix Friedrich and Kristian Kersting},
+  Howpublished = {arXiv preprint arXiv:2308.13453},
+  Note = {While traditional deep learning models often lack interpretability, concept bottleneck models (CBMs) provide inherent explanations via their concept representations. Specifically, they allow users to perform interventional interactions on these concepts by updating the concept values and thus correcting the predictive output of the model. Traditionally, however, these interventions are applied to the model only once and discarded afterward. To rectify this, we present concept bottleneck memory models (CB2M), an extension to CBMs. Specifically, a CB2M learns to generalize interventions to appropriate novel situations via a two-fold memory with which it can learn to detect mistakes and to reapply previous interventions. In this way, a CB2M learns to automatically improve model performance from a few initially obtained interventions. If no prior human interventions are available, a CB2M can detect potential mistakes of the CBM bottleneck and request targeted interventions. In our experimental evaluations on challenging scenarios like handling distribution shifts and confounded training data, we illustrate that CB2M are able to successfully generalize interventions to unseen data and can indeed identify wrongly inferred concepts. Overall, our results show that CB2M is a great tool for users to provide interactive feedback on CBMs, e.g., by guiding a user's interaction and requiring fewer interventions.
+},
+  year={2023},
+  pages={},
+  url={https://arxiv.org/abs/2308.13453}
+}
+
 @article{zecevic2023parrots,
 Anote={./images/zecevic2023parrots.png},
 author={Matej Zecevic and Moritz Willig and Devendra Singh Dhami and Kristian Kersting},
