@@ -1,3 +1,37 @@
+@misc{struppek23leveraging,
+  Anote={./images/backdoor_defense.png},
+  author = {Lukas Struppek and Martin B. Hentschel and Clifton Poth and Dominik Hintersdorf and Kristian Kersting},
+  title = {Leveraging Diffusion-Based Image Variations for Robust Training on Poisoned Data},
+  Howpublished = {arXiv preprint arXiv:2310.06372},
+  year = {2023},
+  Url = {https://arxiv.org/pdf/2310.06372},
+  Pages = {},
+  Note = {Backdoor attacks pose a serious security threat for training neural networks as they surreptitiously introduce hidden functionalities into a model. 
+  Such backdoors remain silent during inference on clean inputs, evading detection due to inconspicuous behavior. However, once a specific trigger pattern appears in the input data, 
+  the backdoor activates, causing the model to execute its concealed function. Detecting such poisoned samples within vast datasets is virtually impossible through manual inspection. 
+  To address this challenge, we propose a novel approach that enables model training on potentially poisoned datasets by utilizing the power of recent diffusion models. 
+  Specifically, we create synthetic variations of all training samples, leveraging the inherent resilience of diffusion models to potential trigger patterns in the data. 
+  By combining this generative approach with knowledge distillation, we produce student models that maintain their general performance on the task while exhibiting robust resistance to backdoor triggers.},
+  Keywords = {Security, Backdoor Attacks, Stable Diffusion, Text-to-Image Synthesis}
+}
+
+
+@misc{struppek23smoothing,
+  Anote={./images/smoothing.png},
+  author = {Lukas Struppek and Dominik Hintersdorf and Kristian Kersting},
+  title = {Be Careful What You Smooth For: Label Smoothing Can Be a Privacy Shield but Also a Catalyst for Model Inversion Attacks},
+  Howpublished = {arXiv preprint arXiv:2310.06549},
+  year = {2023},
+  Url = {https://arxiv.org/pdf/2310.06549},
+  Pages = {},
+  Note = {Label smoothing – using softened labels instead of hard ones – is a widely adopted regularization method for deep learning, showing diverse benefits such as enhanced generalization and calibration. 
+  Its implications for preserving model privacy, however, have remained unexplored. To fill this gap, we investigate the impact of label smoothing on model inversion attacks (MIAs), which aim to generate class-representative 
+  samples by exploiting the knowledge encoded in a classifier, thereby inferring sensitive information about its training data. Through extensive analyses, we uncover that traditional label smoothing fosters MIAs, 
+  thereby increasing a model’s privacy leakage. Even more, we reveal that smoothing with negative factors counters this trend, impeding the extraction of class-related information and leading to privacy preservation, 
+  beating state-of-the-art defenses. This establishes a practical and powerful novel way for enhancing model resilience against MIAs.},
+  Keywords = {Privacy, Model Inversion Attacks, Regularization, Face Recognition}
+}
+
 
 @article{friedrich2023xiltypology,
   Anote = {./images/friedrich2023xiltypology.png},
