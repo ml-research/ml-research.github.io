@@ -75,9 +75,9 @@
 }
 
 @article{zecevic2023same,
-Anote={./images/zecevic2023same.png},
+Anote={./images/zecevic2023sacmlpng},
 author={Matej Zecevic and Devendra Singh Dhami and Kristian Kersting},
-note = {SNeurally-parameterized Structural Causal Models in the Pearlian notion to causality, referred to as NCM, were recently introduced as a step towards next-generation learning systems. However, said NCM are only concerned with the learning aspect of causal inference and totally miss out on the architecture aspect. That is, actual causal inference within NCM is intractable in that the NCM won’t return an answer to a query in polynomial time. This insight follows as corollary to the more general statement on the intractability of arbitrary structural causal model (SCM) parameterizations, which we prove in this work through classical 3-SAT reduction. Since future learning algorithms will be required to deal with both high dimensional data and highly complex mechanisms governing the data, we ultimately believe work on tractable inference for causality to be decisive. We also show that not all “causal” models are created equal. More specifically, there are models capable of answering causal queries that are not SCM, which we refer to as partially causal models (PCM). We provide a tabular taxonomy in terms of tractability properties for all of the different model families, namely correlation-based, PCM and SCM. To conclude our work, we also provide some initial ideas on how to overcome parts of the intractability of causal inference with SCM by showing an example of how parameterizing an SCM with SPN modules can at least allow for tractable mechanisms. With this work we hope that our insights can raise awareness for this novel research direction since achieving success with causality in real world downstream tasks will not only depend on learning correct models but also require having the practical ability to gain access to
+note = {Seurally-parameterized Structural Causal Models in the Pearlian notion to causality, referred to as NCM, were recently introduced as a step towards next-generation learning systems. However, said NCM are only concerned with the learning aspect of causal inference and totally miss out on the architecture aspect. That is, actual causal inference within NCM is intractable in that the NCM won’t return an answer to a query in polynomial time. This insight follows as corollary to the more general statement on the intractability of arbitrary structural causal model (SCM) parameterizations, which we prove in this work through classical 3-SAT reduction. Since future learning algorithms will be required to deal with both high dimensional data and highly complex mechanisms governing the data, we ultimately believe work on tractable inference for causality to be decisive. We also show that not all “causal” models are created equal. More specifically, there are models capable of answering causal queries that are not SCM, which we refer to as partially causal models (PCM). We provide a tabular taxonomy in terms of tractability properties for all of the different model families, namely correlation-based, PCM and SCM. To conclude our work, we also provide some initial ideas on how to overcome parts of the intractability of causal inference with SCM by showing an example of how parameterizing an SCM with SPN modules can at least allow for tractable mechanisms. With this work we hope that our insights can raise awareness for this novel research direction since achieving success with causality in real world downstream tasks will not only depend on learning correct models but also require having the practical ability to gain access to
 model inferences.}, 
 title={Not All Causal Inference is the Same},
 journal={Transactions on Machine Learning Research (TMLR)},
@@ -90,9 +90,25 @@ keywords={Causality, Structural Causal Models, Tractability, Neural Causal Model
 }
 
 
+@article{zecevic2023acml,
+Anote={./images/zecevic2023acml.png},
+author={HMatej Zecevic and Devendra Singh Dhami and Kristian Kersting},
+note = {The recent years have been marked by extended research on adversarial attacks, especially on deep neural networks. With this work we intend on posing and investigating the question of whether the phenomenon might be more general in nature, that is, adversarial-style attacks outside classical classification tasks. Specifically, we investigate optimization problems as they constitute a fundamental part of modern AI research. To this end, we consider the base class of optimizers namely Linear Programs (LPs). On our initial attempt of a naïve mapping between the formalism of adversarial examples and LPs, we quickly identify the key ingredients missing for making sense of a reasonable notion of adversarial examples for LPs. Intriguingly, the formalism of Pearl's notion to causality allows for the right description of adversarial like examples for LPs. Characteristically, we show the direct influence of the Structural Causal Model (SCM) onto the subsequent LP optimization, which ultimately exposes a notion of confounding in LPs (inherited by said SCM) that allows for adversarial-style attacks. We provide both the general proof formally alongside existential proofs of such intriguing LP-parameterizations based on SCM for three combinatorial problems, namely Linear Assignment, Shortest Path and a real world problem of energy systems.},
+journal={Special Issue ACML 2023, Machine Learning Journal (MLJ)},
+Publisher = {Springer},
+year={2023},
+Crossref = {},
+url={},
+keywords={Adversarial Attack, Linear Programs, Causal Link, Structural Causal Model}
+}
+
+
+
+
+
 @article{zecevic2023parrots,
 Anote={./images/zecevic2023parrots.png},
-author={Matej Zecevic and Moritz Willig and Devendra Singh Dhami and Kristian Kersting},
+author={j Zecevic and Moritz Willig and Devendra Singh Dhami and Kristian Kersting},
 note = {Some argue scale is all what is needed to achieve AI, covering even causal models. We make
 it clear that large language models (LLMs) cannot be causal and give reason onto why
 sometimes we might feel otherwise. To this end, we define and exemplify a new subgroup
@@ -152,6 +168,21 @@ addition and Visual Question Answering (VQA).},
     Title = {Scalable Neural-Probabilistic Answer Set Programming},
     Url = {},
     Year = {2023}}
+
+
+
+@article{yan2023privileged,
+Anote={./images/yan2023privileged.png},
+author={Siwen Yan and Phillip Odom and Rahul Pasunuri and Kristian Kersting and Sriraam Natarajan},
+note = {We consider the problem of learning with sensitive features under the privileged information setting where the goal is to learn a classifier that uses features not available (or too sensitive to collect) at test/deployment time to learn a better model at training time. We focus on tree-based learners, specifically gradient boosted decision trees for learning with privileged information. Our methods use privileged features as knowledge to guide the algorithm when learning from fully observed (usable) features. We derive the theory, empirically validate the effectiveness of our algorithms and verify them on standard fairness metrics.},
+journal={Frontiers in Artificial Intelligence},
+volume = {6},
+Publisher = {Frontiers},
+year={2023},
+Crossref = {},
+url={},
+keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning}
+}   
 
 
 @inproceedings{willig2023consolidate,
