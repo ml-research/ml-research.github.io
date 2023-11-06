@@ -66,8 +66,7 @@
   title = {Learning to Intervene on Concept Bottlenecks},
   author={David Steinmann and Wolfgang Stammer and Felix Friedrich and Kristian Kersting},
   Howpublished = {arXiv preprint arXiv:2308.13453},
-  Note = {While traditional deep learning models often lack interpretability, concept bottleneck models (CBMs) provide inherent explanations via their concept representations. Specifically, they allow users to perform interventional interactions on these concepts by updating the concept values and thus correcting the predictive output of the model. Traditionally, however, these interventions are applied to the model only once and discarded afterward. To rectify this, we present concept bottleneck memory models (CB2M), an extension to CBMs. Specifically, a CB2M learns to generalize interventions to appropriate novel situations via a two-fold memory with which it can learn to detect mistakes and to reapply previous interventions. In this way, a CB2M learns to automatically improve model performance from a few initially obtained interventions. If no prior human interventions are available, a CB2M can detect potential mistakes of the CBM bottleneck and request targeted interventions. In our experimental evaluations on challenging scenarios like handling distribution shifts and confounded training data, we illustrate that CB2M are able to successfully generalize interventions to unseen data and can indeed identify wrongly inferred concepts. Overall, our results show that CB2M is a great tool for users to provide interactive feedback on CBMs, e.g., by guiding a user's interaction and requiring fewer interventions.
-},
+  Note = {While traditional deep learning models often lack interpretability, concept bottleneck models (CBMs) provide inherent explanations via their concept representations. Specifically, they allow users to perform interventional interactions on these concepts by updating the concept values and thus correcting the predictive output of the model. Traditionally, however, these interventions are applied to the model only once and discarded afterward. To rectify this, we present concept bottleneck memory models (CB2M), an extension to CBMs. Specifically, a CB2M learns to generalize interventions to appropriate novel situations via a two-fold memory with which it can learn to detect mistakes and to reapply previous interventions. In this way, a CB2M learns to automatically improve model performance from a few initially obtained interventions. If no prior human interventions are available, a CB2M can detect potential mistakes of the CBM bottleneck and request targeted interventions. In our experimental evaluations on challenging scenarios like handling distribution shifts and confounded training data, we illustrate that CB2M are able to successfully generalize interventions to unseen data and can indeed identify wrongly inferred concepts. Overall, our results show that CB2M is a great tool for users to provide interactive feedback on CBMs, e.g., by guiding a user's interaction and requiring fewer interventions.},
   year={2023},
   keywords={XAI, XIL, Interactive Learning, Interpretability},  
   pages={},
@@ -95,6 +94,7 @@ Anote={./images/zecevic2023acml.png},
 author={HMatej Zecevic and Devendra Singh Dhami and Kristian Kersting},
 note = {The recent years have been marked by extended research on adversarial attacks, especially on deep neural networks. With this work we intend on posing and investigating the question of whether the phenomenon might be more general in nature, that is, adversarial-style attacks outside classical classification tasks. Specifically, we investigate optimization problems as they constitute a fundamental part of modern AI research. To this end, we consider the base class of optimizers namely Linear Programs (LPs). On our initial attempt of a naïve mapping between the formalism of adversarial examples and LPs, we quickly identify the key ingredients missing for making sense of a reasonable notion of adversarial examples for LPs. Intriguingly, the formalism of Pearl's notion to causality allows for the right description of adversarial like examples for LPs. Characteristically, we show the direct influence of the Structural Causal Model (SCM) onto the subsequent LP optimization, which ultimately exposes a notion of confounding in LPs (inherited by said SCM) that allows for adversarial-style attacks. We provide both the general proof formally alongside existential proofs of such intriguing LP-parameterizations based on SCM for three combinatorial problems, namely Linear Assignment, Shortest Path and a real world problem of energy systems.},
 journal={Special Issue ACML 2023, Machine Learning Journal (MLJ)},
+title={Structural Causal Models Reveal Confounder Bias in Linear Program Modelling},
 Publisher = {Springer},
 year={2023},
 Crossref = {},
@@ -108,7 +108,7 @@ keywords={Adversarial Attack, Linear Programs, Causal Link, Structural Causal Mo
 
 @article{zecevic2023parrots,
 Anote={./images/zecevic2023parrots.png},
-author={j Zecevic and Moritz Willig and Devendra Singh Dhami and Kristian Kersting},
+author={Matej Zecevic and Moritz Willig and Devendra Singh Dhami and Kristian Kersting},
 note = {Some argue scale is all what is needed to achieve AI, covering even causal models. We make
 it clear that large language models (LLMs) cannot be causal and give reason onto why
 sometimes we might feel otherwise. To this end, we define and exemplify a new subgroup
@@ -119,7 +119,7 @@ between causal facts in natural language on whose data the LLM was ultimately tr
 If our hypothesis holds true, then this would imply that LLMs are like parrots in that they
 simply recite the causal knowledge embedded in the data. Our empirical analysis provides
 favoring evidence that current LLMs are even weak ‘causal parrots.’}, 
-title={Causal Parrots: Large Language Models May Talk Causality But Are Not Causal},
+
 journal={Transactions on Machine Learning Research (TMLR)},
 issn={2835-8856},
 Publisher = {},
@@ -167,7 +167,8 @@ We evaluate SLASH on a variety of different tasks, including the benchmark task 
 addition and Visual Question Answering (VQA).},
     Title = {Scalable Neural-Probabilistic Answer Set Programming},
     Url = {},
-    Year = {2023}}
+    Year = {2023}
+}
 
 
 
@@ -176,6 +177,7 @@ Anote={./images/yan2023privileged.png},
 author={Siwen Yan and Phillip Odom and Rahul Pasunuri and Kristian Kersting and Sriraam Natarajan},
 note = {We consider the problem of learning with sensitive features under the privileged information setting where the goal is to learn a classifier that uses features not available (or too sensitive to collect) at test/deployment time to learn a better model at training time. We focus on tree-based learners, specifically gradient boosted decision trees for learning with privileged information. Our methods use privileged features as knowledge to guide the algorithm when learning from fully observed (usable) features. We derive the theory, empirically validate the effectiveness of our algorithms and verify them on standard fairness metrics.},
 journal={Frontiers in Artificial Intelligence},
+Title = {Learning with Privileged and Sensitive Information: A Gradient-Boosting Approach},
 volume = {6},
 Publisher = {Frontiers},
 year={2023},
