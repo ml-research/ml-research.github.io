@@ -200,7 +200,7 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
   title        = {Do Not Marginalize Mechanisms, Rather Consolidate!},
   Keywords = {Causality, Marginalization, Consolidation, Interventions, Structural Causal Model, Simplification, Compression},
   year         = {2023},
-  Url          = {},
+  Url          = {https://openreview.net/pdf?id=xBhvMu4J03},
   booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
   booktitle = {Structural causal models (SCMs) are a powerful tool for understanding the complex causal relationships that underlie many real-world systems. As these systems grow in size, the number of variables and complexity of interactions between them does, too. Thus, becoming convoluted and difficult to analyze. This is particularly true in the context of machine learning and artificial intelligence, where an ever increasing amount of data demands for new methods to simplify and compress large scale SCM. While methods for marginalizing and abstracting SCM already exist today, they may destroy the causality of the marginalized model. To alleviate this, we introduce the concept of consolidating causal mechanisms to transform large-scale SCM while preserving consistent interventional behaviour. We show consolidation is a powerful method for simplifying SCM, discuss reduction of computational complexity and give a perspective on generalizing abilities of consolidated SCM.}
 }
@@ -210,7 +210,7 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
   author = {Marco Bellagente and Manuel Brack and Hannah Teufel and Felix Friedrich and Björn Deiseroth and Constantin Eichenberg and Andrew Dai and Robert Baldock and Souradeep Nanda and Koen Oostermeijer and Andres Felipe Cruz-Salinas and Patrick Schramowski and Kristian Kersting and Samuel Weinbach},
   title = {MultiFusion: Fusing Pre-Trained Models for Multi-Lingual, Multi-Modal Image Generation},
   year = {2023},
-  Url = {https://arxiv.org/abs/2305.15296},
+  Url = {https://openreview.net/pdf?id=9ych3krqP0},
   Pages = {},
   Note = {The recent popularity of text-to-image diffusion models (DM) can largely be attributed to the intuitive interface they provide to users. The intended generation can be expressed in natural language, with the model producing faithful interpretations of text prompts. However, expressing complex or nuanced ideas in text alone can be difficult. To ease image generation, we propose MultiFusion that allows one to express complex and nuanced concepts with arbitrarily interleaved inputs of multiple modalities and languages. MutliFusion leverages pre-trained models and aligns them for integration into a cohesive system, thereby avoiding the need for extensive training from scratch. Our experimental results demonstrate the efficient transfer of capabilities from individual modules to the downstream model. Specifically, the fusion of all independent components allows the image generation module to utilize multilingual, interleaved multimodal inputs despite being trained solely on monomodal data in a single language.},
   Keywords = {Image Synthesis, Image Generation, Diffusion, Multimodality, Multilingualism},
@@ -225,7 +225,8 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
   title        = {AtMan: Understanding Transformer Predictions Through Memory Efficient Attention Manipulation},
   Keywords = {Explainable AI, Transformer, Large Language Models, Multimodal, Computer Vision},
   year         = {2023},
-  Url          = {https://arxiv.org/abs/2301.08110},
+  Url          = {https://openreview.net/pdf?id=PBpEb86bj7},
+   Crossref     = {https://github.com/Aleph-Alpha/AtMan},
   booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
   Note= {Generative transformer models have become increasingly complex, with large numbers of parameters and the ability to process multiple input modalities. Current methods for explaining their predictions are resource-intensive. Most crucially, they require prohibitively large amounts of additional memory since they rely on backpropagation which allocates almost twice as much GPU memory as the forward pass. This renders it difficult, if not impossible, to use explanations in production. We present AtMan that provides explanations of generative transformer models at almost no extra cost. Specifically, AtMan is a modality-agnostic perturbation method that manipulates the attention mechanisms of transformers to produce relevance maps for the input with respect to the output prediction. Instead of using backpropagation, AtMan applies a parallelizable token-based search method relying on cosine similarity neighborhood in the embedding space. Our exhaustive experiments on text and image-text benchmarks demonstrate that AtMan outperforms current state-of-the-art gradient-based methods on several metrics and models while being computationally efficient. As such, AtMan is suitable for use in large model inference deployments.}
 }
@@ -240,7 +241,7 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
       Note = {Text-to-image diffusion models have recently received a lot of interest for their astonishing ability to produce high-fidelity images from text only. However, achieving one-shot generation that aligns with the user’s intent is nearly impossible, yet small changes to the input prompt often result in very different images. This leaves the user with little semantic control. To put the user in control, we show how to interact with the diffusion process to flexibly steer it along semantic directions. This semantic guidance (SEGA) generalizes to any generative architecture using classifier-free guidance. More importantly, it allows for subtle and extensive edits, composition and style changes, and optimizing the overall artistic conception. We demonstrate SEGA’s effectiveness on both latent and pixel-based diffusion models such as Stable Diffusion, Paella, and DeepFloyd-IF using a variety of tasks, thus providing strong evidence for its versatility and flexibility.},
       Pages = {},
       Keywords = {Representations, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Concepts, Semantics},
-      Url={https://arxiv.org/abs/2301.12247},
+      Url={https://openreview.net/pdf?id=KIPAIy329j},
       booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)}
 }
 
@@ -250,7 +251,7 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
   title  = {Characteristic Circuits},
   Keywords = {Characteristic Circuit, Characteristic Function, Probabilistic Circuit, Heterogeneous Data, Density Estimation, Mixed Models, Hybrid Data},
   year         = {2023},
-  Url          = {./papers/yu2023neurips_cc.pdf},
+  Url          = {https://openreview.net/pdf?id=5W7cXno10k},
   Crossref     = {https://github.com/ml-research/CharacteristicCircuits},
   Pages = {},
   booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
@@ -265,7 +266,7 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
   Keywords = {Reinforcement Learning,  Neuro-Symbolic AI, Interpretable and Explainable AI},
   booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
   year = {2023},
-  Url = {https://arxiv.org/abs/2306.01439},
+  Url = {https://openreview.net/pdf?id=PbMBfRpVgU},
   Pages = {},
   Crossref={https://github.com/k4ntz/LogicRL},
   Note = {The limited priors required by neural networks make them the dominating choice to encode and learn policies using reinforcement learning (RL). However, they are also black-boxes, making it hard to understand the agent's behaviour, especially when working on the image level. Therefore, neuro-symbolic RL aims at creating policies that are interpretable in the first place. Unfortunately, interpretability is not explainability. To achieve both, we introduce Neurally gUided Differentiable loGic policiEs (NUDGE). NUDGE exploits trained neural network-based agents to guide the search of candidate-weighted logic rules, then uses differentiable logic to train the logic agents. Our experimental evaluation demonstrates that NUDGE agents can induce interpretable and explainable policies while outperforming purely neural ones and showing good flexibility to environments of different initial states and problem sizes.}
