@@ -82,6 +82,11 @@ a:focus span
   font-size: 14px;
   font-weight: 300;
 }
+#htem2 {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 300;
+}
 @media (max-width: 768px) {
   #headerblob {
     text-align: center;
