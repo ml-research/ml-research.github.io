@@ -1,4 +1,37 @@
 
+
+@article{ochs2024remote,
+  Anote = {./images/ochs2024remote.png},
+  title = {Effective Risk Detection for Natural Gas Pipelines using Low Resolution Satellite Images},
+  author={Daniel Ochs and Karsten Wiertz and Sebastian Bußmann and Kristian
+Kersting and Devendra Singh Dhami},
+  Journal = {Remote Sensing},
+  Note = {Natural gas pipelines represent a critical infrastructure for most countries and thus their
+safety is of paramount importance. To report potential risks along pipelines, several steps are taken
+such as manual inspection and helicopter flights; however, these solutions are expensive and the
+flights are environmentally unfriendly. Deep learning has demonstrated considerable potential in
+handling a number of tasks in recent years as models rely on huge datasets to learn a specific task.
+With the increasing number of satellites orbiting the Earth, remote sensing data have become widely
+available, thus paving the way for automated pipeline monitoring via deep learning. This can result
+in effective risk detection, thereby reducing monitoring costs while being more precise and accurate.
+A major hindrance here is the low resolution of images obtained from the satellites, which makes
+it difficult to detect smaller changes. To this end, we propose to use transformers trained with
+low-resolution images in a change detection setting to detect pipeline risks. We collect PlanetScope
+satellite imagery (3 m resolution) that captures certain risks associated with the pipelines and present
+how we collected the data. Furthermore, we compare various state-of-the-art models, among which
+ChangeFormer, a transformer architecture for change detection, achieves the best performance with a
+70% F1 score. As part of our evaluation, we discuss the specific performance requirements in pipeline
+monitoring and show how the model’s predictions can be shifted accordingly during training.},
+  Keywords = {remote Sensing, Satelite Images, Change Transormer, Risk Detection, Pipelines},
+  Publisher = {MDPI},
+  year={2024},
+  volume={},
+  pages={},
+  issn={},
+  doi={},
+  url={}
+}
+
 @incollection{shindo2024deisam,
   Anote={./images/shindo2024deisam.png},
   author = {Hikaru Shindo and Manuel Brack and Gopika Sudhakaran and Devendra Singh Dhami and Patrick Schramowski and Kristian Kersting},
@@ -20,7 +53,7 @@ in the Era of Large Language Models (NucLeaR)},
   Url = {https://openaccess.thecvf.com/content/ICCV2023/html/Sudhakaran_Vision_Relation_Transformer_for_Unbiased_Scene_Graph_Generation_ICCV_2023_paper.html},
   Pages = {},
   Crossref = {https://github.com/visinf/veto},
-  Note = {Recent years have seen a growing interest in Scene Graph Generation (SGG), a comprehensive visual scene understanding task that aims to predict entity relationships using a relation encoder-decoder pipeline stacked on top of an object encoder-decoder backbone. Unfortunately, current SGG methods suffer from an information loss regarding the entities' local-level cues during the relation encoding process. To mitigate this, we introduce the Vision rElation TransfOrmer (VETO), consisting of a novel local-level entity relation encoder. We further observe that many existing SGG methods claim to be unbiased, but are still biased towards either head or tail classes. To overcome this bias, we introduce a Mutually Exclusive ExperT (MEET) learning strategy that captures important relation features without bias towards head or tail classes. Experimental results on the VG and GQA datasets demonstrate that VETO + MEET boosts the predictive performance by up to 47\% over the state of the art while being 10x smaller.}, 
+  Note = {Recent years have seen a growing interest in Scene Graph Generation (SGG), a comprehensive visual scene understanding task that aims to predict entity relationships using a relation encoder-decoder pipeline stacked on top of an object encoder-decoder backbone. Unfortunately, current SGG methods suffer from an information loss regarding the entities' local-level cues during the relation encoding process. To mitigate this, we introduce the Vision rElation TransfOrmer (VETO), consisting of a novel local-level entity relation encoder. We further observe that many existing SGG methods claim to be unbiased, but are still biased towards either head or tail classes. To overcome this bias, we introduce a Mutually Exclusive ExperT (MEET) learning strategy that captures important relation features without bias towards head or tail classes. Experimental results on the VG and GQA datasets demonstrate that VETO + MEET boosts the predictive performance by up to 47\% over the state of the art while being 10x smaller.},
   Keywords = {Scene Graphs, Scene Understanding}
 }
 
@@ -33,7 +66,7 @@ in the Era of Large Language Models (NucLeaR)},
   Url = {https://arxiv.org/pdf/2311.13414},
   Pages = {},
   Crossref = {https://github.com/yannikkellerde/GNN_Hex},
-  Note = {The gameplay of strategic board games such as chess, Go and Hex is often characterized by combinatorial, relational structures -- capturing distinct interactions and non-local patterns -- and not just images. Nonetheless, most common self-play reinforcement learning (RL) approaches simply approximate   policy and value functions using convolutional neural networks (CNN). A key feature of CNNs is their relational inductive bias towards locality and translational invariance. In contrast, graph neural networks (GNN) can encode more complicated and distinct relational structures. Hence, we investigate the crucial question: Can GNNs, with their ability to encode complex connections, replace CNNs in self-play reinforcement learning? To this end, we do a comparison with Hex -- an abstract yet strategically rich board game -- serving as our experimental platform. Our findings reveal that GNNs excel at dealing with long range dependency situations in game states and are less prone to overfitting, but also showing a reduced proficiency in discerning local patterns. This suggests a potential paradigm shift, signaling the use of game-specific structures to reshape self-play reinforcement learning.}, 
+  Note = {The gameplay of strategic board games such as chess, Go and Hex is often characterized by combinatorial, relational structures -- capturing distinct interactions and non-local patterns -- and not just images. Nonetheless, most common self-play reinforcement learning (RL) approaches simply approximate   policy and value functions using convolutional neural networks (CNN). A key feature of CNNs is their relational inductive bias towards locality and translational invariance. In contrast, graph neural networks (GNN) can encode more complicated and distinct relational structures. Hence, we investigate the crucial question: Can GNNs, with their ability to encode complex connections, replace CNNs in self-play reinforcement learning? To this end, we do a comparison with Hex -- an abstract yet strategically rich board game -- serving as our experimental platform. Our findings reveal that GNNs excel at dealing with long range dependency situations in game states and are less prone to overfitting, but also showing a reduced proficiency in discerning local patterns. This suggests a potential paradigm shift, signaling the use of game-specific structures to reshape self-play reinforcement learning.},
   Keywords = {Reinforcement Learning, Graph Neural Networks, Games, Hex, AlphaZero}
 }
 
@@ -45,11 +78,11 @@ in the Era of Large Language Models (NucLeaR)},
   Url = {https://openreview.net/forum?id=M4ltSJufXU},
   Pages = {},
   booktitle={NeurIPS 2023 Workshop on Backdoors in Deep Learning - The Good, the Bad, and the Ugly},
-  Note = {The proliferation of large AI models trained on uncurated, often sensitive web-scraped data has raised significant privacy concerns. One of the concerns is that adversaries can extract information about the training 
-  data using privacy attacks. Unfortunately, the task of removing specific information from the models without sacrificing performance is not straightforward and has proven to be challenging. We propose a rather easy yet 
-  effective defense based on backdoor attacks to remove private information such as names of individuals from models, and focus in this work on text encoders. Specifically, through strategic insertion of backdoors, we 
-  align the embeddings of sensitive phrases with those of neutral terms-"a person" instead of the person's name. Our empirical results demonstrate the effectiveness of our backdoor-based defense on CLIP by assessing its 
-  performance using a specialized privacy attack for zero-shot classifiers. Our approach provides not only a new "dual-use" perspective on backdoor attacks, but also presents a promising avenue to enhance the privacy of 
+  Note = {The proliferation of large AI models trained on uncurated, often sensitive web-scraped data has raised significant privacy concerns. One of the concerns is that adversaries can extract information about the training
+  data using privacy attacks. Unfortunately, the task of removing specific information from the models without sacrificing performance is not straightforward and has proven to be challenging. We propose a rather easy yet
+  effective defense based on backdoor attacks to remove private information such as names of individuals from models, and focus in this work on text encoders. Specifically, through strategic insertion of backdoors, we
+  align the embeddings of sensitive phrases with those of neutral terms-"a person" instead of the person's name. Our empirical results demonstrate the effectiveness of our backdoor-based defense on CLIP by assessing its
+  performance using a specialized privacy attack for zero-shot classifiers. Our approach provides not only a new "dual-use" perspective on backdoor attacks, but also presents a promising avenue to enhance the privacy of
   individuals within models trained on uncurated web-scraped data.},
   Keywords = {Security, Privacy, Backdoor Attacks, CLIP, Identity Inference Attacks}
 }
@@ -62,11 +95,11 @@ in the Era of Large Language Models (NucLeaR)},
   year = {2023},
   Url = {https://arxiv.org/pdf/2310.08320},
   Pages = {},
-  Note = {The proliferation of large AI models trained on uncurated, often sensitive web-scraped data has raised significant privacy concerns. One of the concerns is that adversaries can extract information about the training 
-  data using privacy attacks. Unfortunately, the task of removing specific information from the models without sacrificing performance is not straightforward and has proven to be challenging. We propose a rather easy yet 
-  effective defense based on backdoor attacks to remove private information such as names of individuals from models, and focus in this work on text encoders. Specifically, through strategic insertion of backdoors, we 
-  align the embeddings of sensitive phrases with those of neutral terms-"a person" instead of the person's name. Our empirical results demonstrate the effectiveness of our backdoor-based defense on CLIP by assessing its 
-  performance using a specialized privacy attack for zero-shot classifiers. Our approach provides not only a new "dual-use" perspective on backdoor attacks, but also presents a promising avenue to enhance the privacy of 
+  Note = {The proliferation of large AI models trained on uncurated, often sensitive web-scraped data has raised significant privacy concerns. One of the concerns is that adversaries can extract information about the training
+  data using privacy attacks. Unfortunately, the task of removing specific information from the models without sacrificing performance is not straightforward and has proven to be challenging. We propose a rather easy yet
+  effective defense based on backdoor attacks to remove private information such as names of individuals from models, and focus in this work on text encoders. Specifically, through strategic insertion of backdoors, we
+  align the embeddings of sensitive phrases with those of neutral terms-"a person" instead of the person's name. Our empirical results demonstrate the effectiveness of our backdoor-based defense on CLIP by assessing its
+  performance using a specialized privacy attack for zero-shot classifiers. Our approach provides not only a new "dual-use" perspective on backdoor attacks, but also presents a promising avenue to enhance the privacy of
   individuals within models trained on uncurated web-scraped data.},
   Keywords = {Security, Privacy, Backdoor Attacks, CLIP, Identity Inference Attacks}
 }
@@ -109,11 +142,11 @@ in the Era of Large Language Models (NucLeaR)},
   year = {2023},
   Url = {https://arxiv.org/pdf/2310.06372},
   Pages = {},
-  Note = {Backdoor attacks pose a serious security threat for training neural networks as they surreptitiously introduce hidden functionalities into a model. 
-  Such backdoors remain silent during inference on clean inputs, evading detection due to inconspicuous behavior. However, once a specific trigger pattern appears in the input data, 
-  the backdoor activates, causing the model to execute its concealed function. Detecting such poisoned samples within vast datasets is virtually impossible through manual inspection. 
-  To address this challenge, we propose a novel approach that enables model training on potentially poisoned datasets by utilizing the power of recent diffusion models. 
-  Specifically, we create synthetic variations of all training samples, leveraging the inherent resilience of diffusion models to potential trigger patterns in the data. 
+  Note = {Backdoor attacks pose a serious security threat for training neural networks as they surreptitiously introduce hidden functionalities into a model.
+  Such backdoors remain silent during inference on clean inputs, evading detection due to inconspicuous behavior. However, once a specific trigger pattern appears in the input data,
+  the backdoor activates, causing the model to execute its concealed function. Detecting such poisoned samples within vast datasets is virtually impossible through manual inspection.
+  To address this challenge, we propose a novel approach that enables model training on potentially poisoned datasets by utilizing the power of recent diffusion models.
+  Specifically, we create synthetic variations of all training samples, leveraging the inherent resilience of diffusion models to potential trigger patterns in the data.
   By combining this generative approach with knowledge distillation, we produce student models that maintain their general performance on the task while exhibiting robust resistance to backdoor triggers.},
   Keywords = {Security, Backdoor Attacks, Stable Diffusion, Text-to-Image Synthesis}
 }
@@ -127,10 +160,10 @@ in the Era of Large Language Models (NucLeaR)},
   year = {2023},
   Url = {https://arxiv.org/pdf/2310.06549},
   Pages = {},
-  Note = {Label smoothing – using softened labels instead of hard ones – is a widely adopted regularization method for deep learning, showing diverse benefits such as enhanced generalization and calibration. 
-  Its implications for preserving model privacy, however, have remained unexplored. To fill this gap, we investigate the impact of label smoothing on model inversion attacks (MIAs), which aim to generate class-representative 
-  samples by exploiting the knowledge encoded in a classifier, thereby inferring sensitive information about its training data. Through extensive analyses, we uncover that traditional label smoothing fosters MIAs, 
-  thereby increasing a model’s privacy leakage. Even more, we reveal that smoothing with negative factors counters this trend, impeding the extraction of class-related information and leading to privacy preservation, 
+  Note = {Label smoothing – using softened labels instead of hard ones – is a widely adopted regularization method for deep learning, showing diverse benefits such as enhanced generalization and calibration.
+  Its implications for preserving model privacy, however, have remained unexplored. To fill this gap, we investigate the impact of label smoothing on model inversion attacks (MIAs), which aim to generate class-representative
+  samples by exploiting the knowledge encoded in a classifier, thereby inferring sensitive information about its training data. Through extensive analyses, we uncover that traditional label smoothing fosters MIAs,
+  thereby increasing a model’s privacy leakage. Even more, we reveal that smoothing with negative factors counters this trend, impeding the extraction of class-related information and leading to privacy preservation,
   beating state-of-the-art defenses. This establishes a practical and powerful novel way for enhancing model resilience against MIAs.},
   Keywords = {Privacy, Model Inversion Attacks, Regularization, Face Recognition}
 }
@@ -155,7 +188,7 @@ in the Era of Large Language Models (NucLeaR)},
 
 
 @article{struppek2023jair,
-    Anote = {./images/struppek2023jair.png}, 
+    Anote = {./images/struppek2023jair.png},
     Author = {Lukas Struppek and Dominik Hintersdorf and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting},
     Journal = {Journal of Artificial Intelligence Research (JAIR)},
     volume = {},
@@ -189,7 +222,7 @@ biases},
   Howpublished = {arXiv preprint arXiv:2308.13453},
   Note = {While traditional deep learning models often lack interpretability, concept bottleneck models (CBMs) provide inherent explanations via their concept representations. Specifically, they allow users to perform interventional interactions on these concepts by updating the concept values and thus correcting the predictive output of the model. Traditionally, however, these interventions are applied to the model only once and discarded afterward. To rectify this, we present concept bottleneck memory models (CB2M), an extension to CBMs. Specifically, a CB2M learns to generalize interventions to appropriate novel situations via a two-fold memory with which it can learn to detect mistakes and to reapply previous interventions. In this way, a CB2M learns to automatically improve model performance from a few initially obtained interventions. If no prior human interventions are available, a CB2M can detect potential mistakes of the CBM bottleneck and request targeted interventions. In our experimental evaluations on challenging scenarios like handling distribution shifts and confounded training data, we illustrate that CB2M are able to successfully generalize interventions to unseen data and can indeed identify wrongly inferred concepts. Overall, our results show that CB2M is a great tool for users to provide interactive feedback on CBMs, e.g., by guiding a user's interaction and requiring fewer interventions.},
   year={2023},
-  keywords={XAI, XIL, Interactive Learning, Interpretability},  
+  keywords={XAI, XIL, Interactive Learning, Interpretability},
   pages={},
   url={https://arxiv.org/abs/2308.13453}
 }
@@ -198,7 +231,7 @@ biases},
 Anote={./images/zecevic2023same.png},
 author={Matej Zecevic and Devendra Singh Dhami and Kristian Kersting},
 note = {Neurally-parameterized Structural Causal Models in the Pearlian notion to causality, referred to as NCM, were recently introduced as a step towards next-generation learning systems. However, said NCM are only concerned with the learning aspect of causal inference and totally miss out on the architecture aspect. That is, actual causal inference within NCM is intractable in that the NCM won’t return an answer to a query in polynomial time. This insight follows as corollary to the more general statement on the intractability of arbitrary structural causal model (SCM) parameterizations, which we prove in this work through classical 3-SAT reduction. Since future learning algorithms will be required to deal with both high dimensional data and highly complex mechanisms governing the data, we ultimately believe work on tractable inference for causality to be decisive. We also show that not all “causal” models are created equal. More specifically, there are models capable of answering causal queries that are not SCM, which we refer to as partially causal models (PCM). We provide a tabular taxonomy in terms of tractability properties for all of the different model families, namely correlation-based, PCM and SCM. To conclude our work, we also provide some initial ideas on how to overcome parts of the intractability of causal inference with SCM by showing an example of how parameterizing an SCM with SPN modules can at least allow for tractable mechanisms. With this work we hope that our insights can raise awareness for this novel research direction since achieving success with causality in real world downstream tasks will not only depend on learning correct models but also require having the practical ability to gain access to
-model inferences.}, 
+model inferences.},
 title={Not All Causal Inference is the Same},
 journal={Transactions on Machine Learning Research (TMLR)},
 issn={2835-8856},
@@ -222,7 +255,7 @@ Crossref = {},
 url={},
 keywords={Adversarial Attack, Linear Programs, Causal Link, Structural Causal Model}
 }
- 
+
 
 
 @article{zecevic2023parrots,
@@ -233,7 +266,7 @@ doing causal inference, underlying was a respective meta SCM that exposed correl
 between causal facts in natural language on whose data the LLM was ultimately trained.
 If our hypothesis holds true, then this would imply that LLMs are like parrots in that they
 simply recite the causal knowledge embedded in the data. Our empirical analysis provides
-favoring evidence that current LLMs are even weak ‘causal parrots.’}, 
+favoring evidence that current LLMs are even weak ‘causal parrots.’},
 journal={Transactions on Machine Learning Research (TMLR)},
 title = {Causal Parrots: Large Language Models May Talk Causality But Are Not Causal},
 issn={2835-8856},
@@ -248,7 +281,7 @@ keywords={Large Language Models, Causality, Meta Causal, Structural Causal Model
 @article{shindo2023alphailp,
 Anote={./images/shindo2023alphailp.png},
 author={Hikaru Shindo and Viktor Pfanschilling and Devendra Singh Dhami and Kristian Kersting},
-note = {Deep neural learning has shown remarkable performance at learning representations for visual object categorization. However, deep neural networks such as CNNs do not explicitly encode objects and relations among them. This limits their success on tasks that require a deep logical understanding of visual scenes, such as Kandinsky patterns and Bongard problems. To overcome these limitations, we introduce 𝛼ILP, a novel differentiable inductive logic programming framework that learns to represent scenes as logic programs—intuitively, logical atoms correspond to objects, attributes, and relations, and clauses encode high-level scene information. 𝛼ILP has an end-to-end reasoning architecture from visual inputs. Using it, 𝛼ILP performs differentiable inductive logic programming on complex visual scenes, i.e., the logical rules are learned by gradient descent. Our extensive experiments on Kandinsky patterns and CLEVR-Hans benchmarks demonstrate the accuracy and efficiency of 𝛼ILP in learning complex visual-logical concepts.}, 
+note = {Deep neural learning has shown remarkable performance at learning representations for visual object categorization. However, deep neural networks such as CNNs do not explicitly encode objects and relations among them. This limits their success on tasks that require a deep logical understanding of visual scenes, such as Kandinsky patterns and Bongard problems. To overcome these limitations, we introduce 𝛼ILP, a novel differentiable inductive logic programming framework that learns to represent scenes as logic programs—intuitively, logical atoms correspond to objects, attributes, and relations, and clauses encode high-level scene information. 𝛼ILP has an end-to-end reasoning architecture from visual inputs. Using it, 𝛼ILP performs differentiable inductive logic programming on complex visual scenes, i.e., the logical rules are learned by gradient descent. Our extensive experiments on Kandinsky patterns and CLEVR-Hans benchmarks demonstrate the accuracy and efficiency of 𝛼ILP in learning complex visual-logical concepts.},
 Title={alphaILP: Thinking Visual Scenes as Differentiable Logic Programs},
 Journal={Machine Learning Journal (MLJ)},
 Publisher = {Springer},
@@ -302,8 +335,8 @@ year={2023},
 Crossref = {},
 url={},
 keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning}
-}   
- 
+}
+
 
 @inproceedings{willig2023consolidate,
   Anote={./images/willig2023consolidate.png},
@@ -395,7 +428,7 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
       Keywords = {Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Safety, Adversarial Prompting},
       Url={https://arxiv.org/abs/2309.11575}
 }
- 
+
 @incollection{yu2023tpm_cc,
   Anote = {./images/yu2023tpm_cc.png},
   Author = {Zhongjie Yu and Martin Trapp and Kristian Kersting},
@@ -408,7 +441,7 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
   crossref = {},
   Year = {2023}
 }
- 
+
 
 
 @misc{delfosse2023nudge_arxiv,
@@ -439,7 +472,7 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
 
 
 
-  
+
 @incollection{sha2023nesy,
   author = {Jingyuan Sha and Hikaru Shindo and Kristian Kersting and Devendra Singh Dhami},
   title = { Neural-Symbolic Predicate Invention: Learning Relational Concepts from Visual Scenes},
@@ -463,7 +496,7 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
   Url = {https://arxiv.org/abs/2306.07743},
   Pages = {},
   Crossref={https://sites.google.com/view/v-lol}
-} 
+}
 
 
 @inproceedings{brack2023illume,
@@ -518,7 +551,7 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
   Url = {https://openaccess.thecvf.com/content/ICCV2023/papers/Struppek_Rickrolling_the_Artist_Injecting_Backdoors_into_Text_Encoders_for_Text-to-Image_ICCV_2023_paper.pdf},
 }
 
- 
+
 
 @inproceedings{friedrich2023ecai,
   author = {Felix Friedrich and Wolfgang Stammer and Patrick Schramowski and Kristian Kersting},
