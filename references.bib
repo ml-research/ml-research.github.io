@@ -15,7 +15,7 @@
       title={Be Careful What You Smooth For: Label Smoothing Can Be a Privacy Shield but Also a Catalyst for Model Inversion Attacks},
       author={Lukas Struppek and Dominik Hintersdorf and Kristian Kersting},
       year={2024},
-      Keywords={Label Smoothing, Privacy, Membership Attack, Defense},
+      Keywords={Label Smoothing, Privacy, Model Inversion Attacks, Defense},
       Anote={./images/struppek2024iclr.png},
       Note={Label smoothing – using softened labels instead of hard ones – is a widely adopted regularization method for deep learning, showing diverse benefits such as enhanced generalization and calibration. Its implications for preserving model privacy, however, have remained unexplored. To fill this gap, we investigate the impact of label smoothing on model inversion attacks (MIAs), which aim to generate class-representative samples by exploiting the knowledge encoded in a classifier, thereby inferring sensitive information about its training data. Through extensive analyses, we uncover that traditional label smoothing fosters MIAs, thereby increasing a model's privacy leakage. Even more, we reveal that smoothing with negative factors counters this trend, impeding the extraction of class-related information and leading to privacy preservation, beating state-of-the-art defenses. This establishes a practical and powerful novel way for enhancing model resilience against MIAs.},
       Url={https://openreview.net/pdf?id=1SbkubNdbW}
@@ -151,23 +151,6 @@ in the Era of Large Language Models (NucLeaR)},
   Keywords = {Security, Privacy, Backdoor Attacks, CLIP, Identity Inference Attacks}
 }
 
-@misc{hintersdorf23defending,
-  Anote={./images/defending_with_backdoors.png},
-  author = {Dominik Hintersdorf and Lukas Struppek and Daniel Neider and Kristian Kersting},
-  title = {Defending Our Privacy With Backdoors},
-  Howpublished = {arXiv preprint arXiv:2310.08320},
-  year = {2023},
-  Url = {https://arxiv.org/pdf/2310.08320},
-  Pages = {},
-  Note = {The proliferation of large AI models trained on uncurated, often sensitive web-scraped data has raised significant privacy concerns. One of the concerns is that adversaries can extract information about the training
-  data using privacy attacks. Unfortunately, the task of removing specific information from the models without sacrificing performance is not straightforward and has proven to be challenging. We propose a rather easy yet
-  effective defense based on backdoor attacks to remove private information such as names of individuals from models, and focus in this work on text encoders. Specifically, through strategic insertion of backdoors, we
-  align the embeddings of sensitive phrases with those of neutral terms-"a person" instead of the person's name. Our empirical results demonstrate the effectiveness of our backdoor-based defense on CLIP by assessing its
-  performance using a specialized privacy attack for zero-shot classifiers. Our approach provides not only a new "dual-use" perspective on backdoor attacks, but also presents a promising avenue to enhance the privacy of
-  individuals within models trained on uncurated web-scraped data.},
-  Keywords = {Security, Privacy, Backdoor Attacks, CLIP, Identity Inference Attacks}
-}
-
 
 @incollection{brack2023ledits,
       Anote = {./images/mbrack_ledits_pp.png},
@@ -182,14 +165,14 @@ in the Era of Large Language Models (NucLeaR)},
       Url={../../papers/brack2023ledits.pdf}
 }
 
-@misc{struppek23leveraging,
+@incollection{struppek23leveraging,
   Anote={./images/backdoor_defense.png},
   author = {Lukas Struppek and Martin B. Hentschel and Clifton Poth and Dominik Hintersdorf and Kristian Kersting},
   title = {Leveraging Diffusion-Based Image Variations for Robust Training on Poisoned Data},
-  Howpublished = {arXiv preprint arXiv:2310.06372},
   year = {2023},
   Url = {https://arxiv.org/pdf/2310.06372},
   Pages = {},
+  booktitle={NeurIPS 2023 Workshop on Backdoors in Deep Learning - The Good, the Bad, and the Ugly},
   Note = {Backdoor attacks pose a serious security threat for training neural networks as they surreptitiously introduce hidden functionalities into a model.
   Such backdoors remain silent during inference on clean inputs, evading detection due to inconspicuous behavior. However, once a specific trigger pattern appears in the input data,
   the backdoor activates, causing the model to execute its concealed function. Detecting such poisoned samples within vast datasets is virtually impossible through manual inspection.
@@ -197,23 +180,6 @@ in the Era of Large Language Models (NucLeaR)},
   Specifically, we create synthetic variations of all training samples, leveraging the inherent resilience of diffusion models to potential trigger patterns in the data.
   By combining this generative approach with knowledge distillation, we produce student models that maintain their general performance on the task while exhibiting robust resistance to backdoor triggers.},
   Keywords = {Security, Backdoor Attacks, Stable Diffusion, Text-to-Image Synthesis}
-}
-
-
-@misc{struppek23smoothing,
-  Anote={./images/smoothing.png},
-  author = {Lukas Struppek and Dominik Hintersdorf and Kristian Kersting},
-  title = {Be Careful What You Smooth For: Label Smoothing Can Be a Privacy Shield but Also a Catalyst for Model Inversion Attacks},
-  Howpublished = {arXiv preprint arXiv:2310.06549},
-  year = {2023},
-  Url = {https://arxiv.org/pdf/2310.06549},
-  Pages = {},
-  Note = {Label smoothing – using softened labels instead of hard ones – is a widely adopted regularization method for deep learning, showing diverse benefits such as enhanced generalization and calibration.
-  Its implications for preserving model privacy, however, have remained unexplored. To fill this gap, we investigate the impact of label smoothing on model inversion attacks (MIAs), which aim to generate class-representative
-  samples by exploiting the knowledge encoded in a classifier, thereby inferring sensitive information about its training data. Through extensive analyses, we uncover that traditional label smoothing fosters MIAs,
-  thereby increasing a model’s privacy leakage. Even more, we reveal that smoothing with negative factors counters this trend, impeding the extraction of class-related information and leading to privacy preservation,
-  beating state-of-the-art defenses. This establishes a practical and powerful novel way for enhancing model resilience against MIAs.},
-  Keywords = {Privacy, Model Inversion Attacks, Regularization, Face Recognition}
 }
 
 
@@ -1047,18 +1013,6 @@ full potential of AI-based systems for organizations and research.}
   Note={How long do vulnerabilities live in the repositories of large, evolving projects? Although the question has been identified as an interesting problem by the software community in online forums, it has not been investigated yet in adequate depth and scale, since the process of identifying the exact point in time when a vulnerability was introduced is particularly cumbersome. In this paper, we provide an automatic approach for accurately estimating how long vulnerabilities remain in the code (their lifetimes). Our method relies on the observation that while it is difficult to pinpoint the exact point of introduction for one vulnerability, it is possible to accurately estimate the average lifetime of a large enough sample of vulnerabilities, via a heuristic approach. With our approach, we perform the first large-scale measurement of Free and Open Source Software vulnerability lifetimes, going beyond approaches estimating lower bounds prevalent in previous research. We find that the average lifetime of a vulnerability is around 4 years, varying significantly between projects (~2 years for Chromium, ~7 years for OpenSSL). The distribution of lifetimes can be approximately described by an exponential distribution. There are no statistically significant differences between the lifetimes of different vulnerability types when considering specific projects. Vulnerabilities are getting older, as the average lifetime of fixed vulnerabilities in a given year increases over time, influenced by the overall increase of code age. However, they live less than non-vulnerable code, with an increasing spread over time for some projects, suggesting a notion of maturity that can be considered an indicator of quality. While the introduction of fuzzers does not significantly reduce the lifetimes of memory-related vulnerabilities, further research is needed to better understand and quantify the impact of fuzzers and other tools on vulnerability lifetimes and on the security of codebases.}
 }
 
-@misc{struppek22rickrolling,
-  Anote = {./images/struppek_rickrolling.jpg},
-  author = {Lukas Struppek and Dominik Hintersdorf and Kristian Kersting},
-  title = {Rickrolling the Artist: Injecting Invisible Backdoors into Text-Guided Image Generation Models},
-  Howpublished = {arXiv preprint arXiv:2211.02408},
-  year = {2022},
-  month={Nov},
-  Note = {While text-to-image synthesis currently enjoys great popularity among researchers and the general public, the security of these models has been neglected so far. Many text-guided image generation models rely on pre-trained text encoders from external sources, and their users trust that the retrieved models will behave as promised. Unfortunately, this might not be the case. We introduce backdoor attacks against text-guided generative models and demonstrate that their text encoders pose a major tampering risk. Our attacks only slightly alter an encoder so that no suspicious model behavior is apparent for image generations with clean prompts. By then inserting a single non-Latin character into the prompt, the adversary can trigger the model to either generate images with pre-defined attributes or images following a hidden, potentially malicious description. We empirically demonstrate the high effectiveness of our attacks on Stable Diffusion and highlight that the injection process of a single backdoor takes less than two minutes. Besides phrasing our approach solely as an attack, it can also force an encoder to forget phrases related to certain concepts, such as nudity or violence, and help to make image generation safer.},
-  Pages = {},
-  Keywords = {Backdoor Attacks, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion},
-  Url={https://arxiv.org/pdf/2211.02408.pdf}
-  }
 
 @unpublished{kersting2022welt_clone,
     Anote = {./images/WeltAmSonntag.png},
@@ -1099,18 +1053,6 @@ keywords = {Virtual Met Mast (VMM), Wind power, Machine learning, Reanalysis dat
 Note = {As wind is the basis of all wind energy projects, a precise knowledge about its availability is needed. For an analysis of the site-specific wind conditions, Virtual Meteorological Masts (VMMs) are frequently used. VMMs make use of site calibrated numerical data to provide precise wind estimates during all phases of a wind energy project. Typically, numerical data are used for the long-term correlation that is required for estimating the yield of new wind farm projects. However, VMMs can also be used to fill data gaps or during the operational phase as an additional reference data set to detect degrading sensors. The value of a VMM directly depends on its ability and precision to reproduce site-specific environmental conditions. Commonly, linear regression is used as state of the art to correct reference data to the site-specific conditions. In this study, a framework of 10 different machine-learning methods is tested to investigated the benefit of more advanced methods on two offshore and one onshore site. We find significantly improving correlations between the VMMs and the reference data when using more advanced methods and present the most promising ones. The K-Nearest Neighbors and AdaBoost regressors show the best results in our study, but Multi-Output Mixture of Gaussian Processes is also very promising. The use of more advanced regression models lead to decreased uncertainties; hence those methods should find its way into industrial applications. The recommended regression models can serve as a starting point for the development of end-user applications and services.}
 }
 
-@misc{struppek22homoglyphs,
-  Anote = {./images/struppek_biased_artist.jpg},
-  author = {Lukas Struppek and Dominik Hintersdorf and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting},
-  title = {Exploiting Cultural Biases via Homoglyphs in Text-to-Image Synthesis},
-  Howpublished = {arXiv preprint arXiv:2209.08891},
-  year = {2022},
-  month={Sep},
-  Note = {Models for text-to-image synthesis, such as DALL-E 2 and Stable Diffusion, have recently drawn a lot of interest from academia and the general public. These models are capable of producing high-quality images that depict a variety of concepts and styles when conditioned on textual descriptions. However, these models adopt cultural characteristics associated with specific Unicode scripts from their vast amount of training data, which may not be immediately apparent. We show that by simply inserting single non-Latin characters in a textual description, common models reflect cultural stereotypes and biases in their generated images. We analyze this behavior both qualitatively and quantitatively, and identify a model’s text encoder as the root cause of the phenomenon. Additionally, malicious users or service providers may try to intentionally bias the image generation to create racist stereotypes by replacing Latin characters with similarly-looking characters from non-Latin scripts, so-called homoglyphs. To mitigate such unnoticed script attacks, we propose a novel homoglyph unlearning method to fine-tune a text encoder, making it robust against homoglyph manipulations.},
-  Pages = {},
-  Keywords = {Text-to-Image Synthesis, Text-Guided Image Generation, DALL-E 2, Stable Diffusion, Computer Vision},
-  Url={https://arxiv.org/pdf/2209.08891.pdf}
-  }
 
 @misc{hintersdorf2022clipping_privacy,
       Anote = {./images/hintersdorf2022clipping_privacy.png},
@@ -1745,22 +1687,6 @@ url={https://doi.org/10.1038/s42256-022-00458-8}
 
 
 
-
-
-  @misc{struppek2022ppa,
-      Anote = {./images/struppek_ppa.jpg},
-      title={Plug & Play Attacks: Towards Robust and Flexible Model Inversion Attacks},
-      author={Lukas Struppek and Dominik Hintersdorf and Antonio De Almeida Correia and Antonia Adler and Kristian Kersting},
-      Note = {Model inversion attacks (MIAs) aim to create synthetic images that reflect the class-wise characteristics from a target classifier's training data by exploiting the model's learned knowledge. Previous research has developed generative MIAs using generative adversarial networks (GANs) as image priors that are tailored to a specific target model. This makes the attacks time- and resource-consuming, inflexible, and susceptible to distributional shifts between datasets. To overcome these drawbacks, we present Plug \& Play Attacks that loosen the dependency between the target model and image prior and enable the use of a single trained GAN to attack a broad range of targets with only minor attack adjustments needed. Moreover, we show that powerful MIAs are possible even with publicly available pre-trained GANs and under strong distributional shifts, whereas previous approaches fail to produce meaningful results. Our extensive evaluation confirms the improved robustness and flexibility of Plug \& Play Attacks and their ability to create high-quality images revealing sensitive class characteristics.},
-      year={2022},
-      Pages = {},
-      Keywords = {model inversion attacks, secure ai, privacy, generative adversarial network},
-      Url={https://arxiv.org/pdf/2201.12179.pdf},
-      Howpublished = {arXiv preprint arXiv:2201.12179}
-}
-
-
-
   @misc{shao2022rightLatent,
         title={Right for the Right Latent Factors: Debiasing Generative Models via Disentanglement},
         author={Xiaoting Shao and Karl Stelzner and Kristian Kersting},
@@ -1836,29 +1762,6 @@ recognize most of the generated facial expressions on both the robots.},
 	Howpublished = {arXiv preprint arXiv:2112.02290}
 }
 
-@misc{hintersdorf2021mi,
-      Anote = {./images/hintersdorf2021mi.png},
-      title={Do Not Trust Prediction Scores for Membership Inference Attacks},
-      author={Dominik Hintersdorf and Lukas Struppek and Kristian Kersting},
-      Note = {Membership inference attacks (MIAs) aim to determine whether a specific sample was used to train a predictive model. Knowing this may indeed lead to a privacy breach. Arguably, most MIAs, however, make use of the model's prediction scores - the probability of each output given some input - following the intuition that the trained model tends to behave differently on its training data. We argue that this is a fallacy for many modern deep network architectures, e.g., ReLU type neural networks produce almost always high prediction scores far away from the training data. Consequently, MIAs will miserably fail since this behavior leads to high false-positive rates not only on known domains but also on out-of-distribution data and implicitly acts as a defense against MIAs. Specifically, using generative adversarial networks, we are able to produce a potentially infinite number of samples falsely classified as part of the training data. In other words, the threat of MIAs is overestimated and less information is leaked than previously assumed. Moreover, there is actually a trade-off between the overconfidence of classifiers and their susceptibility to MIAs: the more classifiers know when they do not know, making low confidence predictions far away from the training data, the more they reveal the training data.},
-      year={2021},
-      Pages = {},
-      Keywords = {secure AI, membership inference},
-      Url={https://arxiv.org/pdf/2111.09076.pdf},
-      Howpublished = {arXiv preprint arXiv:2111.09076}
-}
-
-@misc{struppek2021learning,
-      Anote = {./images/struppek2021learning.png},
-      title={Learning to Break Deep Perceptual Hashing: The Use Case NeuralHash},
-      author={Lukas Struppek and Dominik Hintersdorf and Daniel Neider and Kristian Kersting},
-      Note = {Apple recently revealed its deep perceptual hashing system NeuralHash to detect child sexual abuse material (CSAM) on user devices before files are uploaded to its iCloud service. Public criticism quickly arose regarding the protection of user privacy and the system's reliability. In this paper, we present the first comprehensive empirical analysis of deep perceptual hashing based on NeuralHash. Specifically, we show that current deep perceptual hashing may not be robust. An adversary can manipulate the hash values by applying slight changes in images, either induced by gradient-based approaches or simply by performing standard image transformations, forcing or preventing hash collisions. Such attacks permit malicious actors easily to exploit the detection system: from hiding abusive material to framing innocent users, everything is possible. Moreover, using the hash values, inferences can still be made about the data stored on user devices. In our view, based on our results, deep perceptual hashing in its current form is generally not ready for robust client-side scanning and should not be used from a privacy perspective. },
-      year={2021},
-      Pages = {},
-      Keywords = {secure AI, client-side scanning, perceptual hashing},
-      Url={https://arxiv.org/pdf/2111.06628.pdf},
-      Howpublished = {arXiv preprint arXiv:2111.06628}
-}
 
 @misc{skryagin2021slash,
 	Anote = {./images/slash.jpg},
