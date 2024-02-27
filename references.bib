@@ -652,7 +652,7 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
 @inproceedings{ventola2023uai,
   Anote={./images/ventola-braun2023tdi.png},
   Url = {https://proceedings.mlr.press/v216/ventola23a/ventola23a.pdf},
-  author = {Fabrizio Ventola and Steven Braun and Zhongjie Yu and Martin Mundt and Kristian Kersting},
+  author = {Fabrizio Ventola* and Steven Braun* and Zhongjie Yu and Martin Mundt and Kristian Kersting},
   title = {Probabilistic Circuits That Know What They Don't Know},
    Note = {Probabilistic circuits (PCs) are models that allow exact and tractable probabilistic inference. In contrast to neural networks, they are often assumed to be well-calibrated and robust to out-of-distribution (OOD) data. In this paper, we show that PCs are in fact not robust to OOD data, i.e., they don’t know what they don’t know. We then show how this challenge can be overcome by model uncertainty quantification. To this end, we propose tractable dropout inference (TDI), an inference procedure to estimate uncertainty by deriving an analytical solution to Monte Carlo dropout (MCD) through variance propagation. Unlike MCD in neural networks, which comes at the cost of multiple network evaluations, TDI provides tractable sampling-free uncertainty estimates in a single forward pass. TDI improves the robustness of PCs to distribution shift and OOD data, demonstrated through a series of experiments evaluating the classification confidence and uncertainty estimates on real-world data.},
     year={2023},
@@ -771,31 +771,6 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
   RAM state manipulations of the games to change and create specific or even novel situations.},
   Keywords = {Object-centric, Atari, Benchmarks, Reinforcement Learning}
 }
-
-@misc{braun2023cake,
-  Anote={./images/braun2023cake.png},
-  copyright = {Creative Commons Attribution 4.0 International},
-  title={Deep Classifier Mimicry without Data Access},
-  author={Steven Braun and Martin Mundt and Kristian Kersting},
-  year={2023},
-  Pages = {},
-  Howpublished={arXiv preprint arXiv:2306.02090},
-  Url={https://arxiv.org/pdf/2306.02090.pdf},
-  Note={Access to pre-trained models has recently emerged as a standard across numerous
-  machine learning domains. Unfortunately, access to the original data the models
-  were trained on may not equally be granted. This makes it tremendously challenging to fine-tune,
-  compress models, adapt continually, or to do any other type of data-driven update. We posit that
-  original data access may however not be required. Specifically, we propose Contrastive Abductive
-  Knowledge Extraction (CAKE), a model-agnostic knowledge distillation procedure that mimics deep
-  classifiers without access to the original data. To this end, CAKE generates pairs of noisy
-  synthetic samples and diffuses them contrastively toward a model's decision boundary. We
-  empirically corroborate CAKE's effectiveness using several benchmark datasets and various
-  architectural choices, paving the way for broad application.},
-  Keywords = {Fine-Tuning, Pre-Trained Models, Knowledge Distillation, Contrastive Abductive
-  Knowledge Extraction}
-}
-
-
 
 @incollection{weil2023knowYourEnemy,
   Anote={./images/weil2023knowYourEnemy.png},
@@ -979,23 +954,6 @@ that PMLMs do encode differing moral biases, but these do not necessarily corres
 }
 
 
-@misc{ventola-braun2023tdi,
-  Anote={./images/ventola-braun2023tdi.png},
-  Url = {https://arxiv.org/abs/2302.06544},
-  abbr={arXiv},
-  eprint={2302.06544},
-  archivePrefix={arXiv},
-  primaryClass={cs.AI},
-  author = {Ventola, Fabrizio and Braun, Steven and Yu, Zhongjie and Mundt, Martin and Kersting, Kristian},
-  keywords = {Machine Learning (cs.LG), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences, I.2.0; G.3},
-  title = {Probabilistic Circuits That Know What They Don't Know},
-  publisher = {arXiv},
-  year = {2023},
-  copyright = {Creative Commons Attribution 4.0 International},
-  journal={arXiv preprint, arXiv:2302.06544},
-  Howpublished={arXiv preprint, arXiv:2302.06544},
-  Crossref={https://github.com/ml-research/tractable-dropout-inference}
-}
 
 @article{pfeuffer2023xil,
 Anote = {./images/pfeuffer2023xil.png},
