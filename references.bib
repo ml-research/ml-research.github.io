@@ -1,3 +1,12 @@
+@inproceedings{zipperling24collafuse,
+  author = {Domenique Zipperling and Simeon Allmendinger and Lukas Struppek and Niklas Kühl},
+  title = {CollaFuse: Navigating Limited Resources and Privacy in Collaborative Generative AI},
+  year = {2024},
+  booktitle = {European Conference on Information Systems (ECIS)},
+  Url = {https://arxiv.org/abs/2402.19105},
+  Note = {In the landscape of generative artificial intelligence, diffusion-based models present challenges for socio-technical systems in data requirements and privacy. Traditional approaches like federated learning distribute the learning process but strain individual clients, especially with constrained resources (e.g., edge devices). In response to these challenges, we introduce CollaFuse, a novel framework inspired by split learning. Tailored for efficient and collaborative use of denoising diffusion probabilistic models, CollaFuse enables shared server training and inference, alleviating client computational burdens. This is achieved by retaining data and computationally inexpensive GPU processes locally at each client while outsourcing the computationally expensive processes to the shared server. Demonstrated in a healthcare context, CollaFuse enhances privacy by highly reducing the need for sensitive information sharing. These capabilities hold the potential to impact various application areas, such as the design of edge computing solutions, healthcare research, or autonomous driving. In essence, our work advances distributed machine learning, shaping the future of collaborative GenAI networks.},
+  Anote={./images/struppek_collafuse.png},
+}
 
 @misc{helfenstein2024checkmating,
   Anote={./images/helfenstein2024checkmating.png},
@@ -23,7 +32,6 @@
       Keywords = {Image Editing, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Semantics},
       Url={../../papers/brack2023ledits.pdf}
 }
-
 
 @incollection{struppek2024adversarialllm,
   title={Exploring the Adversarial Capabilities of Large Language Models},
@@ -64,18 +72,6 @@ biases},
     Crossref = {},
     Year = {2024}
 }
-
-@misc{struppek2024adversarialllm,
-  title={Exploring the Adversarial Capabilities of Large Language Models},
-  author={Lukas Struppek and Minh Hieu Le and Dominik Hintersdorf and Kristian Kersting},
-  year={2024},
-  Howpublished = {arXiv preprint 2402.09132},
-  Note = {The proliferation of large language models (LLMs) has sparked widespread and general interest due to their strong language generation capabilities, offering great potential for both industry and research. While previous research delved into the security and privacy issues of LLMs, the extent to which these models can exhibit adversarial behavior remains largely unexplored. Addressing this gap, we investigate whether common publicly available LLMs have inherent capabilities to perturb text samples to fool safety measures, so-called adversarial examples resp. attacks. More specifically, we investigate whether LLMs are inherently able to craft adversarial examples out of benign samples to fool existing safe rails. Our experiments, which focus on hate speech detection, reveal that LLMs succeed in finding adversarial perturbations, effectively undermining hate speech detection systems. Our findings carry significant implications for (semi-)autonomous systems relying on LLMs, highlighting potential challenges in their interaction with existing systems and safety measures.},
-  Anote = {./images/struppek_adv_llm.png},
-  Url = {https://arxiv.org/abs/2402.09132},
-  Keywords = {Large Language Models, Adversarial Examples}
-}
-
 
 @misc{derstroff2024amplifying,
   title={Amplifying Exploration in Monte-Carlo Tree Search by Focusing on the Unknown},
