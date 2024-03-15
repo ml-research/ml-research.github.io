@@ -1,3 +1,17 @@
+
+@inproceedings{deiseroth2024dtm,
+      Anote = {./images/deiseroth2024dtm.png},
+      booktitle = {Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics (NAACL 2024) },
+      title={Divergent Token Metrics: Measuring degradation to prune away LLM components – and optimize quantization},
+      author={Björn Deiseroth and Max Meuer and Nikolas Gritsch and Constantin Eichenberg and Patrick Schramowski and Matthias Aßenmacher and Kristian Kersting},
+      Note = {Large Language Models (LLMs) have reshaped natural language processing with their impressive capabilities. Their ever-increasing size, however, have raised concerns about their effective deployment and the need for LLM compression. This study introduces the Divergent Token Metrics (DTMs), a novel approach for assessing compressed LLMs, addressing the limitations of traditional perplexity or accuracy measures that fail to accurately reflect text generation quality. DTMs focus on token divergence, that allow deeper insights into the subtleties of model compression, in particular when evaluating components' impacts individually. Utilizing the First Divergent Token Metric (FDTM) in model sparsification reveals that 25% of all attention components can be pruned beyond 90% on the Llama-2 model family, still keeping SOTA performance. For quantization FDTM suggests that over 80% of parameters can naively be transformed to int8 without special outlier management. These evaluations indicate the necessity of choosing appropriate compressions for parameters individually---and that FDTM can identify those---while standard metrics result in deteriorated outcomes.},
+      year={2024},
+      Pages = {},
+      Keywords = {Quantization, Model Analysdis, Interpretability, Low Compute Setting, Efficiency, Deep Learning},
+      Url={https://arxiv.org/pdf/2311.01544.pdf}
+}
+
+
 @inproceedings{zipperling24collafuse,
   author = {Domenique Zipperling and Simeon Allmendinger and Lukas Struppek and Niklas Kühl},
   title = {CollaFuse: Navigating Limited Resources and Privacy in Collaborative Generative AI},
