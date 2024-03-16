@@ -388,7 +388,7 @@
                 </dd>
             </dl>
         </div>
-                    
+
         <figure>
             <img class="img-fluid" src="./images/group_picture_june23.jpg" style="float: center; margin: 0px 0px 10px 0px;"
                 alt="The AIML group in June 2023">
@@ -1857,6 +1857,8 @@
     $(document).ready(function () {
 
         $.get('https://ml-research.github.io/references.bib', function (references) {
+      //$.get('file:///Users/kersting/Documents/GitHub/ml-research.github.io/references.bib', function (data) {
+
             $("#bibtex").html(references);
             bibtexify("#bibtex", "pubTable");
         });
