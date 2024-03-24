@@ -1855,11 +1855,13 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
+      $.get('https://ml-research.github.io/references.bib', function (data) {
+       //$.get('file:///Users/kersting/Documents/GitHub/ml-research.github.io/references.bib', function (data) {
 
-        $.get('https://ml-research.github.io/references.bib', function (references) {
-      //$.get('file:///Users/kersting/Documents/GitHub/ml-research.github.io/references.bib', function (data) {
 
-            $("#bibtex").html(references);
+            bibtex = data.split(/(?=@\w+)/u);
+                 
+            $("#bibtex").html(data);
             bibtexify("#bibtex", "pubTable");
         });
     });
