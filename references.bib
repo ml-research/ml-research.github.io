@@ -1,3 +1,14 @@
+@article{helff2024llavaguard,
+	Anote={./images/llavaguard_pipe.png},
+	title={LLAVAGUARD: VLM-based Safeguard for Vision Dataset Curation and Safety Assessment},
+	author={Lukas Helff and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting},
+	year={2024},
+	Howpublished={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+	url={../../papers/helff2024llavaguard.pdf},
+	Note = {A dataset is confounded if it is most easily solved via a spurious correlation which fails to generalize to new data. We will show that, in a continual learning setting where confounders may vary in time across tasks, the resulting challenge far exceeds the standard forgetting problem normally considered. In particular, we derive mathematically the effect of such confounders on the space of valid joint solutions to sets of confounded tasks. Interestingly, our theory predicts that for many such continual datasets, spurious correlations are easily ignored when the tasks are trained on jointly, but it is far harder to avoid confounding when they are considered sequentially. We construct such a dataset and demonstrate empirically that standard continual learning methods fail to ignore confounders, while training jointly on all tasks is successful. Our continually confounded dataset, ConCon, is based on CLEVR images and demonstrates the need for continual learning methods with more robust behavior with respect to confounding.},
+Keywords = {Safety, Multimodal, VLM}
+}
+
 @misc{busch2024conconarxiv,
 	Anote={./images/busch_whereisthetruth.png},
 	title={Where is the Truth? The Risk of Getting Confounded in a Continual World}, 
@@ -345,7 +356,7 @@ monitoring and show how the model’s predictions can be shifted accordingly dur
   author = {Hikaru Shindo and Manuel Brack and Gopika Sudhakaran and Devendra Singh Dhami and Patrick Schramowski and Kristian Kersting},
   title = {DeiSAM: Segment Anything with Deictic Prompting},
   year = {2024},
-  Url = {https://openreview.net/pdf?id=GBnqDrq3NZ},
+  Url = {https://arxiv.org/abs/2402.14123},
   Pages = {},
   booktitle={AAAI 2024 Workshop on Neuro-Symbolic Learning and Reasoning
 in the Era of Large Language Models (NucLeaR)},
@@ -478,7 +489,7 @@ biases},
 @misc{stammer2023learning,
   Anote = {./images/stammer2023learning.png},
   title = {Learning by Self-Explaining},
-  author={Wolfgang Stammer and Felix Friedrich and David Steinmann and Hikaru Shindo and Kristian Kersting},
+  author={Wolfgang Stammer and Felix Friedrich and David Steinmann Manuel Brack and Hikaru Shindo and Kristian Kersting},
   Howpublished = {arXiv preprint arXiv:2309.08395},
   Note = {Artificial intelligence (AI) research has a long track record of drawing inspirations from findings from biology, in particular human intelligence. In contrast to current AI research that mainly treats explanations as a means for model inspection, a somewhat neglected finding from human psychology is the benefit of self-explaining in an agents' learning process. Motivated by this, we introduce a novel learning paradigm, termed Learning by Self-Explaining (LSX). The underlying idea is that a learning module (learner) performs a base task, e.g. image classification, and provides explanations to its decisions. An internal critic module next evaluates the quality of these explanations given the original task. Finally, the learner is refined with the critic's feedback and the loop is repeated as required. The intuition behind this is that an explanation is considered "good" if the critic can perform the same task given the respective explanation. Despite many implementation possibilities the structure of any LSX instantiation can be taxonomized based on four learning modules which we identify as: Fit, Explain, Reflect and Revise. In our work, we provide distinct instantiations of LSX for two different learner models, each illustrating different choices for the various LSX components. We broadly evaluate these on several datasets and show that Learning by Self-Explaining not only boosts the generalization abilities of AI models, particularly in small-data regimes, but also aids in mitigating the influence of confounding factors, as well as leading to more task specific and faithful model explanations. Overall, our results provide experimental evidence of the potential of self-explaining within the learning phase of an AI model.},
   Keywords = {Explanatory Interactive Machine Learning, XIL, Explainability, XAI, Interpretability},
