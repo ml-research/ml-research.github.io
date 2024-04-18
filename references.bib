@@ -230,17 +230,24 @@ biases},
   Howpublished = {arXiv preprint 2402.08511},
   Note = {Monte-Carlo tree search (MCTS) is an effective anytime algorithm with a vast amount of applications. It strategically allocates computational resources to focus on promising segments of the search tree, making it a very attractive search algorithm in large search spaces. However, it often expends its limited resources on reevaluating previously explored regions when they remain the most promising path. Our proposed methodology, denoted as AmEx-MCTS, solves this problem by introducing a novel MCTS formulation. Central to AmEx-MCTS is the decoupling of value updates, visit count updates, and the selected path during the tree search, thereby enabling the exclusion of already explored subtrees or leaves. This segregation preserves the utility of visit counts for both exploration-exploitation balancing and quality metrics within MCTS. The resultant augmentation facilitates in a considerably broader search using identical computational resources, preserving the essential characteristics of MCTS. The expanded coverage not only yields more precise estimations but also proves instrumental in larger and more complex problems. Our empirical evaluation demonstrates the superior performance of AmEx-MCTS, surpassing classical MCTS and related approaches by a substantial margin.},
   Anote = {./images/AmEx.png},
-  Keywords = {Monte-Carlo Tree Search, Exploration vs Exploitation, Upper Confidence Bounds for Trees}
+  Keywords = {Monte-Carlo Tree Search, Exploration vs Exploitation, Upper Confidence Bounds for Trees},
+  Url = {https://arxiv.org/abs/2312.09950}
 }
 
-@misc{derstroff2023peer,
-  title={Peer Learning: Learning Complex Policies in Groups from Scratch via Action Recommendations},
-  author={Cedric Derstroff and Mattia Cerrato and Jannis Brugger and Jan Peters and Stefan Kramer},
-  year={2023},
-  Howpublished = {arXiv preprint 2312.09950},
-  Keywords = {Reinforcement Learning, Imitation Learning & Inverse Reinforcement Learning, Adversarial Agents, Agent Communication, Multiagent Learning},
-  Note = {Peer learning is a novel high-level reinforcement learning framework for agents learning in groups. While standard reinforcement learning trains an individual agent in trial-and-error fashion, all on its own, peer learning addresses a related setting in which a group of agents, i.e., peers, learns to master a task simultaneously together from scratch. Peers are allowed to communicate only about their own states and actions recommended by others: "What would you do in my situation?". Our motivation is to study the learning behavior of these agents. We formalize the teacher selection process in the action advice setting as a multi-armed bandit problem and therefore highlight the need for exploration. Eventually, we analyze the learning behavior of the peers and observe their ability to rank the agents' performance within the study group and understand which agents give reliable advice. Further, we compare peer learning with single agent learning and a state-of-the-art action advice baseline. We show that peer learning is able to outperform single-agent learning and the baseline in several challenging discrete and continuous OpenAI Gym domains. Doing so, we also show that within such a framework complex policies from action recommendations beyond discrete action spaces can evolve.},
-  Anote = {./images/peerlearning_paper.png}
+@inproceedings{derstroff2024peer,
+    title={Peer Learning: Learning Complex Policies in Groups from Scratch via Action Recommendations},
+    volume={38},
+    url={https://ojs.aaai.org/index.php/AAAI/article/view/29061},
+    DOI={10.1609/aaai.v38i10.29061},
+    Note = {Peer learning is a novel high-level reinforcement learning framework for agents learning in groups. While standard reinforcement learning trains an individual agent in trial-and-error fashion, all on its own, peer learning addresses a related setting in which a group of agents, i.e., peers, learns to master a task simultaneously together from scratch. Peers are allowed to communicate only about their own states and actions recommended by others: "What would you do in my situation?". Our motivation is to study the learning behavior of these agents. We formalize the teacher selection process in the action advice setting as a multi-armed bandit problem and therefore highlight the need for exploration. Eventually, we analyze the learning behavior of the peers and observe their ability to rank the agents' performance within the study group and understand which agents give reliable advice. Further, we compare peer learning with single agent learning and a state-of-the-art action advice baseline. We show that peer learning is able to outperform single-agent learning and the baseline in several challenging discrete and continuous OpenAI Gym domains. Doing so, we also show that within such a framework complex policies from action recommendations beyond discrete action spaces can evolve.},
+    number={10},
+    booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+    author={Cedric Derstroff and Mattia Cerrato and Jannis Brugger and Jan Peters and Stefan Kramer},
+    Keywords = {Reinforcement Learning, Imitation Learning & Inverse Reinforcement Learning, Adversarial Agents, Agent Communication, Multiagent Learning},
+    year={2024},
+    month={Mar.},
+    pages={11766-11774},
+    Anote = {./images/peerlearning_paper.png}
 }
 
 @misc{friedrich2024multilingual,
