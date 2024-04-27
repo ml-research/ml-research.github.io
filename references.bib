@@ -1,13 +1,45 @@
-@misc{tedeschi2024alert,
-      Anote = {./images/alert_overview.png},
-      title={ALERT: A Comprehensive Benchmark for Assessing Large Language Models' Safety through Red Teaming}, 
-      author={Simone Tedeschi and Felix Friedrich and Patrick Schramowski and Kristian Kersting and Roberto Navigli and Huu Nguyen and Bo Li},
-      year={2024},
-      Howpublished={arXiv preprint arXiv:2404.08676},
-      url={https://arxiv.org/pdf/2404.08676.pdf},
-      keywords={Safety, Responsible AI, LLMs, DPO, Benchmark},
-      Note={When building Large Language Models (LLMs), it is paramount to bear safety in mind and protect them with guardrails. Indeed, LLMs should never generate content promoting or normalizing harmful, illegal, or unethical behavior that may contribute to harm to individuals or society. This principle applies to both normal and adversarial use. In response, we introduce ALERT, a large-scale benchmark to assess safety based on a novel fine-grained risk taxonomy. It is designed to evaluate the safety of LLMs through red teaming methodologies and consists of more than 45k instructions categorized using our novel taxonomy. By subjecting LLMs to adversarial testing scenarios, ALERT aims to identify vulnerabilities, inform improvements, and enhance the overall safety of the language models. Furthermore, the fine-grained taxonomy enables researchers to perform an in-depth evaluation that also helps one to assess the alignment with various policies. In our experiments, we extensively evaluate 10 popular open- and closed-source LLMs and demonstrate that many of them still struggle to attain reasonable levels of safety.},
+
+
+@inproceedings{wuest2024pix2code,
+	Anote={./images/wuest_pix2code.png},
+	title={Pix2Code: Learning to Compose Neural Visual Concepts as Programs},
+	author={Antonia Wuest and Wolfgang Stammer and Quentin Delfosse and Devendra Singh Dhami and Kristian Kersting},
+	year={2024},
+  booktitle={Proceedings of the 40th Conference on Uncertainty in Artificial Intelligence (UAI)},
+	url={https://arxiv.org/pdf/2402.08280.pdf},
+	Note = {The challenge in learning abstract concepts from images in an unsupervised fashion lies in the required integration of visual perception and generalizable relational reasoning. Moreover, the unsupervised nature of this task makes it necessary for human users to be able to understand a model’s learnt concepts and potentially revise false behaviours. To tackle both the generalizability and interpretability constraints of visual concept learning, we propose Pix2Code, a framework that extends program synthesis to visual relational reasoning by utilizing the abilities of both explicit, compositional symbolic and implicit neural representations. This is achieved by retrieving object representations from images and synthesizing relational concepts as λ-calculus programs. We evaluate the diverse properties of Pix2Code on the challenging reasoning domains, Kandinsky Patterns and CURI, thereby testing its ability to identify compositional visual concepts that generalize to novel data and concept configurations. Particularly, in stark contrast to neural approaches, we show that Pix2Code’s representations remain human interpretable and can be easily revised for improved performance.},
+Keywords = {Concept Learning, Program Synthesis, Neuro-Symbolic, Meta-Learning}
 }
+
+@inproceedings{poonia2024chiSPN,
+	Anote={./images/poonia2024chiSPN.png},
+	title={chiSPN: Characteristic Interventional Sum-Product Networks for Causal Inference in Hybrid Domains},
+	author={Harsh Poonia and Moritz Willig and Zhongjie Yu and Matej Zecevic and Kristian Kersting and Devendra Singh Dhami},
+	year={2024},
+  booktitle={Proceedings of the 40th Conference on Uncertainty in Artificial Intelligence (UAI)},
+	url={},
+	Note = {Causal inference in hybrid domains, characterized by a mixture of discrete and continuous variables, presents a formidable challenge. We take a step towards this direction and propose Characteristic Interventional Sum-Product Network
+  (chiSPN) that is capable of estimating interventional distributions in presence of random variables drawn from mixed distributions. chiSPN uses characteristic functions in the leaves of an interventional SPN (iSPN) thereby providing a unified
+  view for discrete and continuous random variables through the Fourier–Stieltjes transform of the probability measures. A neural network is used to estimate the parameters of the learned iSPN using the intervened data.
+  Our experiments on 3 synthetic heterogeneous datasets suggest that SPN can effectively capture the interventional distributions for both discrete and continuous variables while being expressive and causally adequate. We also show that chiSPN generalize
+  to multiple interventions while being trained only on a single intervention data.},
+Keywords = {Causal Model, Interventional SPN, Hybrid Domain, Fourier-Stieltjes Transform, Neural Network}
+}
+
+
+@inproceedings{paul2024collas,
+    Anote = {./images/paul2024collas.png},
+    Author = {Subarnaduti Paul and Lars-Joel Frey and Roshni Ramanna Kamath and Kristian Kersting and Martin Mundt},
+    booktitle={Proceedings of the Third Conference on Lifelong Learning Agents (CoLLAs)},
+    title = {Masked Autoencoders are Efficient Continual Federated Learners},
+    Keywords = {Federated Learning, Masked Autoencoders, Continual Learning},
+  Pages = {},
+    Note = {Machine learning is typically framed from a perspective of i.i.d., and more importantly, isolated data. In parts, federated learning lifts this assumption, as it sets out to solve the real-world challenge of collaboratively learning a shared model from data distributed across clients. However, motivated primarily by privacy and computational constraints, the fact that data may change, distributions drift, or even tasks advance individually on clients, is seldom taken into account. The field of continual learning addresses this separate challenge and first steps have recently been taken to leverage synergies in distributed settings of a purely supervised nature. Motivated by these prior works, we posit that such federated continual learning should be grounded in unsupervised learning of representations that are shared across clients; in the loose spirit of how humans can indirectly leverage others' experience without exposure to a specific task. For this purpose, we demonstrate that masked autoencoders for distribution estimation are particularly amenable to this setup. Specifically, their masking strategy can be seamlessly integrated with task attention mechanisms to enable selective knowledge transfer between clients. We empirically corroborate the latter statement through several continual federated scenarios on both image and binary datasets.},
+    Url = {},
+    Crossref = {},
+    Year = {2024}
+}
+
 
 @inproceedings{mathur2024aime,
     Anote = {./images/mathur2024aime.png},
@@ -240,24 +272,17 @@ biases},
   Howpublished = {arXiv preprint 2402.08511},
   Note = {Monte-Carlo tree search (MCTS) is an effective anytime algorithm with a vast amount of applications. It strategically allocates computational resources to focus on promising segments of the search tree, making it a very attractive search algorithm in large search spaces. However, it often expends its limited resources on reevaluating previously explored regions when they remain the most promising path. Our proposed methodology, denoted as AmEx-MCTS, solves this problem by introducing a novel MCTS formulation. Central to AmEx-MCTS is the decoupling of value updates, visit count updates, and the selected path during the tree search, thereby enabling the exclusion of already explored subtrees or leaves. This segregation preserves the utility of visit counts for both exploration-exploitation balancing and quality metrics within MCTS. The resultant augmentation facilitates in a considerably broader search using identical computational resources, preserving the essential characteristics of MCTS. The expanded coverage not only yields more precise estimations but also proves instrumental in larger and more complex problems. Our empirical evaluation demonstrates the superior performance of AmEx-MCTS, surpassing classical MCTS and related approaches by a substantial margin.},
   Anote = {./images/AmEx.png},
-  Keywords = {Monte-Carlo Tree Search, Exploration vs Exploitation, Upper Confidence Bounds for Trees},
-  Url = {https://arxiv.org/abs/2312.09950}
+  Keywords = {Monte-Carlo Tree Search, Exploration vs Exploitation, Upper Confidence Bounds for Trees}
 }
 
-@inproceedings{derstroff2024peer,
-    title={Peer Learning: Learning Complex Policies in Groups from Scratch via Action Recommendations},
-    volume={38},
-    url={https://ojs.aaai.org/index.php/AAAI/article/view/29061},
-    DOI={10.1609/aaai.v38i10.29061},
-    Note = {Peer learning is a novel high-level reinforcement learning framework for agents learning in groups. While standard reinforcement learning trains an individual agent in trial-and-error fashion, all on its own, peer learning addresses a related setting in which a group of agents, i.e., peers, learns to master a task simultaneously together from scratch. Peers are allowed to communicate only about their own states and actions recommended by others: "What would you do in my situation?". Our motivation is to study the learning behavior of these agents. We formalize the teacher selection process in the action advice setting as a multi-armed bandit problem and therefore highlight the need for exploration. Eventually, we analyze the learning behavior of the peers and observe their ability to rank the agents' performance within the study group and understand which agents give reliable advice. Further, we compare peer learning with single agent learning and a state-of-the-art action advice baseline. We show that peer learning is able to outperform single-agent learning and the baseline in several challenging discrete and continuous OpenAI Gym domains. Doing so, we also show that within such a framework complex policies from action recommendations beyond discrete action spaces can evolve.},
-    number={10},
-    booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-    author={Cedric Derstroff and Mattia Cerrato and Jannis Brugger and Jan Peters and Stefan Kramer},
-    Keywords = {Reinforcement Learning, Imitation Learning & Inverse Reinforcement Learning, Adversarial Agents, Agent Communication, Multiagent Learning},
-    year={2024},
-    month={Mar.},
-    pages={11766-11774},
-    Anote = {./images/peerlearning_paper.png}
+@misc{derstroff2023peer,
+  title={Peer Learning: Learning Complex Policies in Groups from Scratch via Action Recommendations},
+  author={Cedric Derstroff and Mattia Cerrato and Jannis Brugger and Jan Peters and Stefan Kramer},
+  year={2023},
+  Howpublished = {arXiv preprint 2312.09950},
+  Keywords = {Reinforcement Learning, Imitation Learning & Inverse Reinforcement Learning, Adversarial Agents, Agent Communication, Multiagent Learning},
+  Note = {Peer learning is a novel high-level reinforcement learning framework for agents learning in groups. While standard reinforcement learning trains an individual agent in trial-and-error fashion, all on its own, peer learning addresses a related setting in which a group of agents, i.e., peers, learns to master a task simultaneously together from scratch. Peers are allowed to communicate only about their own states and actions recommended by others: "What would you do in my situation?". Our motivation is to study the learning behavior of these agents. We formalize the teacher selection process in the action advice setting as a multi-armed bandit problem and therefore highlight the need for exploration. Eventually, we analyze the learning behavior of the peers and observe their ability to rank the agents' performance within the study group and understand which agents give reliable advice. Further, we compare peer learning with single agent learning and a state-of-the-art action advice baseline. We show that peer learning is able to outperform single-agent learning and the baseline in several challenging discrete and continuous OpenAI Gym domains. Doing so, we also show that within such a framework complex policies from action recommendations beyond discrete action spaces can evolve.},
+  Anote = {./images/peerlearning_paper.png}
 }
 
 @misc{friedrich2024multilingual,
