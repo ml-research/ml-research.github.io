@@ -27,6 +27,18 @@ Keywords = {Causal Model, Interventional SPN, Hybrid Domain, Fourier-Stieltjes T
 }
 
 
+@inproceedings{kalter2024bilevel,
+	Anote={./images/kalter2024bilevel.png},
+	title={Bi-Level One-Shot Architecture Search for Probabilistic Time Series Forecasting},
+	author={Fabian Kalter and Jonas Seng and Zhongjie Yu and Fabrizio Ventola and Kristian Kersting},
+	year={2024},
+  booktitle={Proceedings of the International Conference on Automated Machine Learning (AutoML)},
+	url={https://openreview.net/pdf?id=AaPhnfFQYn},
+	Note = {Time series forecasting is ubiquitous in many disciplines. A recent hybrid architecture named predictive Whittle networks (PWNs) tackles this task by employing two distinct modules, a tractable probabilistic model and a neural forecaster, with the former guiding the latter by providing likelihoods about predictions during training. Although PWNs achieve state-of-the-art accuracy, finding the optimal type of probabilistic model and neural forecaster (macro-architecture search) and the architecture of each module (micro-architecture search) of such hybrid models remains difficult and time-consuming. Current one-shot neural architecture search (NAS) methods approach this challenge by focusing on either the micro or the macro aspect, overlooking mutual impact, and could attain the overall optimization only sequentially. To overcome these limitations, we introduce a bi-level one-shot NAS method that optimizes such hybrid architectures simultaneously, leveraging the relationships between the micro and the macro architectural levels. We empirically demonstrate that the hybrid architectures found by our method outperform human-designed and overparameterized ones on various challenging datasets. Furthermore, we unveil insights about underlying connections between architectural choices and temporal features.},
+Keywords = {Automated ML, Time Series Forecasting, Neural Architecture Search, Whittle Networks, Bi-Level Program}
+}
+
+
 @inproceedings{paul2024collas,
     Anote = {./images/paul2024collas.png},
     Author = {Subarnaduti Paul and Lars-Joel Frey and Roshni Ramanna Kamath and Kristian Kersting and Martin Mundt},
@@ -390,7 +402,7 @@ biases},
   issn={},
   doi={},
   url={}
-} 
+}
 
 @article{otto2024mlst,
 	Anote={./images/otto2024mlst.png},
