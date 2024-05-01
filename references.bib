@@ -390,33 +390,23 @@ biases},
   issn={},
   doi={},
   url={}
-}
+} 
 
 @article{otto2024mlst,
 	Anote={./images/otto2024mlst.png},
 	author={Kevin Otto and Simon Burgis and Kristian Kersting and Reinhold Bertrand and Devendra Singh Dhami},
-	note = {The number of satellites in orbit around Earth is increasing rapidly, with
-the risk of collision rising accordingly. Trends of the global population of satellites
-need to be analyzed to test the viability and impact of proposed rules and laws
-affecting the satellite population and collision avoidance strategies. This requires
-large scale simulations of satellites that are propagated on long timescales to compute
-the large amounts of actionable close encounters (called conjunctions), which could
-lead to collisions. Rigorously checking for conjunctions by computing future states of
-orbits is computationally expensive due to the large amount of objects involved and
-conjunction filters are thus used to remove non-conjuncting orbit pairs from the list
-of possible conjunctions. In this work, we explore the possibility of machine learning
-(ML) based conjunction filters using several algorithms such as eXtreme Gradient
-Boosting, TabNet and (physics-informed) neural networks and deep operator networks.
-To show the viability and the potential of ML based filters, these algorithms are
-trained to predict the future state of orbits. For the physics-informed approaches,
-multiple partial differential equations are set up using the Kepler equation as a basis.
-The empirical results demonstrate that physics-informed deep operator networks are
-capable of predicting the future state of orbits using these equations (RMSE: 0.136) and
-outperform eXtreme Gradient Boosting (RMSE: 0.568) and TabNet (RMSE: 0.459).
-We also propose a filter based on the trained deep operator network which is shown
-to outperforms the filter capability of the commonly used perigee-apogee test and the
-orbit path filter on a synthetic dataset, while being on average 3.2 times faster to
-compute than a rigorous conjunction check.},
+	Journal = {Machine Learning: Science and Technology (MLST)},
+	note = {The number of satellites in orbit around Earth is increasing rapidly, with the risk of collision rising accordingly. Trends of the global population of satellites
+need to be analyzed to test the viability and impact of proposed rules and laws affecting the satellite population and collision avoidance strategies. This requires
+large scale simulations of satellites that are propagated on long timescales to compute the large amounts of actionable close encounters (called conjunctions), which could
+lead to collisions. Rigorously checking for conjunctions by computing future states of orbits is computationally expensive due to the large amount of objects involved and
+conjunction filters are thus used to remove non-conjuncting orbit pairs from the list of possible conjunctions. In this work, we explore the possibility of machine learning
+(ML) based conjunction filters using several algorithms such as eXtreme Gradient Boosting, TabNet and (physics-informed) neural networks and deep operator networks.
+To show the viability and the potential of ML based filters, these algorithms are trained to predict the future state of orbits. For the physics-informed approaches,
+multiple partial differential equations are set up using the Kepler equation as a basis. The empirical results demonstrate that physics-informed deep operator networks are
+capable of predicting the future state of orbits using these equations (RMSE: 0.136) and outperform eXtreme Gradient Boosting (RMSE: 0.568) and TabNet (RMSE: 0.459).
+We also propose a filter based on the trained deep operator network which is shown to outperforms the filter capability of the commonly used perigee-apogee test and the
+orbit path filter on a synthetic dataset, while being on average 3.2 times faster to compute than a rigorous conjunction check.},
 	title={Machine Learning meets Kepler: Inverting Kepler’s Equation for All vs All Conjunction Analysis},
 	Publisher = {Springer},
 	year={2024},
