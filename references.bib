@@ -34,6 +34,18 @@ Keywords = {Mechanistic Architecture Design, Hybrid Architectures, Transformer, 
 Keywords = {Concept Bottleneck, Interventions, Two-Fold Memory, Learning}
 }
 
+@inproceedings{braun2024cake,
+    booktitle = {Proceedings of the International Conference on Artificial Intelligence and Statistics (AISTATS) },
+      title={Deep Classifier Mimicry without Data Access},
+      author={Steven Braun and Martin Mundt and Kristian Kersting},
+      year={2024},
+      Keywords={Deep Learning, model-agnostic transfer, Knowledge distillation, Student-Teacher},
+      Anote={./images/braun2024cake.png},
+			Key = {Student Paper Highlight at AISTATS 2024},
+      Note={Access to pre-trained models has recently emerged as a standard across numerous machine learning domains. Unfortunately, access to the original data the models were trained on may not equally be granted. This makes it tremendously challenging to fine-tune, compress models, adapt continually, or to do any other type of data-driven update. We posit that original data access may however not be required. Specifically, we propose Contrastive Abductive Knowledge Extraction (CAKE), a model-agnostic knowledge distillation procedure that mimics deep classifiers without access to the original data. To this end, CAKE generates pairs of noisy synthetic samples and diffuses them contrastively toward a model’s decision boundary. We empirically corroborate CAKE's effectiveness using several benchmark datasets and various architectural choices, paving the way for broad application.},
+      Url={}
+}
+
 
 @inproceedings{wuest2024pix2code,
 	Anote={./images/wuest_pix2code.png},
@@ -61,6 +73,18 @@ Keywords = {Concept Learning, Program Synthesis, Neuro-Symbolic, Meta-Learning}
 Keywords = {Causal Model, Interventional SPN, Hybrid Domain, Fourier-Stieltjes Transform, Neural Network}
 }
 
+
+@inproceedings{brack2024ledits,
+      Anote = {./images/mbrack_ledits_pp.png},
+      title={LEDITS++: Limitless Image Editing using Text-to-Image Models},
+      author={Manuel Brack and Felix Friedrich and Katharina Kornmeier and Linoy Tsaban and Patrick Schramowski and Kristian Kersting and Apolinaros Passos},
+      booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+      year = {2024},
+      Note = {Text-to-image diffusion models have recently received a lot of interest for their astonishing ability to produce high-fidelity images from text only. Subsequent research efforts are aiming to exploit the capabilities of these models and leverage them for intuitive, textual image editing. However, existing methods often require time-consuming fine-tuning and lack native support for performing multiple edits simultaneously. To address these issues, we introduce LEDITS++ , an efficient yet versatile technique for image editing using text-to-image models. LEDITS++ requires no tuning nor optimization, runs in a few diffusion steps, natively supports multiple simultaneous edits, inherently limits changes to relevant image regions, and is architecture agnostic.},
+      Pages = {},
+      Keywords = {Image Editing, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Semantics},
+      Url={https://openreview.net/pdf?id=bPiTOXLRRQ}
+}
 
 @inproceedings{kalter2024bilevel,
 	Anote={./images/kalter2024bilevel.png},
@@ -270,17 +294,6 @@ Keywords = {Concept Learning, Program Synthesis, Neuro-Symbolic, Meta-Learning}
   Keywords = {Mixture of Experts, Game Phases, Chess, Monte-Carlo Tree Search, AlphaZero}
 }
 
-@inproceedings{brack2024ledits,
-      Anote = {./images/mbrack_ledits_pp.png},
-      title={LEDITS++: Limitless Image Editing using Text-to-Image Models},
-      author={Manuel Brack and Felix Friedrich and Katharina Kornmeier and Linoy Tsaban and Patrick Schramowski and Kristian Kersting and Apolinaros Passos},
-      booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-      year = {2024},
-      Note = {Text-to-image diffusion models have recently received a lot of interest for their astonishing ability to produce high-fidelity images from text only. Subsequent research efforts are aiming to exploit the capabilities of these models and leverage them for intuitive, textual image editing. However, existing methods often require time-consuming fine-tuning and lack native support for performing multiple edits simultaneously. To address these issues, we introduce LEDITS++ , an efficient yet versatile technique for image editing using text-to-image models. LEDITS++ requires no tuning nor optimization, runs in a few diffusion steps, natively supports multiple simultaneous edits, inherently limits changes to relevant image regions, and is architecture agnostic.},
-      Pages = {},
-      Keywords = {Image Editing, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Semantics},
-      Url={https://openreview.net/pdf?id=bPiTOXLRRQ}
-}
 
 @incollection{struppek2024adversarialllm,
   title={Exploring the Adversarial Capabilities of Large Language Models},
@@ -353,18 +366,6 @@ biases},
   Pages = {},
   Note = {Text-to-image generation models have recently achieved astonishing results in image quality, flexibility, and text alignment and are consequently employed in a fast-growing number of applications. Through improvements in multilingual abilities, a larger community now has access to this kind of technology. Yet, as we will show, multilingual models suffer similarly from (gender) biases as monolingual models. Furthermore, the natural expectation is that these models will provide similar results across languages, but this is not the case and there are important differences between languages. Thus, we propose a novel benchmark MAGBIG intending to foster research in multilingual models without gender bias. We investigate whether multilingual T2I models magnify gender bias with MAGBIG. To this end, we use multilingual prompts requesting portrait images of persons of a certain occupation or trait (using adjectives). Our results show not only that models deviate from the normative assumption that each gender should be equally likely to be generated, but that there are also big differences across languages. Furthermore, we investigate prompt engineering strategies, i.e. the use of indirect, neutral formulations, as a possible remedy for these biases. Unfortunately, they help only to a limited extent and result in worse text-to-image alignment. Consequently, this work calls for more research into diverse representations across languages in image generators.},
   Keywords = {AI Ethics, Generative AI, Text-to-Image Models}
-}
-
-@inproceedings{braun2024cake,
-    booktitle = {Proceedings of the International Conference on Artificial Intelligence and Statistics (AISTATS) },
-      title={Deep Classifier Mimicry without Data Access},
-      author={Steven Braun and Martin Mundt and Kristian Kersting},
-      year={2024},
-      Keywords={Deep Learning, model-agnostic transfer, Knowledge distillation, Student-Teacher},
-      Anote={./images/braun2024cake.png},
-			Key = {Student Paper Highlight at AISTATS 2024},
-      Note={Access to pre-trained models has recently emerged as a standard across numerous machine learning domains. Unfortunately, access to the original data the models were trained on may not equally be granted. This makes it tremendously challenging to fine-tune, compress models, adapt continually, or to do any other type of data-driven update. We posit that original data access may however not be required. Specifically, we propose Contrastive Abductive Knowledge Extraction (CAKE), a model-agnostic knowledge distillation procedure that mimics deep classifiers without access to the original data. To this end, CAKE generates pairs of noisy synthetic samples and diffuses them contrastively toward a model’s decision boundary. We empirically corroborate CAKE's effectiveness using several benchmark datasets and various architectural choices, paving the way for broad application.},
-      Url={}
 }
 
 
