@@ -1978,7 +1978,7 @@ var bibtexify = (function($) {
         // adds links to the PDF or url of the item
         links: function(entryData) {
             var itemStr = '';
-            if (entryData.url && (entryData.url.match(/.*\.pdf/) || entryData.url.match(/pdf\?id=/)) || entryData.url.match(/\/pdf\//))) {
+            if (entryData.url && (entryData.url.match(/.*\.pdf/) || entryData.url.match(/pdf\?id=/)) || entryData.url.match(/\/pdf\//)) {
             itemStr += '&nbsp;<span style="color:white;font-size:12px;background-color:#FFCECE;cursor: pointer;"> <a title="PDF of this paper" href="'+  entryData.url +'" target="_blank"><font color="black">pdf<\/font><\/a>&nbsp;<\/span>';
           //  itemStr += '<button type="button" class="btn btn-danger btn-xs disabled" style="border: none;cursor: pointer;font-size:12px;background-color: #900"> <a title="PDF of this article" href="' +
           //            entryData.url + '" target="_blank"><font color="white">.pdf (draft)<\/font><\/a><\/button>';
