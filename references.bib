@@ -9,7 +9,7 @@
     booktitle = {Workshop Track of the International Conference on Automated Machine Learning (AutoML)},
     Note = {Despite the growing interest in designing truly interactive hyperparameter optimization (HPO) methods, to date, only a few allow to include feedback from experts. However, these methods add friction to the interactive process, rigidly requiring to fully specify the expert input as prior distribution ex ante and often imposing additional constraints on the optimization framework. This hinders the flexible incorporation of expertise and valuable knowledge of domain experts, which might provide partial feedback at any time during optimization. To overcome these limitations, we introduce a novel Bayesian optimization approach leveraging tractable probabilistic models named probabilistic circuits (PCs) as surrogate model. PCs encode a tractable joint distribution over the hybrid hyperparameter space and enable exact conditional inference and sampling, allowing users to provide valuable insights interactively and generate configurations adhering to their feedback. We demonstrate the benefits of the resulting interactive HPO through an extensive empirical evaluation of diverse benchmarks, including the challenging setting of neural architecture search.},
     Keywords = {Automated ML, Interactive Optimization, Neural Architecture Search, Hyperparameter Optimization, Probabilistic Circuits}
-} 
+}
 
 @inproceedings{poli2024mad,
 	Anote={./images/poli2024mad.png},
@@ -58,6 +58,42 @@ Keywords = {Concept Bottleneck, Interventions, Two-Fold Memory, Learning}
 }
 
 
+@inproceedings{delfosse2024raRL,
+    booktitle = {Proceedings of the International Conference on Representation Learning (ICLR) },
+      title={Adaptive Rational Activations to Boost Deep Reinforcement Learning},
+      author={Quentin Delfosse and Patrick Schramowski and Martin Mundt and Alejandro Molina and Kristian Kersting},
+      year={2024},
+      Keywords={Neural Plasticity, Deep Reinforcement Learning, Rational Activations},
+      Anote={./images/delfosse2024ratRL.png},
+      Note={Latest insights from biology show that intelligence not only emerges from the connections between neurons, but that individual neurons shoulder more computational responsibility than previously anticipated. Specifically, neural plasticity should be critical in the context of constantly changing reinforcement learning (RL) environments, yet current approaches still primarily employ static activation functions. In this work, we motivate the use of adaptable activation functions in RL and show that rational activation functions are particularly suitable for augmenting plasticity. Inspired by residual networks, we derive a condition under which rational units are closed under residual connections and formulate a naturally regularised version. The proposed joint-rational activation allows for desirable degrees of flexibility, yet regularises plasticity to an extent that avoids overfitting by leveraging a mutual set of activation function parameters across layers. We demonstrate that equipping popular algorithms with (joint) rational activations leads to consistent improvements on different games from the Atari Learning Environment benchmark, notably making DQN competitive to DDQN and Rainbow.},
+      Url={https://openreview.net/pdf?id=g90ysX1sVs}
+}
+
+@inproceedings{struppek2024iclr,
+    booktitle = {Proceedings of the International Conference on Representation Learning (ICLR) },
+      title={Be Careful What You Smooth For: Label Smoothing Can Be a Privacy Shield but Also a Catalyst for Model Inversion Attacks},
+      author={Lukas Struppek and Dominik Hintersdorf and Kristian Kersting},
+      year={2024},
+      Keywords={Label Smoothing, Privacy, Model Inversion Attacks, Defense},
+      Anote={./images/struppek2024iclr.png},
+      Note={Label smoothing – using softened labels instead of hard ones – is a widely adopted regularization method for deep learning, showing diverse benefits such as enhanced generalization and calibration. Its implications for preserving model privacy, however, have remained unexplored. To fill this gap, we investigate the impact of label smoothing on model inversion attacks (MIAs), which aim to generate class-representative samples by exploiting the knowledge encoded in a classifier, thereby inferring sensitive information about its training data. Through extensive analyses, we uncover that traditional label smoothing fosters MIAs, thereby increasing a model's privacy leakage. Even more, we reveal that smoothing with negative factors counters this trend, impeding the extraction of class-related information and leading to privacy preservation, beating state-of-the-art defenses. This establishes a practical and powerful novel way for enhancing model resilience against MIAs.},
+      Url={https://openreview.net/pdf?id=1SbkubNdbW}
+}
+
+@inproceedings{seng2024iclr,
+    booktitle = {Proceedings of the International Conference on Representation Learning (ICLR) },
+      title={Learning Large DAGs is Harder than you Think: Many Losses are Minimal for the Wrong DAG},
+      author={Jonas Seng and Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
+      year={2024},
+      Keywords={Structure Learning, DAG, Differentiable, Square-based Losses, Scale},
+      Anote={./images/seng2024iclr.png},
+      Note={Structure learning is a crucial task in science, especially in fields such as medicine and biology, where the wrong identification of (in)dependencies among random variables can have significant implications. The primary objective of structure learning is to learn a Directed Acyclic Graph (DAG) that represents the underlying probability distribution of the data. Many prominent DAG learners rely on least square losses or log-likelihood losses for optimization. It is well-known from regression models that least square losses are heavily influenced by the scale of the variables. Recently it has been demonstrated that the scale of data also affects performance of structure learning algorithms, though with a strong focus on linear 2-node systems and simulated data. Moving beyond these results, we provide conditions under which square-based losses are minimal for wrong DAGs in
+-dimensional cases. Furthermore, we also show that scale can impair performance of structure learners if relations among variables are non-linear for both square based and log-likelihood based losses. We confirm our theoretical findings through extensive experiments on synthetic and real-world data.},
+      Url={https://openreview.net/pdf?id=gwbQ2YwLhD}
+}
+
+
+
 @inproceedings{wuest2024pix2code,
 	Anote={./images/wuest_pix2code.png},
 	title={Pix2Code: Learning to Compose Neural Visual Concepts as Programs},
@@ -96,6 +132,20 @@ Keywords = {Causal Model, Interventional SPN, Hybrid Domain, Fourier-Stieltjes T
       Keywords = {Image Editing, Text-to-Image Synthesis, Text-Guided Image Generation, Stable Diffusion, Semantics},
       Url={https://openreview.net/pdf?id=bPiTOXLRRQ}
 }
+
+
+
+@inproceedings{delfosse2024ocatari,
+	Anote={./images/delfosse2024ocatari.png},
+	title={Bi-Level One-Shot Architecture Search for Probabilistic Time Series Forecasting},
+	author={Quentin Delfosse and Jannis Blüml and Bjarne Gregori and Sebastian Sztwiertnia and Kristian Kersting},
+	year={2024},
+  booktitle={Proceedings of the First Conference on Reinforcement Learning (RLC)},
+	url={https://openreview.net/pdf?id=24OiW9d5k8},
+	Note = {Cognitive science and psychology suggest that object-centric representations of complex scenes are a promising step towards enabling efficient abstract reasoning from low-level perceptual features. Yet, most deep reinforcement learning approaches only rely on pixel-based representations that do not capture the compositional properties of natural scenes. For this, we need environments and datasets that allow us to work and evaluate object-centric approaches. In our work, we extend the Atari Learning Environments, the most-used evaluation framework for deep RL approaches, by introducing OCAtari, that performs resource-efficient extractions of the object-centric states for these games. Our framework allows for object discovery, object representation learning, as well as object-centric RL. We evaluate OCAtari's detection capabilities and resource efficiency.},
+Keywords = {Deep Reinforcement Learning, Object-centric Deep Learning, Atari, Arcade Games, RAM Extraction method (REM), Vision Extraction method (VEM)}
+}
+
 
 @inproceedings{kalter2024bilevel,
 	Anote={./images/kalter2024bilevel.png},
@@ -379,40 +429,6 @@ biases},
   Keywords = {AI Ethics, Generative AI, Text-to-Image Models}
 }
 
-
-@inproceedings{delfosse2024raRL,
-    booktitle = {Proceedings of the International Conference on Representation Learning (ICLR) },
-      title={Adaptive Rational Activations to Boost Deep Reinforcement Learning},
-      author={Quentin Delfosse and Patrick Schramowski and Martin Mundt and Alejandro Molina and Kristian Kersting},
-      year={2024},
-      Keywords={Neural Plasticity, Deep Reinforcement Learning, Rational Activations},
-      Anote={./images/delfosse2024ratRL.png},
-      Note={Latest insights from biology show that intelligence not only emerges from the connections between neurons, but that individual neurons shoulder more computational responsibility than previously anticipated. Specifically, neural plasticity should be critical in the context of constantly changing reinforcement learning (RL) environments, yet current approaches still primarily employ static activation functions. In this work, we motivate the use of adaptable activation functions in RL and show that rational activation functions are particularly suitable for augmenting plasticity. Inspired by residual networks, we derive a condition under which rational units are closed under residual connections and formulate a naturally regularised version. The proposed joint-rational activation allows for desirable degrees of flexibility, yet regularises plasticity to an extent that avoids overfitting by leveraging a mutual set of activation function parameters across layers. We demonstrate that equipping popular algorithms with (joint) rational activations leads to consistent improvements on different games from the Atari Learning Environment benchmark, notably making DQN competitive to DDQN and Rainbow.},
-      Url={https://openreview.net/pdf?id=g90ysX1sVs}
-}
-
-@inproceedings{struppek2024iclr,
-    booktitle = {Proceedings of the International Conference on Representation Learning (ICLR) },
-      title={Be Careful What You Smooth For: Label Smoothing Can Be a Privacy Shield but Also a Catalyst for Model Inversion Attacks},
-      author={Lukas Struppek and Dominik Hintersdorf and Kristian Kersting},
-      year={2024},
-      Keywords={Label Smoothing, Privacy, Model Inversion Attacks, Defense},
-      Anote={./images/struppek2024iclr.png},
-      Note={Label smoothing – using softened labels instead of hard ones – is a widely adopted regularization method for deep learning, showing diverse benefits such as enhanced generalization and calibration. Its implications for preserving model privacy, however, have remained unexplored. To fill this gap, we investigate the impact of label smoothing on model inversion attacks (MIAs), which aim to generate class-representative samples by exploiting the knowledge encoded in a classifier, thereby inferring sensitive information about its training data. Through extensive analyses, we uncover that traditional label smoothing fosters MIAs, thereby increasing a model's privacy leakage. Even more, we reveal that smoothing with negative factors counters this trend, impeding the extraction of class-related information and leading to privacy preservation, beating state-of-the-art defenses. This establishes a practical and powerful novel way for enhancing model resilience against MIAs.},
-      Url={https://openreview.net/pdf?id=1SbkubNdbW}
-}
-
-@inproceedings{seng2024iclr,
-    booktitle = {Proceedings of the International Conference on Representation Learning (ICLR) },
-      title={Learning Large DAGs is Harder than you Think: Many Losses are Minimal for the Wrong DAG},
-      author={Jonas Seng and Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
-      year={2024},
-      Keywords={Structure Learning, DAG, Differentiable, Square-based Losses, Scale},
-      Anote={./images/seng2024iclr.png},
-      Note={Structure learning is a crucial task in science, especially in fields such as medicine and biology, where the wrong identification of (in)dependencies among random variables can have significant implications. The primary objective of structure learning is to learn a Directed Acyclic Graph (DAG) that represents the underlying probability distribution of the data. Many prominent DAG learners rely on least square losses or log-likelihood losses for optimization. It is well-known from regression models that least square losses are heavily influenced by the scale of the variables. Recently it has been demonstrated that the scale of data also affects performance of structure learning algorithms, though with a strong focus on linear 2-node systems and simulated data. Moving beyond these results, we provide conditions under which square-based losses are minimal for wrong DAGs in
--dimensional cases. Furthermore, we also show that scale can impair performance of structure learners if relations among variables are non-linear for both square based and log-likelihood based losses. We confirm our theoretical findings through extensive experiments on synthetic and real-world data.},
-      Url={https://openreview.net/pdf?id=gwbQ2YwLhD}
-}
 
 
 
