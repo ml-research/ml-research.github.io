@@ -1,3 +1,26 @@
+@incollection{delfosse2024ocalm,
+  Anote={./images/delfosse2024ocalm.png},
+	title={OCALM: Object-Centric Assessment with Language Models},
+	author={Timo Kaufmann and Jannis Blüml and Antonia Wüst and Quentin Delfosse and Kristian Kersting and Eyke Hüllermeier},
+	year={2024},
+  booktitle={Worskhop on Interpretable Policies in Reinforcement Learning at RLC 2024},
+	url={https://rlbrew-workshop.github.io/papers/40_ocalm_object_centric_assessmen.pdf},
+  Note = {Properly defining a reward signal to efficiently train a reinforcement learning (RL) agent is a challenging task. Designing balanced objective functions from which a desired behavior can emerge requires expert knowledge, especially for complex environments. Learning rewards from human feedback or using large language models (LLMs) to directly provide rewards are promising alternatives, allowing non-experts to specify goals for the agent. However, black-box reward models make it difficult to debug the reward. In this work, we propose Object-Centric Assessment with Language Models (OCALM) to derive inherently interpretable reward functions for RL agents from natural language task descriptions. OCALM uses the extensive world-knowledge of LLMs while leveraging the object-centric nature common to many environments to derive reward functions focused on relational concepts, providing RL agents with the ability to derive policies from task descriptions.},
+  Keywords = {Deep Reinforcement Learning, LLM, Atari, Arcade Games, Reward Modification}
+}
+
+@incollection{delfosse2024hackatari,
+  Anote={./images/delfosse2024hackatari.png},
+	title={HackAtari: Atari Learning Environments for Robust and Continual Reinforcement Learning},
+	author={Quentin Delfosse and Jannis Blüml and Bjarne Gregori and Kristian Kersting},
+	year={2024},
+  booktitle={Worskhop on Interpretable Policies in Reinforcement Learning at RLC 2024},
+	url={https://openreview.net/pdf?id=Th5OOmiHVo},
+  Crossref = {https://github.com/k4ntz/HackAtari},
+	Note = {Artificial agents' adaptability to novelty and alignment with intended behavior is crucial for their effective deployment. Reinforcement learning (RL) leverages novelty as a means of exploration, yet agents often struggle to handle novel situations, hindering generalization. To address these issues, we propose HackAtari, a framework introducing controlled novelty to the most common RL benchmark, the Atari Learning Environment. HackAtari allows us to create novel game scenarios (including simplification for curriculum learning), to swap the game elements' colors, as well as to introduce different reward signals for the agent. We demonstrate that current agents trained on the original environments include robustness failures, and evaluate HackAtari's efficacy in enhancing RL agents' robustness and aligning behavior through experiments using C51 and PPO. Overall, HackAtari can be used to improve the robustness of current and future RL algorithms, allowing Neuro-Symbolic RL, curriculum RL, causal RL, as well as LLM-driven RL. Our work underscores the significance of developing interpretable in RL agents.},
+Keywords = {Deep Reinforcement Learning, Object-centric Deep Learning, Atari, Arcade Games, Novelty, Continual Learning, Robustness}
+}
+
 @misc{hintersdorf23defending,
 	Anote={./images/defending_with_backdoors.png},
 	title={Defending Our Privacy With Backdoors},
