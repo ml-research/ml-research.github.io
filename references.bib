@@ -12,11 +12,11 @@
 
 @misc{solaiman2024evaluatingsocialimpactgenerative,
     	Anote={./images/defending_with_backdoors.png},
-      title={Evaluating the Social Impact of Generative AI Systems in Systems and Society}, 
+      title={Evaluating the Social Impact of Generative AI Systems in Systems and Society},
       author={Irene Solaiman and Zeerak Talat and William Agnew and Lama Ahmad and Dylan Baker and Su Lin Blodgett and Canyu Chen and Hal Daumé III au2 and Jesse Dodge and Isabella Duan and Ellie Evans and Felix Friedrich and Avijit Ghosh and Usman Gohar and Sara Hooker and Yacine Jernite and Ria Kalluri and Alberto Lusoli and Alina Leidinger and Michelle Lin and Xiuzhu Lin and Sasha Luccioni and Jennifer Mickel and Margaret Mitchell and Jessica Newman and Anaelia Ovalle and Marie-Therese Png and Shubham Singh and Andrew Strait and Lukas Struppek and Arjun Subramonian},
       year={2024},
       Howpublished={arXiv preprint arXiv:2306.05949},
-      url={https://arxiv.org/abs/2306.05949}, 
+      url={https://arxiv.org/abs/2306.05949},
       Note = {Generative AI systems across modalities, ranging from text (including code), image, audio, and video, have broad social impacts, but there is no official standard for means of evaluating those impacts or for which impacts should be evaluated. In this paper, we present a guide that moves toward a standard approach in evaluating a base generative AI system for any modality in two overarching categories: what can be evaluated in a base system independent of context and what can be evaluated in a societal context. Importantly, this refers to base systems that have no predetermined application or deployment context, including a model itself, as well as system components, such as training data. Our framework for a base system defines seven categories of social impact: bias, stereotypes, and representational harms; cultural values and sensitive content; disparate performance; privacy and data protection; financial costs; environmental costs; and data and content moderation labor costs. Suggested methods for evaluation apply to listed generative modalities and analyses of the limitations of existing evaluations serve as a starting point for necessary investment in future evaluations. We offer five overarching categories for what can be evaluated in a broader societal context, each with its own subcategories: trustworthiness and autonomy; inequality, marginalization, and violence; concentration of authority; labor and creativity; and ecosystem and environment. Each subcategory includes recommendations for mitigating harm.},
       Keywords = {Generative AI, Social Impact, Ethical AI, Fairness, Accountability, Transparency}
 }
@@ -44,7 +44,7 @@
 Keywords = {Deep Reinforcement Learning, Object-centric Deep Learning, Atari, Arcade Games, Novelty, Continual Learning, Robustness}
 }
 
-@inproceedings{hintersdorf23defending,
+@inproceedings{hintersdorf24defending,
 	Anote={./images/defending_with_backdoors.png},
 	title={Defending Our Privacy With Backdoors},
 	author={Dominik Hintersdorf and Lukas Struppek and Daniel Neider and Kristian Kersting},
@@ -54,6 +54,20 @@ Keywords = {Deep Reinforcement Learning, Object-centric Deep Learning, Atari, Ar
 	Note = {The proliferation of large AI models trained on uncurated, often sensitive web-scraped data has raised significant privacy concerns. One of the concerns is that adversaries can extract information about the training data using privacy attacks. Unfortunately, the task of removing specific information from the models without sacrificing performance is not straightforward and has proven to be challenging. We propose a rather easy yet effective defense based on backdoor attacks to remove private information such as names and faces of individuals from vision-language models by fine-tuning them for only a few minutes instead of re-training them from scratch. Specifically, through strategic insertion of backdoors into text encoders, we align the embeddings of sensitive phrases with those of neutral terms-"a person" instead of the person's actual name. For image encoders, we map embeddings of individuals to be removed from the model to a universal, anonymous embedding. Our empirical results demonstrate the effectiveness of our backdoor-based defense on CLIP by assessing its performance using a specialized privacy attack for zero-shot classifiers. Our approach provides not only a new "dual-use" perspective on backdoor attacks, but also presents a promising avenue to enhance the privacy of individuals within models trained on uncurated web-scraped data.},
 	Keywords = {Security, Privacy, Backdoor Attacks, CLIP, Identity Inference Attacks}
 }
+
+
+@inproceedings{czech24representation,
+	Anote={./images/czech24representation.png},
+	title={Representation Matters for Mastering Chess: Improved Feature Representation in AlphaZero Outperforms Changing to Transformers},
+	author={Johannes Czech and Jannis Blüml and Kristian Kersting and Hedinn Steingrimsson},
+	year={2024},
+  booktitle = {Proceedings of the 27th European Conference on Artificial Intelligence (ECAI)},
+	url={},
+	Note = {While transformers have gained recognition as a versatile tool for artificial intelligence(AI), an unexplored challenge arises in the context of chess - a classical AI benchmark. Here, incorporating Vision Transformers (ViTs) into AlphaZero is insufficient for chess mastery, mainly due to ViTs' computational limitations. The attempt to optimize their efficiency by combining MobileNet and NextViT could not outperform AlphaZero. Instead, we propose a practical improvement that involves a simple change in the input representation and value loss functions. As a result, we achieve a significant performance boost of up to 180 Elo points beyond what is currently achievable with AlphaZero in chess and chess variants.
+In addition to these improvements, our experimental results using the Integrated Gradient technique confirm the effectiveness of the newly introduced features.},
+	Keywords = {Chess, Decision Transformer, MCTS, Input Representation}
+}
+
 
 @misc{hintersdorf2024nemo,
 	Anote={./images/hintersdorf2024nemo.png},
@@ -8025,7 +8039,7 @@ more compact, and hence more efficient to solve.},
 
   @misc{kraus2024right,
       anote={./images/kraus2024right.png},
-      title={Right on Time: Revising Time Series Models by Constraining their Explanations}, 
+      title={Right on Time: Revising Time Series Models by Constraining their Explanations},
       author={Maurice Kraus and David Steinmann and Antonia Wüst and Andre Kokozinski and Kristian Kersting},
       year={2024},
       Note = {The reliability of deep time series models is often compromised by their tendency to rely on confounding factors, which may lead to incorrect outputs. Our newly recorded, naturally confounded dataset named P2S from a real mechanical production line emphasizes this. To avoid “Clever-Hans” moments in time series, i.e., to mitigate confounders, we introduce the method Right on Time (RioT). RioT enables, for the first time interactions with model explanations across both the time and frequency domain. Feedback on explanations in both domains is then used to constrain the model, steering it away from the annotated confounding factors. The dual-domain interaction strategy is crucial for effectively addressing confounders in time series datasets. We empirically demonstrate that RioT can effectively guide models away from the wrong reasons in P2S as well as popular time series classification and forecasting datasets.The reliability of deep time series models is often compromised by their tendency to rely on confounding factors, which may lead to incorrect outputs. Our newly recorded, naturally confounded dataset named P2S from a real mechanical production line emphasizes this. To avoid “Clever-Hans” moments in time series, i.e., to mitigate confounders, we introduce the method Right on Time (RioT). RioT enables, for the first time interactions with model explanations across both the time and frequency domain. Feedback on explanations in both domains is then used to constrain the model, steering it away from the annotated confounding factors. The dual-domain interaction strategy is crucial for effectively addressing confounders in time series datasets. We empirically demonstrate that RioT can effectively guide models away from the wrong reasons in P2S as well as popular time series classification and forecasting datasets.},
