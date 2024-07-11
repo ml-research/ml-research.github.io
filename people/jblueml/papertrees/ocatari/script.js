@@ -5,8 +5,7 @@ const closeButton = document.querySelector('.close-button');
 shareButton.addEventListener('click', event => {
   if (navigator.share) { 
    navigator.share({
-      title: 'WebShare API Demo',
-      url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
+      url: window.location.href
     }).then(() => {
       console.log('Thanks for sharing!');
     })
