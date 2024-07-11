@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <!-- Core theme CSS -->
     <link rel="stylesheet" href="style.css">
+    <!--LINK JQUERY-->
   </head>
 
   <body>
@@ -54,7 +55,7 @@
       <a class="link" href="https://arxiv.org/abs/2306.08649" target="_blank">
         <i class="fa fa-book">&nbsp;</i>Full Paper
       </a>
-      
+
       <div id="subtitle">
         Poster
       </div>
@@ -80,15 +81,32 @@
       </a>
 
       <CODE> 
-        pip install ocatari
-        ...
+        If you like our work, feel free to share it.
       </CODE>
-      </div>
-
     <!--
     <div id="hashtag">
       Blinky Text
     </div>
   -->
-  </body>
+  <div class="share-dialog">
+    <header>
+      <h3 class="dialog-title">Share this Paper</h3>
+    </header>
+    <div>
+      <div class="pen-url">https://ml-research.github.io/people/jblueml/papertrees/ocatari/index.html</div>
+      <button class="copy-link" onclick="copy()" onmouseout="outFunc()">Copy Link</button>
+      <button class="close-button">Close</button>
+    </div>
+  </div>
+
+  <button class="share-button" type="button" title="Share this article">
+    <span>Share</span>
+  </button>
+
+
+</div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+
+
 </html>

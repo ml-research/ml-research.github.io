@@ -31,6 +31,7 @@ code {
     max-width: 100%;
     min-width: 100px;
     padding: 10px;
+    text-align: center;
   }
 
 #profilePicture, #profilePicture img {
@@ -145,15 +146,6 @@ code {
     }
 }
 
-@keyframes animStar {
-    from {
-        transform: translateY(0px);
-    }
-    to {
-        transform: translateY(-2000px);
-    }
-}
-
 
 /*-------------------------popup------------------------*/
 /* credits: https://www.youtube.com/watch?v=lAS2glU0xlc */
@@ -256,4 +248,81 @@ code {
     color: var(--bgColor);
 }
 
+button, .button {
+    width: 50%;
+    display: block;
+    margin: 30px auto;
+    max-width: 100%;
+    min-width: 100px;
+    
+    position: relative;
+    background-color: var(--accentColor);
+    color: #fff;
+    border: solid var(--accentColor) 2px;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px; /* 17px */
+    text-decoration: none;
+    /* transition: all .25s cubic-bezier(.08, .59, .29, .99); */
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  button:hover, .button:hover {
+    background-color: var(--bgColor2);
+    color: var(--accentColor);
+  }
+  
+  .copy-link {
+    position: center;
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .share-button, .share-dialog {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .share-dialog {
+    display: none;
+    width: 95%;
+    max-width: 500px;
+    box-shadow: 0 8px 16px rgba(0,0,0,.15);
+    z-index: -1;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .share-dialog.is-open {
+    display: block;
+    z-index: 2;
+  }
+    
+  .targets {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .close-button {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
 
+  }
+  
+  .pen-url {
+    margin-right: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
