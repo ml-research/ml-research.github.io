@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
 
 :root {
-    --bgColor: #9eaff8;
+    --bgColor: #b1efbc;
     --bgColor2: #ffffff;
-    --accentColor: #2e4291;
+    --accentColor: #0e523d;
     --font: 'Karla', sans-serif;
     --delay: .3s;
 }
@@ -36,7 +36,7 @@ code {
 
 #profilePicture, #profilePicture img {
     position: relative;
-    width: 200px;
+    width: 400px;
     display: block;
     margin: 40px auto 20px;
     -webkit-tap-highlight-color: transparent;
