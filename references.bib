@@ -3,9 +3,9 @@
   author = {Lukas Struppek and Dominik Hintersdorf and Kristian Kersting and Adam Dziedzic and Franziska Boenisch},
   title = {Finding NeMo: Localizing Neurons Responsible For Memorization in Diffusion Models},
   year = {2024},
-  Url = {https://openreview.net/forum?id=5wOrSneuwe},
+  Url = {https://openreview.net/pdf?id=5wOrSneuwe},
   Pages = {},
-  booktitle={ICML 2024 Workshop on Foundation Models in the Wild},
+  booktitle={Working Notes of the ICML 2024 Workshop on Foundation Models in the Wild},
   Note = {Diffusion models (DMs) produce very detailed and high-quality images, achieved through rigorous training on huge datasets. Unfortunately, this practice raises privacy and intellectual property concerns, as DMs can memorize and later reproduce their potentially sensitive or copyrighted training images at inference time. Prior efforts to prevent this issue are viable when the DM is developed and deployed in a secure and constantly monitored environment. However, they hold the risk of adversaries circumventing the safeguards and are not effective when the DM itself is publicly released. To solve the problem, we introduce NeMo, the first method to localize memorization of individual data samples down to the level of neurons in DMs' cross-attention layers. Through our experiments, we make the intriguing finding that in many cases, single neurons are responsible for memorizing particular training samples. By deactivating these memorization neurons, we avoid replication of training data at inference time, increase the diversity in the generated outputs, and mitigate the leakage of sensitive data.},
   Keywords = {Memorization, Diffusion Models, Stable Diffusion}
 }
@@ -26,7 +26,7 @@
 	title={OCALM: Object-Centric Assessment with Language Models},
 	author={Timo Kaufmann and Jannis Blüml and Antonia Wüst and Quentin Delfosse and Kristian Kersting and Eyke Hüllermeier},
 	year={2024},
-  booktitle={Workshop on Reinforcement Learning Beyond Rewards at RLC 2024},
+  booktitle={Working Notes of the RLC 2024 Workshop on Reinforcement Learning Beyond Rewards},
 	url={https://rlbrew-workshop.github.io/papers/40_ocalm_object_centric_assessmen.pdf},
   Note = {Properly defining a reward signal to efficiently train a reinforcement learning (RL) agent is a challenging task. Designing balanced objective functions from which a desired behavior can emerge requires expert knowledge, especially for complex environments. Learning rewards from human feedback or using large language models (LLMs) to directly provide rewards are promising alternatives, allowing non-experts to specify goals for the agent. However, black-box reward models make it difficult to debug the reward. In this work, we propose Object-Centric Assessment with Language Models (OCALM) to derive inherently interpretable reward functions for RL agents from natural language task descriptions. OCALM uses the extensive world-knowledge of LLMs while leveraging the object-centric nature common to many environments to derive reward functions focused on relational concepts, providing RL agents with the ability to derive policies from task descriptions.},
   Keywords = {Deep Reinforcement Learning, LLM, Atari, Arcade Games, Reward Modification}
