@@ -500,14 +500,19 @@ biases},
   Keywords = {Monte-Carlo Tree Search, Exploration vs Exploitation, Upper Confidence Bounds for Trees}
 }
 
-@misc{derstroff2023peer,
+@inproceedings{derstroff2023peer,
   title={Peer Learning: Learning Complex Policies in Groups from Scratch via Action Recommendations},
+  volume={38},
+  url={https://ojs.aaai.org/index.php/AAAI/article/view/29061},
+  DOI={10.1609/aaai.v38i10.29061},
+  Note={Peer learning is a novel high-level reinforcement learning framework for agents learning in groups. While standard reinforcement learning trains an individual agent in trial-and-error fashion, all on its own, peer learning addresses a related setting in which a group of agents, i.e., peers, learns to master a task simultaneously together from scratch. Peers are allowed to communicate only about their own states and actions recommended by others: &quot;What would you do in my situation?&quot;. Our motivation is to study the learning behavior of these agents.
+We formalize the teacher selection process in the action advice setting as a multi-armed bandit problem and therefore highlight the need for exploration. Eventually, we analyze the learning behavior of the peers and observe their ability to rank the agents’ performance within the study group and understand which agents give reliable advice. Further, we compare peer learning with single agent learning and a state-of-the-art action advice baseline. We show that peer learning is able to outperform single-agent learning and the baseline in several challenging discrete and continuous OpenAI Gym domains. Doing so, we also show that within such a framework complex policies from action recommendations beyond discrete action spaces can evolve.},
+  number={10},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
   author={Cedric Derstroff and Mattia Cerrato and Jannis Brugger and Jan Peters and Stefan Kramer},
-  year={2023},
-  Howpublished = {arXiv preprint 2312.09950},
+  year={2024}, month={Mar.}, pages={11766-11774},
+  Anote = {./images/peerlearning_paper.png},
   Keywords = {Reinforcement Learning, Imitation Learning & Inverse Reinforcement Learning, Adversarial Agents, Agent Communication, Multiagent Learning},
-  Note = {Peer learning is a novel high-level reinforcement learning framework for agents learning in groups. While standard reinforcement learning trains an individual agent in trial-and-error fashion, all on its own, peer learning addresses a related setting in which a group of agents, i.e., peers, learns to master a task simultaneously together from scratch. Peers are allowed to communicate only about their own states and actions recommended by others: "What would you do in my situation?". Our motivation is to study the learning behavior of these agents. We formalize the teacher selection process in the action advice setting as a multi-armed bandit problem and therefore highlight the need for exploration. Eventually, we analyze the learning behavior of the peers and observe their ability to rank the agents' performance within the study group and understand which agents give reliable advice. Further, we compare peer learning with single agent learning and a state-of-the-art action advice baseline. We show that peer learning is able to outperform single-agent learning and the baseline in several challenging discrete and continuous OpenAI Gym domains. Doing so, we also show that within such a framework complex policies from action recommendations beyond discrete action spaces can evolve.},
-  Anote = {./images/peerlearning_paper.png}
 }
 
 @misc{friedrich2024multilingual,
@@ -8075,3 +8080,20 @@ more compact, and hence more efficient to solve.},
     note={The challenge in object-based visual reasoning lies in generating descriptive yet distinct concept representations. Moreover, doing this in an unsupervised fashion requires human users to understand a model's learned concepts and potentially revise false concepts. In addressing this challenge, we introduce the Neural Concept Binder, a new framework for deriving discrete concept representations resulting in what we term "concept-slot encodings". These encodings leverage both "soft binding" via object-centric block-slot encodings and "hard binding" via retrieval-based inference. The Neural Concept Binder facilitates straightforward concept inspection and direct integration of external knowledge, such as human input or insights from other AI models like GPT-4. Additionally, we demonstrate that incorporating the hard binding mechanism does not compromise performance; instead, it enables seamless integration into both neural and symbolic modules for intricate reasoning tasks, as evidenced by evaluations on our newly introduced CLEVR-Sudoku dataset.},
     Keywords={Concept Discovery, Interpretable Artificial Intelligence, Interactive Machine Learning, Disentanglement}
   }
+
+@inproceedings{moos2024foosball,
+  author={Janosch Moos, and Cedric Derstroff, and Niklas Schröder, and Debora Clever,},
+  booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)},
+  title={Learning to Play Foosball: System and Baselines},
+  year={2024},
+  volume={},
+  number={},
+  pages={4326-4332},
+  keywords={Reinforcement Learning, Simulation,Robot learning},
+  doi={10.1109/ICRA57147.2024.10611321},
+  Anote={./images/point_cloud_paper.PNG},
+  Note={This work stages Foosball as a versatile platform for advancing scientific research, particularly in the realm of robot learning. We present an automated Foosball table along with its corresponding simulated counterpart, showcasing a diverse range of challenges through example tasks within the Foosball environment. Initial findings are shared using a simple baseline approach.
+Foosball constitutes a versatile learning environment with the potential to yield cutting-edge research in various fields of artificial intelligence and machine learning, notably robust learning, while also extending its applicability to industrial robotics and automation setups.
+To transform our physical Foosball table into a research-friendly system, we augmented it with a 2 degrees of freedom kinematic chain to control the goalkeeper rod as an initial setup with the intention to be extended to the full game as soon as possible. Our experiments reveal that a realistic simulation is essential for mastering complex robotic tasks, yet translating these accomplishments to the real system remains challenging, often accompanied by a performance decline.
+This emphasizes the critical importance of research in this direction. In this concern, we spotlight the automated Foosball table as an invaluable tool, possessing numerous desirable attributes, to serve as a demanding learning environment for advancing robotics and automation research.}
+}
