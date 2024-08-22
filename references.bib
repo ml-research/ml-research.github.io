@@ -1,3 +1,24 @@
+@misc{brack2024unleashing,
+      title={Unleashing Creativity: Generalizing Semantic Control for Text-to-Image Diffusion Models}, 
+      author={Manuel Brack and Marlon May and Linoy Tsaban and Felix Friedrich and Patrick Schramowski and Apolinaros Passos and Kristian Kersting },
+      year={2024},
+      Howpublished={preprint},
+      Note={The recent surge in popularity of text-to-image diffusion models (DMs) can largely be attributed to the versatile, expressive, and intuitive user interfaces provided through textual prompts. These models enable inexperienced people to explore artistic ventures easily and provide exciting new opportunities to experienced artists. However, the semantic control offered through text prompts alone is limited and rather fragile, and overall lacks the fine granularity necessary for creative applications. The majority of methods addressing this issue are restricted to specific DM architectures, severely limiting the creative workflow instead of generalizing it to arbitrary models. In contrast, we demonstrate that semantic guidance (SEGA) generalizes to any DM architecture. Importantly, SEGA is natively compatible with state-of-the-art diffusion transformers. Our empirical results show strong model-agnostic performance, and we highlight new creative possibilities enabled by SEGA, such as enhanced typographic manipulations. This work underscores SEGA’s potential to provide consistent, high-quality semantic guidance in a rapidly evolving generative model landscape.}
+      Anote={./images/brack2024unleashing.png},
+      url={https://www.aiml.informatik.tu-darmstadt.de/papers/brack2024unleashing.pdf}}, 
+}
+
+@misc{deiseroth2024tfree,
+      title={T-FREE: Tokenizer-Free Generative LLMs via Sparse Representations for Memory-Efficient Embeddings}, 
+      author={Björn Deiseroth and Manuel Brack and Patrick Schramowski and Kristian Kersting and Samuel Weinbach},
+      year={2024},
+      Howpublished={arXiv preprint arXiv:2406.19223},
+      Note={Tokenizers are crucial for encoding information in Large Language Models, but their development has recently stagnated, and they contain inherent weaknesses. Major limitations include computational overhead, ineffective vocabulary use, and unnecessarily large embedding and head layers. Additionally, their performance is biased towards a reference corpus, leading to reduced effectiveness for underrepresented languages.
+To remedy these issues, we propose T-FREE, which directly embeds words through sparse activation patterns over character triplets, and does not require a reference corpus. T-FREE inherently exploits morphological similarities and allows for strong compression of embedding layers. In our exhaustive experimental evaluation, we achieve competitive downstream performance with a parameter reduction of more than 85% on these layers. Further, T-FREE shows significant improvements in cross-lingual transfer learning.}
+      Anote={./images/deiseroth2024tfree.png},
+      url={https://arxiv.org/abs/2406.19223}, 
+}
+
 @article{friedrich2024fair,
       Anote = {./images/ffriedrich_fair_2023.png},
       title={Auditing and Instructing Text-to-Image Generation Models on Fairness},
@@ -517,7 +538,7 @@ We formalize the teacher selection process in the action advice setting as a mul
 
 @misc{friedrich2024multilingual,
   Anote={./images/magbig.png},
-  author = {Felix Friedrich and Katharina Hämmerl and Patrick Schramowski and Jindrich Libovicky and Kristian Kersting and Alexander Fraser},
+  author = {Felix Friedrich and Katharina Hämmerl and Patrick Schramowski and Manuel Brack and Jindrich Libovicky and Kristian Kersting and Alexander Fraser},
   title={Multilingual Text-to-Image Generation Magnifies Gender Stereotypes and Prompt Engineering May Not Help You},
   Howpublished = {arXiv preprint arXiv:2401.16092},
   year = {2024},
@@ -789,14 +810,15 @@ biases},
 }
 
 
-@misc{stammer2023learning,
+@article{stammer2023learning,
   Anote = {./images/stammer2023learning.png},
   title = {Learning by Self-Explaining},
   author={Wolfgang Stammer and Felix Friedrich and David Steinmann Manuel Brack and Hikaru Shindo and Kristian Kersting},
-  Howpublished = {arXiv preprint arXiv:2309.08395},
+  journal = {Transactions on Machine Learning Research (TMLR)},
   Note = {Artificial intelligence (AI) research has a long track record of drawing inspirations from findings from biology, in particular human intelligence. In contrast to current AI research that mainly treats explanations as a means for model inspection, a somewhat neglected finding from human psychology is the benefit of self-explaining in an agents' learning process. Motivated by this, we introduce a novel learning paradigm, termed Learning by Self-Explaining (LSX). The underlying idea is that a learning module (learner) performs a base task, e.g. image classification, and provides explanations to its decisions. An internal critic module next evaluates the quality of these explanations given the original task. Finally, the learner is refined with the critic's feedback and the loop is repeated as required. The intuition behind this is that an explanation is considered "good" if the critic can perform the same task given the respective explanation. Despite many implementation possibilities the structure of any LSX instantiation can be taxonomized based on four learning modules which we identify as: Fit, Explain, Reflect and Revise. In our work, we provide distinct instantiations of LSX for two different learner models, each illustrating different choices for the various LSX components. We broadly evaluate these on several datasets and show that Learning by Self-Explaining not only boosts the generalization abilities of AI models, particularly in small-data regimes, but also aids in mitigating the influence of confounding factors, as well as leading to more task specific and faithful model explanations. Overall, our results provide experimental evidence of the potential of self-explaining within the learning phase of an AI model.},
   Keywords = {Explanatory Interactive Machine Learning, XIL, Explainability, XAI, Interpretability},
-  year={2023},
+  year={2024},
+
   pages={},
   url={https://arxiv.org/abs/2309.08395}
 }

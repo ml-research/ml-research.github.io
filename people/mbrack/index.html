@@ -5,6 +5,7 @@
 </TR>
 
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -15,11 +16,11 @@
 
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
-          media="screen">
+        media="screen">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/jquery.dataTables.min.css"
-          rel="stylesheet" media="screen">
+        rel="stylesheet" media="screen">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/dataTables.bootstrap4.min.css"
-          rel="stylesheet" media="screen">
+        rel="stylesheet" media="screen">
 
     <link href="../../css/style.css" rel="stylesheet">
 
@@ -28,155 +29,191 @@
 
 
 <body data-spy="scroll" data-target=".navbar" data-offset="65">
-<header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 
-        <a class="navbar-brand" href="#">Manuel Brack</a>
+            <a class="navbar-brand" href="#">Manuel Brack</a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="collapse navbar-collapse" id="navbarCollapse">
 
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#mission">Mission and Bio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#publications">Publications</a>
-                </li>
-                <!--li class="nav-item">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mission">Mission and Bio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications">Publications</a>
+                    </li>
+                    <!--li class="nav-item">
                     <a class="nav-link" href="#activities">Activities</a>
                 </li-->
-                <li class="nav-item">
-                    <a class="nav-link" href="../../index.html">ML@TUDA</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#legal">Legal Info</a>
-                </li>
-            </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">ML@TUDA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#legal">Legal Info</a>
+                    </li>
+                </ul>
 
-        </div>
-    </nav>
-</header>
-
-<main role="main">
-    <br><br><br>
-    <div class="container" id="mission">
-
-        <div class="row">
-            <div class="col-md-2" style="margin-top:30px;">
-                <img src="profile-thumbnail.jpg" class=" rounded-circle imgme" style="height:175px; width:175px;">
             </div>
+        </nav>
+    </header>
 
-            <div class="col-md-6" style="margin-top:19px;">
-                <div id="htname">Manuel Brack</div>
-                <div id="htem">Machine Learning Group, Computer Science Department, TU Darmstadt.
-                    Hochschulstrasse 1, Room S1|03 076, 64289 Darmstadt, Germany
-                    <br><img src="./../../images/mail.jpg" style="height:15px"> brack (at) cs (dot) tu-darmstadt (dot)
-                    de
+    <main role="main">
+        <br><br><br>
+        <div class="container" id="mission">
+
+            <div class="row">
+                <div class="col-md-2" style="margin-top:30px;">
+                    <img src="profile-thumbnail.jpg" class=" rounded-circle imgme" style="height:175px; width:175px;">
                 </div>
-                <div id="htem2">Deutsches Forschungszentrum für KI, TU Darmstadt. <br>
-                    Landwehrstraße 50A, S4 | 23, 1. OG, 64293 Darmstadt, Germany
-                    <br><img src="./../../images/mail.jpg" style="height:15px"> manuel (dot) brack (at)  dfki (dot)
-                    de
+
+                <div class="col-md-6" style="margin-top:19px;">
+                    <div id="htname">Manuel Brack</div>
+                    <div id="htem">Machine Learning Group, Computer Science Department, TU Darmstadt.
+                        Hochschulstrasse 1, Room S1|03 076, 64289 Darmstadt, Germany
+                        <br><img src="./../../images/mail.jpg" style="height:15px"> brack (at) cs (dot) tu-darmstadt
+                        (dot)
+                        de
+                    </div>
+                    <div id="htem2">Deutsches Forschungszentrum für KI, TU Darmstadt. <br>
+                        Landwehrstraße 50A, S4 | 23, 1. OG, 64293 Darmstadt, Germany
+                        <br><img src="./../../images/mail.jpg" style="height:15px"> manuel (dot) brack (at) dfki (dot)
+                        de
+                    </div>
                 </div>
-            </div>
 
 
-            <div class="col-md-4">
-                <div style="float: right">
-                    <a href="https://www.tu-darmstadt.de" target="_blank"> <img class="img-fluid" src="./fbinfo2.png"
-                                                                                style="margin: 19px 10px 10px 10px;height:200px"></a>
+                <div class="col-md-4">
+                    <div style="float: right">
+                        <a href="https://www.tu-darmstadt.de" target="_blank"> <img class="img-fluid"
+                                src="./fbinfo2.png" style="margin: 19px 10px 10px 10px;height:200px"></a>
 
+                    </div>
                 </div>
-            </div>
-            <!-- div class="col-md-4">
+                <!-- div class="col-md-4">
           <img id="logo" class="imgsm" src="./../../images/FB20TUDAlogo.png"
                style="text-align: right; margin: 10px 5px 5px 3px;height:55px"></a>
       </div-->
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-md-8">
-                <b>Mission.</b> My research is centred around the risks and promises of large ML models for
-                human-centered AI.
-                I expore how to leverage the capabilities of these models’ for the best while accounting for and
-                mitigating the issues arising from large-scale training.
-                Latest advances in deep learning have been highly data-driven, relying on billion-sized
-                datasets randomly scraped from the internet.
-                In my research I investigate what models actually learn during pre-training and how to measure and
-                utilize the model's representations. With the goal of improving how we as humans interact with AI
-                systems,
-                making the AI align with the behavior us humans expect from the system.
             </div>
-            <div class="col-md-4">
-                <div style="float: right">
-                    <a href="https://www.dfki.de/en/web/research/research-departments/foundations-of-systems-ai" target="_blank"> <img class="img-fluid" src="./dfki_Logo_digital_guam_blue.svg"
-                                                                                style="margin: 0px 20px 10px 10px;height:150px"></a>
+            <br>
+            <div class="row">
+                <div class="col-md-8">
+                    <b>Mission.</b>
+                    My research focuses on large-scale generative models at the intersection of natural language and computer vision. 
+                    Consequently, a lot of our recent efforts have been centered around (text-)conditioned image generation, vision-language models, and LLMs.
+                    I am particularly interested in investigating the capabilites, limitations and societal impacts of these models, and how to extert more semantic control over the generated content.
+                </div>
+                <div class="col-md-4">
+                    <div style="float: right">
+                        <a href="https://www.dfki.de/en/web/research/research-departments/foundations-of-systems-ai"
+                            target="_blank"> <img class="img-fluid" src="./dfki_Logo_digital_guam_blue.svg"
+                                style="margin: 0px 20px 10px 10px;height:150px"></a>
 
+                    </div>
                 </div>
             </div>
-        </div>
-        <br><br>
-        <b>Open Thesis/Hiwi.</b> We work with a variety of deep learning models and architectures with our recent
-        efforts being focussed on large-scale multimodal models such as Vision-Language models or generative diffusion
-        models.
-        We have several ideas related on investigating the underlying capabilities learned during large-scale
-        pre-training, as well as related problems and possible mitigation strategies. We are always looking for highly
-        motivated students and offer Hiwi positions both paid and for CP, as well as Master Theses.
-        Experience in Deep Learning and specifically in Python and PyTorch is required. If you have ideas yourself I'm
-        also happy to discuss them. Please feel free to contact me in case of interest. Note: <a
-            href="https://ml-research.github.io/thesis/proposal/index.html" target="_blank">thesis proposal</a>.
+            <br><br>
+            <b>Open Thesis/Hiwi.</b> We work with a variety of deep learning models and architectures with our recent
+            efforts being focussed on large-scale multimodal models such as Vision-Language models or generative
+            diffusion models.
+            We have several ideas related on investigating the underlying capabilities learned during large-scale
+            pre-training, as well as related problems and possible mitigation strategies. We are always looking for
+            highly motivated students and offer Hiwi positions both paid and for CP, as well as Master Theses. <b>I do not currently offer supervision for Bachelor theses.</b>
+            Experience in Deep Learning and specifically in Python and PyTorch is required. If you have ideas yourself
+            If you are interested in a Hiwi position of thesis supervision, feel free to reach out to me with your current overview of grades and information on previous projects and experience. Note: <a
+                href="https://ml-research.github.io/thesis/proposal/index.html" target="_blank">thesis proposal</a>.
 
-        <br><br>
+            <br><br><br>
 
-        <b>Timeline.</b>
-        <TABLE BORDER="0" width="100%" id="awards">
-            <col width="120px">
-            <TR>
-                <TD><span class="t2when"> 2023:</span></TD>
-                <TD><span class="t2where"> Research Scientist Intern at <a
-                        href="https://research.adobe.com/" target="_blank">Adobe Research</a>, Seattle USA.</span>
-                </TD>
-            </TR>
-            <TR>
-                <TD><span class="t2when"> 2023 - now:</span></TD>
-                <TD><span class="t2where"> Research Scientist at the German Research Center for Artificial Intelligence <a
-                        href="https://www.dfki.de/en/web" target="_blank">(DFKI)</a>,<br> <a
-                        href="https://www.dfki.de/en/web/research/research-departments/foundations-of-systems-ai" target="_blank">Research Department for Foundations of Systems AI (SAINT)</a>, Darmstadt Germany.</span>
-                </TD>
-            </TR>
-            <TR>
-                <TD><span class="t2when"> 2022 - now:</span></TD>
-                <TD><span class="t2where"> Ph.D. Candidate at the Machine Learning Lab, <a
-                        href="https://www.informatik.tu-darmstadt.de/fb20/index.en.jsp" target="_blank">CS Department, TU Darmstadt</a>, Germany.</span>
-                </TD>
-            </TR>
+            <div class="row">
+                <div class="col-md-3">
+                    <div style="float: left">
+                        <a href="https://www.dfki.de/en/web/research/research-departments/foundations-of-systems-ai"
+                            target="_blank"> <img class="img-fluid" src="./occiglot_logo_text.svg"
+                                style="margin: px px 0px 0px;height:150px"></a>
 
-            <TR>
-                <TD><span class="t2when">2020 - 2022:</span></TD>
-                <TD><span
-                        class="t2where">M.Sc. (with honors) in computer science from <a
-                        href="https://www.informatik.tu-darmstadt.de/fb20/index.en.jsp"
-                        target="_blank"> TU Darmstadt</a>, Germany.</span>
-                </TD>
-            </TR>
-            <TR>
-                <TD><span class="t2when">2016 - 2020:</span></TD>
-                <TD><span
-                        class="t2where">B.Sc. in computer science from <a
-                        href="https://www.informatik.tu-darmstadt.de/fb20/index.en.jsp"
-                        target="_blank"> TU Darmstadt</a>, Germany.</span>
-                </TD>
-            </TR>
-        </TABLE>
-        <br>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <b>Occiglot.</b>
+                    Together with great colleagues and friends from  <a href="https://dfki.de/en/web"
+                    target="_blank">DFKI</a>, <a href="https://hessian.ai"
+                    target="_blank">hessian.AI</a>, <a href="https://dfki.de/en/web"
+                    target="_blank">CommonCrawl</a> and <a href=""
+                    target="_blank">others</a>, I co-founded the <a href="https://occiglot.eu/about/"
+                    target="_blank">Occiglot</a> research collective in early 2024. As an academic, non-profit research collective, we are committed to open science and, thus, open-source LLM development.
+                    We actively work on making linguistic diversity, multilingualism, and cultural richness for mulilingual LLMs. As such our current efforts focus on large-scale data collection &amp; curation, model training, and evaluation of non-english LLMs. 
+                    At the same time the Occiglot community is providing a hub for researchers and practitioners to exchange ideas, collaborate, and work on shared projects. Our models and datasets can be found on <a href="https://huggingface.co/occiglot" target="_blank">Huggingface</a> with more information available in our <a href="https://occiglot.eu/blog/" target="_blank">blog</a>.
 
-        <br>
+                    
+                </div>
+                
+            </div>
 
-        <!--b>Awards.</b>
+            <br><br>
+
+            <b>Timeline.</b>
+            <TABLE BORDER="0" width="100%" id="awards">
+                <col width="120px">
+                <TR>
+                    <TD><span class="t2when"> 2024:</span></TD>
+                    <TD><span class="t2where"> Research Scientist Intern at <a href="https://research.adobe.com/"
+                                target="_blank">Adobe Applied Research</a>, San Jose USA.</span>
+                    </TD>
+                </TR>
+                <TR>
+                    <TD><span class="t2when"> 2024 - now:</span></TD>
+                    <TD><span class="t2where">Co-Founder of the <a href="https://occiglot.eu"
+                                target="_blank">Occiglot</a> research collective</span>
+                    </TD>
+                </TR>
+                <TR>
+                    <TD><span class="t2when"> 2023:</span></TD>
+                    <TD><span class="t2where"> Research Scientist Intern at <a href="https://research.adobe.com/"
+                                target="_blank">Adobe Research</a>, Seattle USA.</span>
+                    </TD>
+                </TR>
+                <TR>
+                    <TD><span class="t2when"> 2023 - now:</span></TD>
+                    <TD><span class="t2where"> Research Scientist at the German Research Center for Artificial
+                            Intelligence <a href="https://www.dfki.de/en/web" target="_blank">(DFKI)</a>,<br> <a
+                                href="https://www.dfki.de/en/web/research/research-departments/foundations-of-systems-ai"
+                                target="_blank">Research Department for Foundations of Systems AI (SAINT)</a>, Darmstadt
+                            Germany.</span>
+                    </TD>
+                </TR>
+                <TR>
+                    <TD><span class="t2when"> 2022 - now:</span></TD>
+                    <TD><span class="t2where"> Ph.D. Candidate at the Machine Learning Lab, <a
+                                href="https://www.informatik.tu-darmstadt.de/fb20/index.en.jsp" target="_blank">CS
+                                Department, TU Darmstadt</a>, Germany.</span>
+                    </TD>
+                </TR>
+
+                <TR>
+                    <TD><span class="t2when">2020 - 2022:</span></TD>
+                    <TD><span class="t2where">M.Sc. (with honors) in computer science from <a
+                                href="https://www.informatik.tu-darmstadt.de/fb20/index.en.jsp" target="_blank"> TU
+                                Darmstadt</a>, Germany.</span>
+                    </TD>
+                </TR>
+                <TR>
+                    <TD><span class="t2when">2016 - 2020:</span></TD>
+                    <TD><span class="t2where">B.Sc. in computer science from <a
+                                href="https://www.informatik.tu-darmstadt.de/fb20/index.en.jsp" target="_blank"> TU
+                                Darmstadt</a>, Germany.</span>
+                    </TD>
+                </TR>
+            </TABLE>
+            <br>
+
+            <br>
+
+            <!--b>Awards.</b>
         TODO
         <div id="timeline"
              style="margin-top:1px;margin-bottom:20px;height:400px;width:auto; overflow-y:scroll;list-style-position: outside">
@@ -202,49 +239,48 @@
 
         </div>
          -->
-    </div>
-
-    <hr class="soft">
-
-
-    <div class="container" id="publications">
-
-        <h3>Publications</h3>
-
-        <br>
-        <div>Publications can be found at <a
-                href="https://scholar.google.com/citations?user=kJ9Abf8AAAAJ" target="_blank">Google Scholar</a>, <a
-                href="https://dblp.uni-trier.de/pid/326/8265.html" target="_blank">DBLP</a>, <a
-                href="https://www.semanticscholar.org/author/Manuel-Brack/2166299958"
-                target="_blank">SemanticScholar</a>
         </div>
-        <br>
 
-        <noscript>
-            <style>
-                #bibtex {
-                    display: block;
-                }
-            </style>
-        </noscript>
+        <hr class="soft">
 
-        <table id="pubTable" class="table" style="width:100%" data-paging="false" data-info="false"></table>
 
-        <br>
+        <div class="container" id="publications">
 
-        <pre id="bibtex" style="display:none;">
+            <h3>Publications</h3>
+
+            <br>
+            <div>Publications can be found at <a href="https://scholar.google.com/citations?user=kJ9Abf8AAAAJ"
+                    target="_blank">Google Scholar</a>, <a href="https://dblp.uni-trier.de/pid/326/8265.html"
+                    target="_blank">DBLP</a>, <a href="https://www.semanticscholar.org/author/Manuel-Brack/2166299958"
+                    target="_blank">SemanticScholar</a>
+            </div>
+            <br>
+
+            <noscript>
+                <style>
+                    #bibtex {
+                        display: block;
+                    }
+                </style>
+            </noscript>
+
+            <table id="pubTable" class="table" style="width:100%" data-paging="false" data-info="false"></table>
+
+            <br>
+
+            <pre id="bibtex" style="display:none;">
 
 
         </pre>
-    </div>
+        </div>
 
 
-    <br>
+        <br>
 
 
-    <hr class="soft">
+        <hr class="soft">
 
-    <!--div class="container" id="activities">
+        <!--div class="container" id="activities">
 
         <h2>Activities</h2>
 
@@ -285,7 +321,7 @@
 
     </div-->
 
-    <!--hr class="soft">
+        <!--hr class="soft">
 
     <div class="container" id="talks">
 
@@ -311,188 +347,189 @@
         </div>
     </div-->
 
-</main>
-<footer>
-    <hr class="soft" id="legal">
+    </main>
+    <footer>
+        <hr class="soft" id="legal">
 
 
-    <div class="container" id="sitefooter" style="height: unset">
+        <div class="container" id="sitefooter" style="height: unset">
 
-        <a href="https://www.informatik.tu-darmstadt.de/impressum.en.jsp">Legal info / Impressum</a>
-        <br><br>
+            <a href="https://www.informatik.tu-darmstadt.de/impressum.en.jsp">Legal info / Impressum</a>
+            <br><br>
 
-        Technische Universität Darmstadt <br>
-        Fachbereich Informatik <br>
-        Hochschulstr. 1 <br>
-        64289 Darmstadt<br>
-        Germany<br><br>
-
-
-    </div>
-
-</footer>
+            Technische Universität Darmstadt <br>
+            Fachbereich Informatik <br>
+            Hochschulstr. 1 <br>
+            64289 Darmstadt<br>
+            Germany<br><br>
 
 
-<!-- place js at end for faster loading -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        </div>
 
-<script type="text/javascript"
+    </footer>
+
+
+    <!-- place js at end for faster loading -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
 
-<script type="text/javascript"
+    <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
 
-<script type="text/javascript" src="./../../build/bib-list.js"></script>
+    <script type="text/javascript" src="./../../build/bib-list.js"></script>
 
-<script type="text/javascript">
-    $(document).ready(function () {
+    <script type="text/javascript">
+        $(document).ready(function () {
 
-        $.get('https://ml-research.github.io/references.bib', function (data) {
+            $.get('https://ml-research.github.io/references.bib', function (data) {
 
-            function containsName(bib) {
-                return bib.toLowerCase().includes("brack")
-            }
+                function containsName(bib) {
+                    return bib.toLowerCase().includes("brack")
+                }
 
-            function replaceImagePath(bib) {
-                return bib.replace("./images/", "../../images/");
-            }
+                function replaceImagePath(bib) {
+                    return bib.replace("./images/", "../../images/");
+                }
 
-            bibtex = data.split(/(?=@\w+)/u);
-            my_bibtex = bibtex.filter(containsName).map(replaceImagePath);
-            $("#bibtex").html(my_bibtex.join());
-            bibtexify("#bibtex", "pubTable");
-        });
+                bibtex = data.split(/(?=@\w+)/u);
+                my_bibtex = bibtex.filter(containsName).map(replaceImagePath);
+                $("#bibtex").html(my_bibtex.join());
+                bibtexify("#bibtex", "pubTable");
+            });
 
-
-    });
-</script>
-
-<script>
-
-    var more_bio_shown = false;
-
-    var more_projects_shown = false;
-
-    var more_pubs_shown = false;
-
-
-    $(document).ready(function () {
-
-
-        $("#showmorebio").click(function () {
-
-            if (!more_bio_shown) {
-
-                $("#morebio").slideDown('fast', function () {
-
-                    $("#showmorebio").text('hide more bio');
-
-                });
-
-                more_bio_shown = true;
-
-            } else {
-
-                $("#morebio").slideUp('fast', function () {
-
-                    $("#showmorebio").text('show more bio');
-
-                });
-
-                more_bio_shown = false;
-
-            }
 
         });
+    </script>
+
+    <script>
+
+        var more_bio_shown = false;
+
+        var more_projects_shown = false;
+
+        var more_pubs_shown = false;
 
 
-        $("#showmoreprojects").click(function () {
+        $(document).ready(function () {
 
-            if (!more_projects_shown) {
 
-                $("#moreprojects").slideDown('fast', function () {
+            $("#showmorebio").click(function () {
 
-                    $("#showmoreprojects").text('hide');
+                if (!more_bio_shown) {
 
-                });
+                    $("#morebio").slideDown('fast', function () {
 
-                more_projects_shown = true;
+                        $("#showmorebio").text('hide more bio');
 
-            } else {
+                    });
 
-                $("#moreprojects").slideUp('fast', function () {
+                    more_bio_shown = true;
 
-                    $("#showmoreprojects").text('show more projects');
+                } else {
 
-                });
+                    $("#morebio").slideUp('fast', function () {
 
-                more_projects_shown = false;
+                        $("#showmorebio").text('show more bio');
 
-            }
+                    });
+
+                    more_bio_shown = false;
+
+                }
+
+            });
+
+
+            $("#showmoreprojects").click(function () {
+
+                if (!more_projects_shown) {
+
+                    $("#moreprojects").slideDown('fast', function () {
+
+                        $("#showmoreprojects").text('hide');
+
+                    });
+
+                    more_projects_shown = true;
+
+                } else {
+
+                    $("#moreprojects").slideUp('fast', function () {
+
+                        $("#showmoreprojects").text('show more projects');
+
+                    });
+
+                    more_projects_shown = false;
+
+                }
+
+            });
+
+
+            $("#showmorepubs").click(function () {
+
+                if (!more_pubs_shown) {
+
+                    $("#morepubs").slideDown('fast', function () {
+
+                        $("#showmorepubs").text('hide older publications');
+
+                    });
+
+                    more_pubs_shown = true;
+
+                } else {
+
+                    $("#morepubs").slideUp('fast', function () {
+
+                        $("#showmorepubs").text('show older publications');
+
+                    });
+
+                    more_pubs_shown = false;
+
+                }
+
+            });
+
 
         });
 
+    </script>
 
-        $("#showmorepubs").click(function () {
+    <script>
+        $(document).ready(function () {
+            $("#nav a").on('click', function (event) {
 
-            if (!more_pubs_shown) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
 
-                $("#morepubs").slideDown('fast', function () {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
 
-                    $("#showmorepubs").text('hide older publications');
+                    // Store hash
+                    var hash = this.hash;
 
-                });
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
 
-                more_pubs_shown = true;
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
 
-            } else {
+                } // End if
 
-                $("#morepubs").slideUp('fast', function () {
-
-                    $("#showmorepubs").text('show older publications');
-
-                });
-
-                more_pubs_shown = false;
-
-            }
-
+            });
         });
-
-
-    });
-
-</script>
-
-<script>
-    $(document).ready(function () {
-        $("#nav a").on('click', function (event) {
-
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-
-                // Prevent default anchor click behavior
-                event.preventDefault();
-
-                // Store hash
-                var hash = this.hash;
-
-                // Using jQuery's animate() method to add smooth page scroll
-                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 800, function () {
-
-                    // Add hash (#) to URL when done scrolling (default click behavior)
-                    window.location.hash = hash;
-                });
-
-            } // End if
-
-        });
-    });
-</script>
+    </script>
 
 
 </body>
+
 </html>
