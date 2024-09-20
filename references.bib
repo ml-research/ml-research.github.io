@@ -8,6 +8,19 @@
   url = {\url{https://huggingface.co/datasets/aurora-m/biden-harris-redteam}},
 }
 
+
+@inproceedings{busch2024net,
+  title={Phi-net: Efficient Causal Modeling at Scale},
+  author={Busch, Florian Peter and Willig, Moritz and Seng, Jonas and Kersting, Kristian and Dhami, Devendra Singh},
+  booktitle={Proceedings of the International Conference on Probabilistic Graphical Models (PGM)},
+  pages={452--469},
+  year={2024},
+  publisher={PMLR},
+  Anote={./images/busch2024net.png},
+  url={https://www.socsci.ru.nl/johank/pgm2024/busch24.pdf},
+  note={Being a ubiquitous aspect of human cognition, causality has made its way into modern-day machine-learning research. Despite its importance in real-world applications, contemporary research still struggles with high-dimensional causal problems. Leveraging the efficiency of probabilistic circuits, which offer tractable computation of marginal probabilities, we introduce net, a probabilistic model designed for large-scale causal inference. net is a type of sum-product network where layering and the einsum operation allow for efficient parallelization. By incorporating interventional data into the learning process, the model can learn the effects of interventions and make predictions based on the specific interventional setting. Overall, net is a causal probabilistic circuit that efficiently answers causal queries in large-scale problems. We present evaluations conducted on both synthetic data and a substantial real-world dataset.}
+}
+
 @misc{brack2024communityoscar,
       title={Community OSCAR: A Community Effort for Multilingual Web Data},
       author={Manuel Brack and Malte Ostendorff and Pedro Ortiz Suarez and José Javier Saiz and Iñaki Lacunza Castilla and Jorge Palomar-Giner and Patrick Schramowski and Georg Rehm and Marta Villegas and Kristian Kersting},
@@ -16,7 +29,7 @@
       Keywords={Large-scale Data, Dataset, LLM training},
       Note={The development of large language models (LLMs) relies heavily on extensive, high-quality datasets. Publicly available datasets focus predominantly on English, leaving other language communities behind. To address this issue, we introduce Community OSCAR, a multilingual dataset initiative designed to address the gap between English and non-English data availability. Through a collective effort, Community OSCAR covers over 150 languages with 45 billion documents, totaling over 345 TiB of data. Initial results indicate that Community OSCAR provides valuable raw data for training LLMs and enhancing the performance of multilingual models. This work aims to contribute to the ongoing advancements in multilingual NLP and to support a more inclusive AI ecosystem by making high-quality, multilingual data more accessible to those working with low-resource languages.},
       Anote={./images/brack2024communityoscar.png},
-      url={https://occiglot.eu/papers/Community_Oscar.pdf},
+      url={https://occiglot.eu/papers/Community_Oscar.pdf}
 }
 
 @article{shindo2024neumann,
@@ -28,7 +41,7 @@
   Note = {Visual reasoning is essential for building intelligent agents that understand the world and perform problem-solving beyond perception. Differentiable forward reasoning has been developed to integrate reasoning with gradient-based machine learning paradigms. However, due to the memory intensity, most existing approaches do not bring the best of the expressivity of first-order logic, excluding a crucial ability to solve abstract visual reasoning, where agents need to perform reasoning by using analogies on abstract concepts in different scenarios. To overcome this problem, we propose NEUro-symbolic Message-pAssiNg reasoNer (NEUMANN), which is a graph-based differentiable forward reasoner, passing messages in a memory-efficient manner and handling structured programs with functors. Moreover, we propose a computationally-efficient structure learning algorithm to perform explanatory program induction on complex visual scenes. To evaluate, in addition to conventional visual reasoning tasks, we propose a new task, visual reasoning behind-the-scenes, where agents need to learn abstract programs and then answer queries by imagining scenes that are not observed. We empirically demonstrate that NEUMANN solves visual reasoning tasks efficiently, outperforming neural, symbolic, and neuro-symbolic baselines.},
   Publisher = {Springer},
   Keywords = {Differentiable Reasoning,  Inductive Logic Programming,  Neuro-Symbolic AI,  Object-centric Learning, Graph Neural Network},
-  Url = {https://arxiv.org/abs/2307.00928},
+  Url = {https://arxiv.org/pdf/2307.00928},
   Crossref={https://sites.google.com/view/neumann-tuda}
 }
 
