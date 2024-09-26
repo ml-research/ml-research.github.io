@@ -1,3 +1,15 @@
+@inproceedings{hintersdorf24nemo,
+  Anote={./images/hintersdorf2024nemo.png},
+  author = {Dominik Hintersdorf and Lukas Struppek and Kristian Kersting and Adam Dziedzic and Franziska Boenisch},
+  title = {Finding NeMo: Localizing Neurons Responsible For Memorization in Diffusion Models},
+  year = {2024},
+  Url = {https://arxiv.org/abs/2406.02366},
+  Pages = {},
+  booktitle = {Proceedings of the 38th Conference on Neural Information Processing Systems (NeurIPS)},
+  Note = {Diffusion models (DMs) produce very detailed and high-quality images, achieved through rigorous training on huge datasets. Unfortunately, this practice raises privacy and intellectual property concerns, as DMs can memorize and later reproduce their potentially sensitive or copyrighted training images at inference time. Prior efforts to prevent this issue are viable when the DM is developed and deployed in a secure and constantly monitored environment. However, they hold the risk of adversaries circumventing the safeguards and are not effective when the DM itself is publicly released. To solve the problem, we introduce NeMo, the first method to localize memorization of individual data samples down to the level of neurons in DMs' cross-attention layers. Through our experiments, we make the intriguing finding that in many cases, single neurons are responsible for memorizing particular training samples. By deactivating these memorization neurons, we avoid replication of training data at inference time, increase the diversity in the generated outputs, and mitigate the leakage of sensitive data.},
+  Keywords = {Memorization, Diffusion Models, Stable Diffusion}
+}
+
 @misc{tedeschi2024redteam,
   author = {Simone Tedeschi and Felix Friedrich and Dung Nguyen and Nam Pham and Tanmay Laud and Chien Vu and Terry Yue Zhuo and Ziyang Luo and Ben Bogin and Tien-Tung Bui and Xuan-Son Vu and Paulo Villegas and Victor May and Huu Nguyen},
   title = {Biden-Harris Redteam Dataset: A red-teaming dataset focusing on concerns in the Biden-Harris AI Executive Order},
