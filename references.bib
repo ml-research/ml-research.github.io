@@ -52,7 +52,7 @@
   Keywords = {Reinforcement Learning, Transparent agents, Interpretability, Concept Bottlebecks}
 }
 
- 
+
 @inproceedings{skryagin2024cna,
   Anote={./images/skryagin2024cna.png},
   author = {Arseny Skryagin and Felix Divo and Mohammad Amin Ali and Devendra Singh Dhami and Kristian Kersting},
@@ -65,6 +65,17 @@
   Keywords = {Graph Neural Networks, Deep Geometric Learning, Learnable Activation Functions, Oversmoothing}
 }
 
+@inproceedings{deiseroth2024emnlp,
+      title={T-FREE: Tokenizer-Free Generative LLMs via Sparse Representations for Memory-Efficient Embeddings},
+      author={Björn Deiseroth and Manuel Brack and Patrick Schramowski and Kristian Kersting and Samuel Weinbach},
+      year={2024},
+      booktitle = {Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+      Keywords={Large Language Models, Tokenizers, Sparse Representations, Memory-Efficient Embeddings},
+      Note={Tokenizers are crucial for encoding information in Large Language Models, but their development has recently stagnated, and they contain inherent weaknesses. Major limitations include computational overhead, ineffective vocabulary use, and unnecessarily large embedding and head layers. Additionally, their performance is biased towards a reference corpus, leading to reduced effectiveness for underrepresented languages.
+      To remedy these issues, we propose T-FREE, which directly embeds words through sparse activation patterns over character triplets, and does not require a reference corpus. T-FREE inherently exploits morphological similarities and allows for strong compression of embedding layers. In our exhaustive experimental evaluation, we achieve competitive downstream performance with a parameter reduction of more than 85% on these layers. Further, T-FREE shows significant improvements in cross-lingual transfer learning.},
+      Anote={./images/deiseroth2024tfree.png},
+      url={https://arxiv.org/abs/2406.19223}
+}
 
 @misc{tedeschi2024redteam,
   author = {Simone Tedeschi and Felix Friedrich and Dung Nguyen and Nam Pham and Tanmay Laud and Chien Vu and Terry Yue Zhuo and Ziyang Luo and Ben Bogin and Tien-Tung Bui and Xuan-Son Vu and Paulo Villegas and Victor May and Huu Nguyen},
