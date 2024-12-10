@@ -1,3 +1,17 @@
+@misc{kraus2024unitedpretrain,
+      anote = {./images/xit-overview.png},
+      title={United We Pretrain, Divided We Fail! Representation Learning for Time Series by Pretraining on 75 Datasets at Once}, 
+      author={Maurice Kraus and Felix Divo and David Steinmann and Devendra Singh Dhami and Kristian Kersting},
+      year={2024},
+      eprint={2402.15404},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      Howpublished = {arXiv preprint arXiv:2412.05152},
+      url={https://arxiv.org/abs/2402.15404}, 
+      keywords = {machine learning, representation learning, pretraining, time series, multi-dataset training},
+      Note = {In natural language processing and vision, pretraining is utilized to learn effective representations. Unfortunately, the success of pretraining does not easily carry over to time series due to potential mismatch between sources and target. Actually, common belief is that multi-dataset pretraining does not work for time series! Au contraire, we introduce a new self-supervised contrastive pretraining approach to learn one encoding from many unlabeled and diverse time series datasets, so that the single learned representation can then be reused in several target domains for, say, classification. Specifically, we propose the XD-MixUp interpolation method and the Soft Interpolation Contextual Contrasting (SICC) loss. Empirically, this outperforms both supervised training and other self-supervised pretraining methods when finetuning on low-data regimes. This disproves the common belief: We can actually learn from multiple time series datasets, even from 75 at once.},
+}
+
 @article{strem2025multialarm,
   Anote={./images/strem2025multialarm.png},
   title = {Multimodal transformer for early alarm prediction},
