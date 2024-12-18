@@ -1,11 +1,23 @@
+
+@article{helff2024vlol,
+  Anote = {./images/stammer2023learning.png},
+  title = {V-LoL: A Diagnostic Dataset for Visual Logical Learning},
+  author={Lukas Helff and Wolfgang Stammer and Hikaru Shindo and Devendra Singh Dhami and Kristian Kersting},
+  journal = {Transactions on Machine Learning Research (TMLR)},
+  Note = {Despite the successes of recent developments in visual AI, different shortcomings still exist; from missing exact logical reasoning, to abstract generalization abilities, to understanding complex and noisy scenes. Unfortunately, existing benchmarks, were not designed to cap- ture more than a few of these aspects. Whereas deep learning datasets focus on visually complex data but simple visual reasoning tasks, inductive logic datasets involve complex logical learning tasks, however, lack the visual component. To address this, we propose the diagnostic visual logical learning dataset, V-LoL, that seamlessly combines visual and logical challenges. Notably, we introduce the first instantiation of V-LoL, V-LoL-Train, -- a visual rendition of a classic benchmark in symbolic AI, the Michalski train problem. By incorporating intricate visual scenes and flexible logical reasoning tasks within a versatile framework, V-LoL-Train provides a platform for investigating a wide range of visual logical learning challenges. We evaluate a variety of AI systems including traditional symbolic AI, neural AI, as well as neuro-symbolic AI. Our evaluations demonstrate that even SOTA AI faces difficulties in dealing with visual logical learning challenges, highlighting unique advantages and limitations of each methodology. Overall, V-LoL opens up new avenues for understanding and enhancing current abilities in visual logical learning for AI systems.},
+  Keywords = {Neuro-symbolic AI, Deep Learning, Object-centric Learning, Benchmark, Michalski Train},
+  year={2024},
+  pages={},
+  url={https://openreview.net/pdf?id=IkbFIPiqFe}
+} 
+
 @misc{divo2024forecastingCF,
       anote = {./images/company-fundamentals-forecast.png},
-      title={Forecasting Company Fundamentals}, 
+      title={Forecasting Company Fundamentals},
       author={Felix Divo and Eric Endress and Kevin Endler and Kristian Kersting and Devendra Singh Dhami},
       year={2024},
       eprint={2411.05791},
       archivePrefix={arXiv},
-      primaryClass={q-fin.ST},
       url={https://arxiv.org/abs/2411.05791},
       Howpublished = {arXiv preprint arXiv:2412.05152},
       keywords = {Forecasting, Company Fundamentals, Financial Machine Learning, Quantitative Finance, Value Investing, Factor Investing},
@@ -14,14 +26,13 @@
 
 @misc{kraus2024unitedpretrain,
       anote = {./images/xit-overview.png},
-      title={United We Pretrain, Divided We Fail! Representation Learning for Time Series by Pretraining on 75 Datasets at Once}, 
+      title={United We Pretrain, Divided We Fail! Representation Learning for Time Series by Pretraining on 75 Datasets at Once},
       author={Maurice Kraus and Felix Divo and David Steinmann and Devendra Singh Dhami and Kristian Kersting},
       year={2024},
       eprint={2402.15404},
       archivePrefix={arXiv},
-      primaryClass={cs.LG},
       Howpublished = {arXiv preprint arXiv:2412.05152},
-      url={https://arxiv.org/abs/2402.15404}, 
+      url={https://arxiv.org/abs/2402.15404},
       keywords = {machine learning, representation learning, pretraining, time series, multi-dataset training},
       Note = {In natural language processing and vision, pretraining is utilized to learn effective representations. Unfortunately, the success of pretraining does not easily carry over to time series due to potential mismatch between sources and target. Actually, common belief is that multi-dataset pretraining does not work for time series! Au contraire, we introduce a new self-supervised contrastive pretraining approach to learn one encoding from many unlabeled and diverse time series datasets, so that the single learned representation can then be reused in several target domains for, say, classification. Specifically, we propose the XD-MixUp interpolation method and the Soft Interpolation Contextual Contrasting (SICC) loss. Empirically, this outperforms both supervised training and other self-supervised pretraining methods when finetuning on low-data regimes. This disproves the common belief: We can actually learn from multiple time series datasets, even from 75 at once.},
 }
@@ -44,7 +55,7 @@
 
 @misc{steinmann2024navigatingshortcutsspuriouscorrelations,
       anote = {./images/steinmann2024navigatingshortcuts.png},
-      title={Navigating Shortcuts, Spurious Correlations, and Confounders: From Origins via Detection to Mitigation}, 
+      title={Navigating Shortcuts, Spurious Correlations, and Confounders: From Origins via Detection to Mitigation},
       author={David Steinmann and Felix Divo and Maurice Kraus and Antonia Wüst and Lukas Struppek and Felix Friedrich and Kristian Kersting},
       year={2024},
       eprint={2412.05152},
@@ -58,7 +69,7 @@
 
 @misc{kraus2024xlstmmixermultivariatetimeseries,
       anote = {./images/xlstm-mixer.png},
-      title={xLSTM-Mixer: Multivariate Time Series Forecasting by Mixing via Scalar Memories}, 
+      title={xLSTM-Mixer: Multivariate Time Series Forecasting by Mixing via Scalar Memories},
       author={Maurice Kraus and Felix Divo and Devendra Singh Dhami and Kristian Kersting},
       year={2024},
       eprint={2410.16928},
@@ -66,7 +77,7 @@
       primaryClass={cs.LG},
       Howpublished = {arXiv preprint arXiv:2410.16928},
       Keywords = {Time Series, Forecasting, xLSTM},
-      url={https://arxiv.org/abs/2410.16928}, 
+      url={https://arxiv.org/abs/2410.16928},
       Crossref={https://github.com/mauricekraus/xlstm-mixer},
       Note = {Time series data is prevalent across numerous fields, necessitating the development of robust and accurate forecasting models. Capturing patterns both within and between temporal and multivariate components is crucial for reliable predictions. We introduce xLSTM-Mixer, a model designed to effectively integrate temporal sequences, joint time-variate information, and multiple perspectives for robust forecasting. Our approach begins with a linear forecast shared across variates, which is then refined by xLSTM blocks. These blocks serve as key elements for modeling the complex dynamics of challenging time series data. xLSTM-Mixer ultimately reconciles two distinct views to produce the final forecast. Our extensive evaluations demonstrate xLSTM-Mixer's superior long-term forecasting performance compared to recent state-of-the-art methods. A thorough model analysis provides further insights into its key components and confirms its robustness and effectiveness. This work contributes to the resurgence of recurrent models in time series forecasting.}
 }
