@@ -1,3 +1,14 @@
+@misc{friedrich2024llms,
+	Anote={./images/tedeschi2024alert.png},
+	title={LLMs Lost in Translation: M-ALERT uncovers Cross-Linguistic Safety Gaps},
+	author={Felix Friedrich and Simone Tedeschi and Patrick Schramowski and Manuel Brack and Roberto Navigli and Huu Nguyen and Bo Li and Kristian Kersting},
+	year={2024},
+	Howpublished={arXiv preprint arXiv:2412.15035},
+	url={https://arxiv.org/abs/2412.15035},
+	Note = {Building safe Large Language Models (LLMs) across multiple languages is essential in ensuring both safe access and linguistic diversity. To this end, we introduce M-ALERT, a multilingual benchmark that evaluates the safety of LLMs in five languages: English, French, German, Italian, and Spanish. M-ALERT includes 15k high-quality prompts per language, totaling 75k, following the detailed ALERT taxonomy. Our extensive experiments on 10 state-of-the-art LLMs highlight the importance of language-specific safety analysis, revealing that models often exhibit significant inconsistencies in safety across languages and categories. For instance, Llama3.2 shows high unsafety in the category crime_tax for Italian but remains safe in other languages. Similar differences can be observed across all models. In contrast, certain categories, such as substance_cannabis and crime_propaganda, consistently trigger unsafe responses across models and languages. These findings underscore the need for robust multilingual safety practices in LLMs to ensure safe and responsible usage across diverse user communities.},
+Keywords = {Multilingual, Red Teaming, Large Language Models, AI Safety, Benchmark}
+}
+
 @misc{skryagin2024asn,
   Anote = {./images/answer_set_networks.png},
   title={Answer Set Networks: Casting Answer Set Programming into Deep Learning}, 
@@ -624,7 +635,7 @@ Keywords = {Automated ML, Time Series Forecasting, Neural Architecture Search, W
 	title={LLAVAGUARD: VLM-based Safeguard for Vision Dataset Curation and Safety Assessment},
 	author={Lukas Helff and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting},
 	year={2024},
-	booktitle={Working Notes of the CVPR 2024 Workshop on Responsible Generative AI (ReGenAI), preprint at arxiv:2406.05113},
+	booktitle={Best Runner-Up Award at NeurIPS RBFM workshop, preprint at arxiv:2406.05113},
 	url={https://arxiv.org/abs/2406.05113},
 	Note = {We introduce LlavaGuard, a family of multimodal safeguard models based on Llava, offering a robust framework for evaluating the safety compliance of vision datasets and models. Our models come with a new taxonomy designed for assessing safety risks within visual data. With this safety taxonomy, we have collected and annotated a high-quality dataset to guide Vision-Language Models (VLMs) in safety. We present models in two sizes, namely LlavaGuard-7b and LlavaGuard-13b, both safety-tuned on our novel, annotated dataset to perform policy-based safety assessments of visual content. In this context, LlavaGuard goes beyond binary safety classification by providing information on the violated safety categories, a detailed explanation, and a final assessment. In our evaluations, our models demonstrate state-of-the-art performance with LlavaGuard-13b exhibiting the best results, while the much smaller LlavaGuard-7b model outperforms the much larger Llava-34b baseline. Furthermore, LlavaGuard is designed to allow for customization of the safety taxonomy to align with specific use cases, facilitating zero-shot prompting with individual policies for tailored content moderation},
 Keywords = {AI Safety, Safety Evaluation, Multimodal, Vision Language Model}
