@@ -15,6 +15,350 @@
 
 
 @inproceedings{brack2024communityoscar,
+
+@incollection{willig2024systems,
+  Anote = {./images/willig2024systems.png},
+  title={Systems with Switching Causal Relations: A Meta-Causal Perspective},
+  author={Moritz Willig and Tim Tobiasch and Florian Peter Busch and Jonas Seng and Devendra Singh Dhami and Kristian Kersting},
+  year={2024},
+  booktitle={Working Notes of the NeurIPS 2024 Causal Representation Learning Workshop},
+  url={https://openreview.net/forum?id=aMuFZK7Tl8},
+  Note={Most work on causality in machine learning assumes that causal relationships are driven by a constant underlying process. However, the flexibility of agents' actions or tipping points in the environmental process can change the qualitative dynamics of the system. As a result, new causal relationships may emerge, while existing ones change or disappear, resulting in an altered causal graph. To analyze these qualitative changes on the causal graph, we propose the concept of meta-causal states, which groups classical causal models into clusters based on equivalent qualitative behavior and consolidates specific mechanism parameterizations. We demonstrate how meta-causal states can be inferred from observed agent behavior, and discuss potential methods for disentangling these states from unlabeled data. Finally, we direct our analysis towards the application of a dynamical system, showing that meta-causal states can also emerge from inherent system dynamics, and thus constitute more than a context-dependent framework in which mechanisms emerge only as a result of external factors.},
+  Keywords = {Meta-Causality, Meta-Causal Reasoning, Agent Behavior, System Dynamics}
+}
+
+@incollection{helff2024llavaguard,
+	Anote={./images/llavaguard_pipe.png},
+	title={LLAVAGUARD: VLM-based Safeguard for Vision Dataset Curation and Safety Assessment},
+	author={Lukas Helff and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting},
+	year={2024},
+	booktitle={Working Notes of the NeurIPS 2024 Workshop on Responsibly Building the Next Generation of Multimodal Foundational Models (RBFM) and Working Notes of the CVPR 2024 Workshop on Responsible Generative AI (ReGenAI)},
+	url={https://arxiv.org/abs/2406.05113},
+	Note = {We introduce LlavaGuard, a family of multimodal safeguard models based on Llava, offering a robust framework for evaluating the safety compliance of vision datasets and models. Our models come with a new taxonomy designed for assessing safety risks within visual data. With this safety taxonomy, we have collected and annotated a high-quality dataset to guide Vision-Language Models (VLMs) in safety. We present models in two sizes, namely LlavaGuard-7b and LlavaGuard-13b, both safety-tuned on our novel, annotated dataset to perform policy-based safety assessments of visual content. In this context, LlavaGuard goes beyond binary safety classification by providing information on the violated safety categories, a detailed explanation, and a final assessment. In our evaluations, our models demonstrate state-of-the-art performance with LlavaGuard-13b exhibiting the best results, while the much smaller LlavaGuard-7b model outperforms the much larger Llava-34b baseline. Furthermore, LlavaGuard is designed to allow for customization of the safety taxonomy to align with specific use cases, facilitating zero-shot prompting with individual policies for tailored content moderation},
+  Key = {Best Runner-Up Paper Award at RBFM 2024},
+  Keywords = {AI Safety, Safety Evaluation, Multimodal, Vision Language Model},
+  crossref = {https://ml-research.github.io/human-centered-genai/projects/llavaguard/index.html}
+}
+
+
+
+@inproceedings{natarajan2025aaai,
+  title={Human-in-the-loop or AI-in-the-loop? Automate or Collaborate?},
+  url={https://arxiv.org/pdf/2412.14232},
+  Note={Human-in-the-loop (HIL) systems have emerged as a promising approach for combining the strengths of data-driven machine learning models with the contextual understanding of human experts. However, a deeper look into several of these systems reveals that calling them HIL would be a misnomer, as they are quite the opposite, namely AI-in-the-loop (AI2L) systems, where the human is in control of the system, while the AI is there to support the human. We argue that existing evaluation methods often overemphasize the machine (learning) component's performance, neglecting the human expert's critical role. Consequently, we propose an AI2L perspective, which recognizes that the human expert is an active participant in the system, significantly influencing its overall performance. By adopting an AI2L approach, we can develop more comprehensive systems that faithfully model the intricate interplay between the human and machine components, leading to more effective and robust AI systems.},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)},
+  author={Sriraam Natarajan and Saurabh Mathur and Sahil Sidheekh and Wolfgang Stammer and Kristian Kersting},
+  year={2025},
+  pages={},
+  Anote = {./images/natarajan2025aaai.png},
+  Keywords = {Senior Member Track, Blue Sky Idea, Human-in-the-loop, AI-in-the-loop},
+}
+
+
+@misc{friedrich2024llms,
+	Anote={./images/tedeschi2024alert.png},
+	title={LLMs Lost in Translation: M-ALERT uncovers Cross-Linguistic Safety Gaps},
+	author={Felix Friedrich and Simone Tedeschi and Patrick Schramowski and Manuel Brack and Roberto Navigli and Huu Nguyen and Bo Li and Kristian Kersting},
+	year={2024},
+	Howpublished={arXiv preprint arXiv:2412.15035},
+	url={https://arxiv.org/abs/2412.15035},
+	Note = {Building safe Large Language Models (LLMs) across multiple languages is essential in ensuring both safe access and linguistic diversity. To this end, we introduce M-ALERT, a multilingual benchmark that evaluates the safety of LLMs in five languages: English, French, German, Italian, and Spanish. M-ALERT includes 15k high-quality prompts per language, totaling 75k, following the detailed ALERT taxonomy. Our extensive experiments on 10 state-of-the-art LLMs highlight the importance of language-specific safety analysis, revealing that models often exhibit significant inconsistencies in safety across languages and categories. For instance, Llama3.2 shows high unsafety in the category crime_tax for Italian but remains safe in other languages. Similar differences can be observed across all models. In contrast, certain categories, such as substance_cannabis and crime_propaganda, consistently trigger unsafe responses across models and languages. These findings underscore the need for robust multilingual safety practices in LLMs to ensure safe and responsible usage across diverse user communities.},
+Keywords = {Multilingual, Red Teaming, Large Language Models, AI Safety, Benchmark}
+}
+
+@misc{skryagin2024asn,
+  Anote = {./images/answer_set_networks.png},
+  title={Answer Set Networks: Casting Answer Set Programming into Deep Learning},
+  author={Arseny Skryagin and Daniel Ochs and Phillip Deibert and Simon Kohaut and Devendra Singh Dhami and Kristian Kersting},
+  Note={Although Answer Set Programming (ASP) allows constraining neural-symbolic (NeSy) systems, its employment is hindered by the prohibitive costs of computing stable models and the CPU-bound nature of state-of-the-art solvers. To this end, we propose Answer Set Networks (ASN), a NeSy solver. Based on Graph Neural Networks (GNN), ASNs are a scalable approach to ASP-based Deep Probabilistic Logic Programming (DPPL). Specifically, we show how to translate ASPs into ASNs and demonstrate how ASNs can efficiently solve the encoded problem by leveraging GPU's batching and parallelization capabilities. Our experimental evaluations demonstrate that ASNs outperform state-of-the-art CPU-bound NeSy systems on multiple tasks. Simultaneously, we make the following two contributions based on the strengths of ASNs. Namely, we are the first to show the finetuning of Large Language Models (LLM) with DPPLs, employing ASNs to guide the training with logic. Further, we show the "constitutional navigation" of drones, i.e., encoding public aviation laws in an ASN for routing Unmanned Aerial Vehicles in uncertain environments.},
+  Keywords={Answer Set Programming, Deep Learning, Neuro-Symbolic AI, Large Language Models},
+  Crossref={https://github.com/ml-research/answersetnetworks},
+  year={2024},
+  eprint={2412.14814},
+  Howbulished={arXiv preprint arXiv:2412.14814},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2412.14814},
+}
+
+@article{helff2024vlol,
+  Anote = {./images/helff2024vlol.png},
+  title = {V-LoL: A Diagnostic Dataset for Visual Logical Learning},
+  author={Lukas Helff and Wolfgang Stammer and Hikaru Shindo and Devendra Singh Dhami and Kristian Kersting},
+  journal = {Journal of Data-centric Machine Learning Research (DMLR)},
+  Note = {Despite the successes of recent developments in visual AI, different shortcomings still exist; from missing exact logical reasoning, to abstract generalization abilities, to understanding complex and noisy scenes. Unfortunately, existing benchmarks, were not designed to cap- ture more than a few of these aspects. Whereas deep learning datasets focus on visually complex data but simple visual reasoning tasks, inductive logic datasets involve complex logical learning tasks, however, lack the visual component. To address this, we propose the diagnostic visual logical learning dataset, V-LoL, that seamlessly combines visual and logical challenges. Notably, we introduce the first instantiation of V-LoL, V-LoL-Train, -- a visual rendition of a classic benchmark in symbolic AI, the Michalski train problem. By incorporating intricate visual scenes and flexible logical reasoning tasks within a versatile framework, V-LoL-Train provides a platform for investigating a wide range of visual logical learning challenges. We evaluate a variety of AI systems including traditional symbolic AI, neural AI, as well as neuro-symbolic AI. Our evaluations demonstrate that even SOTA AI faces difficulties in dealing with visual logical learning challenges, highlighting unique advantages and limitations of each methodology. Overall, V-LoL opens up new avenues for understanding and enhancing current abilities in visual logical learning for AI systems.},
+  Keywords = {Neuro-symbolic AI, Deep Learning, Object-centric Learning, Benchmark, Michalski Train},
+  year={2024},
+  pages={},
+  crossref = {https://sites.google.com/view/v-lol},
+  url={https://openreview.net/pdf?id=IkbFIPiqFe}
+}
+
+@misc{divo2024forecastingCF,
+      anote = {./images/company-fundamentals-forecast.png},
+      title={Forecasting Company Fundamentals},
+      author={Felix Divo and Eric Endress and Kevin Endler and Kristian Kersting and Devendra Singh Dhami},
+      year={2024},
+      eprint={2411.05791},
+      archivePrefix={arXiv},
+      url={https://arxiv.org/abs/2411.05791},
+      Howpublished = {arXiv preprint arXiv:2412.05152},
+      keywords = {Forecasting, Company Fundamentals, Financial Machine Learning, Quantitative Finance, Value Investing, Factor Investing},
+      Note = {Company fundamentals are key to assessing companies' financial and overall success and stability. Forecasting them is important in multiple fields, including investing and econometrics. While statistical and contemporary machine learning methods have been applied to many time series tasks, there is a lack of comparison of these approaches on this particularly challenging data regime. To this end, we try to bridge this gap and thoroughly evaluate the theoretical properties and practical performance of 22 deterministic and probabilistic company fundamentals forecasting models on real company data. We observe that deep learning models provide superior forcasting performance to classical models, in particular when considering uncertainty estimation. To validate the findings, we compare them to human analyst expectations and find that their accuracy is comparable to the automatic forecasts. We further show how these high-quality forecasts can benefit automated stock allocation. We close by presenting possible ways of integrating domain experts to further improve performance and increase reliability.},
+}
+
+@misc{kraus2024unitedpretrain,
+      anote = {./images/xit-overview.png},
+      title={United We Pretrain, Divided We Fail! Representation Learning for Time Series by Pretraining on 75 Datasets at Once},
+      author={Maurice Kraus and Felix Divo and David Steinmann and Devendra Singh Dhami and Kristian Kersting},
+      year={2024},
+      eprint={2402.15404},
+      archivePrefix={arXiv},
+      Howpublished = {arXiv preprint arXiv:2412.05152},
+      url={https://arxiv.org/abs/2402.15404},
+      keywords = {machine learning, representation learning, pretraining, time series, multi-dataset training},
+      Note = {In natural language processing and vision, pretraining is utilized to learn effective representations. Unfortunately, the success of pretraining does not easily carry over to time series due to potential mismatch between sources and target. Actually, common belief is that multi-dataset pretraining does not work for time series! Au contraire, we introduce a new self-supervised contrastive pretraining approach to learn one encoding from many unlabeled and diverse time series datasets, so that the single learned representation can then be reused in several target domains for, say, classification. Specifically, we propose the XD-MixUp interpolation method and the Soft Interpolation Contextual Contrasting (SICC) loss. Empirically, this outperforms both supervised training and other self-supervised pretraining methods when finetuning on low-data regimes. This disproves the common belief: We can actually learn from multiple time series datasets, even from 75 at once.},
+}
+
+@article{strem2025multialarm,
+  Anote={./images/strem2025multialarm.png},
+  title = {Multimodal transformer for early alarm prediction},
+  journal = {Engineering Applications of Artificial Intelligence},
+  volume = {139},
+  pages = {109643},
+  year = {2025},
+  issn = {0952-1976},
+  doi = {https://doi.org/10.1016/j.engappai.2024.109643},
+  url = {https://www.sciencedirect.com/science/article/pii/S0952197624018013},
+  author = {Nika Strem and Devendra Singh Dhami and Benedikt Schmidt and Kristian Kersting},
+  keywords = {Multimodal transformer, Multimodal fusion, Industrial processes, Alarm management, Alarm prediction},
+  Note = {Alarms are an essential part of distributed control systems designed to help plant operators keep the processes stable and safe. In reality, however, alarms are often noisy and thus can be easily overlooked. Early alarm prediction can give the operator more time to assess the situation and introduce corrective actions to avoid downtime and negative impact on human safety and environment. Existing studies on alarm prediction typically rely on signals directly coupled with these alarms. However, using more sources of information could benefit early prediction by letting the model learn characteristic patterns in the interactions of signals and events. Meanwhile, multimodal deep learning has recently seen impressive developments. Combination (or fusion) of modalities has been shown to be a key success factor, yet choosing the best fusion method for a given task introduces a new degree of complexity, in addition to existing architectural choices and hyperparameter tuning. This is one of the reasons why real-world problems are still typically tackled with unimodal approaches. To bridge this gap, we introduce a multimodal Transformer model for early alarm prediction based on a combination of recent events and signal data. The model learns the optimal representation of data from multiple fusion strategies automatically. The model is validated on real-world industrial data. We show that our model is capable of predicting alarms with the given horizon and that the proposed multimodal fusion method yields state-of-the-art predictive performance while eliminating the need to choose among conventional fusion techniques, thus reducing tuning costs and training time.},
+  Crossref={}
+}
+
+@misc{steinmann2024navigatingshortcutsspuriouscorrelations,
+      anote = {./images/steinmann2024navigatingshortcuts.png},
+      title={Navigating Shortcuts, Spurious Correlations, and Confounders: From Origins via Detection to Mitigation},
+      author={David Steinmann and Felix Divo and Maurice Kraus and Antonia Wüst and Lukas Struppek and Felix Friedrich and Kristian Kersting},
+      year={2024},
+      eprint={2412.05152},
+      archivePrefix={arXiv},
+      Howpublished = {arXiv preprint arXiv:2412.05152},
+      primaryClass={cs.LG},
+      Keywords = {Shortcuts, Spurious Correlations, Clever Hans, Confounder, Detection, Mitigation},
+      url={https://arxiv.org/abs/2412.05152},
+      Note = {Shortcuts, also described as Clever Hans behavior, spurious correlations, or confounders, present a significant challenge in machine learning and AI, critically affecting model generalization and robustness. Research in this area, however, remains fragmented across various terminologies, hindering the progress of the field as a whole. Consequently, we introduce a unifying taxonomy of shortcut learning by providing a formal definition of shortcuts and bridging the diverse terms used in the literature. In doing so, we further establish important connections between shortcuts and related fields, including bias, causality, and security, where parallels exist but are rarely discussed. Our taxonomy organizes existing approaches for shortcut detection and mitigation, providing a comprehensive overview of the current state of the field and revealing underexplored areas and open challenges. Moreover, we compile and classify datasets tailored to study shortcut learning. Altogether, this work provides a holistic perspective to deepen understanding and drive the development of more effective strategies for addressing shortcuts in machine learning.}
+}
+
+@misc{kraus2024xlstmmixermultivariatetimeseries,
+      anote = {./images/xlstm-mixer.png},
+      title={xLSTM-Mixer: Multivariate Time Series Forecasting by Mixing via Scalar Memories},
+      author={Maurice Kraus and Felix Divo and Devendra Singh Dhami and Kristian Kersting},
+      year={2024},
+      eprint={2410.16928},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      Howpublished = {arXiv preprint arXiv:2410.16928},
+      Keywords = {Time Series, Forecasting, xLSTM},
+      url={https://arxiv.org/abs/2410.16928},
+      Crossref={https://github.com/mauricekraus/xlstm-mixer},
+      Note = {Time series data is prevalent across numerous fields, necessitating the development of robust and accurate forecasting models. Capturing patterns both within and between temporal and multivariate components is crucial for reliable predictions. We introduce xLSTM-Mixer, a model designed to effectively integrate temporal sequences, joint time-variate information, and multiple perspectives for robust forecasting. Our approach begins with a linear forecast shared across variates, which is then refined by xLSTM blocks. These blocks serve as key elements for modeling the complex dynamics of challenging time series data. xLSTM-Mixer ultimately reconciles two distinct views to produce the final forecast. Our extensive evaluations demonstrate xLSTM-Mixer's superior long-term forecasting performance compared to recent state-of-the-art methods. A thorough model analysis provides further insights into its key components and confirms its robustness and effectiveness. This work contributes to the resurgence of recurrent models in time series forecasting.}
+}
+
+
+@misc{shindo2024blendrl_arxiv,
+  Anote={./images/shindo2024blendrl.png},
+  author = {Hikaru Shindo and Quentin Delfosse and Devendra Singh Dhami and Kristian Kersting},
+  title = {BlendRL: A Framework for Merging Symbolic and Neural Policy Learning},
+  Keywords = {Reinforcement Learning,  Neuro-Symbolic AI, Differentiable Reasoning, Interpretable and Explainable AI},
+  Howpublished = {arXiv preprint arXiv:2410.11689},
+  year = {2024},
+  Url = {https://arxiv.org/abs/2410.11689},
+  Pages = {},
+  Crossref={https://github.com/ml-research/blendrl},
+  Note = {Humans can leverage both abstract reasoning and intuitive reactions. In contrast, reinforcement learning policies are typically encoded in either opaque systems like neural networks or symbolic systems that rely on predefined symbols and rules. This disjointed approach severely limits the agents’ capabilities, as they often lack either the flexible low-level reaction characteristic of neural agents or the interpretable reasoning of symbolic agents. To overcome this challenge, we introduce BlendRL, a neuro-symbolic RL framework that harmoniously integrates both paradigms within RL agents that use mixtures of both logic and neural policies. We empirically demonstrate that BlendRL agents outperform both neural and symbolic baselines in standard Atari environments, and showcase their robustness to environmental changes. Additionally, we analyze the interaction between neural and symbolic policies, illustrating how their hybrid use helps agents overcome each other's limitations.}
+}
+
+@inproceedings{hintersdorf2024balancingtransparency,
+  anote = {./images/hintersdorf2024balancingtransparency.png},
+  author = {Dominik Hintersdorf and Lukas Struppek and Kristian Kersting},
+  title = {Balancing Transparency and Risk: An Overview of the Security and Privacy Risks of Open-Source Machine Learning Models},
+  year = {2024},
+  url = {https://link.springer.com/chapter/10.1007/978-3-031-73741-1_16},
+  booktitle = {Bridging the Gap Between AI and Reality: First International Conference (AISoLA)},
+  pages = {269–283},
+  keywords = {Machine Learning, Security, Privacy, Open-Source},
+  note = {The field of artificial intelligence (AI) has experienced remarkable progress in recent years, driven by the widespread adoption of open-source machine learning models in both research&nbsp;and industry. Considering the resource-intensive nature of training&nbsp;on vast datasets, many applications opt for models that have already been trained. Hence, a small number of key players undertake&nbsp;the responsibility of training and publicly releasing large pre-trained models, providing a crucial foundation for a wide range&nbsp;of applications. However, the adoption of these open-source models carries inherent privacy and security risks that are&nbsp;often overlooked. To provide a concrete example, an inconspicuous&nbsp;model may conceal hidden functionalities that, when triggered by specific input patterns, can manipulate the behavior of the system, such&nbsp;as instructing self-driving cars to ignore the presence of&nbsp;other vehicles. The implications of successful privacy and security attacks encompass a broad spectrum, ranging from relatively&nbsp;minor damage like service interruptions to highly alarming scenarios, including physical harm or the exposure of sensitive user data.&nbsp;In this work, we present a comprehensive overview of common privacy&nbsp;and security threats associated with the use of open-source models.&nbsp;By raising awareness of these dangers, we strive to promote&nbsp;the responsible and secure use of AI systems.},
+}
+
+@misc{haerle2024scarsparseconditionedautoencoders,
+      anote={./images/haerle2024scar.png},
+      title={SCAR: Sparse Conditioned Autoencoders for Concept Detection and Steering in LLMs},
+      author={Ruben Härle and Felix Friedrich and Manuel Brack and Björn Deiseroth and Patrick Schramowski and Kristian Kersting},
+      year={2024},
+      Howpublished={arXiv preprint arXiv:2411.07122},
+      url={https://arxiv.org/pdf/2411.07122},
+      Keywords = {Large Language Models, Concept Steering, Sparse Autoencoder, AI Safety, SAEs, Mechanistic Interpretability},
+      Note = {Large Language Models (LLMs) have demonstrated remarkable capabilities in generating human-like text, but their output may not be aligned with the user or even produce harmful content.
+      This paper presents a novel approach to detect and steer concepts such as toxicity before generation. We introduce the Sparse Conditioned Autoencoder (SCAR), a single trained module that
+      extends the otherwise untouched LLM. SCAR ensures full steerability, towards and away from concepts (e.g., toxic content),
+      without compromising the quality of the model's text generation on standard evaluation benchmarks. We demonstrate the effective
+      application of our approach through a variety of concepts, including toxicity, safety, and writing style alignment. As such, this work establishes a robust framework for
+      controlling LLM generations, ensuring their ethical and safe deployment in real-world applications.}
+}
+
+
+@incollection{wuest2024bongard,
+  Anote={./images/wuest2024bongard.png},
+  title = {Bongard in Wonderland: Visual Puzzles That Still Make AI Go Mad?},
+  author = {Wuest, Antonia and Tobiasch, Tim and Helff, Lukas and Dhami, Devendra S. and Rothkopf, Constantin A. and Kersting, Kristian},
+  booktitle = {Working Notes of the NeurIPS Workshop on System-2 Reasoning at Scale},
+  year = {2024},
+  Url = {https://openreview.net/pdf?id=4Yv9tFHDwX},
+  Keywords = {Cognitive Science, Benchmark, Bongrads, Vision-Language Models},
+  Note = {Recently, newly developed Vision-Language Models (VLMs), such as OpenAI’s GPT-4o, have
+emerged, seemingly demonstrating advanced reasoning capabilities across text and image modalities.
+Yet, the depth of these advances in language-guided perception and abstract reasoning remains
+underexplored, and it is unclear whether these models can truly live up to their ambitious promises.
+To assess the progress and identify shortcomings, we enter the wonderland of Bongard problems, a
+set of classical visual reasoning puzzles that require human-like abilities of pattern recognition and
+abstract reasoning. While VLMs occasionally succeed in identifying discriminative concepts and
+solving some of the problems, they frequently falter, failing to understand and reason about visual
+concepts. Surprisingly, even elementary concepts that may seem trivial to humans, such as simple
+spirals, pose significant challenges. Moreover, even when asked to explicitly focus on and analyze
+these concepts, they continue to falter, suggesting not only a lack of understanding of these elementary
+visual concepts but also an inability to generalize to unseen concepts. These observations underscore
+the current limitations of VLMs, emphasize that a significant gap remains between human-like visual
+reasoning and machine cognition, and highlight the ongoing need for innovation in this area.}
+}
+
+@article{strem2025apt,
+  Anote={./images/strem2025apt.png},
+  title = {APT: Alarm Prediction Transformer},
+  author = {Nika Strem and Devendra Singh Dhami and Benedikt Schmidt and Benjamin Kloepper and Kristian Kersting},
+  Journal = {Expert System Application},
+  year = {2025},
+  Note = {Distributed control systems (DCS) are essential to operate complex industrial processes. A major part of a DCS is the alarm system, which helps plant operators to keep the processes stable and safe. Alarms are defined as threshold values on individual signals taking into account minimum reaction time of the human operator. In reality, however, alarms are often noisy and overwhelming, and thus can be easily overlooked by the operators. Early alarm prediction can give the operator more time to react and introduce corrective actions to avoid downtime and negative impact on human safety and the environment. In this context, we introduce Alarm Prediction Transformer (APT), a multimodal Transformer-based machine learning model for early alarm prediction based on the combination of recent events and signal data. Specifically, we propose two novel fusion strategies and three methods of label encoding with various levels of granularity. Given a window of several minutes of event logs and signal data, our model predicts whether an alarm is going to be triggered after a few minutes and, if yes, it also predicts its location. Our experiments on two novel real industrial plant data sets and a simulated data set show that the model is capable of predicting alarms with the given horizon and that our proposed fusion technique combining inputs from different modalities, i. e. events and signals, yields more accurate results than any of the modalities alone or conventional fusion techniques.},
+  Publisher = {Springer},
+  Keywords = {Machine Learning, Deep Learning, Industrial Processes, Alarm Management, Multimodal Transformer, Multimodal Fusion},
+  Url = {https://www.sciencedirect.com/science/article/pii/S0957417424023881},
+  Crossref={}
+}
+
+
+@inproceedings{shindo2024deisam,
+  Anote={./images/shindo2024deisam.png},
+  author = {Hikaru Shindo and Manuel Brack and Gopika Sudhakaran and Devendra Singh Dhami and Patrick Schramowski and Kristian Kersting},
+  title = {DeiSAM: Segment Anything with Deictic Prompting},
+  year = {2024},
+  Url = {https://arxiv.org/abs/2402.14123},
+  Pages = {},
+  booktitle = {Proceedings of the 38th Conference on Neural Information Processing Systems (NeurIPS)},
+  Note = {Large-scale, pre-trained neural networks have demonstrated strong capabilities in various tasks, including zero-shot image segmentation. To identify concrete objects in complex scenes, humans instinctively rely on deictic descriptions in natural language, i.e. , referring to something depending on the con- text, e.g. ”The object that is on the desk and behind the cup.”. However, deep learning approaches cannot reliably interpret these deictic representations due to their lack of reasoning capabilities in complex scenarios. To remedy this issue, we propose DeiSAM, which integrates large pre-trained neural networks with differentiable logic reasoners. Given a complex, textual segmentation description, DeiSAM leverages Large Language Models (LLMs) to generate first-order logic rules and performs differentiable forward reasoning on generated scene graphs. Subsequently, DeiSAM segments objects by matching them to the logically inferred image regions. As part of our evaluation, we propose the Deictic Visual Genome (DeiVG) dataset, containing paired visual input and complex, deictic textual prompts. Our empirical results demonstrate that DeiSAM is a substantial improvement over data-driven neural baselines on deictic segmentation tasks.},
+  Keywords = {Neuro-Symbolic AI, Differentiable Reasoning, Segmentation, Textual Grounding}
+}
+
+@inproceedings{hintersdorf24nemo,
+  Anote={./images/hintersdorf2024nemo.png},
+  author = {Dominik Hintersdorf and Lukas Struppek and Kristian Kersting and Adam Dziedzic and Franziska Boenisch},
+  title = {Finding NeMo: Localizing Neurons Responsible For Memorization in Diffusion Models},
+  year = {2024},
+  Url = {https://arxiv.org/abs/2406.02366},
+  Pages = {},
+  booktitle = {Proceedings of the 38th Conference on Neural Information Processing Systems (NeurIPS)},
+  Note = {Diffusion models (DMs) produce very detailed and high-quality images, achieved through rigorous training on huge datasets. Unfortunately, this practice raises privacy and intellectual property concerns, as DMs can memorize and later reproduce their potentially sensitive or copyrighted training images at inference time. Prior efforts to prevent this issue are viable when the DM is developed and deployed in a secure and constantly monitored environment. However, they hold the risk of adversaries circumventing the safeguards and are not effective when the DM itself is publicly released. To solve the problem, we introduce NeMo, the first method to localize memorization of individual data samples down to the level of neurons in DMs' cross-attention layers. Through our experiments, we make the intriguing finding that in many cases, single neurons are responsible for memorizing particular training samples. By deactivating these memorization neurons, we avoid replication of training data at inference time, increase the diversity in the generated outputs, and mitigate the leakage of sensitive data.},
+  Keywords = {Memorization, Diffusion Models, Stable Diffusion}
+}
+
+
+@inproceedings{stammer2024ncb,
+    anote={./images/stammer2024neural.png},
+    title={Neural Concept Binder},
+    author={Wolfgang Stammer and Antonia Wüst and David Steinmann and Kristian Kersting},
+    booktitle = {Proceedings of the 38th Conference on Neural Information Processing Systems (NeurIPS)},
+    Pages={},
+    Crossref={https://github.com/ml-research/neuralconceptbinder},
+    Url={https://arxiv.org/pdf/2406.09949},
+    year={2024},
+    note={The challenge in object-based visual reasoning lies in generating descriptive yet distinct concept representations. Moreover, doing this in an unsupervised fashion requires human users to understand a model's learned concepts and potentially revise false concepts. In addressing this challenge, we introduce the Neural Concept Binder, a new framework for deriving discrete concept representations resulting in what we term "concept-slot encodings". These encodings leverage both "soft binding" via object-centric block-slot encodings and "hard binding" via retrieval-based inference. The Neural Concept Binder facilitates straightforward concept inspection and direct integration of external knowledge, such as human input or insights from other AI models like GPT-4. Additionally, we demonstrate that incorporating the hard binding mechanism does not compromise performance; instead, it enables seamless integration into both neural and symbolic modules for intricate reasoning tasks, as evidenced by evaluations on our newly introduced CLEVR-Sudoku dataset.},
+    Keywords={Concept Discovery, Interpretable Artificial Intelligence, Interactive Machine Learning, Disentanglement}
+}
+
+
+@inproceedings{delfosse2024interpretable,
+  Anote = {./images/delfosse2024interpretable.png},
+  title={Interpretable concept bottlenecks to align reinforcement learning agents},
+  author={Quentin Delfosse and Sebastian Sztwiertnia and Wolfgang Stammer and Mark Rothermel and Kristian Kersting},
+  booktitle = {Proceedings of the 38th Conference on Neural Information Processing Systems (NeurIPS)},
+  year = {2024},
+  Url = {https://arxiv.org/pdf/2401.05821v2.pdf},
+  Pages = {},
+  Note = {Goal misalignment, reward sparsity and difficult credit assignment are only a few of the many issues that make it difficult for deep reinforcement learning (RL) agents to learn optimal policies. Unfortunately, the black-box nature of deep neural networks impedes the inclusion of domain experts for inspecting the model and revising suboptimal policies. To this end, we introduce *Successive Concept Bottleneck Agents* (SCoBots), that integrate consecutive concept bottleneck (CB) layers. In contrast to current CB models, SCoBots do not just represent concepts as properties of individual objects, but also as relations between objects which is crucial for many RL tasks. Our experimental results provide evidence of SCoBots' competitive performances, but also of their potential for domain experts to understand and regularize their behavior. Among other things, SCoBots enabled us to identify a previously unknown misalignment problem in the iconic video game, Pong, and resolve it. Overall, SCoBots thus result in more human-aligned RL agents.},
+  Keywords = {Reinforcement Learning, Transparent agents, Interpretability, Concept Bottlebecks}
+}
+
+
+@inproceedings{skryagin2024cna,
+  Anote={./images/skryagin2024cna.png},
+  author = {Arseny Skryagin and Felix Divo and Mohammad Amin Ali and Devendra Singh Dhami and Kristian Kersting},
+  title = {Graph Neural Networks Need Cluster-Normalize-Activate Modules},
+  year = {2024},
+  Url = {},
+  Pages = {},
+  booktitle = {Proceedings of the 38th Conference on Neural Information Processing Systems (NeurIPS)},
+  Note = {Graph Neural Networks (GNNs) are non-Euclidean deep learning models for graph-structured data. Despite their successful and diverse applications, oversmoothing prohibits deep architectures due to node features converging to a single fixed point. This severely limits their potential to solve complex tasks. To counteract this tendency, we propose a plug-and-play module consisting of three steps: Cluster→Normalize→Activate (CNA). By applying CNA modules, GNNs search and form super nodes in each layer, which are normalized and activated individually. We demonstrate in node classification and property prediction tasks that CNA significantly improves the accuracy over the state-of-the-art. Particularly, CNA reaches 94.18% and 95.75% accuracy on Cora and Citeseer, respectively. It further benefits GNNs in regression tasks as well, reducing the mean squared error compared to all baselines. At the same time, GNNs with CNA require substantially fewer learnable parameters than competing architectures.},
+  Crossref={https://github.com/ml-research/cna_modules},
+  Keywords = {Graph Neural Networks, Deep Geometric Learning, Learnable Activation Functions, Oversmoothing}
+}
+
+@inproceedings{deiseroth2024emnlp,
+      title={T-FREE: Subword Tokenizer-Free Generative LLMs via Sparse Representations for Memory-Efficient Embeddings},
+      author={Björn Deiseroth and Manuel Brack and Patrick Schramowski and Kristian Kersting and Samuel Weinbach},
+      year={2024},
+      booktitle = {Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+      Keywords={Large Language Models, Tokenizers, Sparse Representations, Memory-Efficient Embeddings},
+      Note={Tokenizers are crucial for encoding information in Large Language Models, but their development has recently stagnated, and they contain inherent weaknesses. Major limitations include computational overhead, ineffective vocabulary use, and unnecessarily large embedding and head layers. Additionally, their performance is biased towards a reference corpus, leading to reduced effectiveness for underrepresented languages.
+      To remedy these issues, we propose T-FREE, which directly embeds words through sparse activation patterns over character triplets, and does not require a reference corpus. T-FREE inherently exploits morphological similarities and allows for strong compression of embedding layers. In our exhaustive experimental evaluation, we achieve competitive downstream performance with a parameter reduction of more than 85% on these layers. Further, T-FREE shows significant improvements in cross-lingual transfer learning.},
+      Anote={./images/deiseroth2024tfree.png},
+      url={../../papers/deiseroth2024emnlp.pdf}
+}
+
+@inproceedings{nakamura2024aurora,
+  author={Taishi Nakamura and Mayank Mishra and Simone Tedeschi and Yekun Chai and Jason T. Stillerman and Felix Friedrich and Prateek Yadav and Tanmay Laud and Vu Minh Chien and Terry Yue Zhuo and Diganta Misra and Ben Bogin and Xuan-Son Vu and Marzena Karpinska and Arnav Varma Dantuluri and Wojciech Kusa and Tommaso Furlanello and Rio Yokota and Niklas Muennighoff and Suhas Pai and Tosin Adewumi and Veronika Laippala and Xiaozhe Yao and Adalberto Junior and Alpay Ariyak and Aleksandr Drozd and Jordan Clive and Kshitij Gupta and Liangyu Chen and Qi Sun and Ken Tsui and Noah Persaud and Nour Fahmy and Tianlong Chen and Mohit Bansal and Nicolo Monti and Tai Dang and Ziyang Luo and Tien-Tung Bui and Roberto Navigli and Virendra Mehta and Matthew Blumberg and Victor May and Huu Nguyen and Sampo Pyysalo},
+  title = {Aurora-M: Open Source Continual Pre-training for Multilingual Language and Code},
+  year = {2024},
+  booktitle = {The 31st International Conference on Computational Linguistics (COLING)},
+  keywords = {Multilingual, Continual, Pre-training, Safety, Fairness, Dataset, Red Teaming, Alignment, Regulations, Policy},
+  Note = {Pretrained language models underpin several AI applications, but their high computational cost for training limits accessibility. Initiatives such as BLOOM and StarCoder aim to democratize access to pretrained models for collaborative community development. However, such existing models face challenges: limited multilingual capabilities, continual pretraining causing catastrophic forgetting, whereas pretraining from scratch is computationally expensive, and compliance with AI safety and development laws. This paper presents Aurora-M, a 15B parameter multilingual open-source model trained on English, Finnish, Hindi, Japanese, Vietnamese, and code. Continually pretrained from StarCoderPlus on 435 billion additional tokens, Aurora-M surpasses 2 trillion tokens in total training token count. It is the first open-source multilingual model fine-tuned on human-reviewed safety instructions, thus aligning its development not only with conventional red-teaming considerations, but also with the specific concerns articulated in the Biden-Harris Executive Order on the Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence. Aurora-M is rigorously evaluated across various tasks and languages, demonstrating robustness against catastrophic forgetting and outperforming alternatives in multilingual settings, particularly in safety evaluations. To promote responsible open-source LLM development, Aurora-M and its variants are released publicly.},
+  Anote = {./images/aurora.png},
+  url = {https://arxiv.org/pdf/2404.00399}
+}
+
+@misc{tedeschi2024redteam,
+  author = {Simone Tedeschi and Felix Friedrich and Dung Nguyen and Nam Pham and Tanmay Laud and Chien Vu and Terry Yue Zhuo and Ziyang Luo and Ben Bogin and Tien-Tung Bui and Xuan-Son Vu and Paulo Villegas and Victor May and Huu Nguyen},
+  title = {Biden-Harris Redteam Dataset: A red-teaming dataset focusing on concerns in the Biden-Harris AI Executive Order},
+  year = 2024,
+  keywords = {Safety, Fairness, Dataset, Red Teaming, Alignment, Regulations, Policy},
+  Anote = {./images/aurora.png},
+  Howpublished = {Available at Hugging Face: https://huggingface.co/datasets/aurora-m/biden-harris-redteam},
+  url = {https://huggingface.co/datasets/aurora-m/biden-harris-redteam}
+}
+
+
+@inproceedings{busch2024net,
+  title={Phi-net: Efficient Causal Modeling at Scale},
+  author={Florian Peter Busch and Moritz Willig and Jonas Seng and Kristian Kersting and Devendra Singh Dhami},
+  booktitle={Proceedings of the International Conference on Probabilistic Graphical Models (PGM)},
+  pages={452--469},
+  year={2024},
+  publisher={PMLR},
+  Keywords={Causal ML, Probabilistic Circuits, Neural Causal Models, Large-Scale Inference},
+  Anote={./images/busch2024net.png},
+  url={https://www.socsci.ru.nl/johank/pgm2024/busch24.pdf},
+  note={Being a ubiquitous aspect of human cognition, causality has made its way into modern-day machine-learning research. Despite its importance in real-world applications, contemporary research still struggles with high-dimensional causal problems. Leveraging the efficiency of probabilistic circuits, which offer tractable computation of marginal probabilities, we introduce net, a probabilistic model designed for large-scale causal inference. net is a type of sum-product network where layering and the einsum operation allow for efficient parallelization. By incorporating interventional data into the learning process, the model can learn the effects of interventions and make predictions based on the specific interventional setting. Overall, net is a causal probabilistic circuit that efficiently answers causal queries in large-scale problems. We present evaluations conducted on both synthetic data and a substantial real-world dataset.}
+}
+
+@misc{brack2024communityoscar,
       title={Community OSCAR: A Community Effort for Multilingual Web Data},
       author={Manuel Brack and Malte Ostendorff and Pedro Ortiz Suarez and José Javier Saiz and Iñaki Lacunza Castilla and Jorge Palomar-Giner and Patrick Schramowski and Georg Rehm and Marta Villegas and Kristian Kersting},
       year={2024},
@@ -135,7 +479,7 @@ Keywords = {Deep Reinforcement Learning, Object-centric Deep Learning, Atari, Ar
 
 @inproceedings{czech24representation,
 	Anote={./images/czech24representation.png},
-	title={Representation Matters for Mastering Chess: Improved Feature Representation in AlphaZero Outperforms Changing to Transformers},
+	title={Representation Matters for Mastering Chess: Improved Feature Representation in AlphaZero Outperforms Switching to Transformers},
 	author={Johannes Czech and Jannis Blüml and Kristian Kersting and Hedinn Steingrimsson},
 	year={2024},
   booktitle = {Proceedings of the 27th European Conference on Artificial Intelligence (ECAI)},
@@ -143,18 +487,6 @@ Keywords = {Deep Reinforcement Learning, Object-centric Deep Learning, Atari, Ar
 	Note = {While transformers have gained recognition as a versatile tool for artificial intelligence(AI), an unexplored challenge arises in the context of chess - a classical AI benchmark. Here, incorporating Vision Transformers (ViTs) into AlphaZero is insufficient for chess mastery, mainly due to ViTs' computational limitations. The attempt to optimize their efficiency by combining MobileNet and NextViT could not outperform AlphaZero. Instead, we propose a practical improvement that involves a simple change in the input representation and value loss functions. As a result, we achieve a significant performance boost of up to 180 Elo points beyond what is currently achievable with AlphaZero in chess and chess variants.
 In addition to these improvements, our experimental results using the Integrated Gradient technique confirm the effectiveness of the newly introduced features.},
 	Keywords = {Chess, Decision Transformer, MCTS, Input Representation}
-}
-
-
-@misc{hintersdorf2024nemo,
-	Anote={./images/hintersdorf2024nemo.png},
-	title={Finding NeMo: Localizing Neurons Responsible For Memorization in Diffusion Models},
-	author={Dominik Hintersdorf and Lukas Struppek and Kristian Kersting and Adam Dziedzic and Franziska Boenisch},
-	year={2024},
-	Howpublished={arXiv preprint arXiv:2406.02366},
-	url={https://arxiv.org/pdf/2406.02366.pdf},
-	Note = {Diffusion models (DMs) produce very detailed and high-quality images. Their power results from extensive training on large amounts of data, usually scraped from the internet without proper attribution or consent from content creators. Unfortunately, this practice raises privacy and intellectual property concerns, as DMs can memorize and later reproduce their potentially sensitive or copyrighted training images at inference time. Prior efforts prevent this issue by either changing the input to the diffusion process, thereby preventing the DM from generating memorized samples during inference, or removing the memorized data from training altogether. While those are viable solutions when the DM is developed and deployed in a secure and constantly monitored environment, they hold the risk of adversaries circumventing the safeguards and are not effective when the DM itself is publicly released. To solve the problem, we introduce NeMo, the first method to localize memorization of individual data samples down to the level of neurons in DMs' cross-attention layers. Through our experiments, we make the intriguing finding that in many cases, single neurons are responsible for memorizing particular training samples. By deactivating these memorization neurons, we can avoid the replication of training data at inference time, increase the diversity in the generated outputs, and mitigate the leakage of private and copyrighted data. In this way, our NeMo contributes to a more responsible deployment of DMs.},
-	Keywords = {Memorization, Diffusion Models, Stable Diffusion}
 }
 
 @incollection{seng2024ibohpc,
@@ -356,12 +688,12 @@ Keywords = {Automated ML, Time Series Forecasting, Neural Architecture Search, W
     Year = {2024}
 }
 
-@inproceedings{helff2024llavaguard,
+@incollection{helff2024llavaguard,
 	Anote={./images/llavaguard_pipe.png},
 	title={LLAVAGUARD: VLM-based Safeguard for Vision Dataset Curation and Safety Assessment},
 	author={Lukas Helff and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting},
 	year={2024},
-	booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+	booktitle={Working Notes of the CVPR 2024 Workshop on Responsible Generative AI (ReGenAI), preprint at arxiv:2406.05113},
 	url={https://arxiv.org/abs/2406.05113},
 	Note = {We introduce LlavaGuard, a family of multimodal safeguard models based on Llava, offering a robust framework for evaluating the safety compliance of vision datasets and models. Our models come with a new taxonomy designed for assessing safety risks within visual data. With this safety taxonomy, we have collected and annotated a high-quality dataset to guide Vision-Language Models (VLMs) in safety. We present models in two sizes, namely LlavaGuard-7b and LlavaGuard-13b, both safety-tuned on our novel, annotated dataset to perform policy-based safety assessments of visual content. In this context, LlavaGuard goes beyond binary safety classification by providing information on the violated safety categories, a detailed explanation, and a final assessment. In our evaluations, our models demonstrate state-of-the-art performance with LlavaGuard-13b exhibiting the best results, while the much smaller LlavaGuard-7b model outperforms the much larger Llava-34b baseline. Furthermore, LlavaGuard is designed to allow for customization of the safety taxonomy to align with specific use cases, facilitating zero-shot prompting with individual policies for tailored content moderation},
 Keywords = {AI Safety, Safety Evaluation, Multimodal, Vision Language Model}
@@ -453,6 +785,33 @@ Keywords = {Concept Learning, Program Synthesis, Neuro-Symbolic, Meta-Learning}
       Pages = {},
       Keywords = {Quantization, Model Analysdis, Interpretability, Low Compute Setting, Efficiency, Deep Learning},
       Url={https://arxiv.org/pdf/2311.01544}
+}
+
+@misc{kohaut2024hybrid,
+  anote={./images/promis_routing.png},
+  title={Hybrid Many-Objective Optimization in Probabilistic Mission Design for Compliant and Effective UAV Routing},
+  author={Simon Kohaut and Nikolas Hohmann and Sebastian Brulin and Benedict Flade and Julian Eggert and Markus Olhofer and J{\"u}rgen Adamy and Devendra Singh Dhami and Kristian Kersting},
+  journal={arXiv preprint arXiv:2412.18514},
+  year={2024},
+  keywords={Unmanned Aerial Vehicles, Many-Objective Optimization, Routing, Neuro-Symbolic Systems}
+}
+
+@misc{kohaut2024constitutional,
+  anote={./images/cofi.png},
+  title={The Constitutional Filter},
+  author={Simon Kohaut and Felix Divo and Benedict Flade and Devendra Singh Dhami and Julian Eggert and Kristian Kersting},
+  journal={arXiv preprint arXiv:2412.18347},
+  year={2024},
+  keywords={Neuro-Symbolic Systems, Bayesian Filters}
+}
+
+@inproceedings{kohaut2024star,
+  anote={./images/star_map.png},
+  title={StaR Maps: Unveiling Uncertainty in Geospatial Relations},
+  author={Simon Kohaut and Benedict Flade and Julian Eggert and Devendra Singh Dhami and Kristian Kersting},
+  booktitle={2024 IEEE 27th International Conference on Intelligent Transportation Systems (ITSC)},
+  year={2024},
+  keywords={Statistical Relational AI, Probabilistic Logic, Navigation}
 }
 
 @inproceedings{kohaut2024icuas,
@@ -608,6 +967,7 @@ We formalize the teacher selection process in the action advice setting as a mul
   pages={},
   issn={},
   doi={},
+  url={}
 }
 
 
@@ -626,6 +986,7 @@ We formalize the teacher selection process in the action advice setting as a mul
   pages={},
   issn={},
   doi={},
+  url={}
 }
 
 @article{otto2024mlst,
@@ -681,6 +1042,7 @@ keywords={Adversarial Attack, Linear Programs, Causal Link, Structural Causal Mo
   pages={},
   issn={},
   doi={},
+  url={}
 }
 
 @article{ochs2024remote,
@@ -979,7 +1341,7 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
   year         = {2023},
   Url          = {https://openreview.net/pdf?id=xBhvMu4J03},
   booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
-  Note = {Structural causal models (SCMs) are a powerful tool for understanding the complex causal relationships that underlie many real-world systems. As these systems grow in size, the number of variables and complexity of interactions between them does, too. Thus, becoming convoluted and difficult to analyze. This is particularly true in the context of machine learning and artificial intelligence, where an ever increasing amount of data demands for new methods to simplify and compress large scale SCM. While methods for marginalizing and abstracting SCM already exist today, they may destroy the causality of the marginalized model. To alleviate this, we introduce the concept of consolidating causal mechanisms to transform large-scale SCM while preserving consistent interventional behaviour. We show consolidation is a powerful method for simplifying SCM, discuss reduction of computational complexity and give a perspective on generalizing abilities of consolidated SCM.}
+  booktitle = {Structural causal models (SCMs) are a powerful tool for understanding the complex causal relationships that underlie many real-world systems. As these systems grow in size, the number of variables and complexity of interactions between them does, too. Thus, becoming convoluted and difficult to analyze. This is particularly true in the context of machine learning and artificial intelligence, where an ever increasing amount of data demands for new methods to simplify and compress large scale SCM. While methods for marginalizing and abstracting SCM already exist today, they may destroy the causality of the marginalized model. To alleviate this, we introduce the concept of consolidating causal mechanisms to transform large-scale SCM while preserving consistent interventional behaviour. We show consolidation is a powerful method for simplifying SCM, discuss reduction of computational complexity and give a perspective on generalizing abilities of consolidated SCM.}
 }
 
 @inproceedings{bellagente2023multifusion,
@@ -1050,12 +1412,11 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
 }
 
 
-@inproceedings{brack2023distilling,
+@incollection{brack2023distilling,
       Anote = {./images/brack2023distilling.png},
       title={Distilling Adversarial Prompts from Safety Benchmarks: Report for the Adversarial Nibbler Challenge},
       author={Manuel Brack and Patrick Schramowski and Kristian Kersting},
-      booktitle = {Proceedings of the ART of Safety: Workshop on Adversarial testing and Red-Teaming for generative AI},
-      publisher = {Association for Computational Linguistics},
+      booktitle = {Working Notes of the AACL Workshop on the ART of Safety (ARTS): Workshop on Adversarial testing and Red-Teaming for generative AI},
       year = {2023},
       Note = {Text-conditioned image generation models have recently achieved astonishing image quality and alignment results. Consequently, they are employed in a fast-growing number of applications. Since they are highly data-driven, relying on billion-sized datasets randomly scraped from the web, they also produce unsafe content. As a contribution to the Adversarial Nibbler challenge, we distill a large set of over 1,000 potential adversarial inputs from existing safety benchmarks. Our analysis of the gathered prompts and corresponding images demonstrates the fragility of input filters and provides further insights into systematic safety issues in current generative image models.},
       Pages = {},
@@ -1237,6 +1598,7 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
     url = {./papers/delfosse2023ecml.pdf},
     Keywords = {Object Continuity, Object-Centric Deep Learning, Reinforcement Learning, Motion Supervision},
     booktitle={Proceedings of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)},
+    Url={}
 }
 
 
@@ -1295,6 +1657,7 @@ study and demonstrate the importance of the features and the causal independence
 }
 
 @inproceedings{haemmerl2023fofindingsACL,
+  url = {./papers/haemmerl2023fofindingsACL.pdf},
   author = {Katharina Hämmerl and Bjoern Deiseroth and Patrick Schramowski and Jindřich Libovický and Constantin Rothkopf and Alexander Fraser and Kristian Kersting },
   title = {Speaking Multiple Languages Affects the Moral Bias of Language Models},
   Anote = {./images/haemmerl2023fofindingsACL.png},
@@ -3510,6 +3873,7 @@ of our approach},
         Url = {./papers/shao2020infspek_argML.pdf},
         Volume = {},
         number = {},
+        Pages = {},
         Year = {2020},
     }
 
@@ -3776,6 +4140,7 @@ accurate inference in the order of seconds for medium-sized SPNs.},
              collections of bipartite matrices which represent how players’ interests and behaviors change over time. Extensive online bucket
              type tests during the ongoing operation of a commercial game reveal that our system is able to recommend more engaging quests and to
              retain more players than previous handcrafted or collaborative filtering approaches.},
+             Pages = {},
              Publisher = {},
              Title = {Matrix‑ and Tensor Factorization for Game Content Recommendation},
              Url = {https://link.springer.com/article/10.1007/s13218-019-00620-2},
@@ -7216,7 +7581,7 @@ more compact, and hence more efficient to solve.},
   	Year = {2010},
   	Bdsk-Url-1 = {./papers/kdml10jawad.pdf}}
 
-  @incollection{ahmadi2010lifted_
+  @incollection{ahmadi2010lifted,
   	Author = {Babak Ahmadi and Kristian Kersting and Fabian Hadiji},
   	Booktitle = {Working Notes of the Lernen, Wissen, Adaptivit{\"a}t (LWA) Workshop},
   	Keywords = {Statistical Relational AI, Lifted Inference, High-order Marginal, Belief Propagation},
@@ -7772,7 +8137,7 @@ more compact, and hence more efficient to solve.},
   	Year = {2006},
   	Bdsk-Url-1 = {./papers/kersting2006unbiased.pdf}}
 
-  @incollection{karwath2006relational_,
+  @incollection{karwath2006relational,
   	Author = {Andreas Karwath and Kristian Kersting},
   	Booktitle = {Working Notes of the International Workshop on Mining and Learning with Graphs (MLG)},
   	Keywords = {Statistical Relational Learning, Complex Sequences, Alignment, Sequence Logos},

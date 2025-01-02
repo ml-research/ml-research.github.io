@@ -11,7 +11,7 @@ shareButton.addEventListener('click', event => {
     })
     .catch(console.error);
     } else {
-        shareDialog.classList.add('is-open');
+      shareDialog.classList.add('is-open');
     }
 });
 
