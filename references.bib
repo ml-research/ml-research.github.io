@@ -10,11 +10,21 @@
     publisher = {Association for Computational Linguistics},
     url = {https://aclanthology.org/2024.wmt-1.23/},
     Anote={./images/avramidis2024occiglot.svg},
+    Keywords={LLM training, LLM, Multilingual},
     abstract = {This document describes the submission of the very first version of the Occiglot open-source large language model to the General MT Shared Task of the 9th Conference of Machine Translation (WMT24). Occiglot is an open-source, community-based LLM based on Mistral-7B, which went through language-specific continual pre-training and subsequent instruction tuning, including instructions relevant to machine translation.We examine the automatic metric scores for translating the WMT24 test set and provide a detailed linguistically-motivated analysis.Despite Occiglot performing worse than many of the other system submissions, we observe that it performs better than Mistral7B, which has been based upon, which indicates the positive effect of the language specific continual-pretraining and instruction tuning. We see the submission of this very early version of the model as a motivation to unite community forces and pursue future LLM research on the translation task.}
 }
 
 
 @inproceedings{brack2024communityoscar,
+      title={Community OSCAR: A Community Effort for Multilingual Web Data},
+      author={Manuel Brack and Malte Ostendorff and Pedro Ortiz Suarez and José Javier Saiz and Iñaki Lacunza Castilla and Jorge Palomar-Giner and Patrick Schramowski and Georg Rehm and Marta Villegas and Kristian Kersting},
+      year={2024},
+      booktitle={Proceedings of the Fourth Workshop on Multilingual Representation Learning (MRL 2024)},
+      Keywords={Large-scale Data, Dataset, LLM training, LLM, Multilingual},
+      Note={The development of large language models (LLMs) relies heavily on extensive, high-quality datasets. Publicly available datasets focus predominantly on English, leaving other language communities behind. To address this issue, we introduce Community OSCAR, a multilingual dataset initiative designed to address the gap between English and non-English data availability. Through a collective effort, Community OSCAR covers over 150 languages with 45 billion documents, totaling over 345 TiB of data. Initial results indicate that Community OSCAR provides valuable raw data for training LLMs and enhancing the performance of multilingual models. This work aims to contribute to the ongoing advancements in multilingual NLP and to support a more inclusive AI ecosystem by making high-quality, multilingual data more accessible to those working with low-resource languages.},
+      Anote={./images/brack2024communityoscar.png},
+      url={https://occiglot.eu/papers/Community_Oscar.pdf}
+}
 
 @incollection{willig2024systems,
   Anote = {./images/willig2024systems.png},
@@ -27,12 +37,12 @@
   Keywords = {Meta-Causality, Meta-Causal Reasoning, Agent Behavior, System Dynamics}
 }
 
-@incollection{helff2024llavaguard,
+@inproceedings{helff2024llavaguard,
 	Anote={./images/llavaguard_pipe.png},
 	title={LLAVAGUARD: VLM-based Safeguard for Vision Dataset Curation and Safety Assessment},
 	author={Lukas Helff and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting},
 	year={2024},
-	booktitle={Working Notes of the NeurIPS 2024 Workshop on Responsibly Building the Next Generation of Multimodal Foundational Models (RBFM) and Working Notes of the CVPR 2024 Workshop on Responsible Generative AI (ReGenAI)},
+	booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops and Working Notes of the NeurIPS 2024 Workshop on Responsibly Building the Next Generation of Multimodal Foundational Models (RBFM)},
 	url={https://arxiv.org/abs/2406.05113},
 	Note = {We introduce LlavaGuard, a family of multimodal safeguard models based on Llava, offering a robust framework for evaluating the safety compliance of vision datasets and models. Our models come with a new taxonomy designed for assessing safety risks within visual data. With this safety taxonomy, we have collected and annotated a high-quality dataset to guide Vision-Language Models (VLMs) in safety. We present models in two sizes, namely LlavaGuard-7b and LlavaGuard-13b, both safety-tuned on our novel, annotated dataset to perform policy-based safety assessments of visual content. In this context, LlavaGuard goes beyond binary safety classification by providing information on the violated safety categories, a detailed explanation, and a final assessment. In our evaluations, our models demonstrate state-of-the-art performance with LlavaGuard-13b exhibiting the best results, while the much smaller LlavaGuard-7b model outperforms the much larger Llava-34b baseline. Furthermore, LlavaGuard is designed to allow for customization of the safety taxonomy to align with specific use cases, facilitating zero-shot prompting with individual policies for tailored content moderation},
   Key = {Best Runner-Up Paper Award at RBFM 2024},
@@ -191,12 +201,12 @@ Keywords = {Multilingual, Red Teaming, Large Language Models, AI Safety, Benchma
   note = {The field of artificial intelligence (AI) has experienced remarkable progress in recent years, driven by the widespread adoption of open-source machine learning models in both research&nbsp;and industry. Considering the resource-intensive nature of training&nbsp;on vast datasets, many applications opt for models that have already been trained. Hence, a small number of key players undertake&nbsp;the responsibility of training and publicly releasing large pre-trained models, providing a crucial foundation for a wide range&nbsp;of applications. However, the adoption of these open-source models carries inherent privacy and security risks that are&nbsp;often overlooked. To provide a concrete example, an inconspicuous&nbsp;model may conceal hidden functionalities that, when triggered by specific input patterns, can manipulate the behavior of the system, such&nbsp;as instructing self-driving cars to ignore the presence of&nbsp;other vehicles. The implications of successful privacy and security attacks encompass a broad spectrum, ranging from relatively&nbsp;minor damage like service interruptions to highly alarming scenarios, including physical harm or the exposure of sensitive user data.&nbsp;In this work, we present a comprehensive overview of common privacy&nbsp;and security threats associated with the use of open-source models.&nbsp;By raising awareness of these dangers, we strive to promote&nbsp;the responsible and secure use of AI systems.},
 }
 
-@misc{haerle2024scarsparseconditionedautoencoders,
+@incollection{haerle2024scarsparseconditionedautoencoders,
       anote={./images/haerle2024scar.png},
       title={SCAR: Sparse Conditioned Autoencoders for Concept Detection and Steering in LLMs},
       author={Ruben Härle and Felix Friedrich and Manuel Brack and Björn Deiseroth and Patrick Schramowski and Kristian Kersting},
       year={2024},
-      Howpublished={arXiv preprint arXiv:2411.07122},
+      Booktitle={Workshop on Socially Responsible Language Modelling Research (SoLaR) at NeurIPS},
       url={https://arxiv.org/pdf/2411.07122},
       Keywords = {Large Language Models, Concept Steering, Sparse Autoencoder, AI Safety, SAEs, Mechanistic Interpretability},
       Note = {Large Language Models (LLMs) have demonstrated remarkable capabilities in generating human-like text, but their output may not be aligned with the user or even produce harmful content.
@@ -358,17 +368,7 @@ reasoning and machine cognition, and highlight the ongoing need for innovation i
   note={Being a ubiquitous aspect of human cognition, causality has made its way into modern-day machine-learning research. Despite its importance in real-world applications, contemporary research still struggles with high-dimensional causal problems. Leveraging the efficiency of probabilistic circuits, which offer tractable computation of marginal probabilities, we introduce net, a probabilistic model designed for large-scale causal inference. net is a type of sum-product network where layering and the einsum operation allow for efficient parallelization. By incorporating interventional data into the learning process, the model can learn the effects of interventions and make predictions based on the specific interventional setting. Overall, net is a causal probabilistic circuit that efficiently answers causal queries in large-scale problems. We present evaluations conducted on both synthetic data and a substantial real-world dataset.}
 }
 
-@misc{brack2024communityoscar,
-      title={Community OSCAR: A Community Effort for Multilingual Web Data},
-      author={Manuel Brack and Malte Ostendorff and Pedro Ortiz Suarez and José Javier Saiz and Iñaki Lacunza Castilla and Jorge Palomar-Giner and Patrick Schramowski and Georg Rehm and Marta Villegas and Kristian Kersting},
-      year={2024},
-      booktitle = {Proceedings of the Fourth Workshop on Multilingual Representation Learning (MRL 2024)},
-      publisher = {Association for Computational Linguistics},
-      Keywords={Large-scale Data, Dataset, LLM training},
-      Note={The development of large language models (LLMs) relies heavily on extensive, high-quality datasets. Publicly available datasets focus predominantly on English, leaving other language communities behind. To address this issue, we introduce Community OSCAR, a multilingual dataset initiative designed to address the gap between English and non-English data availability. Through a collective effort, Community OSCAR covers over 150 languages with 45 billion documents, totaling over 345 TiB of data. Initial results indicate that Community OSCAR provides valuable raw data for training LLMs and enhancing the performance of multilingual models. This work aims to contribute to the ongoing advancements in multilingual NLP and to support a more inclusive AI ecosystem by making high-quality, multilingual data more accessible to those working with low-resource languages.},
-      Anote={./images/brack2024communityoscar.png},
-      url={https://occiglot.eu/papers/Community_Oscar.pdf},
-}
+
 
 @article{shindo2024neumann,
   Anote={./images/shindo2023neumann.png},
@@ -394,17 +394,6 @@ reasoning and machine cognition, and highlight the ongoing need for innovation i
       url={https://www.aiml.informatik.tu-darmstadt.de/papers/brack2024unleashing.pdf},
 }
 
-@inproceedings{deiseroth2024tfree,
-      title={T-FREE: Tokenizer-Free Generative LLMs via Sparse Representations for Memory-Efficient Embeddings},
-      author={Björn Deiseroth and Manuel Brack and Patrick Schramowski and Kristian Kersting and Samuel Weinbach},
-      year={2024},
-      booktitle={Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)},
-      Keywords={Large Language Models, Tokenizers, Sparse Representations, Memory-Efficient Embeddings},
-      Note={Tokenizers are crucial for encoding information in Large Language Models, but their development has recently stagnated, and they contain inherent weaknesses. Major limitations include computational overhead, ineffective vocabulary use, and unnecessarily large embedding and head layers. Additionally, their performance is biased towards a reference corpus, leading to reduced effectiveness for underrepresented languages.
-To remedy these issues, we propose T-FREE, which directly embeds words through sparse activation patterns over character triplets, and does not require a reference corpus. T-FREE inherently exploits morphological similarities and allows for strong compression of embedding layers. In our exhaustive experimental evaluation, we achieve competitive downstream performance with a parameter reduction of more than 85% on these layers. Further, T-FREE shows significant improvements in cross-lingual transfer learning.},
-      Anote={./images/deiseroth2024tfree.png},
-      url={https://arxiv.org/abs/2406.19223},
-}
 
 @article{friedrich2024fair,
       Anote = {./images/ffriedrich_fair_2023.png},
@@ -686,17 +675,6 @@ Keywords = {Automated ML, Time Series Forecasting, Neural Architecture Search, W
     Url = {},
     Crossref = {},
     Year = {2024}
-}
-
-@incollection{helff2024llavaguard,
-	Anote={./images/llavaguard_pipe.png},
-	title={LLAVAGUARD: VLM-based Safeguard for Vision Dataset Curation and Safety Assessment},
-	author={Lukas Helff and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting},
-	year={2024},
-	booktitle={Working Notes of the CVPR 2024 Workshop on Responsible Generative AI (ReGenAI), preprint at arxiv:2406.05113},
-	url={https://arxiv.org/abs/2406.05113},
-	Note = {We introduce LlavaGuard, a family of multimodal safeguard models based on Llava, offering a robust framework for evaluating the safety compliance of vision datasets and models. Our models come with a new taxonomy designed for assessing safety risks within visual data. With this safety taxonomy, we have collected and annotated a high-quality dataset to guide Vision-Language Models (VLMs) in safety. We present models in two sizes, namely LlavaGuard-7b and LlavaGuard-13b, both safety-tuned on our novel, annotated dataset to perform policy-based safety assessments of visual content. In this context, LlavaGuard goes beyond binary safety classification by providing information on the violated safety categories, a detailed explanation, and a final assessment. In our evaluations, our models demonstrate state-of-the-art performance with LlavaGuard-13b exhibiting the best results, while the much smaller LlavaGuard-7b model outperforms the much larger Llava-34b baseline. Furthermore, LlavaGuard is designed to allow for customization of the safety taxonomy to align with specific use cases, facilitating zero-shot prompting with individual policies for tailored content moderation},
-Keywords = {AI Safety, Safety Evaluation, Multimodal, Vision Language Model}
 }
 
 
