@@ -1,8 +1,25 @@
-@misc{brack2024communityoscar,
+@inproceedings{avramidis2024occiglot,
+    title = {Occiglot at {WMT}24: {E}uropean Open-source Large Language Models Evaluated on Translation},
+    author = {Eleftherios Avramidis and Annika Grützner-Zahn and Manuel Brack and Patrick Schramowski and Pedro Ortiz Suarez and Malte Ostendorff and Fabio Barth and Shushen Manakhimova and Vivien Macketanz and Georg Rehm and Kristian Kersting},
+    editor = {Haddow, Barry  and
+      Kocmi, Tom  and
+      Koehn, Philipp  and
+      Monz, Christof},
+    booktitle = {Proceedings of the Ninth Conference on Machine Translation},
+    year = {2024},
+    publisher = {Association for Computational Linguistics},
+    url = {https://aclanthology.org/2024.wmt-1.23/},
+    Anote={./images/avramidis2024occiglot.svg},
+    abstract = {This document describes the submission of the very first version of the Occiglot open-source large language model to the General MT Shared Task of the 9th Conference of Machine Translation (WMT24). Occiglot is an open-source, community-based LLM based on Mistral-7B, which went through language-specific continual pre-training and subsequent instruction tuning, including instructions relevant to machine translation.We examine the automatic metric scores for translating the WMT24 test set and provide a detailed linguistically-motivated analysis.Despite Occiglot performing worse than many of the other system submissions, we observe that it performs better than Mistral7B, which has been based upon, which indicates the positive effect of the language specific continual-pretraining and instruction tuning. We see the submission of this very early version of the model as a motivation to unite community forces and pursue future LLM research on the translation task.}
+}
+
+
+@inproceedings{brack2024communityoscar,
       title={Community OSCAR: A Community Effort for Multilingual Web Data},
       author={Manuel Brack and Malte Ostendorff and Pedro Ortiz Suarez and José Javier Saiz and Iñaki Lacunza Castilla and Jorge Palomar-Giner and Patrick Schramowski and Georg Rehm and Marta Villegas and Kristian Kersting},
       year={2024},
-      Howpublished={preprint},
+      booktitle = {Proceedings of the Fourth Workshop on Multilingual Representation Learning (MRL 2024)},
+      publisher = {Association for Computational Linguistics},
       Keywords={Large-scale Data, Dataset, LLM training},
       Note={The development of large language models (LLMs) relies heavily on extensive, high-quality datasets. Publicly available datasets focus predominantly on English, leaving other language communities behind. To address this issue, we introduce Community OSCAR, a multilingual dataset initiative designed to address the gap between English and non-English data availability. Through a collective effort, Community OSCAR covers over 150 languages with 45 billion documents, totaling over 345 TiB of data. Initial results indicate that Community OSCAR provides valuable raw data for training LLMs and enhancing the performance of multilingual models. This work aims to contribute to the ongoing advancements in multilingual NLP and to support a more inclusive AI ecosystem by making high-quality, multilingual data more accessible to those working with low-resource languages.},
       Anote={./images/brack2024communityoscar.png},
@@ -22,22 +39,22 @@
   Crossref={https://sites.google.com/view/neumann-tuda}
 }
 
-@misc{brack2024unleashing,
+@incollection{brack2024unleashing,
       title={Unleashing Creativity: Generalizing Semantic Control for Text-to-Image Diffusion Models},
       author={Manuel Brack and Marlon May and Linoy Tsaban and Felix Friedrich and Patrick Schramowski and Apolinaros Passos and Kristian Kersting },
       year={2024},
-      Howpublished={preprint},
+      Booktitle={Working Notes of the 19th Women in Machine Learning Workshop at NeurIPS},
       Keywords={Text-to-Image Synthesis, Text-Guided Image Generation, SEGA, Semantic Control, Diffusion Transformers},
       Note={The recent surge in popularity of text-to-image diffusion models (DMs) can largely be attributed to the versatile, expressive, and intuitive user interfaces provided through textual prompts. These models enable inexperienced people to explore artistic ventures easily and provide exciting new opportunities to experienced artists. However, the semantic control offered through text prompts alone is limited and rather fragile, and overall lacks the fine granularity necessary for creative applications. The majority of methods addressing this issue are restricted to specific DM architectures, severely limiting the creative workflow instead of generalizing it to arbitrary models. In contrast, we demonstrate that semantic guidance (SEGA) generalizes to any DM architecture. Importantly, SEGA is natively compatible with state-of-the-art diffusion transformers. Our empirical results show strong model-agnostic performance, and we highlight new creative possibilities enabled by SEGA, such as enhanced typographic manipulations. This work underscores SEGA’s potential to provide consistent, high-quality semantic guidance in a rapidly evolving generative model landscape.},
       Anote={./images/brack2024unleashing.png},
-      url={https://www.aiml.informatik.tu-darmstadt.de/papers/brack2024unleashing.pdf}},
+      url={https://www.aiml.informatik.tu-darmstadt.de/papers/brack2024unleashing.pdf},
 }
 
-@misc{deiseroth2024tfree,
+@inproceedings{deiseroth2024tfree,
       title={T-FREE: Tokenizer-Free Generative LLMs via Sparse Representations for Memory-Efficient Embeddings},
       author={Björn Deiseroth and Manuel Brack and Patrick Schramowski and Kristian Kersting and Samuel Weinbach},
       year={2024},
-      Howpublished={arXiv preprint arXiv:2406.19223},
+      booktitle={Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)},
       Keywords={Large Language Models, Tokenizers, Sparse Representations, Memory-Efficient Embeddings},
       Note={Tokenizers are crucial for encoding information in Large Language Models, but their development has recently stagnated, and they contain inherent weaknesses. Major limitations include computational overhead, ineffective vocabulary use, and unnecessarily large embedding and head layers. Additionally, their performance is biased towards a reference corpus, leading to reduced effectiveness for underrepresented languages.
 To remedy these issues, we propose T-FREE, which directly embeds words through sparse activation patterns over character triplets, and does not require a reference corpus. T-FREE inherently exploits morphological similarities and allows for strong compression of embedding layers. In our exhaustive experimental evaluation, we achieve competitive downstream performance with a parameter reduction of more than 85% on these layers. Further, T-FREE shows significant improvements in cross-lingual transfer learning.},
@@ -339,12 +356,12 @@ Keywords = {Automated ML, Time Series Forecasting, Neural Architecture Search, W
     Year = {2024}
 }
 
-@incollection{helff2024llavaguard,
+@inproceedings{helff2024llavaguard,
 	Anote={./images/llavaguard_pipe.png},
 	title={LLAVAGUARD: VLM-based Safeguard for Vision Dataset Curation and Safety Assessment},
 	author={Lukas Helff and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting},
 	year={2024},
-	booktitle={Working Notes of the CVPR 2024 Workshop on Responsible Generative AI (ReGenAI), preprint at arxiv:2406.05113},
+	booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
 	url={https://arxiv.org/abs/2406.05113},
 	Note = {We introduce LlavaGuard, a family of multimodal safeguard models based on Llava, offering a robust framework for evaluating the safety compliance of vision datasets and models. Our models come with a new taxonomy designed for assessing safety risks within visual data. With this safety taxonomy, we have collected and annotated a high-quality dataset to guide Vision-Language Models (VLMs) in safety. We present models in two sizes, namely LlavaGuard-7b and LlavaGuard-13b, both safety-tuned on our novel, annotated dataset to perform policy-based safety assessments of visual content. In this context, LlavaGuard goes beyond binary safety classification by providing information on the violated safety categories, a detailed explanation, and a final assessment. In our evaluations, our models demonstrate state-of-the-art performance with LlavaGuard-13b exhibiting the best results, while the much smaller LlavaGuard-7b model outperforms the much larger Llava-34b baseline. Furthermore, LlavaGuard is designed to allow for customization of the safety taxonomy to align with specific use cases, facilitating zero-shot prompting with individual policies for tailored content moderation},
 Keywords = {AI Safety, Safety Evaluation, Multimodal, Vision Language Model}
@@ -591,7 +608,6 @@ We formalize the teacher selection process in the action advice setting as a mul
   pages={},
   issn={},
   doi={},
-  url={}
 }
 
 
@@ -610,7 +626,6 @@ We formalize the teacher selection process in the action advice setting as a mul
   pages={},
   issn={},
   doi={},
-  url={}
 }
 
 @article{otto2024mlst,
@@ -666,7 +681,6 @@ keywords={Adversarial Attack, Linear Programs, Causal Link, Structural Causal Mo
   pages={},
   issn={},
   doi={},
-  url={}
 }
 
 @article{ochs2024remote,
@@ -965,7 +979,7 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
   year         = {2023},
   Url          = {https://openreview.net/pdf?id=xBhvMu4J03},
   booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
-  booktitle = {Structural causal models (SCMs) are a powerful tool for understanding the complex causal relationships that underlie many real-world systems. As these systems grow in size, the number of variables and complexity of interactions between them does, too. Thus, becoming convoluted and difficult to analyze. This is particularly true in the context of machine learning and artificial intelligence, where an ever increasing amount of data demands for new methods to simplify and compress large scale SCM. While methods for marginalizing and abstracting SCM already exist today, they may destroy the causality of the marginalized model. To alleviate this, we introduce the concept of consolidating causal mechanisms to transform large-scale SCM while preserving consistent interventional behaviour. We show consolidation is a powerful method for simplifying SCM, discuss reduction of computational complexity and give a perspective on generalizing abilities of consolidated SCM.}
+  Note = {Structural causal models (SCMs) are a powerful tool for understanding the complex causal relationships that underlie many real-world systems. As these systems grow in size, the number of variables and complexity of interactions between them does, too. Thus, becoming convoluted and difficult to analyze. This is particularly true in the context of machine learning and artificial intelligence, where an ever increasing amount of data demands for new methods to simplify and compress large scale SCM. While methods for marginalizing and abstracting SCM already exist today, they may destroy the causality of the marginalized model. To alleviate this, we introduce the concept of consolidating causal mechanisms to transform large-scale SCM while preserving consistent interventional behaviour. We show consolidation is a powerful method for simplifying SCM, discuss reduction of computational complexity and give a perspective on generalizing abilities of consolidated SCM.}
 }
 
 @inproceedings{bellagente2023multifusion,
@@ -1036,11 +1050,12 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
 }
 
 
-@incollection{brack2023distilling,
+@inproceedings{brack2023distilling,
       Anote = {./images/brack2023distilling.png},
       title={Distilling Adversarial Prompts from Safety Benchmarks: Report for the Adversarial Nibbler Challenge},
       author={Manuel Brack and Patrick Schramowski and Kristian Kersting},
-      booktitle = {Working Notes of the AACL Workshop on the ART of Safety (ARTS): Workshop on Adversarial testing and Red-Teaming for generative AI},
+      booktitle = {Proceedings of the ART of Safety: Workshop on Adversarial testing and Red-Teaming for generative AI},
+      publisher = {Association for Computational Linguistics},
       year = {2023},
       Note = {Text-conditioned image generation models have recently achieved astonishing image quality and alignment results. Consequently, they are employed in a fast-growing number of applications. Since they are highly data-driven, relying on billion-sized datasets randomly scraped from the web, they also produce unsafe content. As a contribution to the Adversarial Nibbler challenge, we distill a large set of over 1,000 potential adversarial inputs from existing safety benchmarks. Our analysis of the gathered prompts and corresponding images demonstrates the fragility of input filters and provides further insights into systematic safety issues in current generative image models.},
       Pages = {},
@@ -1222,7 +1237,6 @@ keywords={Gradient Boosting, Fairness, Priviledged Information, Machine Learning
     url = {./papers/delfosse2023ecml.pdf},
     Keywords = {Object Continuity, Object-Centric Deep Learning, Reinforcement Learning, Motion Supervision},
     booktitle={Proceedings of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)},
-    Url={}
 }
 
 
@@ -1281,7 +1295,6 @@ study and demonstrate the importance of the features and the causal independence
 }
 
 @inproceedings{haemmerl2023fofindingsACL,
-  url = {./papers/haemmerl2023fofindingsACL.pdf},
   author = {Katharina Hämmerl and Bjoern Deiseroth and Patrick Schramowski and Jindřich Libovický and Constantin Rothkopf and Alexander Fraser and Kristian Kersting },
   title = {Speaking Multiple Languages Affects the Moral Bias of Language Models},
   Anote = {./images/haemmerl2023fofindingsACL.png},
@@ -3497,7 +3510,6 @@ of our approach},
         Url = {./papers/shao2020infspek_argML.pdf},
         Volume = {},
         number = {},
-        Pages = {},
         Year = {2020},
     }
 
@@ -3764,7 +3776,6 @@ accurate inference in the order of seconds for medium-sized SPNs.},
              collections of bipartite matrices which represent how players’ interests and behaviors change over time. Extensive online bucket
              type tests during the ongoing operation of a commercial game reveal that our system is able to recommend more engaging quests and to
              retain more players than previous handcrafted or collaborative filtering approaches.},
-             Pages = {},
              Publisher = {},
              Title = {Matrix‑ and Tensor Factorization for Game Content Recommendation},
              Url = {https://link.springer.com/article/10.1007/s13218-019-00620-2},
@@ -7205,7 +7216,7 @@ more compact, and hence more efficient to solve.},
   	Year = {2010},
   	Bdsk-Url-1 = {./papers/kdml10jawad.pdf}}
 
-  @incollection{ahmadi2010lifted,
+  @incollection{ahmadi2010lifted_
   	Author = {Babak Ahmadi and Kristian Kersting and Fabian Hadiji},
   	Booktitle = {Working Notes of the Lernen, Wissen, Adaptivit{\"a}t (LWA) Workshop},
   	Keywords = {Statistical Relational AI, Lifted Inference, High-order Marginal, Belief Propagation},
@@ -7761,7 +7772,7 @@ more compact, and hence more efficient to solve.},
   	Year = {2006},
   	Bdsk-Url-1 = {./papers/kersting2006unbiased.pdf}}
 
-  @incollection{karwath2006relational,
+  @incollection{karwath2006relational_,
   	Author = {Andreas Karwath and Kristian Kersting},
   	Booktitle = {Working Notes of the International Workshop on Mining and Learning with Graphs (MLG)},
   	Keywords = {Statistical Relational Learning, Complex Sequences, Alignment, Sequence Logos},
