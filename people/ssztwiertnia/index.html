@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sebastian Sztwiertnia</title>
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" media="screen">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet" media="screen">
+
+    <link href="../../css/style.css" rel="stylesheet">
+
+
+</head>
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="65">
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+        <a class="navbar-brand" href="#">Sebastian Sztwiertnia</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#mission">Mission and Bio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#publications">Publications</a>
+                </li>
+                <!--li class="nav-item">
+                    <a class="nav-link" href="#activities">Activities</a>
+                </li-->
+                <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">ML@TUDA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#legal">Legal Info</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+
+
+<main role="main">
+    <br><br><br>
+    <div class="container" id="mission">
+
+        <div class="row">
+            <div class="col-md-2">
+                <img src="profile-thumbnail.jpg" class=" rounded-circle imgme" style="height:120px;">
+            </div>
+
+            <div class="col-md-6">
+                <div id="htname">Sebastian Sztwiertnia</div>
+                <div id="htem">AI/ML Group, Computer Science Department, TU Darmstadt.
+                    Hochschulstrasse 1, Room S1|03 075, 64289 Darmstadt, Germany
+                    <br><img src="./../../images/mail.jpg" style="height:15px"> sebastian (dot) sztwiertnia (at) tu-darmstadt (dot) de
+                </div>
+            </div>
+              <div style="float: right">
+              <a href="https://www.tu-darmstadt.de" target="_blank"> <img class="img-fluid"
+                                                                    src="./../../images/tud_weblogo.svg"
+                                                                    style="margin: 19px 10px 10px 10px;height:75px"></a>
+            </div>
+        </div>
+	<br><br>
+	<!-- <b>News.</b>
+	<br><br> -->
+    <b>Mission.</b> My current research focuses on explainable AI, with particular attention to neuro-symbolic AI, reinforcement learning, and large language models.
+    <br><br> 
+
+    <br>
+    
+    <b>Timeline.</b>
+    <TABLE BORDER="0" width="100%" id="awards">
+        <col width="120px">
+        <TR>
+            <TD><span class="t2when"> 2024 - now:</span></TD>
+            <TD><span class="t2where"> Ph.D. student at the Machine Learning Lab, <a
+                        href="https://www.informatik.tu-darmstadt.de/fb20/index.en.jsp" target="_blank">CS Department, TU
+                        Darmstadt</a>, Germany.</span>
+            </TD>
+        </TR>
+        <TR>
+            <TD><span class="t2when">2023</span></TD>
+            <TD><span class="t2where">M.Sc. Computer Science, TU Darmstadt, Germany.</span>
+            </TD>
+        </TR>
+        <TR>
+            <TD><span class="t2when">2018</span></TD>
+            <TD><span class="t2where">B.Sc. Computer Science, TU Darmstadt, Germany.</span>
+            </TD>
+        </TR>
+    </TABLE>
+    <br>
+
+    <hr class="soft">
+
+    <div class="container" id="publications">
+    
+        <h3>Publications</h3>
+    
+        <br>
+        <!-- <div>Publications can be found at <a href="https://dblp.uni-trier.de/" target="_blank">DBLP</a>, <a
+                href="https://scholar.google.com/" target="_blank">GoogleScholar</a>, <a
+                href="https://www.semanticscholar.org/author/" target="_blank">SemanticScholar</a>
+        </div> -->
+        <br>
+    
+        <noscript>
+            <style>
+                #bibtex {
+                    display: block;
+                }
+            </style>
+        </noscript>
+    
+        <table id="pubTable" class="table" style="width:100%" data-paging="false" data-info="false"></table>
+    
+        <br>
+    
+        <pre id="bibtex" style="display:none;">
+    
+    
+            </pre>
+    </div>
+    
+    
+    <br>
+    
+    
+    <hr class="soft">
+   
+</main>
+<footer>
+    <hr class="soft" id="legal">
+
+
+    <div class="container" id="sitefooter" style="height: unset">
+
+        <a href="https://www.informatik.tu-darmstadt.de/impressum.en.jsp">Legal info / Impressum</a>
+        <br><br>
+
+        Technische Universität Darmstadt <br>
+        Fachbereich Informatik <br>
+        Hochschulstr. 1 <br>
+        64289 Darmstadt<br>
+        Germany<br><br>
+
+
+    </div>
+
+</footer>
+
+
+<!-- place js at end for faster loading -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript" src="./../../build/bib-list.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $.get('https://ml-research.github.io/references.bib', function (data) {
+
+            function containsName(bib) {
+                return bib.toLowerCase().includes("sztwiertnia")
+            }
+
+            function replaceImagePath(bib) {
+                return bib.replace("./images/", "../../images/");
+            }
+
+            bibtex = data.split(/(?=@\w+)/u);
+            my_bibtex = bibtex.filter(containsName).map(replaceImagePath);
+            $("#bibtex").html(my_bibtex.join());
+            bibtexify("#bibtex", "pubTable");
+        });
+
+
+    });
+</script>
+
+<script>
+
+    var more_bio_shown = false;
+
+    var more_projects_shown = false;
+
+    var more_pubs_shown = false;
+
+
+    $(document).ready(function () {
+
+
+        $("#showmorebio").click(function () {
+
+            if (!more_bio_shown) {
+
+                $("#morebio").slideDown('fast', function () {
+
+                    $("#showmorebio").text('hide more bio');
+
+                });
+
+                more_bio_shown = true;
+
+            } else {
+
+                $("#morebio").slideUp('fast', function () {
+
+                    $("#showmorebio").text('show more bio');
+
+                });
+
+                more_bio_shown = false;
+
+            }
+
+        });
+
+
+        $("#showmoreprojects").click(function () {
+
+            if (!more_projects_shown) {
+
+                $("#moreprojects").slideDown('fast', function () {
+
+                    $("#showmoreprojects").text('hide');
+
+                });
+
+                more_projects_shown = true;
+
+            } else {
+
+                $("#moreprojects").slideUp('fast', function () {
+
+                    $("#showmoreprojects").text('show more projects');
+
+                });
+
+                more_projects_shown = false;
+
+            }
+
+        });
+
+
+        $("#showmorepubs").click(function () {
+
+            if (!more_pubs_shown) {
+
+                $("#morepubs").slideDown('fast', function () {
+
+                    $("#showmorepubs").text('hide older publications');
+
+                });
+
+                more_pubs_shown = true;
+
+            } else {
+
+                $("#morepubs").slideUp('fast', function () {
+
+                    $("#showmorepubs").text('show older publications');
+
+                });
+
+                more_pubs_shown = false;
+
+            }
+
+        });
+
+
+    });
+
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#nav a").on('click', function (event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+
+            } // End if
+
+        });
+    });
+</script>
+
+
+</body>
+</html>
