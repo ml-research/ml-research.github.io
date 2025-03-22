@@ -1860,8 +1860,10 @@
 
 
             bibtex = data.split(/(?=@\w+)/u);
-                 
-            $("#bibtex").html(data);
+
+          <!--  $("#bibtex").html(data);-->
+            $("#bibtex").html(bibtex);
+ 
             bibtexify("#bibtex", "pubTable");
         });
     });
