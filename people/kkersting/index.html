@@ -1606,8 +1606,12 @@ Germany<br><br>
             my_bibtex = bibtex.filter(containsName).map(replacePaperPath);
             my_bibtex = my_bibtex.map(replaceImagePath);
 
+
+
             $("#bibtex").html(my_bibtex.join());
             bibtexify("#bibtex", "pubTable");
+
+
         });
 
 
