@@ -210,15 +210,14 @@
   Keywords = {Meta-Causality, Meta-Causal Reasoning, Agent Behavior, System Dynamics}
 }
 
-@incollection{helff2024llavaguard,
+@inproceedings{helff2025llavaguard,
 	Anote={./images/llavaguard_pipe.png},
-	title={LLAVAGUARD: VLM-based Safeguard for Vision Dataset Curation and Safety Assessment},
+	title={LlavaGuard: An Open VLM-based Framework for Safeguarding Vision Datasets and Models},
 	author={Lukas Helff and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting},
-	year={2024},
-	booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops and Working Notes of the NeurIPS 2024 Workshop on Responsibly Building the Next Generation of Multimodal Foundational Models (RBFM)},
-	url={https://arxiv.org/abs/2406.05113},
-	Note = {We introduce LlavaGuard, a family of multimodal safeguard models based on Llava, offering a robust framework for evaluating the safety compliance of vision datasets and models. Our models come with a new taxonomy designed for assessing safety risks within visual data. With this safety taxonomy, we have collected and annotated a high-quality dataset to guide Vision-Language Models (VLMs) in safety. We present models in two sizes, namely LlavaGuard-7b and LlavaGuard-13b, both safety-tuned on our novel, annotated dataset to perform policy-based safety assessments of visual content. In this context, LlavaGuard goes beyond binary safety classification by providing information on the violated safety categories, a detailed explanation, and a final assessment. In our evaluations, our models demonstrate state-of-the-art performance with LlavaGuard-13b exhibiting the best results, while the much smaller LlavaGuard-7b model outperforms the much larger Llava-34b baseline. Furthermore, LlavaGuard is designed to allow for customization of the safety taxonomy to align with specific use cases, facilitating zero-shot prompting with individual policies for tailored content moderation},
-  Key = {Best Runner-Up Paper Award at RBFM 2024},
+	year={2025},
+  booktitle={Proceedings of the 41st International Conference on Machine Learning (ICML)},	url={https://arxiv.org/abs/2406.05113},
+	Note = {This paper introduces Llavaguard, a suite of VLM-based vision safeguards that address the critical need for reliable tools in the era of large-scale data and models. To this end, we establish a novel open framework, describing a customizable safety taxonomy, data preprocessing, augmentation, and training setup. For teaching a VLM safeguard on safety, we further create a multimodal safety dataset with high-quality human expert annotations, where each image is labeled with a safety rating, category and rationale. We also employ advanced augmentations to support context-specific assessments. The resulting Llavaguard models, ranging from 0.5B to 7B, serve as a versatile tool for evaluating the safety compliance of visual content against flexible policies. In comprehensive experiments, Llavaguard outperforms both state-of-the-art safeguards and VLMs in accuracy \textit{and} in flexibly handling different policies. Additionally, we demonstrate Llavaguard's performance in two real-world applications: large-scale dataset annotation and moderation of text-to-image models. We make our entire framework publicly available, including the dataset and model weights.},
+  Key = {Best Runner-Up Paper Award at RBFM @ NeurIPS 2024},
   Keywords = {AI Safety, Safety Evaluation, Multimodal, Vision Language Model},
   crossref = {https://ml-research.github.io/human-centered-genai/projects/llavaguard/index.html}
 }
