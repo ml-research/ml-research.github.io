@@ -203,6 +203,10 @@
       <TABLE BORDER="0" width="100%" id="theses">
           <col width="120px">
         <TR>
+            <TD><span class="t2when"> 2025</span></TD>
+            <TD><span class="t2where">Symbolic Input Representations for DRL playing Atari, B.Sc. Thesis </span></TD>
+        </TR>
+        <TR>
             <TD><span class="t2when"> 2024</span></TD>
             <TD><span class="t2where">LSTM-based beampath optimizer for the S-DALINAC, B.Sc. Thesis </span></TD>
         </TR>
@@ -244,6 +248,22 @@
       <b>Supervised Courses and Projects.</b>
       <TABLE BORDER="0" width="100%" id="courses">
         <col width="120px">
+        <TR>
+            <TD><span class="t2when">SoSe 2025 </span></TD>
+            <TD><span class="t2where">JaxTari Lab, Practical Lab, with Quentin Delfosse</span></TD>
+        </TR>
+        <TR>
+            <TD><span class="t2when">WS 2024/25 </span></TD>
+            <TD><span class="t2where">Einführung in die Künstliche Intelligenz, with Prof. Dr. Kristian Kersting, Johannes Czech</span></TD>
+        </TR>
+        <TR>
+            <TD><span class="t2when">WS 2024/25 </span></TD>
+            <TD><span class="t2where">Arcade 2.0, B.Sc.-Praktikum, with Quentin Delfosse</span></TD>
+        </TR>
+        <TR>
+            <TD><span class="t2when">WS 2024/25 </span></TD>
+            <TD><span class="t2where">Object-centric Reinforcement Learning Lab, Practical Lab, with Quentin Delfosse</span></TD>
+        </TR>
         <TR>
             <TD><span class="t2when">WS 2024/25 </span></TD>
             <TD><span class="t2where">Einführung in die Künstliche Intelligenz, with Prof. Dr. Kristian Kersting, Johannes Czech</span></TD>
@@ -437,9 +457,35 @@
 
         $.get('https://ml-research.github.io/references.bib', function (data) {
 
-            function containsName(bib) {
-                return bib.toLowerCase().includes("blueml") || bib.toLowerCase().includes("blüml")
+
+            function normalizeUmlauts(text) {
+                return text.replace("\\\"u", "ü")
             }
+
+            function containsName(bib) {
+                // Try to extract the author field, allowing multiline and nested braces
+                const authorMatch = bib.match(/author\s*=\s*{([\s\S]*?)}/i);
+                if (!authorMatch) {
+                    console.log("No author field found in:", bib);
+                    return false;
+                }
+            
+                let authors = authorMatch[1].toLowerCase();
+            
+                // Normalize LaTeX-style umlauts and common variants
+                // Normalize LaTeX-style umlauts manually
+                authors = authors
+                .replace(/{\"u}/g, "ü");
+
+                console.log("Authors extracted:", authors);
+            
+                // Match any author name with or without umlauts
+                return authors.includes("blüml") || authors.includes("blueml") 
+                    || authors.includes("bl{\\\"u");
+            }
+            
+            
+            
 
             function replaceImagePath(bib) {
                 return bib.replace("./images/", "./../../images/");
@@ -451,6 +497,7 @@
             bibtex = data.split(/(?=@\w+)/u);
             my_bibtex = bibtex.filter(containsName).map(replacePaperPath);
             my_bibtex = my_bibtex.map(replaceImagePath);
+            my_bibtex = my_bibtex.map(normalizeUmlauts);
             $("#bibtex").html(my_bibtex.join());
             bibtexify("#bibtex", "pubTable");
         });
