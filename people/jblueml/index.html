@@ -459,12 +459,18 @@
 
 
             function normalizeUmlauts(text) {
-                return text.replace("\\\"u", "ü")
+                return text.replace(/\\\"a/g, "ä")
+                .replace(/\\\"o/g, "ö")
+                .replace(/\\\"u/g, "ü")
+                .replace(/\\\"A/g, "Ä")
+                .replace(/{\\\"O}/g, "Ö")
+                .replace(/{\\\"U}/g, "Ü")
+                
             }
 
             function containsName(bib) {
                 // Try to extract the author field, allowing multiline and nested braces
-                const authorMatch = bib.match(/author\s*=\s*{([\s\S]*?)}/i);
+                const authorMatch = bib.match(/author\s*=\s*{([\s\S]*?),/i);
                 if (!authorMatch) {
                     console.log("No author field found in:", bib);
                     return false;
@@ -473,15 +479,21 @@
                 let authors = authorMatch[1].toLowerCase();
             
                 // Normalize LaTeX-style umlauts and common variants
-                // Normalize LaTeX-style umlauts manually
                 authors = authors
-                .replace(/{\"u}/g, "ü");
+                .replace(/{\"a}/g, "ä")
+                .replace(/{\"o}/g, "ö")
+                .replace(/{\"u}/g, "ü")
+                .replace(/{\"A}/g, "Ä")
+                .replace(/{\"O}/g, "Ö")
+                .replace(/{\"U}/g, "Ü")
+                .replace(/{\ss}/g, "ß");
+
 
                 console.log("Authors extracted:", authors);
             
                 // Match any author name with or without umlauts
                 return authors.includes("blüml") || authors.includes("blueml") 
-                    || authors.includes("bl{\\\"u");
+                    || authors.includes("bl{\\\"u\}ml");
             }
             
             
