@@ -1,12 +1,3 @@
-%% This BibTeX bibliography file was created using BibDesk.
-%% http://bibdesk.sourceforge.net/
-
-%% Created for Kristian Kersting at 2025-05-09 11:40:33 +0200 
-
-
-%% Saved with string encoding Unicode (UTF-8) 
-
-
 
 @inproceedings{helff2025llavaguard,
 	anote = {./images/llavaguard_pipe.png},
@@ -21,41 +12,43 @@
 	year = {2025},
 	bdsk-url-1 = {https://arxiv.org/abs/2406.05113}}
 
-@inproceedings{wuest2025bongard,
-	anote = {./images/wuest2024bongard.png},
-	author = {W{\"u}st, Antonia and Tobiasch, Tim and Helff, Lukas and Dhami, Devendra S. and Rothkopf, Constantin A. and Kersting, Kristian},
-	booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML)},
-	keywords = {Cognitive Science, Benchmark, Bongrads, Vision-Language Models},
-	note = {Recently, newly developed Vision-Language Models (VLMs), such as OpenAI's o1, have emerged, seemingly demonstrating advanced reasoning capabilities across text and image modalities. However, the depth of these advances in language-guided perception and abstract reasoning remains underexplored, and it is unclear whether these models can truly live up to their ambitious promises. To assess the progress and identify shortcomings, we enter the wonderland of Bongard problems, a set of classic visual reasoning puzzles that require human-like abilities of pattern recognition and abstract reasoning. With our extensive evaluation setup, we show that while VLMs occasionally succeed in identifying discriminative concepts and solving some of the problems, they frequently falter. Surprisingly, even elementary concepts that may seem trivial to humans, such as simple spirals, pose significant challenges. Moreover, when explicitly asked to recognize ground truth concepts, they continue to falter, suggesting not only a lack of understanding of these elementary visual concepts but also an inability to generalize to unseen concepts. We compare the results of VLMs to human performance and observe that a significant gap remains between human visual reasoning capabilities and machine cognition.},
-	title = {Bongard in Wonderland: Visual Puzzles That Still Make AI Go Mad?},
-	url = {https://arxiv.org/abs/2410.19546},
-	year = {2025},
-	bdsk-url-1 = {https://arxiv.org/pdf/2410.19546},
-	bdsk-url-2 = {https://arxiv.org/abs/2410.19546}}
+  @inproceedings{wuest2025bongard,
+  	anote = {./images/wuest2024bongard.png},
+  	author = {W{\"u}st, Antonia and Tobiasch, Tim and Helff, Lukas and Dhami, Devendra S. and Rothkopf, Constantin A. and Kersting, Kristian},
+  	booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML)},
+  	keywords = {Cognitive Science, Benchmark, Bongrads, Vision-Language Models},
+  	note = {Recently, newly developed Vision-Language Models (VLMs), such as OpenAI's o1, have emerged, seemingly demonstrating advanced reasoning capabilities across text and image modalities. However, the depth of these advances in language-guided perception and abstract reasoning remains underexplored, and it is unclear whether these models can truly live up to their ambitious promises. To assess the progress and identify shortcomings, we enter the wonderland of Bongard problems, a set of classic visual reasoning puzzles that require human-like abilities of pattern recognition and abstract reasoning. With our extensive evaluation setup, we show that while VLMs occasionally succeed in identifying discriminative concepts and solving some of the problems, they frequently falter. Surprisingly, even elementary concepts that may seem trivial to humans, such as simple spirals, pose significant challenges. Moreover, when explicitly asked to recognize ground truth concepts, they continue to falter, suggesting not only a lack of understanding of these elementary visual concepts but also an inability to generalize to unseen concepts. We compare the results of VLMs to human performance and observe that a significant gap remains between human visual reasoning capabilities and machine cognition.},
+  	title = {Bongard in Wonderland: Visual Puzzles That Still Make AI Go Mad?},
+  	url = {https://arxiv.org/abs/2410.19546},
+  	year = {2025},
+  	bdsk-url-1 = {https://arxiv.org/pdf/2410.19546}}
 
-@inproceedings{busch2025icml,
-	anote = {./images/busch2025icml.png},
-	author = {Florian Peter Busch and Roshni Ramanna Kamath and Rupert Mitchell and Wolfgang Stammer and Kristian Kersting and Martin Mundt},
-	booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML)},
-	keywords = {Continual Learning, Confounding, Computer Vision, Shortcut Learning, Dataset},
-	note = {A dataset is confounded if it is most easily solved via a spurious correlation which fails to generalize to new data. In this work, we show that, in a continual learning setting where confounders may vary in time across tasks, the challenge of mitigating the effect of confounders far exceeds the standard forgetting problem normally considered. In particular, we provide a formal description of such continual confounders and identify that, in general, spurious correlations are easily ignored when training for all tasks jointly, but it is harder to avoid confounding when they are considered sequentially. These descriptions serve as a basis for constructing a novel CLEVR-based continually confounded dataset, which we term the ConCon dataset. Our evaluations demonstrate that standard continual learning methods fail to ignore the dataset's confounders. Overall, our work highlights the challenges of confounding factors, particularly in continual learning settings, and demonstrates the need for developing continual learning methods to robustly tackle these.},
-	title = {Where is the Truth? The Risk of Getting Confounded in a Continual World},
-	url = {https://arxiv.org/abs/2402.06434},
-	year = {2025},
-	bdsk-url-1 = {https://arxiv.org/abs/2402.06434}}
 
-@inproceedings{seng2025uai,
-	anote = {./images/seng2025uai.png},
-	author = {Jonas Seng and Florian Peter Busch and Pooja Prasad and Devendra Singh Dhami and Martin Mundt and Kristian Kersting},
-	booktitle = {Proceedings of the 41th Conference on Uncertainty in Artificial Intelligence (UAI)},
-	keywords = {Probabilistic Circuits, Tractable Probabilistic Models, Federated Learning (FL), horizontal FL, vertical FL},
-	note = {Probabilistic circuits (PCs) enable us to learn joint distributions over a set of random variables and to perform various probabilistic queries in a tractable fashion. Though the tractability property allows PCs to scale beyond non-tractable models such as Bayesian Networks, scaling training and inference of PCs to larger, real-world datasets remains challenging. To remedy the situation, we show how PCs can be learned across multiple machines by recursively partitioning a distributed dataset, thereby unveiling a deep connection between PCs and federated learning (FL). This leads to federated circuits (FCs)---a novel and flexible federated learning (FL) framework that (1) allows one to scale PCs on distributed learning environments (2) train PCs faster and (3) unifies for the first time horizontal, vertical, and hybrid FL in one framework by re-framing FL as a density estimation problem over distributed datasets. We demonstrate FC's capability to scale PCs on various large-scale datasets. Also, we show FC's versatility in handling horizontal, vertical, and hybrid FL within a unified framework on multiple classification tasks.},
-	title = {Scaling Probabilistic Circuits via Data Partitioning},
-	url = {https://arxiv.org/abs/2503.08141},
-	year = {2025},
-	bdsk-url-1 = {https://arxiv.org/abs/2503.08141}}
+	@inproceedings{busch2025icml,
+	  	anote = {./images/busch2025icml.png},
+	  	author = {Florian Peter Busch and Roshni Ramanna Kamath and Rupert Mitchell and Wolfgang Stammer and Kristian Kersting and Martin Mundt},
+	  	booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML)},
+	  	keywords = {Continual Learning, Confounding, Computer Vision, Shortcut Learning, Dataset},
+	  	note = {A dataset is confounded if it is most easily solved via a spurious correlation which fails to generalize to new data. In this work, we show that, in a continual learning setting where confounders may vary in time across tasks, the challenge of mitigating the effect of confounders far exceeds the standard forgetting problem normally considered. In particular, we provide a formal description of such continual confounders and identify that, in general, spurious correlations are easily ignored when training for all tasks jointly, but it is harder to avoid confounding when they are considered sequentially. These descriptions serve as a basis for constructing a novel CLEVR-based continually confounded dataset, which we term the ConCon dataset. Our evaluations demonstrate that standard continual learning methods fail to ignore the dataset's confounders. Overall, our work highlights the challenges of confounding factors, particularly in continual learning settings, and demonstrates the need for developing continual learning methods to robustly tackle these.},
+	  	title = {Where is the Truth? The Risk of Getting Confounded in a Continual World},
+	  	url = {https://arxiv.org/abs/2402.06434},
+	  	year = {2025},
+	  	bdsk-url-1 = {https://arxiv.org/abs/2402.06434}}
 
-@unpublished{kersting2025faz_safety,
+
+					@inproceedings{seng2025uai,
+						anote = {./images/seng2025uai.png},
+						author = {Jonas Seng and Florian Peter Busch and Pooja Prasad and Devendra Singh Dhami and Martin Mundt and Kristian Kersting},
+						booktitle = {Proceedings of the 41th Conference on Uncertainty in Artificial Intelligence (UAI)},
+						title = {Scaling Probabilistic Circuits via Data Partitioning},
+						keywords = {Probabilistic Circuits, Tractable Probabilistic Models, Federated Learning (FL), horizontal FL, vertical FL},
+					  note = {Probabilistic circuits (PCs) enable us to learn joint distributions over a set of random variables and to perform various probabilistic queries in a tractable fashion. Though the tractability property allows PCs to scale beyond non-tractable models such as Bayesian Networks, scaling training and inference of PCs to larger, real-world datasets remains challenging. To remedy the situation, we show how PCs can be learned across multiple machines by recursively partitioning a distributed dataset, thereby unveiling a deep connection between PCs and federated learning (FL). This leads to federated circuits (FCs)---a novel and flexible federated learning (FL) framework that (1) allows one to scale PCs on distributed learning environments (2) train PCs faster and (3) unifies for the first time horizontal, vertical, and hybrid FL in one framework by re-framing FL as a density estimation problem over distributed datasets. We demonstrate FC's capability to scale PCs on various large-scale datasets. Also, we show FC's versatility in handling horizontal, vertical, and hybrid FL within a unified framework on multiple classification tasks.},
+						url = {https://arxiv.org/abs/2503.08141},
+					  year = {2025}}
+
+
+
+  @unpublished{kersting2025faz_safety,
 	anote = {./images/faz_logo.jpg},
 	author = {Jonas Andrulis and Kevin Baum and Kristian Kersting and Annika von Mutius and Patrick Schramowski und Sebastian Vollmer},
 	howpublished = {Frankfurter Allgemeine Zeitung (FAZ), March 31, 2025},
@@ -241,6 +234,8 @@
 	year = {2024},
 	bdsk-url-1 = {https://openreview.net/forum?id=aMuFZK7Tl8}}
 
+
+
 @inproceedings{natarajan2025aaai,
 	anote = {./images/natarajan2025aaai.png},
 	author = {Sriraam Natarajan and Saurabh Mathur and Sahil Sidheekh and Wolfgang Stammer and Kristian Kersting},
@@ -415,6 +410,8 @@
 	year = {2024},
 	bdsk-url-1 = {https://arxiv.org/pdf/2411.07122}}
 
+
+
 @incollection{wuest2024bongard,
 	anote = {./images/wuest2024bongard.png},
 	author = {Wuest, Antonia and Tobiasch, Tim and Helff, Lukas and Dhami, Devendra S. and Rothkopf, Constantin A. and Kersting, Kristian},
@@ -467,10 +464,9 @@
 	keywords = {Concept Discovery, Interpretable Artificial Intelligence, Interactive Machine Learning, Disentanglement},
 	note = {The challenge in object-based visual reasoning lies in generating descriptive yet distinct concept representations. Moreover, doing this in an unsupervised fashion requires human users to understand a model's learned concepts and potentially revise false concepts. In addressing this challenge, we introduce the Neural Concept Binder, a new framework for deriving discrete concept representations resulting in what we term "concept-slot encodings". These encodings leverage both "soft binding" via object-centric block-slot encodings and "hard binding" via retrieval-based inference. The Neural Concept Binder facilitates straightforward concept inspection and direct integration of external knowledge, such as human input or insights from other AI models like GPT-4. Additionally, we demonstrate that incorporating the hard binding mechanism does not compromise performance; instead, it enables seamless integration into both neural and symbolic modules for intricate reasoning tasks, as evidenced by evaluations on our newly introduced CLEVR-Sudoku dataset.},
 	title = {Neural Concept Binder},
-	url = {https://ml-research.github.io/NeuralConceptBinder/},
+  url = {https://ml-research.github.io/NeuralConceptBinder/},
 	year = {2024},
-	bdsk-url-1 = {https://arxiv.org/pdf/2406.09949},
-	bdsk-url-2 = {https://ml-research.github.io/NeuralConceptBinder/}}
+	bdsk-url-1 = {https://arxiv.org/pdf/2406.09949}}
 
 @inproceedings{delfosse2024interpretable,
 	anote = {./images/delfosse2024interpretable.png},
@@ -726,12 +722,11 @@
 	author = {Antonia W{\"u}st and Wolfgang Stammer and Quentin Delfosse and Devendra Singh Dhami and Kristian Kersting},
 	booktitle = {Proceedings of the 40th Conference on Uncertainty in Artificial Intelligence (UAI)},
 	keywords = {Concept Learning, Program Synthesis, Neuro-Symbolic, Meta-Learning},
-	note = {The challenge in learning abstract concepts from images in an unsupervised fashion lies in the required integration of visual perception and generalizable relational reasoning. Moreover, the unsupervised nature of this task makes it necessary for human users to be able to understand a model's learnt concepts and potentially revise false behaviours. To tackle both the generalizability and interpretability constraints of visual concept learning, we propose Pix2Code, a framework that extends program synthesis to visual relational reasoning by utilizing the abilities of both explicit, compositional symbolic and implicit neural representations. This is achieved by retrieving object representations from images and synthesizing relational concepts as λ-calculus programs. We evaluate the diverse properties of Pix2Code on the challenging reasoning domains, Kandinsky Patterns and CURI, thereby testing its ability to identify compositional visual concepts that generalize to novel data and concept configurations. Particularly, in stark contrast to neural approaches, we show that Pix2Code's representations remain human interpretable and can be easily revised for improved performance.},
+  note = {The challenge in learning abstract concepts from images in an unsupervised fashion lies in the required integration of visual perception and generalizable relational reasoning. Moreover, the unsupervised nature of this task makes it necessary for human users to be able to understand a model's learnt concepts and potentially revise false behaviours. To tackle both the generalizability and interpretability constraints of visual concept learning, we propose Pix2Code, a framework that extends program synthesis to visual relational reasoning by utilizing the abilities of both explicit, compositional symbolic and implicit neural representations. This is achieved by retrieving object representations from images and synthesizing relational concepts as λ-calculus programs. We evaluate the diverse properties of Pix2Code on the challenging reasoning domains, Kandinsky Patterns and CURI, thereby testing its ability to identify compositional visual concepts that generalize to novel data and concept configurations. Particularly, in stark contrast to neural approaches, we show that Pix2Code's representations remain human interpretable and can be easily revised for improved performance.},
 	title = {Pix2Code: Learning to Compose Neural Visual Concepts as Programs},
 	url = {https://ml-research.github.io/pix2code/},
-	year = {2024},
-	bdsk-url-1 = {https://arxiv.org/pdf/2402.08280.pdf},
-	bdsk-url-2 = {https://ml-research.github.io/pix2code/}}
+  year = {2024},
+	bdsk-url-1 = {https://arxiv.org/pdf/2402.08280.pdf}}
 
 @inproceedings{poonia2024chiSPN,
 	anote = {./images/poonia2024chiSPN.png},
@@ -3449,8 +3444,7 @@
 	title = {Maschinelles und Tiefes Lernen sind der Motor f{\"u}r „KI made in Germany``},
 	url = {./papers/kersting2019ml_bmbf.pdf},
 	year = {2019},
-	bdsk-url-1 = {},
-	bdsk-url-2 = {./papers/kersting2019ml_bmbf.pdf}}
+	bdsk-url-1 = {}}
 
 @misc{kersting2019ki,
 	anote = {./images/ai.png},
@@ -4030,8 +4024,7 @@
 	url = {./paper/serong2017publizistik.pdf},
 	volume = {132},
 	year = {2017},
-	bdsk-url-1 = {https://link.springer.com/article/10.1007/s11616-017-0336-6},
-	bdsk-url-2 = {./paper/serong2017publizistik.pdf}}
+	bdsk-url-1 = {https://link.springer.com/article/10.1007/s11616-017-0336-6}}
 
 @article{kersting2017relational,
 	anote = {./images/rlp_aij2017.png},
@@ -4209,8 +4202,7 @@
 	url = {./papers/synchro2016.pdf},
 	volume = {23},
 	year = {2016},
-	bdsk-url-1 = {http://scripts.iucr.org/cgi-bin/paper?cnor=hf5308},
-	bdsk-url-2 = {./papers/synchro2016.pdf}}
+	bdsk-url-1 = {http://scripts.iucr.org/cgi-bin/paper?cnor=hf5308}}
 
 @article{wahabzada2016plant,
 	anote = {./images/srep22482-f1.jpg},
@@ -5831,10 +5823,9 @@
 	year = {2010},
 	bdsk-url-1 = {./papers/kdml10jawad.pdf}}
 
-@incollection{ahmadi2010lifteda,
+@incollection{ahmadi2010lifted,
 	author = {Babak Ahmadi and Kristian Kersting and Fabian Hadiji},
 	booktitle = {Working Notes of the Lernen, Wissen, Adaptivit{\"a}t (LWA) Workshop},
-	date-modified = {2025-05-09 11:39:28 +0200},
 	keywords = {Statistical Relational AI, Lifted Inference, High-order Marginal, Belief Propagation},
 	pages = {13--18},
 	title = {Lifted Conditioning for Pairwise Marginals and Beyond},
@@ -6337,11 +6328,10 @@
 	year = {2006},
 	bdsk-url-1 = {./papers/kersting2006fisher.pdf}}
 
-@inproceedings{karwath2006relationala,
+@inproceedings{karwath2006relational,
 	anote = {./images/karwath2006relational.png},
 	author = {Andreas Karwath and Kristian Kersting},
 	booktitle = {Proceedings of the 16th International Conference on Inductive Logic Programming (ILP)},
-	date-modified = {2025-05-09 11:39:40 +0200},
 	keywords = {Statistical Relational Learning, Complex Sequences, Alignements, Logos},
 	note = {The need to measure sequence similarity arises in many applicitation domains and often coincides with sequence alignment: the more similar two sequences are, the better they can be aligned. Aligning sequences not only shows how similar sequences are, it also shows where there are differences and correspondences between the sequences. Traditionally, the alignment has been considered for sequences of flat symbols only. Many real world sequences such as natural language sentences and protein secondary structures, however, exhibit rich internal structures. This is akin to the problem of dealing with structured examples studied in the field of inductive logic programming (ILP). In this paper, we introduce Real, which is a powerful, yet simple approach to align sequence of structured symbols using well-established ILP distance measures within traditional alignment methods. Although straight-forward, experiments on protein data and Medline abstracts show that this approach works well in practice, that the resulting alignments can indeed provide more information than flat ones, and that they are meaningful to experts when represented graphically.},
 	organization = {Springer},
