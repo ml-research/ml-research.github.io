@@ -4,7 +4,7 @@
 	author = {Lukas Helff and Felix Friedrich and Manuel Brack and Patrick Schramowski and Kristian Kersting},
 	booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML)},
 	crossref = {https://ml-research.github.io/human-centered-genai/projects/llavaguard/index.html},
-	key = {Best Runner-Up Paper Award at RBFM, NeurIPS 2024},
+	key = {Best Runner-Up Paper Award RBFM Workshop at NeurIPS 2024},
 	keywords = {AI Safety, Safety Evaluation, Multimodal, Vision Language Model},
 	note = {This paper introduces Llavaguard, a suite of VLM-based vision safeguards that address the critical need for reliable tools in the era of large-scale data and models. To this end, we establish a novel open framework, describing a customizable safety taxonomy, data preprocessing, augmentation, and training setup. For teaching a VLM safeguard on safety, we further create a multimodal safety dataset with high-quality human expert annotations, where each image is labeled with a safety rating, category and rationale. We also employ advanced augmentations to support context-specific assessments. The resulting Llavaguard models, ranging from 0.5B to 7B, serve as a versatile tool for evaluating the safety compliance of visual content against flexible policies. In comprehensive experiments, Llavaguard outperforms both state-of-the-art safeguards and VLMs in accuracy \textit{and} in flexibly handling different policies. Additionally, we demonstrate Llavaguard's performance in two real-world applications: large-scale dataset annotation and moderation of text-to-image models. We make our entire framework publicly available, including the dataset and model weights.},
 	title = {LlavaGuard: An Open VLM-based Framework for Safeguarding Vision Datasets and Models},
@@ -36,7 +36,7 @@
 	  	bdsk-url-1 = {https://arxiv.org/abs/2402.06434}}
 
 
-					@inproceedings{seng2025uai,
+				@inproceedings{seng2025uai,
 						anote = {./images/seng2025uai.png},
 						author = {Jonas Seng and Florian Peter Busch and Pooja Prasad and Devendra Singh Dhami and Martin Mundt and Kristian Kersting},
 						booktitle = {Proceedings of the 41th Conference on Uncertainty in Artificial Intelligence (UAI)},
@@ -202,6 +202,25 @@
 	title = {Credibility-Aware Multimodal Fusion Using Probabilistic Circuits},
 	url={https://arxiv.org/pdf/2403.03281},
 	year = {2025}}
+
+	@inproceedings{kamath2025collas,
+		anote = {./images/kamath2025collas.jpeg},
+		author = {Roshni .R. Kamath and Rupert Mitchell and Subarnaduti Paul and Kristian Kersting and Martin Mundt},
+		booktitle = {Proceedings of the Forth Conference on Lifelong Learning Agents (CoLLAs)},
+		keywords = {Batch Normalization, Continual Learning, Baseline, Open World Learning, Out-of-Distribution},
+		note = {Traditional machine learning excels on static benchmarks, but the real world is dynamic and seldom as carefully curated as test sets. Practical applications may generally encounter undesired inputs, are required to deal with novel information, and need to ensure operation through their full lifetime - aspects where standard deep models struggle. These three elements may have been researched individually, but their practical conjunction, i.e., open world learning, is much less consolidated. In this paper, we posit that neural networks already contain a powerful catalyst to turn them into open world learners: the batch normalization layer. Leveraging its tracked statistics, we derive effective strategies to detect in- and out-of-distribution samples, select informative data points, and update the model continuously. This, in turn, allows us to demonstrate that existing batch-normalized models can be made more robust, less prone to forgetting over time, and be trained efficiently with less data.},
+		title = {BOWL: A Deceptively Simple Open World Learner},
+		year = {2025}}
+
+		@inproceedings{seng2025ibohpc,
+			anote = {./images/seng2024ibohpc.png},
+			author = {Jonas Seng and Fabrizio Ventola and Zhongjie Yu and Kristian Kersting},
+			booktitle = {Working Notes of the Workshop Track of the International Conference on Automated Machine Learning (AutoML)},
+			keywords = {Automated ML, Interactive Optimization, Neural Architecture Search, Hyperparameter Optimization, Probabilistic Circuits},
+			note = {Despite the growing interest in designing truly interactive hyperparameter optimization (HPO) methods, to date, only a few allow to include feedback from experts. However, these methods add friction to the interactive process, rigidly requiring to fully specify the expert input as prior distribution ex ante and often imposing additional constraints on the optimization framework. This hinders the flexible incorporation of expertise and valuable knowledge of domain experts, which might provide partial feedback at any time during optimization. To overcome these limitations, we introduce a novel Bayesian optimization approach leveraging tractable probabilistic models named probabilistic circuits (PCs) as surrogate model. PCs encode a tractable joint distribution over the hybrid hyperparameter space and enable exact conditional inference and sampling, allowing users to provide valuable insights interactively and generate configurations adhering to their feedback. We demonstrate the benefits of the resulting interactive HPO through an extensive empirical evaluation of diverse benchmarks, including the challenging setting of neural architecture search.},
+			title = {Hyperparameter Optimization via Interacting with Probabilistic Circuits},
+			url = {},
+			year = {2025}}
 
 @incollection{avramidis2024occiglot,
 	abstract = {This document describes the submission of the very first version of the Occiglot open-source large language model to the General MT Shared Task of the 9th Conference of Machine Translation (WMT24). Occiglot is an open-source, community-based LLM based on Mistral-7B, which went through language-specific continual pre-training and subsequent instruction tuning, including instructions relevant to machine translation.We examine the automatic metric scores for translating the WMT24 test set and provide a detailed linguistically-motivated analysis.Despite Occiglot performing worse than many of the other system submissions, we observe that it performs better than Mistral7B, which has been based upon, which indicates the positive effect of the language specific continual-pretraining and instruction tuning. We see the submission of this very early version of the model as a motivation to unite community forces and pursue future LLM research on the translation task.},
@@ -1018,7 +1037,7 @@
 	title = {Modeling dataset bias in machine-learned theories of economic decision making},
 	url = {../../papers/thomas2024decisions.pdf},
 	year = {2024}}
- 
+
 @article{hintersdorf2024clip_privacy,
 	anote = {./images/hintersdorf2022clipping_privacy.png},
 	author = {Dominik Hintersdorf and Lukas Struppek and Manuel Brack and Felix Friedrich and Patrick Schramowski and Kristian Kersting},
