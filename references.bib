@@ -831,7 +831,7 @@
 
 @inproceedings{seng2024iclr,
 	anote = {./images/seng2024iclr.png},
-	author = {Jonas Seng and Matej Ze{\v c}evi{\'c} and Devendra Singh Dhami and Kristian Kersting},
+	author = {Jonas Seng and Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
 	booktitle = {Proceedings of the International Conference on Representation Learning (ICLR)},
 	keywords = {Structure Learning, DAG, Differentiable, Square-based Losses, Scale},
 	note = {Structure learning is a crucial task in science, especially in fields such as medicine and biology, where the wrong identification of (in)dependencies among random variables can have significant implications. The primary objective of structure learning is to learn a Directed Acyclic Graph (DAG) that represents the underlying probability distribution of the data. Many prominent DAG learners rely on least square losses or log-likelihood losses for optimization. It is well-known from regression models that least square losses are heavily influenced by the scale of the variables. Recently it has been demonstrated that the scale of data also affects performance of structure learning algorithms, though with a strong focus on linear 2-node systems and simulated data. Moving beyond these results, we provide conditions under which square-based losses are minimal for wrong DAGs in -dimensional cases. Furthermore, we also show that scale can impair performance of structure learners if relations among variables are non-linear for both square based and log-likelihood based losses. We confirm our theoretical findings through extensive experiments on synthetic and real-world data.},
@@ -1366,8 +1366,9 @@
 
 @inproceedings{willig2023consolidate,
 	anote = {./images/willig2023consolidate.png},
-	author = {Moritz Willig and Matej Ze{\v c}evi{\'c} and Devendra Singh Dhami and Kristian Kersting},
-	booktitle = {Structural causal models (SCMs) are a powerful tool for understanding the complex causal relationships that underlie many real-world systems. As these systems grow in size, the number of variables and complexity of interactions between them does, too. Thus, becoming convoluted and difficult to analyze. This is particularly true in the context of machine learning and artificial intelligence, where an ever increasing amount of data demands for new methods to simplify and compress large scale SCM. While methods for marginalizing and abstracting SCM already exist today, they may destroy the causality of the marginalized model. To alleviate this, we introduce the concept of consolidating causal mechanisms to transform large-scale SCM while preserving consistent interventional behaviour. We show consolidation is a powerful method for simplifying SCM, discuss reduction of computational complexity and give a perspective on generalizing abilities of consolidated SCM.},
+	author = {Moritz Willig and Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
+	booktitle = {Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)},
+	note = {Structural causal models (SCMs) are a powerful tool for understanding the complex causal relationships that underlie many real-world systems. As these systems grow in size, the number of variables and complexity of interactions between them does, too. Thus, becoming convoluted and difficult to analyze. This is particularly true in the context of machine learning and artificial intelligence, where an ever increasing amount of data demands for new methods to simplify and compress large scale SCM. While methods for marginalizing and abstracting SCM already exist today, they may destroy the causality of the marginalized model. To alleviate this, we introduce the concept of consolidating causal mechanisms to transform large-scale SCM while preserving consistent interventional behaviour. We show consolidation is a powerful method for simplifying SCM, discuss reduction of computational complexity and give a perspective on generalizing abilities of consolidated SCM.},
 	keywords = {Causality, Marginalization, Consolidation, Interventions, Structural Causal Model, Simplification, Compression},
 	title = {Do Not Marginalize Mechanisms, Rather Consolidate!},
 	url = {https://openreview.net/pdf?id=xBhvMu4J03},
@@ -2065,7 +2066,7 @@
 
 @misc{mwillig2022cfm,
 	anote = {./images/mwillig2022cfm.png},
-	author = {Moritz Willig and Matej Ze{\v c}evi{\'c} and Kristian Kersting and Devendra Singh Dhami},
+	author = {Moritz Willig and Matej Zečević and Kristian Kersting and Devendra Singh Dhami},
 	howpublished = {arXiv preprint arXiv:2206.10591},
 	keywords = {Causality, Foundation Models, AGI Discussion},
 	note = {Foundation models are subject to an ongoing heated debate, leaving open the question of progress towards AGI and dividing the community into two camps: the ones who see the arguably impressive results as evidence to the scaling hypothesis, and the others who are worried about the lack of interpretability and reasoning capabilities. By investigating to which extent causal representations might be captured by these large scale language models, we make a humble efforts towards resolving the ongoing philosophical conflicts.},
@@ -2076,7 +2077,7 @@
 
 @misc{dsteinmann2022xlp,
 	anote = {./images/dsteinmann2022xlp.png},
-	author = {David Steinmann and Matej Ze{\v c}evi{\'c} and Kristian Kersting and Devendra Singh Dhami},
+	author = {David Steinmann and Matej Zečević and Kristian Kersting and Devendra Singh Dhami},
 	howpublished = {arXiv preprint arXiv:2206.07194},
 	keywords = {Attribution, XAI, Linear Programs},
 	note = {There has been a recent push in making machine learning models more interpretable so that their performance can be trusted. Although successful, these methods have mostly focused on the deep learning methods while the fundamental optimization methods in machine learning such as linear programs (LP) have been left out. Even if LPs can be considered as whitebox or clearbox models, they are not easy to understand in terms of relationships between inputs and outputs. As a linear program only provides the optimal solution to an optimization problem, further explanations are often helpful. In this work, we extend the attribution methods for explaining neural networks to linear programs. These methods explain the model by providing relevance scores for the model inputs, to show the influence of each input on the output. Alongside using classical gradient-based attribution methods we also propose a way to adapt perturbation-based attribution methods to LPs. Our evaluations of several different linear and integer problems showed that attribution methods can generate useful explanations for linear programs. However, we also demonstrate that using a neural attribution method directly might come with some drawbacks, as the properties of these methods on neural networks do not necessarily transfer to linear programs. The methods can also struggle if a linear program has more than one optimal solution, as a solver just returns one possible solution. Our results can hopefully be used as a good starting point for further research in this direction.},
@@ -2087,7 +2088,7 @@
 
 @misc{fbusch2022abnn,
 	anote = {./images/fbusch2022abnn.png},
-	author = {Florian Peter Busch and Matej Ze{\v c}evi{\'c} and Kristian Kersting and Devendra Singh Dhami},
+	author = {Florian Peter Busch and Matej Zečević and Kristian Kersting and Devendra Singh Dhami},
 	howpublished = {arXiv preprint arXiv:2206.07203},
 	keywords = {Attribution, XAI, Linear Programs, Neural Encoding},
 	note = {Linear Programs (LPs) have been one of the building blocks in machine learning and have championed recent strides in differentiable optimizers for learning systems. While there exist solvers for even high-dimensional LPs, understanding said high-dimensional solutions poses an orthogonal and unresolved problem. We introduce an approach where we consider neural encodings for LPs that justify the application of attribution methods from explainable artificial intelligence (XAI) designed for neural learning systems. The several encoding functions we propose take into account aspects such as feasibility of the decision space, the cost attached to each input, or the distance to special points of interest. We investigate the mathematical consequences of several XAI methods on said neural LP encodings. We empirically show that the attribution methods Saliency and LIME reveal indistinguishable results up to perturbation levels, and we propose the property of Directedness as the main discriminative criterion between Saliency and LIME on one hand, and a perturbation-based Feature Permutation approach on the other hand. Directedness indicates whether an attribution method gives feature attributions with respect to an increase of that feature. We further notice the baseline selection problem beyond the classical computer vision setting for Integrated Gradients.},
@@ -2098,7 +2099,7 @@
 
 @misc{jseng2022tant,
 	anote = {./images/jseng2022tant.png},
-	author = {Jonas Seng and Matej Ze{\v c}evi{\'c} and Devendra Singh Dhami and Kristian Kersting},
+	author = {Jonas Seng and Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
 	howpublished = {arXiv preprint arXiv:2206.07195},
 	keywords = {Structure Discovery, Causality, Variance Manipulation},
 	note = {Simulations are ubiquitous in machine learning. Especially in graph learning, simulations of Directed Acyclic Graphs (DAG) are being deployed for evaluating new algorithms. In the literature, it was recently argued that continuous-optimization approaches to structure discovery such as NOTEARS might be exploiting the sortability of the variable's variances in the available data due to their use of least square losses. Specifically, since structure discovery is a key problem in science and beyond, we want to be invariant to the scale being used for measuring our data (e.g. meter versus centimeter should not affect the causal direction inferred by the algorithm). In this work, we further strengthen this initial, negative empirical suggestion by both proving key results in the multivariate case and corroborating with further empirical evidence. In particular, we show that we can control the resulting graph with our targeted variance attacks, even in the case where we can only partially manipulate the variances of the data.},
@@ -2109,7 +2110,7 @@
 
 @misc{youssef2022cbp,
 	anote = {./images/youssef2022cbp.png},
-	author = {Salahedine Youssef and Matej Ze{\v c}evi{\'c} and Devendra Singh Dhami and Kristian Kersting},
+	author = {Salahedine Youssef and Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
 	howpublished = {arXiv preprint arXiv:2206.07196},
 	keywords = {Causality, Bongard Problems, Reinforcement Learning, AGI},
 	note = {To date, Bongard Problems (BP) remain one of the few fortresses of AI history yet to be raided by the powerful models of the current era. We present a systematic analysis using modern techniques from the intersection of causality and AI/ML in a humble effort of reviving research around BPs. Specifically, we first compile the BPs into a Markov decision process, then secondly pose causal assumptions on the data generating process arguing for their applicability to BPs, and finally apply reinforcement learning techniques for solving the BPs subject to the causal assumptions.},
@@ -2157,7 +2158,7 @@
 
 @incollection{zecevic2022osc,
 	anote = {./images/zecevic2022osc.png},
-	author = {Matej Ze{\v c}evi{\'c} and Florian Peter Busch and Devendra Singh Dhami and Kristian Kersting},
+	author = {Matej Zečević and Florian Peter Busch and Devendra Singh Dhami and Kristian Kersting},
 	booktitle = {ICLR 2022 Workshop on the Elements of Reasoning: Objects, Structure and Causality (OSC)},
 	keywords = {Causality, Linear Programs, Graph Learning, Structure Discover},
 	note = {Linear Programs (LP) are celebrated widely, particularly so in machine learning where they have allowed for effectively solving probabilistic inference tasks or imposing structure on end-to-end learning systems. Their potential might seem depleted but we propose a foundational, causal perspective that reveals intriguing intra- and inter-structure relations for LP components. We conduct a systematic, empirical investigation on general-, shortest path- and energy system LPs.},
@@ -2327,7 +2328,7 @@
 
 @misc{willig2021tcl,
 	anote = {./images/willig2021tcl.png},
-	author = {Moritz Willig and Matej Ze{\v c}evi{\'c} and Devendra Singh Dhami and Kristian Kersting},
+	author = {Moritz Willig and Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
 	howpublished = {arXiv preprint arXiv:2110.12066},
 	keywords = {Causality, Regularization, Neural Causal Models},
 	note = {Most algorithms in classical and contemporary machine learning focus on correlation-based dependence between features to drive performance. Although success has been observed in many relevant problems, these algorithms fail when the underlying causality is inconsistent with the assumed relations. We propose a novel model-agnostic loss function called Causal Loss that improves the interventional quality of the prediction using an intervened neural-causal regularizer. In support of our theoretical results, our experimental illustration shows how causal loss bestows a non-causal associative model (like a standard neural net or decision tree) with interventional capabilities.},
@@ -2338,7 +2339,7 @@
 
 @misc{zecevic2021tncm,
 	anote = {./images/zecevic2021tncm.png},
-	author = {Matej Ze{\v c}evi{\'c} and Devendra Singh Dhami and Kristian Kersting},
+	author = {Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
 	howpublished = {arXiv preprint arXiv:2110.12052},
 	keywords = {Causality, Neural-Causal Models, Sum-Product Networks, Tractable Causal Model, Inference},
 	note = {Roth (1996) proved that any form of marginal inference with probabilistic graphical models (e.g. Bayesian Networks) will at least be NP-hard. Introduced and extensively investigated in the past decade, the neural probabilistic circuits known as sum-product network (SPN) offers linear time complexity. On another note, research around neural causal models (NCM) recently gained traction, demanding a tighter integration of causality for machine learning. To this end, we present a theoretical investigation of if, when, how and under what cost tractability occurs for different NCM. We prove that SPN-based causal inference is generally tractable, opposed to standard MLP-based NCM. We further introduce a new tractable NCM-class that is efficient in inference and fully expressive in terms of Pearl's Causal Hierarchy. Our comparative empirical illustration on simulations and standard benchmarks validates our theoretical proofs.},
@@ -2471,7 +2472,7 @@
 
 @misc{zecevic2021scit,
 	anote = {./images/zecevic2021scit.jpg},
-	author = {Matej Ze{\v c}evi{\'c} and Devendra Singh Dhami and Constantin A. Rothkopf and Kristian Kersting},
+	author = {Matej Zečević and Devendra Singh Dhami and Constantin A. Rothkopf and Kristian Kersting},
 	howpublished = {arXiv preprint arXiv:2110.02395},
 	keywords = {Causality, Neural-Causal Models, Induction, Interpretations, Human Study},
 	note = {Human mental processes allow for qualitative reasoning about causality in terms of mechanistic relations of the variables of interest, which we argue are naturally described by structural causal model (SCM). Since interpretations are being derived from mental models, the same applies for SCM. By defining a metric space on SCM, we provide a theoretical perspective on the comparison of mental models and thereby conclude that interpretations can be used for guiding a learning system towards true causality. To this effect, we present a theoretical analysis from first principles that results in a human-readable interpretation scheme consistent with the provided causality that we name structural causal interpretations (SCI). Going further, we prove that any existing neural induction method (NIM) is in fact interpretable. Our first experiment (E1) assesses the quality of such NIM-based SCI. In (E2) we observe evidence for our conjecture on improved sample-efficiency for SCI-based learning. After conducting a small user study, in (E3) we observe superiority in human-based over NIM-based SCI in support of our initial hypothesis.},
@@ -2505,7 +2506,7 @@
 
 @inproceedings{zecevic2021neurips_ispns,
 	anote = {./images/zecevic2021neurips_ispns.png},
-	author = {Matej Ze{\v c}evi{\'c} and Devendra Singh Dhami and Athresh Karanam and Sriraam Natarajan and Kristian Kersting},
+	author = {Matej Zečević and Devendra Singh Dhami and Athresh Karanam and Sriraam Natarajan and Kristian Kersting},
 	booktitle = {Proceedings of the 35th Conference on Neural Information Processing Systems (NeurIPS)},
 	keywords = {Probabilistic Circuits, Sum Product Networks, Deep Learning, Causality, Interventional Distribution, Tractable Causal Models},
 	note = {While probabilistic models are an important tool for studying causality, doing so suffers from the intractability of inference. As a step towards tractable causal models, we consider the problem of learning interventional distributions using sum-product networks (SPNs) that are over-parameterized by gate functions, e.g., neural networks. Providing an arbitrarily intervened causal graph as input, effectively subsuming Pearl's do-operator, the gate function predicts the parameters of the SPN. The resulting interventional SPNs are motivated and illustrated by a structural causal model themed around personal health. Our empirical evaluation against competing methods from both generative and causal modelling demonstrates that interventional SPNs indeed are both expressive and causally adequate.},
@@ -2561,7 +2562,7 @@
 
 @misc{zecevic2021rgnntscm,
 	anote = {./images/zecevic2021rgnntscm.png},
-	author = {Matej Ze{\v c}evi{\'c} and Devendra Singh Dhami and Petar Veli{\v c}kovi{\'c} and Kristian Kersting},
+	author = {Matej Zečević and Devendra Singh Dhami and Petar Veli{\v c}kovi{\'c} and Kristian Kersting},
 	howpublished = {arXiv preprint arXiv:2109.04173},
 	keywords = {Causality, Graph Neural Networks, Neural-Causal Models},
 	note = {Causality can be described in terms of a structural causal model (SCM) that carries information on the variables of interest and their mechanistic relations. For most processes of interest the underlying SCM will only be partially observable, thus causal inference tries to leverage any exposed information. Graph neural networks (GNN) as universal approximators on structured input pose a viable candidate for causal learning, suggesting a tighter integration with SCM. To this effect we present a theoretical analysis from first principles that establishes a novel connection between GNN and SCM while providing an extended view on general neural-causal models. We then establish a new model class for GNN-based causal inference that is necessary and sufficient for causal effect identification. Our empirical illustration on simulations and standard benchmarks validate our theoretical proofs.},
@@ -2596,7 +2597,7 @@
 
 @misc{zecevic2021iposcm,
 	anote = {./images/zecevic2021iposcm.jpg},
-	author = {Matej Ze{\v c}evi{\'c} and Devendra Singh Dhami and Kristian Kersting},
+	author = {Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
 	howpublished = {arXiv preprint arXiv:2105.12697},
 	keywords = {Adversarial attacks, Causality, Mathematical Programs, Perturbed Optimizers},
 	note = {In recent years there has been a lot of focus on adversarial attacks, especially on deep neural networks. Here, we argue that they are more general in nature and can easily affect a larger class of models, e.g., any differentiable perturbed optimizers. We further show that such attacks can be determined by the hidden confounders in a domain, thus drawing a novel connection between such attacks and causality. Establishing this causal perspective is characterized by the influence of the structural causal model's data generating process on the subsequent optimization thereby exhibiting intriguing parameters of the former. We reveal the existence of such parameters for three combinatorial optimization problems, namely linear assignment, shortest path and a real world problem of energy systems. Our empirical examination also unveils worrisome consequences of these attacks on differentiable perturbed optimizers thereby highlighting the criticality of our findings.},
@@ -2895,7 +2896,7 @@
 
 @misc{zecevic2021ispn,
 	anote = {./images/zecevic2021ispn.png},
-	author = {Matej Ze{\v c}evi{\'c} and Devendra Singh Dhami and Athresh Karanam and Sriraam Natarajan and Kristian Kersting},
+	author = {Matej Zečević and Devendra Singh Dhami and Athresh Karanam and Sriraam Natarajan and Kristian Kersting},
 	howpublished = {arXiv preprint arXiv:2102.10440},
 	keywords = {Probabilitic Models, Causality, Tractability, Sum-Product Networks, Interventional Distributions},
 	note = {While probabilistic models are an important tool for studying causality, doing so suffers from the intractability of inference. As a step towards tractable causal models, we consider the problem of learning interventional distributions using sum-product networks (SPNs) that are over-parameterized by gate functions, e.g., neural networks. Providing an arbitrarily intervened causal graph as input, effectively subsuming Pearl's do-operator, the gate function predicts the parameters of the SPN. The resulting interventional SPNs are motivated and illustrated by a structural causal model themed around personal health. Our empirical evaluation on three benchmark data sets as well as a synthetic health data set clearly demonstrates that interventional SPNs indeed are both expressive in modelling and flexible in adapting to the interventions.},
