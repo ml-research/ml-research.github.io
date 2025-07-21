@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpretable Concept Bottlenecks to Align Reinforcement Learning Agents</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./temporary.png" type="image/x-icon" />
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Core theme CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!--LINK JQUERY-->
+  </head>
+
+  <body>
+    <!-- Parallax Pixel Background Animation -->
+    <section class="animated-background">
+      <div id="stars1"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </section>
+    <!-- End of Parallax Pixel Background Animation -->
+
+    <h1>
+      <br/>Current RL agents consistently learn shortcuts
+      <br/> → Neurosymbolic aligned RL agents
+    </h1>
+
+    <div id="block">
+    Before we start, here are quick links to our implemented environments:
+    <div id="links">  
+    <ul>
+      <li>  
+      <a class="link" href="https://github.com/k4ntz/OC_Atari" target="_blank">
+          <i class="fab fa-github">&nbsp;</i> OC-Atari
+      </a> <p>Object centric Atari environments</p>
+      </li>
+      <li>
+      <a class="link" href="https://github.com/k4ntz/HackAtari" target="_blank">
+          <i class="fab fa-github">&nbsp;</i> HackAtari
+      </a> <p>Many game variations to test agents' generalizations</p>
+      </li>
+      <li>
+      <a class="link" href="https://github.com/k4ntz/JAXAtari" target="_blank">
+          <i class="fab fa-github">&nbsp;</i> JAXAtari
+      </a> <p>Fast JAX implemented ALE run on GPUs (early stage)</p>
+      </li>
+    </ul>
+    </div>
+
+    <div id="block">
+      <h2> RL agents learn misaligned policies in the ALE game: Pong</h2>    
+      <img src="./misalignment_final.png" alt="misaligned agents">
+      <p><b>Heatmaps are not enough.</b> Deep RL agents trained on Pong reach perfect score ✅, 
+        select the right action ✅, and exhibit intuitive importance maps. 
+        But when facing a lazier enemy, their performances drop ❌ and they select conterintuitive actions ❌.
+      </p>
+    Delfosse, Q., Sztwiertnia, S., Rothermel, M., Stammer, W., & Kersting, K. (2024). 
+    <a href="https://openreview.net/pdf?id=t4BjjTfxFa">Interpretable concept bottlenecks to align reinforcement learning agents. </a>
+    <i>NeurIPS</i>.
+    <div id="links">    
+      <a class="link" href="https://github.com/k4ntz/SCoBots" target="_blank">
+      <i class="fab fa-github">&nbsp;</i>Code
+      </a>
+      <a class="link" href="https://arxiv.org/pdf/2401.05821" target="_blank">
+        <i class="fa fa-book">&nbsp;</i> Paper
+      </a>
+      <a class="link" href="https://www.ml.informatik.tu-darmstadt.de/people/qdelfosse/papertrees/scobots/Scobots_Poster.pdf" target="_blank">
+      <i class="fa fa-sign">&nbsp;</i>Poster
+      </a>
+    </div>
+    </div>    
+     
+    <div id="block">
+      <h2> RL agents cannot generalize to tasks simplifications</h2>    
+      <img src="./perf_drops.png" alt="misaligned agents">
+      <p><b>RL agents' performances drop on simplifications.</b> 
+        Deep and current object-centric agents fail to perform well on game simplifications.
+      </p>
+    Delfosse, Q., Blüml, J., Tatai, F., Vincent, T., Gregori, B., Dillies, E., Peters, J., Rothkopf, C. & Kersting, K. (2025). 
+    <a href="https://openreview.net/pdf?id=t4BjjTfxFa">Deep Reinforcement Learning Agents are not even close to Human Intelligence</a>
+    <i>Under review</i>.
+    <div id="links">    
+      <a class="link" href="https://github.com/k4ntz/HackAtari" target="_blank">
+      <i class="fab fa-github">&nbsp;</i>Code
+      </a>
+      <a class="link" href="https://arxiv.org/pdf/2505.21731" target="_blank">
+        <i class="fa fa-book">&nbsp;</i> Paper
+      </a>
+      <!-- <a class="link" href="https://openreview.net/pdf?id=t4BjjTfxFa" target="_blank">
+      <i class="fa fa-sign">&nbsp;</i>Poster
+      </a> -->
+    </div>
+    </div>   
+
+    <div id="block">
+      <h2> First order logic based policies</h2>    
+      <img src="./nudge.png" alt="misaligned agents">
+      <p><b>Use differentiable first order logic to encode agents' policy.</b> 
+        Interpretable policies as a set of weighted logic rules. In this environment, 
+        the agent needs to collect a key to open a door and can jump to dodge enemies.
+      </p>
+    Delfosse, Q., Shindo, H., Dhami, D., & Kersting, K. (2023).
+    <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/9f42f06a54ce3b709ad78d34c73e4363-Paper-Conference.pdf"> Interpretable and explainable logical 
+      policies via neurally guided symbolic abstraction</a>.
+    <i>NeurIPS</i>.
+    <div id="links">    
+      <a class="link" href="https://github.com/ml-research/blendrl" target="_blank">
+      <i class="fab fa-github">&nbsp;</i>Code
+      </a>
+      <a class="link" href="https://proceedings.neurips.cc/paper_files/paper/2023/file/9f42f06a54ce3b709ad78d34c73e4363-Paper-Conference.pdf" target="_blank">
+        <i class="fa fa-book">&nbsp;</i> Paper
+      </a>
+      <a class="link" href="https://neurips.cc/media/PosterPDFs/NeurIPS%202023/71758.png?t=1701641947.3855615" target="_blank">
+      <i class="fa fa-sign">&nbsp;</i>Poster
+      </a>
+      <p class="transition">... but they require expert defined logic predicates.</p>
+    </div>
+    </div>
+    
+    
+    <div id="block">
+      <h2> Neural/Logic mixture with LLM assisted rules generation</h2>    
+      <img src="./blendrl.png" alt="misaligned agents">
+      <p><b>Neural and logic based agents allow to learn beyond context.</b> 
+        An LLM is used to create an interpretable logic policy, but does not know that it 
+        can shoot enemies. To overcome this, a neural policy can takeover in threatening states.
+      </p>
+    Shindo, H., Delfosse, Q., Dhami, D., & Kersting, K. (2025).
+    <a href="https://arxiv.org/pdf/2410.11689"> BlendRL: A Framework for Merging Symbolic and Neural Policy Learning</a>.
+    <i>ICLR</i>.
+    <div id="links">    
+      <a class="link" href="https://github.com/ml-research/blendrl" target="_blank">
+      <i class="fab fa-github">&nbsp;</i>Code
+      </a>
+      <a class="link" href="https://arxiv.org/pdf/2410.11689" target="_blank">
+        <i class="fa fa-book">&nbsp;</i> Paper
+      </a>
+    </div>
+    </div>   
+
+
+</div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+
+
+</html>
