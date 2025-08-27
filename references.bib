@@ -1,4 +1,30 @@
-@misc{kowalczuk25dori,
+@inproceedings{wang2025emnlp,
+	anote = {./images/wang2025emnlp.png},
+	author = {Mengyue Wang and Mengyue_Wang and Shuo Chen and Kristian Kersting and Volker Tresp and Yunpu Ma},
+	booktitle = {Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+	keywords = {Video Large Language Models (VLLMs), Token Compression, Event-based Processing, Long Video Understanding, Efficiency / Inference Optimization},
+	note = {Recent advances in Video Large Language Models (VLLMs) have significantly enhanced their ability to understand video content. Nonetheless, processing long videos remains challenging due to high computational demands and the redundancy present in the visual data. In this work, we propose \textbf{METok}, a training-free, \textbf{M}ulti-stage \textbf{E}vent-based \textbf{Tok}en compression framework designed to accelerate VLLMs' inference while preserving accuracy. METok progressively eliminates redundant visual tokens across three critical stages: (1) event-aware compression during vision encoding, (2) hierarchical token pruning in the prefilling stage based on semantic alignment and event importance, and (3) a decoding-stage KV Cache optimization that further reduces memory consumption. Our experiments on diverse video benchmarks demonstrate that METok achieves an optimal trade-off between efficiency and accuracy by dynamically selecting informative visual tokens. For instance, equipping LongVA-7B with METok realizes an 80.6% FLOPs reduction and 93.5% KV Cache memory savings, all while maintaining comparable or even superior accuracy.},
+	title = {METok: Multi-Stage Event-based Token Compression for Efficient Long Video Understanding},
+	url = {},
+	year = {2025}}
+
+
+	@inproceedings{ali2025judging,
+	      anote = {./images/ali2025judging.png},
+	      title={METok: Multi-Stage Event-based Token Compression for Efficient Long Video Understanding},
+	      author={Mehdi Ali and Manuel Brack and Max Lübbering and Elias Wendt and Abbas Goher Khan and Richard Rutmann and Alex Jude and Maurice Kraus and Alexander Arno Weber and David Kaczér and Florian Mai and Lucie Flek and Rafet Sifa and Nicolas Flores-Herr and Joachim Köhler and Patrick Schramowski and Michael Fromm and Kristian Kersting},
+	      year={2025},
+	      howpublished = {Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+	      crossref = {https://huggingface.co/spaces/JQL-AI/JQL},
+	      note = {High-quality multilingual training data is essential for effectively pretraining large language models (LLMs). Yet, the availability of suitable open-source multilingual datasets remains limited. Existing state-of-the-art datasets mostly rely on heuristic filtering methods, restricting both their cross-lingual transferability and scalability. Here, we introduce JQL, a systematic approach that efficiently curates diverse and high-quality multilingual data at scale while significantly reducing computational demands. JQL distills LLMs' annotation capabilities into lightweight annotators based on pretrained multilingual embeddings. These models exhibit robust multilingual and cross-lingual performance, even for languages and scripts unseen during training. Evaluated empirically across 35 languages, the resulting annotation pipeline substantially outperforms current heuristic filtering methods like Fineweb2. JQL notably enhances downstream model training quality and increases data retention rates. Our research provides practical insights and valuable resources for multilingual data curation, raising the standards of multilingual dataset development.},
+	      url={https://arxiv.org/pdf/2505.22232},
+	      keywords = {LLM, Pre-training, Data, Multilingual},
+	}
+
+
+
+
+	@misc{kowalczuk25dori,
 	anote = {./images/dori.jpeg},
 	author = {Antoni Kowalczuk and Dominik Hintersdorf and Lukas Struppek and Kristian Kersting and Adam Dziedzic and Franziska Boenisch},
 	howpublished = {arXiv preprint arXiv:2507.16880},
@@ -49,7 +75,7 @@
 	keywords={Scalable Logical Reasoning, Data, RL, Synthesis, Logic},
 	note={We introduce SLR, an end-to-end framework for systematic evaluation and training of Large Language Models (LLMs) via Scalable Logical Reasoning. Given a user's task specification, SLR enables scalable, automated synthesis of inductive reasoning tasks with precisely controlled difficulty. For each task, SLR synthesizes (i) a latent ground-truth rule, (ii) an executable validation program used by a symbolic judge to deterministically verify model outputs, and (iii) an instruction prompt for the reasoning task. Using SLR, we create SLR-Bench, a benchmark comprising over 19k prompts spanning 20 curriculum levels that progressively increase in relational, arithmetic, and recursive complexity. Large-scale evaluation reveals that contemporary LLMs readily produce syntactically valid rules, yet often fail at correct logical inference. Recent reasoning LLMs do somewhat better, but incur substantial increases in test-time compute, sometimes exceeding 15k completion tokens. Finally, logic-tuning via SLR doubles Llama-3-8B accuracy on SLR-Bench, achieving parity with Gemini-Flash-Thinking at a fraction of computational cost. SLR is fully automated, requires no human annotation, ensures dataset novelty, and offers a scalable environment for probing and advancing LLMs' reasoning capabilities.}
 	}
- 
+
 @misc{brack2025howtotrain,
 	anote = {./images/brack2025how.png},
 	title={How to Train your Text-to-Image Model: Evaluating Design Choices for Synthetic Training Captions},
@@ -87,18 +113,6 @@
 	url = {https://arxiv.org/pdf/2502.09981},
 	bdsk-url-1 = {https://arxiv.org/pdf/2502.09981},
 	keywords = {Granger Causality, Time Series, Forecasting, xLSTM}}
-
-@misc{ali2025judging,
-      anote = {./images/ali2025judging.png},
-      title={Judging Quality Across Languages: A Multilingual Approach to Pretraining Data Filtering with Language Models},
-      author={Mehdi Ali and Manuel Brack and Max Lübbering and Elias Wendt and Abbas Goher Khan and Richard Rutmann and Alex Jude and Maurice Kraus and Alexander Arno Weber and David Kaczér and Florian Mai and Lucie Flek and Rafet Sifa and Nicolas Flores-Herr and Joachim Köhler and Patrick Schramowski and Michael Fromm and Kristian Kersting},
-      year={2025},
-      howpublished = {arXiv preprint arXiv:2505.22232},
-      crossref = {https://huggingface.co/spaces/JQL-AI/JQL},
-      note = {High-quality multilingual training data is essential for effectively pretraining large language models (LLMs). Yet, the availability of suitable open-source multilingual datasets remains limited. Existing state-of-the-art datasets mostly rely on heuristic filtering methods, restricting both their cross-lingual transferability and scalability. Here, we introduce JQL, a systematic approach that efficiently curates diverse and high-quality multilingual data at scale while significantly reducing computational demands. JQL distills LLMs' annotation capabilities into lightweight annotators based on pretrained multilingual embeddings. These models exhibit robust multilingual and cross-lingual performance, even for languages and scripts unseen during training. Evaluated empirically across 35 languages, the resulting annotation pipeline substantially outperforms current heuristic filtering methods like Fineweb2. JQL notably enhances downstream model training quality and increases data retention rates. Our research provides practical insights and valuable resources for multilingual data curation, raising the standards of multilingual dataset development.},
-      url={https://arxiv.org/pdf/2505.22232},
-      keywords = {LLM, Pre-training, Data, Multilingual},
-}
 
 @misc{delfosse2025notintelligent,
 	anote = {./images/delfosse2025notintelligent.png},
