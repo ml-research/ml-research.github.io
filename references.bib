@@ -19,7 +19,7 @@
 	      note = {High-quality multilingual training data is essential for effectively pretraining large language models (LLMs). Yet, the availability of suitable open-source multilingual datasets remains limited. Existing state-of-the-art datasets mostly rely on heuristic filtering methods, restricting both their cross-lingual transferability and scalability. Here, we introduce JQL, a systematic approach that efficiently curates diverse and high-quality multilingual data at scale while significantly reducing computational demands. JQL distills LLMs' annotation capabilities into lightweight annotators based on pretrained multilingual embeddings. These models exhibit robust multilingual and cross-lingual performance, even for languages and scripts unseen during training. Evaluated empirically across 35 languages, the resulting annotation pipeline substantially outperforms current heuristic filtering methods like Fineweb2. JQL notably enhances downstream model training quality and increases data retention rates. Our research provides practical insights and valuable resources for multilingual data curation, raising the standards of multilingual dataset development.},
 	      url={https://arxiv.org/pdf/2505.22232},
 	      keywords = {LLM, Pre-training, Data, Multilingual},
-	} 
+	}
 
 	@unpublished{brock2025lehreUndForschung,
 		anote = {./images/brock2025lehreUndForschung.jpg},
@@ -93,7 +93,18 @@
 	crossref={https://ml-research.github.io/human-centered-genai/projects/t2i-synthetic-captions/index.html},
 	keywords={Text-to-Image, Synthetic Captions, Pre-training, Data},
 	note={Training data is at the core of any successful text-to-image models. The quality and descriptiveness of image text are crucial to a model's performance. Given the noisiness and inconsistency in web-scraped datasets, recent works shifted towards synthetic training captions. While this setup is generally believed to produce more capable models, current literature does not provide any insights into its design choices. This study closes this gap by systematically investigating how different synthetic captioning strategies impact the downstream performance of text-to-image models. Our experiments demonstrate that dense, high-quality captions enhance text alignment but may introduce trade-offs in output aesthetics and diversity. Conversely, captions of randomized lengths yield balanced improvements across aesthetics and alignment without compromising sample diversity. We also demonstrate that varying caption distributions introduce significant shifts in the output bias of a trained model. Our findings underscore the importance of caption design in achieving optimal model performance and provide practical insights for more effective training data strategies in text-to-image generation.}
-	}
+	} 
+
+	@inproceedings{strem2025pricai,
+		anote = {./images/strem2025pricai.png},
+		author = {Nika Strem and Devendra Singh Dhami and Kristian Kersting},
+		booktitle = {Proceedings of the Pacific Rim International Conference on Artificial Intelligence (PRICAI)},
+		keywords = {Deep Learning, Explanatory Interactive Learning, Industrial AI, Alarm Management, Alarm Prediction},
+		note = {Explainable AI aims to improve trust and transparency, particularly in high-risk domains. It recently gained momentum, since industries are urged to comply with new regulations, such as the EU AI Act. A valuable added benefit of XAI is the potential for further model improvement, ensuring that its predictions are right for the right reasons. This is the focus of eXplainable Interactive Learning (XIL). In practice, XIL is challenging, since ground-truth labels for explanations are even harder to obtain than those for the predictions of an ML model. This is even harder in the industry, where matching an explanation of a prediction with reasons of events and outcomes in the system essentially amounts to a full-fledged root cause analysis, which is very complex and cost-intensive. Researchers and AI practitioners at an industrial scale struggle to provide a quantifiable evaluation of explanations, which impedes XIL. Using domain knowledge, we combine multimodal deep learning with XAI and propose Autonomous eXplainable Iterative Learning (AXIL), a new method of training and improving a model in a self-supervised manner, without the need for the ground truth explanation labels.},
+		title = {Industrial-Scale Autonomous eXplainable Iterative Learning},
+		url = {},
+		year = {2025}}
+
 
 @inproceedings{kohaut25iros,
 	anote = {./images/kohaut25iros.png},
