@@ -1,3 +1,36 @@
+
+@incollection{friedrich2025overcorrection,
+anote = {./images/friedrich2025overcorrection.png},
+      title={Beyond Overcorrection: Evaluating Diversity in T2I Models with DivBench}, 
+      author={Felix Friedrich and Thiemo Ganesha Welsch and Manuel Brack and Patrick Schramowski and Kristian Kersting},
+      year={2025},
+      booktitle={Working Notes of the Workshop on Safe and Trustworthy Multimodal AI Systems at ICCV},
+      url={https://arxiv.org/abs/2507.03015}, 
+	  keywords={Text-to-Image, Diversity, Evaluation, Benchmark},
+	  note={Current diversification strategies for text-to-image (T2I) models often ignore contextual appropriateness, leading to over-diversification where demographic attributes are modified even when explicitly specified in prompts. This paper introduces DIVBENCH, a benchmark and evaluation framework for measuring both under- and over-diversification in T2I generation. Through systematic evaluation of state-of-the-art T2I models, we find that while most models exhibit limited diversity, many diversification approaches overcorrect by inappropriately altering contextually-specified attributes. We demonstrate that context-aware methods, particularly LLM-guided FairDiffusion and prompt rewriting, can already effectively address under-diversity while avoiding over-diversification, achieving a better balance between representation and semantic fidelity.}
+}
+@inproceedings{haerle2025measuring,
+	      anote = {./images/haerle2025measuring.png},
+	      title={Measuring and Guiding Monosemanticity},
+	      author={Ruben Härle and Felix Friedrich and Manuel Brack and Stephan Wäldchen and Björn Deiseroth and Patrick Schramowski and Kristian Kersting},
+	      year={2025},
+		  booktitle = {Proceedings of the Advances in Neural Information Processing Systems: Annual Conference on Neural Information Processing Systems (NeurIPS)},
+ 	     
+		  key = {Spotlight Paper},
+	      note = {There is growing interest in leveraging mechanistic interpretability and controllability to better understand and influence the internal dynamics of large language models (LLMs). However, current methods face fundamental challenges in reliably localizing and manipulating feature representations. Sparse Autoencoders (SAEs) have recently emerged as a promising direction for feature extraction at scale, yet they, too, are limited by incomplete feature isolation and unreliable monosemanticity. To systematically quantify these limitations, we introduce Feature Monosemanticity Score (FMS), a novel metric to quantify feature monosemanticity in latent representation. Building on these insights, we propose Guided Sparse Autoencoders (G-SAE), a method that conditions latent representations on labeled concepts during training. We demonstrate that reliable localization and disentanglement of target concepts within the latent space improve interpretability, detection of behavior, and control. Specifically, our evaluations on toxicity detection, writing style identification, and privacy attribute recognition show that G-SAE not only enhances monosemanticity but also enables more effective and fine-grained steering with less quality degradation. Our findings provide actionable guidelines for measuring and advancing mechanistic interpretability and control of LLMs.},
+	      url={https://arxiv.org/abs/2506.19382},
+	      keywords = {LLM, Semantic, Interpretability, Control, Steering},
+	}
+@incollection{paul2024coretokensets,
+	anote = {./images/paul2024coretokensets.png},
+	title={Core Tokensets for Data-efficient Sequential Training of Transformers},
+	author={Subarnaduti Paul and Manuel Brack and Patrick Schramowski and Kristian Kersting and Martin Mundt},
+	booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops},
+	year={2025},
+	url={https://arxiv.org/abs/2410.05800},
+	keywords={Transformer, Continual Learning, Coresets, Data-efficient, Sequential Training},
+	note={Deep networks are frequently tuned to novel tasks and continue learning from ongoing data streams. Such sequential training requires consolidation of new and past information, a challenge predominantly addressed by retaining the most important data points - formally known as coresets. Traditionally, these coresets consist of entire samples, such as images or sentences. However, recent transformer architectures operate on tokens, leading to the famous assertion that an image is worth 16x16 words. Intuitively, not all of these tokens are equally informative or memorable. Going beyond coresets, we thus propose to construct a deeper-level data summary on the level of tokens. Our respectively named core tokensets both select the most informative data points and leverage feature attribution to store only their most relevant features. We demonstrate that core tokensets yield significant performance retention in incremental image classification, open-ended visual question answering, and continual image captioning with significantly reduced memory. In fact, we empirically find that a core tokenset of 1\% of the data performs comparably to at least a twice as large and up to 10 times larger coreset.}
+	}
 @incollection{delfosse2025deep,
 	anote = {./images/delfosse2025notintelligent.png},
 	author = {Quentin Delfosse and Jannis Blüml and Fabian Tatai and Théo Vincent and Bjarne Gregori and Elisabeth Dillies and Jan Peters and Constantin Rothkopf and Kristian Kersting},
@@ -49,6 +82,7 @@
 	      year={2025},
 				booktitle = {Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)},
  		 	 crossref = {https://huggingface.co/spaces/JQL-AI/JQL},
+		  key = {Oral Presentation},
 	      note = {High-quality multilingual training data is essential for effectively pretraining large language models (LLMs). Yet, the availability of suitable open-source multilingual datasets remains limited. Existing state-of-the-art datasets mostly rely on heuristic filtering methods, restricting both their cross-lingual transferability and scalability. Here, we introduce JQL, a systematic approach that efficiently curates diverse and high-quality multilingual data at scale while significantly reducing computational demands. JQL distills LLMs' annotation capabilities into lightweight annotators based on pretrained multilingual embeddings. These models exhibit robust multilingual and cross-lingual performance, even for languages and scripts unseen during training. Evaluated empirically across 35 languages, the resulting annotation pipeline substantially outperforms current heuristic filtering methods like Fineweb2. JQL notably enhances downstream model training quality and increases data retention rates. Our research provides practical insights and valuable resources for multilingual data curation, raising the standards of multilingual dataset development.},
 	      url={https://arxiv.org/pdf/2505.22232},
 	      keywords = {LLM, Pre-training, Data, Multilingual},
@@ -116,11 +150,12 @@
 	note={We introduce SLR, an end-to-end framework for systematic evaluation and training of Large Language Models (LLMs) via Scalable Logical Reasoning. Given a user's task specification, SLR enables scalable, automated synthesis of inductive reasoning tasks with precisely controlled difficulty. For each task, SLR synthesizes (i) a latent ground-truth rule, (ii) an executable validation program used by a symbolic judge to deterministically verify model outputs, and (iii) an instruction prompt for the reasoning task. Using SLR, we create SLR-Bench, a benchmark comprising over 19k prompts spanning 20 curriculum levels that progressively increase in relational, arithmetic, and recursive complexity. Large-scale evaluation reveals that contemporary LLMs readily produce syntactically valid rules, yet often fail at correct logical inference. Recent reasoning LLMs do somewhat better, but incur substantial increases in test-time compute, sometimes exceeding 15k completion tokens. Finally, logic-tuning via SLR doubles Llama-3-8B accuracy on SLR-Bench, achieving parity with Gemini-Flash-Thinking at a fraction of computational cost. SLR is fully automated, requires no human annotation, ensures dataset novelty, and offers a scalable environment for probing and advancing LLMs' reasoning capabilities.}
 	}
 
-@misc{brack2025howtotrain,
+@incollection{brack2025howtotrain,
 	anote = {./images/brack2025how.png},
 	title={How to Train your Text-to-Image Model: Evaluating Design Choices for Synthetic Training Captions},
 	author={Manuel Brack and Sudeep Katakol and Felix Friedrich and Patrick Schramowski and Hareesh Ravi and Kristian Kersting and Ajinkya Kale},
-	howpublished={arXiv preprint arXiv:2506.16679},
+	booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops},
+	key={Oral Presentation},
 	year={2025},
 	url={https://arxiv.org/pdf/2506.16679},
 	crossref={https://ml-research.github.io/human-centered-genai/projects/t2i-synthetic-captions/index.html},
