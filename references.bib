@@ -1,36 +1,66 @@
 
-@incollection{friedrich2025overcorrection,
-anote = {./images/friedrich2025overcorrection.png},
-      title={Beyond Overcorrection: Evaluating Diversity in T2I Models with DivBench}, 
-      author={Felix Friedrich and Thiemo Ganesha Welsch and Manuel Brack and Patrick Schramowski and Kristian Kersting},
-      year={2025},
-      booktitle={Working Notes of the Workshop on Safe and Trustworthy Multimodal AI Systems at ICCV},
-      url={https://arxiv.org/abs/2507.03015}, 
-	  keywords={Text-to-Image, Diversity, Evaluation, Benchmark},
-	  note={Current diversification strategies for text-to-image (T2I) models often ignore contextual appropriateness, leading to over-diversification where demographic attributes are modified even when explicitly specified in prompts. This paper introduces DIVBENCH, a benchmark and evaluation framework for measuring both under- and over-diversification in T2I generation. Through systematic evaluation of state-of-the-art T2I models, we find that while most models exhibit limited diversity, many diversification approaches overcorrect by inappropriately altering contextually-specified attributes. We demonstrate that context-aware methods, particularly LLM-guided FairDiffusion and prompt rewriting, can already effectively address under-diversity while avoiding over-diversification, achieving a better balance between representation and semantic fidelity.}
-}
-@inproceedings{haerle2025measuring,
-	      anote = {./images/haerle2025measuring.png},
-	      title={Measuring and Guiding Monosemanticity},
-	      author={Ruben Härle and Felix Friedrich and Manuel Brack and Stephan Wäldchen and Björn Deiseroth and Patrick Schramowski and Kristian Kersting},
-	      year={2025},
-		  booktitle = {Proceedings of the Advances in Neural Information Processing Systems: Annual Conference on Neural Information Processing Systems (NeurIPS)},
- 	     
-		  key = {Spotlight Paper},
-	      note = {There is growing interest in leveraging mechanistic interpretability and controllability to better understand and influence the internal dynamics of large language models (LLMs). However, current methods face fundamental challenges in reliably localizing and manipulating feature representations. Sparse Autoencoders (SAEs) have recently emerged as a promising direction for feature extraction at scale, yet they, too, are limited by incomplete feature isolation and unreliable monosemanticity. To systematically quantify these limitations, we introduce Feature Monosemanticity Score (FMS), a novel metric to quantify feature monosemanticity in latent representation. Building on these insights, we propose Guided Sparse Autoencoders (G-SAE), a method that conditions latent representations on labeled concepts during training. We demonstrate that reliable localization and disentanglement of target concepts within the latent space improve interpretability, detection of behavior, and control. Specifically, our evaluations on toxicity detection, writing style identification, and privacy attribute recognition show that G-SAE not only enhances monosemanticity but also enables more effective and fine-grained steering with less quality degradation. Our findings provide actionable guidelines for measuring and advancing mechanistic interpretability and control of LLMs.},
-	      url={https://arxiv.org/abs/2506.19382},
-	      keywords = {LLM, Semantic, Interpretability, Control, Steering},
-	}
-@incollection{paul2024coretokensets,
-	anote = {./images/paul2024coretokensets.png},
-	title={Core Tokensets for Data-efficient Sequential Training of Transformers},
-	author={Subarnaduti Paul and Manuel Brack and Patrick Schramowski and Kristian Kersting and Martin Mundt},
-	booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops},
-	year={2025},
-	url={https://arxiv.org/abs/2410.05800},
-	keywords={Transformer, Continual Learning, Coresets, Data-efficient, Sequential Training},
-	note={Deep networks are frequently tuned to novel tasks and continue learning from ongoing data streams. Such sequential training requires consolidation of new and past information, a challenge predominantly addressed by retaining the most important data points - formally known as coresets. Traditionally, these coresets consist of entire samples, such as images or sentences. However, recent transformer architectures operate on tokens, leading to the famous assertion that an image is worth 16x16 words. Intuitively, not all of these tokens are equally informative or memorable. Going beyond coresets, we thus propose to construct a deeper-level data summary on the level of tokens. Our respectively named core tokensets both select the most informative data points and leverage feature attribution to store only their most relevant features. We demonstrate that core tokensets yield significant performance retention in incremental image classification, open-ended visual question answering, and continual image captioning with significantly reduced memory. In fact, we empirically find that a core tokenset of 1\% of the data performs comparably to at least a twice as large and up to 10 times larger coreset.}
-	}
+@inproceedings{haerle2025gsae,
+	anote = {./images/haerle2025gsae.png},
+	author = {Ruben Härle and Felix Friedrich and Manuel Brack and Björn Deiseroth and Stephan Waeldchen and Patrick Schramowski and Kristian Kersting},
+	booktitle = {Proceedings of the 39th Conference on Neural Information Processing Systems (NeurIPS)},
+	keywords = {Interpretability, Monosemanticity, Sparse Autoencoder, LLM, Alignment},
+	note = {There is growing interest in leveraging mechanistic interpretability and controllability to better understand and influence the internal dynamics of large language models (LLMs). However, current methods face fundamental challenges in reliably localizing and manipulating feature representations. Sparse Autoencoders (SAEs) have recently emerged as a promising direction for feature extraction at scale, yet they, too, are limited by incomplete feature isolation and unreliable monosemanticity. To systematically quantify these limitations, we introduce Feature Monosemanticity Score (FMS), a novel metric to quantify feature monosemanticity in latent representation. Building on these insights, we propose Guided Sparse Autoencoders (G-SAE), a method that conditions latent representations on labeled concepts during training. We demonstrate that reliable localization and disentanglement of target concepts within the latent space improve interpretability, detection of behavior, and control. Specifically, our evaluations on toxicity detection, writing style identification, and privacy attribute recognition show that G-SAE not only enhances monosemanticity but also enables more effective and fine-grained steering with less quality degradation. Our findings provide actionable guidelines for measuring and advancing mechanistic interpretability and control of LLMs.},
+	title = {Measuring and Guiding Monosemanticity},
+	url = {},
+	year = {2025}}
+
+
+@inproceedings{willig2025dynamic,
+	anote = {./images/willig2025dynamic.png},
+	author = {Moritz Willig and Tim Tobiasch and Devendra Singh Dhami and Kristian Kersting},
+	booktitle = {Proceedings of the 39th Conference on Neural Information Processing Systems (NeurIPS)},
+	keywords = {Meta-Causality, Causal Dynamics, Decision-Making, Reflection},
+  note = {Many causal inference frameworks rely on a staticity assumption, where repeated interventions are expected to yield consistent outcomes, often summarized by metrics like the Average Treatment Effect (ATE). This assumption, however, frequently fails in dynamic environments where interventions can alter the system's underlying causal structure, rendering traditional `static' ATE insufficient or misleading. Recent works on meta-causal models (MCM) offer a promising avenue by enabling qualitative reasoning over evolving relationships. In this work, we propose a specific class of MCM with desirable properties for explicitly modeling and predicting intervention outcomes under meta-causal dynamics. Through expository examples in high-impact domains of medical treatment and judicial decision-making, we highlight the severe consequences that arise when system dynamics are neglected and demonstrate the successful application of meta-causal strategies to navigate these challenges.},
+	title = {When Causal Dynamics Matter: Adapting Causal Strategies through Meta-Aware Interventions},
+	url = {},
+	year = {2025}}
+
+
+@inproceedings{kraus2025mixer,
+ anote = {./images/kraus2025mixer.png},
+ author = {Maurice Kraus and Felix Divo and Devendra Singh Dhami and Kristian Kersting},
+ booktitle = {Proceedings of the 39th Conference on Neural Information Processing Systems (NeurIPS)},
+ keywords = {time series, xLSTM, forecasting, mixing, recurrent},
+ note = {Time series data is prevalent across numerous fields, necessitating the development of robust and accurate forecasting models. Capturing patterns both within and between temporal and multivariate components is crucial for reliable predictions. We introduce xLSTM-Mixer, a model designed to effectively integrate temporal sequences, joint time-variate information, and multiple perspectives for robust forecasting. Our approach begins with a linear forecast shared across variates, which is then refined by xLSTM blocks. They serve as key elements for modeling the complex dynamics of challenging time series data. xLSTM-Mixer ultimately reconciles two distinct views to produce the final forecast. Our extensive evaluations demonstrate its superior long-term forecasting performance compared to recent state-of-the-art methods while requiring very little memory. A thorough model analysis provides further insights into its key components and confirms its robustness and effectiveness. This work contributes to the resurgence of recurrent models in forecasting by combining them, for the first time, with mixing architectures.},
+ title = {xLSTM-Mixer: Multivariate Time Series Forecasting by Mixing via Scalar Memories},
+ url = {},
+ year = {2025}}
+
+ @inproceedings{kraus2025granger,
+  anote = {./images/kraus2025granger.png},
+  author = {Harsh Poonia and Felix Divo and Kristian Kersting and Devendra Singh Dhami},
+  booktitle = {Proceedings of the 39th Conference on Neural Information Processing Systems (NeurIPS)},
+  keywords = {Time Series, xLSTM, Granger Causality},
+  note = {Causality in time series can be difficult to determine, especially in the presence of non-linear dependencies. The concept of Granger causality helps analyze potential relationships between variables, thereby offering a method to determine whether one time series can predict—Granger cause—future values of another. Although successful, Granger causal methods still struggle with capturing long-range relations between variables. To this end, we leverage the recently successful Extended Long Short-Term Memory (xLSTM) architecture and propose Granger causal xLSTMs (GC-xLSTM). It first enforces sparsity between the time series components by using a novel dynamic loss penalty on the initial projection. Specifically, we adaptively improve the model and identify sparsity candidates. Our joint optimization procedure then ensures that the Granger causal relations are recovered robustly. Our experimental evaluation on six diverse datasets demonstrates the overall efficacy of our proposed GC-xLSTM model.},
+  title = {Exploring Neural Granger Causality with xLSTMs: Unveiling Temporal Dependencies in Complex Data},
+  url = {},
+  year = {2025}}
+
+@inproceedings{steinmann2025occb,
+ anote = {./images/steinmann2025occb.png},
+ author = {David Steinmann and Wolfgang Stammer and Antonia Wüst and Kristian Kersting},
+ booktitle = {Proceedings of the 39th Conference on Neural Information Processing Systems (NeurIPS)},
+ keywords = {Concept Bottlenecks, Cncept Learning, Object Centric Learning, Interpretability},
+ note = {Developing high-performing, yet interpretable models remains a critical challenge in modern AI. Concept-based models (CBMs) attempt to address this by extracting human-understandable concepts from a global encoding (e.g., image encoding) and then applying a linear classifier on the resulting concept activations, enabling transparent decision-making. However, their reliance on holistic image encodings limits their expressiveness in object-centric real-world settings and thus hinders their ability to solve complex vision tasks beyond single-label classification. To tackle these challenges, we introduce Object-Centric Concept Bottlenecks (OCB), a framework that combines the strengths of CBMs and pre-trained object-centric foundation models, boosting performance and interpretability. We evaluate OCB on complex image datasets and conduct a comprehensive ablation study to analyze key components of the framework, such as strategies for aggregating object-concept encodings. The results show that OCB outperforms traditional CBMs and allows one to make interpretable decisions for complex visual tasks.},
+ title = {Object-Centric Concept-Bottlenecks},
+ url = {},
+ year = {2025}}
+
+ @inproceedings{schuhmann2025emonet,
+  anote = {./images/schuhmann2025emonet.png},
+  author = {Christoph Schuhmann and Robert Kaczmarczyk and Gollam Rabby and Maurice Kraus and Felix Friedrich and Huu Nguyen and Krishna Kalyan and Kourosh Nadi and Kristian Kersting and Sören Auer},
+  booktitle = {Proceedings of the 39th Conference on Neural Information Processing Systems (NeurIPS)},
+  keywords = {Human Emotion Recognition, Machine Learning, Benchmark, Dataset},
+  note = {Effective human-AI interaction relies on AI's ability to accurately perceive and interpret human emotions. Current benchmarks for vision and vision-language models are severely limited, offering a narrow emotional spectrum that overlooks nuanced states (e.g., bitterness, intoxication) and fails to distinguish subtle differences between related feelings (e.g., shame vs. embarrassment). Existing datasets also often use uncontrolled imagery with occluded faces and lack demographic diversity, risking significant bias. To address these critical gaps, we introduce EmoNet Face, a comprehensive benchmark suite. EmoNet Face features: (1) A novel 40-category emotion taxonomy, meticulously derived from foundational research to capture finer details of human emotional experiences. (2) Three large-scale, AI-generated datasets (EmoNet HQ, Binary, and Big) with explicit, full-face expressions and controlled demographic balance across ethnicity, age, and gender. (3) Rigorous, multi-expert annotations for training and high-fidelity evaluation. (4) We build Empathic Insight Face, a model achieving human-expert-level performance on our benchmark. The publicly released EmoNet Face suite—taxonomy, datasets, and model—provides a robust foundation for developing and evaluating AI systems with a deeper understanding of human emotions.},
+  title = {EmoNet-Face: An Expert-Annotated Benchmark for Synthetic Emotion Recognition},
+  url = {},
+  year = {2025}} 
+
 @incollection{delfosse2025deep,
 	anote = {./images/delfosse2025notintelligent.png},
 	author = {Quentin Delfosse and Jannis Blüml and Fabian Tatai and Théo Vincent and Bjarne Gregori and Elisabeth Dillies and Jan Peters and Constantin Rothkopf and Kristian Kersting},
@@ -82,7 +112,6 @@ anote = {./images/friedrich2025overcorrection.png},
 	      year={2025},
 				booktitle = {Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)},
  		 	 crossref = {https://huggingface.co/spaces/JQL-AI/JQL},
-		  key = {Oral Presentation},
 	      note = {High-quality multilingual training data is essential for effectively pretraining large language models (LLMs). Yet, the availability of suitable open-source multilingual datasets remains limited. Existing state-of-the-art datasets mostly rely on heuristic filtering methods, restricting both their cross-lingual transferability and scalability. Here, we introduce JQL, a systematic approach that efficiently curates diverse and high-quality multilingual data at scale while significantly reducing computational demands. JQL distills LLMs' annotation capabilities into lightweight annotators based on pretrained multilingual embeddings. These models exhibit robust multilingual and cross-lingual performance, even for languages and scripts unseen during training. Evaluated empirically across 35 languages, the resulting annotation pipeline substantially outperforms current heuristic filtering methods like Fineweb2. JQL notably enhances downstream model training quality and increases data retention rates. Our research provides practical insights and valuable resources for multilingual data curation, raising the standards of multilingual dataset development.},
 	      url={https://arxiv.org/pdf/2505.22232},
 	      keywords = {LLM, Pre-training, Data, Multilingual},
@@ -150,12 +179,11 @@ anote = {./images/friedrich2025overcorrection.png},
 	note={We introduce SLR, an end-to-end framework for systematic evaluation and training of Large Language Models (LLMs) via Scalable Logical Reasoning. Given a user's task specification, SLR enables scalable, automated synthesis of inductive reasoning tasks with precisely controlled difficulty. For each task, SLR synthesizes (i) a latent ground-truth rule, (ii) an executable validation program used by a symbolic judge to deterministically verify model outputs, and (iii) an instruction prompt for the reasoning task. Using SLR, we create SLR-Bench, a benchmark comprising over 19k prompts spanning 20 curriculum levels that progressively increase in relational, arithmetic, and recursive complexity. Large-scale evaluation reveals that contemporary LLMs readily produce syntactically valid rules, yet often fail at correct logical inference. Recent reasoning LLMs do somewhat better, but incur substantial increases in test-time compute, sometimes exceeding 15k completion tokens. Finally, logic-tuning via SLR doubles Llama-3-8B accuracy on SLR-Bench, achieving parity with Gemini-Flash-Thinking at a fraction of computational cost. SLR is fully automated, requires no human annotation, ensures dataset novelty, and offers a scalable environment for probing and advancing LLMs' reasoning capabilities.}
 	}
 
-@incollection{brack2025howtotrain,
+@misc{brack2025howtotrain,
 	anote = {./images/brack2025how.png},
 	title={How to Train your Text-to-Image Model: Evaluating Design Choices for Synthetic Training Captions},
 	author={Manuel Brack and Sudeep Katakol and Felix Friedrich and Patrick Schramowski and Hareesh Ravi and Kristian Kersting and Ajinkya Kale},
-	booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops},
-	key={Oral Presentation},
+	howpublished={arXiv preprint arXiv:2506.16679},
 	year={2025},
 	url={https://arxiv.org/pdf/2506.16679},
 	crossref={https://ml-research.github.io/human-centered-genai/projects/t2i-synthetic-captions/index.html},
