@@ -1,0 +1,31 @@
+
+links SML
+
+https://www.youtube.com/watch?v=UzxYlbK2c7E
+
+Alex smola
+
+https://www.youtube.com/watch?v=UtcKm8i5Xro&list=PLZSO_6-bSqHTTV7w9u7grTXBHMH-mw3qn
+
+Tom Mitchell
+
+https://www.youtube.com/watch?v=m4NlfvrRCdg&list=PLAJ0alZrN8rD63LD0FkzKFiFgkOmEtltQ
+
+introoduction 
+
+https://www.youtube.com/watch?v=UqZQD6pC0Cs
+
+https://www.youtube.com/watch?v=ggIk08PNcBo
+
+
+SVM
+
+https://www.youtube.com/watch?v=_PwhiWxHK8o
+
+Boosting
+
+https://youtu.be/UHBmv7qCey4
+
+neural networks 
+
+https://youtu.be/uXt8qF2Zzfo
