@@ -144,7 +144,7 @@ window.AIML_SITE_CONTENT = {
         { "id": "ssztwiertnia", "name": "Sebastian Sztwiertnia", "role": "PhD Candidate", "focus": "Explainable healthcare AI" },
         { "id": "fventola", "name": "Fabrizio Ventola", "role": "PhD Candidate", "focus": "Tractable probabilistic modeling" },
         { "id": "mwillig", "name": "Moritz Willig", "role": "PhD Candidate", "focus": "Causal AI" },
-        { "id": "twoydt", "name": "Tim Woydt", "role": "PhD Candidate", "focus": "Human-robot collaboration" },
+        { "id": "twoydt", "name": "Tim Woydt", "role": "PhD Candidate", "focus": "Causal & Interactive AI" },
         { "id": "awuest", "name": "Antonia Wüst", "role": "PhD Candidate", "focus": "Neuro-Symbolic AI" }, 
         { "id": "zye", "name": "Zihan Ye", "role": "PhD Candidate", "focus": "Reinforcement Learning and Neuro-Symbolic AI" },
         { "id": "mzecevic", "name": "Matej Zečević", "role": "PhD Candidate", "focus": "Generative modeling" }
