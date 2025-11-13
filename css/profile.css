@@ -239,7 +239,7 @@ body.profile-page #mission table {
 
 .profile-publications-list {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: clamp(1rem, 2.5vw, 1.5rem);
   margin-top: 0.5rem;
 }
