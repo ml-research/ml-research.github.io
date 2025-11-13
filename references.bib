@@ -7,6 +7,8 @@
       primaryClass={cs.LG},
       url={https://arxiv.org/abs/2511.05124}, 
       crossref = {https://huggingface.co/datasets/dasyd/quants},
+      abstract={Text offers intuitive access to information. This can, in particular, complement the density of numerical time series, thereby allowing improved interactions with time series models to enhance accessibility and decision-making. While the creation of question-answering datasets and models has recently seen remarkable growth, most research focuses on question answering (QA) on vision and text, with time series receiving minute attention. To bridge this gap, we propose a challenging novel time series QA (TSQA) dataset, QuAnTS, for Question Answering on Time Series data. Specifically, we pose a wide variety of questions and answers about human motion in the form of tracked skeleton trajectories. We verify that the large-scale QuAnTS dataset is well-formed and comprehensive through extensive experiments. Thoroughly evaluating existing and newly proposed baselines then lays the groundwork for a deeper exploration of TSQA using QuAnTS. Additionally, we provide human performances as a key reference for gauging the practical usability of such models. We hope to encourage future research on interacting with time series models through text, enabling better decision-making and more transparent systems.},
+      keywords = {Time Series, Multimodal Question Answering, Dataset},
       anote = {./images/quants-dataset-icon.png}
 }
 
@@ -17,7 +19,9 @@
       eprint={2507.15478},
       archivePrefix={arXiv},
       primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2507.15478}, 
+      url={https://arxiv.org/abs/2507.15478},
+      abstract={Ensuring reliable and rule-compliant behavior of autonomous agents in uncertain environments remains a fundamental challenge in modern robotics. Our work shows how neuro-symbolic systems, which integrate probabilistic, symbolic white-box reasoning models with deep learning methods, offer a powerful solution to this challenge. This enables the simultaneous consideration of explicit rules and neural models trained on noisy data, combining the strength of structured reasoning with flexible representations. To this end, we introduce the Constitutional Controller (CoCo), a novel framework designed to enhance the safety and reliability of agents by reasoning over deep probabilistic logic programs representing constraints such as those found in shared traffic spaces. Furthermore, we propose the concept of self-doubt, implemented as a probability density conditioned on doubt features such as travel velocity, employed sensors, or health factors. In a real-world aerial mobility study, we demonstrate CoCo's advantages for intelligent autonomous systems to learn appropriate doubts and navigate complex and uncertain environments safely and compliantly.},
+      keywords = {Constitutional AI,  Deep Learning,  Hybrid AI,  Control,  Logic,  Neuro-symbolic AI,  Robotics},
       crossref = {https://github.com/HRI-EU/ProMis},
       anote = {./images/kohaut2025coco.png}
 }
@@ -80,7 +84,7 @@
 	author = {Moritz Willig and Tim Woydt and Devendra Singh Dhami and Kristian Kersting},
 	booktitle = {Proceedings of the 39th Conference on Neural Information Processing Systems (NeurIPS)},
 	keywords = {Meta-Causality, Causal Dynamics, Decision-Making, Reflection},
-  note = {Many causal inference frameworks rely on a staticity assumption, where repeated interventions are expected to yield consistent outcomes, often summarized by metrics like the Average Treatment Effect (ATE). This assumption, however, frequently fails in dynamic environments where interventions can alter the system's underlying causal structure, rendering traditional `static' ATE insufficient or misleading. Recent works on meta-causal models (MCM) offer a promising avenue by enabling qualitative reasoning over evolving relationships. In this work, we propose a specific class of MCM with desirable properties for explicitly modeling and predicting intervention outcomes under meta-causal dynamics. Through expository examples in high-impact domains of medical treatment and judicial decision-making, we highlight the severe consequences that arise when system dynamics are neglected and demonstrate the successful application of meta-causal strategies to navigate these challenges.},
+    note = {Many causal inference frameworks rely on a staticity assumption, where repeated interventions are expected to yield consistent outcomes, often summarized by metrics like the Average Treatment Effect (ATE). This assumption, however, frequently fails in dynamic environments where interventions can alter the system's underlying causal structure, rendering traditional `static' ATE insufficient or misleading. Recent works on meta-causal models (MCM) offer a promising avenue by enabling qualitative reasoning over evolving relationships. In this work, we propose a specific class of MCM with desirable properties for explicitly modeling and predicting intervention outcomes under meta-causal dynamics. Through expository examples in high-impact domains of medical treatment and judicial decision-making, we highlight the severe consequences that arise when system dynamics are neglected and demonstrate the successful application of meta-causal strategies to navigate these challenges.},
 	title = {When Causal Dynamics Matter: Adapting Causal Strategies through Meta-Aware Interventions},
 	url = {},
 	year = {2025}}
@@ -88,22 +92,22 @@
 
 @inproceedings{kraus2025mixer,
  anote = {./images/kraus2025mixer.png},
- author = {Maurice Kraus and Felix Divo and Devendra Singh Dhami and Kristian Kersting},
+ author = {Maurice Kraus and Felix  and Devendra Singh Dhami and Kristian Kersting},
  booktitle = {Proceedings of the 39th Conference on Neural Information Processing Systems (NeurIPS)},
- keywords = {time series, xLSTM, forecasting, mixing, recurrent},
- note = {Time series data is prevalent across numerous fields, necessitating the development of robust and accurate forecasting models. Capturing patterns both within and between temporal and multivariate components is crucial for reliable predictions. We introduce xLSTM-Mixer, a model designed to effectively integrate temporal sequences, joint time-variate information, and multiple perspectives for robust forecasting. Our approach begins with a linear forecast shared across variates, which is then refined by xLSTM blocks. They serve as key elements for modeling the complex dynamics of challenging time series data. xLSTM-Mixer ultimately reconciles two distinct views to produce the final forecast. Our extensive evaluations demonstrate its superior long-term forecasting performance compared to recent state-of-the-art methods while requiring very little memory. A thorough model analysis provides further insights into its key components and confirms its robustness and effectiveness. This work contributes to the resurgence of recurrent models in forecasting by combining them, for the first time, with mixing architectures.},
+ keywords = {Time Series, xLSTM, Forecasting, Mixing, Recurrent},
  title = {xLSTM-Mixer: Multivariate Time Series Forecasting by Mixing via Scalar Memories},
- url = {},
+ url = {https://neurips.cc/virtual/2025/loc/san-diego/poster/118697},
+ abstract={Time series data is prevalent across numerous fields, necessitating the development of robust and accurate forecasting models. Capturing patterns both within and between temporal and multivariate components is crucial for reliable predictions. We introduce xLSTM-Mixer, a model designed to effectively integrate temporal sequences, joint time-variate information, and multiple perspectives for robust forecasting. Our approach begins with a linear forecast shared across variates, which is then refined by xLSTM blocks. They serve as key elements for modeling the complex dynamics of challenging time series data. xLSTM-Mixer ultimately reconciles two distinct views to produce the final forecast. Our extensive evaluations demonstrate its superior long-term forecasting performance compared to recent state-of-the-art methods while requiring very little memory. A thorough model analysis provides further insights into its key components and confirms its robustness and effectiveness. This work contributes to the resurgence of recurrent models in forecasting by combining them, for the first time, with mixing architectures.},
  year = {2025}}
 
- @inproceedings{kraus2025granger,
+@inproceedings{kraus2025granger,
   anote = {./images/kraus2025granger.png},
   author = {Harsh Poonia and Felix Divo and Kristian Kersting and Devendra Singh Dhami},
   booktitle = {Proceedings of the 39th Conference on Neural Information Processing Systems (NeurIPS)},
   keywords = {Time Series, xLSTM, Granger Causality},
-  note = {Causality in time series can be difficult to determine, especially in the presence of non-linear dependencies. The concept of Granger causality helps analyze potential relationships between variables, thereby offering a method to determine whether one time series can predict—Granger cause—future values of another. Although successful, Granger causal methods still struggle with capturing long-range relations between variables. To this end, we leverage the recently successful Extended Long Short-Term Memory (xLSTM) architecture and propose Granger causal xLSTMs (GC-xLSTM). It first enforces sparsity between the time series components by using a novel dynamic loss penalty on the initial projection. Specifically, we adaptively improve the model and identify sparsity candidates. Our joint optimization procedure then ensures that the Granger causal relations are recovered robustly. Our experimental evaluation on six diverse datasets demonstrates the overall efficacy of our proposed GC-xLSTM model.},
   title = {Exploring Neural Granger Causality with xLSTMs: Unveiling Temporal Dependencies in Complex Data},
-  url = {},
+  url = {https://neurips.cc/virtual/2025/loc/san-diego/poster/115199},
+  abstract={Causality in time series can be challenging to determine, especially in the presence of non-linear dependencies. Granger causality helps analyze potential relationships between variables, thereby offering a method to determine whether one time series can predict—Granger cause—future values of another. Although successful, Granger causal methods still struggle with capturing long-range relations between variables. To this end, we leverage the recently successful Extended Long Short-Term Memory (xLSTM) architecture and propose Granger causal xLSTMs (GC-xLSTM). It first enforces sparsity between the time series components by using a novel dynamic loss penalty on the initial projection. Specifically, we adaptively improve the model and identify sparsity candidates. Our joint optimization procedure then ensures that the Granger causal relations are recovered robustly. Our experimental evaluation on six diverse datasets demonstrates the overall efficacy of GC-xLSTM.},
   year = {2025}}
 
 @inproceedings{steinmann2025occb,
