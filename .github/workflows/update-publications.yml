@@ -1,0 +1,42 @@
+name: Update publications data
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - references.bib
+      - scripts/generate_publications_json.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install bibtexparser
+
+      - name: Regenerate publications data
+        run: python scripts/generate_publications_json.py
+
+      - name: Commit and push updates
+        run: |
+          if git diff --quiet; then
+            echo "Changes detected in reference.bib, but no updates to commit. Something went wrong with your change."
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -am "chore: update publications data"
+          git push
