@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="Artificial Intelligence and Machine Learning Lab at TU Darmstadt combines statistical learning, reasoning, and human-centered AI to tackle challenges from healthcare to sustainability."/>
+  <title>Artificial Intelligence and Machine Learning Lab @ TU Darmstadt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/jquery.dataTables.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/dataTables.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body class="site-body has-fixed-header">
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#top">
+        <img src="./icons/logos/aimlCleanV2.svg" alt="AIML Lab logo" class="navbar-brand-photo"/>
+        <span>AIML Lab</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="#people">People</a></li>
+          <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#legal">Legal</a></li>
+        </ul>
+        <div class="d-flex align-items-center mt-3 mt-lg-0 ms-lg-4 gap-2">
+          <a class="btn btn-outline-primary" href="https://www.tu-darmstadt.de/" target="_blank" rel="noopener">TU Darmstadt</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main id="top">
+  <section class="hero-intro py-5 border-bottom bg-white">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-7">
+          <p class="text-uppercase text-muted fw-semibold small letter-spacing">Artificial Intelligence &amp; Machine Learning Lab</p>
+          <h1 class="display-5 fw-semibold text-dark">Researching the foundations of reliable, human-centered AI.</h1>
+          <p class="lead text-secondary mt-3">We advance statistical learning, probabilistic reasoning, and collaborative intelligence to enable systems that can understand complex worlds and act responsibly.</p>
+          <div class="d-flex flex-wrap gap-3 align-items-center mt-4">
+            <a class="btn btn-primary" href="#news">Latest news</a>
+            <a class="btn btn-outline-secondary" href="#research">Research themes</a>
+            <a class="btn btn-outline-secondary" href="./thesis/proposal/index.html" target="_blank" rel="noopener">Thesis opportunities</a>
+          </div>
+          <div class="hero-stats mt-4" data-render="heroStats"></div>
+        </div>
+        <div class="col-lg-5">
+      <figure class="hero-figure">
+        <img src="./icons/logos/aimlCleanV2.svg" alt="Artificial Intelligence and Machine Learning Lab logo" class="img-fluid rounded"/>
+      </figure>
+          <div class="d-flex flex-wrap gap-3 align-items-center mt-4 hero-affiliations">
+            <a class="hero-logo-link" href="https://www.tu-darmstadt.de/" target="_blank" rel="noopener" aria-label="TU Darmstadt">
+              <img src="./images/tud_weblogo.svg" alt="TU Darmstadt" class="hero-logo"/>
+            </a>
+            <a class="hero-logo-link" href="https://www.informatik.tu-darmstadt.de/" target="_blank" rel="noopener" aria-label="Department of Computer Science">
+              <img src="./images/FB-Informatik-Logo_DE_written-out_rgb.jpg" alt="Department of Computer Science" class="hero-logo"/>
+            </a>
+            <a class="hero-logo-link" href="https://www.cogsci.tu-darmstadt.de/" target="_blank" rel="noopener" aria-label="Centre for Cognitive Science">
+              <img src="./images/ccsLogo.jpg" alt="Centre for Cognitive Science" class="hero-logo"/>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-light-subtle" id="news">
+    <div class="container">
+      <div class="section-header mb-5">
+        <h2 class="section-heading"><span>News &amp; Highlights</span></h2>
+        <p class="section-subheading">Stay up to date with AIML Lab announcements, invited talks, awards, and outreach. Browse recent and historical entries in the stream below.</p>
+      </div>
+      <div class="news-feed" data-render="newsHighlights"></div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-white" id="research">
+    <div class="container">
+      <div class="mb-5">
+        <h2 class="section-heading"><span>Research Themes</span></h2>
+        <p class="section-subheading">Our work spans statistical relational AI, generative modeling, and trustworthy ML systems in close collaboration with cognitive science, robotics, and domain experts.</p>
+      </div>
+      <div class="row g-4 research-grid" data-render="focusAreas"></div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-light-subtle" id="people">
+    <div class="container">
+      <div class="section-header mb-5">
+        <h2 class="section-heading"><span>People</span></h2>
+        <p class="section-subheading">We are computer scientists, cognitive scientists, and engineers working across TU Darmstadt, Hessian.AI, and international partners. Meet the team that drives our research agenda.</p>
+      </div>
+      <figure class="mb-4 text-center">
+        <img src="./images/group_picture_june23.jpg" alt="AIML Lab group photo" class="img-fluid rounded shadow-sm" style="max-width:520px;width:100%;" title="AIML Lab group photo, June 2023"/>
+        <figcaption class="text-muted small mt-2">AIML Lab group photo — June 2023</figcaption>
+      </figure>
+      <div id="people-grid"></div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-white" id="teaching">
+    <div class="container">
+      <div class="section-header mb-5">
+        <h2 class="section-heading"><span>Teaching</span></h2>
+        <p class="section-subheading">We offer core courses in machine learning and artificial intelligence, hands-on seminars, and supervision for bachelor and master theses. Thesis supervision is available for TU Darmstadt students only.</p>
+      </div>
+      <div class="current-offerings" data-render="currentTeaching"></div>
+      <div class="thesis-cta mt-5">
+        <a class="thesis-card" href="./thesis/proposal/index.html" target="_blank" rel="noopener">
+          <div class="thesis-card-body">
+            <h3 class="thesis-card-title">Thesis Opportunities</h3>
+            <p class="thesis-card-text">We supervise Bachelor and Master theses on multiple topics in the direction of AI &amp; ML. Please <strong>read</strong> the instructions below. Supervision is only possible for students of the TU Darmstadt.</p>
+            <div class="thesis-card-meta">Language: English or German &bull; Credits: 12 or 30 CP depending on programme</div>
+            <span class="thesis-card-cta">Open instructions<span class="thesis-card-cta-icon" aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-light-subtle" id="publications">
+    <div class="container">
+      <div class="section-header mb-5">
+        <h2 class="section-heading"><span>Publications</span></h2>
+        <p class="section-subheading">Browse our peer-reviewed publications. Use the filters to discover our contributions across conferences, journals, and workshops.</p>
+      </div>
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <div class="publication-controls row g-3 align-items-end">
+            <div class="col-12 col-lg-5">
+              <label class="form-label text-muted small text-uppercase" for="pubSearch">Search publications</label>
+              <input type="search" id="pubSearch" class="form-control publication-input" data-filter="search" placeholder="Search by title, author, venue or keyword"/>
+            </div>
+            <div class="col-6 col-lg-2">
+              <label class="form-label text-muted small text-uppercase" for="pubYear">Year</label>
+              <select class="form-select publication-input" id="pubYear" data-filter="year">
+                <option value="all">All years</option>
+              </select>
+            </div>
+            <div class="col-6 col-lg-3">
+              <label class="form-label text-muted small text-uppercase" for="pubType">Type</label>
+              <select class="form-select publication-input" id="pubType" data-filter="type">
+                <option value="all">All types</option>
+              </select>
+            </div>
+            <div class="col-12 col-lg-2">
+              <label class="form-label text-muted small text-uppercase" for="pubTopic">Topic</label>
+              <select class="form-select publication-input" id="pubTopic" data-filter="topic">
+                <option value="all">All themes</option>
+              </select>
+            </div>
+          </div>
+          <div class="publication-summary small text-muted" data-render="pubCount">Loading publications…</div>
+          <div class="publication-list" id="publicationList" aria-live="polite" aria-busy="true"></div>
+          <div class="d-flex justify-content-center mt-4">
+            <button class="btn btn-outline-secondary" type="button" id="pubLoadMore" hidden>Load more</button>
+          </div>
+        </div>
+      </div>
+      <p class="mt-3 small text-muted">Publications remain accessible on individual researcher pages and through our <a href="./papers/index.html" target="_blank" rel="noopener">papers overview</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer bg-dark text-white" id="contact">
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <h2 class="h4">Contact</h2>
+        <p class="text-white-50 mb-1">Meetings by appointment, general consultation: Thursdays, 13:30–14:30.</p>
+        <address class="mb-0 text-white-50">
+          Artificial Intelligence and Machine Learning Lab<br/>
+          Computer Science Department &amp; Centre for Cognitive Science, TU Darmstadt<br/>
+          Altes Hauptgebäude, Room 074, Hochschulstrasse 1<br/>
+          64289 Darmstadt, Germany<br/>
+          <span class="d-block mt-3"><img src="./images/phone.png" alt="Phone" class="icon-inline"/> +49-6151-16-24411</span>
+          <span class="d-block"><img src="./images/mail.jpg" alt="Mail" class="icon-inline"/> kersting@cs.tu-darmstadt.de, kristian.kersting@cogsci.tu-darmstadt.de</span>
+        </address>
+      </div>
+      <div class="col-lg-6" id="legal">
+        <h2 class="h4">Legal Information</h2>
+        <p class="text-white-50 mb-2">Technische Universitaet Darmstadt<br/>
+          Fachbereich Informatik<br/>
+          Hochschulstr. 1, 64289 Darmstadt, Germany</p>
+        <a class="btn btn-outline-light btn-sm" href="https://www.informatik.tu-darmstadt.de/impressum.en.jsp" target="_blank" rel="noopener">Legal info / Impressum</a>
+      </div>
+    </div>
+    <div class="mt-4 text-white-50 small">© <span id="current-year"></span> Artificial Intelligence and Machine Learning Lab. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNузT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="./build/publications-data.js"></script>
+<script src="./build/news-data.js"></script>
+<script src="./build/site-content.js"></script>
+<script src="./scripts/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neoGrad" x1="80" y1="40" x2="560" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B1230"/>
+      <stop offset="1" stop-color="#2A4D8F"/>
+    </linearGradient>
+    <linearGradient id="neoNode" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9BE7FF"/>
+      <stop offset="1" stop-color="#B59CFF"/>
+    </linearGradient>
+    <radialGradient id="neoHalo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(320 180) scale(260 200)">
+      <stop offset="0" stop-color="#7BC9FF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7BC9FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="360" rx="32" fill="url(#neoGrad)"/>
+  <rect width="640" height="360" rx="32" fill="url(#neoHalo)"/>
+  <!-- symbolic arcs -->
+  <g stroke="#FFCF82" stroke-width="8" stroke-linecap="round" stroke-opacity="0.45">
+    <path d="M140 120C200 60 300 60 360 120"/>
+    <path d="M180 280C260 320 380 320 460 280"/>
+    <path d="M260 90C320 40 420 50 470 120"/>
+  </g>
+  <!-- lattice -->
+  <g stroke="#7BC9FF" stroke-opacity="0.75" stroke-width="5" stroke-linecap="round">
+    <path d="M150 150L220 200L150 250L80 200Z"/>
+    <path d="M220 200L310 140L400 200L310 260Z"/>
+    <path d="M400 200L470 150L550 200L470 250Z"/>
+    <path d="M220 200L310 200"/>
+    <path d="M310 200L400 200"/>
+    <path d="M310 140L310 260"/>
+  </g>
+  <!-- neural nodes -->
+  <g fill="url(#neoNode)">
+    <circle cx="80" cy="200" r="18"/>
+    <circle cx="150" cy="150" r="20"/>
+    <circle cx="150" cy="250" r="20"/>
+    <circle cx="220" cy="200" r="24"/>
+    <circle cx="310" cy="140" r="26"/>
+    <circle cx="310" cy="200" r="30"/>
+    <circle cx="310" cy="260" r="26"/>
+    <circle cx="400" cy="200" r="24"/>
+    <circle cx="470" cy="150" r="20"/>
+    <circle cx="470" cy="250" r="20"/>
+    <circle cx="550" cy="200" r="18"/>
+  </g>
+  <!-- logic gate cluster -->
+  <g stroke="#9BE7FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="280" y="168" width="60" height="44" rx="10" fill="#0B1230" stroke="#9BE7FF"/>
+    <path d="M292 178H328" />
+    <path d="M292 188H322" />
+    <path d="M292 198H334" />
+    <circle cx="323" cy="210" r="6" />
+  </g>
+  <!-- floating symbols -->
+  <g stroke="#7BC9FF" stroke-opacity="0.25" stroke-width="5">
+    <circle cx="520" cy="90" r="26"/>
+    <circle cx="120" cy="300" r="22"/>
+  </g>
+  <g stroke="#FFCF82" stroke-opacity="0.35" stroke-width="4" stroke-linecap="round">
+    <path d="M520 250L580 290"/>
+    <path d="M520 290L580 250"/>
+    <path d="M60 70L110 110"/>
+    <path d="M60 110L110 70"/>
+  </g>
+</svg>

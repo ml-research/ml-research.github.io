@@ -8,17 +8,7 @@
     <meta name="author" content="">
 
     <title>Zihan Ye</title>
-
-
-    <link href="./../../css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="./../../css/jquery.dataTables.min.css" rel="stylesheet" media="screen">
-    <link href="./../../css/dataTables.bootstrap4.min.css" rel="stylesheet" media="screen">
-
-    <link href="./../../css/bootstrap-social.css" rel="stylesheet" media="screen">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link href="./../../css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../../icons/logos/aimlCleanV2.svg"/>
 
     <script src="./../../build/jquery.min.js"></script>
 
@@ -60,47 +50,41 @@
         </script>-->
 
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/profile.css" rel="stylesheet">
+
 </head>
 
 
 
-<body data-spy="scroll" data-target=".navbar" data-offset="65">
+<body class="profile-page site-body has-fixed-header">
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-
-        <a class="navbar-brand" href="#">Zihan Ye</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm profile-navbar fixed-top">
+      <div class="container align-items-center">
+              <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../../index.html">
+        <img src="../../icons/logos/aimlCleanV2.svg" alt="AIML Lab logo" class="navbar-brand-photo"/>
+        <span>AIML Lab</span>
+      </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarProfile" aria-controls="navbarProfile" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#mission">Mission and Bio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#publications">Publications</a>
-                </li>
-                <!--li class="nav-item">
-                    <a class="nav-link" href="#activities">Activities</a>
-                </li-->
-                <li class="nav-item">
-                    <a class="nav-link" href="../../index.html">ML@TUDA</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#legal">Legal Info</a>
-                </li>
-            </ul>
-
+                                <div class="collapse navbar-collapse justify-content-end" id="navbarProfile">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Back to AIML Lab</a></li>
+            <li class="nav-item"><a class="nav-link" href="#mission">Overview</a></li>
+            <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          </ul>
         </div>
+
+      </div>
     </nav>
 </header>
 
-
-<main role="main">
-    <br><br><br>
+<main id="top" class="profile-main" role="main">
     <div class="container" id="mission">
 
         <div class="row">
@@ -229,29 +213,34 @@
     <hr class="soft">
 
 
-    <div class="container" id="publications">
-
-        <h3>Publications</h3>
-      <!-- <b>Publications.</b> -->
-        <br>
-
-          <br>
+        <div class="container" id="publications">
+      <div class="profile-publications-header">
+        <div class="profile-publications-title">
+          <h3>Publications</h3>
+          <p>Selected publications from AIML Lab projects. Use the search and filters to explore recent work.</p>
+        </div>
+        <div class="profile-publications-metrics">
+          <div class="profile-publications-chip">
+            <span class="chip-label">Outputs</span>
+            <span class="chip-value" data-profile-pubs="total">–</span>
+          </div>
+          <div class="profile-publications-chip">
+            <span class="chip-label">Latest Year</span>
+            <span class="chip-value" data-profile-pubs="latest">–</span>
+          </div>
+          <div class="profile-publications-chip">
+            <span class="chip-label">Top Type</span>
+            <span class="chip-value" data-profile-pubs="type">–</span>
+          </div>
+        </div>
+      </div>
+      <div class="profile-publications-table" data-profile-publications data-profile-authors='["ye"]'>
+        <div class="profile-publications-loading text-muted" aria-live="polite">Loading publications…</div>
         <noscript>
-            <style>
-                #bibtex {
-                    display: block;
-                }
-            </style>
+          <p class="text-muted small mb-0">Enable JavaScript to view publications.</p>
         </noscript>
-
-        <table id="pubTable" class="table" style="width:100%"
-          data-paging="false" data-searching="false" data-info="false"></table>
-
-
-        <pre id="bibtex" style="display:none;"> </pre>
-
-
-    </div>
+      </div>
+</div>
 
 
     <br>
@@ -317,11 +306,6 @@
     </div-->
 
     <!--div class="container" id="banner">
-        <img class="img-fluid" src="./../../images/banner.png" style="float: left; margin: 0px 0px 10px 10px;">
-        <a href="https://www.tu-darmstadt.de" target="_blank"> <img class="img-fluid"
-                                                                    src="./../../images/tud_weblogo.svg"
-                                                                    style="margin: 19px 10px 10px 10px;height:75px"></a>
-        </p>
     </div-->
 
 </main>
@@ -346,38 +330,6 @@
 <!-- place js at end for faster loading -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
-
-<script type="text/javascript" src="./../../build/bib-list.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-
-        $.get('https://ml-research.github.io/references.bib', function (data) {
-
-            function containsName(bib) {
-                return bib.toLowerCase().includes("ye") || bib.toLowerCase().includes("ye")
-            }
-
-            function replaceImagePath(bib) {
-                return bib.replace("./images/", "./../../images/");
-            }
-            function replacePaperPath(bib) { 
-                return bib.replace("./papers/", "./../../papers/");
-            }
-
-            bibtex = data.split(/(?=@\w+)/u);
-            my_bibtex = bibtex.filter(containsName).map(replacePaperPath);
-            my_bibtex = my_bibtex.map(replaceImagePath);
-            $("#bibtex").html(my_bibtex.join());
-            bibtexify("#bibtex", "pubTable");
-        });
-
-
-    });
-</script>
 
 <script>
 
@@ -506,5 +458,27 @@
 </script>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB6xrY5kKwxlhKp0a0NhbbX6YsJhBKt3DJDnmoFVy38MVBnE+Ibb" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.navbar-toggler').forEach(function (toggler) {
+      toggler.addEventListener('click', function () {
+        var targetSelector = toggler.getAttribute('data-bs-target');
+        if (!targetSelector) return;
+        var target = document.querySelector(targetSelector);
+        if (!target) return;
+        var isOpen = target.classList.contains('show');
+        if (isOpen) {
+          target.classList.remove('show');
+        } else {
+          target.classList.add('show');
+        }
+        toggler.setAttribute('aria-expanded', String(!isOpen));
+      });
+    });
+  });
+</script>
+
+<script src="../../scripts/profile-publications.js"></script>
 </body>
 </html>

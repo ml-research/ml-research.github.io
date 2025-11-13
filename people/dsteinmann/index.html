@@ -1,392 +1,167 @@
 <!DOCTYPE html>
-<!-- saved from url=(0056)./kersting/kersting.html -->
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>David Steinmann</title>
+  <link rel="icon" type="image/svg+xml" href="../../icons/logos/aimlCleanV2.svg"/>
 
-    <title>David Steinmann</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="../../css/style.css" rel="stylesheet">
+  <link href="../../css/profile.css" rel="stylesheet">
+</head>
 
-    <link
-      href="./../../css/bootstrap.min.css"
-      rel="stylesheet"
-      media="screen"
-    />
-    <link
-      href="./../../css/jquery.dataTables.min.css"
-      rel="stylesheet"
-      media="screen"
-    />
-    <link
-      href="./../../css/dataTables.bootstrap4.min.css"
-      rel="stylesheet"
-      media="screen"
-    />
-
-    <link
-      href="./../../css/bootstrap-social.css"
-      rel="stylesheet"
-      media="screen"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <link href="./../../css/style.css" rel="stylesheet" />
-
-    <script src="./../../build/jquery.min.js"></script>
-
-    <script type="text/javascript">
-      //<![CDATA[
-      $(document).ready(function () {
-        // Add smooth scrolling to all links
-        $("a").on("click", function (event) {
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $("html, body").animate(
-              {
-                scrollTop: $(hash).offset().top,
-              },
-              800,
-              function () {
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-              }
-            );
-          } // End if
-        });
-      });
-    </script>
-
-    <script src="./../../build/jquery.min.js"></script>
-    <!--    <script>
-          $(function(){
-            $("#includedContent").load("myBib.bib");
-          });
-        </script>-->
-  </head>
-
-  <body data-spy="scroll" data-target=".navbar" data-offset="65">
-    <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">David Steinmann</a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#mission">Mission and Bio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#publications">Publications</a>
-            </li>
-            <!--li class="nav-item">
-                    <a class="nav-link" href="#activities">Activities</a>
-                </li-->
-            <li class="nav-item">
-              <a class="nav-link" href="../../index.html">ML@TUDA</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#legal">Legal Info</a>
-            </li>
+<body class="profile-page site-body has-fixed-header">
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm profile-navbar fixed-top">
+    <div class="container align-items-center">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../../index.html">
+        <img src="../../icons/logos/aimlCleanV2.svg" alt="AIML Lab logo" class="navbar-brand-photo"/>
+        <span>AIML Lab</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarProfile" aria-controls="navbarProfile" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+                              <div class="collapse navbar-collapse justify-content-end" id="navbarProfile">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Back to AIML Lab</a></li>
+            <li class="nav-item"><a class="nav-link" href="#mission">Overview</a></li>
+            <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
           </ul>
         </div>
-      </nav>
-    </header>
 
-    <main role="main">
-      <br /><br /><br />
-      <div class="container" id="mission">
-        <div class="row">
-          <div class="col-md-2">
-            <img
-              src="profile-thumbnail.jpg"
-              class="rounded-circle imgme"
-              style="height: 120px"
-            />
-          </div>
+    </div>
+  </nav>
+</header>
 
-          <div class="col-md-6">
-            <div id="htname">David Steinmann</div>
-            <div id="htem">
-              Machine Learning Group, Computer Science Department, TU
-              Darmstadt.<br />
-              Hochschulstrasse 1, Building S1|03, Room 077, 64289 Darmstadt,
-              Germany.<br />
-              <img src="./../../images/mail.jpg" style="height: 15px" /> david
-              (dot) steinmann (at) cs (dot) tu-darmstadt (dot) de
-            </div>
-          </div>
-          <div style="float: right">
-            <a href="https://www.tu-darmstadt.de" target="_blank">
-              <img
-                class="img-fluid"
-                src="./../../images/tud_weblogo.svg"
-                style="margin: 19px 10px 10px 10px; height: 75px"
-            /></a>
-          </div>
-          <!-- div class="col-md-4">
-                <img id="logo" class="imgsm" src="./../../images/FB20TUDAlogo.png"
-                     style="text-align: right; margin: 10px 5px 5px 3px;height:55px"></a>
-            </div-->
+<main id="top" class="profile-main" role="main">
+  <div class="container" id="mission">
+    <div class="row">
+      <div class="col-md-2">
+        <img src="profile-thumbnail.jpg" class="rounded-circle imgme" style="height:120px" alt="Portrait of David Steinmann">
+      </div>
+
+      <div class="col-md-6">
+        <div id="htname">David Steinmann</div>
+        <div id="htem">
+          Machine Learning Group, Computer Science Department, TU Darmstadt.<br>
+          Hochschulstrasse 1, Building S1|03, Room 077, 64289 Darmstadt, Germany.<br>
+          <img src="./../../images/mail.jpg" style="height:15px" alt="Mail icon"> david (dot) steinmann (at) cs (dot) tu-darmstadt (dot) de<br>
+          <img src="./../../images/webpage.png" style="height:15px" alt="Website icon">
         </div>
-
-        <br />
-
-        <b>Mission.</b><br />
-        <p>
-          My research revolves around interactive machine learning, aiming to enhance the accessibility and transparency of AI systems for human interaction.
-Additionally, I explore methods to incorporate human feedback into machine learning models, facilitating learning and adaptation driven by human input.
-Ultimately, I believe human interaction is an integral part of machine learning.
-        </p>
-        <b>Student Theses - Bachelor and Master.</b><br />
-        <p>
-          I often have ideas for a possible thesis topic related to interactive machine learning.
-Basic knowledge of machine learning and deep learning, for example, through relevant lectures or projects, is required.
-It is also helpful to be familiar with Python and machine learning frameworks such as PyTorch.
-If you are interested in potential topics or have your own topic in mind,
-feel free to contact me and send me your information following our <a href="https://ml-research.github.io/thesis/proposal/index.html" target="_blank">thesis proposal instructions</a>.
-        </p>
-
-        <!--div class="container" id="timeline">
-    <hr class="soft"-->
-
-        <b>Timeline.</b>
-        <table border="0" width="100%" id="awards">
-          <col width="120px" />
-          <tr>
-            <td><span class="t2when"> 2022 - now:</span></td>
-            <td>
-              <span class="t2where">
-                Ph.D. student at the
-                <a href="https://www.aiml.informatik.tu-darmstadt.de"
-                  >AIML Lab</a
-                >
-
-                <a
-                  href="https://www.informatik.tu-darmstadt.de/fb20/index.en.jsp"
-                  target="_blank"
-                  >CS Department, TU Darmstadt</a
-                >, Germany</span
-              >
-            </td>
-          </tr>
-          <tr>
-            <td><span class="t2when">2020:</span></td>
-            <td>
-              <span class="t2where"
-                >Exchange student, computer science at Aarhus University, Denmark
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <td><span class="t2when">2019 - 2022:</span></td>
-            <td>
-              <span class="t2where"
-                >M.Sc. in Computer Science at TU Darmstadt, Germany
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <td><span class="t2when">2016 - 2019:</span></td>
-            <td>
-              <span class="t2where"
-                >B.Sc. in Computer Science at TU Darmstadt, Germany
-              </span>
-            </td>
-          </tr>
-        </table>
       </div>
+      <div class="col-md-4 text-md-end">
+</div>
+    </div>
 
-      <!-- <hr class="soft"> -->
+    <br>
 
-      <div class="container" id="publications">
-        <!-- <b>Publications.</b> -->
-        <br />
+    <b>Mission.</b>
+    <p>
+      My research revolves around interactive machine learning, aiming to enhance the accessibility and transparency of AI systems for human interaction.
+      Additionally, I explore methods to incorporate human feedback into machine learning models, facilitating learning and adaptation driven by human input.
+      Ultimately, I believe human interaction is an integral part of machine learning.
+    </p>
+
+    <b>Student Theses.</b>
+    <p>
+      I often have ideas for a possible thesis topic related to interactive machine learning. Basic knowledge of machine learning and deep learning, for example, through relevant lectures or projects, is required.
+      It is also helpful to be familiar with Python and machine learning frameworks such as PyTorch. If you are interested in potential topics or have your own topic in mind, feel free to contact me and send me your information following our
+      <a href="https://ml-research.github.io/thesis/proposal/index.html" target="_blank" rel="noopener">thesis proposal instructions</a>.
+    </p>
+
+    <b>Timeline.</b>
+    <table border="0" width="100%" id="awards">
+      <col width="120px">
+      <tr>
+        <td><span class="t2when">2022 - now:</span></td>
+        <td><span class="t2where">Ph.D. student at the <a href="https://www.aiml.informatik.tu-darmstadt.de">AIML Lab</a>, CS Department, TU Darmstadt, Germany</span></td>
+      </tr>
+      <tr>
+        <td><span class="t2when">2020:</span></td>
+        <td><span class="t2where">Exchange student, Computer Science at Aarhus University, Denmark</span></td>
+      </tr>
+      <tr>
+        <td><span class="t2when">2019 - 2022:</span></td>
+        <td><span class="t2where">M.Sc. in Computer Science at TU Darmstadt, Germany</span></td>
+      </tr>
+      <tr>
+        <td><span class="t2when">2016 - 2019:</span></td>
+        <td><span class="t2where">B.Sc. in Computer Science at TU Darmstadt, Germany</span></td>
+      </tr>
+    </table>
+  </div>
+
+    <hr class="soft">
+
+
+        <div class="container" id="publications">
+      <div class="profile-publications-header">
+        <div class="profile-publications-title">
+          <h3>Publications</h3>
+        </div>
+        <div class="profile-publications-metrics">
+          <div class="profile-publications-chip">
+            <span class="chip-label">Outputs</span>
+            <span class="chip-value" data-profile-pubs="total">–</span>
+          </div>
+          <div class="profile-publications-chip">
+            <span class="chip-label">Latest Year</span>
+            <span class="chip-value" data-profile-pubs="latest">–</span>
+          </div>
+          <div class="profile-publications-chip">
+            <span class="chip-label">Top Type</span>
+            <span class="chip-value" data-profile-pubs="type">–</span>
+          </div>
+        </div>
+      </div>
+      <div class="profile-publications-table" data-profile-publications data-profile-authors='["steinmann"]'>
+        <div class="profile-publications-loading text-muted" aria-live="polite">Loading publications…</div>
         <noscript>
-          <style>
-            #bibtex {
-              display: block;
-            }
-          </style>
+          <p class="text-muted small mb-0">Enable JavaScript to view publications.</p>
         </noscript>
-
-        <table
-          id="pubTable"
-          class="table"
-          style="width: 100%"
-          data-paging="false"
-          data-searching="false"
-          data-info="false"
-        ></table>
-
-        <pre id="bibtex" style="display: none"></pre>
       </div>
+</div>
+</main>
 
-      <br />
-    </main>
-    <footer>
-      <hr class="soft" id="legal" />
+<footer>
+  <hr class="soft" id="legal">
+  <div class="container" id="sitefooter" style="height:unset">
+    <a href="https://www.informatik.tu-darmstadt.de/impressum.en.jsp" target="_blank" rel="noopener">Legal info / Impressum</a>
+    <br><br>
+    Technische Universität Darmstadt<br>
+    Fachbereich Informatik<br>
+    Hochschulstr. 1<br>
+    64289 Darmstadt<br>
+    Germany
+  </div>
+</footer>
 
-      <div class="container" id="sitefooter" style="height: unset">
-        <a href="https://www.informatik.tu-darmstadt.de/impressum.en.jsp"
-          >Legal info / Impressum</a
-        >
-        <br /><br />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB6xrY5kKwxlhKp0a0NhbbX6YsJhBKt3DJDnmoFVy38MVBnE+Ibb" crossorigin="anonymous"></script>
 
-        Technische Universität Darmstadt <br />
-        Fachbereich Informatik <br />
-        Hochschulstr. 1 <br />
-        64289 Darmstadt<br />
-        Germany<br /><br />
-      </div>
-    </footer>
-
-    <!-- place js at end for faster loading -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
-    ></script>
-
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"
-    ></script>
-
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js"
-    ></script>
-
-    <script type="text/javascript" src="./../../build/bib-list.js"></script>
-
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $.get("https://ml-research.github.io/references.bib", function (data) {
-          function containsName(bib) {
-            return bib.includes("Steinmann");
-          }
-
-          function replaceImagePath(bib) {
-            return bib.replace("./images/", "./../../images/");
-          }
-          function replacePaperPath(bib) {
-            return bib.replace("./papers/", "./../../papers/");
-          }
-
-          bibtex = data.split(/(?=@\w+)/u);
-          my_bibtex = bibtex.filter(containsName).map(replacePaperPath);
-          my_bibtex = my_bibtex.map(replaceImagePath);
-          $("#bibtex").html(my_bibtex.join());
-          bibtexify("#bibtex", "pubTable");
-        });
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.navbar-toggler').forEach(function (toggler) {
+      toggler.addEventListener('click', function () {
+        var targetSelector = toggler.getAttribute('data-bs-target');
+        if (!targetSelector) return;
+        var target = document.querySelector(targetSelector);
+        if (!target) return;
+        var isOpen = target.classList.contains('show');
+        if (isOpen) {
+          target.classList.remove('show');
+        } else {
+          target.classList.add('show');
+        }
+        toggler.setAttribute('aria-expanded', String(!isOpen));
       });
-    </script>
+    });
+  });
+</script>
 
-    <script>
-      var more_bio_shown = false;
-
-      var more_projects_shown = false;
-
-      var more_pubs_shown = false;
-
-      $(document).ready(function () {
-        $("#showmorebio").click(function () {
-          if (!more_bio_shown) {
-            $("#morebio").slideDown("fast", function () {
-              $("#showmorebio").text("hide more bio");
-            });
-
-            more_bio_shown = true;
-          } else {
-            $("#morebio").slideUp("fast", function () {
-              $("#showmorebio").text("show more bio");
-            });
-
-            more_bio_shown = false;
-          }
-        });
-
-        $("#showmoreprojects").click(function () {
-          if (!more_projects_shown) {
-            $("#moreprojects").slideDown("fast", function () {
-              $("#showmoreprojects").text("hide");
-            });
-
-            more_projects_shown = true;
-          } else {
-            $("#moreprojects").slideUp("fast", function () {
-              $("#showmoreprojects").text("show more projects");
-            });
-
-            more_projects_shown = false;
-          }
-        });
-
-        $("#showmorepubs").click(function () {
-          if (!more_pubs_shown) {
-            $("#morepubs").slideDown("fast", function () {
-              $("#showmorepubs").text("hide older publications");
-            });
-
-            more_pubs_shown = true;
-          } else {
-            $("#morepubs").slideUp("fast", function () {
-              $("#showmorepubs").text("show older publications");
-            });
-
-            more_pubs_shown = false;
-          }
-        });
-      });
-    </script>
-
-    <script>
-      $(document).ready(function () {
-        $("#nav a").on("click", function (event) {
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $("html, body").animate(
-              {
-                scrollTop: $(hash).offset().top,
-              },
-              800,
-              function () {
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-              }
-            );
-          } // End if
-        });
-      });
-    </script>
-  </body>
+<script src="../../scripts/profile-publications.js"></script>
+</body>
 </html>

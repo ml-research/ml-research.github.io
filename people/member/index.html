@@ -8,17 +8,7 @@
     <meta name="author" content="">
 
     <title>?Your Name</title>
-
-
-    <link href="./../../css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="./../../css/jquery.dataTables.min.css" rel="stylesheet" media="screen">
-    <link href="./../../css/dataTables.bootstrap4.min.css" rel="stylesheet" media="screen">
-
-    <link href="./../../css/bootstrap-social.css" rel="stylesheet" media="screen">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link href="./../../css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../../icons/logos/aimlCleanV2.svg"/>
 
     <script src="./../../build/jquery.min.js"></script>
 
@@ -60,52 +50,44 @@
         </script>-->
 
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/profile.css" rel="stylesheet">
+
 </head>
 
 
 
-<body onload="start()" data-spy="scroll" data-target=".navbar" data-offset="65">
+<body class="profile-page site-body has-fixed-header" onload="start()">
  <header>
-       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+       <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm profile-navbar fixed-top">
+      <div class="container align-items-center">
+              <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../../index.html">
+        <img src="../../icons/logos/aimlCleanV2.svg" alt="AIML Lab logo" class="navbar-brand-photo"/>
+        <span>AIML Lab</span>
+      </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarProfile" aria-controls="navbarProfile" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+                                <div class="collapse navbar-collapse justify-content-end" id="navbarProfile">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Back to AIML Lab</a></li>
+            <li class="nav-item"><a class="nav-link" href="#mission">Overview</a></li>
+            <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          </ul>
+        </div>
 
-         <a class="navbar-brand" href="#">?Your Name</a>
-
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-           <span class="navbar-toggler-icon"></span>
-         </button>
-
-         <div class="collapse navbar-collapse" id="navbarCollapse">
-
-           <ul class="navbar-nav mr-auto">
-             <li class="nav-item">
-               <a class="nav-link" href="#mission">Mission and Bio</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="#publications">Publications</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="#activities">Activities</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="../../index.html">ML@TUDA</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="#legal">Legal Info</a>
-             </li>
-           </ul>
-
-         </div>
-       </nav>
+      </div>
+    </nav>
  </header>
 
-
-<main role="main">
+<main id="top" class="profile-main" role="main">
 
 <div class="container" id="banner">
     <br><br><br>
-    <img class="img-fluid" src="./../../images/banner.png" style="float: left; margin: 0px 0px 10px 10px;">
-      <a href="https://www.tu-darmstadt.de" target="_blank"> <img class="img-fluid" src="./../../images/tud_weblogo.svg" style="margin: 19px 10px 10px 10px;height:75px"></a>
-    </p>
 </div>
  <div class="clearfix"></div>
 <div class="container" id="mission">
@@ -186,433 +168,17 @@ After receiving ?her/?his ?Ph.D/?M.Sc. from the University of ... in 20.., (s)he
 <hr class="soft">
 
 
-<div class="container" id="publications">
-
-<h2>Publications</h2>
-
-<br>
-
-Please change you DBLP etc. links correspondingly. Also please put your bibtext entries correspondinly.
-
-
-<div class="hht" style="font-size: 18px"> Publications can be found at <a href="https://dblp.uni-trier.de/pers/hy/k/Kersting:Kristian.html" target="_blank">DBLP</a>, <a href="https://www.semanticscholar.org/author/Kristian-Kersting/1746871" target="_blank">SemanticScholar</a>, and <a href="http://scholar.google.com/citations?user=QY-earAAAAAJ&amp;hl=en" target="_blank">GOOGLE Scholar Citations</a>.
-</div>
-
-<br>
-
- <noscript>
-      <!-- bibtex source hidden by default, show it if JS disabled -->
-      <style>
-      #bibtex { display: block;}
-      </style>
-</noscript>
-
-<table id="pubTable" class="table style="width:100%"" ></table>
-
-<br>
-
-<pro id="bibtex" style="display:none;">
-
-  @incollection{vergari2018tpm,
-    Anote = {./../../images/vergari2018tpm.png},
-    Author = {Antonio Vergari and Alejandro Molina and Robert Peharz and Zoubin Ghahramani and Kristian Kersting and Isabel Valera},
-    Booktitle = {Working Notes of the ICML 2018 Workshop on Tractable Probabilistic Models (TPM)},
-    Note = {Making sense of a dataset in an automatic, unsupervised fashion is a challenging problem in statistics
-      and AI. For example, classical approaches for density estimation do not naturally deal with heterogeneous
-      statistical data types, do not automatically select suitable parametric forms for the likelihood models, and,
-      in basic formulations, are sensitive to corrupted data and outliers. To overcome this, we propose to extend
-      density estimation to Automatic Bayesian Density Analysis (ABDA), casting both data modeling and selection of adequate likelihood models (statistical data types) into a joint inference problem. Specifically, we advocate a hierarchically structured mixture model, which explicitly incorporates arbitrarily rich collections of likelihood models and corresponding latent selection variables, and captures variable interactions by a latent hierarchical structure obtained from data-type agnostic structure learning. To account for prediction uncertainty, selection of parametric likelihood models and
-      statistical data types, we employ Bayesian inference over a model formulated as a sum-product network,
-      naturally providing the aforementioned expressiveness and flexibility, while facilitating exact and tractable
-      inference.},
-      Keywords = {Sum-Product Networks, Deep Learning, Automatic Statistician, Density Estimation, Density Analysis, AutoML},
-    Pages = {},
-    Title = {Automatic Bayesian Density Analysis},
-    Url = {},
-    Year = {2018}}
-
-
-  @incollection{sommer2018tpm,
-    Anote = {./../../images/sommer2018tpm.png},
-    Author = {Lukas Sommer and Julian Oppermann and Alejandro Molina and Carsten Binnig and Kristian Kersting and Andreas Koch},
-    Booktitle = {Working Notes of the ICML 2018 Workshop on Tractable Probabilistic Models (TPM)},
-    Note = {FPGAs have recently proven to be ideally suited for the implementation of efficient accelerators for a wide
-      range of machine learning tasks. Here, we consider probabilistic models, specifically, (Mixed) Sum-Product Networks
-      (SPN), a deep architecture that can provide tractable inference for multivariate distributions over mixed data-sources.
-We show how to construct an FPGA-based accelerator for the inference in (mixed) SPNs. Starting from an input description of
-the network, we develop a fully automatic synthesis flow to a custom FPGA-accelerator. The synthesized accelerator and its
-interface to the external memory on the FPGA are fully pipelined, and computations are conducted using double-precision floating
-point arithmetic.  To the best of our knowledge, this work is the first approach to offload the (mixed) SPN inference problem to FPGA-based
-accelerators. Our evaluation shows that the SPN inference problem can profit from offloading to an FPGA accelerator.},
-      Keywords = {FPGA, Sum-Product Networks, Deep Learning, Hardware implementation },
-    Pages = {},
-    Title = {Automatic Synthesis of FPGA-based Accelerators for the Sum-Product Network Inference Problem},
-    Url = {},
-    Year = {2018}}
-
-  @inproceedings{kordjamshidi2018ijcaiecai_systemsai,
-    Anote = {./../../images/kordjamshidi2018ijcaiecai_systemsai.png},
-    Author = {Parisa Kordjamshidi and Dan Roth and Kristian Kersting},
-    Booktitle = {Proceedings of the 27th International Joint Conference on Artificial Intelligence and the 23rd European Conference on Artificial Intelligence (IJCAI-ECAI)},
-    Note = {Data-driven approaches are becoming dominant problem-solving techniques in many areas of
-      research and industry. Unfortunately, current technologies do not make it easy to use them for
-      application experts that are not fluent in machine learning technologies.
-We review key efforts made by various AI communities to provide languages for high-level abstractions
-over learning and reasoning techniques needed for designing complex AI systems. We classify the existing
-frameworks based on the techniques as well as the data and knowledge representations they use, provide a
-comparative study of the way they address the challenges of programming real-world applications, and highlight
-some shortcomings and future directions.  },
-      Keywords = {Systems AI, Learning based programming, Statistical relational learning, Complex AI systems, Survey},
-    Pages = {},
-    Title = {Systems AI: A Declarative Learning Based Programming Perspective},
-    Url = {./../../papers/kordjamshidi2018ijcaiecai_systemsai.pdf},
-    Year = {2018}}
-
-  @incollection{gries2018esof,
-    Anote = {./../../images/esof2018.png},
-    Author = {Lucas Gries and Edith Luschmann and Laurent Gautier and Lars Koppers and Kristian Kersting and Jörg Rahnenführer and Julia Serong and Holger Wormer },
-    Booktitle = {Poster Proceedings of the Euroscience Open Forum (ESOF) Conference},
-    Note = {It’s surprising how often scientists are surprised by their findings: This observation was
-described in Nature by the Polish Researcher Michael Jasienski more than ten years ago. In
-2015 Christiaan Vinkers from the Netherlands compared the use of and semantic valence
-between positive and negative words of PubMed abstracts from 1974 to 2014 and found signs
-for increasing sensationalism. However, systematic tools to evaluate "sensationalism" and
-similar aspects concerning the wording in pieces of science communication are still missing.
-Furthermore, comparisons between European countries are difficult, as systematic access
-(e.g., to scientific press releases) differs from one country to another.
-Our interdisciplinary group will present approaches to compare press releases from different
-disciplines, institutions and countries by means of database examples from Germany
-(providing an already analysed database extracted from the “Informationsdienst
-Wissenschaft” of more than 300 000 press releases from about 1000 institutions) and France
-(using a newly constructed corpus from more than 100 institutions). Considering different
-perspectives from communication science, informatics and statistics we discuss to what extent
-indexes based on a set of "sensational words" and other forms of linguistic analysis may deliver
-hints for unethical exaggerations in different fields of science communication.},
-      Keywords = {Poster, Sensationalism, Communication Science, Linguistic Analysis},
-    Pages = {},
-    Title = {Science, Surprise and Sensation in Science Communication: Towards a Concept for Cross-Country Comparisons of Press Releases from Research Institutions},
-    Url = {./../../papers/gries2018ESOF_poster.pdf},
-    Year = {2018}}
-
-
-    @incollection{bauer2018ecda,
-      Anote = {./../../images/ecda2018.png},
-      Author = {Nadja Bauer and Malte Jastrow and Daniel Horn and Lukas Stankiewicz and Kristian Kersting and Jochen Deuse and Claus Weihs},
-      Booktitle = {Abstract Proceedings of the European Conference on Data Analysis (ECDA)},
-      Note = {The advent of industry 4.0 and the availability of large data storage systems lead to an increasing demand
-for specially educated data-oriented professionals in industrial production. The education of such specialists
-is supposed to combine elements from the three fields of engineering, data analysis and data administration.
-Data administration skills are demanded to handle big data in diverse storage structures in data bases.
-In order to extract knowledge from the stored data the proficient handling of data analysis tools - especially
-machine learning - is essential. Finally, industrial domain knowledge is important to identify possible applications
-for machine learning algorithms (and to interpret the results). However, to the best knowledge of the authors, an education program incorporating
-elements of all three fields has not yet been established (in Germany).
-
-In the context of the newly acquired project "Industrial Data Science" (InDaS) we aim to develop a qualification
-concept for machine learning in industrial production targeted at two different groups. On the one hand advanced
-students from any of the three fields mentioned above and on the other hand experienced professionals working in
-industrial production. For the first group a one term lecture is going to be designed while coping with different
-levels of knowledge in the inhomogeneous audience. It will be followed by a seminar with focus on use cases delivered
-by partners from industrial production. Separately a workshop concept for the second target group will be developed
-taking into account the strong domain knowledge of the participants.
-
-The contents of the qualification concept should be selected according to the needs of industrial companies.
-Therefore a survey was created to inquire the use and potentials of machine learning and the requirements for future
-employees in industrial production. The evaluation of the survey and the resulting conclusions affecting the qualification
-concept are going to be presented in this talk.},
-        Keywords = {Abstract, machine learning, engineering, production, qualification concept},
-      Pages = {},
-      Title = {Industrial Data Science: developing a qualification concept for machine learning in industrial production},
-      Url = {},
-      Year = {2018}}
-
-
-  @inproceedings{kolb2018ijcaiecai_xadds,
-    Anote = {./../../images/kolb2018ijcaiecai_xadds.png},
-    Author = {Samuel Kolb and Martin Mladenov and Scott Sanner and Vaishak Belle and Kristian Kersting},
-    Booktitle = {Proceedings of the 27th International Joint Conference on Artificial Intelligence and the 23rd European Conference on Artificial Intelligence (IJCAI-ECAI)},
-    Note = {In recent years, weighted model counting (WMC) has become the de facto work-horse for logically-structured inference tasks.
-      Problems ranging over probabilistic inference, planning, game theory, and numerical optimization have been tackled successfully using WMC technology.
-      Weighted model integration (WMI) is a recent formalism generalizing WMC to the integration of functions over models of mixed discrete-continuous theories.
-      WMI has already shown tremendous promise for solving inference problems in graphical models and probabilistic programs.
-      Yet, state of the art tools for WMI are nowhere as versatile as those for WMC--solvers are generally limited either by the range of amenable theories, or in terms of performance.
-      Moreover, the data structures to represent, compose, and transform formulas over mixed theories have not reached the efficiency of their Boolean counterparts.
-      Arguably, the latter is one of the prime reasons why WMC is so widely applicable.
-      To address both limitations, we propose the use of extended algebraic decision diagrams (XADDs) as a compilation language for WMI.
-      Aside from tackling typical WMI problems XADDs also enable partial WMI yielding parametrized solutions.
-      To overcome the main roadblock of XADDs---the computational cost of variable elimination---we formulate a novel and powerful exact symbolic dynamic programming (SDP)
-      algorithm that unlike its predecessor is able to effectively cache partial computations and seamlessly handle Boolean, integer-valued, and real variables.
-      Our empirical results demonstrate that the improved algorithm can lead to an exponential to linear computational reduction in the best case and that it exceeds or
-      matches state-of-the-art WMI solvers in terms of performance.
-},
-      Keywords = {Variable elimination for WMI, XADDs, SMT, Weighted Model Integration (WMI), Probabilsitic Inference, Smybolic Integration},
-    Pages = {},
-    Title = {An Efficient Symbolic Partial Integration Operator for Probabilistic Inference},
-    Url = {./../../papers/kolb2018ijcaiecai_xadds.pdf},
-    Year = {2018}}
-
-
-    @inproceedings{luedtke2018ijcaiecai_liftedFiltering,
-      Anote = {./../../images/liftedFiltering.png},
-      Author = {Stefan Lüdtke and Max Schröder and Sebastian Bader and Kristian Kersting and Thomas Kirste},
-      Booktitle = {Proceedings of the 27th International Joint Conference on Artificial Intelligence and the 23rd European Conference on Artificial Intelligence (IJCAI-ECAI)},
-      Keywords = {Lifted Inference, Filtering, Planning, Symmetries},
-      Note = {We present a model for recursive Bayesian filtering based on lifted multiset states.
-        Combining multisets with lifting makes it possible to simultaneously exploit multiple strategies
-        for reducing inference complexity when compared to list-based grounded state representations. The
-        core idea is to borrow the concept of Maximally Parallel Multiset Rewriting Systems and to enhance
-        it by concepts from Rao-Blackwellisation and Lifted Inference, giving a representation of state
-        distributions that enables efficient inference. In worlds where the random variables that define
-        the system state are exchangeable - where the identity of entities does not matter - it automatically
-        uses a representation that abstracts from ordering (achieving an exponential reduction
-        in complexity) and it automatically adapts when observations or system dynamics destroy
-        exchangeability by breaking symmetry.},
-      Title = {Lifted Filtering via Exchangeable Decomposition},
-      Url = {https://arxiv.org/pdf/1801.10495.pdf},
-      Year = {2018},
-      Bdsk-Url-1 = {https://arxiv.org/pdf/1801.10495.pdf}}
-
-
-    @article{kersting2018ki,
-      Anote = {./../../images/ki2018.jpg},
-      Author = {Kristian Kersting and Ulrich Meyer},
-      Journal = {Künstliche Intelligenz (KI)},
-      Keywords = {Artificial Intelligence, Big Data, Algorithmic Challenges, Editorial},
-      Note = {Big Data is no fad. The world is growing at an exponential rate, and so is the size of data
-        collected across the globe. The data is becoming more meaningful and contextually relevant, breaks
-        new ground for machine learning and artificial intelligence (AI), and even moves them from research
-        labs to production. That is, the problem has shifted from collecting massive amounts of data to
-        understanding it, i.e., turning data into knowledge, conclusions, and actions. This Big AI,
-        however, often faces poor scale-up behaviour from algorithms that have been designed based on
-        models of computation that are no longer realistic for Big Data. This special issue constitutes
-        an attempt to highlight the algorithmic challenges and opportunities but also the social and
-        ethical issues of Big Data. Of specific interest and focus have been computation- and
-        resource-efficient algorithms when searching through data to find and mine relevant or
-        pertinent information.},
-      Pages = {3--8},
-      Publisher = {Springer},
-      Title = {From Big Data to Big Artificial Intelligence? - Algorithmic Challenges and Opportunities of Big Data},
-      Url = {https://link.springer.com/content/pdf/10.1007%2Fs13218-017-0523-7.pdf},
-      Volume = {32},
-      number = {1},
-      Year = {2018},
-  }
-
-  @misc{teso2018explanatory,
-    Anote = {./../../images/teso2018explanatory.png},
-    Author = {Stefano Teso and Kristian Kersting},
-    Howpublished = {arXiv preprint arXiv:1805.08578; also abstract at the 14th Biannual Conference of the German Society for Cognitive Science (KogWis) 2018},
-    Keywords = {trust, explanations, active learning, explantory interactive learning},
-    Note = {Although interactive learning puts the user into the loop, the learner
-      remains mostly a black box for the user. Understanding the reasons behind queries
-      and predictions is important when assessing how the learner works and, in turn, trust.
-      Consequently, we propose the novel framework of explanatory interactive learning:
-      in each step, the learner explains its interactive query to the user, and she
-      queries of any active classifier for visualizing explanations of the corresponding
-      predictions. We demonstrate that this can boost the predictive and explanatory powers of and the trust into the learned model, using text (e.g. SVMs) and image classification (e.g. neural networks) experiments as well as a user study.},
-    Title = {"Why Should I Trust Interactive Learners?" Explaining Interactive Queries of Classifiers to Users},
-    Url = {https://arxiv.org/abs/1805.08578.pdf},
-    Year = {2018},
-    Bdsk-Url-1 = {https://arxiv.org/abs/1805.08578.pdf}}
-
-
-      @misc{peharz2018ratspns,
-        Anote = {./../../images/peharz2018ratspns.png},
-        Author = {Robert Peharz and Antonio Vergari and Karl Stelzner and Alejandro Molina and Martin Trapp and Kristian Kersting and Zoubin Ghahramani},
-        Howpublished = {arXiv preprint arXiv:1806.01910},
-        Keywords = {deep learning, probabilistic deep learning, sum product networks, random models, generative model},
-        Note = {Probabilistic deep learning currently receives an increased interest, as
-          consistent treatment of uncertainty is one of the most important goals in machine
-          learning and AI. Most current approaches, however, have severe limitations concerning
-          inference. Sum-Product networks (SPNs), although having excellent properties in that regard,
-          have so far not been explored as serious deep learning models, likely due to their special
-          structural requirements. In this paper, we make a drastic simplification and use a random
-          structure which is trained in a "classical deep learning manner" such as automatic
-          differentiation, SGD, and GPU support. The resulting models, called RAT-SPNs, yield
-          comparable prediction results to deep neural networks, but maintain well-calibrated
-          uncertainty estimates which makes them highly robust against missing data. Furthermore,
-          they successfully capture uncertainty over their inputs in a convincing manner, yielding
-          robust outlier and peculiarity detection.},
-        Title = {Probabilistic Deep Learning using Random Sum-Product Networks},
-        Url = {https://arxiv.org/abs/1806.01910.pdf},
-        Year = {2018},
-        Bdsk-Url-1 = {https://arxiv.org/abs/1806.01910.pdf}}
-
-
-
-  @misc{schramowski2018neuralfw,
-  	Anote = {./../../images/neuralfw.png},
-  	Author = {Patrick Schramowski and Christian Bauckhage and Kristian Kersting},
-  	Howpublished = {arXiv preprint arXiv:1803.04300},
-  	Keywords = {Frank Wolfe, Deep Learning, Neural Networks, Learnign to learn, meta learning},
-  	Note = {The move from hand-designed to learned optimizers
-in machine learning has been quite successful
-for gradient-based and -free optimizers. When
-facing a constrained problem, however, maintaining
-feasibility typically requires a projection step,
-which might be computationally expensive and
-not differentiable. We show how the design of
-projection-free convex optimization algorithms
-can be cast as a learning problem based on FrankWolfe
-Networks: recurrent networks implementing
-the Frank-Wolfe algorithm aka. conditional
-gradients. This allows them to learn to exploit
-structure when, e.g., optimizing over rank-1 matrices.
-Our LSTM-learned optimizers outperform
-hand-designed as well learned but unconstrained
-ones. We demonstrate this for training support
-vector machines and softmax classifiers},
-  	Title = {Neural Conditional Gradients},
-  	Url = {https://arxiv.org/pdf/1803.04300.pdf},
-  	Year = {2018},
-  	Bdsk-Url-1 = {https://arxiv.org/pdf/1803.04300.pdf}}
-
-
-
-    @misc{luedtke2018liftedFiltering,
-      Anote = {./../../images/liftedFiltering.png},
-      Author = {Stefan Lüdtke and Max Schröder and Sebastian Bader and Kristian Kersting and Thomas Kirste},
-      Howpublished = {arXiv preprint arXiv:1801.10495},
-      Keywords = {Lifted Inference, Filtering, Planning, Symmetries},
-      Note = {We present a model for recursive Bayesian filtering based on lifted multiset states.
-        Combining multisets with lifting makes it possible to simultaneously exploit multiple strategies
-        for reducing inference complexity when compared to list-based grounded state representations. The
-        core idea is to borrow the concept of Maximally Parallel Multiset Rewriting Systems and to enhance
-        it by concepts from Rao-Blackwellisation and Lifted Inference, giving a representation of state
-        distributions that enables efficient inference. In worlds where the random variables that define
-        the system state are exchangeable - where the identity of entities does not matter - it automatically
-        uses a representation that abstracts from ordering (achieving an exponential reduction
-        in complexity) and it automatically adapts when observations or system dynamics destroy
-        exchangeability by breaking symmetry.},
-      Title = {Lifted Filtering via Exchangeable Decomposition},
-      Url = {https://arxiv.org/pdf/1801.10495.pdf},
-      Year = {2018},
-      Bdsk-Url-1 = {https://arxiv.org/pdf/1801.10495.pdf}}
-
-  @inproceedings{lioutikov2018icra_probGramMove,
-    Anote = {./../../images/lioutikov2018icra_probGramMove.png},
-    Author = {Rudolf Lioutikov and Guilherme Maeda and Filipe Veiga and Kristian Kersting and Jan Peters},
-    Booktitle = {Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)},
-    Note = {Movement Primitives are a well studied and
-widely applied concept in modern robotics. Composing primitives
-out of an existing library, however, has shown to be
-a challenging problem. We propose the use of probabilistic
-context-free grammars to sequence a series of primitives to
-generate complex robot policies from a given library of primitives.
-The rule-based nature of formal grammars allows an
-intuitive encoding of hierarchically and recursively structured
-tasks. This hierarchical concept strongly connects with the way
-robot policies can be learned, organized, and re-used. However,
-the induction of context-free grammars has proven to be a
-complicated and yet unsolved challenge. In this work, we exploit
-the physical nature of robot movement primitives to restrict
-and efficiently search the grammar space. The grammar is
-learned with Markov Chain Monte Carlo optimization over the
-posteriors of the grammars given the observations. Restrictions
-over operators connecting the search define the corresponding
-proposal distributions and, therefore, guide the optimization
-additionally. In experiments, we validate our method on a
-redundant 7 degree-of-freedom lightweight robotic arm on tasks
-that require the generation of complex sequences of motions out
-of simple primitives.},
-      Keywords = {Robotics, Movement Primitives, Probabilistic Grammar, Bayesian Grammar Induction, Grammar Prior},
-    Pages = {},
-    Title = {Inducing Probabilistic Context-Free Grammars for the Sequencing of Robot Movement Primitives},
-    Url = {./../../papers/lioutikov2018icra_probGramMove.pdf},
-    Year = {2018}}
-
-  @inproceedings{binnig2018sysml_deepVizdom,
-    Anote = {./../../images/binnig2018sysml_deepVizdom.png},
-    Author = {Carsten Binnig and Kristian Kersting and Alejandro Molina and Emanuel Zgraggen},
-    Booktitle = {Proceedings of the Inaugural Systems and Machine Learning Conference (SysML)},
-    Note = {We make the case for a new generation of interactive data exploration systems
-      that seamlessly integrate deep models as first class citizens into the data exploration stack.
-      Based on three case studies, we argue that this not only enables users to gain a much
-      deeper insights into a broader range of data sets but also
-      helps to improvethe performance and quality of existing data exploration systems.},
-      Keywords = {Databases, Interactive ML, Automatic Statistician, ML Systems, Deep Learning, Generative Model, Sum Product Networks},
-    Pages = {},
-    Title = {DeepVizdom: Deep Interactive Data Exploration},
-    Url = {./../../papers/binnig2018sysml_deepVizdom.pdf},
-    Year = {2018}}
-
-  @inproceedings{molina2018aaai_mspn,
-    Anote = {./../../images/molina2018aaai_mspn.png},
-    Author = {Alejandro  Molina and Antonio Vergari and Nicola Di Mauro and Floriana Esposito and Siraam Natarajan and Kristian Kersting},
-    Booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)},
-    Keywords = {Hybrid Domains,Deep Learning, Generative Model, Sum Product Networks, Hirschfeld-Gebelein-Rényi, Automatic Statistician, Structure Learning},
-    Note = {While all kinds of mixed data — from personal data, over panel and scientific data,
-      to public and commercial data — are collected and stored, building probabilistic graphical models for
-      these hybrid domains becomes more difficult. Users spend significant amounts of time in identifying the
-      parametric form of the random variables (Gaussian, Poisson, Logit, etc.) involved and learning the mixed
-      models. To make this difficult task easier, we propose the first trainable probabilistic deep
-      architecture for hybrid domains that features tractable queries. It is based on Sum-Product Networks (SPNs)
-      with piecewise polynomial leave distributions together with novel nonparametric decomposition and
-      conditioning steps using the Hirschfeld-Gebelein-Rényi Maximum Correlation Coefficient. This relieves
-      the user from deciding a-priori the parametric form of the random variables but is still expressive
-      enough to effectively approximate any continuous distribution and permits efficient learning and inference.
-      Our empirical evidence shows that the architecture, called Mixed SPNs, can indeed capture complex distributions
-      across a wide range of hybrid domains.},
-    Pages = {},
-    Title = {Mixed Sum-Product Networks: A Deep Architecture for Hybrid Domains},
-    Url = {./../../papers/molina2018aaai_mspns.pdf},
-    Year = {2018}}
-
-    @inproceedings{molina2018aaai_cdn,
-      Anote = {./../../images/molina2018aaai_cdn.png},
-      Author = {Alejandro  Molina and Alexander Munteanu and Kristian Kersting},
-      Booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)},
-      Keywords = {Core Sets, eps-subspace embedding, Dependency Networks, Graphical Models, Generative Model, Structure Learning, Gaussian, Poisson},
-      Note = {Many applications infer the structure of a probabilistic graphical model from data to elucidate the
-        relationships between variables. But how can we train graphical models on a massive data set? In this paper,
-        we show how to construct coresets — compressed data sets which can be used as proxy for the original data and
-        have provably bounded worst case error — for Gaussian dependency networks (DNs), i.e., cyclic directed graphical
-        models over Gaussians, where the parents of each variable are its Markov blanket. Specifically, we prove that
-        Gaussian DNs admit coresets of size independent of the size of the data set. Unfortunately, this does not
-        extend to DNs over members of the exponential family in general. As we will prove, Poisson DNs do not admit
-        small coresets. Despite this worst-case result, we will provide an argument why our coreset construction for
-        DNs can still work well in practice on count data. To corroborate our theoretical results, we empirically
-        evaluated the resulting Core DNs on real data sets. The results demonstrate significant gains over no or naive
-        sub-sampling, even in the case of count data.},
-      Pages = {},
-      Title = {Core Dependency Networks},  <hr class="soft">
-
-
-        <div class="container" id="publications">
-
-            <h3>Publications</h3>
-            <br>
-                    <noscript>
-                <style>
-                    #bibtex {
-                        display: block;
-                    }
-                </style>
-            </noscript>
-
-            <table id="pubTable" class="table" style="width:100%" data-paging="false" data-searching="false" data-info="false">
-    	</table>
-
-            <br>
-
-            <pre id="bibtex" style="display:none;">
-
-
-            </pre>
-            <div class="hht" style="font-size: 18px"> Publications can be found at <a
-                    href="https://dblp.uni-trier.de/pers/hd/v/Ventola:Fabrizio_G=" target="_blank">DBLP</a>, <a
-                    href="https://www.semanticscholar.org/author/Fabrizio-G.-Ventola/8051672"
-                    target="_blank">SemanticScholar</a>
-            </div>
-
-            <br>
-
-        </div>
-
-
-<br>
-
-
+    <div class="container" id="publications">
+      <h2>Publications</h2>
+      <p>Update <code>data-profile-authors</code> to match this template user.</p>
+      <div class="profile-publications-table" data-profile-publications data-profile-authors='["Your", "Name"]' data-profile-image-base='../../'>
+        <div class="profile-publications-loading text-muted" aria-live="polite">Loading publications…</div>
+        <noscript>
+          <p class="text-muted small mb-0">Enable JavaScript to view publications.</p>
+        </noscript>
+      </div>
+      <p class="hht" style="font-size: 18px">Publications can also be listed on DBLP, Semantic Scholar, and Google Scholar.</p>
+    </div>
 <hr class="soft">
 
 <div class="container" id="activities">
@@ -720,34 +286,6 @@ of simple primitives.},
 <!-- place js at end for faster loading -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
-
-<script type="text/javascript" src="./../../build/bib-list.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-
-        $.get('https://ml-research.github.io/references.bib', function (data) {
-
-            function containsName(bib) {
-                return bib.toLowerCase().includes("?your name")
-            }
-
-            function replaceImagePath(bib) {
-                return bib.replace("./images/", "../../images/");
-            }
-
-            bibtex = data.split(/(?=@\w+)/u);
-            my_bibtex = bibtex.filter(containsName).map(replaceImagePath);
-            $("#bibtex").html(my_bibtex.join());
-            bibtexify("#bibtex", "pubTable");
-        });
-
-
-    });
-</script>
 
 <script>
 
@@ -876,5 +414,27 @@ of simple primitives.},
 </script>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB6xrY5kKwxlhKp0a0NhbbX6YsJhBKt3DJDnmoFVy38MVBnE+Ibb" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.navbar-toggler').forEach(function (toggler) {
+      toggler.addEventListener('click', function () {
+        var targetSelector = toggler.getAttribute('data-bs-target');
+        if (!targetSelector) return;
+        var target = document.querySelector(targetSelector);
+        if (!target) return;
+        var isOpen = target.classList.contains('show');
+        if (isOpen) {
+          target.classList.remove('show');
+        } else {
+          target.classList.add('show');
+        }
+        toggler.setAttribute('aria-expanded', String(!isOpen));
+      });
+    });
+  });
+</script>
+
+<script src="../../scripts/profile-publications.js"></script>
 </body>
 </html>

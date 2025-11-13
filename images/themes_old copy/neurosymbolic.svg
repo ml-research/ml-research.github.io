@@ -1,0 +1,43 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neoGrad" x1="100" y1="40" x2="540" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#101C3C"/>
+      <stop offset="1" stop-color="#224C87"/>
+    </linearGradient>
+    <linearGradient id="neoNode" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8DD5FF"/>
+      <stop offset="1" stop-color="#A18CD1"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="32" fill="url(#neoGrad)"/>
+  <g stroke="#7BC9FF" stroke-width="6" stroke-linecap="round" stroke-opacity="0.75">
+    <path d="M160 110L240 160"/>
+    <path d="M240 160L320 110"/>
+    <path d="M320 110L420 160"/>
+    <path d="M420 160L500 110"/>
+    <path d="M160 250L240 200"/>
+    <path d="M240 200L320 250"/>
+    <path d="M320 250L420 200"/>
+    <path d="M420 200L500 250"/>
+    <path d="M240 160L240 200"/>
+    <path d="M320 110L320 250"/>
+    <path d="M420 160L420 200"/>
+  </g>
+  <g fill="url(#neoNode)">
+    <circle cx="160" cy="110" r="20"/>
+    <circle cx="240" cy="160" r="22"/>
+    <circle cx="320" cy="110" r="24"/>
+    <circle cx="420" cy="160" r="22"/>
+    <circle cx="500" cy="110" r="20"/>
+    <circle cx="240" cy="200" r="22"/>
+    <circle cx="320" cy="250" r="26"/>
+    <circle cx="420" cy="200" r="22"/>
+    <circle cx="500" cy="250" r="20"/>
+  </g>
+  <rect x="300" y="168" width="40" height="24" rx="6" fill="#101C3C" stroke="#8DD5FF" stroke-width="4"/>
+  <path d="M308 180H332" stroke="#8DD5FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M308 188H328" stroke="#8DD5FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M308 172H328" stroke="#8DD5FF" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="116" cy="256" r="18" stroke="#8DD5FF" stroke-opacity="0.25" stroke-width="6"/>
+  <circle cx="520" cy="72" r="22" stroke="#8DD5FF" stroke-opacity="0.2" stroke-width="6"/>
+</svg>
