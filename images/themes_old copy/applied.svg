@@ -1,0 +1,20 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="appliedGrad" x1="80" y1="40" x2="560" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFB347"/>
+      <stop offset="1" stop-color="#FFCC33"/>
+    </linearGradient>
+    <linearGradient id="appliedAccent" x1="200" y1="260" x2="480" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#005BEA"/>
+      <stop offset="1" stop-color="#00C6FB"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="32" fill="url(#appliedGrad)"/>
+  <path d="M170 190C200 154 246 154 276 190L320 238L364 190C394 154 440 154 470 190" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="18" stroke-linecap="round"/>
+  <path d="M220 220L276 276C299 299 341 299 364 276L420 220" stroke="url(#appliedAccent)" stroke-width="26" stroke-linecap="round"/>
+  <circle cx="200" cy="120" r="34" fill="#FFFFFF" fill-opacity="0.35"/>
+  <circle cx="440" cy="120" r="34" fill="#FFFFFF" fill-opacity="0.35"/>
+  <circle cx="320" cy="96" r="42" fill="#FFFFFF" fill-opacity="0.32"/>
+  <path d="M140 280C180 312 240 324 300 312" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="12" stroke-linecap="round"/>
+  <path d="M340 312C400 324 460 312 500 280" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="12" stroke-linecap="round"/>
+</svg>

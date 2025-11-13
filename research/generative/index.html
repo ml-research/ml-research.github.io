@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="AIML Lab research on generative and probabilistic models with tractable inference, diffusion, and causal learning."/>
+  <title>Generative & Probabilistic Models · AIML Lab</title>
+  <link rel="icon" type="image/svg+xml" href="../../icons/logos/aimlCleanV2.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body class="site-body has-fixed-header">
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../../index.html">
+        <img src="../../icons/logos/aimlCleanV2.svg" alt="AIML Lab logo" class="navbar-brand-photo"/>
+        <span>AIML Lab</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="../../index.html#news">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#research">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#people">People</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#teaching">Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center mt-3 mt-lg-0 ms-lg-4 gap-2">
+          <a class="btn btn-outline-primary" href="https://www.tu-darmstadt.de/" target="_blank" rel="noopener">TU Darmstadt</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="hero-intro py-5 border-bottom bg-white">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7">
+          <p class="text-uppercase text-muted fw-semibold small letter-spacing">Research Theme</p>
+          <h1 class="display-5 fw-semibold text-dark">Generative &amp; Probabilistic Models</h1>
+          <p class="lead text-secondary mt-3">We design expressive generative models with tractable inference, calibrated sampling, and causal awareness for complex data and simulations.</p>
+          <div class="d-flex flex-wrap gap-3 align-items-center mt-4">
+            <a class="btn btn-primary" href="../../index.html#research">Back to all themes</a>
+            <a class="btn btn-outline-secondary" href="../../index.html#publications">View publications</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <figure class="hero-figure">
+            <img src="../../icons/logos/aimlCleanV2.svg" alt="AIML Lab logo" class="img-fluid rounded"/>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-padding bg-light-subtle">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-8">
+          <article class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h2 class="h3">Generative models, demystified</h2>
+              <p class="text-secondary mb-3">Generative &amp; probabilistic models learn full probability distributions. That means they can synthesise molecules, climate scenarios, or legal cases—and also tell us how confident they are, what they have memorised, and which causal story might have produced the data.</p>
+              <p class="text-secondary mb-0">Our research tackles questions such as:</p>
+              <ul class="text-secondary mt-3 d-flex flex-column gap-2 mb-0">
+                <li>How can we keep probabilistic inference exact while scaling to rich, structured data?</li>
+                <li>What guardrails ensure diffusion and large generative models stay safe, fair, and controllable?</li>
+                <li>How do causal representations and simulators let us reason about interventions, not just correlations?</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <div class="col-lg-4">
+          <article class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h3 class="h5 mb-3">Quick facts</h3>
+              <ul class="text-secondary mb-0 d-flex flex-column gap-2">
+                <li><strong>Model families:</strong> Probabilistic circuits, diffusion &amp; flow models, causal simulators, probabilistic programs.</li>
+                <li><strong>Data we tackle:</strong> Multimodal sensor data, molecules, video, socio-technical systems.</li>
+                <li><strong>Shared artefacts:</strong> Open-source libraries, evaluation harnesses, safety benchmarks, generative design toolkits.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="row g-4 mt-1">
+        <div class="col-lg-4">
+          <article class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h3 class="h5 mb-2">Tractable probabilistic circuits</h3>
+              <p class="text-secondary mb-0">We craft circuit-based representations with guaranteed inference, enabling certified uncertainty estimates for complex, structured data.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-lg-4">
+          <article class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h3 class="h5 mb-2">Responsible diffusion &amp; synthesis</h3>
+              <p class="text-secondary mb-0">Memorisation audits, fairness constraints, and alignment strategies keep high-capacity generators creative without violating trust.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-lg-4">
+          <article class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h3 class="h5 mb-2">Causal generative reasoning</h3>
+              <p class="text-secondary mb-0">We connect generative models with causal discovery and intervention planning so stakeholders can ask “what if?” and get reliable answers.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="section-header mb-5">
+        <h2 class="section-heading"><span>Key Publications</span></h2>
+        <p class="section-subheading">Recent conference and journal work on diffusion safety, probabilistic circuits, and causal reasoning for generative models.</p>
+      </div>
+      <div class="row g-4" data-render="themePublications"></div>
+      <p class="text-center text-muted small mt-4" data-render="themePublicationStatus"></p>
+      <div class="text-center mt-4">
+        <a class="btn btn-outline-secondary" href="../../papers/index.html">Browse the full publication library</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer bg-dark text-white" id="contact">
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <h2 class="h4">Contact</h2>
+        <p class="text-white-50 mb-1">Meetings by appointment, general consultation: Thursdays, 13:30–14:30.</p>
+        <address class="mb-0 text-white-50">
+          Artificial Intelligence and Machine Learning Lab<br/>
+          Computer Science Department &amp; Centre for Cognitive Science, TU Darmstadt<br/>
+          Altes Hauptgebäude, Room 074, Hochschulstrasse 1<br/>
+          64289 Darmstadt, Germany<br/>
+          <span class="d-block mt-3"><img src="../../images/phone.png" alt="Phone" class="icon-inline"/> +49-6151-16-24411</span>
+          <span class="d-block"><img src="../../images/mail.jpg" alt="Mail" class="icon-inline"/> kersting@cs.tu-darmstadt.de, kristian.kersting@cogsci.tu-darmstadt.de</span>
+        </address>
+      </div>
+      <div class="col-lg-6">
+        <h2 class="h4">Legal Information</h2>
+        <p class="text-white-50 mb-2">Technische Universitaet Darmstadt<br/>
+          Fachbereich Informatik<br/>
+          Hochschulstr. 1, 64289 Darmstadt, Germany</p>
+        <a class="btn btn-outline-light btn-sm" href="https://www.informatik.tu-darmstadt.de/impressum.en.jsp" target="_blank" rel="noopener">Legal info / Impressum</a>
+      </div>
+    </div>
+    <div class="mt-4 text-white-50 small">© <span id="current-year"></span> Artificial Intelligence and Machine Learning Lab. All rights reserved.</div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNузT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="../../build/publications-data.js"></script>
+<script>
+  const yearElement = document.getElementById('current-year');
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
+  (() => {
+    const container = document.querySelector('[data-render="themePublications"]');
+    if (!container) {
+      return;
+    }
+
+    const status = document.querySelector('[data-render="themePublicationStatus"]');
+    const keywords = ['generative', 'diffusion', 'probabilistic', 'circuit', 'causal', 'synthesis', 'model'];
+    const publications = Array.isArray(window.AIML_PUBLICATIONS) ? window.AIML_PUBLICATIONS : [];
+
+    const isConferenceOrJournal = ({ typeLabel = '' } = {}) => {
+      const normalized = typeLabel.toLowerCase();
+      return normalized.startsWith('conference') || normalized.startsWith('journal');
+    };
+
+    const hasLink = ({ url = '' } = {}) => typeof url === 'string' && url.trim().length > 0;
+
+    const curatedFallback = [
+      {
+        title: 'Safe Latent Diffusion: Mitigating Inappropriate Degeneration in Diffusion Models',
+        authors: ['Patrick Schramowski', 'Manuel Brack', 'Björn Deiseroth', 'Kristian Kersting'],
+        year: '2023',
+        yearDisplay: '2023',
+        typeLabel: 'Conference paper',
+        booktitle: 'Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)',
+        url: 'https://openaccess.thecvf.com/content/CVPR2023/papers/Schramowski_Safe_Latent_Diffusion_Mitigating_Inappropriate_Degeneration_in_Diffusion_Models_CVPR_2023_paper.pdf'
+      },
+      {
+        title: 'Scaling Probabilistic Circuits via Data Partitioning',
+        authors: ['Jonas Seng', 'Florian Peter Busch', 'Pooja Prasad', 'Devendra Singh Dhami', 'Martin Mundt', 'Kristian Kersting'],
+        year: '2025',
+        yearDisplay: '2025',
+        typeLabel: 'Conference paper',
+        booktitle: 'Proceedings of the 41th Conference on Uncertainty in Artificial Intelligence (UAI)',
+        url: 'https://arxiv.org/pdf/2503.08141'
+      },
+      {
+        title: 'Credibility-Aware Multimodal Fusion Using Probabilistic Circuits',
+        authors: ['Sahil Sidheekh', 'Pranuthi Tenali', 'Saurabh Mathur', 'Erik Blasch', 'Kristian Kersting', 'Sriraam Natarajan'],
+        year: '2025',
+        yearDisplay: '2025',
+        typeLabel: 'Conference paper',
+        booktitle: 'Proceedings of the International Conference on Artificial Intelligence and Statistics (AISTATS)',
+        url: 'https://arxiv.org/pdf/2403.03281'
+      },
+      {
+        title: 'Bongard in Wonderland: Visual Puzzles That Still Make AI Go Mad?',
+        authors: ['Antonia Wüst', 'Tim Woydt', 'Lukas Helff', 'Inga Ibs', 'Wolfgang Stammer', 'Devendra S. Dhami', 'Constantin A. Rothkopf', 'Kristian Kersting'],
+        year: '2025',
+        yearDisplay: '2025',
+        typeLabel: 'Conference paper',
+        booktitle: 'Proceedings of the 42nd International Conference on Machine Learning (ICML)',
+        url: 'https://arxiv.org/pdf/2410.19546'
+      },
+      {
+        title: 'T-FREE: Subword Tokenizer-Free Generative LLMs via Sparse Representations for Memory-Efficient Embeddings',
+        authors: ['Björn Deiseroth', 'Manuel Brack', 'Patrick Schramowski', 'Kristian Kersting', 'Samuel Weinbach'],
+        year: '2024',
+        yearDisplay: '2024',
+        typeLabel: 'Conference paper',
+        booktitle: 'Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)',
+        url: '../../papers/deiseroth2024emnlp.pdf'
+      },
+      {
+        title: 'Right on Time: Revising Time Series Models by Constraining their Explanations',
+        authors: ['Maurice Kraus', 'David Steinmann', 'Antonia Wüst', 'Andre Kokozinski', 'Kristian Kersting'],
+        year: '2025',
+        yearDisplay: '2025',
+        typeLabel: 'Conference paper',
+        booktitle: 'Proceedings of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)',
+        url: 'https://arxiv.org/pdf/2402.12921'
+      }
+    ];
+
+    const toKey = (item) => {
+      const parts = [item && item.cite, item && item.url, item && item.title];
+      return parts.filter(Boolean).join('::').toLowerCase();
+    };
+
+    const selectMatching = (items) => items.filter((publication) => {
+      if (!isConferenceOrJournal(publication) || !hasLink(publication)) {
+        return false;
+      }
+      const title = (publication.title || '').toLowerCase();
+      const topics = Array.isArray(publication.topicsNormalized)
+        ? publication.topicsNormalized.join(' ')
+        : '';
+      return keywords.some((keyword) =>
+        title.includes(keyword) || topics.includes(keyword)
+      );
+    });
+
+    const buildCard = (publication) => {
+      const col = document.createElement('div');
+      col.className = 'col-md-6 col-xl-4';
+
+      const card = document.createElement(publication.url ? 'a' : 'article');
+      card.className = 'theme-publication-card h-100';
+      if (publication.url) {
+        card.href = publication.url;
+        card.target = '_blank';
+        card.rel = 'noopener';
+        card.setAttribute('aria-label', `View publication: ${publication.title || ''}`);
+        card.classList.add('text-decoration-none', 'd-block');
+      }
+
+      const body = document.createElement('div');
+      body.className = 'theme-publication-card-body';
+
+      if (publication.year || publication.typeLabel) {
+        const top = document.createElement('div');
+        top.className = 'theme-publication-top';
+
+        if (publication.year) {
+          const yearEl = document.createElement('span');
+          yearEl.className = 'theme-publication-year';
+          yearEl.textContent = publication.yearDisplay || publication.year;
+          top.append(yearEl);
+        }
+
+        if (publication.typeLabel) {
+          const typeEl = document.createElement('span');
+          typeEl.className = 'theme-publication-type';
+          typeEl.textContent = publication.typeLabel;
+          top.append(typeEl);
+        }
+
+        body.append(top);
+      }
+
+      const titleEl = document.createElement('h3');
+      titleEl.className = 'h5 theme-publication-title';
+      titleEl.textContent = publication.title || '';
+      body.append(titleEl);
+
+      if (Array.isArray(publication.authors) && publication.authors.length) {
+        const authorsEl = document.createElement('p');
+        authorsEl.className = 'theme-publication-authors text-secondary';
+        const authors = publication.authors.slice(0, 10);
+        const text = publication.authors.length > 10
+          ? authors.join(', ') + ', et al.'
+          : authors.join(', ');
+        authorsEl.textContent = text;
+        body.append(authorsEl);
+      }
+
+      const venue = publication.booktitle || publication.journal || publication.publisher || '';
+      if (venue) {
+        const venueEl = document.createElement('div');
+        venueEl.className = 'theme-publication-venue text-muted small';
+        venueEl.textContent = venue;
+        body.append(venueEl);
+      }
+
+      card.append(body);
+      col.append(card);
+      return col;
+    };
+
+    const render = (items) => {
+      container.innerHTML = '';
+      const fragment = document.createDocumentFragment();
+      items.forEach((publication) => fragment.append(buildCard(publication)));
+      container.append(fragment);
+    };
+
+    const setStatus = (message) => {
+      if (status) {
+        status.textContent = message || '';
+      }
+    };
+
+    const uniqueByKey = (items) => {
+      const seen = new Set();
+      return items.filter((item) => {
+        const key = toKey(item);
+        if (!key) {
+          return true;
+        }
+        if (seen.has(key)) {
+          return false;
+        }
+        seen.add(key);
+        return true;
+      });
+    };
+
+    const eligiblePublications = publications.filter((publication) => isConferenceOrJournal(publication) && hasLink(publication));
+    const autoSelected = selectMatching(eligiblePublications);
+    let selected;
+    let statusMessage;
+
+    if (!autoSelected.length) {
+      selected = curatedFallback.slice(0, 6);
+      statusMessage = 'Curated selection shown while we index new papers.';
+    } else if (autoSelected.length < 6) {
+      selected = uniqueByKey(autoSelected.concat(curatedFallback)).slice(0, 6);
+      statusMessage = 'Auto-selected publications supplemented with curated picks.';
+    } else {
+      selected = uniqueByKey(curatedFallback.concat(autoSelected)).slice(0, 6);
+      statusMessage = 'Curated highlights from our conference and journal work.';
+    }
+
+    render(selected);
+    setStatus(statusMessage);
+  })();
+</script>
+</body>
+</html>

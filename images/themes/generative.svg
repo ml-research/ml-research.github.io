@@ -1,0 +1,20 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="genBg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 80) rotate(30) scale(520 360)">
+      <stop offset="0" stop-color="#FF9A8B"/>
+      <stop offset="0.5" stop-color="#FAD0C4"/>
+      <stop offset="1" stop-color="#FDF0FF"/>
+    </radialGradient>
+    <linearGradient id="genRibbon" x1="140" y1="300" x2="520" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8E2DE2"/>
+      <stop offset="1" stop-color="#4A00E0"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="32" fill="url(#genBg)"/>
+  <path d="M120 260C220 220 260 80 360 120C420 144 450 226 520 200C560 184 582 152 582 152" stroke="url(#genRibbon)" stroke-width="28" stroke-linecap="round"/>
+  <circle cx="210" cy="140" r="46" fill="#FFFFFF" fill-opacity="0.45"/>
+  <circle cx="320" cy="242" r="54" fill="#FFFFFF" fill-opacity="0.28"/>
+  <circle cx="476" cy="128" r="36" fill="#FFFFFF" fill-opacity="0.32"/>
+  <path d="M180 310C260 320 320 300 360 268" stroke="#4A00E0" stroke-opacity="0.3" stroke-width="14" stroke-linecap="round"/>
+  <path d="M400 82C420 112 460 132 498 128" stroke="#4A00E0" stroke-opacity="0.25" stroke-width="12" stroke-linecap="round"/>
+</svg>

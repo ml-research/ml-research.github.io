@@ -46,7 +46,10 @@
           <i class="fab fa-github">&nbsp;</i> JAXAtari
       </a> <p>Fast JAX implemented ALE run on GPUs (early stage)</p>
       </li>
-    </ul>
+                    <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">AIML Lab</a>
+                </li>
+            </ul>
     </div>
 
     <div id="block">
@@ -143,6 +146,26 @@
 
 </div>
 <script type="text/javascript" src="script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.navbar-toggler').forEach(function (toggler) {
+      toggler.addEventListener('click', function () {
+        var targetSelector = toggler.getAttribute('data-bs-target');
+        if (!targetSelector) return;
+        var target = document.querySelector(targetSelector);
+        if (!target) return;
+        var isOpen = target.classList.contains('show');
+        if (isOpen) {
+          target.classList.remove('show');
+        } else {
+          target.classList.add('show');
+        }
+        toggler.setAttribute('aria-expanded', String(!isOpen));
+      });
+    });
+  });
+</script>
+
 </body>
 
 

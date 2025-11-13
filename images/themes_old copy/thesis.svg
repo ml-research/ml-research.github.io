@@ -1,0 +1,22 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="thesisGrad" x1="120" y1="40" x2="520" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F4E5FF"/>
+      <stop offset="1" stop-color="#D8F6FF"/>
+    </linearGradient>
+    <linearGradient id="bookGrad" x1="200" y1="120" x2="440" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5F5BE2"/>
+      <stop offset="1" stop-color="#3CB7FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="32" fill="url(#thesisGrad)"/>
+  <path d="M200 120H440C452 120 462 130 462 142V264C462 276 452 286 440 286H200C188 286 178 276 178 264V142C178 130 188 120 200 120Z" fill="#FFFFFF" opacity="0.95"/>
+  <path d="M228 152H376" stroke="#5F5BE2" stroke-width="10" stroke-linecap="round"/>
+  <path d="M228 188H412" stroke="#5F5BE2" stroke-width="10" stroke-linecap="round"/>
+  <path d="M228 224H342" stroke="#5F5BE2" stroke-width="10" stroke-linecap="round" opacity="0.6"/>
+  <path d="M412 120L344 204" stroke="url(#bookGrad)" stroke-width="24" stroke-linecap="round"/>
+  <path d="M280 280L336 216" stroke="url(#bookGrad)" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="336" cy="216" r="20" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="412" cy="120" r="20" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="280" cy="280" r="20" fill="#FFFFFF" opacity="0.8"/>
+</svg>
