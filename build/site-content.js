@@ -70,7 +70,7 @@ window.AIML_SITE_CONTENT = {
     {
       "term": "Irregular",
       "title": "Causality in AI",
-      "abbreviation": "CausalAI",
+      "abbreviation": "CAI",
       "description": "Principles and algorithms for causal discovery, inference, and decision making across science and engineering.",
       "format": "Lecture",
       "credits": "3 CP",
