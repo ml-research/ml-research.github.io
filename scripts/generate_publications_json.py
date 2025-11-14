@@ -71,6 +71,15 @@ def extract_image(entry) -> str:
     return f"./images/{DEFAULT_IMAGE}"
 
 
+def normalize_url(url: str) -> str:
+    if not url:
+        return ""
+    stripped = url.strip()
+    if stripped.startswith("./papers"):
+        return "/papers" + stripped[len("./papers"):]
+    return stripped
+
+
 def main() -> None:
     if not BIB_PATH.exists():
         raise SystemExit(f"BibTeX file not found at {BIB_PATH}")
@@ -97,7 +106,7 @@ def main() -> None:
                 "school": entry.get("school", ""),
                 "series": entry.get("series", ""),
                 "note": entry.get("note", ""),
-                "url": entry.get("url", ""),
+                "url": normalize_url(entry.get("url", "")),
                 "doi": entry.get("doi", ""),
                 "typeLabel": type_label(entry.get("ENTRYTYPE", "")),
                 "image": extract_image(entry),
