@@ -17,6 +17,13 @@
     .replace(/[\u0300-\u036f]/g, '')
     .trim();
 
+  const authorMatches = (author, term) => {
+    if (!author || !term) return false;
+    if (author === term) return true;
+    const tokens = author.split(/[^a-z0-9]+/).filter(Boolean);
+    return tokens.includes(term);
+  };
+
   const parseList = (value = '') => {
     if (!value) return [];
     const trimmed = value.trim();
@@ -350,7 +357,7 @@
       let authorMatch = !normalizedAuthors.length;
       if (normalizedAuthors.length) {
         const authors = (publication.authors || []).map(normalize);
-        authorMatch = authors.some((author) => normalizedAuthors.some((term) => author.includes(term)));
+        authorMatch = authors.some((author) => normalizedAuthors.some((term) => authorMatches(author, term)));
       }
 
       let keywordMatch = true;

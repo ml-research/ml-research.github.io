@@ -76,7 +76,7 @@ def normalize_url(url: str) -> str:
         return ""
     stripped = url.strip()
     if stripped.startswith("./papers"):
-        return "/papers" + stripped[len("./papers"):]
+        return "../papers" + stripped[len("./papers"):]
     return stripped
 
 
@@ -125,7 +125,6 @@ def main() -> None:
         data_js_file.write("window.AIML_PUBLICATIONS = ")
         json.dump(publications, data_js_file, ensure_ascii=False)
         data_js_file.write(";\n")
-
 
     print(f"Wrote {len(publications)} publications to {JSON_OUTPUT}")
 
