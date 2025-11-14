@@ -76,7 +76,7 @@ def normalize_url(url: str) -> str:
         return ""
     stripped = url.strip()
     if stripped.startswith("./papers"):
-        return "../papers" + stripped[len("./papers"):]
+        return "../../papers" + stripped[len("./papers"):]
     return stripped
 
 
