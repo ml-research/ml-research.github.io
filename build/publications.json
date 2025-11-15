@@ -15,7 +15,7 @@
     "organization": "",
     "school": "",
     "series": "",
-    "note": "",
+    "note": "A new benchmark, KaBLE (knowledge and belief language evaluation), indicates that some large language models\nare unable to accurately distinguish belief from knowledge and fact, calling into question their use in real-word applications\nsuch as medicine and law.",
     "url": "https://doi.org/10.1038/s42256-025-01145-0",
     "doi": "10.1038/s42256-025-01145-0",
     "typeLabel": "Journal article",
