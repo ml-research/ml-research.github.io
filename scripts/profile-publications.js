@@ -234,11 +234,15 @@
       card.appendChild(figure);
     }
 
+    const content = document.createElement('div');
+    content.className = 'publication-card-content';
+    card.appendChild(content);
+
     if (publication.title) {
       const title = document.createElement('h3');
       title.className = 'publication-card-title h5';
       title.textContent = publication.title;
-      card.appendChild(title);
+      content.appendChild(title);
     }
 
     const authors = Array.isArray(publication.authors) ? publication.authors.join(', ') : '';
@@ -246,7 +250,7 @@
       const authorEl = document.createElement('p');
       authorEl.className = 'publication-card-authors';
       authorEl.textContent = authors;
-      card.appendChild(authorEl);
+      content.appendChild(authorEl);
     }
 
     const venue = publication.booktitle
@@ -262,14 +266,14 @@
       const venueEl = document.createElement('p');
       venueEl.className = 'publication-card-venue';
       venueEl.textContent = venue;
-      card.appendChild(venueEl);
+      content.appendChild(venueEl);
     }
 
     if (Array.isArray(publication.topics) && publication.topics.length) {
       const topics = document.createElement('p');
       topics.className = 'publication-card-topics';
       topics.textContent = publication.topics.slice(0, 3).join(', ');
-      card.appendChild(topics);
+      content.appendChild(topics);
     }
 
     const noteText = (publication.note || '').trim();
@@ -281,13 +285,13 @@
       label.textContent = 'Abstract: ';
       noteEl.appendChild(label);
 
-      const words = noteText.split(/\s+/).filter(Boolean);
-      const previewWords = words.slice(0, 5).join(' ');
-      const hasMore = words.length > 5;
+      const previewLimit = 120; // approx. 80% longer than previous character count
+      const previewText = noteText.slice(0, previewLimit).trim();
+      const hasMore = noteText.length > previewLimit;
 
       const preview = document.createElement('span');
       preview.className = 'publication-card-note-preview';
-      preview.textContent = hasMore ? `${previewWords}…` : previewWords;
+      preview.textContent = hasMore ? `${previewText}…` : previewText;
       noteEl.appendChild(preview);
 
       if (hasMore) {
@@ -315,7 +319,7 @@
         noteEl.appendChild(toggle);
       }
 
-      card.appendChild(noteEl);
+      content.appendChild(noteEl);
     }
 
     const meta = document.createElement('div');
@@ -339,7 +343,7 @@
       meta.appendChild(icon);
     }
     if (meta.childNodes.length) {
-      card.appendChild(meta);
+      content.appendChild(meta);
     }
     return card;
   };
