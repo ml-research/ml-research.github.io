@@ -335,7 +335,7 @@ hr.soft {
 /*color: #900; */
 }
 .pubv {
-/*  color: #090;*/
+/* color: #090;*/
 /*color: #900;*/
  font-style: italic;
   font-size: 14px;
@@ -914,7 +914,7 @@ body.has-fixed-header main {
 .hero-intro h1 {
   font-size: clamp(2.4rem, 4.8vw, 3.35rem);
   line-height: 1.08;
-  max-width: 32rem;
+  white-space: nowrap;
   margin-bottom: 1rem;
 }
 
@@ -941,7 +941,8 @@ body.has-fixed-header main {
 }
 
 .hero-group-photo {
-  max-width: clamp(320px, 34vw, 560px);
+  width: 100%;
+  max-width: 100%;
   border-radius: 0.5rem;
   padding: 0;
   background: none;
@@ -1040,7 +1041,7 @@ body.has-fixed-header main {
 
 @media (max-width: 991.98px) {
   .hero-group-photo {
-    max-width: clamp(280px, 80vw, 520px);
+    /* max-width: clamp(280px, 80vw, 520px); */ /* Diese Zeile ist nicht mehr nötig */
   }
 }
 
