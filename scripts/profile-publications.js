@@ -15,6 +15,7 @@
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
+    .replace("*","")  // remove asterisks for multi-author highlighting; TODO: Add more possible markers for multi-author highlights
     .trim();
 
   const authorMatches = (author, term) => {
