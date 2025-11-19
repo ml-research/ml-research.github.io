@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xLSTM-Mixer: Multivariate Time Series Forecasting by Mixing via Scalar Memories</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./temporary.png" type="image/x-icon" />
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Core theme CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!--LINK JQUERY-->
+  </head>
+
+  <body>
+    <!-- Parallax Pixel Background Animation -->
+    <section class="animated-background">
+      <div id="stars1"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </section>
+    <!-- End of Parallax Pixel Background Animation -->
+
+    <a id="profilePicture" href="#popup">
+      <img src="./architecture.svg" alt="Profile Picture">
+    </a>
+
+    <div class="overlay" id="popup">
+      <div class="popup">
+        <div class="popup-photo">
+          <a href="./architecture.svg" target="_blank">
+            <img src="./architecture.svg" alt="Profile Picture">
+          </a>
+        </div>
+        <div class="popup-quote">
+          Agents fail in simple tasks, like crossing a road without driving cars or catching the ball in Pong, if the enemy paddle is easier to beat.
+        </div>
+        <a class="popup-close" onclick="history.back()">&times;</a>
+      </div>
+    </div>
+
+
+    <div id="title">
+      [Work in Progress] xLSTM-Mixer: Multivariate Time Series Forecasting by Mixing via Scalar Memories
+    </div>
+
+    <div id="links">
+      <div id="subtitle">
+        Preprint
+      </div>
+     <a class="link" href="https://arxiv.org/abs/2410.16928" target="_blank">
+      <i class="fa fa-sign">&nbsp;</i>ArXiv
+      </a>
+
+
+    <div id="links">
+      <div id="subtitle">
+        Neural Information Processing Systems (NeurIPS) 2025
+      <a class="link" href="./Poster.pdf" target="_blank">
+        <i class="fa fa-sign">&nbsp;</i>Poster
+      </a>
+
+      <div id="subtitle">
+        Corresponding Authors
+      </div>
+      <a class="link" href="https://www.ml.informatik.tu-darmstadt.de/people/qdelfosse/index.html" target="_blank">
+        <i class="fa fa-user">&nbsp;</i>Quentin Delfosse
+      </a>
+      <a class="link" href="https://www.ml.informatik.tu-darmstadt.de/people/jblueml/index.html" target="_blank">
+        <i class="fa fa-user">&nbsp;</i>Jannis Blüml
+      </a>
+    
+      <div id="subtitle">
+        Code
+      </div>
+      <a class="link" href="https://github.com/k4ntz/OCAtari" target="_blank">
+      <i class="fab fa-github">&nbsp;</i>OCAtari: Object Extraction
+      </a>
+      <a class="link" href="https://github.com/k4ntz/JAXAtari" target="_blank">
+      <i class="fab fa-github">&nbsp;</i>JAXAtari: Jax based Atari Learning Environment (Experimental)
+      </a>
+
+  <!--
+      <CODE> 
+        If you like our work, feel free to share it.
+      </CODE>
+  <div class="share-dialog">
+    <header>
+      <h3 class="dialog-title">Share this Paper</h3>
+    </header>
+    <div>
+      <div class="pen-url">https://ml-research.github.io/people/jblueml/papertrees/notintelligent</div>
+      <button class="copy-link" onclick="copy()" onmouseout="outFunc()">Copy Link</button>
+      <button class="close-button">Close</button>
+    </div>
+  </div>
+
+  <button class="share-button" type="button" title="Share this article">
+    <span>Share</span>
+  </button>
+  -->
+
+
+</div>
+<script type="text/javascript" src="script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.navbar-toggler').forEach(function (toggler) {
+      toggler.addEventListener('click', function () {
+        var targetSelector = toggler.getAttribute('data-bs-target');
+        if (!targetSelector) return;
+        var target = document.querySelector(targetSelector);
+        if (!target) return;
+        var isOpen = target.classList.contains('show');
+        if (isOpen) {
+          target.classList.remove('show');
+        } else {
+          target.classList.add('show');
+        }
+        toggler.setAttribute('aria-expanded', String(!isOpen));
+      });
+    });
+  });
+</script>
+
+</body>
+
+
+</html>
