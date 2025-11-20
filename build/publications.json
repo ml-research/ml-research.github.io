@@ -1,47 +1,5 @@
 [
   {
-    "cite": "braun2025tractablerepresentationlearningprobabilistic",
-    "title": "Tractable Representation Learning with Probabilistic Circuits",
-    "authors": [
-      "Steven Braun",
-      "Sahil Sidheekh",
-      "Antonio Vergari",
-      "Martin Mundt",
-      "Sriraam Natarajan",
-      "Kristian Kersting"
-    ],
-    "year": "2025",
-    "yearDisplay": "2025",
-    "journal": "",
-    "booktitle": "",
-    "publisher": "",
-    "howpublished": "",
-    "institution": "",
-    "organization": "",
-    "school": "",
-    "series": "",
-    "note": "",
-    "url": "https://arxiv.org/abs/2507.04385",
-    "doi": "",
-    "typeLabel": "Preprint",
-    "image": "./images/braun2025apc.png",
-    "topics": [
-      "Probabilistic Circuits",
-      "Autoencdoing",
-      "Variational Autoencoder",
-      "Knowledge Distillation",
-      "Missing Data"
-    ],
-    "topicsNormalized": [
-      "probabilistic-circuits",
-      "autoencdoing",
-      "variational-autoencoder",
-      "knowledge-distillation",
-      "missing-data"
-    ],
-    "position": 0
-  },
-  {
     "cite": "kersting2025nmi",
     "title": "Large Language Models Still Struggle with False Beliefs",
     "authors": [
@@ -81,6 +39,48 @@
       "interpretability",
       "medicine",
       "law"
+    ],
+    "position": 0
+  },
+  {
+    "cite": "braun2025tractablerepresentationlearningprobabilistic",
+    "title": "Tractable Representation Learning with Probabilistic Circuits",
+    "authors": [
+      "Steven Braun",
+      "Sahil Sidheekh",
+      "Antonio Vergari",
+      "Martin Mundt",
+      "Sriraam Natarajan",
+      "Kristian Kersting"
+    ],
+    "year": "2025",
+    "yearDisplay": "2025",
+    "journal": "",
+    "booktitle": "",
+    "publisher": "",
+    "howpublished": "",
+    "institution": "",
+    "organization": "",
+    "school": "",
+    "series": "",
+    "note": "",
+    "url": "https://arxiv.org/abs/2507.04385",
+    "doi": "",
+    "typeLabel": "Preprint",
+    "image": "./images/braun2025apc.png",
+    "topics": [
+      "Probabilistic Circuits",
+      "Autoencdoing",
+      "Variational Autoencoder",
+      "Knowledge Distillation",
+      "Missing Data"
+    ],
+    "topicsNormalized": [
+      "probabilistic-circuits",
+      "autoencdoing",
+      "variational-autoencoder",
+      "knowledge-distillation",
+      "missing-data"
     ],
     "position": 1
   },
