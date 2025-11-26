@@ -177,10 +177,11 @@ code {
     width: auto;
     height: auto;
     margin: 56px;
-    background-color: var(--bgColor);
+    background-color: var(--bgColor2);
     /* transform: rotate(32deg); */
     transform: scale(0);
     transition: .5s ease-in-out;
+    padding: 20px;
 }
 
 .popup-quote {
@@ -188,7 +189,7 @@ code {
     font-style : italic;
     position: flex;
     color: var(--accentColor);
-    padding: 20px;
+    margin-top: 30px;
     text-align: center;
     font-size: 1rem;
 }
@@ -326,3 +327,16 @@ button, .button {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
+.author-note {
+    position: relative;
+    color: var(--accentColor);
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    font-style: italic;
+}
