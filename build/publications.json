@@ -86,7 +86,7 @@
   },
   {
     "cite": "divo2025quantsquestionansweringtime",
-    "title": "QuAnTS: Question Answering on Time Series",
+    "title": "{QuAnTS}: Question Answering on Time Series",
     "authors": [
       "Felix Divo",
       "Maurice Kraus",
@@ -427,7 +427,7 @@
     "position": 9
   },
   {
-    "cite": "kraus2025granger",
+    "cite": "poonia2025granger",
     "title": "Exploring Neural Granger Causality with xLSTMs: Unveiling Temporal Dependencies in Complex Data",
     "authors": [
       "Harsh Poonia",
@@ -449,7 +449,7 @@
     "url": "https://neurips.cc/virtual/2025/loc/san-diego/poster/115199",
     "doi": "",
     "typeLabel": "Conference paper",
-    "image": "./images/kraus2025granger.png",
+    "image": "./images/poonia2025granger.png",
     "topics": [
       "Time Series",
       "xLSTM",
