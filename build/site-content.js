@@ -142,7 +142,7 @@ window.AIML_SITE_CONTENT = {
         { "id": "skryagin", "name": "Arseny Skryagin", "role": "PhD Candidate", "focus": "Neuro-symbolic AI" },
         { "id": "dsteinmann", "name": "David Steinmann", "role": "PhD Candidate", "focus": "Interpretable & Concept-based AI" },
         { "id": "gsudhakaran", "name": "Gopika Sudhakaran", "role": "PhD Candidate", "focus": "Responsible AI" },
-        { "id": "ssztwiertnia", "name": "Sebastian Sztwiertnia", "role": "PhD Candidate", "focus": "Explainable healthcare AI" },
+        { "id": "ssztwiertnia", "name": "Sebastian Sztwiertnia", "role": "PhD Candidate", "focus": "Large Language Model Alignment & Explainability" },
         { "id": "fventola", "name": "Fabrizio Ventola", "role": "PhD Candidate", "focus": "Tractable probabilistic modeling" },
         { "id": "mwillig", "name": "Moritz Willig", "role": "PhD Candidate", "focus": "Causal AI" },
         { "id": "twoydt", "name": "Tim Woydt", "role": "PhD Candidate", "focus": "Causal & Interactive AI" },
