@@ -278,22 +278,7 @@ body.profile-page #mission table {
 
 .profile-publication-card .publication-card-figure {
   flex: 0 0 180px;
-  max-width: 180px;
   width: 180px;
-  aspect-ratio: 4 / 3;
-  border-radius: 0.75rem;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(15, 23, 42, 0.04);
-}
-
-.profile-publication-card .publication-card-figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .profile-publication-card .publication-card-content {
