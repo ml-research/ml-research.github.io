@@ -1,75 +1,80 @@
 <!DOCTYPE html>
 <!-- saved from url=(0056)./kersting/kersting.html -->
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
 
-    <title>Maurice Kraus</title>
-  <link rel="icon" type="image/svg+xml" href="../../icons/logos/aimlCleanV2.svg"/>
-<link href="./../../css/style.css" rel="stylesheet" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
-    <script src="./../../build/jquery.min.js"></script>
+  <title>Maurice Kraus</title>
+  <link rel="icon" type="image/svg+xml" href="../../icons/logos/aimlCleanV2.svg" />
+  <link href="./../../css/style.css" rel="stylesheet" />
 
-    <script type="text/javascript">
-      //<![CDATA[
-      $(document).ready(function () {
-        // Add smooth scrolling to all links
-        $("a").on("click", function (event) {
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
+  <script src="./../../build/jquery.min.js"></script>
 
-            // Store hash
-            var hash = this.hash;
+  <script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on("click", function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
 
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $("html, body").animate(
-              {
-                scrollTop: $(hash).offset().top,
-              },
-              800,
-              function () {
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-              }
-            );
-          } // End if
-        });
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800,
+            function () {
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            }
+          );
+        } // End if
       });
-    </script>
+    });
+  </script>
 
-    <script src="./../../build/jquery.min.js"></script>
-    <!--    <script>
+  <script src="./../../build/jquery.min.js"></script>
+  <!--    <script>
           $(function(){
             $("#includedContent").load("myBib.bib");
           });
         </script>-->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="../../css/style.css" rel="stylesheet">
-    <link href="../../css/profile.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="../../css/style.css" rel="stylesheet">
+  <link href="../../css/profile.css" rel="stylesheet">
 
 </head>
 
-  <body class="profile-page site-body has-fixed-header">
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm profile-navbar fixed-top">
+<body class="profile-page site-body has-fixed-header">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm profile-navbar fixed-top">
       <div class="container align-items-center">
-              <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../../index.html">
-        <img src="../../icons/logos/aimlCleanV2.svg" alt="AIML Lab logo" class="navbar-brand-photo"/>
-        <span>AIML Lab</span>
-      </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarProfile" aria-controls="navbarProfile" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../../index.html">
+          <img src="../../icons/logos/aimlCleanV2.svg" alt="AIML Lab logo" class="navbar-brand-photo" />
+          <span>AIML Lab</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarProfile"
+          aria-controls="navbarProfile" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-                                <div class="collapse navbar-collapse justify-content-end" id="navbarProfile">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarProfile">
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
             <li class="nav-item"><a class="nav-link" href="../../index.html">Back to AIML Lab</a></li>
             <li class="nav-item"><a class="nav-link" href="#mission">Overview</a></li>
@@ -79,127 +84,102 @@
 
       </div>
     </nav>
-    </header>
+  </header>
 
-<main id="top" class="profile-main" role="main">
-      <br /><br /><br />
-      <div class="container" id="mission">
-        <div class="row">
-          <div class="col-md-2">
-            <img
-              src="profile-thumbnail.jpg"
-              class="rounded-circle imgme"
-              style="height: 120px"
-            />
-          </div>
+  <main id="top" class="profile-main" role="main">
+    <br /><br /><br />
+    <div class="container" id="mission">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="profile-thumbnail.jpg" class="rounded-circle imgme" style="height: 120px" />
+        </div>
 
-          <div class="col-md-6">
-            <div id="htname">Maurice Kraus</div>
-            <div id="htem">
-              Machine Learning Group, Computer Science Department, TU
-              Darmstadt.<br />
-              Hochschulstrasse 1, Building S1|03, Room 077, 64289 Darmstadt,
-              Germany.<br />
-              <img src="./../../images/mail.jpg" style="height: 15px" /> maurice
-              (dot) kraus (at) cs (dot) tu-darmstadt (dot) de<br />
-              <!--Meetings by appointment.<br/>-->
-              <img src="./../../images/webpage.png" style="height: 15px" />
-              <a href="https://mkraus.io">mkraus.io</a>
-            </div>
+        <div class="col-md-6">
+          <div id="htname">Maurice Kraus</div>
+          <div id="htem">
+            Machine Learning Group, Computer Science Department, TU
+            Darmstadt.<br />
+            Hochschulstrasse 1, Building S1|03, Room 077, 64289 Darmstadt,
+            Germany.<br />
+            <img src="./../../images/mail.jpg" style="height: 15px" /> maurice
+            (dot) kraus (at) cs (dot) tu-darmstadt (dot) de<br />
+            <!--Meetings by appointment.<br/>-->
+            <img src="./../../images/webpage.png" style="height: 15px" />
+            <a href="https://mkraus.io">mkraus.io</a>
           </div>
-          <div style="float: right">
-</div>
-          <!-- div class="col-md-4">
+        </div>
+        <div style="float: right">
+        </div>
+        <!-- div class="col-md-4">
                 <img id="logo" class="imgsm" src="./../../images/FB20TUDAlogo.png"
                      style="text-align: right; margin: 10px 5px 5px 3px;height:55px"></a>
             </div-->
-        </div>
-
-        <br />
-
-        <b>Mission.</b><br />
-        <p>
-          My research area focuses on explaining deep models in the context of
-          multimodal time series data. Specifically, I work on techniques that
-          enable humans to understand the reasoning behind the predictions made
-          by machine learning models when they operate on complex and diverse
-          time-varying data types, such as images, videos, audio, and text, that
-          are collected over time.
-        </p>
-        <p>
-          Multimodal time series data is prevalent in various domains, such as
-          healthcare, finance, and manufacturing, where it is often used for
-          prediction tasks like disease diagnosis, stock price forecasting, and
-          anomaly detection. My main goal is to develop techniques for
-          visualizing and interpreting the contributions of each modality to the
-          overall prediction, as well as methods that can explain the causal
-          relationships among the different modalities and how they evolve over
-          time. These techniques can help experts in various domains gain
-          insight into the underlying processes that govern the data and the
-          model's predictions, enabling them to make informed decisions based on
-          the model's output.
-        </p>
-        <p>
-          Overall, my research has important implications for improving the
-          trustworthiness and accountability of machine learning models so that
-          they can be used reliably and effectively to solve real-world
-          problems.
-        </p>
-        <b>Student Projects & Theses - Bachelor and Master.</b><br />
-        <p>
-          If you are interested in writing a thesis in the exciting field of
-          deep learning and machine learning, or if you would like to work on a
-          student project, please do not hesitate to contact me. I would be
-          happy to discuss possible thesis or project topics with you, and I am
-          also open to your own topic proposals that align with my research
-          interests.
-        </p>
-
-        <!--div class="container" id="timeline">
-    <hr class="soft"-->
-
-        <b>Timeline.</b>
-        <table border="0" width="100%" id="awards">
-          <col width="120px" />
-          <tr>
-            <td><span class="t2when"> 2022 - now:</span></td>
-            <td>
-              <span class="t2where">
-                Ph.D. student at the
-                <a href="https://www.aiml.informatik.tu-darmstadt.de"
-                  >AIML Lab</a
-                >
-
-                <a
-                  href="https://www.informatik.tu-darmstadt.de/fb20/index.en.jsp"
-                  target="_blank"
-                  >CS Department, TU Darmstadt</a
-                >, Germany</span
-              >
-            </td>
-          </tr>
-          <tr>
-            <td><span class="t2when">2019 - 2022:</span></td>
-            <td>
-              <span class="t2where"
-                >M.Sc. Visual Computing at TU Darmstadt, Germany
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <td><span class="t2when">2016 - 2019:</span></td>
-            <td>
-              <span class="t2where"
-                >B.Sc. in computer science at TU Darmstadt, Germany
-              </span>
-            </td>
-          </tr>
-        </table>
       </div>
 
-      <!-- <hr class="soft"> -->
+      <br />
 
-          <div class="container" id="publications">
+      <b>Mission.</b><br />
+      <p>
+        My research explores how deep learning models can learn from complex, evolving data over time—often involving
+        multiple sources of information.
+      </p>
+      <p>
+        I am broadly interested in methods that make sequence and forecasting models more efficient and, therefore, more
+        useful in practice. This includes questions about how models capture temporal structure, how they generalize
+        under changing conditions, and how we can better understand and evaluate their behavior.
+      </p>
+      <p>
+        The overarching goal is to develop learning systems for time-dependent data that can be applied with greater
+        confidence.
+      </p>
+
+      <b>Student Theses — Bachelor and Master.</b><br />
+      <p>
+        I regularly supervise student projects and theses in time-series forecasting, efficient sequence modeling,
+        explainability/robustness, and benchmarking.
+        If you are interested, please email me (i) a short description of your interests, (ii) your CV and transcript,
+        and (iii) your preferred start date.
+        I am also happy to discuss your own topic proposals.
+      </p>
+
+
+      <!--div class="container" id="timeline">
+    <hr class="soft"-->
+
+      <b>Timeline.</b>
+      <table border="0" width="100%" id="awards">
+        <col width="120px" />
+        <tr>
+          <td><span class="t2when"> 2022 - now:</span></td>
+          <td>
+            <span class="t2where">
+              Ph.D. student at the
+              <a href="https://www.aiml.informatik.tu-darmstadt.de">AIML Lab</a>
+
+              <a href="https://www.informatik.tu-darmstadt.de/fb20/index.en.jsp" target="_blank">CS Department, TU
+                Darmstadt</a>, Germany</span>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="t2when">2019 - 2022:</span></td>
+          <td>
+            <span class="t2where">M.Sc. Visual Computing at TU Darmstadt, Germany
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="t2when">2016 - 2019:</span></td>
+          <td>
+            <span class="t2where">B.Sc. in computer science at TU Darmstadt, Germany
+            </span>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- <hr class="soft"> -->
+
+    <div class="container" id="publications">
       <div class="profile-publications-header">
         <div class="profile-publications-title">
           <h3>Publications</h3>
@@ -226,141 +206,139 @@
           <p class="text-muted small mb-0">Enable JavaScript to view publications.</p>
         </noscript>
       </div>
-</div>
+    </div>
 
-      <br />
-    </main>
-    <footer>
-      <hr class="soft" id="legal" />
+    <br />
+  </main>
+  <footer>
+    <hr class="soft" id="legal" />
 
-      <div class="container" id="sitefooter" style="height: unset">
-        <a href="https://www.informatik.tu-darmstadt.de/impressum.en.jsp"
-          >Legal info / Impressum</a
-        >
-        <br /><br />
+    <div class="container" id="sitefooter" style="height: unset">
+      <a href="https://www.informatik.tu-darmstadt.de/impressum.en.jsp">Legal info / Impressum</a>
+      <br /><br />
 
-        Technische Universität Darmstadt <br />
-        Fachbereich Informatik <br />
-        Hochschulstr. 1 <br />
-        64289 Darmstadt<br />
-        Germany<br /><br />
-      </div>
-    </footer>
+      Technische Universität Darmstadt <br />
+      Fachbereich Informatik <br />
+      Hochschulstr. 1 <br />
+      64289 Darmstadt<br />
+      Germany<br /><br />
+    </div>
+  </footer>
 
-    <!-- place js at end for faster loading -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
-    ></script>
+  <!-- place js at end for faster loading -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
 
-    <script>
-      var more_bio_shown = false;
+  <script>
+    var more_bio_shown = false;
 
-      var more_projects_shown = false;
+    var more_projects_shown = false;
 
-      var more_pubs_shown = false;
+    var more_pubs_shown = false;
 
-      $(document).ready(function () {
-        $("#showmorebio").click(function () {
-          if (!more_bio_shown) {
-            $("#morebio").slideDown("fast", function () {
-              $("#showmorebio").text("hide more bio");
-            });
+    $(document).ready(function () {
+      $("#showmorebio").click(function () {
+        if (!more_bio_shown) {
+          $("#morebio").slideDown("fast", function () {
+            $("#showmorebio").text("hide more bio");
+          });
 
-            more_bio_shown = true;
-          } else {
-            $("#morebio").slideUp("fast", function () {
-              $("#showmorebio").text("show more bio");
-            });
-
-            more_bio_shown = false;
-          }
-        });
-
-        $("#showmoreprojects").click(function () {
-          if (!more_projects_shown) {
-            $("#moreprojects").slideDown("fast", function () {
-              $("#showmoreprojects").text("hide");
-            });
-
-            more_projects_shown = true;
-          } else {
-            $("#moreprojects").slideUp("fast", function () {
-              $("#showmoreprojects").text("show more projects");
-            });
-
-            more_projects_shown = false;
-          }
-        });
-
-        $("#showmorepubs").click(function () {
-          if (!more_pubs_shown) {
-            $("#morepubs").slideDown("fast", function () {
-              $("#showmorepubs").text("hide older publications");
-            });
-
-            more_pubs_shown = true;
-          } else {
-            $("#morepubs").slideUp("fast", function () {
-              $("#showmorepubs").text("show older publications");
-            });
-
-            more_pubs_shown = false;
-          }
-        });
-      });
-    </script>
-
-    <script>
-      $(document).ready(function () {
-        $("#nav a").on("click", function (event) {
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $("html, body").animate(
-              {
-                scrollTop: $(hash).offset().top,
-              },
-              800,
-              function () {
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-              }
-            );
-          } // End if
-        });
-      });
-    </script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB6xrY5kKwxlhKp0a0NhbbX6YsJhBKt3DJDnmoFVy38MVBnE+Ibb" crossorigin="anonymous"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.navbar-toggler').forEach(function (toggler) {
-      toggler.addEventListener('click', function () {
-        var targetSelector = toggler.getAttribute('data-bs-target');
-        if (!targetSelector) return;
-        var target = document.querySelector(targetSelector);
-        if (!target) return;
-        var isOpen = target.classList.contains('show');
-        if (isOpen) {
-          target.classList.remove('show');
+          more_bio_shown = true;
         } else {
-          target.classList.add('show');
+          $("#morebio").slideUp("fast", function () {
+            $("#showmorebio").text("show more bio");
+          });
+
+          more_bio_shown = false;
         }
-        toggler.setAttribute('aria-expanded', String(!isOpen));
+      });
+
+      $("#showmoreprojects").click(function () {
+        if (!more_projects_shown) {
+          $("#moreprojects").slideDown("fast", function () {
+            $("#showmoreprojects").text("hide");
+          });
+
+          more_projects_shown = true;
+        } else {
+          $("#moreprojects").slideUp("fast", function () {
+            $("#showmoreprojects").text("show more projects");
+          });
+
+          more_projects_shown = false;
+        }
+      });
+
+      $("#showmorepubs").click(function () {
+        if (!more_pubs_shown) {
+          $("#morepubs").slideDown("fast", function () {
+            $("#showmorepubs").text("hide older publications");
+          });
+
+          more_pubs_shown = true;
+        } else {
+          $("#morepubs").slideUp("fast", function () {
+            $("#showmorepubs").text("show older publications");
+          });
+
+          more_pubs_shown = false;
+        }
       });
     });
-  });
-</script>
+  </script>
 
-<script src="../../scripts/profile-publications.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#nav a").on("click", function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800,
+            function () {
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            }
+          );
+        } // End if
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB6xrY5kKwxlhKp0a0NhbbX6YsJhBKt3DJDnmoFVy38MVBnE+Ibb"
+    crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.navbar-toggler').forEach(function (toggler) {
+        toggler.addEventListener('click', function () {
+          var targetSelector = toggler.getAttribute('data-bs-target');
+          if (!targetSelector) return;
+          var target = document.querySelector(targetSelector);
+          if (!target) return;
+          var isOpen = target.classList.contains('show');
+          if (isOpen) {
+            target.classList.remove('show');
+          } else {
+            target.classList.add('show');
+          }
+          toggler.setAttribute('aria-expanded', String(!isOpen));
+        });
+      });
+    });
+  </script>
+
+  <script src="../../scripts/profile-publications.js"></script>
 </body>
+
 </html>
