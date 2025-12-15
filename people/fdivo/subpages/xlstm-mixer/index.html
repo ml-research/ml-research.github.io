@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xLSTM-Mixer: Multivariate Time Series Forecasting by Mixing via Scalar Memories</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../../../../icons/logos/aimlCleanV2.svg" type="image/x-icon" />
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.1.0/css/all.css">
+    <!-- Core theme CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!--LINK JQUERY-->
+  </head>
+
+  <body>
+    <!-- Parallax Pixel Background Animation -->
+    <section class="animated-background">
+      <div id="stars1"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </section>
+    <!-- End of Parallax Pixel Background Animation -->
+
+    <a id="profilePicture" href="#popup">
+      <img src="./architecture.svg" alt="Architecture Overview">
+    </a>
+
+    <div class="overlay" id="popup">
+      <div class="popup">
+        <div class="popup-photo">
+          <img src="./architecture.svg" alt="Architecture Overview">
+        </div>
+        <div class="popup-quote">
+          Recurrent meets Mixing: xLSTM-Mixer incorporates temporal and multivariate cues to deliver state-of-the-art and efficient time-series forecasts.
+        </div>
+        <a class="popup-close" onclick="history.back()">&times;</a>
+      </div>
+    </div>
+
+    <div id="title">
+      xLSTM-Mixer: Multivariate Time Series Forecasting by Mixing via Scalar Memories
+    </div>
+
+    <div id="links">
+      <div id="subtitle">
+        Neural Information Processing Systems (NeurIPS) 2025
+      </div>
+      <a class="link" href="https://neurips.cc/virtual/2025/loc/san-diego/poster/118697" target="_blank">
+        <i class="fa fa-sign">&nbsp;</i>Paper, Video, &amp; Poster
+      </a>
+      <a class="link" href="https://arxiv.org/abs/2410.16928" target="_blank">
+        <i class="fa fa-file-lines">&nbsp;</i>ArXiv
+      </a>
+
+      <div id="subtitle">
+        Code
+      </div>
+      <a class="link" href="https://github.com/mauricekraus/xlstm-mixer" target="_blank">
+        <i class="fab fa-github">&nbsp;</i>Reference Implementation
+      </a>
+      <a class="link" href="https://github.com/mauricekraus/transformers#xlstm-mixer" target="_blank">
+        <i class="fab fa-github">&nbsp;</i>Huggingface Transformers Implementation <i>(fork not yet merged)</i>
+      </a>
+      <a class="link" href="https://huggingface.co/spaces/Salesforce/GIFT-Eval" target="_blank">
+        <i class="fab fa-github">&nbsp;</i>GIFT-Eval Leaderboard Entry
+      </a>
+
+      <div id="subtitle">
+        Authors
+      </div>
+      <a class="link" href="https://www.ml.informatik.tu-darmstadt.de/people/mkraus/index.html" target="_blank">
+        <i class="fa fa-user">&nbsp;</i>Maurice Kraus*
+      </a>
+      <a class="link" href="https://www.ml.informatik.tu-darmstadt.de/people/fdivo/index.html" target="_blank">
+        <i class="fa fa-user">&nbsp;</i>Felix Divo*
+      </a>
+      <a class="link" href="https://sites.google.com/view/devendradhami" target="_blank">
+        <i class="fa fa-user">&nbsp;</i>Devendra Singh Dhami
+      </a>
+      <a class="link" href="https://www.ml.informatik.tu-darmstadt.de/people/kkersting" target="_blank">
+        <i class="fa fa-user">&nbsp;</i>Kristian Kersting
+      </a>
+      <p class="author-note">*Authors contributed equally.<p>
+
+      <!--
+        <CODE> 
+          If you like our work, feel free to share it.
+        </CODE>
+      <div class="share-dialog">
+        <header>
+          <h3 class="dialog-title">Share this Paper</h3>
+        </header>
+        <div>
+          <div class="pen-url">https://ml-research.github.io/people/jblueml/papertrees/notintelligent</div>
+          <button class="copy-link" onclick="copy()" onmouseout="outFunc()">Copy Link</button>
+          <button class="close-button">Close</button>
+        </div>
+      </div>
+
+      <button class="share-button" type="button" title="Share this article">
+        <span>Share</span>
+      </button>
+      -->
+
+  </div>
+
+  <script type="text/javascript" src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.navbar-toggler').forEach(function (toggler) {
+        toggler.addEventListener('click', function () {
+          var targetSelector = toggler.getAttribute('data-bs-target');
+          if (!targetSelector) return;
+          var target = document.querySelector(targetSelector);
+          if (!target) return;
+          var isOpen = target.classList.contains('show');
+          if (isOpen) {
+            target.classList.remove('show');
+          } else {
+            target.classList.add('show');
+          }
+          toggler.setAttribute('aria-expanded', String(!isOpen));
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
