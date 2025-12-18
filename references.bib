@@ -283,8 +283,19 @@
 	booktitle = {Working Notes of the NeurIPS Workshop on Foundations of Reasoning in Language Models},
 	year={2025},
 	url={https://arxiv.org/pdf/2506.15787},
-	keywords={Reasoning, verifiable rewards, Scalable, Logical Reasoning, Data, RL, Synthesis},
+	keywords={Reasoning, Verifiable Rewards, Scalable, Logical Reasoning, Data, RL, Synthesis},
 	note={We introduce SLR, an end-to-end framework for systematic evaluation and training of Large Language Models (LLMs) via Scalable Logical Reasoning. Given a user's task specification, SLR automatically synthesizes (i) an instruction prompt for an inductive reasoning task, (ii) a validation program, executable on model outputs to provide verifiable rewards, and (iii) the latent ground-truth rule. This process is fully automated, scalable, requires no human annotations, and offers precise control over task difficulty. Using SLR, we create SLR-Bench, a benchmark comprising 19k prompts organized into 20 curriculum levels that progressively increase in relational, arithmetic, and recursive complexity. Large-scale evaluation reveals that contemporary LLMs readily produce syntactically valid rules, yet often fail at correct logical inference. Recent reasoning LLMs demonstrate improved performance but incur very high test-time computation, with costs exceeding $300 for just 1,000 prompts. Finally, curriculum learning via SLR doubles Llama-3-8B accuracy on SLR-Bench, achieving parity with Gemini-Flash-Thinking at a fraction of computational cost. Moreover, these reasoning capabilities generalize to a wide range of established benchmarks, underscoring the effectiveness of SLR for downstream reasoning.}
+	}
+
+@incollection{helff2025activationreasoning,
+	anote = {./images/ActivationReasoning.png},
+    title={ActivationReasoning: Logical Reasoning in Latent Activation Spaces},
+    author={Lukas Helff and Ruben Härle and Wolfgang Stammer and Felix Friedrich and Manuel Brack and Antonia Wüst and Hikaru Shindo and Patrick Schramowski and Kristian Kersting},
+    booktitle={NeurIPS 2025 Workshop on Foundations of Reasoning in Language Models},
+    year={2025},
+	url={https://arxiv.org/abs/2510.18184},
+	keywords={Reasoning, Latent Space, Logical Reasoning, Mechanistic Interpretability},
+	note={Large language models (LLMs) excel at generating fluent text, but their internal reasoning remains opaque and difficult to control. Sparse autoencoders (SAEs) make hidden activations more interpretable by exposing latent features that often align with human concepts. Yet, these features are fragile and passive, offering no mechanism for systematic reasoning or model control. To address this, we introduce ActivationReasoning (AR), a framework that embeds explicit logical reasoning into the latent space of LLMs. It proceeds in three stages: (1) Finding latent representations, first latent concept representations are identified (e.g., via SAEs) and organized into a dictionary; (2) Activating propositions, at inference time AR detects activating concepts and maps them to logical propositions; and (3)Logical reasoning, applying logical rules over these propositions to infer higher-order structures, compose new concepts, and steer model behavior. We evaluate AR on multi-hop reasoning (PrOntoQA), abstraction and robustness to indirect concept cues (Rail2Country), reasoning over natural and diverse language (ProverQA), and context-sensitive safety (BeaverTails). Across all tasks, AR scales robustly with reasoning complexity, generalizes to abstract and context-sensitive tasks, and transfers across model backbones. These results demonstrate that grounding logical structure in latent activations not only improves transparency but also enables structured reasoning, reliable control, and alignment with desired behaviors, providing a path toward more reliable and auditable AI.}
 	}
 
 @misc{brack2025howtotrain,
@@ -299,15 +310,15 @@
 	note={Training data is at the core of any successful text-to-image models. The quality and descriptiveness of image text are crucial to a model's performance. Given the noisiness and inconsistency in web-scraped datasets, recent works shifted towards synthetic training captions. While this setup is generally believed to produce more capable models, current literature does not provide any insights into its design choices. This study closes this gap by systematically investigating how different synthetic captioning strategies impact the downstream performance of text-to-image models. Our experiments demonstrate that dense, high-quality captions enhance text alignment but may introduce trade-offs in output aesthetics and diversity. Conversely, captions of randomized lengths yield balanced improvements across aesthetics and alignment without compromising sample diversity. We also demonstrate that varying caption distributions introduce significant shifts in the output bias of a trained model. Our findings underscore the importance of caption design in achieving optimal model performance and provide practical insights for more effective training data strategies in text-to-image generation.}
 	}
 
-	@inproceedings{strem2025pricai,
-		anote = {./images/strem2025pricai.jpg},
-		author = {Nika Strem and Devendra Singh Dhami and Kristian Kersting},
-		booktitle = {Proceedings of the Pacific Rim International Conference on Artificial Intelligence (PRICAI)},
-		keywords = {Deep Learning, Explanatory Interactive Learning, Industrial AI, Alarm Management, Alarm Prediction},
-		note = {Explainable AI aims to improve trust and transparency, particularly in high-risk domains. It recently gained momentum, since industries are urged to comply with new regulations, such as the EU AI Act. A valuable added benefit of XAI is the potential for further model improvement, ensuring that its predictions are right for the right reasons. This is the focus of eXplainable Interactive Learning (XIL). In practice, XIL is challenging, since ground-truth labels for explanations are even harder to obtain than those for the predictions of an ML model. This is even harder in the industry, where matching an explanation of a prediction with reasons of events and outcomes in the system essentially amounts to a full-fledged root cause analysis, which is very complex and cost-intensive. Researchers and AI practitioners at an industrial scale struggle to provide a quantifiable evaluation of explanations, which impedes XIL. Using domain knowledge, we combine multimodal deep learning with XAI and propose Autonomous eXplainable Iterative Learning (AXIL), a new method of training and improving a model in a self-supervised manner, without the need for the ground truth explanation labels.},
-		title = {Industrial-Scale Autonomous eXplainable Iterative Learning},
-		url = {},
-		year = {2025}}
+@inproceedings{strem2025pricai,
+    anote = {./images/strem2025pricai.jpg},
+    author = {Nika Strem and Devendra Singh Dhami and Kristian Kersting},
+    booktitle = {Proceedings of the Pacific Rim International Conference on Artificial Intelligence (PRICAI)},
+    keywords = {Deep Learning, Explanatory Interactive Learning, Industrial AI, Alarm Management, Alarm Prediction},
+    note = {Explainable AI aims to improve trust and transparency, particularly in high-risk domains. It recently gained momentum, since industries are urged to comply with new regulations, such as the EU AI Act. A valuable added benefit of XAI is the potential for further model improvement, ensuring that its predictions are right for the right reasons. This is the focus of eXplainable Interactive Learning (XIL). In practice, XIL is challenging, since ground-truth labels for explanations are even harder to obtain than those for the predictions of an ML model. This is even harder in the industry, where matching an explanation of a prediction with reasons of events and outcomes in the system essentially amounts to a full-fledged root cause analysis, which is very complex and cost-intensive. Researchers and AI practitioners at an industrial scale struggle to provide a quantifiable evaluation of explanations, which impedes XIL. Using domain knowledge, we combine multimodal deep learning with XAI and propose Autonomous eXplainable Iterative Learning (AXIL), a new method of training and improving a model in a self-supervised manner, without the need for the ground truth explanation labels.},
+    title = {Industrial-Scale Autonomous eXplainable Iterative Learning},
+    url = {},
+    year = {2025}}
 
 
 @inproceedings{kohaut25iros,
