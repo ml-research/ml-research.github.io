@@ -121,7 +121,6 @@ window.AIML_SITE_CONTENT = {
         { "id": "jblueml", "name": "Jannis Blüml", "role": "PhD Candidate", "focus": "Reinforcement Learning & Neuro-Symbolic AI" },
         { "id": "sbraun", "name": "Steven Braun", "role": "PhD Candidate", "focus": "Probabilistic Circuits" },
         { "id": "fbusch", "name": "Florian Busch", "role": "PhD Candidate", "focus": "Causal AI & Probabilistic Circuits" },
-        { "id": "jczech", "name": "Johannes Czech", "role": "PhD Candidate", "focus": "Game AI & planning" },
         { "id": "qdelfosse", "name": "Quentin Delfosse", "role": "PhD Candidate", "focus": "Reinforcement Learning & Neuro-Symbolic AI" },
         { "id": "cderstroff", "name": "Cedric Derstroff", "role": "PhD Candidate", "focus": "Reinforcement Learning" },
         { "id": "fdivo", "name": "Felix Divo", "role": "PhD Candidate", "focus": "Interpretable Time Series Models" },
@@ -146,7 +145,7 @@ window.AIML_SITE_CONTENT = {
         { "id": "fventola", "name": "Fabrizio Ventola", "role": "PhD Candidate", "focus": "Tractable probabilistic modeling" },
         { "id": "mwillig", "name": "Moritz Willig", "role": "PhD Candidate", "focus": "Causal AI" },
         { "id": "twoydt", "name": "Tim Woydt", "role": "PhD Candidate", "focus": "Causal & Interactive AI" },
-        { "id": "awuest", "name": "Antonia Wüst", "role": "PhD Candidate", "focus": "Neuro-Symbolic AI" }, 
+        { "id": "awuest", "name": "Antonia Wüst", "role": "PhD Candidate", "focus": "Neuro-Symbolic AI" },
         { "id": "zye", "name": "Zihan Ye", "role": "PhD Candidate", "focus": "Reinforcement Learning and Neuro-Symbolic AI" },
         { "id": "mzecevic", "name": "Matej Zečević", "role": "PhD Candidate", "focus": "Generative modeling" }
       ]
@@ -165,6 +164,7 @@ window.AIML_SITE_CONTENT = {
       "title": "Alumni",
       "description": "Former AIML Lab members shaping AI in academia and industry worldwide.",
       "people": [
+        { "id": "jczech", "name": "Dr. Johannes Czech", "role": "Alumnus", "focus": "Hochschule Aalen" },
         { "id": "lstruppek", "name": "Dr. Lukas Struppek", "role": "Alumnus", "focus": "FAR.AI" },
         { "id": "ddhami", "name": "Dr. Devendra Singh Dhami", "role": "Alumnus", "focus": "TU Eindhoven" },
         { "id": "cturan", "name": "Dr. Cigdem Turan-Schwiewager", "role": "Alumna", "focus": "Coach AI" },
