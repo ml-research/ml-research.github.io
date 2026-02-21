@@ -19,7 +19,7 @@
     "organization": "",
     "school": "",
     "series": "",
-    "note": "",
+    "note": "In games like chess, strategy evolves dramatically across distinct phases — the opening, middlegame, and endgame each demand different forms of reasoning and decision-making. Yet, many modern chess engines rely on a single neural network to play the entire game uniformly, often missing opportunities to specialize. In this work, we introduce M2CTS, a modular framework that combines Mixture of Experts with Monte Carlo Tree Search to adapt strategy dynamically based on game phase. We explore three different methods for training the neural networks: Separated Learning, Staged Learning and Weighted Learning. By routing decisions through specialized neural networks trained for each phase, M2CTS improves both computational efficiency and playing strength. In experiments on chess, M2CTS achieves up to +122 Elo over standard single model baselines and shows promising generalization to multi agent domains such as Pommerman. These results highlight how modular, phase-aware systems can better align with the structured nature of games and move us closer to human-like behavior in dividing a problem into many smaller units.",
     "url": "https://doi.org/10.1109/TG.2026.3659995",
     "doi": "10.1109/TG.2026.3659995",
     "typeLabel": "Journal article",
