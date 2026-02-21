@@ -383,12 +383,23 @@
     });
   };
 
+  const getTypeRank = (publication) => {
+    const label = (publication.typeLabel || '').toLowerCase();
+    if (label === 'book') return 0;
+    if (label === 'journal article') return 1;
+    if (label === 'conference paper') return 2;
+    if (label === 'workshop paper') return 3;
+    return 4;
+  };
+
   const sortPublications = (publications) => publications.slice().sort((a, b) => {
-    const yearA = parseInt(a.year, 10);
-    const yearB = parseInt(b.year, 10);
+    const yearA = parseInt(a.yearDisplay || a.year, 10);
+    const yearB = parseInt(b.yearDisplay || b.year, 10);
     if (!Number.isNaN(yearA) && !Number.isNaN(yearB) && yearA !== yearB) {
       return yearB - yearA;
     }
+    const typeOrder = getTypeRank(a) - getTypeRank(b);
+    if (typeOrder !== 0) return typeOrder;
     return (a.position || 0) - (b.position || 0);
   });
 
