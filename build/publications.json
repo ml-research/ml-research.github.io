@@ -243,7 +243,7 @@
     "note": "",
     "url": "https://openreview.net/pdf?id=h8D75pVKja",
     "doi": "",
-    "typeLabel": "Preprint",
+    "typeLabel": "Journal article",
     "image": "./images/braun2025apc.png",
     "topics": [
       "Probabilistic Circuits",
@@ -583,7 +583,7 @@
     "school": "",
     "series": "",
     "note": "Time series data is prevalent across numerous fields, necessitating the development of robust and accurate forecasting models. Capturing patterns both within and between temporal and multivariate components is crucial for reliable predictions. We introduce xLSTM-Mixer, a model designed to effectively integrate temporal sequences, joint time-variate information, and multiple perspectives for robust forecasting. Our approach begins with a linear forecast shared across variates, which is then refined by xLSTM blocks. They serve as key elements for modeling the complex dynamics of challenging time series data. xLSTM-Mixer ultimately reconciles two distinct views to produce the final forecast. Our extensive evaluations demonstrate its superior long-term forecasting performance compared to recent state-of-the-art methods while requiring very little memory. A thorough model analysis provides further insights into its key components and confirms its robustness and effectiveness. This work contributes to the resurgence of recurrent models in forecasting by combining them, for the first time, with mixing architectures.",
-    "url": "https://neurips.cc/virtual/2025/loc/san-diego/poster/118697",
+    "url": "https://openreview.net/pdf?id=JlVn0XRpy0",
     "doi": "",
     "typeLabel": "Conference paper",
     "image": "./images/kraus2025mixer.png",
