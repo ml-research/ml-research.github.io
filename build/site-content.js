@@ -113,7 +113,6 @@ window.AIML_SITE_CONTENT = {
       "defaultVisible": true,
       "people": [
         { "id": "pschramowski", "name": "Dr. Patrick Schramowski", "role": "Junior Research Group Leader", "focus": "Responsible foundation & vision models" },
-        { "id": "wstammer", "name": "Dr. Wolfgang Stammer", "role": "Postdoc", "focus": "Explainable & Responsible AI" },
         { "id": "mbrack", "name": "Dr. Manuel Brack", "role": "Researcher", "focus": "Generative safety & alignment" },
         { "id": "dhintersdorf", "name": "Dr. Dominik Hintersdorf", "role": "Senior Researcher", "focus": "Trustworthy Machine Learning" },
         { "id": "zyu", "name": "Dr. Zhongjie Yu", "role": "Postdoc", "focus": "Probabilistic modeling" },
@@ -166,6 +165,7 @@ window.AIML_SITE_CONTENT = {
       "people": [
         { "id": "jczech", "name": "Dr. Johannes Czech", "role": "Alumnus", "focus": "Hochschule Aalen" },
         { "id": "lstruppek", "name": "Dr. Lukas Struppek", "role": "Alumnus", "focus": "FAR.AI" },
+        { "id": "wstammer", "name": "Dr. Wolfgang Stammer", "role": "Alumnus", "focus": "MPI Informatics" },
         { "id": "ddhami", "name": "Dr. Devendra Singh Dhami", "role": "Alumnus", "focus": "TU Eindhoven" },
         { "id": "cturan", "name": "Dr. Cigdem Turan-Schwiewager", "role": "Alumna", "focus": "Coach AI" },
         { "id": "mmundt", "name": "Dr. Martin Mundt", "role": "Alumnus", "focus": "University of Bremen" },
