@@ -163,7 +163,7 @@ window.AIML_SITE_CONTENT = {
       "title": "Alumni",
       "description": "Former AIML Lab members shaping AI in academia and industry worldwide.",
       "people": [
-        { "id": "jczech", "name": "Dr. Johannes Czech", "role": "Alumnus", "focus": "Hochschule Aalen" },
+        { "id": "jczech", "name": "Johannes Czech", "role": "Alumnus", "focus": "Hochschule Aalen" },
         { "id": "lstruppek", "name": "Dr. Lukas Struppek", "role": "Alumnus", "focus": "FAR.AI" },
         { "id": "wstammer", "name": "Dr. Wolfgang Stammer", "role": "Alumnus", "focus": "MPI Informatics" },
         { "id": "ddhami", "name": "Dr. Devendra Singh Dhami", "role": "Alumnus", "focus": "TU Eindhoven" },
