@@ -113,7 +113,6 @@ window.AIML_SITE_CONTENT = {
       "defaultVisible": true,
       "people": [
         { "id": "pschramowski", "name": "Dr. Patrick Schramowski", "role": "Junior Research Group Leader", "focus": "Responsible foundation & vision models" },
-        { "id": "wstammer", "name": "Dr. Wolfgang Stammer", "role": "Postdoc", "focus": "Explainable & Responsible AI" },
         { "id": "mbrack", "name": "Dr. Manuel Brack", "role": "Researcher", "focus": "Generative safety & alignment" },
         { "id": "dhintersdorf", "name": "Dr. Dominik Hintersdorf", "role": "Senior Researcher", "focus": "Trustworthy Machine Learning" },
         { "id": "zyu", "name": "Dr. Zhongjie Yu", "role": "Postdoc", "focus": "Probabilistic modeling" },
@@ -121,7 +120,6 @@ window.AIML_SITE_CONTENT = {
         { "id": "jblueml", "name": "Jannis Blüml", "role": "PhD Candidate", "focus": "Reinforcement Learning & Neuro-Symbolic AI" },
         { "id": "sbraun", "name": "Steven Braun", "role": "PhD Candidate", "focus": "Probabilistic Circuits" },
         { "id": "fbusch", "name": "Florian Busch", "role": "PhD Candidate", "focus": "Causal AI & Probabilistic Circuits" },
-        { "id": "jczech", "name": "Johannes Czech", "role": "PhD Candidate", "focus": "Game AI & planning" },
         { "id": "qdelfosse", "name": "Quentin Delfosse", "role": "PhD Candidate", "focus": "Reinforcement Learning & Neuro-Symbolic AI" },
         { "id": "cderstroff", "name": "Cedric Derstroff", "role": "PhD Candidate", "focus": "Reinforcement Learning" },
         { "id": "fdivo", "name": "Felix Divo", "role": "PhD Candidate", "focus": "Interpretable Time Series Models" },
@@ -146,7 +144,7 @@ window.AIML_SITE_CONTENT = {
         { "id": "fventola", "name": "Fabrizio Ventola", "role": "PhD Candidate", "focus": "Tractable probabilistic modeling" },
         { "id": "mwillig", "name": "Moritz Willig", "role": "PhD Candidate", "focus": "Causal AI" },
         { "id": "twoydt", "name": "Tim Woydt", "role": "PhD Candidate", "focus": "Causal & Interactive AI" },
-        { "id": "awuest", "name": "Antonia Wüst", "role": "PhD Candidate", "focus": "Neuro-Symbolic AI" }, 
+        { "id": "awuest", "name": "Antonia Wüst", "role": "PhD Candidate", "focus": "Neuro-Symbolic AI" },
         { "id": "zye", "name": "Zihan Ye", "role": "PhD Candidate", "focus": "Reinforcement Learning and Neuro-Symbolic AI" },
         { "id": "mzecevic", "name": "Matej Zečević", "role": "PhD Candidate", "focus": "Generative modeling" }
       ]
@@ -165,7 +163,9 @@ window.AIML_SITE_CONTENT = {
       "title": "Alumni",
       "description": "Former AIML Lab members shaping AI in academia and industry worldwide.",
       "people": [
+        { "id": "jczech", "name": "Johannes Czech", "role": "Alumnus", "focus": "Hochschule Aalen" },
         { "id": "lstruppek", "name": "Dr. Lukas Struppek", "role": "Alumnus", "focus": "FAR.AI" },
+        { "id": "wstammer", "name": "Dr. Wolfgang Stammer", "role": "Alumnus", "focus": "MPI Informatics" },
         { "id": "ddhami", "name": "Dr. Devendra Singh Dhami", "role": "Alumnus", "focus": "TU Eindhoven" },
         { "id": "cturan", "name": "Dr. Cigdem Turan-Schwiewager", "role": "Alumna", "focus": "Coach AI" },
         { "id": "mmundt", "name": "Dr. Martin Mundt", "role": "Alumnus", "focus": "University of Bremen" },

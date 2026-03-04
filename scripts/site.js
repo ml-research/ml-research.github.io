@@ -767,10 +767,32 @@
       loadMore.hidden = visible >= total;
     }
 
+    function getTypeRank(publication) {
+      const label = (publication.typeLabel || '').toLowerCase();
+      if (label === 'book') return 0;
+      if (label === 'journal article') return 1;
+      if (label === 'conference paper') return 2;
+      if (label === 'workshop paper') return 3;
+      return 4;
+    }
+
+    function sortPublications(publications) {
+      return publications.slice().sort((a, b) => {
+        const yearA = parseInt(a.yearDisplay || a.year, 10);
+        const yearB = parseInt(b.yearDisplay || b.year, 10);
+        if (!Number.isNaN(yearA) && !Number.isNaN(yearB) && yearA !== yearB) {
+          return yearB - yearA;
+        }
+        const typeOrder = getTypeRank(a) - getTypeRank(b);
+        if (typeOrder !== 0) return typeOrder;
+        return (a.position || 0) - (b.position || 0);
+      });
+    }
+
     function applyFilters() {
       const searchTerm = Utils.normalize(state.filters.search);
 
-      state.filtered = state.all.filter((publication) => {
+      const filtered = state.all.filter((publication) => {
         const searchable = [
           publication.title,
           publication.booktitle,
@@ -799,6 +821,7 @@
         return matchesSearch && matchesYear && matchesType;
       });
 
+      state.filtered = sortPublications(filtered);
       state.visible = Math.min(state.batch, state.filtered.length);
       renderList();
     }
