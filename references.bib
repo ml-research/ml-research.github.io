@@ -3,7 +3,7 @@
   journal={IEEE Transactions on Games},
   title={Checkmating One, by Using Many: Combining Mixture of Experts with MCTS to Improve in Chess},
   year={2026},
-  volume={},  
+  volume={},
   number={},
   note={In games like chess, strategy evolves dramatically across distinct phases — the opening, middlegame, and endgame each demand different forms of reasoning and decision-making. Yet, many modern chess engines rely on a single neural network to play the entire game uniformly, often missing opportunities to specialize. In this work, we introduce M2CTS, a modular framework that combines Mixture of Experts with Monte Carlo Tree Search to adapt strategy dynamically based on game phase. We explore three different methods for training the neural networks: Separated Learning, Staged Learning and Weighted Learning. By routing decisions through specialized neural networks trained for each phase, M2CTS improves both computational efficiency and playing strength. In experiments on chess, M2CTS achieves up to +122 Elo over standard single model baselines and shows promising generalization to multi agent domains such as Pommerman. These results highlight how modular, phase-aware systems can better align with the structured nature of games and move us closer to human-like behavior in dividing a problem into many smaller units.},
   anote = {./images/moechess.jpg},
@@ -11,6 +11,21 @@
   url={https://doi.org/10.1109/TG.2026.3659995},
   keywords={Games;Training;Neural networks;Adaptation models;Trees (botanical);Monte Carlo methods;Engines;Computer architecture;Computational efficiency;Accuracy;Mixture of Experts;Game Phases;Chess;Monte-Carlo Tree Search;AlphaZero},
   doi={10.1109/TG.2026.3659995}}
+
+@article{ventola2026deeppcs,
+			author = {Fabrizio Ventola},
+			title = {Deep Probabilistic Circuits for Efficient Uncertainty Handling in Learning Systems},
+			journal = {at - Automatisierungstechnik (AUTO) Methods and Applications of Automatic Control and Information Technology, Volume 74, Issue 3 - Special Issue: 2025 Reisensburg conference on fundamentals of networked and cognitive systems in measurement and automation},
+			year = {2026},
+			volume = {74},
+			number = {3},
+			pages={197-211},
+			keywords = {Tractable Probabilistic Modeling, Uncertainty Quantification, Probabilistic Circuits, Time Series Modeling, Forecasting},
+			note = {Probabilistic modeling lies at the core of machine learning, providing a principled framework to represent and reason about uncertainty. Probabilistic circuits (PCs) have emerged as a class of models that balance representational power with computational efficiency via a deep probabilistic architecture that enables tractable uncertainty handling. This paper provides an overview of PCs as deep and efficient probabilistic models, highlighting their ability to encode complex distributions while maintaining computational guarantees for key inference tasks. We first introduce the foundations of tractable probabilistic modeling with PCs, elaborating on how they represent and handle uncertainty, and the different approaches for structure and parameter learning. We then review successful applications and enhancements, with particular emphasis on recent advances in time series modeling and forecasting, where PCs demonstrate state-of-the-art accuracy while being robust and efficient. Furthermore, we discuss a tractable method to estimate epistemic uncertainty, which is particularly helpful in improving the PCs’ robustness when they are faced with real-world out-of-distribution instances, and provide additional results on the task of time series classification. The paper concludes with a perspective on open challenges and future research directions, including scaling to high-dimensional data, the hybridization with neural architectures, and the transformation and connection with other non-probabilistic models. Overall, this paper examines and underscores the role of PCs as a central approach within probabilistic modeling, pointing out their strengths, limitations, and potential avenues for further development.},
+			anote = {./images/ventola2026deeppcs.png},
+			doi={10.1515/auto-2025-0102},
+			url = {https://www.degruyterbrill.com/document/doi/10.1515/auto-2025-0102/html}
+}
 
 @misc{wuest2025vlp,
       title={Synthesizing Visual Concepts as Vision-Language Programs},
@@ -66,7 +81,7 @@
 	year = {2025}
 }
 
-@misc{braun2025tractablerepresentationlearningprobabilistic,
+@article{braun2025tractablerepresentationlearningprobabilistic,
       title={Tractable Representation Learning with Probabilistic Circuits},
       author={Steven Braun and Sahil Sidheekh and Antonio Vergari and Martin Mundt and Sriraam Natarajan and Kristian Kersting},
       anote={./images/braun2025apc.png},
@@ -174,7 +189,7 @@
  booktitle = {Proceedings of the 39th Conference on Neural Information Processing Systems (NeurIPS)},
  keywords = {Time Series, xLSTM, Forecasting, Mixing, Recurrent},
  title = {xLSTM-Mixer: Multivariate Time Series Forecasting by Mixing via Scalar Memories},
- url = {https://neurips.cc/virtual/2025/loc/san-diego/poster/118697},
+ url = {https://openreview.net/pdf?id=JlVn0XRpy0},
  note = {Time series data is prevalent across numerous fields, necessitating the development of robust and accurate forecasting models. Capturing patterns both within and between temporal and multivariate components is crucial for reliable predictions. We introduce xLSTM-Mixer, a model designed to effectively integrate temporal sequences, joint time-variate information, and multiple perspectives for robust forecasting. Our approach begins with a linear forecast shared across variates, which is then refined by xLSTM blocks. They serve as key elements for modeling the complex dynamics of challenging time series data. xLSTM-Mixer ultimately reconciles two distinct views to produce the final forecast. Our extensive evaluations demonstrate its superior long-term forecasting performance compared to recent state-of-the-art methods while requiring very little memory. A thorough model analysis provides further insights into its key components and confirms its robustness and effectiveness. This work contributes to the resurgence of recurrent models in forecasting by combining them, for the first time, with mixing architectures.},
  year = {2025}}
 
@@ -755,7 +770,7 @@
 			note = {Despite the growing interest in designing truly interactive hyperparameter optimization (HPO) methods, to date, only a few allow to include feedback from experts. However, these methods add friction to the interactive process, rigidly requiring to fully specify the expert input as prior distribution ex ante and often imposing additional constraints on the optimization framework. This hinders the flexible incorporation of expertise and valuable knowledge of domain experts, which might provide partial feedback at any time during optimization. To overcome these limitations, we introduce a novel Bayesian optimization approach leveraging tractable probabilistic models named probabilistic circuits (PCs) as surrogate model. PCs encode a tractable joint distribution over the hybrid hyperparameter space and enable exact conditional inference and sampling, allowing users to provide valuable insights interactively and generate configurations adhering to their feedback. We demonstrate the benefits of the resulting interactive HPO through an extensive empirical evaluation of diverse benchmarks, including the challenging setting of neural architecture search.},
 			title = {Hyperparameter Optimization via Interacting with Probabilistic Circuits},
 			key = {Runner-Up Award AutoML 2025},
-			url = {},
+			url = {https://openreview.net/pdf?id=mHbPRg5UJW},
 			year = {2025}}
 
 @incollection{avramidis2024occiglot,
