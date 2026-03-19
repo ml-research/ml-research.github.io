@@ -117,6 +117,7 @@ window.AIML_SITE_CONTENT = {
         { "id": "dhintersdorf", "name": "Dr. Dominik Hintersdorf", "role": "Senior Researcher", "focus": "Trustworthy Machine Learning" },
         { "id": "zyu", "name": "Dr. Zhongjie Yu", "role": "Postdoc", "focus": "Probabilistic modeling" },
         { "id": "ctauchmann", "name": "Dr. Christopher Tauchmann", "role": "Senior Researcher", "focus": "LLM Training & Reasoning" },
+        { "id": "smathur", "name": "Dr. Saurabh Mathur", "role": "Postdoc", "focus": "Neurosymbolic AI & AI for Healthcare" },
         { "id": "jblueml", "name": "Jannis Blüml", "role": "PhD Candidate", "focus": "Reinforcement Learning & Neuro-Symbolic AI" },
         { "id": "sbraun", "name": "Steven Braun", "role": "PhD Candidate", "focus": "Probabilistic Circuits" },
         { "id": "fbusch", "name": "Florian Busch", "role": "PhD Candidate", "focus": "Causal AI & Probabilistic Circuits" },

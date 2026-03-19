@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RIM — Recursive Inference Machines</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=DM+Mono:wght@300&display=swap" rel="stylesheet">
+<style>
+  body { max-width: 600px; margin: 80px auto; padding: 0 2rem; font-family: 'EB Garamond', serif; font-size: 1.1rem; line-height: 1.7; color: #111; background: #faf9f7; }
+  nav { font-family: 'DM Mono', monospace; font-size: .7rem; color: #999; margin-bottom: 5rem; display: flex; justify-content: space-between; }
+  nav a { color: #999; text-decoration: none; margin-left: 1.5rem; }
+  nav a:hover { color: #111; }
+  h1 { font-size: 2.2rem; font-weight: 400; line-height: 1.2; margin-bottom: .8rem; }
+  h1 em { font-style: italic; }
+  .meta { font-family: 'DM Mono', monospace; font-size: .68rem; color: #999; margin-bottom: 2rem; }
+  .abstract { color: #444; margin-bottom: 2rem; }
+  .links a { font-family: 'DM Mono', monospace; font-size: .7rem; margin-right: 1.5rem; color: #111; text-decoration: none; border-bottom: 1px solid #ccc; padding-bottom: 1px; }
+  .links a:hover { border-color: #111; }
+  hr { border: none; border-top: 1px solid #e5e3de; margin: 3.5rem 0; }
+  h2 { font-size: 1rem; font-weight: 400; font-family: 'DM Mono', monospace; color: #999; margin-bottom: 1rem; }
+  figure { margin: 1.5rem 0 0; }
+  figure img { width: 100%; display: block; }
+  figcaption { font-family: 'DM Mono', monospace; font-size: .65rem; color: #999; margin-top: .6rem; line-height: 1.5; }
+  table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  th { font-family: 'DM Mono', monospace; font-size: .62rem; color: #999; font-weight: 400; text-align: left; padding: .4rem 0; border-bottom: 1px solid #e5e3de; }
+  td { padding: .55rem 0; border-bottom: 1px solid #f0ede8; color: #444; }
+  tr.ours td { color: #111; font-style: italic; }
+  pre { font-family: 'DM Mono', monospace; font-size: .72rem; line-height: 1.6; color: #555; background: #f0ede8; padding: 1.2rem; overflow-x: auto; }
+  footer { font-family: 'DM Mono', monospace; font-size: .65rem; color: #bbb; margin-top: 5rem; padding-bottom: 3rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" style="margin-left:0">AIML Lab at TU Darmstadt</a>
+  <span>
+    <a href="#framework">Framework</a>
+    <a href="#results">Results</a>
+    <a href="#models">Models</a>
+    <a href="#cite">Cite</a>
+  </span>
+</nav>
+
+<p class="meta">arXiv:2503.submit/7331185 · cs.LG · 5 Mar 2026</p>
+<h1>Recursive Inference Machines for Neural Reasoning</h1>
+<p class="meta">Mieszko Komisarczyk<sup>*</sup>, Saurabh Mathur<sup>*</sup>, Maurice Kraus, Sriraam Natarajan, Kristian Kersting<br>TU Darmstadt&nbsp;·&nbsp;UT Dallas&nbsp;·&nbsp;hessian.ai&nbsp;·&nbsp;DFKI</p>
+<p class="abstract">We introduce Recursive Inference Machines (RIMs), a neural reasoning framework that bridges test-time scaling and probabilistic inference. By incorporating recursive inference mechanisms inspired by classical inference engines, RIMs extend Tiny Recursive Models (TRMs) through a reweighting component, yielding better performance on challenging symbolic benchmarks including ARC-AGI-1, ARC-AGI-2, and Sudoku Extreme. Furthermore, we show that RIMs can be used to improve reasoning on other tasks, such as the classification of tabular data under observational noise, outperforming TabPFNs. </p>
+
+<div class="links">
+ <!-- <a href="#">PDF</a> -->
+  <a href="https://arxiv.org/abs/2603.05234">arXiv</a>
+  <!-- <a href="#">GitHub</a> -->
+</div>
+
+<hr>
+<h2 id="framework">Framework</h2>
+
+<figure>
+  <img src="../../../images/smathur-projects-rims-fig1.png" alt="A Recursive Inference Machine (RIM) consisting of a Solver, Reweighter, and Generator">
+  <figcaption>Fig. 1 — A RIM solves problems by alternating between the Solver updating state recursively for T steps, and the Generator producing an updated solution. This is repeated N times.</figcaption>
+</figure>
+
+<figure>
+  <img src="../../../images/smathur-projects-rims-fig2.png" alt="Unrolled Recursive Inference Machine showing the inner and outer loops">
+  <figcaption>Fig. 2 — Unrolling a RIM. The inner loop (Solver) extends the short-term scratchpad z; the outer loop (Generator) updates the solution y. The Reweighter stabilizes the trajectory.</figcaption>
+</figure>
+
+<figure>
+  <img src="../../../images/smathur-projects-rims-fig3.png" alt="TabRIM graphical model with latent and observed variables">
+  <figcaption>Fig. 3 — TabRIM graphical model. Latent clean features X₁…Xn and target Y are observed through noisy emissions E₁…En. The RIM implements Gibbs sampling over this structure.</figcaption>
+</figure>
+
+<hr>
+<h2 id="results">Results — Symbolic Reasoning</h2>
+<table>
+  <tr><th>Model</th><th>ARC-AGI-1 pass@1</th><th>ARC-AGI-2 pass@1</th><th>Sudoku Extreme</th></tr>
+  <tr><td>SimRIM (TRM)</td><td>40.5</td><td>4.6</td><td>87.16</td></tr>
+  <tr class="ours"><td>RIMA </td><td>42.5</td><td>9.9</td><td>89.34</td></tr>
+  <tr class="ours"><td>RIMformer </td><td>43.25</td><td>5.83</td><td>80.21</td></tr>
+</table>
+
+<hr>
+<h2>Results — Tabular Reasoning</h2>
+<table>
+  <tr><th>Model</th><th>Heart Disease AUC-ROC</th><th>Breast Cancer AUC-ROC</th></tr>
+  <tr><td>TabPFN</td><td>0.85</td><td>0.63</td></tr>
+  <tr class="ours"><td>TabRIM </td><td>0.87</td><td>0.74</td></tr>
+</table>
+
+<hr>
+<h2 id="models">Model Family</h2>
+<table>
+  <tr><th>Name</th><th>Reweighter</th><th>Notes</th></tr>
+  <tr><td>SimRIM</td><td>Identity</td><td>Equivalent to TRM / HRM</td></tr>
+  <tr class="ours"><td>RIMA</td><td>EMA</td><td>Exponential moving average</td></tr>
+  <tr class="ours"><td>RIMformer</td><td>Transformer</td><td>Full history lookback</td></tr>
+  <tr class="ours"><td>TabRIM</td><td>Noise prior</td><td>Gibbs sampling over TabPFN conditionals</td></tr>
+</table>
+
+<hr>
+<h2 id="cite">Citation</h2>
+<pre>@article{komisarczyk2026rim,
+  title  = {Recursive Inference Machines for Neural Reasoning},
+  author = {Komisarczyk, Mieszko and Mathur, Saurabh
+            and Kraus, Maurice and Natarajan, Sriraam
+            and Kersting, Kristian},
+  journal={arXiv preprint arXiv:2603.05234},
+  year   = {2026}
+}</pre>
+
+<footer>Supported by BMFTR XEI, DFG Reasonable AI, LOEWE DYNAMIC, and ARO.</footer>
+
+</body>
+</html>
