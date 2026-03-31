@@ -5,6 +5,8 @@
   const DEFAULT_JSON_SOURCE = '../../build/publications.json';
   const DEFAULT_IMAGE_BASE = '../../';
   const DEFAULT_EMBED_SOURCE = '../../build/publications-data.js';
+  const DEFAULT_DISPLAY_LIMIT = 10;
+  const DISPLAY_LIMIT_OPTIONS = [10, 20, 50];
   const containerStates = new WeakMap();
   let cachedPublications = null;
   let publicationsPromise = null;
@@ -115,6 +117,18 @@
     grid.appendChild(typeFilter);
     controls.typeSelect = typeSelect;
 
+    const displayFilter = document.createElement('div');
+    displayFilter.className = 'publication-filter';
+    const displayLabel = document.createElement('label');
+    displayLabel.className = 'form-label';
+    displayLabel.textContent = 'Show';
+    const displaySelect = document.createElement('select');
+    displaySelect.className = 'form-select publication-input';
+    displaySelect.setAttribute('aria-label', 'Set number of visible publications');
+    displayFilter.append(displayLabel, displaySelect);
+    grid.appendChild(displayFilter);
+    controls.displaySelect = displaySelect;
+
     controls.toolbar = toolbar;
     return controls;
   };
@@ -130,6 +144,7 @@
     elements.searchInput = toolbarControls.searchInput || null;
     elements.yearSelect = toolbarControls.yearSelect;
     elements.typeSelect = toolbarControls.typeSelect;
+    elements.displaySelect = toolbarControls.displaySelect;
 
     const summary = document.createElement('p');
     summary.className = 'profile-publications-summary text-muted small';
@@ -473,7 +488,8 @@
     const searchFiltered = hasSearchTerm
       ? filterBySearchTerm(filtered, state.searchTerm)
       : filtered;
-    const limited = config.limit ? searchFiltered.slice(0, config.limit) : searchFiltered;
+    const limit = typeof state.displayLimit === 'number' ? state.displayLimit : null;
+    const limited = limit ? searchFiltered.slice(0, limit) : searchFiltered;
 
     updateSummary(
       elements.summary,
@@ -486,7 +502,7 @@
   };
 
   const populateFilterOptions = (elements, state) => {
-    if (!elements.yearSelect || !elements.typeSelect) return;
+    if (!elements.yearSelect || !elements.typeSelect || !elements.displaySelect) return;
 
     const years = Array.from(new Set(
       state.basePublications
@@ -519,10 +535,33 @@
 
     elements.yearSelect.value = state.filterYear || 'all';
     elements.typeSelect.value = state.filterType || 'all';
+
+    elements.displaySelect.innerHTML = '';
+    DISPLAY_LIMIT_OPTIONS.forEach((option) => {
+      const opt = document.createElement('option');
+      opt.value = String(option);
+      opt.textContent = String(option);
+      elements.displaySelect.appendChild(opt);
+    });
+    const allOption = document.createElement('option');
+    allOption.value = 'all';
+    allOption.textContent = 'All';
+    elements.displaySelect.appendChild(allOption);
+    elements.displaySelect.value = state.displayLimit === null
+      ? 'all'
+      : String(state.displayLimit);
+  };
+
+  const parseDisplayLimit = (value) => {
+    if (value == null || value === '' || value === 'all') return null;
+    const parsed = Number.parseInt(value, 10);
+    if (!Number.isFinite(parsed) || parsed <= 0) return DEFAULT_DISPLAY_LIMIT;
+    return DISPLAY_LIMIT_OPTIONS.includes(parsed) ? parsed : DEFAULT_DISPLAY_LIMIT;
   };
 
   containers.forEach((container) => {
     const dataset = container.dataset || {};
+    const hasProfileLimit = Object.prototype.hasOwnProperty.call(dataset, 'profileLimit');
     const authorConfig = parseList(dataset.profileAuthors);
     const fallbackAuthors = authorConfig.length ? authorConfig : getDefaultAuthors();
     const config = {
@@ -530,7 +569,9 @@
       cites: parseList(dataset.profileCites).map((cite) => cite.toLowerCase()),
       excludeCites: parseList(dataset.profileExcludeCites).map((cite) => cite.toLowerCase()),
       keywords: parseList(dataset.profileKeywords),
-      limit: Number.parseInt(dataset.profileLimit, 10) || null,
+      initialDisplayLimit: hasProfileLimit
+        ? parseDisplayLimit(dataset.profileLimit)
+        : DEFAULT_DISPLAY_LIMIT,
       source: dataset.profileSource || null,
       embedSource: dataset.profileDataSource || null,
             imageBase: dataset.profileImageBase || DEFAULT_IMAGE_BASE,
@@ -554,7 +595,8 @@
           elements,
           searchTerm: '',
           filterYear: 'all',
-          filterType: 'all'
+          filterType: 'all',
+          displayLimit: config.initialDisplayLimit
         };
         containerStates.set(container, state);
         populateFilterOptions(elements, state);
@@ -573,6 +615,12 @@
         if (elements.typeSelect) {
           elements.typeSelect.addEventListener('change', (event) => {
             state.filterType = (event.target.value || 'all').toLowerCase();
+            renderState(container);
+          });
+        }
+        if (elements.displaySelect) {
+          elements.displaySelect.addEventListener('change', (event) => {
+            state.displayLimit = parseDisplayLimit(event.target.value);
             renderState(container);
           });
         }
