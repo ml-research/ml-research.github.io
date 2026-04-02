@@ -44,7 +44,7 @@
     <div class="container">
       <div class="row g-4 align-items-center">
         <div class="col-lg-7">
-          <p class="text-uppercase text-muted fw-semibold small letter-spacing">Sommersemester 2025</p>
+          <p class="text-uppercase text-muted fw-semibold small letter-spacing">Sommersemester 2026</p>
           <h1 class="display-5 fw-semibold text-dark">Data Mining &amp; Machine Learning (DMML)</h1>
           <p class="lead text-secondary mt-3">Wir vertiefen die Grundlagen datengetriebener Systeme: von Klassifikation und Clustering über Evaluation und Fairness bis zu praktischen Notebook-Labs in Python.</p>
           <div class="d-flex flex-wrap gap-3 align-items-center mt-4">
@@ -78,10 +78,10 @@
           <article class="card border-0 shadow-sm">
             <div class="card-body text-secondary d-flex flex-column gap-2">
               <div>
-                <strong>Verantwortlich (SoSe 25):</strong>David Steinmann<br/> &middot; AIML Lab, TU Darmstadt
+                <strong>Verantwortlich (SoSe 26):</strong>David Steinmann, Daniel Ochs<br/> &middot; AIML Lab, TU Darmstadt
               </div>
               <div>
-                <strong>Kontakt:</strong><br/>Bei Fragen wenden Sie sich bitte über den Moodle-Kurs oder per Mail an <a href="mailto:david.steinmann@tu-darmstadt.de">david.steinmann@tu-darmstadt.de</a>.
+                <strong>Kontakt:</strong><br/>Bei Fragen wenden Sie sich bitte über den Moodle-Kurs oder per Mail an <a href="mailto:david.steinmann@tu-darmstadt.de">david.steinmann@tu-darmstadt.de</a> und <a href="mailto:daniel.ochs@tu-darmstadt.de">daniel.ochs@tu-darmstadt.de</a>.
               </div>
               <div>
                 <strong>Anmeldung:</strong><br/>Für Prüfungen und ECTS melden Sie sich zusätzlich in <a href="https://www.tucan.tu-darmstadt.de/" target="_blank" rel="noopener">TUCaN</a> an.
@@ -136,7 +136,137 @@
       </div>
     </div>
   </section>
-<!--
+
+  <section class="section-padding bg-light-subtle">
+    <div class="container-fluid px-4">
+      <div class="section-header mb-4">
+        <h2 class="h3">Vorlesungsplan</h2>
+        <p class="text-secondary mb-0">Die Tabelle fasst Themen, Materialien und ergänzende Ressourcen zusammen. Details und Aktualisierungen erfolgen im Moodle-Kurs.</p>
+        <p class="text-secondary small mt-3"><strong>Hinweis:</strong> Folien, Aufzeichnungen und Übungsunterlagen stehen ausschließlich im <a href="https://moodle.informatik.tu-darmstadt.de/" target="_blank" rel="noopener">Moodle-Kurs</a> (Login erforderlich) bereit.</p>
+      </div>
+
+      <div class="table-responsive shadow-sm bg-white rounded-3">
+        <table class="table table-hover align-middle mb-0" style="table-layout: fixed; width: 100%; min-width: 900px;">
+          <thead class="table-light">
+            <tr>
+              <th scope="col" style="width: 20%;">#</th>
+              <th scope="col" style="width: 20%;">Datum</th>
+              <th scope="col" style="width: 20%;">Thema</th>
+              <th scope="col" style="width: 20%;">Weiterführende Ressourcen</th>
+              <th scope="col" style="width: 20%;">Folien</th>
+            </tr>
+          </thead>
+          <tbody class="text-secondary">
+            <tr>
+              <td>1 Einführung</td>
+              <td>13.04.2026</td>
+              <td>Kursinformation, Überblick über Data Mining und Machine Learning.</td>
+              <td class="text-break">
+                <a href="https://d1a2y8pfnfh44t.cloudfront.net/501a80e0393d11e4a552ef40cd141f44/full/540p/index.mp4" target="_blank" rel="noopener">Mining Massive Datasets</a><br/>
+                <a href="https://www.youtube.com/watch?v=BfowBtIxNu4" target="_blank" rel="noopener">eureka! (Karpathy)</a>
+              </td>
+              <td><a href="./slides/01_intro-KIundML.pdf" target="_blank">.pdf</a></td>
+            </tr>
+            <tr class="table-light">
+              <td>2 Einfache Modelle</td>
+              <td>20.04.2026</td>
+              <td>kNN, Kreuzvalidierung, Überanpassung, CRISP, lineare Modelle.</td>
+              <td class="text-break">
+                <a href="https://youtu.be/FMCZXFRqZvg?list=PLaXDtXvwY-oDvedS3f4HW0b4KxqpJ_imw" target="_blank" rel="noopener">Nearest Neighbour (UCI)</a><br/>
+                <a href="https://www.youtube.com/watch?v=TIgfjmp-4BA" target="_blank" rel="noopener">Kreuzvalidierung (Udacity)</a>
+              </td>
+              <td><a href="./slides/02_CRISPundLineareModelle.pdf" target="_blank">.pdf</a></td>
+            </tr>
+            <tr>
+              <td>3 Modellselektion</td>
+              <td>27.04.2026</td>
+              <td>BIC, Konfusionsmatrix, Vorzeichentest, ROC, AUC.</td>
+              <td class="text-break">
+                <a href="https://www.youtube.com/watch?v=MUCo7NvB9SI" target="_blank" rel="noopener">Accuracy, ROC, AUC</a><br/>
+                <a href="https://www.youtube.com/watch?v=bw9O7FlsL0g" target="_blank" rel="noopener">Minimum Description Length</a>
+              </td>
+              <td><a href="./slides/03_modelSelektionUndEvaluierung.pdf" target="_blank">.pdf</a></td>
+            </tr>
+            <tr class="table-light">
+              <td>4 Baumbasierte Verfahren</td>
+              <td>04.05.2026</td>
+              <td>Entscheidungsbäume, Entropie, Informationsgewinn.</td>
+              <td class="text-break">
+                <a href="https://www.youtube.com/watch?v=h2Xbqp9JHLE" target="_blank" rel="noopener">Decision Trees (Bristol)</a><br/>
+                <a href="https://www.youtube.com/watch?v=HQaZMk93XAA" target="_blank" rel="noopener">Trees (UCSD)</a>
+              </td>
+              <td><a href="./slides/04_baumbasierteVerfahren.pdf" target="_blank">.pdf</a></td>
+            </tr>
+            <tr>
+              <td>5 Ensemble Methoden</td>
+              <td>11.05.2026</td>
+              <td>Random Forests, Bagging, Boosting, AdaBoost.</td>
+              <td class="text-break">
+                <a href="https://www.youtube.com/watch?v=GM3CDQfQ4sw" target="_blank" rel="noopener">Ensembles (Georgia Tech)</a><br/>
+                <a href="https://www.youtube.com/watch?v=Yvn3--rIdZg" target="_blank" rel="noopener">Bagging &amp; Boosting (UCI)</a>
+              </td>
+              <td><a href="./slides/05_ensembles.pdf" target="_blank">.pdf</a></td>
+            </tr>
+            <tr class="table-light">
+              <td>6 Weitere ML-Methoden</td>
+              <td>18.05. – 08.06.2026</td>
+              <td>Naive Bayes, PGMs, SVM, Clustering.</td>
+              <td class="text-break">
+                <a href="https://www.youtube.com/watch?v=zCWRTKnOYYg" target="_blank" rel="noopener">PGMs (Virginia Tech)</a><br/>
+                <a href="https://www.youtube.com/watch?v=OcoE7JlbXvY" target="_blank" rel="noopener">Clustering Basics (UCI)</a>
+              </td>
+              <td><a href="./slides/06_SVMundCo.pdf" target="_blank">.pdf</a></td>
+            </tr>
+            <tr>
+              <td>7 Tiefe Netze I</td>
+              <td>15.06.2026</td>
+              <td>Neuronale Netze, Backpropagation, CNNs.</td>
+              <td class="text-break">
+                <a href="https://www.youtube.com/watch?v=bH6VnezBZfI" target="_blank" rel="noopener">Neural Networks (UCI)</a><br/>
+                <a href="https://www.youtube.com/watch?v=d14TUNcbn1k" target="_blank" rel="noopener">Backpropagation (Stanford)</a>
+              </td>
+              <td>
+                <a href="./slides/07_DeepLearningTeil1.pdf" target="_blank">.pdf (1)</a><br/>
+                <a href="./slides/08_DeepLearningTeil2.pdf" target="_blank">.pdf (2)</a>
+              </td>
+            </tr>
+            <tr class="table-light">
+              <td>8 Tiefe Netze II &amp; Apriori</td>
+              <td>22.06.2026</td>
+              <td>SGD, BatchNorm, Warenkorbanalyse, Apriori.</td>
+              <td class="text-break">
+                <a href="https://www.youtube.com/watch?v=k3AiUhwHQ28" target="_blank" rel="noopener">Stochastic Gradient (MIT)</a><br/>
+                <a href="https://www.youtube.com/watch?v=DaLWrY96uiI" target="_blank" rel="noopener">Apriori (TU Dortmund)</a>
+              </td>
+              <td>
+                <a href="./slides/08_DeepLearningTeil2.pdf" target="_blank">.pdf (ML)</a><br/>
+                <a href="./slides/09_apriorPageRank.pdf" target="_blank">.pdf (Apriori)</a>
+              </td>
+            </tr>
+            <tr>
+              <td>9 PageRank</td>
+              <td>29.06.2026</td>
+              <td>Webgraph, Zufallssurfer, PageRank Algorithmus.</td>
+              <td class="text-break">
+                <a href="https://youtu.be/TU0ankRcHmo" target="_blank" rel="noopener">PageRank (Stanford)</a>
+              </td>
+              <td><a href="./slides/09_apriorPageRank.pdf" target="_blank">.pdf</a></td>
+            </tr>
+            <tr class="table-light">
+              <td>10 Q&amp;A</td>
+              <td>13.07.2026</td>
+              <td>Abschlussfragen, Klausur-Vorbereitung und Feedback.</td>
+              <td>&ndash;</td>
+              <td>&ndash;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-secondary small mt-3 mb-0">Aus den archivierten Übungen stehen zusätzliche Beispiele zur Verfügung (Links im Moodle-Kurs).</p>
+    </div>
+  </section>
+
+
   <section class="section-padding bg-light-subtle">
     <div class="container">
       <div class="section-header mb-4">
@@ -157,7 +287,7 @@
           <tbody class="text-secondary">
             <tr>
               <td>1 Einführung</td>
-              <td>28.04.2025</td>
+              <td>13.04.2026</td>
               <td>Kursinformation, Überblick über Data Mining und Machine Learning.</td>
               <td>
                 <a href="https://d1a2y8pfnfh44t.cloudfront.net/501a80e0393d11e4a552ef40cd141f44/full/540p/index.mp4" target="_blank" rel="noopener">Mining Massive Datasets (Stanford)</a><br/>
@@ -166,7 +296,7 @@
             </tr>
             <tr>
               <td>2 Einfache Modelle</td>
-              <td>05.05.2025</td>
+              <td>20.04.2026</td>
               <td>kNN, Kreuzvalidierung, Überanpassung, CRISP, lineare Modelle.</td>
               <td>
                 <a href="https://youtu.be/FMCZXFRqZvg?list=PLaXDtXvwY-oDvedS3f4HW0b4KxqpJ_imw" target="_blank" rel="noopener">Nearest Neighbour (UCI)</a><br/>
@@ -175,7 +305,7 @@
             </tr>
             <tr>
               <td>3 Modellselektion</td>
-              <td>12.05.2025</td>
+              <td>27.04.2026</td>
               <td>BIC, Konfusionsmatrix, Vorzeichentest, ROC, AUC.</td>
               <td>
                 <a href="https://www.youtube.com/watch?v=MUCo7NvB9SI" target="_blank" rel="noopener">Accuracy, ROC, AUC</a><br/>
@@ -184,7 +314,7 @@
             </tr>
             <tr>
               <td>4 Baumbasierte Verfahren</td>
-              <td>19.05.2025</td>
+              <td>4.05.2026</td>
               <td>Partitionierte Modelle, Entscheidungsbäume, Entropie, Informationsgewinn.</td>
               <td>
                 <a href="https://www.youtube.com/watch?v=h2Xbqp9JHLE" target="_blank" rel="noopener">Decision Trees (Bristol)</a><br/>
@@ -193,7 +323,7 @@
             </tr>
             <tr>
               <td>5 Ensemble Methoden</td>
-              <td>26.05.2025</td>
+              <td>11.05.2026</td>
               <td>Random Forests, Bagging, Boosting, AdaBoost.</td>
               <td>
                 <a href="https://www.youtube.com/watch?v=GM3CDQfQ4sw" target="_blank" rel="noopener">Ensembles (Georgia Tech)</a><br/>
@@ -202,7 +332,7 @@
             </tr>
             <tr>
               <td>6 Weitere ML-Methoden</td>
-              <td>02.&nbsp;&ndash;&nbsp;23.06.2025</td>
+              <td>18.05&nbsp;&ndash;&nbsp;8.06.2026</td>
               <td>Naive Bayes, probabilistische Graphmodelle, SVM, Clustering.</td>
               <td>
                 <a href="https://www.youtube.com/watch?v=zCWRTKnOYYg" target="_blank" rel="noopener">PGMs (Virginia Tech)</a><br/>
@@ -211,7 +341,7 @@
             </tr>
             <tr>
               <td>7 Tiefe Netze I</td>
-              <td>30.06.2025</td>
+              <td>15.06.2026</td>
               <td>Neuronale Netze, Backpropagation, Convolutional Networks.</td>
               <td>
                 <a href="https://www.youtube.com/watch?v=bH6VnezBZfI" target="_blank" rel="noopener">Neural Networks (UCI)</a><br/>
@@ -220,7 +350,7 @@
             </tr>
             <tr>
               <td>8 Tiefe Netze II &amp; Apriori</td>
-              <td>07.07.2025</td>
+              <td>22.07.2026</td>
               <td>SGD, Dropout, BatchNorm, Warenkorbanalyse, Apriori.</td>
               <td>
                 <a href="https://www.youtube.com/watch?v=k3AiUhwHQ28" target="_blank" rel="noopener">Stochastic Gradient (MIT)</a><br/>
@@ -229,13 +359,13 @@
             </tr>
             <tr>
               <td>9 PageRank</td>
-              <td>14.07.2025</td>
+              <td>29.07.2026</td>
               <td>Warenkorbanalyse, Webgraph, Zufallssurfer, PageRank.</td>
               <td><a href="https://youtu.be/TU0ankRcHmo" target="_blank" rel="noopener">PageRank (Stanford)</a></td>
             </tr>
             <tr>
               <td>10 Q&amp;A</td>
-              <td>14.07.2025</td>
+              <td>13.07.2026</td>
               <td>Abschlussfragen, Klausur-Vorbereitung und Feedback.</td>
               <td>&ndash;</td>
             </tr>
@@ -245,7 +375,7 @@
       <p class="text-secondary small mt-3 mb-0">Aus den archivierten Übungen 2022 stehen zusätzliche Beispiele zur Verfügung (Links im Moodle-Kurs). Bitte beachten Sie, dass kurzfristige Änderungen möglich sind.</p>
     </div>
   </section>
--->
+
   <section class="section-padding bg-white">
     <div class="container">
       <div class="row g-4">

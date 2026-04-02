@@ -78,10 +78,10 @@
           <article class="card border-0 shadow-sm">
             <div class="card-body text-secondary d-flex flex-column gap-2">
               <div>
-                <strong>Verantwortlich (SoSe 25):</strong><br/>Hikaru Shindo &middot; AIML Lab, TU Darmstadt
+                <strong>Verantwortlich (SoSe 26):</strong><br/>Ruben Haerle und Maurice Kraus &middot; AIML Lab, TU Darmstadt
               </div>
               <div>
-                <strong>Kontakt:</strong><br/>Fragen bitte über den Moodle-Kurs oder per Mail an <a href="mailto:hikaru.shindo@tu-darmstadt.de">hikaru.shindo@tu-darmstadt.de</a> stellen.</div>
+                <strong>Kontakt:</strong><br/>Fragen bitte über den Moodle-Kurs oder per Mail an <a href="mailto:ruben.haerle@tu-darmstadt.de">ruben.haerle@tu-darmstadt.de</a> und <a href="mailto:maurice.kraus@tu-darmstadt.de">maurice.kraus@tu-darmstadt.de</a> stellen.</div>
               <div>
                 <strong>Anmeldung:</strong><br/>Für Prüfungen und Credit Points melden Sie sich zusätzlich in <a href="https://www.tucan.tu-darmstadt.de/" target="_blank" rel="noopener">TUCaN</a> an.</div>
             </div>
@@ -136,20 +136,21 @@
   </section>
 
   <section class="section-padding bg-light-subtle">
-    <div class="container">
-      <div class="section-header mb-4">
+    <div class="container-fluid px-4"> <div class="section-header mb-4">
         <h2 class="h3">Vorlesungsplan</h2>
         <p class="text-secondary mb-0">Bitte prüfen Sie den Moodle-Kurs für kurzfristige Änderungen. Ein Stern kennzeichnet das jeweils erwartete Hauptvideo.</p>
         <p class="text-secondary small mt-3"><strong>Hinweis:</strong> Folien, Aufzeichnungen, Aufgabenstellungen und Projektinformationen stellen wir ausschließlich im <a href="https://moodle.informatik.tu-darmstadt.de/" target="_blank" rel="noopener">Moodle-Kurs</a> (Login erforderlich) bereit.</p>
       </div>
+
       <div class="table-responsive shadow-sm bg-white rounded-3">
-        <table class="table table-hover align-middle mb-0">
+        <table class="table table-hover align-middle mb-0" style="table-layout: fixed; width: 100%; min-width: 800px;">
           <thead class="table-light">
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">Datum</th>
-              <th scope="col">Thema</th>
-              <th scope="col">Videos &amp; Ressourcen</th>
+              <th scope="col" style="width: 20%;">#</th>
+              <th scope="col" style="width: 20%;">Datum</th>
+              <th scope="col" style="width: 20%;">Thema</th>
+              <th scope="col" style="width: 20%;">Videos &amp; Ressourcen</th>
+              <th scope="col" style="width: 20%;">Folien</th>
             </tr>
           </thead>
           <tbody class="text-secondary">
@@ -157,123 +158,141 @@
               <td>1 Einführung</td>
               <td>13.04.2026</td>
               <td>Kursüberblick, Computer Vision, historische Motivation.</td>
-              <td>
+              <td class="text-break">
                 <a href="https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" rel="noopener">*CS231n Lecture&nbsp;1</a><br/>
                 <a href="https://youtu.be/p9tpTt6ZsLI?list=PLZSO_6-bSqHQHBCoGaObUljoXAyyqhpFW" target="_blank" rel="noopener">Dive Deep into DL (Smola)</a>
               </td>
+              <td class="text-break"><a href="./slides/tud_dl_lecture01_intro.pdf" target="_blank">.pdf</a></td>
             </tr>
             <tr class="table-light">
               <td>Self-Study</td>
               <td>20.04.2026</td>
               <td>Bildklassifikation, kNN, Evaluierung, lineare Modelle.</td>
-              <td>
+              <td class="text-break">
                 <a href="https://youtu.be/OoUX-nOEjG0?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" rel="noopener">*CS231n Lecture&nbsp;2</a><br/>
                 <a href="https://youtu.be/h7iBpEHGVNc?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" rel="noopener">*CS231n Lecture&nbsp;3</a>
+              </td>
+              <td class="text-break">
+                <a href="./slides/tud_dl_lecture02_background_CVknnClass.pdf" target="_blank">.pdf (kNN)</a><br/>
+                <a href="./slides/tud_dl_lecture02_background_linearClass.pdf" target="_blank">.pdf (linear)</a>
               </td>
             </tr>
             <tr>
               <td>2 Optimisation</td>
               <td>20.04.2026</td>
               <td>SGD, Momentum, Adam, praktische Trainingsstrategien.</td>
-              <td>
+              <td class="text-break">
                 <a href="https://youtu.be/wEoyxE0GP2M?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" rel="noopener">*CS231n Lecture&nbsp;6</a><br/>
-                <a href="https://youtu.be/_JB0AO7QxSA?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" rel="noopener">*CS231n Lecture&nbsp;7</a><br/>
-                <a href="https://youtu.be/RdoZWcXmXhk?list=PL_iWQOsE6TfVmKkQHucjPAoRtIJYt8a5A" target="_blank" rel="noopener">*CSW182/282A Lecture&nbsp;4</a>
+                <a href="https://youtu.be/_JB0AO7QxSA?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" rel="noopener">*CS231n Lecture&nbsp;7</a>
               </td>
+              <td class="text-break"><a href="./slides/tud_dl_lecture02_optimization.pdf" target="_blank">.pdf</a></td>
             </tr>
             <tr class="table-light">
               <td>3 Backpropagation</td>
               <td>27.04.2026</td>
-              <td>Autodiff, Regularisierung, Hyperparameter, praktische Tipps.</td>
-              <td>
+              <td>Autodiff, Regularisierung, Hyperparameter.</td>
+              <td class="text-break">
                 <a href="https://youtu.be/d14TUNcbn1k?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" rel="noopener">*CS231n Lecture&nbsp;4</a><br/>
                 <a href="https://youtu.be/lKRatcD9hEg?list=PL_iWQOsE6TfVmKkQHucjPAoRtIJYt8a5A" target="_blank" rel="noopener">CSW182/282A Lecture&nbsp;5</a>
               </td>
+              <td class="text-break"><a href="./slides/tud_dl_lecture03_backprop.pdf" target="_blank">.pdf</a></td>
             </tr>
             <tr>
-              <td>4 Aktivierungsfunktionen</td>
+              <td>4 Training 1</td>
               <td>04.05.2026</td>
-              <td>Nonlinearitäten, Normalisierung, Trainingstricks.</td>
-              <td>
+              <td>Aktivierungsfunktionen, Normalisierung, Initialisierung.</td>
+              <td class="text-break">
                 <a href="https://youtu.be/bNb2fEVKeEo?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" rel="noopener">*CS231n Lecture&nbsp;5</a>
+              </td>
+              <td class="text-break">
+                  <a href="./slides/tud_dl_lecture04_training1.pdf" target="_blank">.pdf</a><br/>
+                  <a href="./slides/tud_dl_lecture04_intermezzo_OpenLetter.pdf" target="_blank">.pdf</a>
               </td>
             </tr>
             <tr class="table-light">
               <td>5 CNNs 1</td>
               <td>11.05.2026</td>
               <td>Convolution, Pooling, moderne Architekturen.</td>
-              <td>
-                <a href="https://youtu.be/bNb2fEVKeEo?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" rel="noopener">*CS231n Lecture&nbsp;5</a><br/>
+              <td class="text-break">
                 <a href="https://youtu.be/jNW1Hi7Yi4c?list=PL_iWQOsE6TfVmKkQHucjPAoRtIJYt8a5A" target="_blank" rel="noopener">CSW182/282A Lecture&nbsp;6</a>
               </td>
+              <td class="text-break"><a href="./slides/tud_dl_lecture06_CNNs_inclEvrosGuestLecture.pdf" target="_blank">.pdf</a></td>
             </tr>
             <tr>
               <td>6 CNNs 2</td>
               <td>18.05.2026</td>
-              <td>ResNet, GoogLeNet, Detektion, Skip-Verbindungen.</td>
-              <td>
-                <a href="https://youtu.be/DAOcjicFr1Y?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" rel="noopener">*CS231n Lecture&nbsp;9</a><br/>
-                <a href="https://youtu.be/MgabSQ93IE8?list=PL_iWQOsE6TfVmKkQHucjPAoRtIJYt8a5A" target="_blank" rel="noopener">CSW182/282A Lecture&nbsp;8</a>
+              <td>ResNet, GoogLeNet, Detection, Skip-Connections.</td>
+              <td class="text-break">
+                <a href="https://youtu.be/DAOcjicFr1Y?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" rel="noopener">*CS231n Lecture&nbsp;9</a>
               </td>
+              <td class="text-break"><a href="./slides/tud_dl_lecture07_CNNs2.pdf" target="_blank">.pdf</a></td>
             </tr>
             <tr class="table-light">
-              <td>7 RNNs &amp; Sequenzen</td>
+              <td>7 RNNs</td>
               <td>01.06.2026</td>
-              <td>LSTMs, GRUs, Sprachmodelle, Sequence-to-Sequence.</td>
-              <td>
-                <a href="https://youtu.be/6niqTuYFZLQ?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" rel="noopener">*CS231n Lecture&nbsp;10</a><br/>
-                <a href="https://www.youtube.com/watch?v=8HyCNIVRbSU" target="_blank" rel="noopener">LSTM/GRU Guide</a>
+              <td>LSTMs, GRUs, Sprachmodelle, Seq2Seq.</td>
+              <td class="text-break">
+                <a href="https://youtu.be/6niqTuYFZLQ?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" rel="noopener">*CS231n Lecture&nbsp;10</a>
               </td>
+              <td class="text-break"><a href="./slides/tud_dl_lecture08_RNNs.pdf" target="_blank">.pdf</a></td>
             </tr>
             <tr>
-              <td>8 Generative Modelle</td>
+              <td>8 Generative</td>
               <td>08.06.2026</td>
               <td>Autoencoder, GANs, Probabilistische Modelle.</td>
-              <td>
-                <a href="https://youtu.be/5WoItGTWV54?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" rel="noopener">*CS231n Lecture&nbsp;13</a><br/>
-                <a href="https://youtu.be/y380v-Mtvzo?list=PL_iWQOsE6TfVmKkQHucjPAoRtIJYt8a5A" target="_blank" rel="noopener">CSW182/282A Lecture&nbsp;17</a><br/>
-                <a href="https://youtu.be/39CmbTX1S8M?list=PL_iWQOsE6TfVmKkQHucjPAoRtIJYt8a5A" target="_blank" rel="noopener">CSW182/282A Lecture&nbsp;19</a>
+              <td class="text-break">
+                <a href="https://youtu.be/5WoItGTWV54?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" target="_blank" rel="noopener">*CS231n Lecture&nbsp;13</a>
               </td>
+              <td class="text-break"><a href="./slides/tud_dl_lecture09_cs231n_2017_lecture13GenerativeModels.pdf" target="_blank">.pdf</a></td>
             </tr>
             <tr class="table-light">
-              <td>9 Probabilistische Modelle</td>
+              <td>9 Prob. Circuits</td>
               <td>15.06.2026</td>
-              <td>Probabilistische Graphische Modelle, Probablistic Circutis</td>
-                <td>  <a href="https://www.youtube.com/watch?v=NcAvJx3eEfg&list=PLbCIjDmXT4qvXXtoznO1SrKebnYkuf4su&index=2&t=0s&app=desktop" target="_blank">*Tractable Models, Van den Broeck et al. </a><br>
-                  <a href="https://www.youtube.com/watch?v=eF0APeEIJNw&list=TLPQMjAwNjIwMjCTye-71_x2nA&index=2" target="_blank">Sum-Product Networks, Poupart, U. Waterloo</a><br>
-                  <a href="https://www.youtube.com/watch?v=dCoCTVcGsEA" target="_blank">Arithmetic Circuits, Darwiche, UCLA</a>
-                  </td>
+              <td>Sum-Product Networks, Arithmetic Circuits.</td>
+              <td class="text-break">
+                <a href="https://www.youtube.com/watch?v=eF0APeEIJNw" target="_blank">SPNs Poupart</a>
+              </td>
+              <td class="text-break">
+                <a href="./slides/tud_dl_lecture10_DeepProbModels.pdf" target="_blank">.pdf (ours)</a>
+              </td>
             </tr>
             <tr>
-              <td>10 Deep Reinforcement Learning</td>
+              <td>10 Deep NLP</td>
               <td>22.06.2026</td>
-              <td>Value-Based RL, Policy Gradients, Actor-Critic.</td>
-              <td>
-                <a href="https://youtu.be/2pWv7GOvuf0?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ" target="_blank" rel="noopener">DeepMind x UCL Lecture&nbsp;1</a><br/>
-                <a href="https://youtu.be/IXuHxkpO5E4?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ" target="_blank" rel="noopener">DeepMind x UCL Lecture&nbsp;4</a>
+              <td>Word2Vec, BERT, Transformer Intro.</td>
+              <td class="text-break">
+                <a href="https://youtu.be/ZmjXgCQvmeA?list=PL_iWQOsE6TfVmKkQHucjPAoRtIJYt8a5A" target="_blank">CSW182/282A Lect 13</a>
+              </td>
+              <td class="text-break">
+                <a href="./slides/tud_dl_lecture11_DeepNLP.pdf" target="_blank">.pdf</a>
               </td>
             </tr>
             <tr class="table-light">
               <td>11 Transformer</td>
               <td>29.06.2026</td>
-              <td>Attention, Transformer-Architektur, gesellschaftliche Auswirkungen.</td>
-              <td>
-                <a href="https://www.youtube.com/watch?v=OyFJWRnt_AY" target="_blank" rel="noopener">*Transformer Networks (Poupart)</a><br/>
-                <a href="https://youtu.be/WU4oou1GpCk" target="_blank" rel="noopener">On the Dangers of Stochastic Parrots</a>
+              <td>Attention, Architecture, Parrots.</td>
+              <td class="text-break">
+                <a href="https://www.youtube.com/watch?v=OyFJWRnt_AY" target="_blank">Transformer Poupart</a>
+              </td>
+              <td class="text-break">
+                <a href="./slides/tud_dl_lecture13_Transformers.pdf" target="_blank">.pdf</a>
               </td>
             </tr>
             <tr>
               <td>12 Q&amp;A</td>
               <td>13.07.2026</td>
-              <td>Offene Fragen zu Projekten, Hausaufgaben und Klausurvorbereitung.</td>
+              <td>Klausurvorbereitung & Projektfragen.</td>
+              <td>&ndash;</td>
               <td>&ndash;</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="text-secondary small mt-3 mb-0">Zusätzliche Aufzeichnungen vergangener Semester (2020/2021) sind im Moodle-Archiv verlinkt.</p>
+      <p class="text-secondary small mt-3 mb-0">Zusätzliche Aufzeichnungen vergangener Semester sind im Moodle-Archiv verlinkt.</p>
     </div>
   </section>
+
+
 
   <section class="section-padding bg-white">
     <div class="container">
