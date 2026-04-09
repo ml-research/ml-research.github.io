@@ -341,11 +341,21 @@
 	note={As reinforcement Learning with Verifiable Rewards (RLVR) has become the dominant paradigm for scaling reasoning capabilities in LLMs, a new failure mode emerges: LLMs gaming verifiers. We study this phenomenon on inductive reasoning tasks, where models must induce and output logical rules. We find that RLVR-trained models systematically abandon rule induction. Instead of learning generalizable patterns (e.g., ``trains carrying red cars go east''), they enumerate instance-level labels, producing outputs that pass verifiers without capturing the relational patterns required by the task. We show that this behavior is not a failure of understanding but a form of reward hacking: imperfect verifiers that check only extensional correctness admit false positives. To detect such shortcuts, we introduce Isomorphic Perturbation Testing (IPT), which evaluates a single model output under both extensional and isomorphic verification, where the latter enforces invariance under logically isomorphic tasks. While genuine rule induction remains invariant, shortcut strategies fail. We find that shortcut behavior is specific to RLVR-trained reasoning models (e.g., GPT-5, Olmo3) and absent in non-RLVR models (e.g., GPT-4o, GPT-4.5, Ministral). Moreover, shortcut prevalence increases with task complexity and inference-time compute. In controlled training experiments, extensional verification directly induces shortcut strategies, while isomorphic verification eliminates them. These results show that RLVR can incentivize reward hacking not only through overt manipulation but also by exploiting what the verifier fails to enforce.}
 	}
 
+  @inproceedings{yan2026r1,
+  	anote = {./images/yan2026r1.png},
+  	title={Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning},
+  	author={Sikuan Yan and Xiufeng Yang and Zuchao Huang and Ercong Nie and Zifeng Ding and Zonggen Li and Xiaowen Ma and Jinhe Bi and Kristian Kersting and Jeff Z. Pan and Hinrich Schütze and Volker Tresp and Yunpu Ma},
+  	booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics},
+  	year={2026},
+  	url={https://arxiv.org/abs/2508.19828},
+  	keywords={Memory, Finetuning RL, Large Language Models, },
+  	note={Large Language Models (LLMs) have demonstrated impressive capabilities across a wide range of NLP tasks, but they remain fundamentally stateless, constrained by limited context windows that hinder long-horizon reasoning. Recent efforts to address this limitation often augment LLMs with an external memory bank, yet most existing pipelines are static and heuristic-driven, lacking a learned mechanism for deciding what to store, update, or retrieve. We present Memory-R1, a reinforcement learning (RL) framework that equips LLMs with the ability to actively manage and utilize external memory through two specialized agents: a Memory Manager that learns structured operations, including ADD, UPDATE, DELETE, and NOOP; and an Answer Agent that pre-selects and reasons over relevant entries. Both agents are fine-tuned with outcome-driven RL (PPO and GRPO), enabling adaptive memory management with minimal supervision. With only 152 training QA pairs, Memory-R1 outperforms strong baselines and generalizes across diverse question types, three benchmarks (LoCoMo, MSC, LongMemEval), and multiple model scales (3B–14B).	}  
+
 @inproceedings{helff2026slr,
 	anote = {./images/ScalableLogicalReasoning.jpg},
 	title={SLR: Automated Synthesis for Scalable Logical Reasoning},
 	author={Lukas Helff and Ahmad Omar and Felix Friedrich and Antonia Wüst and Tim Woydt and Rupert Mitchell and Patrick Schramowski and Wolfgang Stammer and Kristian Kersting},
-	booktitle = {The 64th Annual Meeting of the Association for Computational Linguistics},
+	booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics},
 	year={2026},
 	url={https://arxiv.org/pdf/2506.15787},
 	keywords={Reasoning, Verifiable Rewards, Scalable, Logical Reasoning, Data, RL, Synthesis},
