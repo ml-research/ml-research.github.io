@@ -1,3 +1,48 @@
+
+@incollection{helff2026llmsgamingverifiers,
+	anote = {./images/LLMsGamingVerifiers.png},
+	title={LLMs Gaming Verifiers: RLVR can Lead to Reward Hacking},
+	author={Lukas Helff and Quentin Delfosse and David Steinmann and Ruben Härle and Hikaru Shindo and Patrick Schramowski and Wolfgang Stammer and Kristian Kersting and Felix Friedrich},
+	booktitle = {ICLR 2026 Workshop on Logical Reasoning of Large Language Models},
+	year={2026},
+	url={https://openreview.net/forum?id=4B3WfRNqe3},
+	keywords={Reward Hacking, RLVR, Reasoning, Verifiable Rewards, Shortcuts},
+	note={As reinforcement Learning with Verifiable Rewards (RLVR) has become the dominant paradigm for scaling reasoning capabilities in LLMs, a new failure mode emerges: LLMs gaming verifiers. We study this phenomenon on inductive reasoning tasks, where models must induce and output logical rules. We find that RLVR-trained models systematically abandon rule induction. Instead of learning generalizable patterns (e.g., ``trains carrying red cars go east''), they enumerate instance-level labels, producing outputs that pass verifiers without capturing the relational patterns required by the task. We show that this behavior is not a failure of understanding but a form of reward hacking: imperfect verifiers that check only extensional correctness admit false positives. To detect such shortcuts, we introduce Isomorphic Perturbation Testing (IPT), which evaluates a single model output under both extensional and isomorphic verification, where the latter enforces invariance under logically isomorphic tasks. While genuine rule induction remains invariant, shortcut strategies fail. We find that shortcut behavior is specific to RLVR-trained reasoning models (e.g., GPT-5, Olmo3) and absent in non-RLVR models (e.g., GPT-4o, GPT-4.5, Ministral). Moreover, shortcut prevalence increases with task complexity and inference-time compute. In controlled training experiments, extensional verification directly induces shortcut strategies, while isomorphic verification eliminates them. These results show that RLVR can incentivize reward hacking not only through overt manipulation but also by exploiting what the verifier fails to enforce.}
+	}
+
+  @inproceedings{yan2026r1,
+  	anote = {./images/yan2026r1.png},
+  	title={Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning},
+  	author={Sikuan Yan and Xiufeng Yang and Zuchao Huang and Ercong Nie and Zifeng Ding and Zonggen Li and Xiaowen Ma and Jinhe Bi and Kristian Kersting and Jeff Z. Pan and Hinrich Schütze and Volker Tresp and Yunpu Ma},
+  	booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics},
+  	year={2026},
+  	url={https://arxiv.org/abs/2508.19828},
+  	keywords={Memory, Finetuning RL, Large Language Models, },
+  	note={Large Language Models (LLMs) have demonstrated impressive capabilities across a wide range of NLP tasks, but they remain fundamentally stateless, constrained by limited context windows that hinder long-horizon reasoning. Recent efforts to address this limitation often augment LLMs with an external memory bank, yet most existing pipelines are static and heuristic-driven, lacking a learned mechanism for deciding what to store, update, or retrieve. We present Memory-R1, a reinforcement learning (RL) framework that equips LLMs with the ability to actively manage and utilize external memory through two specialized agents: a Memory Manager that learns structured operations, including ADD, UPDATE, DELETE, and NOOP; and an Answer Agent that pre-selects and reasons over relevant entries. Both agents are fine-tuned with outcome-driven RL (PPO and GRPO), enabling adaptive memory management with minimal supervision. With only 152 training QA pairs, Memory-R1 outperforms strong baselines and generalizes across diverse question types, three benchmarks (LoCoMo, MSC, LongMemEval), and multiple model scales (3B–14B).	}
+}
+
+@inproceedings{helff2026slr,
+	anote = {./images/ScalableLogicalReasoning.jpg},
+	title={SLR: Automated Synthesis for Scalable Logical Reasoning},
+	author={Lukas Helff and Ahmad Omar and Felix Friedrich and Antonia Wüst and Tim Woydt and Rupert Mitchell and Patrick Schramowski and Wolfgang Stammer and Kristian Kersting},
+	booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics},
+	year={2026},
+	url={https://arxiv.org/pdf/2506.15787},
+	keywords={Reasoning, Verifiable Rewards, Scalable, Logical Reasoning, Data, RL, Synthesis},
+	note={We introduce SLR, an end-to-end framework for systematic evaluation and training of Large Language Models (LLMs) via Scalable Logical Reasoning. Given a user's task specification, SLR automatically synthesizes (i) an instruction prompt for an inductive reasoning task, (ii) a validation program, executable on model outputs to provide verifiable rewards, and (iii) the latent ground-truth rule. This process is fully automated, scalable, requires no human annotations, and offers precise control over task difficulty. Using SLR, we create SLR-Bench, a benchmark comprising 19k prompts organized into 20 curriculum levels that progressively increase in relational, arithmetic, and recursive complexity. Large-scale evaluation reveals that contemporary LLMs readily produce syntactically valid rules, yet often fail at correct logical inference. Recent reasoning LLMs demonstrate improved performance but incur very high test-time computation, with costs exceeding $300 for just 1,000 prompts. Finally, curriculum learning via SLR doubles Llama-3-8B accuracy on SLR-Bench, achieving parity with Gemini-Flash-Thinking at a fraction of computational cost. Moreover, these reasoning capabilities generalize to a wide range of established benchmarks, underscoring the effectiveness of SLR for downstream reasoning.}
+	}
+
+@inproceedings{helff2026activationreasoning,
+	anote = {./images/ActivationReasoning.png},
+	title={ActivationReasoning: Logical Reasoning in Latent Activation Spaces},
+	author={Lukas Helff and Ruben Härle and Wolfgang Stammer and Felix Friedrich and Manuel Brack and Antonia Wüst and Hikaru Shindo and Patrick Schramowski and Kristian Kersting},
+	booktitle={Proceedings of the International Conference on Learning Representations (ICLR)},
+	year={2026},
+	url={https://arxiv.org/abs/2510.18184},
+	note={Large language models (LLMs) excel at generating fluent text, but their internal reasoning remains opaque and difficult to control. Sparse autoencoders (SAEs) make hidden activations more interpretable by exposing latent features that often align with human concepts. Yet, these features are fragile and passive, offering no mechanism for systematic reasoning or model control. To address this, we introduce ActivationReasoning (AR), a framework that embeds explicit logical reasoning into the latent space of LLMs. It proceeds in three stages: (1) Finding latent representations, first latent concept representations are identified (e.g., via SAEs) and organized into a dictionary; (2) Activating propositions, at inference time AR detects activating concepts and maps them to logical propositions; and (3)Logical reasoning, applying logical rules over these propositions to infer higher-order structures, compose new concepts, and steer model behavior. We evaluate AR on multi-hop reasoning (PrOntoQA), abstraction and robustness to indirect concept cues (Rail2Country), reasoning over natural and diverse language (ProverQA), and context-sensitive safety (BeaverTails). Across all tasks, AR scales robustly with reasoning complexity, generalizes to abstract and context-sensitive tasks, and transfers across model backbones. These results demonstrate that grounding logical structure in latent activations not only improves transparency but also enables structured reasoning, reliable control, and alignment with desired behaviors, providing a path toward more reliable and auditable AI.}
+	}
+
+
 @article{blueml26moechess,
   author={Felix Helfenstein and Johannes Czech and Jannis Blüml and Max Eisel and Kristian Kersting},
   journal={IEEE Transactions on Games},
@@ -328,48 +373,6 @@
 	year={2025},
 	url={https://arxiv.org/abs/2506.01820},
 	keywords={Meta-Learning, Compositionality, Fodor and Pylyshyn, Systematic Generalisation}
-	}
-
-@incollection{helff2026llmsgamingverifiers,
-	anote = {./images/LLMsGamingVerifiers.png},
-	title={LLMs Gaming Verifiers: RLVR can Lead to Reward Hacking},
-	author={Lukas Helff and Quentin Delfosse and David Steinmann and Ruben Härle and Hikaru Shindo and Patrick Schramowski and Wolfgang Stammer and Kristian Kersting and Felix Friedrich},
-	booktitle = {ICLR 2026 Workshop on Logical Reasoning of Large Language Models},
-	year={2026},
-	url={https://openreview.net/forum?id=4B3WfRNqe3},
-	keywords={Reward Hacking, RLVR, Reasoning, Verifiable Rewards, Shortcuts},
-	note={As reinforcement Learning with Verifiable Rewards (RLVR) has become the dominant paradigm for scaling reasoning capabilities in LLMs, a new failure mode emerges: LLMs gaming verifiers. We study this phenomenon on inductive reasoning tasks, where models must induce and output logical rules. We find that RLVR-trained models systematically abandon rule induction. Instead of learning generalizable patterns (e.g., ``trains carrying red cars go east''), they enumerate instance-level labels, producing outputs that pass verifiers without capturing the relational patterns required by the task. We show that this behavior is not a failure of understanding but a form of reward hacking: imperfect verifiers that check only extensional correctness admit false positives. To detect such shortcuts, we introduce Isomorphic Perturbation Testing (IPT), which evaluates a single model output under both extensional and isomorphic verification, where the latter enforces invariance under logically isomorphic tasks. While genuine rule induction remains invariant, shortcut strategies fail. We find that shortcut behavior is specific to RLVR-trained reasoning models (e.g., GPT-5, Olmo3) and absent in non-RLVR models (e.g., GPT-4o, GPT-4.5, Ministral). Moreover, shortcut prevalence increases with task complexity and inference-time compute. In controlled training experiments, extensional verification directly induces shortcut strategies, while isomorphic verification eliminates them. These results show that RLVR can incentivize reward hacking not only through overt manipulation but also by exploiting what the verifier fails to enforce.}
-	}
-
-  @inproceedings{yan2026r1,
-  	anote = {./images/yan2026r1.png},
-  	title={Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning},
-  	author={Sikuan Yan and Xiufeng Yang and Zuchao Huang and Ercong Nie and Zifeng Ding and Zonggen Li and Xiaowen Ma and Jinhe Bi and Kristian Kersting and Jeff Z. Pan and Hinrich Schütze and Volker Tresp and Yunpu Ma},
-  	booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics},
-  	year={2026},
-  	url={https://arxiv.org/abs/2508.19828},
-  	keywords={Memory, Finetuning RL, Large Language Models, },
-  	note={Large Language Models (LLMs) have demonstrated impressive capabilities across a wide range of NLP tasks, but they remain fundamentally stateless, constrained by limited context windows that hinder long-horizon reasoning. Recent efforts to address this limitation often augment LLMs with an external memory bank, yet most existing pipelines are static and heuristic-driven, lacking a learned mechanism for deciding what to store, update, or retrieve. We present Memory-R1, a reinforcement learning (RL) framework that equips LLMs with the ability to actively manage and utilize external memory through two specialized agents: a Memory Manager that learns structured operations, including ADD, UPDATE, DELETE, and NOOP; and an Answer Agent that pre-selects and reasons over relevant entries. Both agents are fine-tuned with outcome-driven RL (PPO and GRPO), enabling adaptive memory management with minimal supervision. With only 152 training QA pairs, Memory-R1 outperforms strong baselines and generalizes across diverse question types, three benchmarks (LoCoMo, MSC, LongMemEval), and multiple model scales (3B–14B).	}  
-
-@inproceedings{helff2026slr,
-	anote = {./images/ScalableLogicalReasoning.jpg},
-	title={SLR: Automated Synthesis for Scalable Logical Reasoning},
-	author={Lukas Helff and Ahmad Omar and Felix Friedrich and Antonia Wüst and Tim Woydt and Rupert Mitchell and Patrick Schramowski and Wolfgang Stammer and Kristian Kersting},
-	booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics},
-	year={2026},
-	url={https://arxiv.org/pdf/2506.15787},
-	keywords={Reasoning, Verifiable Rewards, Scalable, Logical Reasoning, Data, RL, Synthesis},
-	note={We introduce SLR, an end-to-end framework for systematic evaluation and training of Large Language Models (LLMs) via Scalable Logical Reasoning. Given a user's task specification, SLR automatically synthesizes (i) an instruction prompt for an inductive reasoning task, (ii) a validation program, executable on model outputs to provide verifiable rewards, and (iii) the latent ground-truth rule. This process is fully automated, scalable, requires no human annotations, and offers precise control over task difficulty. Using SLR, we create SLR-Bench, a benchmark comprising 19k prompts organized into 20 curriculum levels that progressively increase in relational, arithmetic, and recursive complexity. Large-scale evaluation reveals that contemporary LLMs readily produce syntactically valid rules, yet often fail at correct logical inference. Recent reasoning LLMs demonstrate improved performance but incur very high test-time computation, with costs exceeding $300 for just 1,000 prompts. Finally, curriculum learning via SLR doubles Llama-3-8B accuracy on SLR-Bench, achieving parity with Gemini-Flash-Thinking at a fraction of computational cost. Moreover, these reasoning capabilities generalize to a wide range of established benchmarks, underscoring the effectiveness of SLR for downstream reasoning.}
-	}
-
-@inproceedings{helff2026activationreasoning,
-	anote = {./images/ActivationReasoning.png},
-	title={ActivationReasoning: Logical Reasoning in Latent Activation Spaces},
-	author={Lukas Helff and Ruben Härle and Wolfgang Stammer and Felix Friedrich and Manuel Brack and Antonia Wüst and Hikaru Shindo and Patrick Schramowski and Kristian Kersting},
-	booktitle={Proceedings of the International Conference on Learning Representations (ICLR)},
-	year={2026},
-	url={https://arxiv.org/abs/2510.18184},
-	note={Large language models (LLMs) excel at generating fluent text, but their internal reasoning remains opaque and difficult to control. Sparse autoencoders (SAEs) make hidden activations more interpretable by exposing latent features that often align with human concepts. Yet, these features are fragile and passive, offering no mechanism for systematic reasoning or model control. To address this, we introduce ActivationReasoning (AR), a framework that embeds explicit logical reasoning into the latent space of LLMs. It proceeds in three stages: (1) Finding latent representations, first latent concept representations are identified (e.g., via SAEs) and organized into a dictionary; (2) Activating propositions, at inference time AR detects activating concepts and maps them to logical propositions; and (3)Logical reasoning, applying logical rules over these propositions to infer higher-order structures, compose new concepts, and steer model behavior. We evaluate AR on multi-hop reasoning (PrOntoQA), abstraction and robustness to indirect concept cues (Rail2Country), reasoning over natural and diverse language (ProverQA), and context-sensitive safety (BeaverTails). Across all tasks, AR scales robustly with reasoning complexity, generalizes to abstract and context-sensitive tasks, and transfers across model backbones. These results demonstrate that grounding logical structure in latent activations not only improves transparency but also enables structured reasoning, reliable control, and alignment with desired behaviors, providing a path toward more reliable and auditable AI.}
 	}
 
 @misc{brack2025howtotrain,
