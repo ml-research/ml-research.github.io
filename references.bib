@@ -1,4 +1,44 @@
 
+@misc{shindo2026socialgrid,
+	author = {Hikaru Shindo and Hanzhao Lin and Lukas Helff and Patrick Schramowski and Kristian Kersting},
+	howpublished = {arXiv preprint arXiv:2604.16022},
+	keywords = {Large Language Models, Multi-Agent Systems, Social Reasoning, Embodied Agents, Benchmark},
+	note = {As Large Language Models (LLMs) transition from text processors to autonomous agents, evaluating their social reasoning in embodied multi-agent settings becomes critical. We introduce SocialGrid, an embodied multi-agent environment inspired by Among Us that evaluates LLM agents on planning, task execution, and social reasoning. Our evaluations reveal that even the strongest open model (GPT-OSS-120B) achieves below 60% accuracy in task completion and planning, with agents getting stuck in repetitive behaviors or failing to navigate basic obstacles. Since poor navigation confounds evaluation of social intelligence, SocialGrid offers an optional Planning Oracle to isolate social reasoning from planning deficits. While planning assistance improves task completion, social reasoning remains a bottleneck: agents fail to detect deception at near-random chance regardless of scale, relying on shallow heuristics rather than accumulating behavioral evidence. SocialGrid provides automatic failure analysis and fine-grained metrics, enabling developers to diagnose and improve their agents. We also establish a competitive leaderboard using Elo ratings from adversarial league play.},
+	title = {SocialGrid: A Benchmark for Planning and Social Reasoning in Embodied Multi-Agent Systems},
+	url = {https://arxiv.org/abs/2604.16022},
+	year = {2026}}
+
+@misc{shindo2026grail,
+	author = {Hikaru Shindo and Henri Rößler and Quentin Delfosse and Kristian Kersting},
+	howpublished = {arXiv preprint arXiv:2604.16871},
+	keywords = {Neuro-Symbolic AI, Reinforcement Learning, Concept Grounding, Relational Concepts, Large Language Models},
+	note = {Neuro-symbolic Reinforcement Learning (NeSy-RL) combines symbolic reasoning with gradient-based optimization to achieve interpretable and generalizable policies. Relational concepts, such as "left of" or "close by", serve as foundational building blocks that structure how agents perceive and act. However, conventional approaches require human experts to manually define these concepts, limiting adaptability since concept semantics vary across environments. We propose GRAIL (Grounding Relational Agents through Interactive Learning), a framework that autonomously grounds relational concepts through environmental interaction. GRAIL leverages large language models (LLMs) to provide generic concept representations as weak supervision, then refines them to capture environment-specific semantics. This approach addresses both sparse reward signals and concept misalignment prevalent in underdetermined environments. Experiments on the Atari games Kangaroo, Seaquest, and Skiing demonstrate that GRAIL matches or outperforms agents with manually crafted concepts in simplified settings, and reveals informative trade-offs between reward maximization and high-level goal completion in the full environment.},
+	title = {GRAIL: Autonomous Concept Grounding for Neuro-Symbolic Reinforcement Learning},
+	url = {https://arxiv.org/abs/2604.16871},
+	year = {2026}}
+
+@inproceedings{wuest2026cvpr,
+	anote = {./images/wuest2025vlp.webp},
+	title={Learning Visual Concepts via Vision Language Programs},
+	author={Antonia Wüst and Hikaru Shindo and Wolfgang Stammer and Devendra Singh Dhami and Kristian Kersting},
+	booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+	year={2026},
+	url={https://drive.google.com/file/d/1i3X6iK5hHgJcExS9dHlfEuhb77HbICZO/view},
+	keywords={Visual Reasoning, Neuro-symbolic AI, Program Synthesis},
+	note={Vision–language models (VLMs) achieve strong performance on multimodal tasks but often fail at systematic visual reasoning, leading to inconsistent or illogical outputs. Neuro-symbolic methods address this by inducing interpretable logical rules, yet they typically depend on domain-specific perception modules. We propose Vision Language Programs (VLPs), which combine the perceptual flexibility of VLMs with the systematic reasoning of program synthesis. Rather than embedding reasoning inside the VLM, our approach leverages the model to produce structured visual descriptions that are compiled into symbolic programs. These programs execute directly on images, remain consistent with task constraints, and provide human-interpretable explanations. Experiments on synthetic and real-world datasets demonstrate that VLPs outperform direct prompting, particularly on tasks requiring complex logical reasoning.},
+	crossref={https://ml-research.github.io/vision-language-programs/}
+	}
+
+@inproceedings{darvishvand2025acs,
+	anote = {./images/shindo2025rael.png},
+	author = {Fateme Golivand Darvishvand and Hikaru Shindo and Sahil Sidheekh and Kristian Kersting and Sriraam Natarajan},
+	booktitle = {Proceedings of the 25th Annual Conference on Advances in Cognitive Systems (ACS)},
+	keywords = {Relational Reinforcement Learning, Human-in-the-Loop, Object-Centric Representation, Active Learning, Neuro-Symbolic AI},
+	note = {Reinforcement learning (RL) has experienced a second wind in the past decade. While incredibly successful in images and videos, these systems still operate within the realm of propositional tasks ignoring the inherent structure that exists in the problem. Consequently, relational extensions (RRL) have been developed for such structured problems that allow for effective generalization to arbitrary number of objects. However, they inherently make strong assumptions about the problem structure. We introduce a novel framework that combines RRL with object-centric representation to handle both structured and unstructured data. We enhance learning by allowing the system to actively query the human expert for guidance by explicitly modeling the uncertainty over the policy. Our empirical evaluation demonstrates the effectiveness and efficiency of our proposed approach.},
+	title = {Human-Allied Relational Reinforcement Learning},
+	url = {https://openreview.net/pdf?id=PaexrchKMX},
+	year = {2025}}
+
 @incollection{helff2026llmsgamingverifiers,
 	anote = {./images/LLMsGamingVerifiers.png},
 	title={LLMs Gaming Verifiers: RLVR can Lead to Reward Hacking},
@@ -24,7 +64,7 @@
 @inproceedings{helff2026slr,
 	anote = {./images/ScalableLogicalReasoning.jpg},
 	title={SLR: Automated Synthesis for Scalable Logical Reasoning},
-	author={Lukas Helff and Ahmad Omar and Felix Friedrich and Antonia Wüst and Tim Woydt and Rupert Mitchell and Patrick Schramowski and Wolfgang Stammer and Kristian Kersting},
+	author={Lukas Helff and Ahmad Omar and Felix Friedrich and Antonia Wüst and Hikaru Shindo and Rupert Mitchell and Tim Woydt and Patrick Schramowski and Wolfgang Stammer and Kristian Kersting},
 	booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL)},
 	year={2026},
 	url={https://arxiv.org/pdf/2506.15787},
