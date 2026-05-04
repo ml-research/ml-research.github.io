@@ -349,41 +349,40 @@
 	note = {Recent advances in Video Large Language Models (VLLMs) have significantly enhanced their ability to understand video content. Nonetheless, processing long videos remains challenging due to high computational demands and the redundancy present in the visual data. In this work, we propose \textbf{METok}, a training-free, \textbf{M}ulti-stage \textbf{E}vent-based \textbf{Tok}en compression framework designed to accelerate VLLMs' inference while preserving accuracy. METok progressively eliminates redundant visual tokens across three critical stages: (1) event-aware compression during vision encoding, (2) hierarchical token pruning in the prefilling stage based on semantic alignment and event importance, and (3) a decoding-stage KV Cache optimization that further reduces memory consumption. Our experiments on diverse video benchmarks demonstrate that METok achieves an optimal trade-off between efficiency and accuracy by dynamically selecting informative visual tokens. For instance, equipping LongVA-7B with METok realizes an 80.6% FLOPs reduction and 93.5% KV Cache memory savings, all while maintaining comparable or even superior accuracy.},
 	title = {METok: Multi-Stage Event-based Token Compression for Efficient Long Video Understanding},
 	url = {},
-	year = {2025}}
+	year = {2025}
+}
 
+@inproceedings{ali2025judging,
+	anote = {./images/ali2025judging.png},
+	title={Judging Quality Across Languages: A Multilingual Approach to Pretraining Data Filtering with Language Models},
+	author={Mehdi Ali and Manuel Brack and Max Lübbering and Elias Wendt and Abbas Goher Khan and Richard Rutmann and Alex Jude and Maurice Kraus and Alexander Arno Weber and David Kaczér and Florian Mai and Lucie Flek and Rafet Sifa and Nicolas Flores-Herr and Joachim Köhler and Patrick Schramowski and Michael Fromm and Kristian Kersting},
+	year={2025},
+		booktitle = {Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+		crossref = {https://huggingface.co/spaces/JQL-AI/JQL},
+	note = {High-quality multilingual training data is essential for effectively pretraining large language models (LLMs). Yet, the availability of suitable open-source multilingual datasets remains limited. Existing state-of-the-art datasets mostly rely on heuristic filtering methods, restricting both their cross-lingual transferability and scalability. Here, we introduce JQL, a systematic approach that efficiently curates diverse and high-quality multilingual data at scale while significantly reducing computational demands. JQL distills LLMs' annotation capabilities into lightweight annotators based on pretrained multilingual embeddings. These models exhibit robust multilingual and cross-lingual performance, even for languages and scripts unseen during training. Evaluated empirically across 35 languages, the resulting annotation pipeline substantially outperforms current heuristic filtering methods like Fineweb2. JQL notably enhances downstream model training quality and increases data retention rates. Our research provides practical insights and valuable resources for multilingual data curation, raising the standards of multilingual dataset development.},
+	url={https://arxiv.org/pdf/2505.22232},
+	keywords = {LLM, Pre-training, Data, Multilingual},
+}
 
-	@inproceedings{ali2025judging,
-	      anote = {./images/ali2025judging.png},
-	      title={Judging Quality Across Languages: A Multilingual Approach to Pretraining Data Filtering with Language Models},
-	      author={Mehdi Ali and Manuel Brack and Max Lübbering and Elias Wendt and Abbas Goher Khan and Richard Rutmann and Alex Jude and Maurice Kraus and Alexander Arno Weber and David Kaczér and Florian Mai and Lucie Flek and Rafet Sifa and Nicolas Flores-Herr and Joachim Köhler and Patrick Schramowski and Michael Fromm and Kristian Kersting},
-	      year={2025},
-				booktitle = {Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)},
- 		 	 crossref = {https://huggingface.co/spaces/JQL-AI/JQL},
-	      note = {High-quality multilingual training data is essential for effectively pretraining large language models (LLMs). Yet, the availability of suitable open-source multilingual datasets remains limited. Existing state-of-the-art datasets mostly rely on heuristic filtering methods, restricting both their cross-lingual transferability and scalability. Here, we introduce JQL, a systematic approach that efficiently curates diverse and high-quality multilingual data at scale while significantly reducing computational demands. JQL distills LLMs' annotation capabilities into lightweight annotators based on pretrained multilingual embeddings. These models exhibit robust multilingual and cross-lingual performance, even for languages and scripts unseen during training. Evaluated empirically across 35 languages, the resulting annotation pipeline substantially outperforms current heuristic filtering methods like Fineweb2. JQL notably enhances downstream model training quality and increases data retention rates. Our research provides practical insights and valuable resources for multilingual data curation, raising the standards of multilingual dataset development.},
-	      url={https://arxiv.org/pdf/2505.22232},
-	      keywords = {LLM, Pre-training, Data, Multilingual},
-	}
+@unpublished{brock2025lehreUndForschung,
+	anote = {./images/brock2025lehreUndForschung.jpg},
+	author = {Kristian Kersting},
+	howpublished = {Lehre und Forschung, September, page 24-25},
+	keywords = {Künstliche Intelligence, Biologische Intelligenz, AGI, Superintelligenz},
+	note = {Intelligenz ist kein definiertes Phänomen, sonder ein komplexes und mehrdimensionales Kontinuum, das wir verstehen müssen, um sinnvolle Debatten über KI zu führen. Wer KI verantwortlich gestalten will, sollte sich nicht nur mit hypothetischen Überintelligenzen aus einer fernen Zukunft befassen.},
+	title = {Konstruktionsmerkmale: Zur Intelligenz von Maschinen},
+	year = {2025}
+}
 
-	@unpublished{brock2025lehreUndForschung,
-		anote = {./images/brock2025lehreUndForschung.jpg},
-		author = {Kristian Kersting},
-		howpublished = {Lehre und Forschung, September, page 24-25},
-		keywords = {Künstliche Intelligence, Biologische Intelligenz, AGI, Superintelligenz},
-		note = {Intelligenz ist kein definiertes Phänomen, sonder ein komplexes und mehrdimensionales Kontinuum, das wir verstehen müssen, um sinnvolle Debatten über KI zu führen. Wer KI verantwortlich gestalten will, sollte sich nicht nur mit hypothetischen Überintelligenzen aus einer fernen Zukunft befassen.},
-		title = {Konstruktionsmerkmale: Zur Intelligenz von Maschinen},
-		year = {2025}}
-
-
-	@misc{kowalczuk25dori,
+@inproceedings{kowalczuk25dori,
 	anote = {./images/dori.jpeg},
 	author = {Antoni Kowalczuk and Dominik Hintersdorf and Lukas Struppek and Kristian Kersting and Adam Dziedzic and Franziska Boenisch},
-	howpublished = {arXiv preprint arXiv:2507.16880},
+	booktitle = {Proceedings of the 43rd International Conference on Machine Learning (ICML)},
 	keywords = {Memorization, Diffusion Models, Stable Diffusion},
 	note = {Text-to-image diffusion models (DMs) have achieved remarkable success in image generation. However, concerns about data privacy and intellectual property remain due to their potential to inadvertently memorize and replicate training data. Recent mitigation efforts have focused on identifying and pruning weights responsible for triggering replication, based on the assumption that memorization can be localized. Our research assesses the robustness of these pruning-based approaches. We demonstrate that even after pruning, minor adjustments to text embeddings of input prompts are sufficient to re-trigger data replication, highlighting the fragility of these defenses. Furthermore, we challenge the fundamental assumption of memorization locality, by showing that replication can be triggered from diverse locations within the text embedding space, and follows different paths in the model. Our findings indicate that existing mitigation strategies are insufficient and underscore the need for methods that truly remove memorized content, rather than attempting to suppress its retrieval. As a first step in this direction, we introduce a novel adversarial fine-tuning method that iteratively searches for replication triggers and updates the model to increase robustness. Through our research, we provide fresh insights into the nature of memorization in text-to-image DMs and a foundation for building more trustworthy and compliant generative AI.},
-	title = {Finding Dori: Memorization in Text-to-Image Diffusion Models Is Less Local Than Assumed},
+	title = {Finding DoRI: Discovery of Retained Images in Diffusion Models},
 	url = {https://arxiv.org/abs/2507.16880},
 	year = {2025},
-	bdsk-url-1 = {https://arxiv.org/pdf/2507.16880}
 }
 
 @inproceedings{turan2025icml,
