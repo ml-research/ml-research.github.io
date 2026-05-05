@@ -1,7 +1,7 @@
 [
   {
     "cite": "jahn2026breaking",
-    "title": "Breaking Up with Normatively Monolithic Agency with {GRACE:} {A} Reason-Based\nNeuro-Symbolic Architecture for Safe and Ethical {AI} Alignment",
+    "title": "Breaking Up with Normatively Monolithic Agency with GRACE: A Reason-Based\nNeuro-Symbolic Architecture for Safe and Ethical AI Alignment",
     "authors": [
       "Felix Jahn",
       "Yannic Muskalla",
@@ -23,7 +23,7 @@
     "url": "https://doi.org/10.48550/arXiv.2601.10520",
     "doi": "",
     "typeLabel": "Conference paper",
-    "image": "./images/aiml2020small.png",
+    "image": "./images/jahn2026breaking.png",
     "topics": [],
     "topicsNormalized": [],
     "position": 0
@@ -57,7 +57,7 @@
     "url": "https://www.sciencedirect.com/science/article/pii/S0168952526000922",
     "doi": "https://doi.org/10.1016/j.tig.2026.04.001",
     "typeLabel": "Journal article",
-    "image": "./images/aiml2020small.png",
+    "image": "./images/hassan2026trendsgenetics.png",
     "topics": [],
     "topicsNormalized": [],
     "position": 1
