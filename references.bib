@@ -1,3 +1,14 @@
+@misc{ye2026h2rl,
+	anote = {./images/ye2026h2rl.png},
+	author = {Zihan Ye and Phil Chau and Raban Emunds and Jannis Blüml and Cedric Derstroff and Quentin Delfosse and Oleg Arenz and Kristian Kersting},
+	howpublished = {arXiv preprint arXiv:2603.06565},
+	keywords = {Neuro-Symbolic AI, Reinforcement Learning, Policy Pretraining, Policy Misalignment},
+	note = {Deep reinforcement learning agents are often misaligned, as they over-exploit early reward signals. Recently, several symbolic approaches have addressed these challenges by encoding sparse objectives along with aligned plans. However, purely symbolic architectures are complex to scale and difficult to apply to continuous settings. Hence, we propose a hybrid approach, inspired by humans' ability to acquire new skills. We use a two-stage framework that injects symbolic structure into neural-based reinforcement learning agents without sacrificing the expressivity of deep policies. Our method, called Hybrid Hierarchical RL (H^2RL), introduces a logical option-based pretraining strategy to steer the learning policy away from short-term reward loops and toward goal-directed behavior while allowing the final policy to be refined via standard environment interaction. Empirically, we show that this approach consistently improves long-horizon decision-making and yields agents that outperform strong neural, symbolic, and neuro-symbolic baselines.,
+	title = {Boosting deep Reinforcement Learning using pretraining with Logical Options},
+	url = {https://arxiv.org/abs/2603.06565},
+	year = {2026}
+}
+
 @incollection{divo2026zeitgeist,
 	anote = {./images/divo2026zeitgeist.png}, 
 	title = {Finding the Zeitgeist in Time Series Foundation Models},
@@ -145,6 +156,17 @@
 	  note={Vision-Language models (VLMs) achieve strong performance on multimodal tasks but often fail at systematic visual reasoning tasks, leading to inconsistent or illogical outputs. Neuro-symbolic methods promise to address this by inducing interpretable logical rules, though they exploit rigid, domain-specific perception modules. We propose Vision-Language Programs (VLP), which combine the perceptual flexibility of VLMs with systematic reasoning of program synthesis. Rather than embedding reasoning inside the VLM, VLP leverages the model to produce structured visual descriptions that are compiled into neuro-symbolic programs. The resulting programs execute directly on images, remain consistent with task constraints, and provide human-interpretable explanations that enable easy shortcut mitigation. Experiments on synthetic and real-world datasets demonstrate that VLPs outperform direct and structured prompting, particularly on tasks requiring complex logical reasoning.},
 	  keywords={Visual Reasoning, Neuro-symbolic AI, Program Synthesis},
 	  crossref={https://ml-research.github.io/vision-language-programs/}
+}
+
+@incollection{ye2025dylan,
+	anote = {./images/ye2025dylan.png},
+	title = {Learning from Less: Guiding Deep Reinforcement Learning with Differentiable Symbolic Planning},
+	author = {Zihan Ye and Oleg Arenz and Kristian Kersting},
+	booktitle = {RLC 2025 Workshop on on Programmatic Reinforcement Learning},
+	year = {2025},
+	url = {https://openreview.net/pdf?id=Cm5CN0eLu6},
+	keywords = {neuro-symbolic AI, reinforcement learning, differentiable reasoning, reward shaping, differentiable planner, symbolic planner},
+	note = {When tackling complex problems, humans naturally break them down into smaller, manageable subtasks and adjust their initial plans based on observations. For instance, if you want to make coffee at a friend’s place, you might initially plan to grab coffee beans, go to the coffee machine, and pour them into the machine. Upon noticing that the machine is full, you would skip the initial steps and proceed directly to brewing. In stark contrast, state-of-the-art reinforcement learners, such as Proximal Policy Optimization (PPO), lack such prior knowledge and therefore require significantly more training steps to exhibit comparable adaptive behavior. Thus, a central research question arises: \textit{How can we enable reinforcement learning (RL) agents to have similar ``human priors'', allowing the agent to learn with fewer training interactions?} To address this challenge, we propose \textbf{d}ifferentiable s\textbf{y}mbolic p\textbf{lan}ner (Dylan), a novel framework that integrates symbolic planning into Reinforcement Learning. Dylan serves as a reward model that dynamically shapes rewards by leveraging human priors, guiding agents through intermediate subtasks, thus enabling more efficient exploration. Beyond reward shaping, Dylan can work as a high-level planner that composes primitive policies to generate new behaviors while avoiding common symbolic planner pitfalls such as infinite execution loops. Our experimental evaluations demonstrate that Dylan significantly improves RL agents' performance and facilitates generalization to unseen tasks.}
 }
 
 @incollection{wuest2025marvlp,
