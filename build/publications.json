@@ -1,5 +1,47 @@
 [
   {
+    "cite": "ye2026h2rl",
+    "title": "Boosting deep Reinforcement Learning using pretraining with Logical Options",
+    "authors": [
+      "Zihan Ye",
+      "Phil Chau",
+      "Raban Emunds",
+      "Jannis Blüml",
+      "Cedric Derstroff",
+      "Quentin Delfosse",
+      "Oleg Arenz",
+      "Kristian Kersting"
+    ],
+    "year": "2026",
+    "yearDisplay": "2026",
+    "journal": "",
+    "booktitle": "",
+    "publisher": "",
+    "howpublished": "arXiv preprint arXiv:2603.06565",
+    "institution": "",
+    "organization": "",
+    "school": "",
+    "series": "",
+    "note": "Deep reinforcement learning agents are often misaligned, as they over-exploit early reward signals. Recently, several symbolic approaches have addressed these challenges by encoding sparse objectives along with aligned plans. However, purely symbolic architectures are complex to scale and difficult to apply to continuous settings. Hence, we propose a hybrid approach, inspired by humans' ability to acquire new skills. We use a two-stage framework that injects symbolic structure into neural-based reinforcement learning agents without sacrificing the expressivity of deep policies. Our method, called Hybrid Hierarchical RL (H^2RL), introduces a logical option-based pretraining strategy to steer the learning policy away from short-term reward loops and toward goal-directed behavior while allowing the final policy to be refined via standard environment interaction. Empirically, we show that this approach consistently improves long-horizon decision-making and yields agents that outperform strong neural, symbolic, and neuro-symbolic baselines.",
+    "url": "https://arxiv.org/abs/2603.06565",
+    "doi": "",
+    "typeLabel": "Preprint",
+    "image": "./images/ye2026h2rl.png",
+    "topics": [
+      "Neuro-Symbolic AI",
+      "Reinforcement Learning",
+      "Policy Pretraining",
+      "Policy Misalignment"
+    ],
+    "topicsNormalized": [
+      "neuro-symbolic-ai",
+      "reinforcement-learning",
+      "policy-pretraining",
+      "policy-misalignment"
+    ],
+    "position": 0
+  },
+  {
     "cite": "divo2026zeitgeist",
     "title": "Finding the Zeitgeist in Time Series Foundation Models",
     "authors": [
@@ -38,7 +80,7 @@
       "sparse-autoencoders",
       "interpretability"
     ],
-    "position": 0
+    "position": 1
   },
   {
     "cite": "jahn2026breaking",
@@ -67,7 +109,7 @@
     "image": "./images/jahn2026breaking.png",
     "topics": [],
     "topicsNormalized": [],
-    "position": 1
+    "position": 2
   },
   {
     "cite": "hassan2026trendsgenetics",
@@ -101,7 +143,7 @@
     "image": "./images/hassan2026trendsgenetics.png",
     "topics": [],
     "topicsNormalized": [],
-    "position": 2
+    "position": 3
   },
   {
     "cite": "shindo2026socialgrid",
@@ -142,7 +184,7 @@
       "embodied-agents",
       "benchmark"
     ],
-    "position": 3
+    "position": 4
   },
   {
     "cite": "shindo2026grail",
@@ -182,7 +224,7 @@
       "relational-concepts",
       "large-language-models"
     ],
-    "position": 4
+    "position": 5
   },
   {
     "cite": "darvishvand2025acs",
@@ -223,7 +265,7 @@
       "active-learning",
       "neuro-symbolic-ai"
     ],
-    "position": 5
+    "position": 6
   },
   {
     "cite": "helff2026llmsgamingverifiers",
@@ -268,7 +310,7 @@
       "verifiable-rewards",
       "shortcuts"
     ],
-    "position": 6
+    "position": 7
   },
   {
     "cite": "yan2026r1",
@@ -313,7 +355,7 @@
       "finetuning-rl",
       "large-language-models"
     ],
-    "position": 7
+    "position": 8
   },
   {
     "cite": "helff2026slr",
@@ -363,7 +405,7 @@
       "rl",
       "synthesis"
     ],
-    "position": 8
+    "position": 9
   },
   {
     "cite": "helff2026activationreasoning",
@@ -396,7 +438,7 @@
     "image": "./images/ActivationReasoning.png",
     "topics": [],
     "topicsNormalized": [],
-    "position": 9
+    "position": 10
   },
   {
     "cite": "blueml26moechess",
@@ -457,7 +499,7 @@
       "monte-carlo-tree-search",
       "alphazero"
     ],
-    "position": 10
+    "position": 11
   },
   {
     "cite": "ventola2026deeppcs",
@@ -494,7 +536,7 @@
       "time-series-modeling",
       "forecasting"
     ],
-    "position": 11
+    "position": 12
   },
   {
     "cite": "wuest2026vlp",
@@ -532,7 +574,7 @@
       "neuro-symbolic-ai",
       "program-synthesis"
     ],
-    "position": 12
+    "position": 13
   },
   {
     "cite": "ye2025dylan",
@@ -573,7 +615,7 @@
       "differentiable-planner",
       "symbolic-planner"
     ],
-    "position": 13
+    "position": 14
   },
   {
     "cite": "wuest2025marvlp",
@@ -610,7 +652,7 @@
       "neuro-symbolic-ai",
       "program-synthesis"
     ],
-    "position": 14
+    "position": 15
   },
   {
     "cite": "cyclistvideobenchmark",
@@ -651,7 +693,7 @@
       "temporal-reasoning",
       "spatio-temporal"
     ],
-    "position": 15
+    "position": 16
   },
   {
     "cite": "kersting2025nmi",
@@ -694,7 +736,7 @@
       "medicine",
       "law"
     ],
-    "position": 16
+    "position": 17
   },
   {
     "cite": "braun2025tractablerepresentationlearningprobabilistic",
@@ -736,7 +778,7 @@
       "knowledge-distillation",
       "missing-data"
     ],
-    "position": 17
+    "position": 18
   },
   {
     "cite": "divo2025quantsquestionansweringtime",
@@ -776,7 +818,7 @@
       "multimodal-question-answering",
       "dataset"
     ],
-    "position": 18
+    "position": 19
   },
   {
     "cite": "kohaut2025constitutionalcontrollerdoubtcalibratedsteering",
@@ -823,7 +865,7 @@
       "neuro-symbolic-ai",
       "robotics"
     ],
-    "position": 19
+    "position": 20
   },
   {
     "cite": "kohaut2025tits",
@@ -865,7 +907,7 @@
       "unmanned-aircraft-navigation",
       "neuro-symbolic-ai"
     ],
-    "position": 20
+    "position": 21
   },
   {
     "cite": "dutta2025",
@@ -912,7 +954,7 @@
       "complex-problem-solving",
       "interactive-ai-systems"
     ],
-    "position": 21
+    "position": 22
   },
   {
     "cite": "busch025scc",
@@ -957,7 +999,7 @@
       "counterfactual-reasoning",
       "tractable-inference"
     ],
-    "position": 22
+    "position": 23
   },
   {
     "cite": "haerle2025gsae",
@@ -1000,7 +1042,7 @@
       "llm",
       "alignment"
     ],
-    "position": 23
+    "position": 24
   },
   {
     "cite": "willig2025dynamic",
@@ -1038,7 +1080,7 @@
       "decision-making",
       "reflection"
     ],
-    "position": 24
+    "position": 25
   },
   {
     "cite": "kraus2025mixer",
@@ -1078,7 +1120,7 @@
       "mixing",
       "recurrent"
     ],
-    "position": 25
+    "position": 26
   },
   {
     "cite": "poonia2025granger",
@@ -1114,7 +1156,7 @@
       "xlstm",
       "granger-causality"
     ],
-    "position": 26
+    "position": 27
   },
   {
     "cite": "steinmann2025occb",
@@ -1152,7 +1194,7 @@
       "object-centric-learning",
       "interpretability"
     ],
-    "position": 27
+    "position": 28
   },
   {
     "cite": "schuhmann2025emonet",
@@ -1196,7 +1238,7 @@
       "benchmark",
       "dataset"
     ],
-    "position": 28
+    "position": 29
   },
   {
     "cite": "delfosse2025deep",
@@ -1239,7 +1281,7 @@
       "generalization",
       "atari"
     ],
-    "position": 29
+    "position": 30
   },
   {
     "cite": "delfosse2025deepibrl",
@@ -1282,7 +1324,7 @@
       "generalization",
       "atari"
     ],
-    "position": 30
+    "position": 31
   },
   {
     "cite": "emunds2025interpretable",
@@ -1320,7 +1362,7 @@
       "hierarchical",
       "object-centric"
     ],
-    "position": 31
+    "position": 32
   },
   {
     "cite": "wang2025emnlp",
@@ -1361,7 +1403,7 @@
       "long-video-understanding",
       "efficiency-/-inference-optimization"
     ],
-    "position": 32
+    "position": 33
   },
   {
     "cite": "ali2025judging",
@@ -1413,7 +1455,7 @@
       "data",
       "multilingual"
     ],
-    "position": 33
+    "position": 34
   },
   {
     "cite": "brock2025lehreUndForschung",
@@ -1448,7 +1490,7 @@
       "agi",
       "superintelligenz"
     ],
-    "position": 34
+    "position": 35
   },
   {
     "cite": "kowalczuk25dori",
@@ -1486,7 +1528,7 @@
       "diffusion-models",
       "stable-diffusion"
     ],
-    "position": 35
+    "position": 36
   },
   {
     "cite": "turan2025icml",
@@ -1525,7 +1567,7 @@
       "concept-encodings",
       "explainable-ai"
     ],
-    "position": 36
+    "position": 37
   },
   {
     "cite": "sudhakaran2025iccv",
@@ -1565,7 +1607,7 @@
       "adaptive-sampling",
       "vision-language-models"
     ],
-    "position": 37
+    "position": 38
   },
   {
     "cite": "woydt2025metalearning",
@@ -1606,7 +1648,7 @@
       "fodor-and-pylyshyn",
       "systematic-generalisation"
     ],
-    "position": 38
+    "position": 39
   },
   {
     "cite": "brack2025howtotrain",
@@ -1647,7 +1689,7 @@
       "pre-training",
       "data"
     ],
-    "position": 39
+    "position": 40
   },
   {
     "cite": "strem2025pricai",
@@ -1686,7 +1728,7 @@
       "alarm-management",
       "alarm-prediction"
     ],
-    "position": 40
+    "position": 41
   },
   {
     "cite": "kohaut25iros",
@@ -1732,7 +1774,7 @@
       "logic",
       "deep-learning"
     ],
-    "position": 41
+    "position": 42
   },
   {
     "cite": "poonia2025grangercausal",
@@ -1770,7 +1812,7 @@
       "forecasting",
       "xlstm"
     ],
-    "position": 42
+    "position": 43
   },
   {
     "cite": "delfosse2025notintelligent",
@@ -1813,7 +1855,7 @@
       "generalization",
       "atari"
     ],
-    "position": 43
+    "position": 44
   },
   {
     "cite": "blueml2025occam",
@@ -1853,7 +1895,7 @@
       "generalization",
       "feature-representation"
     ],
-    "position": 44
+    "position": 45
   },
   {
     "cite": "divo2025forecasting",
@@ -1894,7 +1936,7 @@
       "uncertainty-estimation",
       "stock-allocation"
     ],
-    "position": 45
+    "position": 46
   },
   {
     "cite": "kohaut2025hybrid",
@@ -1937,7 +1979,7 @@
       "routing",
       "neuro-symbolic-systems"
     ],
-    "position": 46
+    "position": 47
   },
   {
     "cite": "schuhmann2025emonet-voice",
@@ -1980,7 +2022,7 @@
       "audio-language-models",
       "affective-ai"
     ],
-    "position": 47
+    "position": 48
   },
   {
     "cite": "schuhmann2025emonet-face",
@@ -2024,7 +2066,7 @@
       "vision-language-models",
       "affective-ai"
     ],
-    "position": 48
+    "position": 49
   },
   {
     "cite": "sha2025nai",
@@ -2062,7 +2104,7 @@
       "neuro-symbolic-ai",
       "object-centric-learning"
     ],
-    "position": 49
+    "position": 50
   },
   {
     "cite": "busch2025lp",
@@ -2100,7 +2142,7 @@
       "linear-programs",
       "attribution-method"
     ],
-    "position": 50
+    "position": 51
   },
   {
     "cite": "kraus2025right",
@@ -2141,7 +2183,7 @@
       "xai",
       "xil"
     ],
-    "position": 51
+    "position": 52
   },
   {
     "cite": "helff2025llavaguard",
@@ -2180,7 +2222,7 @@
       "multimodal",
       "vision-language-model"
     ],
-    "position": 52
+    "position": 53
   },
   {
     "cite": "wuest2025bongard",
@@ -2222,7 +2264,7 @@
       "bongrads",
       "vision-language-models"
     ],
-    "position": 53
+    "position": 54
   },
   {
     "cite": "busch2025icml",
@@ -2264,7 +2306,7 @@
       "shortcut-learning",
       "dataset"
     ],
-    "position": 54
+    "position": 55
   },
   {
     "cite": "friedrich2025stereotypes",
@@ -2307,7 +2349,7 @@
       "fairness",
       "benchmark"
     ],
-    "position": 55
+    "position": 56
   },
   {
     "cite": "dycke2025review",
@@ -2346,7 +2388,7 @@
       "user-centered-design",
       "human-behavior-analysis"
     ],
-    "position": 56
+    "position": 57
   },
   {
     "cite": "natarajan2025aaai",
@@ -2385,7 +2427,7 @@
       "human-in-the-loop",
       "ai-in-the-loop"
     ],
-    "position": 57
+    "position": 58
   },
   {
     "cite": "seng2025uai",
@@ -2427,7 +2469,7 @@
       "horizontal-fl",
       "vertical-fl"
     ],
-    "position": 58
+    "position": 59
   },
   {
     "cite": "kersting2025faz_safety",
@@ -2482,7 +2524,7 @@
       "stuart-russell",
       "daisi"
     ],
-    "position": 59
+    "position": 60
   },
   {
     "cite": "ghosh2025ailuminateintroducingv10ai",
@@ -2621,7 +2663,7 @@
       "ai-safety",
       "benchmark"
     ],
-    "position": 60
+    "position": 61
   },
   {
     "cite": "kersting2025faz_stargate",
@@ -2665,7 +2707,7 @@
       "energie",
       "vernünftige-ki"
     ],
-    "position": 61
+    "position": 62
   },
   {
     "cite": "hoos2025faz_cern",
@@ -2713,7 +2755,7 @@
       "vernünftige-ki",
       "ki-made-in-europe"
     ],
-    "position": 62
+    "position": 63
   },
   {
     "cite": "derstroff2025amplifying",
@@ -2753,7 +2795,7 @@
       "reinforcement-learning",
       "decision-making"
     ],
-    "position": 63
+    "position": 64
   },
   {
     "cite": "delfosse2025comet",
@@ -2795,7 +2837,7 @@
       "object-centric",
       "atari"
     ],
-    "position": 64
+    "position": 65
   },
   {
     "cite": "blueml2025maskedDQN",
@@ -2836,7 +2878,7 @@
       "object-centric",
       "atari"
     ],
-    "position": 65
+    "position": 66
   },
   {
     "cite": "coemer2025polynomial",
@@ -2874,7 +2916,7 @@
       "ucb",
       "non-deterministic-state-transitions"
     ],
-    "position": 66
+    "position": 67
   },
   {
     "cite": "roettger2025mstsmultimodalsafetytest",
@@ -2932,7 +2974,7 @@
       "ai-safety",
       "benchmark"
     ],
-    "position": 67
+    "position": 68
   },
   {
     "cite": "mundt2025cakeintelligencegetsbake",
@@ -2974,7 +3016,7 @@
       "critical-review",
       "position-paper"
     ],
-    "position": 68
+    "position": 69
   },
   {
     "cite": "pfanschilling2025ijar",
@@ -3012,7 +3054,7 @@
       "large-language-models",
       "tractable-probabilistic-models"
     ],
-    "position": 69
+    "position": 70
   },
   {
     "cite": "shindo2025iclr",
@@ -3052,7 +3094,7 @@
       "interpretable-ai",
       "first-order-logic"
     ],
-    "position": 70
+    "position": 71
   },
   {
     "cite": "paul2025iclr",
@@ -3091,7 +3133,7 @@
       "large-language-model",
       "code-lm"
     ],
-    "position": 71
+    "position": 72
   },
   {
     "cite": "willig2025iclr",
@@ -3131,7 +3173,7 @@
       "agent-behavior",
       "system-dynamics"
     ],
-    "position": 72
+    "position": 73
   },
   {
     "cite": "sidheekh2025aistats",
@@ -3169,7 +3211,7 @@
       "multimodal-fusion",
       "probabilistic-circuits"
     ],
-    "position": 73
+    "position": 74
   },
   {
     "cite": "kamath2025collas",
@@ -3210,7 +3252,7 @@
       "open-world-learning",
       "out-of-distribution"
     ],
-    "position": 74
+    "position": 75
   },
   {
     "cite": "sha2025nesy",
@@ -3248,7 +3290,7 @@
       "neural-symbolic-ai",
       "benchmark"
     ],
-    "position": 75
+    "position": 76
   },
   {
     "cite": "seng2025ibohpc",
@@ -3288,7 +3330,7 @@
       "hyperparameter-optimization",
       "probabilistic-circuits"
     ],
-    "position": 76
+    "position": 77
   },
   {
     "cite": "avramidis2024occiglot",
@@ -3331,7 +3373,7 @@
       "llm",
       "multilingual"
     ],
-    "position": 77
+    "position": 78
   },
   {
     "cite": "brack2024communityoscar",
@@ -3377,7 +3419,7 @@
       "llm",
       "multilingual"
     ],
-    "position": 78
+    "position": 79
   },
   {
     "cite": "willig2024systems",
@@ -3417,7 +3459,7 @@
       "agent-behavior",
       "system-dynamics"
     ],
-    "position": 79
+    "position": 80
   },
   {
     "cite": "friedrich2024llms",
@@ -3461,7 +3503,7 @@
       "ai-safety",
       "benchmark"
     ],
-    "position": 80
+    "position": 81
   },
   {
     "cite": "skryagin2024asn",
@@ -3501,7 +3543,7 @@
       "neuro-symbolic-ai",
       "large-language-models"
     ],
-    "position": 81
+    "position": 82
   },
   {
     "cite": "helff2024vlol",
@@ -3542,7 +3584,7 @@
       "benchmark",
       "michalski-train"
     ],
-    "position": 82
+    "position": 83
   },
   {
     "cite": "divo2024forecastingCF-arxiv",
@@ -3585,7 +3627,7 @@
       "value-investing",
       "factor-investing"
     ],
-    "position": 83
+    "position": 84
   },
   {
     "cite": "kraus2024unitedpretrain",
@@ -3626,7 +3668,7 @@
       "time-series",
       "multi-dataset-training"
     ],
-    "position": 84
+    "position": 85
   },
   {
     "cite": "sztwiertnia2021impact",
@@ -3664,7 +3706,7 @@
       "machine-learning",
       "empirical-study"
     ],
-    "position": 85
+    "position": 86
   },
   {
     "cite": "strem2025multialarm",
@@ -3704,7 +3746,7 @@
       "alarm-management",
       "alarm-prediction"
     ],
-    "position": 86
+    "position": 87
   },
   {
     "cite": "steinmann2024navigatingshortcutsspuriouscorrelations",
@@ -3749,7 +3791,7 @@
       "detection",
       "mitigation"
     ],
-    "position": 87
+    "position": 88
   },
   {
     "cite": "kraus2024xlstmmixermultivariatetimeseries",
@@ -3785,7 +3827,7 @@
       "forecasting",
       "xlstm"
     ],
-    "position": 88
+    "position": 89
   },
   {
     "cite": "shindo2024blendrl_arxiv",
@@ -3823,7 +3865,7 @@
       "differentiable-reasoning",
       "interpretable-and-explainable-ai"
     ],
-    "position": 89
+    "position": 90
   },
   {
     "cite": "hintersdorf2024balancingtransparency",
@@ -3860,7 +3902,7 @@
       "privacy",
       "open-source"
     ],
-    "position": 90
+    "position": 91
   },
   {
     "cite": "haerle2024scarsparseconditionedautoencoders",
@@ -3904,7 +3946,7 @@
       "saes",
       "mechanistic-interpretability"
     ],
-    "position": 91
+    "position": 92
   },
   {
     "cite": "wuest2024bongard",
@@ -3944,7 +3986,7 @@
       "bongrads",
       "vision-language-models"
     ],
-    "position": 92
+    "position": 93
   },
   {
     "cite": "strem2025apt",
@@ -3987,7 +4029,7 @@
       "multimodal-transformer",
       "multimodal-fusion"
     ],
-    "position": 93
+    "position": 94
   },
   {
     "cite": "shindo2024deisam",
@@ -4027,7 +4069,7 @@
       "segmentation",
       "textual-grounding"
     ],
-    "position": 94
+    "position": 95
   },
   {
     "cite": "hintersdorf24nemo",
@@ -4064,7 +4106,7 @@
       "diffusion-models",
       "stable-diffusion"
     ],
-    "position": 95
+    "position": 96
   },
   {
     "cite": "stammer2024ncb",
@@ -4102,7 +4144,7 @@
       "interactive-machine-learning",
       "disentanglement"
     ],
-    "position": 96
+    "position": 97
   },
   {
     "cite": "delfosse2024interpretable",
@@ -4141,7 +4183,7 @@
       "interpretability",
       "concept-bottlebecks"
     ],
-    "position": 97
+    "position": 98
   },
   {
     "cite": "skryagin2024cna",
@@ -4180,7 +4222,7 @@
       "learnable-activation-functions",
       "oversmoothing"
     ],
-    "position": 98
+    "position": 99
   },
   {
     "cite": "deiseroth2024emnlp",
@@ -4219,7 +4261,7 @@
       "sparse-representations",
       "memory-efficient-embeddings"
     ],
-    "position": 99
+    "position": 100
   },
   {
     "cite": "nakamura2024aurora",
@@ -4310,7 +4352,7 @@
       "regulations",
       "policy"
     ],
-    "position": 100
+    "position": 101
   },
   {
     "cite": "tedeschi2024redteam",
@@ -4364,7 +4406,7 @@
       "regulations",
       "policy"
     ],
-    "position": 101
+    "position": 102
   },
   {
     "cite": "busch2024net",
@@ -4403,7 +4445,7 @@
       "neural-causal-models",
       "large-scale-inference"
     ],
-    "position": 102
+    "position": 103
   },
   {
     "cite": "shindo2024neumann",
@@ -4443,7 +4485,7 @@
       "object-centric-learning",
       "graph-neural-network"
     ],
-    "position": 103
+    "position": 104
   },
   {
     "cite": "brack2024unleashing",
@@ -4486,7 +4528,7 @@
       "semantic-control",
       "diffusion-transformers"
     ],
-    "position": 104
+    "position": 105
   },
   {
     "cite": "friedrich2025fair",
@@ -4529,7 +4571,7 @@
       "stable-diffusion",
       "ai-ethics"
     ],
-    "position": 105
+    "position": 106
   },
   {
     "cite": "struppeknemofmw",
@@ -4566,7 +4608,7 @@
       "diffusion-models",
       "stable-diffusion"
     ],
-    "position": 106
+    "position": 107
   },
   {
     "cite": "solaiman2024evaluatingsocialimpactgenerative",
@@ -4635,7 +4677,7 @@
       "accountability",
       "transparency"
     ],
-    "position": 107
+    "position": 108
   },
   {
     "cite": "delfosse2024ocalm",
@@ -4677,7 +4719,7 @@
       "arcade-games",
       "reward-modification"
     ],
-    "position": 108
+    "position": 109
   },
   {
     "cite": "delfosse2024hackatari",
@@ -4721,7 +4763,7 @@
       "continual-learning",
       "robustness"
     ],
-    "position": 109
+    "position": 110
   },
   {
     "cite": "hintersdorf24defending",
@@ -4761,7 +4803,7 @@
       "clip",
       "identity-inference-attacks"
     ],
-    "position": 110
+    "position": 111
   },
   {
     "cite": "czech24representation",
@@ -4799,7 +4841,7 @@
       "mcts",
       "input-representation"
     ],
-    "position": 111
+    "position": 112
   },
   {
     "cite": "seng2024ibohpc",
@@ -4839,7 +4881,7 @@
       "hyperparameter-optimization",
       "probabilistic-circuits"
     ],
-    "position": 112
+    "position": 113
   },
   {
     "cite": "poli2024mad",
@@ -4887,7 +4929,7 @@
       "convolutional-architectures",
       "recurrent-architectures"
     ],
-    "position": 113
+    "position": 114
   },
   {
     "cite": "steinmann2024intervene",
@@ -4925,7 +4967,7 @@
       "two-fold-memory",
       "learning"
     ],
-    "position": 114
+    "position": 115
   },
   {
     "cite": "braun2024cake",
@@ -4962,7 +5004,7 @@
       "knowledge-distillation",
       "student-teacher"
     ],
-    "position": 115
+    "position": 116
   },
   {
     "cite": "delfosse2024raRL",
@@ -4999,7 +5041,7 @@
       "deep-reinforcement-learning",
       "rational-activations"
     ],
-    "position": 116
+    "position": 117
   },
   {
     "cite": "struppek2024iclr",
@@ -5036,7 +5078,7 @@
       "model-inversion-attacks",
       "defense"
     ],
-    "position": 117
+    "position": 118
   },
   {
     "cite": "seng2024iclr",
@@ -5076,7 +5118,7 @@
       "square-based-losses",
       "scale"
     ],
-    "position": 118
+    "position": 119
   },
   {
     "cite": "wuest2024pix2code",
@@ -5115,7 +5157,7 @@
       "neuro-symbolic",
       "meta-learning"
     ],
-    "position": 119
+    "position": 120
   },
   {
     "cite": "poonia2024chiSPN",
@@ -5157,7 +5199,7 @@
       "fourier-stieltjes-transform",
       "neural-network"
     ],
-    "position": 120
+    "position": 121
   },
   {
     "cite": "brack2024ledits",
@@ -5200,7 +5242,7 @@
       "stable-diffusion",
       "semantics"
     ],
-    "position": 121
+    "position": 122
   },
   {
     "cite": "delfosse2024ocatari",
@@ -5243,7 +5285,7 @@
       "ram-extraction-method-(rem)",
       "vision-extraction-method-(vem)"
     ],
-    "position": 122
+    "position": 123
   },
   {
     "cite": "kalter2024bilevel",
@@ -5284,7 +5326,7 @@
       "whittle-networks",
       "bi-level-program"
     ],
-    "position": 123
+    "position": 124
   },
   {
     "cite": "paul2024collas",
@@ -5321,7 +5363,7 @@
       "masked-autoencoders",
       "continual-learning"
     ],
-    "position": 124
+    "position": 125
   },
   {
     "cite": "mathur2024aime",
@@ -5372,7 +5414,7 @@
       "new-hypertension",
       "preeclampsia"
     ],
-    "position": 125
+    "position": 126
   },
   {
     "cite": "moritz2024ratio",
@@ -5409,7 +5451,7 @@
       "interventions",
       "backtracking"
     ],
-    "position": 126
+    "position": 127
   },
   {
     "cite": "tedeschi2024alert",
@@ -5454,7 +5496,7 @@
       "evaluation",
       "risk-taxonomy"
     ],
-    "position": 127
+    "position": 128
   },
   {
     "cite": "busch2024conconarxiv",
@@ -5492,7 +5534,7 @@
       "confounders",
       "dataset"
     ],
-    "position": 128
+    "position": 129
   },
   {
     "cite": "wuest2024pix2codearxiv",
@@ -5531,7 +5573,7 @@
       "neuro-symbolic",
       "meta-learning"
     ],
-    "position": 129
+    "position": 130
   },
   {
     "cite": "nakamura2024auroram",
@@ -5612,7 +5654,7 @@
       "policy",
       "multilingual"
     ],
-    "position": 130
+    "position": 131
   },
   {
     "cite": "delfosse2024interpretablearxiv",
@@ -5651,7 +5693,7 @@
       "interpretability",
       "concept-bottlebecks"
     ],
-    "position": 131
+    "position": 132
   },
   {
     "cite": "keshmirian2024cogsci",
@@ -5699,7 +5741,7 @@
       "bayesian-networks",
       "causal-argumentation"
     ],
-    "position": 132
+    "position": 133
   },
   {
     "cite": "deiseroth2024dtm",
@@ -5744,7 +5786,7 @@
       "efficiency",
       "deep-learning"
     ],
-    "position": 133
+    "position": 134
   },
   {
     "cite": "kohaut2024hybrid",
@@ -5787,7 +5829,7 @@
       "routing",
       "neuro-symbolic-systems"
     ],
-    "position": 134
+    "position": 135
   },
   {
     "cite": "kohaut2024constitutional",
@@ -5823,7 +5865,7 @@
       "neuro-symbolic-systems",
       "bayesian-filters"
     ],
-    "position": 135
+    "position": 136
   },
   {
     "cite": "kohaut2024star",
@@ -5860,7 +5902,7 @@
       "probabilistic-logic",
       "navigation"
     ],
-    "position": 136
+    "position": 137
   },
   {
     "cite": "kohaut2024icuas",
@@ -5897,7 +5939,7 @@
       "probabilistic-inference",
       "logic"
     ],
-    "position": 137
+    "position": 138
   },
   {
     "cite": "zipperling24collafuse",
@@ -5933,7 +5975,7 @@
       "split-learning",
       "diffusion-models"
     ],
-    "position": 138
+    "position": 139
   },
   {
     "cite": "helfenstein2024checkmating",
@@ -5973,7 +6015,7 @@
       "monte-carlo-tree-search",
       "alphazero"
     ],
-    "position": 139
+    "position": 140
   },
   {
     "cite": "struppek2024adversarialllm",
@@ -6007,7 +6049,7 @@
       "large-language-models",
       "adversarial-examples"
     ],
-    "position": 140
+    "position": 141
   },
   {
     "cite": "struppek2024homoglyphs",
@@ -6049,7 +6091,7 @@
       "multimodal-systems",
       "cultural-biases"
     ],
-    "position": 141
+    "position": 142
   },
   {
     "cite": "keshmirian2024realign",
@@ -6097,7 +6139,7 @@
       "bayesian-networks",
       "causal-argumentation"
     ],
-    "position": 142
+    "position": 143
   },
   {
     "cite": "derstroff2024amplifying",
@@ -6135,7 +6177,7 @@
       "exploration-vs-exploitation",
       "upper-confidence-bounds-for-trees"
     ],
-    "position": 143
+    "position": 144
   },
   {
     "cite": "derstroff2023peer",
@@ -6176,7 +6218,7 @@
       "agent-communication",
       "multiagent-learning"
     ],
-    "position": 144
+    "position": 145
   },
   {
     "cite": "thomas2024decisions",
@@ -6225,7 +6267,7 @@
       "computational-cognitive-science",
       "no-end-of-theory"
     ],
-    "position": 145
+    "position": 146
   },
   {
     "cite": "hintersdorf2024clip_privacy",
@@ -6269,7 +6311,7 @@
       "clip",
       "deep-learning"
     ],
-    "position": 146
+    "position": 147
   },
   {
     "cite": "otto2024mlst",
@@ -6310,7 +6352,7 @@
       "satelite-conjunctions",
       "kepler-equation"
     ],
-    "position": 147
+    "position": 148
   },
   {
     "cite": "zecevic2024acml",
@@ -6347,7 +6389,7 @@
       "causal-link",
       "structural-causal-model"
     ],
-    "position": 148
+    "position": 149
   },
   {
     "cite": "ochs2024remote",
@@ -6388,7 +6430,7 @@
       "chance-detection",
       "pipeline-monitoring"
     ],
-    "position": 149
+    "position": 150
   },
   {
     "cite": "shindo2024deisam_arxiv",
@@ -6428,7 +6470,7 @@
       "segmentation",
       "textual-grounding"
     ],
-    "position": 150
+    "position": 151
   },
   {
     "cite": "mathur2024dai",
@@ -6468,7 +6510,7 @@
       "source-credibility",
       "probabilistic-circuit"
     ],
-    "position": 151
+    "position": 152
   },
   {
     "cite": "sudhakaran2023vision",
@@ -6502,7 +6544,7 @@
       "scene-graphs",
       "scene-understanding"
     ],
-    "position": 152
+    "position": 153
   },
   {
     "cite": "keller2023images",
@@ -6542,7 +6584,7 @@
       "hex",
       "alphazero"
     ],
-    "position": 153
+    "position": 154
   },
   {
     "cite": "hintersdorf23defendingbugs",
@@ -6582,7 +6624,7 @@
       "clip",
       "identity-inference-attacks"
     ],
-    "position": 154
+    "position": 155
   },
   {
     "cite": "brack2023ledits",
@@ -6625,7 +6667,7 @@
       "stable-diffusion",
       "semantics"
     ],
-    "position": 155
+    "position": 156
   },
   {
     "cite": "struppek23leveraging",
@@ -6664,7 +6706,7 @@
       "stable-diffusion",
       "text-to-image-synthesis"
     ],
-    "position": 156
+    "position": 157
   },
   {
     "cite": "friedrich2023xiltypology",
@@ -6710,7 +6752,7 @@
       "human-ai-interaction",
       "human-guided-ai"
     ],
-    "position": 157
+    "position": 158
   },
   {
     "cite": "struppek2023jair",
@@ -6752,7 +6794,7 @@
       "multimodal-systems",
       "cultural-biases"
     ],
-    "position": 158
+    "position": 159
   },
   {
     "cite": "stammer2023learning",
@@ -6794,7 +6836,7 @@
       "xai",
       "interpretability"
     ],
-    "position": 159
+    "position": 160
   },
   {
     "cite": "steinmann2023learning",
@@ -6832,7 +6874,7 @@
       "interactive-learning",
       "interpretability"
     ],
-    "position": 160
+    "position": 161
   },
   {
     "cite": "zecevic2023same",
@@ -6871,7 +6913,7 @@
       "neural-causal-models",
       "partially-causal-models"
     ],
-    "position": 161
+    "position": 162
   },
   {
     "cite": "zecevic2023parrots",
@@ -6911,7 +6953,7 @@
       "structural-causal-models",
       "causal-parrots"
     ],
-    "position": 162
+    "position": 163
   },
   {
     "cite": "shindo2023alphailp",
@@ -6949,7 +6991,7 @@
       "inductive-logic-programming",
       "object-centric-learning"
     ],
-    "position": 163
+    "position": 164
   },
   {
     "cite": "skyagin2023slash",
@@ -6991,7 +7033,7 @@
       "neural-networks",
       "neural-probabilistic-predicate"
     ],
-    "position": 164
+    "position": 165
   },
   {
     "cite": "yan2023privileged",
@@ -7030,7 +7072,7 @@
       "priviledged-information",
       "machine-learning"
     ],
-    "position": 165
+    "position": 166
   },
   {
     "cite": "willig2023consolidate",
@@ -7074,7 +7116,7 @@
       "simplification",
       "compression"
     ],
-    "position": 166
+    "position": 167
   },
   {
     "cite": "bellagente2023multifusion",
@@ -7124,7 +7166,7 @@
       "multimodality",
       "multilingualism"
     ],
-    "position": 167
+    "position": 168
   },
   {
     "cite": "deiseroth2023atman",
@@ -7166,7 +7208,7 @@
       "multimodal",
       "computer-vision"
     ],
-    "position": 168
+    "position": 169
   },
   {
     "cite": "brack2023sega",
@@ -7210,7 +7252,7 @@
       "concepts",
       "semantics"
     ],
-    "position": 169
+    "position": 170
   },
   {
     "cite": "yu2023neurips_cc",
@@ -7253,7 +7295,7 @@
       "mixed-models",
       "hybrid-data"
     ],
-    "position": 170
+    "position": 171
   },
   {
     "cite": "delfosse2023nudge",
@@ -7289,7 +7331,7 @@
       "neuro-symbolic-ai",
       "interpretable-and-explainable-ai"
     ],
-    "position": 171
+    "position": 172
   },
   {
     "cite": "brack2023distilling",
@@ -7328,7 +7370,7 @@
       "safety",
       "adversarial-prompting"
     ],
-    "position": 172
+    "position": 173
   },
   {
     "cite": "yu2023tpm_cc",
@@ -7367,7 +7409,7 @@
       "heterogeneous-data",
       "density-estimation"
     ],
-    "position": 173
+    "position": 174
   },
   {
     "cite": "delfosse2023nudge_arxiv",
@@ -7403,7 +7445,7 @@
       "neuro-symbolic-ai",
       "interpretable-and-explainable-ai"
     ],
-    "position": 174
+    "position": 175
   },
   {
     "cite": "shindo2023neumann",
@@ -7443,7 +7485,7 @@
       "object-centric-learning",
       "graph-neural-network"
     ],
-    "position": 175
+    "position": 176
   },
   {
     "cite": "sha2023nesy",
@@ -7481,7 +7523,7 @@
       "neuro-symbolic-ai",
       "object-centric-learning"
     ],
-    "position": 176
+    "position": 177
   },
   {
     "cite": "helff2023vlol",
@@ -7520,7 +7562,7 @@
       "benchmark",
       "dataset"
     ],
-    "position": 177
+    "position": 178
   },
   {
     "cite": "brack2023illume",
@@ -7558,7 +7600,7 @@
       "xai",
       "explanatory-interactive-learning"
     ],
-    "position": 178
+    "position": 179
   },
   {
     "cite": "schramowski2022safe",
@@ -7598,7 +7640,7 @@
       "stable-diffusion",
       "ethics"
     ],
-    "position": 179
+    "position": 180
   },
   {
     "cite": "sudhakaran2023iccv",
@@ -7638,7 +7680,7 @@
       "objects",
       "multimodal"
     ],
-    "position": 180
+    "position": 181
   },
   {
     "cite": "struppek2023iccv",
@@ -7677,7 +7719,7 @@
       "text2image-synthesis",
       "homoglyphs"
     ],
-    "position": 181
+    "position": 182
   },
   {
     "cite": "friedrich2023ecai",
@@ -7715,7 +7757,7 @@
       "revisions",
       "machine-ethics"
     ],
-    "position": 182
+    "position": 183
   },
   {
     "cite": "sidheekh2023uai",
@@ -7752,7 +7794,7 @@
       "deep-learning",
       "tractablity"
     ],
-    "position": 183
+    "position": 184
   },
   {
     "cite": "ventola2023uai",
@@ -7793,7 +7835,7 @@
       "tractable-dropput-inference",
       "robustness"
     ],
-    "position": 184
+    "position": 185
   },
   {
     "cite": "delfosse2023ecml",
@@ -7832,7 +7874,7 @@
       "reinforcement-learning",
       "motion-supervision"
     ],
-    "position": 185
+    "position": 186
   },
   {
     "cite": "kohaut2023md",
@@ -7869,7 +7911,7 @@
       "probabilistic-inference",
       "hybrid-probabilistic-logic"
     ],
-    "position": 186
+    "position": 187
   },
   {
     "cite": "mathur2023psb",
@@ -7909,7 +7951,7 @@
       "causal-independence",
       "gestational-diabete"
     ],
-    "position": 187
+    "position": 188
   },
   {
     "cite": "haemmerl2023fofindingsACL",
@@ -7952,7 +7994,7 @@
       "llm",
       "multi-lingual"
     ],
-    "position": 188
+    "position": 189
   },
   {
     "cite": "delfosse2023ocatari",
@@ -7991,7 +8033,7 @@
       "benchmarks",
       "reinforcement-learning"
     ],
-    "position": 189
+    "position": 190
   },
   {
     "cite": "weil2023knowYourEnemy",
@@ -8027,7 +8069,7 @@
       "supervised-learning",
       "reinforcement-learning"
     ],
-    "position": 190
+    "position": 191
   },
   {
     "cite": "bluml2023alphaze",
@@ -8068,7 +8110,7 @@
       "monte-carlo-tree-search",
       "perfect-information-monte-carlo"
     ],
-    "position": 191
+    "position": 192
   },
   {
     "cite": "czech2023representation",
@@ -8109,7 +8151,7 @@
       "monte-carlo-tree-search",
       "alphazero"
     ],
-    "position": 192
+    "position": 193
   },
   {
     "cite": "weil2023know",
@@ -8145,7 +8187,7 @@
       "supervised-learning",
       "reinforcement-learning"
     ],
-    "position": 193
+    "position": 194
   },
   {
     "cite": "flade2021error",
@@ -8184,7 +8226,7 @@
       "and-perception",
       "simulation-and-modeling"
     ],
-    "position": 194
+    "position": 195
   },
   {
     "cite": "buhler2018dynamic",
@@ -8217,7 +8259,7 @@
       "simulation-and-modeling",
       "autonomous-sailing"
     ],
-    "position": 195
+    "position": 196
   },
   {
     "cite": "brack2023mitigating",
@@ -8261,7 +8303,7 @@
       "evaluation",
       "mitigation"
     ],
-    "position": 196
+    "position": 197
   },
   {
     "cite": "friedrich2023oneexp",
@@ -8298,7 +8340,7 @@
       "human-ai-interaction",
       "human-guided-ai"
     ],
-    "position": 197
+    "position": 198
   },
   {
     "cite": "struppek23caia",
@@ -8338,7 +8380,7 @@
       "text-guided-image-generation",
       "stable-diffusion"
     ],
-    "position": 198
+    "position": 199
   },
   {
     "cite": "uhlig2022dlam",
@@ -8378,7 +8420,7 @@
       "anomaly-detection",
       "deep-learning"
     ],
-    "position": 199
+    "position": 200
   },
   {
     "cite": "ye2023metalogic",
@@ -8414,7 +8456,7 @@
       "meta-interpreter",
       "object-centric-reasoning"
     ],
-    "position": 200
+    "position": 201
   },
   {
     "cite": "deiseroth2022logicrank",
@@ -8451,7 +8493,7 @@
       "image-generation",
       "clip"
     ],
-    "position": 201
+    "position": 202
   },
   {
     "cite": "friedrich2023fair",
@@ -8494,7 +8536,7 @@
       "stable-diffusion",
       "ai-ethics"
     ],
-    "position": 202
+    "position": 203
   },
   {
     "cite": "pfeuffer2023xil",
@@ -8544,7 +8586,7 @@
       "imaging",
       "confounders"
     ],
-    "position": 203
+    "position": 204
   },
   {
     "cite": "ramanan2023codscomad",
@@ -8584,7 +8626,7 @@
       "boosting",
       "non-parametric"
     ],
-    "position": 204
+    "position": 205
   },
   {
     "cite": "brack2022Stable",
@@ -8627,7 +8669,7 @@
       "concepts",
       "semantics"
     ],
-    "position": 205
+    "position": 206
   },
   {
     "cite": "schuhmann2022laionb",
@@ -8679,7 +8721,7 @@
       "open-source",
       "clip"
     ],
-    "position": 206
+    "position": 207
   },
   {
     "cite": "alexopoulos2022how",
@@ -8708,7 +8750,7 @@
     "image": "./images/brack2022vullifetimes.png",
     "topics": [],
     "topicsNormalized": [],
-    "position": 207
+    "position": 208
   },
   {
     "cite": "kersting2022welt_clone",
@@ -8753,7 +8795,7 @@
       "ethics",
       "robots"
     ],
-    "position": 208
+    "position": 209
   },
   {
     "cite": "kersting2022welt_art",
@@ -8792,7 +8834,7 @@
       "art",
       "creativity"
     ],
-    "position": 209
+    "position": 210
   },
   {
     "cite": "schwegmann2022energy",
@@ -8839,7 +8881,7 @@
       "weather-research-and-forecasting-model-(wrf)",
       "measure-correlate-predict-(mcp)"
     ],
-    "position": 210
+    "position": 211
   },
   {
     "cite": "kersting2022welt_goodbad",
@@ -8882,7 +8924,7 @@
       "gene-experssion",
       "education"
     ],
-    "position": 211
+    "position": 212
   },
   {
     "cite": "trapp2022corsets_tpm",
@@ -8924,7 +8966,7 @@
       "efficient-learning",
       "generative-model"
     ],
-    "position": 212
+    "position": 213
   },
   {
     "cite": "brugger2022pythopathology",
@@ -8971,7 +9013,7 @@
       "machine-learning",
       "uv-range"
     ],
-    "position": 213
+    "position": 214
   },
   {
     "cite": "yu2022whittle",
@@ -9013,7 +9055,7 @@
       "deep-neural-networks",
       "lstm"
     ],
-    "position": 214
+    "position": 215
   },
   {
     "cite": "mundt2022clevacompass",
@@ -9049,7 +9091,7 @@
       "lifelong-learning",
       "machine-learning-evaluation"
     ],
-    "position": 215
+    "position": 216
   },
   {
     "cite": "stammer2022cvpr",
@@ -9089,7 +9131,7 @@
       "prototype-networks",
       "elementary-concept-learning"
     ],
-    "position": 216
+    "position": 217
   },
   {
     "cite": "struppek2022ppa",
@@ -9128,7 +9170,7 @@
       "privacy",
       "generative-adversarial-networks"
     ],
-    "position": 217
+    "position": 218
   },
   {
     "cite": "hintersdorf2022ijcai_trust",
@@ -9171,7 +9213,7 @@
       "overconfidence",
       "ood"
     ],
-    "position": 218
+    "position": 219
   },
   {
     "cite": "xie2022ijcai_verify",
@@ -9208,7 +9250,7 @@
       "deep-networks",
       "relative-verification"
     ],
-    "position": 219
+    "position": 220
   },
   {
     "cite": "moosavi2022adapters",
@@ -9244,7 +9286,7 @@
       "rational-activation",
       "learnable-activation"
     ],
-    "position": 220
+    "position": 221
   },
   {
     "cite": "pfanschilling2022kr_spll",
@@ -9282,7 +9324,7 @@
       "loop-language",
       "differentiable-programming"
     ],
-    "position": 221
+    "position": 222
   },
   {
     "cite": "skryagin2022kr_slash",
@@ -9323,7 +9365,7 @@
       "asp",
       "probabilistic-circuits"
     ],
-    "position": 222
+    "position": 223
   },
   {
     "cite": "struppek2022facct_hash",
@@ -9359,7 +9401,7 @@
       "client-side-scanning",
       "perceptual-hashing"
     ],
-    "position": 223
+    "position": 224
   },
   {
     "cite": "hintersdorf2022conpro_learning",
@@ -9395,7 +9437,7 @@
       "client-side-scanning",
       "perceptual-hashing"
     ],
-    "position": 224
+    "position": 225
   },
   {
     "cite": "schramowski2022facct_q16",
@@ -9436,7 +9478,7 @@
       "prompt-tuning",
       "clip"
     ],
-    "position": 225
+    "position": 226
   },
   {
     "cite": "karanam2022pgm_exspns",
@@ -9480,7 +9522,7 @@
       "csi-tree",
       "deep-models"
     ],
-    "position": 226
+    "position": 227
   },
   {
     "cite": "ameli2022aiai",
@@ -9519,7 +9561,7 @@
       "multi-sensor-data",
       "multivariate-time-series"
     ],
-    "position": 227
+    "position": 228
   },
   {
     "cite": "mwillig2022cfm",
@@ -9555,7 +9597,7 @@
       "foundation-models",
       "agi-discussion"
     ],
-    "position": 228
+    "position": 229
   },
   {
     "cite": "dsteinmann2022xlp",
@@ -9591,7 +9633,7 @@
       "xai",
       "linear-programs"
     ],
-    "position": 229
+    "position": 230
   },
   {
     "cite": "fbusch2022abnn",
@@ -9629,7 +9671,7 @@
       "linear-programs",
       "neural-encoding"
     ],
-    "position": 230
+    "position": 231
   },
   {
     "cite": "jseng2022tant",
@@ -9665,7 +9707,7 @@
       "causality",
       "variance-manipulation"
     ],
-    "position": 231
+    "position": 232
   },
   {
     "cite": "youssef2022cbp",
@@ -9703,7 +9745,7 @@
       "reinforcement-learning",
       "agi"
     ],
-    "position": 232
+    "position": 233
   },
   {
     "cite": "lang2022diff-sampling-spns",
@@ -9742,7 +9784,7 @@
       "differentiable-sampling",
       "deep-learning"
     ],
-    "position": 233
+    "position": 234
   },
   {
     "cite": "kersting2022welt_AIP",
@@ -9783,7 +9825,7 @@
       "imagen",
       "dall-e2"
     ],
-    "position": 234
+    "position": 235
   },
   {
     "cite": "friedrich2022hhai",
@@ -9823,7 +9865,7 @@
       "explainable-ai",
       "explanatory-interactive-learning"
     ],
-    "position": 235
+    "position": 236
   },
   {
     "cite": "zecevic2022osc",
@@ -9861,7 +9903,7 @@
       "graph-learning",
       "structure-discover"
     ],
-    "position": 236
+    "position": 237
   },
   {
     "cite": "friedrich2022xiltypology",
@@ -9897,7 +9939,7 @@
       "research-transparency-and-comparability",
       "explainable-artificial-intelligence-(xai)"
     ],
-    "position": 237
+    "position": 238
   },
   {
     "cite": "friedrich2022RiT",
@@ -9939,7 +9981,7 @@
       "interactive-learning",
       "human-centered-ai"
     ],
-    "position": 238
+    "position": 239
   },
   {
     "cite": "fang2022dpctgan",
@@ -9978,7 +10020,7 @@
       "gan",
       "medicial-data"
     ],
-    "position": 239
+    "position": 240
   },
   {
     "cite": "schramowski2022nmi_moral",
@@ -10025,7 +10067,7 @@
       "stereotypes",
       "moral-choices"
     ],
-    "position": 240
+    "position": 241
   },
   {
     "cite": "kordjamshidi22frontiers",
@@ -10068,7 +10110,7 @@
       "learning",
       "systems-ai"
     ],
-    "position": 241
+    "position": 242
   },
   {
     "cite": "petkovic2022kbs",
@@ -10108,7 +10150,7 @@
       "feature-ranking",
       "propositionalization"
     ],
-    "position": 242
+    "position": 243
   },
   {
     "cite": "schramowski2022q16",
@@ -10149,7 +10191,7 @@
       "prompt-tuning",
       "clip"
     ],
-    "position": 243
+    "position": 244
   },
   {
     "cite": "shao2022rightLatent",
@@ -10186,7 +10228,7 @@
       "interactive-learning",
       "debiasing"
     ],
-    "position": 244
+    "position": 245
   },
   {
     "cite": "rawal22frontiers",
@@ -10224,7 +10266,7 @@
       "social-robot",
       "deep-generative-model"
     ],
-    "position": 245
+    "position": 246
   },
   {
     "cite": "lang2021diffsamplingpcs",
@@ -10263,7 +10305,7 @@
       "differentiable-sampling",
       "deep-learning"
     ],
-    "position": 246
+    "position": 247
   },
   {
     "cite": "stammer2021icsni",
@@ -10297,7 +10339,7 @@
       "interactive-concept-learning",
       "prototype-representations"
     ],
-    "position": 247
+    "position": 248
   },
   {
     "cite": "skryagin2021slash",
@@ -10336,7 +10378,7 @@
       "probabilisitic-circuits",
       "object-centric-learning"
     ],
-    "position": 248
+    "position": 249
   },
   {
     "cite": "shindo2021nsfr",
@@ -10371,7 +10413,7 @@
       "differentiable-logic",
       "object-centric-reasoning"
     ],
-    "position": 249
+    "position": 250
   },
   {
     "cite": "willig2021tcl",
@@ -10407,7 +10449,7 @@
       "regularization",
       "neural-causal-models"
     ],
-    "position": 250
+    "position": 251
   },
   {
     "cite": "zecevic2021tncm",
@@ -10446,7 +10488,7 @@
       "tractable-causal-model",
       "inference"
     ],
-    "position": 251
+    "position": 252
   },
   {
     "cite": "shao2022ijar",
@@ -10491,7 +10533,7 @@
       "gating-functions",
       "deep-models"
     ],
-    "position": 252
+    "position": 253
   },
   {
     "cite": "kersting2022heise_zeitenwende",
@@ -10532,7 +10574,7 @@
       "allgemeine-ki",
       "ki-kreislaufwirtschaft"
     ],
-    "position": 253
+    "position": 254
   },
   {
     "cite": "kersting2022welt_notFunny",
@@ -10573,7 +10615,7 @@
       "scaling",
       "ai-sovereignty"
     ],
-    "position": 254
+    "position": 255
   },
   {
     "cite": "kersting2022welt_putUp",
@@ -10612,7 +10654,7 @@
       "nook",
       "bridge"
     ],
-    "position": 255
+    "position": 256
   },
   {
     "cite": "kersting2022welt_theory",
@@ -10651,7 +10693,7 @@
       "correlation",
       "causality"
     ],
-    "position": 256
+    "position": 257
   },
   {
     "cite": "kersting2022welt_helloWorld",
@@ -10690,7 +10732,7 @@
       "alphacode",
       "codeforces"
     ],
-    "position": 257
+    "position": 258
   },
   {
     "cite": "kersting2022welt_oath",
@@ -10726,7 +10768,7 @@
       "hippocrathic-oath",
       "responsibilty"
     ],
-    "position": 258
+    "position": 259
   },
   {
     "cite": "kersting2021welt_plurality",
@@ -10769,7 +10811,7 @@
       "chess",
       "co-evolution"
     ],
-    "position": 259
+    "position": 260
   },
   {
     "cite": "kersting2021welt_values",
@@ -10806,7 +10848,7 @@
       "rationality",
       "reasoning"
     ],
-    "position": 260
+    "position": 261
   },
   {
     "cite": "kersting2021welt_butterfly",
@@ -10847,7 +10889,7 @@
       "flooding",
       "climate-change"
     ],
-    "position": 261
+    "position": 262
   },
   {
     "cite": "schramowski2021inferring",
@@ -10887,7 +10929,7 @@
       "prompt-tuning",
       "clip"
     ],
-    "position": 262
+    "position": 263
   },
   {
     "cite": "zecevic2021scit",
@@ -10927,7 +10969,7 @@
       "interpretations",
       "human-study"
     ],
-    "position": 263
+    "position": 264
   },
   {
     "cite": "schramowski2021interactively",
@@ -10967,7 +11009,7 @@
       "transformer",
       "prototype-networks"
     ],
-    "position": 264
+    "position": 265
   },
   {
     "cite": "kersting2021welt_voice",
@@ -11008,7 +11050,7 @@
       "val-kilmer",
       "survivor"
     ],
-    "position": 265
+    "position": 266
   },
   {
     "cite": "zecevic2021neurips_ispns",
@@ -11051,7 +11093,7 @@
       "interventional-distribution",
       "tractable-causal-models"
     ],
-    "position": 266
+    "position": 267
   },
   {
     "cite": "ventola2021ilp_gcn",
@@ -11092,7 +11134,7 @@
       "relational-decision-trees",
       "genrative-clausal-networks"
     ],
-    "position": 267
+    "position": 268
   },
   {
     "cite": "yu2021span",
@@ -11129,7 +11171,7 @@
       "sum-product-attention-network",
       "transformer"
     ],
-    "position": 268
+    "position": 269
   },
   {
     "cite": "thoma2021recowns",
@@ -11173,7 +11215,7 @@
       "spectral-rnn",
       "probabilistic-circuits"
     ],
-    "position": 269
+    "position": 270
   },
   {
     "cite": "lang2021dafne",
@@ -11210,7 +11252,7 @@
       "one-stage",
       "anchor-free"
     ],
-    "position": 270
+    "position": 271
   },
   {
     "cite": "zecevic2021rgnntscm",
@@ -11246,7 +11288,7 @@
       "graph-neural-networks",
       "neural-causal-models"
     ],
-    "position": 271
+    "position": 272
   },
   {
     "cite": "vandenBroeck2021book_lifted",
@@ -11288,7 +11330,7 @@
       "statistical-relational-ai",
       "neuro-symbolic-ai"
     ],
-    "position": 272
+    "position": 273
   },
   {
     "cite": "kersting2021welt_birthday",
@@ -11325,7 +11367,7 @@
       "hype",
       "65-years-of-ai"
     ],
-    "position": 273
+    "position": 274
   },
   {
     "cite": "zecevic2021iposcm",
@@ -11362,7 +11404,7 @@
       "mathematical-programs",
       "perturbed-optimizers"
     ],
-    "position": 274
+    "position": 275
   },
   {
     "cite": "otte2021generative",
@@ -11398,7 +11440,7 @@
       "generative-adversarial-network",
       "image-generation"
     ],
-    "position": 275
+    "position": 276
   },
   {
     "cite": "wainakh2022popets_attack",
@@ -11441,7 +11483,7 @@
       "label-leakage",
       "gradients"
     ],
-    "position": 276
+    "position": 277
   },
   {
     "cite": "ramanan2021dami",
@@ -11482,7 +11524,7 @@
       "boosting",
       "structure-learning"
     ],
-    "position": 277
+    "position": 278
   },
   {
     "cite": "burkhardt2021frontier",
@@ -11524,7 +11566,7 @@
       "interpretable-ai",
       "first-order-convolutional-rules"
     ],
-    "position": 278
+    "position": 279
   },
   {
     "cite": "yu2021uai_momogps",
@@ -11569,7 +11611,7 @@
       "multi-ouput",
       "regression"
     ],
-    "position": 279
+    "position": 280
   },
   {
     "cite": "yu2021icml_wspn",
@@ -11614,7 +11656,7 @@
       "spectral",
       "fourier-transform"
     ],
-    "position": 280
+    "position": 281
   },
   {
     "cite": "kersting2021welt_angst",
@@ -11655,7 +11697,7 @@
       "online-ai-courses",
       "carolin-kebekus"
     ],
-    "position": 281
+    "position": 282
   },
   {
     "cite": "kersting2021welt_cern",
@@ -11696,7 +11738,7 @@
       "gpt-3",
       "zuse"
     ],
-    "position": 282
+    "position": 283
   },
   {
     "cite": "kersting2021welt_health",
@@ -11736,7 +11778,7 @@
       "data-donation",
       "federated-learning"
     ],
-    "position": 283
+    "position": 284
   },
   {
     "cite": "stelzner2021obsurf",
@@ -11779,7 +11821,7 @@
       "multiview-clevr",
       "multishapenet"
     ],
-    "position": 284
+    "position": 285
   },
   {
     "cite": "schramowski2021moral",
@@ -11826,7 +11868,7 @@
       "bias",
       "subspace"
     ],
-    "position": 285
+    "position": 286
   },
   {
     "cite": "kersting2021welt_quantum",
@@ -11860,7 +11902,7 @@
       "ai",
       "ai-compute-infrastructure"
     ],
-    "position": 286
+    "position": 287
   },
   {
     "cite": "kersting2021welt_bias",
@@ -11896,7 +11938,7 @@
       "humans",
       "discrimination"
     ],
-    "position": 287
+    "position": 288
   },
   {
     "cite": "stammer2021cvpr_right",
@@ -11941,7 +11983,7 @@
       "explainable-ai",
       "clevr"
     ],
-    "position": 288
+    "position": 289
   },
   {
     "cite": "czech2021icaps_mcgs",
@@ -11986,7 +12028,7 @@
       "upper-confidence-bounds-for-trees",
       "alphazero"
     ],
-    "position": 289
+    "position": 290
   },
   {
     "cite": "brugger2021plantPythology",
@@ -12032,7 +12074,7 @@
       "deep-learning",
       "self-attention"
     ],
-    "position": 290
+    "position": 291
   },
   {
     "cite": "kersting2021welt_aiexperts",
@@ -12069,7 +12111,7 @@
       "certificates",
       "self-proclaimed"
     ],
-    "position": 291
+    "position": 292
   },
   {
     "cite": "czech2021dist",
@@ -12106,7 +12148,7 @@
       "asynchronism",
       "population-based-reinforcement-learning"
     ],
-    "position": 292
+    "position": 293
   },
   {
     "cite": "shao2021aaai",
@@ -12147,7 +12189,7 @@
       "clever-hans",
       "human-centric-ai"
     ],
-    "position": 293
+    "position": 294
   },
   {
     "cite": "zintler2020stem4d.",
@@ -12192,7 +12234,7 @@
       "4d-stem-datas",
       "oxide-electronic-device-performance"
     ],
-    "position": 294
+    "position": 295
   },
   {
     "cite": "czech2020mcgs",
@@ -12237,7 +12279,7 @@
       "upper-confidencebounds-for-trees",
       "alphazero"
     ],
-    "position": 295
+    "position": 296
   },
   {
     "cite": "stammer2020right",
@@ -12282,7 +12324,7 @@
       "explainable-ai",
       "clevr"
     ],
-    "position": 296
+    "position": 297
   },
   {
     "cite": "delfosse2021recurrent",
@@ -12322,7 +12364,7 @@
       "activation-function",
       "reinforcement-learning"
     ],
-    "position": 297
+    "position": 298
   },
   {
     "cite": "zecevic2021ispn",
@@ -12363,7 +12405,7 @@
       "sum-product-networks",
       "interventional-distributions"
     ],
-    "position": 298
+    "position": 299
   },
   {
     "cite": "kersting2020welt_gpt3",
@@ -12404,7 +12446,7 @@
       "ellis",
       "claire"
     ],
-    "position": 299
+    "position": 300
   },
   {
     "cite": "hoos2020faz_3ai",
@@ -12444,7 +12486,7 @@
       "claire",
       "research-centers"
     ],
-    "position": 300
+    "position": 301
   },
   {
     "cite": "kersting2020ki_editorial",
@@ -12481,7 +12523,7 @@
       "learning",
       "reasoning"
     ],
-    "position": 301
+    "position": 302
   },
   {
     "cite": "fernandez2021cm_materialANN",
@@ -12517,7 +12559,7 @@
       "symmetries",
       "material-science"
     ],
-    "position": 302
+    "position": 303
   },
   {
     "cite": "turan2020icmi_alfie",
@@ -12555,7 +12597,7 @@
       "transformers",
       "human-centric-ai"
     ],
-    "position": 303
+    "position": 304
   },
   {
     "cite": "stelzner2020ood_gast",
@@ -12592,7 +12634,7 @@
       "sets",
       "permutation-invariance"
     ],
-    "position": 304
+    "position": 305
   },
   {
     "cite": "skryagin2020bbpr_spl",
@@ -12632,7 +12674,7 @@
       "sum-product-networks",
       "sum-product-logic"
     ],
-    "position": 305
+    "position": 306
   },
   {
     "cite": "solan2021icwsm",
@@ -12681,7 +12723,7 @@
       "online-discussions",
       "economics-of-convention"
     ],
-    "position": 306
+    "position": 307
   },
   {
     "cite": "solan2019arxiv",
@@ -12730,7 +12772,7 @@
       "online-discussions",
       "economics-of-convention"
     ],
-    "position": 307
+    "position": 308
   },
   {
     "cite": "shao2020pgm_cspns",
@@ -12773,7 +12815,7 @@
       "gating-functions",
       "deep-models"
     ],
-    "position": 308
+    "position": 309
   },
   {
     "cite": "ventola2020pgm_resspns",
@@ -12813,7 +12855,7 @@
       "lottery-ticket-hypothesis",
       "sparse-deep-networks"
     ],
-    "position": 309
+    "position": 310
   },
   {
     "cite": "ramanan2020pgm_boostedAC",
@@ -12851,7 +12893,7 @@
       "structure-learning",
       "boosting"
     ],
-    "position": 310
+    "position": 311
   },
   {
     "cite": "schramowski2020nmi_plantxml",
@@ -12898,7 +12940,7 @@
       "clever-hans",
       "plant-phenotyping"
     ],
-    "position": 311
+    "position": 312
   },
   {
     "cite": "fernandez2020materialANN_researchGate",
@@ -12934,7 +12976,7 @@
       "symmetries",
       "material-science"
     ],
-    "position": 312
+    "position": 313
   },
   {
     "cite": "das2020arxiv_gbql",
@@ -12973,7 +13015,7 @@
       "q-learning",
       "functional-boosting"
     ],
-    "position": 313
+    "position": 314
   },
   {
     "cite": "morris2020grlb",
@@ -13013,7 +13055,7 @@
       "120-graph-datasets",
       "benchmarks"
     ],
-    "position": 314
+    "position": 315
   },
   {
     "cite": "shao2020sum_msp",
@@ -13055,7 +13097,7 @@
       "min-sum-networks",
       "deep-models"
     ],
-    "position": 315
+    "position": 316
   },
   {
     "cite": "rienstra2020kr_dsepArg",
@@ -13091,7 +13133,7 @@
       "abstract-argumentation",
       "d-separation"
     ],
-    "position": 316
+    "position": 317
   },
   {
     "cite": "shao2020infspek_argML",
@@ -13129,7 +13171,7 @@
       "explainable-ai",
       "sum-product-networks"
     ],
-    "position": 317
+    "position": 318
   },
   {
     "cite": "peharz2020icml_einsum",
@@ -13174,7 +13216,7 @@
       "einsum-operation",
       "scaling"
     ],
-    "position": 318
+    "position": 319
   },
   {
     "cite": "schramowski2020moral",
@@ -13219,7 +13261,7 @@
       "moral-choices",
       "temporal"
     ],
-    "position": 319
+    "position": 320
   },
   {
     "cite": "czech2020crazyara",
@@ -13264,7 +13306,7 @@
       "world-champion",
       "mcts"
     ],
-    "position": 320
+    "position": 321
   },
   {
     "cite": "benedikt2020dagstuhl_logicAndLearning",
@@ -13301,7 +13343,7 @@
       "learning",
       "proceedings"
     ],
-    "position": 321
+    "position": 322
   },
   {
     "cite": "petkovic2020ismis",
@@ -13339,7 +13381,7 @@
       "relational-feature-importance",
       "feature-ranking"
     ],
-    "position": 322
+    "position": 323
   },
   {
     "cite": "hilprecht2020vldb",
@@ -13383,7 +13425,7 @@
       "database",
       "probabilistic-programming"
     ],
-    "position": 323
+    "position": 324
   },
   {
     "cite": "skryagin2020probprog",
@@ -13426,7 +13468,7 @@
       "statistical-relational-searning",
       "probabilistic-programming"
     ],
-    "position": 324
+    "position": 325
   },
   {
     "cite": "schramowski2020arxiv_plantxml",
@@ -13473,7 +13515,7 @@
       "clever-hans",
       "plant-phenotyping"
     ],
-    "position": 325
+    "position": 326
   },
   {
     "cite": "treiber2020ecai",
@@ -13518,7 +13560,7 @@
       "privacy",
       "privacy-preserving"
     ],
-    "position": 326
+    "position": 327
   },
   {
     "cite": "galassi2020frontiers",
@@ -13565,7 +13607,7 @@
       "machine-learning",
       "statistical-relational-ai"
     ],
-    "position": 327
+    "position": 328
   },
   {
     "cite": "czech2019deep",
@@ -13602,7 +13644,7 @@
       "deep-learning",
       "monte-carlo-tree-search"
     ],
-    "position": 328
+    "position": 329
   },
   {
     "cite": "sifa2020ki_games",
@@ -13639,7 +13681,7 @@
       "recommender-systems",
       "latent-factor-models"
     ],
-    "position": 329
+    "position": 330
   },
   {
     "cite": "kersting2019springer_ml",
@@ -13680,7 +13722,7 @@
       "popular-science",
       "von-studierenden"
     ],
-    "position": 330
+    "position": 331
   },
   {
     "cite": "weber2019fpt",
@@ -13720,7 +13762,7 @@
       "sum-product-networks",
       "fpga"
     ],
-    "position": 331
+    "position": 332
   },
   {
     "cite": "schramowski2019arxiv_bert",
@@ -13763,7 +13805,7 @@
       "norms",
       "social-bias"
     ],
-    "position": 332
+    "position": 333
   },
   {
     "cite": "kossen2020iclr_stove",
@@ -13808,7 +13850,7 @@
       "physical-interactions",
       "video"
     ],
-    "position": 333
+    "position": 334
   },
   {
     "cite": "kossen2019arxiv_stove",
@@ -13853,7 +13895,7 @@
       "physical-interactions",
       "video"
     ],
-    "position": 334
+    "position": 335
   },
   {
     "cite": "hilprecht2019deepDB",
@@ -13895,7 +13937,7 @@
       "cardinality-estimation",
       "sum-product-networks"
     ],
-    "position": 335
+    "position": 336
   },
   {
     "cite": "czech2019crazyara",
@@ -13940,7 +13982,7 @@
       "world-champion",
       "mcts"
     ],
-    "position": 336
+    "position": 337
   },
   {
     "cite": "molina2020iclr_pau",
@@ -13979,7 +14021,7 @@
       "rational-function",
       "padé-approximation"
     ],
-    "position": 337
+    "position": 338
   },
   {
     "cite": "ventola2019rspf",
@@ -14021,7 +14063,7 @@
       "residual-networks",
       "generative-model"
     ],
-    "position": 338
+    "position": 339
   },
   {
     "cite": "voelker2019ads",
@@ -14066,7 +14108,7 @@
       "data-reports",
       "jupyter-notebook"
     ],
-    "position": 339
+    "position": 340
   },
   {
     "cite": "peharz2019uai_ratspns",
@@ -14110,7 +14152,7 @@
       "random-models",
       "generative-model"
     ],
-    "position": 340
+    "position": 341
   },
   {
     "cite": "stelzner2019icml_SuPAIR",
@@ -14147,7 +14189,7 @@
       "unsupervised-scene-understanding",
       "deep-learning"
     ],
-    "position": 341
+    "position": 342
   },
   {
     "cite": "kaur2019ilp",
@@ -14186,7 +14228,7 @@
       "parameter-sharing",
       "statistical-relational-learning"
     ],
-    "position": 342
+    "position": 343
   },
   {
     "cite": "luedtke2019ki",
@@ -14222,7 +14264,7 @@
       "gaussian-mixture",
       "bayesian-filtering"
     ],
-    "position": 343
+    "position": 344
   },
   {
     "cite": "mahlein2019coplbi",
@@ -14265,7 +14307,7 @@
       "machine-learning",
       "genotype"
     ],
-    "position": 344
+    "position": 345
   },
   {
     "cite": "riguzzi2019frontiers",
@@ -14307,7 +14349,7 @@
       "machine-learning",
       "statistical-relational-ai"
     ],
-    "position": 345
+    "position": 346
   },
   {
     "cite": "brugger2019remoteSensing",
@@ -14352,7 +14394,7 @@
       "visualization-effects",
       "plant-phenotyping"
     ],
-    "position": 346
+    "position": 347
   },
   {
     "cite": "lioutikov2020",
@@ -14393,7 +14435,7 @@
       "bayesian-grammar-induction",
       "grammar-prior"
     ],
-    "position": 347
+    "position": 348
   },
   {
     "cite": "ramanan2019tpm",
@@ -14431,7 +14473,7 @@
       "structure-learning",
       "gradient-boosting"
     ],
-    "position": 348
+    "position": 349
   },
   {
     "cite": "kordjamshidi2019delbp",
@@ -14478,7 +14520,7 @@
       "declarative",
       "databases"
     ],
-    "position": 349
+    "position": 350
   },
   {
     "cite": "galassi2019argument",
@@ -14519,7 +14561,7 @@
       "neural-symbolic-learning",
       "reasoning"
     ],
-    "position": 350
+    "position": 351
   },
   {
     "cite": "shao2019tpm",
@@ -14564,7 +14606,7 @@
       "gating-nodes",
       "neural-conditionals"
     ],
-    "position": 351
+    "position": 352
   },
   {
     "cite": "kersting2019ml_bmbf",
@@ -14610,7 +14652,7 @@
       "deep-learning",
       "maschinelles-lernen"
     ],
-    "position": 352
+    "position": 353
   },
   {
     "cite": "kersting2019ki",
@@ -14651,7 +14693,7 @@
       "dblp",
       "google-scholar"
     ],
-    "position": 353
+    "position": 354
   },
   {
     "cite": "molina2019spflow",
@@ -14701,7 +14743,7 @@
       "library",
       "tractable-probabilistic-models"
     ],
-    "position": 354
+    "position": 355
   },
   {
     "cite": "kulessa2019query",
@@ -14740,7 +14782,7 @@
       "databases",
       "sql-queries"
     ],
-    "position": 355
+    "position": 356
   },
   {
     "cite": "jentzsch2019aies_moralChoiceMachine",
@@ -14778,7 +14820,7 @@
       "norms",
       "social-bias"
     ],
-    "position": 356
+    "position": 357
   },
   {
     "cite": "teso2019aies_XIML",
@@ -14816,7 +14858,7 @@
       "lime",
       "model-agnostic-explanations"
     ],
-    "position": 357
+    "position": 358
   },
   {
     "cite": "vergari2019aaai_abda",
@@ -14860,7 +14902,7 @@
       "automl",
       "density-estimation"
     ],
-    "position": 358
+    "position": 359
   },
   {
     "cite": "das2019aaai_couting",
@@ -14899,7 +14941,7 @@
       "approximate-counting",
       "hypergraphs"
     ],
-    "position": 359
+    "position": 360
   },
   {
     "cite": "kersting2018mlai",
@@ -14934,7 +14976,7 @@
       "ml=ai?",
       "editorial"
     ],
-    "position": 360
+    "position": 361
   },
   {
     "cite": "kersting2018ki_editorial",
@@ -14971,7 +15013,7 @@
       "computational-cognitive-science",
       "editorial"
     ],
-    "position": 361
+    "position": 362
   },
   {
     "cite": "stelzner2018probprog",
@@ -15019,7 +15061,7 @@
       "vae",
       "attend-infer-repeat"
     ],
-    "position": 362
+    "position": 363
   },
   {
     "cite": "das2018probprog",
@@ -15056,7 +15098,7 @@
       "statistical-relational-learning",
       "counting"
     ],
-    "position": 363
+    "position": 364
   },
   {
     "cite": "natarajan2018probprog",
@@ -15095,7 +15137,7 @@
       "human-in-the-loop",
       "interactive-ml"
     ],
-    "position": 364
+    "position": 365
   },
   {
     "cite": "sommer2018iccd",
@@ -15135,7 +15177,7 @@
       "deep-learning",
       "hardware-implementation"
     ],
-    "position": 365
+    "position": 366
   },
   {
     "cite": "ramanan2018kr_learningRLR",
@@ -15175,7 +15217,7 @@
       "gradient-boosting",
       "relational-logistic-regression"
     ],
-    "position": 366
+    "position": 367
   },
   {
     "cite": "vergari2018tpm",
@@ -15219,7 +15261,7 @@
       "density-analysis",
       "automl"
     ],
-    "position": 367
+    "position": 368
   },
   {
     "cite": "peharz2018ratspns",
@@ -15262,7 +15304,7 @@
       "random-models",
       "generative-model"
     ],
-    "position": 368
+    "position": 369
   },
   {
     "cite": "sommer2018tpm",
@@ -15302,7 +15344,7 @@
       "deep-learning",
       "hardware-implementation"
     ],
-    "position": 369
+    "position": 370
   },
   {
     "cite": "kordjamshidi2018ijcaiecai_systemsai",
@@ -15341,7 +15383,7 @@
       "complex-ai-systems",
       "survey"
     ],
-    "position": 370
+    "position": 371
   },
   {
     "cite": "gries2018esof",
@@ -15383,7 +15425,7 @@
       "communication-science",
       "linguistic-analysis"
     ],
-    "position": 371
+    "position": 372
   },
   {
     "cite": "bauer2018ecda",
@@ -15426,7 +15468,7 @@
       "production",
       "qualification-concept"
     ],
-    "position": 372
+    "position": 373
   },
   {
     "cite": "kolb2018ijcaiecai_xadds",
@@ -15469,7 +15511,7 @@
       "probabilsitic-inference",
       "smybolic-integration"
     ],
-    "position": 373
+    "position": 374
   },
   {
     "cite": "luedtke2018ijcaiecai_liftedFiltering",
@@ -15508,7 +15550,7 @@
       "planning",
       "symmetries"
     ],
-    "position": 374
+    "position": 375
   },
   {
     "cite": "antanas2019auro",
@@ -15549,7 +15591,7 @@
       "grasping",
       "hybrid-domains"
     ],
-    "position": 375
+    "position": 376
   },
   {
     "cite": "kersting2018ki",
@@ -15585,7 +15627,7 @@
       "algorithmic-challenges",
       "editorial"
     ],
-    "position": 376
+    "position": 377
   },
   {
     "cite": "teso2018explanatory",
@@ -15621,7 +15663,7 @@
       "active-learning",
       "explantory-interactive-learning"
     ],
-    "position": 377
+    "position": 378
   },
   {
     "cite": "schramowski2018neuralfw",
@@ -15660,7 +15702,7 @@
       "learnign-to-learn",
       "meta-learning"
     ],
-    "position": 378
+    "position": 379
   },
   {
     "cite": "luedtke2018liftedFiltering",
@@ -15699,7 +15741,7 @@
       "planning",
       "symmetries"
     ],
-    "position": 379
+    "position": 380
   },
   {
     "cite": "lioutikov2018icra_probGramMove",
@@ -15740,7 +15782,7 @@
       "bayesian-grammar-induction",
       "grammar-prior"
     ],
-    "position": 380
+    "position": 381
   },
   {
     "cite": "binnig2018sysml_deepVizdom",
@@ -15784,7 +15826,7 @@
       "generative-model",
       "sum-product-networks"
     ],
-    "position": 381
+    "position": 382
   },
   {
     "cite": "molina2018aaai_mspn",
@@ -15830,7 +15872,7 @@
       "automatic-statistician",
       "structure-learning"
     ],
-    "position": 382
+    "position": 383
   },
   {
     "cite": "molina2018aaai_cdn",
@@ -15875,7 +15917,7 @@
       "gaussian",
       "poisson"
     ],
-    "position": 383
+    "position": 384
   },
   {
     "cite": "vergari2018aaai_spae",
@@ -15921,7 +15963,7 @@
       "generative-model",
       "embedding"
     ],
-    "position": 384
+    "position": 385
   },
   {
     "cite": "kaur2017ilp_rrbms",
@@ -15961,7 +16003,7 @@
       "deep-learning",
       "random-walks"
     ],
-    "position": 385
+    "position": 386
   },
   {
     "cite": "wahabzada2017plosone",
@@ -16006,7 +16048,7 @@
       "convex-nmf",
       "machine-learning"
     ],
-    "position": 386
+    "position": 387
   },
   {
     "cite": "yang2017bibm",
@@ -16051,7 +16093,7 @@
       "poisson",
       "functional-gradient-boosting"
     ],
-    "position": 387
+    "position": 388
   },
   {
     "cite": "morris2017stochasticWL",
@@ -16092,7 +16134,7 @@
       "graph-kernels",
       "bounds"
     ],
-    "position": 388
+    "position": 389
   },
   {
     "cite": "kuska2017spectral",
@@ -16136,7 +16178,7 @@
       "hyperspectral-imaging",
       "machine-learning"
     ],
-    "position": 389
+    "position": 390
   },
   {
     "cite": "mahlein2017labfield",
@@ -16180,7 +16222,7 @@
       "hyperspectral-imaging",
       "machine-learning"
     ],
-    "position": 390
+    "position": 391
   },
   {
     "cite": "hallau2018cellphone",
@@ -16226,7 +16268,7 @@
       "classification",
       "plant-disease"
     ],
-    "position": 391
+    "position": 392
   },
   {
     "cite": "thimm2017lfu",
@@ -16260,7 +16302,7 @@
       "frequent-itemsets",
       "classification"
     ],
-    "position": 392
+    "position": 393
   },
   {
     "cite": "xu2017memoryNetworks",
@@ -16299,7 +16341,7 @@
       "deep-learning",
       "sentiment-analysis"
     ],
-    "position": 393
+    "position": 394
   },
   {
     "cite": "gurevych2017interactive",
@@ -16336,7 +16378,7 @@
       "interactive-machine-learning",
       "digitial-humanities"
     ],
-    "position": 394
+    "position": 395
   },
   {
     "cite": "kriege2019unifying",
@@ -16375,7 +16417,7 @@
       "kernel-trick",
       "phase-transition"
     ],
-    "position": 395
+    "position": 396
   },
   {
     "cite": "kriege2017unifying",
@@ -16414,7 +16456,7 @@
       "kernel-trick",
       "phase-transition"
     ],
-    "position": 396
+    "position": 397
   },
   {
     "cite": "morris2017global",
@@ -16449,7 +16491,7 @@
       "k-dimensional-weifeiler-lehman",
       "randomization"
     ],
-    "position": 397
+    "position": 398
   },
   {
     "cite": "molina2017poisson",
@@ -16488,7 +16530,7 @@
       "structure-learning",
       "deep-learning"
     ],
-    "position": 398
+    "position": 399
   },
   {
     "cite": "xu2017anomaly",
@@ -16527,7 +16569,7 @@
       "olad",
       "online"
     ],
-    "position": 399
+    "position": 400
   },
   {
     "cite": "mladenovBK17",
@@ -16562,7 +16604,7 @@
       "algebraic-decision-diagrams",
       "matrix-free-optimization"
     ],
-    "position": 400
+    "position": 401
   },
   {
     "cite": "mladenovKK17",
@@ -16603,7 +16645,7 @@
       "weisfeiler-lehmann",
       "svm"
     ],
-    "position": 401
+    "position": 402
   },
   {
     "cite": "serong2017publizistik",
@@ -16638,7 +16680,7 @@
     "topicsNormalized": [
       "datajournalism"
     ],
-    "position": 402
+    "position": 403
   },
   {
     "cite": "kersting2017relational",
@@ -16677,7 +16719,7 @@
       "symmetries",
       "weisfeiler-lehmann"
     ],
-    "position": 403
+    "position": 404
   },
   {
     "cite": "alfeld2017simplex",
@@ -16718,7 +16760,7 @@
       "simplex-volume-maximization",
       "material-science"
     ],
-    "position": 404
+    "position": 405
   },
   {
     "cite": "morris2016faster",
@@ -16754,7 +16796,7 @@
       "continuous-attributes",
       "hashing"
     ],
-    "position": 405
+    "position": 406
   },
   {
     "cite": "yang2016learning",
@@ -16790,7 +16832,7 @@
       "statistical-relational-learning",
       "functional-gradient-boosting"
     ],
-    "position": 406
+    "position": 407
   },
   {
     "cite": "das2016scaling",
@@ -16827,7 +16869,7 @@
       "graph-databases",
       "approximate-counting"
     ],
-    "position": 407
+    "position": 408
   },
   {
     "cite": "habel2016traffic",
@@ -16866,7 +16908,7 @@
       "dependeny-networks",
       "functional-gradient-boosting"
     ],
-    "position": 408
+    "position": 409
   },
   {
     "cite": "mladenovHKGK16",
@@ -16905,7 +16947,7 @@
       "symmetries",
       "lifted-inference"
     ],
-    "position": 409
+    "position": 410
   },
   {
     "cite": "natarajanSWVK16",
@@ -16944,7 +16986,7 @@
       "statistical-relational-learning",
       "functional-gradient-boosting"
     ],
-    "position": 410
+    "position": 411
   },
   {
     "cite": "erdmannBKNPMMMR16",
@@ -16982,7 +17024,7 @@
     "topicsNormalized": [
       "datajournalism"
     ],
-    "position": 411
+    "position": 412
   },
   {
     "cite": "kersting2016feeding",
@@ -17024,7 +17066,7 @@
       "hyperspectral-images",
       "simplex-volume-maximiaztion"
     ],
-    "position": 412
+    "position": 413
   },
   {
     "cite": "laessig2016",
@@ -17057,7 +17099,7 @@
       "edited-volume",
       "sustainability"
     ],
-    "position": 413
+    "position": 414
   },
   {
     "cite": "deraedt2016",
@@ -17093,7 +17135,7 @@
       "statistical-relational-ai",
       "introduction"
     ],
-    "position": 414
+    "position": 415
   },
   {
     "cite": "szymanskiKK16",
@@ -17126,7 +17168,7 @@
       "multi-label-classification",
       "community-detection"
     ],
-    "position": 415
+    "position": 416
   },
   {
     "cite": "alfeld2016non",
@@ -17167,7 +17209,7 @@
       "simplex-volume-maximization",
       "material-science"
     ],
-    "position": 416
+    "position": 417
   },
   {
     "cite": "wahabzada2016plant",
@@ -17207,7 +17249,7 @@
       "latent-dirichlet-allocation",
       "sustainability"
     ],
-    "position": 417
+    "position": 418
   },
   {
     "cite": "neumann2016propagation",
@@ -17247,7 +17289,7 @@
       "random-walks",
       "information-propagation"
     ],
-    "position": 418
+    "position": 419
   },
   {
     "cite": "bauckhage2016collective",
@@ -17283,7 +17325,7 @@
       "distance-distribution",
       "generalized-gamma"
     ],
-    "position": 419
+    "position": 420
   },
   {
     "cite": "leuker2016hyperspectral",
@@ -17329,7 +17371,7 @@
       "quantitative-trait-loci",
       "simplex-volume-maximization"
     ],
-    "position": 420
+    "position": 421
   },
   {
     "cite": "bauckhage2015maximum",
@@ -17368,7 +17410,7 @@
       "maxumum-entropy",
       "undirected-network"
     ],
-    "position": 421
+    "position": 422
   },
   {
     "cite": "natarajan2015effectively",
@@ -17406,7 +17448,7 @@
       "statistical-relational-learning",
       "functional-gradient-boosting"
     ],
-    "position": 422
+    "position": 423
   },
   {
     "cite": "yang2015modeling",
@@ -17443,7 +17485,7 @@
       "coronary-artery-calcification",
       "behavioral-data"
     ],
-    "position": 423
+    "position": 424
   },
   {
     "cite": "bauckhage2015viral",
@@ -17478,7 +17520,7 @@
       "sir-model",
       "viral-models"
     ],
-    "position": 424
+    "position": 425
   },
   {
     "cite": "mladenov2015equitable",
@@ -17518,7 +17560,7 @@
       "weifeiler-lehmann",
       "marginals"
     ],
-    "position": 425
+    "position": 426
   },
   {
     "cite": "bauckhage2015parameterizing",
@@ -17557,7 +17599,7 @@
       "undirected-networks",
       "maximum-entropy"
     ],
-    "position": 426
+    "position": 427
   },
   {
     "cite": "hadiji2015computer",
@@ -17599,7 +17641,7 @@
       "statistical-laws",
       "migration"
     ],
-    "position": 427
+    "position": 428
   },
   {
     "cite": "kumaraswamy2015transfer",
@@ -17636,7 +17678,7 @@
       "statistical-relational-learning",
       "type-matching"
     ],
-    "position": 428
+    "position": 429
   },
   {
     "cite": "sifa2015predicting",
@@ -17674,7 +17716,7 @@
       "predictions",
       "free-to-play-games"
     ],
-    "position": 429
+    "position": 430
   },
   {
     "cite": "ide2015lte",
@@ -17714,7 +17756,7 @@
       "lte-conectivity",
       "vehicular-traffic-prediction"
     ],
-    "position": 430
+    "position": 431
   },
   {
     "cite": "bauckhage2015archetypal",
@@ -17748,7 +17790,7 @@
       "simplex-volume-maximization",
       "autoencoder"
     ],
-    "position": 431
+    "position": 432
   },
   {
     "cite": "bauckhage2015cell",
@@ -17786,7 +17828,7 @@
       "plant-disease",
       "classification"
     ],
-    "position": 432
+    "position": 433
   },
   {
     "cite": "natarajan2015boosting",
@@ -17828,7 +17870,7 @@
       "reinforcement-learning",
       "structure-learning"
     ],
-    "position": 433
+    "position": 434
   },
   {
     "cite": "khot2015gradient",
@@ -17868,7 +17910,7 @@
       "missing-data",
       "em"
     ],
-    "position": 434
+    "position": 435
   },
   {
     "cite": "wahabzada2015metro",
@@ -17912,7 +17954,7 @@
       "simplex-volume-maximization",
       "interpretable-matrix-factorization"
     ],
-    "position": 435
+    "position": 436
   },
   {
     "cite": "kuska2015hyperspectral",
@@ -17956,7 +17998,7 @@
       "mircoscope",
       "simplex-volume-maximization"
     ],
-    "position": 436
+    "position": 437
   },
   {
     "cite": "kersting2015statistical",
@@ -17988,7 +18030,7 @@
       "overview",
       "statistical-relational-ai"
     ],
-    "position": 437
+    "position": 438
   },
   {
     "cite": "hadiji2015poisson",
@@ -18024,7 +18066,7 @@
       "multivariate-poisson",
       "funcational-gradient-boosting"
     ],
-    "position": 438
+    "position": 439
   },
   {
     "cite": "wahabzada2015automated",
@@ -18064,7 +18106,7 @@
       "laser-scan",
       "simplex-volume-maximization"
     ],
-    "position": 439
+    "position": 440
   },
   {
     "cite": "neumann2015pygps",
@@ -18100,7 +18142,7 @@
       "gaussian-processes",
       "python"
     ],
-    "position": 440
+    "position": 441
   },
   {
     "cite": "bauckhage2014strong",
@@ -18134,7 +18176,7 @@
       "diffusion-models",
       "social-media"
     ],
-    "position": 441
+    "position": 442
   },
   {
     "cite": "kersting2014relational",
@@ -18171,7 +18213,7 @@
       "symmetries",
       "lifted-inference"
     ],
-    "position": 442
+    "position": 443
   },
   {
     "cite": "neumann2014propagation",
@@ -18211,7 +18253,7 @@
       "random-walks",
       "weisfeiler-lehmann"
     ],
-    "position": 443
+    "position": 444
   },
   {
     "cite": "antanas2014high",
@@ -18256,7 +18298,7 @@
       "affordance",
       "domain-knowledge"
     ],
-    "position": 444
+    "position": 445
   },
   {
     "cite": "alfeld2014non",
@@ -18296,7 +18338,7 @@
       "simplex-volume-maximization",
       "material-science"
     ],
-    "position": 445
+    "position": 446
   },
   {
     "cite": "grohe2014dimension",
@@ -18336,7 +18378,7 @@
       "symmetries",
       "matrices"
     ],
-    "position": 446
+    "position": 447
   },
   {
     "cite": "bauckhage2014collective",
@@ -18371,7 +18413,7 @@
       "social-media",
       "collective-attention"
     ],
-    "position": 447
+    "position": 448
   },
   {
     "cite": "mladenov2014efficient",
@@ -18414,7 +18456,7 @@
       "k-locality",
       "tightening"
     ],
-    "position": 448
+    "position": 449
   },
   {
     "cite": "apsel2014lifting",
@@ -18455,7 +18497,7 @@
       "symmetries",
       "sherali-adams"
     ],
-    "position": 449
+    "position": 450
   },
   {
     "cite": "neumann2014erosion",
@@ -18494,7 +18536,7 @@
       "classification",
       "sustainability"
     ],
-    "position": 450
+    "position": 451
   },
   {
     "cite": "hernandez2014mind",
@@ -18531,7 +18573,7 @@
       "privileged-information",
       "lupi"
     ],
-    "position": 451
+    "position": 452
   },
   {
     "cite": "kersting2014power",
@@ -18569,7 +18611,7 @@
       "page-rank",
       "equivalence"
     ],
-    "position": 452
+    "position": 453
   },
   {
     "cite": "poole2014population",
@@ -18606,7 +18648,7 @@
       "relational-logistic-regression",
       "population-size"
     ],
-    "position": 453
+    "position": 454
   },
   {
     "cite": "mladenov2014lifted",
@@ -18649,7 +18691,7 @@
       "reparametrization",
       "energies"
     ],
-    "position": 454
+    "position": 455
   },
   {
     "cite": "hadiji2014predicting",
@@ -18687,7 +18729,7 @@
       "computer-games",
       "free-to-play-games"
     ],
-    "position": 455
+    "position": 456
   },
   {
     "cite": "yang2014learning",
@@ -18727,7 +18769,7 @@
       "imbalanced-data",
       "soft-margin"
     ],
-    "position": 456
+    "position": 457
   },
   {
     "cite": "kriege2014explicit",
@@ -18763,7 +18805,7 @@
       "explicit-feature-map",
       "phase-transition"
     ],
-    "position": 457
+    "position": 458
   },
   {
     "cite": "apsel2014lifting_ws",
@@ -18804,7 +18846,7 @@
       "symmetries",
       "sherali-adams"
     ],
-    "position": 458
+    "position": 459
   },
   {
     "cite": "kazemi2014relational",
@@ -18843,7 +18885,7 @@
       "markov-logic-networks",
       "population-size"
     ],
-    "position": 459
+    "position": 460
   },
   {
     "cite": "poyrekar2014deeper",
@@ -18880,7 +18922,7 @@
       "symmetries",
       "grounding"
     ],
-    "position": 460
+    "position": 461
   },
   {
     "cite": "natarajan2014relational",
@@ -18925,7 +18967,7 @@
       "classification",
       "relational-grids"
     ],
-    "position": 461
+    "position": 462
   },
   {
     "cite": "bauckhage2014kunstliche",
@@ -18960,7 +19002,7 @@
       "computer-games",
       "artificial-intelligence"
     ],
-    "position": 462
+    "position": 463
   },
   {
     "cite": "hadiji2013geodblp",
@@ -19002,7 +19044,7 @@
       "statistical-laws",
       "migration"
     ],
-    "position": 463
+    "position": 464
   },
   {
     "cite": "bauckhage2013efficient",
@@ -19036,7 +19078,7 @@
       "information-theoretic",
       "discrete-lattices"
     ],
-    "position": 464
+    "position": 465
   },
   {
     "cite": "natarajan2013accelerating",
@@ -19076,7 +19118,7 @@
       "transfer-learning",
       "relational-domains"
     ],
-    "position": 465
+    "position": 466
   },
   {
     "cite": "bauckhage2013mathematical",
@@ -19113,7 +19155,7 @@
       "memes",
       "statistical-models"
     ],
-    "position": 466
+    "position": 467
   },
   {
     "cite": "natarajan2013early",
@@ -19152,7 +19194,7 @@
       "functional-gradient-boosting",
       "coronary-artery-calcification"
     ],
-    "position": 467
+    "position": 468
   },
   {
     "cite": "khot2013learning",
@@ -19190,7 +19232,7 @@
       "em",
       "functional-gradient-boosting"
     ],
-    "position": 468
+    "position": 469
   },
   {
     "cite": "neumann2013coinciding",
@@ -19225,7 +19267,7 @@
       "coinciding-walks",
       "random-walks"
     ],
-    "position": 469
+    "position": 470
   },
   {
     "cite": "mahlein2013hypersectral",
@@ -19264,7 +19306,7 @@
       "interpretable-matrix-factorization",
       "sustainability"
     ],
-    "position": 470
+    "position": 471
   },
   {
     "cite": "ballvora2013deep",
@@ -19305,7 +19347,7 @@
       "plant-phenotyping",
       "simplex-volume-maximization"
     ],
-    "position": 471
+    "position": 472
   },
   {
     "cite": "hadiji2013aaai_reduce",
@@ -19343,7 +19385,7 @@
       "map",
       "likelihood-maximization"
     ],
-    "position": 472
+    "position": 473
   },
   {
     "cite": "hadiji2013reduce",
@@ -19381,7 +19423,7 @@
       "map",
       "likelihood-maximization"
     ],
-    "position": 473
+    "position": 474
   },
   {
     "cite": "neumann2013graph_ws",
@@ -19418,7 +19460,7 @@
       "robotics",
       "grasping"
     ],
-    "position": 474
+    "position": 475
   },
   {
     "cite": "neumann2013coinciding_ws",
@@ -19453,7 +19495,7 @@
       "coinciding-walks",
       "graph-kernels"
     ],
-    "position": 475
+    "position": 476
   },
   {
     "cite": "ahmadi2013mapreduce",
@@ -19490,7 +19532,7 @@
       "belief-propagation",
       "statistical-relational-ai"
     ],
-    "position": 476
+    "position": 477
   },
   {
     "cite": "mladenov2013lifted",
@@ -19530,7 +19572,7 @@
       "tighteting",
       "map"
     ],
-    "position": 477
+    "position": 478
   },
   {
     "cite": "natarajan2013using_ws",
@@ -19570,7 +19612,7 @@
       "commonsense-knowledge",
       "functional-gradient-boosting"
     ],
-    "position": 478
+    "position": 479
   },
   {
     "cite": "bauckhage2013weibull",
@@ -19607,7 +19649,7 @@
       "distance-distribution",
       "undirected-network"
     ],
-    "position": 479
+    "position": 480
   },
   {
     "cite": "bauckhage2013can",
@@ -19641,7 +19683,7 @@
       "aesthetic",
       "images"
     ],
-    "position": 480
+    "position": 481
   },
   {
     "cite": "ahmadi2013exploiting",
@@ -19685,7 +19727,7 @@
       "stochastic-gradient",
       "map-reduce"
     ],
-    "position": 481
+    "position": 482
   },
   {
     "cite": "bauckhage2013data",
@@ -19721,7 +19763,7 @@
       "agriculture",
       "sustainability"
     ],
-    "position": 482
+    "position": 483
   },
   {
     "cite": "kersting2012say",
@@ -19757,7 +19799,7 @@
       "structure-learning",
       "complex-sequences"
     ],
-    "position": 483
+    "position": 484
   },
   {
     "cite": "blockeel2012revised",
@@ -19789,7 +19831,7 @@
     "topicsNormalized": [
       "publication-model"
     ],
-    "position": 484
+    "position": 485
   },
   {
     "cite": "wahabzada2012latent",
@@ -19834,7 +19876,7 @@
       "online",
       "variational"
     ],
-    "position": 485
+    "position": 486
   },
   {
     "cite": "kersting2012simplex",
@@ -19877,7 +19919,7 @@
       "simplex-distribuation",
       "kl-divergence"
     ],
-    "position": 486
+    "position": 487
   },
   {
     "cite": "thurau2012deterministic",
@@ -19914,7 +19956,7 @@
       "simplex-volume-maximization",
       "deterministic"
     ],
-    "position": 487
+    "position": 488
   },
   {
     "cite": "mladenov2012lifted",
@@ -19953,7 +19995,7 @@
       "weisfeiler-lehmann",
       "colour-refinement"
     ],
-    "position": 488
+    "position": 489
   },
   {
     "cite": "schiegg2012markov",
@@ -19990,7 +20032,7 @@
       "gaussian-processes",
       "joint-training"
     ],
-    "position": 489
+    "position": 490
   },
   {
     "cite": "kersting2012pre",
@@ -20040,7 +20082,7 @@
       "simplex-volume-maximization",
       "plant-phenotyping"
     ],
-    "position": 490
+    "position": 491
   },
   {
     "cite": "kersting2012matrix",
@@ -20078,7 +20120,7 @@
       "simplex-volume-maximization",
       "search"
     ],
-    "position": 491
+    "position": 492
   },
   {
     "cite": "neumann2012efficient",
@@ -20118,7 +20160,7 @@
       "weisfeiler-lehmann",
       "symmtries"
     ],
-    "position": 492
+    "position": 493
   },
   {
     "cite": "bauckhage2012players",
@@ -20156,7 +20198,7 @@
       "weilbull",
       "computer-games"
     ],
-    "position": 493
+    "position": 494
   },
   {
     "cite": "ahmadi2012lifted",
@@ -20193,7 +20235,7 @@
       "stochastic-gradients",
       "relational-domain"
     ],
-    "position": 494
+    "position": 495
   },
   {
     "cite": "kersting2012lifted",
@@ -20226,7 +20268,7 @@
       "lifted-inference",
       "statistical-relational-ai"
     ],
-    "position": 495
+    "position": 496
   },
   {
     "cite": "fierens2012pairwise",
@@ -20265,7 +20307,7 @@
       "markov-logic-networks",
       "pairwise"
     ],
-    "position": 496
+    "position": 497
   },
   {
     "cite": "zamani2012symbolic",
@@ -20307,7 +20349,7 @@
       "continous-states",
       "continuous-actions"
     ],
-    "position": 497
+    "position": 498
   },
   {
     "cite": "natarajan2012machine",
@@ -20352,7 +20394,7 @@
       "functional-gradient-boosting",
       "relational-grids"
     ],
-    "position": 498
+    "position": 499
   },
   {
     "cite": "xu2012efficient",
@@ -20391,7 +20433,7 @@
       "ultra-fast",
       "approximate-nearest-neighbour"
     ],
-    "position": 499
+    "position": 500
   },
   {
     "cite": "wahabzada2012uai",
@@ -20436,7 +20478,7 @@
       "online",
       "variational"
     ],
-    "position": 500
+    "position": 501
   },
   {
     "cite": "khot2012structure",
@@ -20474,7 +20516,7 @@
       "missing-data",
       "markov-logic-networks"
     ],
-    "position": 501
+    "position": 502
   },
   {
     "cite": "neumann2012propagation",
@@ -20513,7 +20555,7 @@
       "random-walks",
       "label-propagation"
     ],
-    "position": 502
+    "position": 503
   },
   {
     "cite": "natarajan2012early",
@@ -20556,7 +20598,7 @@
       "longitudinal-study",
       "funcational-gradient-boosting"
     ],
-    "position": 503
+    "position": 504
   },
   {
     "cite": "ahmadi2012lifted_ws",
@@ -20593,7 +20635,7 @@
       "parameter-estimation",
       "markov-logic-networks"
     ],
-    "position": 504
+    "position": 505
   },
   {
     "cite": "poole2012aggregation",
@@ -20629,7 +20671,7 @@
       "population-size",
       "relational-logistic-regression"
     ],
-    "position": 505
+    "position": 506
   },
   {
     "cite": "kersting2012stairs",
@@ -20659,7 +20701,7 @@
     "topicsNormalized": [
       "proceedings"
     ],
-    "position": 506
+    "position": 507
   },
   {
     "cite": "natarajan2012gradient",
@@ -20698,7 +20740,7 @@
       "dependency-networks",
       "relational-domains"
     ],
-    "position": 507
+    "position": 508
   },
   {
     "cite": "thurau2012descriptive",
@@ -20736,7 +20778,7 @@
       "linear-time",
       "simplex-volume-maximization"
     ],
-    "position": 508
+    "position": 509
   },
   {
     "cite": "romer2012early",
@@ -20787,7 +20829,7 @@
       "drougth-stress",
       "interpretable-matrix-factorization"
     ],
-    "position": 509
+    "position": 510
   },
   {
     "cite": "bauckhage2012agriculture",
@@ -20822,7 +20864,7 @@
       "agriculture",
       "sustainability"
     ],
-    "position": 510
+    "position": 511
   },
   {
     "cite": "lang2012exploration",
@@ -20863,7 +20905,7 @@
       "relational-reinforcement-learning",
       "markov-decision-processes"
     ],
-    "position": 511
+    "position": 512
   },
   {
     "cite": "ahmadi2011multi",
@@ -20904,7 +20946,7 @@
       "page-rank",
       "multiple-evidence"
     ],
-    "position": 512
+    "position": 513
   },
   {
     "cite": "wahabzada2011more",
@@ -20944,7 +20986,7 @@
       "active-learning",
       "mini-batch-scheduling"
     ],
-    "position": 513
+    "position": 514
   },
   {
     "cite": "wahabzada2011larger",
@@ -20982,7 +21024,7 @@
       "stochastic-gradient",
       "informed-sampling"
     ],
-    "position": 514
+    "position": 515
   },
   {
     "cite": "jawad2011traffic",
@@ -21015,7 +21057,7 @@
       "sequence-logo",
       "traffic-data"
     ],
-    "position": 515
+    "position": 516
   },
   {
     "cite": "neumann2011markov",
@@ -21050,7 +21092,7 @@
       "clustering-on-demand",
       "information-retrieval"
     ],
-    "position": 516
+    "position": 517
   },
   {
     "cite": "hadiji2011efficient",
@@ -21089,7 +21131,7 @@
       "sequental-clamping",
       "sampling"
     ],
-    "position": 517
+    "position": 518
   },
   {
     "cite": "natarajan2011imitation",
@@ -21128,7 +21170,7 @@
       "imitation-learning",
       "relational-domains"
     ],
-    "position": 518
+    "position": 519
   },
   {
     "cite": "xu2011multi",
@@ -21162,7 +21204,7 @@
       "gaussian-processes",
       "multi-task-learning"
     ],
-    "position": 519
+    "position": 520
   },
   {
     "cite": "khot2011learning",
@@ -21200,7 +21242,7 @@
       "markov-logic-networks",
       "structure-learning"
     ],
-    "position": 520
+    "position": 521
   },
   {
     "cite": "sanner2011symbolic",
@@ -21236,7 +21278,7 @@
       "optimal-actions",
       "relational-markov-decision-processes"
     ],
-    "position": 521
+    "position": 522
   },
   {
     "cite": "de2011statistical",
@@ -21268,7 +21310,7 @@
       "intoduction",
       "statistical-relational-learning"
     ],
-    "position": 522
+    "position": 523
   },
   {
     "cite": "ahmadi2011scientist",
@@ -21304,7 +21346,7 @@
       "affiliation-propagation",
       "geo-tags"
     ],
-    "position": 523
+    "position": 524
   },
   {
     "cite": "ahmadi2011lifted",
@@ -21342,7 +21384,7 @@
       "page-rank",
       "kalman-filter"
     ],
-    "position": 524
+    "position": 525
   },
   {
     "cite": "kersting2011statistical",
@@ -21375,7 +21417,7 @@
       "statistical-relaitonal-ai",
       "overview"
     ],
-    "position": 525
+    "position": 526
   },
   {
     "cite": "thurau2011convex",
@@ -21413,7 +21455,7 @@
       "massive-data",
       "non-negative"
     ],
-    "position": 526
+    "position": 527
   },
   {
     "cite": "joshi2011decision",
@@ -21452,7 +21494,7 @@
       "optimal-actions",
       "relational-markov-decision-processes"
     ],
-    "position": 527
+    "position": 528
   },
   {
     "cite": "schmidt2011perception",
@@ -21485,7 +21527,7 @@
       "position-statement",
       "cyber-physical-systems"
     ],
-    "position": 528
+    "position": 529
   },
   {
     "cite": "sanner2010symbolic",
@@ -21521,7 +21563,7 @@
       "relational-markov-decision-processes",
       "partially-observed"
     ],
-    "position": 529
+    "position": 530
   },
   {
     "cite": "joshi2010self",
@@ -21560,7 +21602,7 @@
       "sampling",
       "reduction"
     ],
-    "position": 530
+    "position": 531
   },
   {
     "cite": "natarajan2010boosting",
@@ -21599,7 +21641,7 @@
       "dependency-networks",
       "relational-domains"
     ],
-    "position": 531
+    "position": 532
   },
   {
     "cite": "lang2010exploration",
@@ -21636,7 +21678,7 @@
       "optimal-actions",
       "relational-domains"
     ],
-    "position": 532
+    "position": 533
   },
   {
     "cite": "quadrianto2010beyond",
@@ -21670,7 +21712,7 @@
       "image-browsing",
       "kernelized-sorting"
     ],
-    "position": 533
+    "position": 534
   },
   {
     "cite": "xu2010fast",
@@ -21707,7 +21749,7 @@
       "preference-learning",
       "active-learning"
     ],
-    "position": 534
+    "position": 535
   },
   {
     "cite": "ahmadi2010lifted",
@@ -21746,7 +21788,7 @@
       "high-order-marginals",
       "loopy-belief-propagation"
     ],
-    "position": 535
+    "position": 536
   },
   {
     "cite": "antanas2010combining",
@@ -21783,7 +21825,7 @@
       "video",
       "card-games"
     ],
-    "position": 536
+    "position": 537
   },
   {
     "cite": "natarajan2010exploiting",
@@ -21823,7 +21865,7 @@
       "statistical-relational-learning",
       "markov-logic-networs"
     ],
-    "position": 537
+    "position": 538
   },
   {
     "cite": "behley2010learning",
@@ -21868,7 +21910,7 @@
       "hashing",
       "ultra-fast"
     ],
-    "position": 538
+    "position": 539
   },
   {
     "cite": "kersting2010hierarchical",
@@ -21908,7 +21950,7 @@
       "tree-decomposition",
       "massive-scale"
     ],
-    "position": 539
+    "position": 540
   },
   {
     "cite": "jawad2010kernelized",
@@ -21940,7 +21982,7 @@
       "map-matching",
       "kernels"
     ],
-    "position": 540
+    "position": 541
   },
   {
     "cite": "kersting2010informed",
@@ -21980,7 +22022,7 @@
       "loopy-belief-propagation",
       "on-the-fly"
     ],
-    "position": 541
+    "position": 542
   },
   {
     "cite": "natarajan2010multi",
@@ -22016,7 +22058,7 @@
       "inverse-reinforcement-learning",
       "multi-agents"
     ],
-    "position": 542
+    "position": 543
   },
   {
     "cite": "ganzert2010identifying",
@@ -22055,7 +22097,7 @@
       "medicine",
       "lung"
     ],
-    "position": 543
+    "position": 544
   },
   {
     "cite": "wahabzada2010topic",
@@ -22092,7 +22134,7 @@
       "relational-domain",
       "statistical-relational-learning"
     ],
-    "position": 544
+    "position": 545
   },
   {
     "cite": "thurau2010yes",
@@ -22127,7 +22169,7 @@
       "simplex-volume-maximization",
       "web-scale"
     ],
-    "position": 545
+    "position": 546
   },
   {
     "cite": "xu2010social",
@@ -22165,7 +22207,7 @@
       "social-networks",
       "infinite-hidden-relational-models"
     ],
-    "position": 546
+    "position": 547
   },
   {
     "cite": "hadiji2010lifted",
@@ -22202,7 +22244,7 @@
       "sat",
       "symmetries"
     ],
-    "position": 547
+    "position": 548
   },
   {
     "cite": "jawad2010kernelizedws",
@@ -22234,7 +22276,7 @@
       "kernels",
       "map-matching"
     ],
-    "position": 548
+    "position": 549
   },
   {
     "cite": "ahmadi2010lifted",
@@ -22271,7 +22313,7 @@
       "high-order-marginal",
       "belief-propagation"
     ],
-    "position": 549
+    "position": 550
   },
   {
     "cite": "kersting2010convex",
@@ -22307,7 +22349,7 @@
       "interpretable",
       "massive-data"
     ],
-    "position": 550
+    "position": 551
   },
   {
     "cite": "quadrianto2010gaussian",
@@ -22342,7 +22384,7 @@
       "gaussian-processes",
       "short"
     ],
-    "position": 551
+    "position": 552
   },
   {
     "cite": "dereadt2010probabilistic",
@@ -22380,7 +22422,7 @@
       "problog",
       "inference"
     ],
-    "position": 552
+    "position": 553
   },
   {
     "cite": "kersting2009counting",
@@ -22419,7 +22461,7 @@
       "color-passing",
       "loopy-belief-propagation"
     ],
-    "position": 553
+    "position": 554
   },
   {
     "cite": "xu2009multi",
@@ -22452,7 +22494,7 @@
       "statistical-relational-learning",
       "gaussian-processes"
     ],
-    "position": 554
+    "position": 555
   },
   {
     "cite": "joshi2009generalized",
@@ -22489,7 +22531,7 @@
       "first-order-decision-diagrams",
       "optimal-actions"
     ],
-    "position": 555
+    "position": 556
   },
   {
     "cite": "thurau2009convex",
@@ -22524,7 +22566,7 @@
       "matrix-factorization",
       "convex"
     ],
-    "position": 556
+    "position": 557
   },
   {
     "cite": "kersting2009learning",
@@ -22560,7 +22602,7 @@
       "statistical-relational-learning",
       "hidden-common-cause-relations"
     ],
-    "position": 557
+    "position": 558
   },
   {
     "cite": "quadrianto2009kernel",
@@ -22597,7 +22639,7 @@
       "quantile-esimtation",
       "reduction"
     ],
-    "position": 558
+    "position": 559
   },
   {
     "cite": "neumann2009stacked",
@@ -22633,7 +22675,7 @@
       "stacked-learning",
       "relational-domain"
     ],
-    "position": 559
+    "position": 560
   },
   {
     "cite": "schulz2009ilp",
@@ -22670,7 +22712,7 @@
       "statistical-relational-learning",
       "inductive-logic-programming"
     ],
-    "position": 560
+    "position": 561
   },
   {
     "cite": "plagemann2009bayesian",
@@ -22708,7 +22750,7 @@
       "gaussian-processes",
       "terrain-mapping"
     ],
-    "position": 561
+    "position": 562
   },
   {
     "cite": "deraedt200807161",
@@ -22737,7 +22779,7 @@
     "image": "./images/aiml2020small.png",
     "topics": [],
     "topicsNormalized": [],
-    "position": 562
+    "position": 563
   },
   {
     "cite": "gutmann2008parameter",
@@ -22773,7 +22815,7 @@
       "least-squares",
       "parameter-estimation"
     ],
-    "position": 563
+    "position": 564
   },
   {
     "cite": "plagemann2008learning",
@@ -22813,7 +22855,7 @@
       "terrain-model",
       "predictive-uncertainty"
     ],
-    "position": 564
+    "position": 565
   },
   {
     "cite": "kersting2008non",
@@ -22849,7 +22891,7 @@
       "policy-gradient",
       "functional-gradient-boosting"
     ],
-    "position": 565
+    "position": 566
   },
   {
     "cite": "karwath2008boosting",
@@ -22884,7 +22926,7 @@
       "functional-gradient-boosting",
       "sequence-alignment"
     ],
-    "position": 566
+    "position": 567
   },
   {
     "cite": "plagemann2008nonstationary",
@@ -22919,7 +22961,7 @@
       "bayesian-regression",
       "non-stationary"
     ],
-    "position": 567
+    "position": 568
   },
   {
     "cite": "natarajan2008logical",
@@ -22956,7 +22998,7 @@
       "logical-hidden-markov-models",
       "user-modeling"
     ],
-    "position": 568
+    "position": 569
   },
   {
     "cite": "katz2008modeling",
@@ -22993,7 +23035,7 @@
       "statistical-relational-learning",
       "logical-dimensionality-reduction"
     ],
-    "position": 569
+    "position": 570
   },
   {
     "cite": "milchZKHK08",
@@ -23032,7 +23074,7 @@
       "exact",
       "c-fove"
     ],
-    "position": 570
+    "position": 571
   },
   {
     "cite": "missura2008towards",
@@ -23065,7 +23107,7 @@
       "automatic-difficulty-scaling",
       "markov-decision-processes"
     ],
-    "position": 571
+    "position": 572
   },
   {
     "cite": "xu2008gaussian",
@@ -23098,7 +23140,7 @@
       "statistical-relational-learning",
       "gaussian-processes"
     ],
-    "position": 572
+    "position": 573
   },
   {
     "cite": "kersting2008basic",
@@ -23134,7 +23176,7 @@
       "bayesian-networks",
       "logic-programming"
     ],
-    "position": 573
+    "position": 574
   },
   {
     "cite": "kersting2008relational",
@@ -23173,7 +23215,7 @@
       "sequence-labeling",
       "reinforcement-learning"
     ],
-    "position": 574
+    "position": 575
   },
   {
     "cite": "deraedt2008probabilistic",
@@ -23209,7 +23251,7 @@
       "inductive-logic-programming",
       "probabilistic-inductive-logic-programming"
     ],
-    "position": 575
+    "position": 576
   },
   {
     "cite": "deraedt2008compressing",
@@ -23248,7 +23290,7 @@
       "problog",
       "compression"
     ],
-    "position": 576
+    "position": 577
   },
   {
     "cite": "plagemann2007gaussian",
@@ -23284,7 +23326,7 @@
       "laser-range-finders",
       "robotics"
     ],
-    "position": 577
+    "position": 578
   },
   {
     "cite": "kerstingPPB07",
@@ -23322,7 +23364,7 @@
       "input-dependent-noise",
       "sampling"
     ],
-    "position": 578
+    "position": 579
   },
   {
     "cite": "kersting2007reasoning",
@@ -23361,7 +23403,7 @@
       "exact",
       "c-fove"
     ],
-    "position": 579
+    "position": 580
   },
   {
     "cite": "gutmann2007stratified",
@@ -23397,7 +23439,7 @@
       "stratified-sampling",
       "conditional-random-fields"
     ],
-    "position": 580
+    "position": 581
   },
   {
     "cite": "thon2007distributed",
@@ -23431,7 +23473,7 @@
       "factorial",
       "logical-hidden-markov-models"
     ],
-    "position": 581
+    "position": 582
   },
   {
     "cite": "ganzert2007equation",
@@ -23468,7 +23510,7 @@
       "differential-equations",
       "medicine"
     ],
-    "position": 582
+    "position": 583
   },
   {
     "cite": "gutmann2007mlg",
@@ -23504,7 +23546,7 @@
       "conditional-random-fields",
       "imbalanced-data"
     ],
-    "position": 583
+    "position": 584
   },
   {
     "cite": "landwehrKR05",
@@ -23541,7 +23583,7 @@
       "naive-bayes",
       "rule-learning"
     ],
-    "position": 584
+    "position": 585
   },
   {
     "cite": "landwehr2007integrating",
@@ -23578,7 +23620,7 @@
       "naive-bayes",
       "rule-learning"
     ],
-    "position": 585
+    "position": 586
   },
   {
     "cite": "kersting2007learning",
@@ -23617,7 +23659,7 @@
       "policy-learning",
       "relational-domains"
     ],
-    "position": 586
+    "position": 587
   },
   {
     "cite": "gutmann2006tildecrf",
@@ -23653,7 +23695,7 @@
       "conditional-random-fields",
       "functional-gradient-boosting"
     ],
-    "position": 587
+    "position": 588
   },
   {
     "cite": "triebel2006robust",
@@ -23690,7 +23732,7 @@
       "computer-vision",
       "laser-range-finders"
     ],
-    "position": 588
+    "position": 589
   },
   {
     "cite": "cocora2006learning",
@@ -23731,7 +23773,7 @@
       "optimal-actions",
       "policy-learning"
     ],
-    "position": 589
+    "position": 590
   },
   {
     "cite": "kersting2006fisher",
@@ -23767,7 +23809,7 @@
       "classification",
       "relational-data"
     ],
-    "position": 590
+    "position": 591
   },
   {
     "cite": "karwath2006relational",
@@ -23803,7 +23845,7 @@
       "alignements",
       "logos"
     ],
-    "position": 591
+    "position": 592
   },
   {
     "cite": "deraedt2006revising",
@@ -23840,7 +23882,7 @@
       "theory-revision",
       "problog"
     ],
-    "position": 592
+    "position": 593
   },
   {
     "cite": "jaeger2006expressivity",
@@ -23873,7 +23915,7 @@
       "statistical-relational-learning",
       "expressivity"
     ],
-    "position": 593
+    "position": 594
   },
   {
     "cite": "kersting2006unbiased",
@@ -23909,7 +23951,7 @@
       "conjuate-gradients",
       "selection-bias"
     ],
-    "position": 594
+    "position": 595
   },
   {
     "cite": "karwath2006relational",
@@ -23945,7 +23987,7 @@
       "alignment",
       "sequence-logos"
     ],
-    "position": 595
+    "position": 596
   },
   {
     "cite": "kersting20016",
@@ -23984,7 +24026,7 @@
       "bayesian-logic-programs",
       "logical-hidden-markov-models"
     ],
-    "position": 596
+    "position": 597
   },
   {
     "cite": "deraedt2006logical",
@@ -24019,7 +24061,7 @@
       "complex-sequences",
       "logical-hidden-markov-models"
     ],
-    "position": 597
+    "position": 598
   },
   {
     "cite": "kersting2005say",
@@ -24055,7 +24097,7 @@
       "structure-learning",
       "complex-sequences"
     ],
-    "position": 598
+    "position": 599
   },
   {
     "cite": "deraedtKT05",
@@ -24094,7 +24136,7 @@
       "proof-banks",
       "compression"
     ],
-    "position": 599
+    "position": 600
   },
   {
     "cite": "gurel2005trade",
@@ -24126,7 +24168,7 @@
       "collective-classification",
       "iterative-classification"
     ],
-    "position": 600
+    "position": 601
   },
   {
     "cite": "dereadt2004probabilistic",
@@ -24160,7 +24202,7 @@
       "inductive-logic-programming",
       "probabilistic-inductive-logic-programming"
     ],
-    "position": 601
+    "position": 602
   },
   {
     "cite": "kersting2004logical",
@@ -24196,7 +24238,7 @@
       "temporal-difference-learning",
       "optimal-actions"
     ],
-    "position": 602
+    "position": 603
   },
   {
     "cite": "kersting2004fisher",
@@ -24230,7 +24272,7 @@
       "bayesian-logic-programs",
       "fisher-kernels"
     ],
-    "position": 603
+    "position": 604
   },
   {
     "cite": "kersting2004balios",
@@ -24264,7 +24306,7 @@
       "bayesian-logic-programms",
       "graphical-represenation"
     ],
-    "position": 604
+    "position": 605
   },
   {
     "cite": "kerstingOR04",
@@ -24303,7 +24345,7 @@
       "relational-markov-decision-processes",
       "value-iteration"
     ],
-    "position": 605
+    "position": 606
   },
   {
     "cite": "otterlo2004challenges",
@@ -24335,7 +24377,7 @@
       "statistical-relational-learning",
       "relational-reinforcment-learning"
     ],
-    "position": 606
+    "position": 607
   },
   {
     "cite": "kersting2004scaled",
@@ -24369,7 +24411,7 @@
       "parameter-estimation",
       "scaled-conjugate-gradient"
     ],
-    "position": 607
+    "position": 608
   },
   {
     "cite": "kersting2003towards",
@@ -24407,7 +24449,7 @@
       "logical-hidden-markov-models",
       "complex-sequences"
     ],
-    "position": 608
+    "position": 609
   },
   {
     "cite": "kersting2003logical",
@@ -24443,7 +24485,7 @@
       "markov-decision-processes",
       "optimal-actions"
     ],
-    "position": 609
+    "position": 610
   },
   {
     "cite": "fischer2003scaled",
@@ -24479,7 +24521,7 @@
       "expectation-maximization",
       "scaled-conjugate-em"
     ],
-    "position": 610
+    "position": 611
   },
   {
     "cite": "kersting2003representational",
@@ -24510,7 +24552,7 @@
       "statistical-relational-learning",
       "representional-power"
     ],
-    "position": 611
+    "position": 612
   },
   {
     "cite": "kersting2003structural",
@@ -24547,7 +24589,7 @@
       "hidden-markov-models",
       "structural-em"
     ],
-    "position": 612
+    "position": 613
   },
   {
     "cite": "deraedt2003probabilistic",
@@ -24583,7 +24625,7 @@
       "statistical-relational-learning",
       "inductive-logic-programming"
     ],
-    "position": 613
+    "position": 614
   },
   {
     "cite": "raiko2002bayesian",
@@ -24621,7 +24663,7 @@
       "priors",
       "complex-sequences"
     ],
-    "position": 614
+    "position": 615
   },
   {
     "cite": "kersting2002scaled",
@@ -24655,7 +24697,7 @@
       "parameter-estimation",
       "scaled-conjugate-gradient"
     ],
-    "position": 615
+    "position": 616
   },
   {
     "cite": "kersting2002fisher",
@@ -24689,7 +24731,7 @@
       "complex-sequences",
       "fisher-kernels"
     ],
-    "position": 616
+    "position": 617
   },
   {
     "cite": "kersting2002lohmms",
@@ -24724,7 +24766,7 @@
       "complex-sequences",
       "logical-hidden-markov-models"
     ],
-    "position": 617
+    "position": 618
   },
   {
     "cite": "ganzert2002analysis",
@@ -24763,7 +24805,7 @@
       "process-induction",
       "differential-equations"
     ],
-    "position": 618
+    "position": 619
   },
   {
     "cite": "kersting2001blps",
@@ -24799,7 +24841,7 @@
       "bayesian-networks",
       "logic-programming"
     ],
-    "position": 619
+    "position": 620
   },
   {
     "cite": "kerstingR01",
@@ -24835,7 +24877,7 @@
       "bayesian-networks",
       "logic-programming"
     ],
-    "position": 620
+    "position": 621
   },
   {
     "cite": "kersting2001towards",
@@ -24875,7 +24917,7 @@
       "inductive-logic-programming",
       "structure-learning"
     ],
-    "position": 621
+    "position": 622
   },
   {
     "cite": "kersting2000interpreting",
@@ -24912,7 +24954,7 @@
       "bayesian-networks",
       "logic-programming"
     ],
-    "position": 622
+    "position": 623
   },
   {
     "cite": "Hansel2021",
@@ -24949,7 +24991,7 @@
       "natural-gradient",
       "evolution-strategies"
     ],
-    "position": 623
+    "position": 624
   },
   {
     "cite": "kraus2024right",
@@ -24990,7 +25032,7 @@
       "xai",
       "xil"
     ],
-    "position": 624
+    "position": 625
   },
   {
     "cite": "stammer2024neural",
@@ -25028,7 +25070,7 @@
       "interactive-machine-learning",
       "disentanglement"
     ],
-    "position": 625
+    "position": 626
   },
   {
     "cite": "moos2024foosball",
@@ -25064,6 +25106,6 @@
       "simulation",
       "robot-learning"
     ],
-    "position": 626
+    "position": 627
   }
 ]
