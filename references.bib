@@ -31,6 +31,17 @@
 	note = {Time series foundation models (TSFMs) can transfer well across forecasting tasks, but their internal representations remain difficult to interpret. This work studies whether sparse autoencoders can expose coherent latent features in pretrained TSFMs and finds that SAE-based analysis can reveal sparse temporal patterns, making it a promising path toward unsupervised mechanistic interpretability for TSFMs.}
 }
 
+@incollection{divo2026moeworkshop,
+	anote = {./images/divo2026moeworkshop.png},
+	title = {Do Foundation Models Generalize to Real-World EV Fleets? A 1.1M-Drive Benchmark},
+	author = {Patrick Ahrend and Stefan Pfund and Felix Divo},
+	booktitle = {ICLR 2026 Workshop on Time Series in the Age of Large Models (TSALM)},
+	year = {2026},
+	url = {https://openreview.net/forum?id=PnM12PMiUF},
+	keywords = {mixture of experts, time series foundation models, electric vehicles, thermal management, time series clustering},
+	note = {Time series foundation models (TSFMs) promise general-purpose forecasting, yet their effectiveness on large-scale industrial data with physical heterogeneity remains underexplored. We benchmark three zero-shot TSFMs and three supervised models against a Cluster-Aware Mixture of Experts on 1.1 million real-world electric vehicle driving sequences. The Cluster-Aware approach routes inputs to specialized LSTM experts based on Soft Dynamic Time Warping clusters, reducing mean absolute error by 14.7% over a global LSTM baseline and outperforming all other models. Evaluation on an unseen vehicle model confirms robust transfer with only 8.1% increase in error. Our results suggest that while TSFMs deliver competitive zero-shot performance, domain-informed supervised specialization remains advantageous on this heterogeneous industrial dataset.}
+}
+
 @inproceedings{jahn2026breaking,
  	author       = {Felix Jahn and
                   Yannic Muskalla and
