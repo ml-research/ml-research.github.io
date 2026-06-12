@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Do Object Channels Improve Robustness in Deep Reinforcement Learning?</title>
+<meta name="description" content="Object&Pixel-Channels (OPC): spatially-grounded semantic channels as a drop-in inductive bias against shortcut learning in deep reinforcement learning. TMLR 2026.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Do Object Channels Improve Robustness in Deep Reinforcement Learning?">
+<meta property="og:description" content="OPC renders detected objects into coordinate-aligned channels stacked with pixels — no new architecture, big zero-shot robustness gains across Atari.">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --bg:#fbfbfd; --surface:#ffffff; --ink:#16161d; --body:#33333f; --muted:#6b6b7b;
+    --line:#e7e7ee; --accent:#6c5ce7; --accent-soft:#efecfe; --warm:#d9700f; --warm-soft:#fdf0e1;
+    --good:#1f6feb; --good-soft:#e8f0fd; --bad:#c0392b; --shadow:0 1px 2px rgba(20,20,40,.04),0 8px 24px rgba(20,20,40,.06);
+    --radius:14px; --maxw:780px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#14141b; --surface:#1d1d27; --ink:#f0f0f6; --body:#cfcfdb; --muted:#9595a6;
+      --line:#2b2b38; --accent:#9b8cff; --accent-soft:#241f3d; --warm:#f0a04b; --warm-soft:#2e2415;
+      --good:#6ea8ff; --good-soft:#15223a; --bad:#ff8a7a; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--body);
+    font:18px/1.72 Charter,"Iowan Old Style",Georgia,Cambria,"Times New Roman",serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+  h1,h2,h3,.sans{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  h1{font-size:2.45rem; line-height:1.12; letter-spacing:-.02em; color:var(--ink); margin:.2em 0 .35em; font-weight:800}
+  h2{font-size:1.55rem; line-height:1.2; letter-spacing:-.01em; color:var(--ink); margin:2.6em 0 .2em; font-weight:750}
+  h3{font-size:1.16rem; color:var(--ink); margin:1.8em 0 .1em; font-weight:700}
+  p{margin:.85em 0}
+  a{color:var(--accent); text-decoration:none; border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+  a:hover{border-bottom-color:var(--accent)}
+  code{font:.82em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; background:var(--accent-soft); color:var(--ink); padding:.12em .42em; border-radius:6px}
+
+  /* Header */
+  header.hero{padding:64px 0 8px}
+  .eyebrow{font:600 .78rem/1 system-ui,sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--accent)}
+  .subtitle{font-size:1.22rem; color:var(--muted); margin:.1em 0 1.1em; line-height:1.5}
+  .authors{font-size:.98rem; color:var(--body); margin:.2em 0 .1em}
+  .affil{font-size:.86rem; color:var(--muted)}
+  .badges{display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 6px}
+  .badge{font:600 .82rem/1 system-ui,sans-serif; padding:8px 13px; border-radius:999px; background:var(--surface);
+    border:1px solid var(--line); color:var(--body); box-shadow:var(--shadow)}
+  .badge:hover{border-color:var(--accent); color:var(--accent)}
+  .badge.solid{background:var(--accent); color:#fff; border-color:transparent}
+
+  hr.rule{border:0; border-top:1px solid var(--line); margin:36px 0}
+
+  /* TOC */
+  nav.toc{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:18px 22px;
+    box-shadow:var(--shadow); margin:8px 0 6px}
+  nav.toc strong{font:700 .78rem/1 system-ui,sans-serif; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+  nav.toc ol{margin:.7em 0 0; padding-left:1.2em; columns:2; column-gap:28px; font-family:system-ui,sans-serif; font-size:.95rem}
+  nav.toc li{margin:.28em 0; break-inside:avoid}
+  nav.toc a{border:0; color:var(--body)}
+  nav.toc a:hover{color:var(--accent)}
+
+  /* TL;DR stat cards */
+  .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; margin:26px 0}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:16px 18px; box-shadow:var(--shadow)}
+  .stat .big{font:800 1.7rem/1 system-ui,sans-serif; color:var(--ink); letter-spacing:-.02em}
+  .stat .big .arrow{color:var(--muted); font-weight:500}
+  .stat .big .up{color:var(--good)} .stat .big .down{color:var(--bad)}
+  .stat .big .scale{font-size:.6em; font-weight:600; color:var(--muted); letter-spacing:0; margin-left:7px; white-space:nowrap}
+  .stat .lab{font:.86rem/1.35 system-ui,sans-serif; color:var(--muted); margin-top:6px}
+
+  /* Callouts */
+  .callout{border-left:4px solid var(--accent); background:var(--accent-soft); border-radius:0 12px 12px 0;
+    padding:14px 18px; margin:22px 0; font-size:.98rem}
+  .callout.warm{border-color:var(--warm); background:var(--warm-soft)}
+  .callout .k{font:700 .75rem/1 system-ui,sans-serif; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:4px}
+  .callout.warm .k{color:var(--warm)}
+
+  /* Tables */
+  .tw{overflow-x:auto; margin:22px 0; border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow)}
+  table{border-collapse:collapse; width:100%; font:.92rem/1.4 system-ui,sans-serif; background:var(--surface)}
+  caption{caption-side:top; text-align:left; font:.86rem/1.45 system-ui,sans-serif; color:var(--muted); padding:12px 16px 0}
+  th,td{padding:10px 14px; text-align:right; border-bottom:1px solid var(--line); white-space:nowrap}
+  th:first-child,td:first-child{text-align:left}
+  thead th{color:var(--muted); font-weight:650; font-size:.82rem; letter-spacing:.02em; border-bottom:2px solid var(--line)}
+  tbody tr:last-child td{border-bottom:0}
+  td.best{font-weight:800; color:var(--ink); background:color-mix(in srgb,var(--good-soft) 70%,transparent)}
+  td.pos{color:var(--good)} td.neg{color:var(--bad)}
+
+  /* Figures */
+  figure.fig{margin:26px 0; text-align:center}
+  figure.fig img,figure.fig video{max-width:100%; height:auto; border:1px solid var(--line); border-radius:12px; background:var(--surface); box-shadow:var(--shadow)}
+  /* size caps applied to the figure (keeps img max-width:100% so it stays responsive on mobile) */
+  figure.fig.wide{max-width:680px; margin-left:auto; margin-right:auto}
+  figure.fig.compact{max-width:560px; margin-left:auto; margin-right:auto}
+  figure.fig.square{max-width:450px; margin-left:auto; margin-right:auto}
+  figure.fig figcaption{font:.86rem/1.5 system-ui,sans-serif; color:var(--muted); margin-top:10px; text-align:center}
+  .fig-row{display:flex; gap:16px; flex-wrap:wrap; margin:26px 0}
+  .fig-row figure.fig{flex:1 1 220px; margin:0}
+  .fig-placeholder{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px;
+    min-height:180px; padding:24px; border:2px dashed var(--line); border-radius:12px; background:var(--surface)}
+  .fig-placeholder .tag{font:700 .72rem/1 system-ui,sans-serif; letter-spacing:.1em; text-transform:uppercase; color:var(--accent)}
+  .fig-placeholder code{font-size:.84rem}
+  .fig-placeholder small{font:.78rem/1.3 system-ui,sans-serif; color:var(--muted); text-align:center}
+  .pong{image-rendering:pixelated}
+  video.pong{background:#7a3b12}
+  /* OPC gameplay gallery */
+  video.play{image-rendering:pixelated; background:#0b1622; aspect-ratio:16/21; object-fit:contain; width:100%}
+  .watch-game{margin:22px 0}
+  .watch-game h3{margin:0 0 2px}
+  .watch-game .fig-row{margin:6px 0}
+  /* paired before/after videos inside a single grid cell */
+  .grid.duos{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+  .duo{display:flex; gap:6px}
+  .duo video{width:50%}
+
+  /* Perturbation grid */
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:12px; margin:24px 0}
+  .grid figure.fig{margin:0}
+  .grid .fig-placeholder{min-height:120px; padding:14px}
+  .grid figcaption{margin-top:6px; font-size:.8rem}
+
+  /* asset-pending chip used in captions */
+  .chip{display:inline-block; font:700 .68rem/1 system-ui,sans-serif; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--warm); background:var(--warm-soft); padding:4px 8px; border-radius:6px; vertical-align:middle}
+
+  ol.principles{counter-reset:p; list-style:none; padding:0; margin:18px 0}
+  ol.principles li{position:relative; padding:14px 16px 14px 56px; margin:12px 0; background:var(--surface);
+    border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow)}
+  ol.principles li::before{counter-increment:p; content:counter(p); position:absolute; left:14px; top:14px;
+    width:28px; height:28px; display:grid; place-items:center; border-radius:8px; background:var(--accent); color:#fff;
+    font:800 .95rem/1 system-ui,sans-serif}
+  ol.principles b{color:var(--ink); font-family:system-ui,sans-serif}
+
+  footer{margin:56px 0 70px; padding-top:24px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem}
+  footer a{color:var(--muted)}
+  .tldr-tag{display:inline-block; font:700 .72rem/1 system-ui,sans-serif; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--warm); background:var(--warm-soft); padding:5px 10px; border-radius:6px}
+  @media (max-width:560px){ h1{font-size:2rem} nav.toc ol{columns:1} header.hero{padding:40px 0 4px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Transactions on Machine Learning Research · 2026</div>
+    <h1>Do Object Channels Improve Robustness in Deep Reinforcement Learning?</h1>
+    <p class="subtitle"><strong>TL;DR:</strong> Spatially-grounded semantic channels (OPC) as a drop-in inductive bias against shortcut learning.</p>
+    <p class="authors">Jannis Blüml<sup>*</sup>, Cedric Derstroff<sup>*</sup>, Bjarne Gregori, Elisabeth Dillies, Quentin Delfosse, Kristian Kersting</p>
+    <p class="affil">TU Darmstadt · hessian.AI · DFKI · Sorbonne Université &nbsp;—&nbsp; <sup>*</sup>equal contribution</p>
+    <div class="badges">
+      <a class="badge solid" href="https://openreview.net/forum?id=7BFbso4B3R">Published in TMLR (06/2026) ↗</a>
+      <a class="badge" href="https://github.com/VanillaWhey/object-pixel-channels">Code ↗</a>
+      <a class="badge" href="https://openreview.net/forum?id=7BFbso4B3R">OpenReview ↗</a>
+    </div>
+  </header>
+
+  <hr class="rule">
+
+  <nav class="toc">
+    <strong>Contents</strong>
+    <ol>
+      <li><a href="#tldr">TL;DR</a></li>
+      <li><a href="#problem">The Problem</a></li>
+      <li><a href="#objects">Objects as Channels</a></li>
+      <li><a href="#pixels">Why we still need the pixels</a></li>
+      <li><a href="#approach">Our Approach</a></li>
+      <li><a href="#exp-perf">Experiments: Performance &amp; Robustness</a></li>
+      <li><a href="#exp-scale">Experiments: Scalability &amp; Efficiency</a></li>
+      <li><a href="#takeaways">Take Aways</a></li>
+      <li><a href="#watch">Watch OPC play</a></li>
+      <li><a href="#more-paper">More in the paper</a></li>
+    </ol>
+  </nav>
+
+  <section id="tldr">
+    <h2><span class="tldr-tag">TL;DR</span></h2>
+    <p>Pixel-based RL agents are notorious for <strong>shortcut learning</strong>: they latch onto spurious visual cues
+      instead of the game's actual mechanics, so a visual change to the screen can collapse a "trained" policy. We ask
+      a simple question: <em>what if we just hand the agent its objects as additional input?</em> and study
+      it systematically.</p>
+    <p><strong>Object&amp;Pixel-Channels (OPC)</strong> render each detected object category into its own binary mask,
+      aligned pixel-for-pixel with the frame, and stack those masks alongside the usual grayscale image. No new
+      architecture, no new loss, just a wider first conv layer. We show,</p>
+
+    <ul>
+      <li><strong>Zero-shot robustness jumps.</strong> Where pixel PPO collapses under shifts, OPC barely does.</li>
+      <li><strong>In-distribution performance improves</strong>, OPC ≥ pixel PPO on 9/10 games.</li>
+      <li><strong>It's the semantics, not the extra capacity.</strong> A capacity-matched pixel baseline — same channel budget, no object semantics — tracks plain PPO.</li>
+      <li><strong>Need to keep the pixels.</strong> Pure object channels over-abstract and go blind to un-modeled information (Riverraid Linear-River: −75%); the hybrid keeps the pixels as "safety net" (Riverraid, −2%).</li>
+    </ul>
+  </section>
+
+  <section id="problem">
+    <h2>The Problem: Agents that "win" for the wrong reasons</h2>
+    <p>Deep RL from pixels routinely exploits spurious visual correlations, or learns shortcuts, i.e., low-entropy features
+      that predict reward during training but have nothing to do with the task's causal structure. The canonical
+      demonstration is <strong>Hidden-Opponent Pong</strong> (Delfosse et al., 2024): during training the opponent
+      paddle's motion is tightly correlated with the ball, so the policy quietly uses <em>the opponent's position</em> as
+      a cheap predictor of ball direction. Hide the opponent and keep identical physics as well as identical reward and the policy
+      collapses.</p>
+
+    <!-- TODO VIDEOS  →  resolved as gameplay-clip slots (poster = recovered frame; drop mp4/gif to play) -->
+    <div class="fig-row">
+      <figure class="fig">
+        <video class="pong" controls playsinline muted loop autoplay>
+          <source src="media/pong_pixel_org.mp4" type="video/mp4">
+        </video>
+        <figcaption><strong>(a)</strong> Pong. </figcaption>
+      </figure>
+      <figure class="fig">
+        <video class="pong" controls playsinline muted loop autoplay>
+          <source src="media/Pong_pixel_hidden.mp4" type="video/mp4">
+        </video>
+        <figcaption><strong>(b)</strong> Opponent hidden. </figcaption>
+      </figure>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption><strong>Table 1.</strong> Pong episodic reward — visible vs. hidden opponent (IQM).</caption>
+        <thead><tr><th>Pong variant</th><th>PPO (pixel)</th><th>OPC</th></tr></thead>
+        <tbody>
+          <tr><td>Visible opponent</td><td>+15</td><td class="best">+19</td></tr>
+          <tr><td>Hidden opponent</td><td class="neg">−18</td><td class="best">+18</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The point isn't Pong specifically, as shown in HackAtari (Delfosse et al. 2025) and our work, its a general problem. Clips show a PPO agent, trained on the original environment and zero-shot tested on a perturbation of its environment.  </p>
+
+    <!-- PERTURBATION GALLERY  →  each cell = original (left) then modification (right), as separate H.264/.mp4 clips in media/ -->
+    <div class="grid duos">
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Pong_original_pixel.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Pong_lazy_enemy_pixel.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Pong · original → lazy opponent</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Boxing_original_pixel.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Boxing_player_red_enemy_blue_pixel.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Boxing · original → recolored boxers</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Freeway_original_pixel.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Freeway_all_black_cars_pixel.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Freeway · original → all cars black</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Freeway_original_pixel.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Freeway_stop_all_cars_pixel.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Freeway · original → stop all cars</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Riverraid_original_pixel.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Riverraid_game_color_change01_pixel.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Riverraid · original → color change</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Riverraid_original_pixel.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Riverraid_linear_river_pixel.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Riverraid · original → linear river</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Amidar_original_pixel.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Amidar_paint_roller_player_pixel.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Amidar · original → paint-roller player</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Frostbite_original_pixel.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Frostbite_reposition_floes_easy_pixel.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Frostbite · original → repositioned floes</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Bowling_original_pixel.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Bowling_top_pins_pixel.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Bowling · original → pins on top</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/MsPacman_original_pixel.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/MsPacman_set_level_1_pixel.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>MsPacman · original → set to level 1</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="objects">
+    <h2>See Objects as Channels</h2>
+    <p>A natural response to this brittleness is to bias learning toward task-relevant entities rather than raw visual features. This idea is strongly aligned with cognitive science accounts of perception. An adaptation of this can be found in object-centric reinforcement learning and in adapting agents' input representations. While expressive, these methods often add training instability, computational overhead, and design complexity. Moreover, some object-centric abstractions discard the spatial inductive biases of convolutional neural networks (CNNs), such as locality and translation invariance, that we found critical for efficient visual learning.</p>
+    <p>In our work, an object is abstracted as a tuple <code>⟨label, (x,y), (w,h)⟩</code>, representing a category and a bounding box. Additional information such as color, orientation and similar is removed to make extraction and adaptation easier. From the detected set we
+      build a binary tensor <code>C</code> with <strong>one channel per semantic category</strong>, each pixel inside the
+      bounding boxes of objects of that category set to 1, exactly aligned with the original coordinate frame.</p>
+    <p>That alignment is the whole trick. Because the masks live on the same 84×84 grid as the image, a standard
+      Nature-CNN processes them with the <em>same</em> convolutional priors (locality, translation invariance) it already
+      uses for pixels, which is unlike flattened symbolic vectors, throwing spatial structure away. Integration cost: widen the
+      first conv layer to accept <code>|C|+1</code> channels. Everything else, e.g, architecture, optimizer,
+      hyperparameters, stays fixed, which is what lets us attribute our results to the representation alone.</p>
+
+    <div class="callout">
+      <span class="k">Object Channel Representations</span>
+      <strong>Davidson &amp; Lake (2020, CogSci)</strong>  concatenating object-segmentation masks as input channels, shown to accelerate learning and improve generalization in Frostbite. The lineage runs back to board-game agents (AlphaZero-style) that feed the board as binary per-piece planes.
+    </div>
+  </section>
+
+  <section id="pixels">
+    <h2>Why we still need the pixels</h2>
+    <p>Pure object channels (<code>C</code>) maximize invariance by discarding pixels entirely. This is great, until a
+      <em>task-relevant</em> feature isn't in the object ontology or our abstraction. In <strong>Riverraid</strong>, the riverbanks define
+      the navigable corridor, but OCAtari, which we use as an oracle for object extraction, doesn't treat them as objects, so a <code>C</code>-only agent is effectively
+      <strong>blind to the terrain</strong>.</p>
+
+    <div class="tw">
+      <table>
+        <caption><strong>Table 2.</strong> Over-abstraction in Riverraid. Δ vs. original in parentheses. Only the hybrid survives both perturbations.</caption>
+        <thead><tr><th>Riverraid</th><th>Pixel (Dₜ)</th><th>Object-only (Cₜ)</th><th>OPC (Xₜ)</th></tr></thead>
+        <tbody>
+          <tr><td>Original</td><td>7668</td><td>8020</td><td class="best">9786</td></tr>
+          <tr><td>Color Change</td><td class="neg">441 (−94%)</td><td>8263 (+3%)</td><td class="best">9644 (−1%)</td></tr>
+          <tr><td>Linear River</td><td>6932 (−10%)</td><td class="neg">1969 (−75%)</td><td class="best">9634 (−2%)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="approach">
+    <h2>Our Approach</h2>
+    <p>Due to its strong performance, we propose to concatenate the grayscale pixel channel <code>D</code> (Mnih et al.) with the object channels to build the agent's
+      input <code>X = [D ; C]</code>. The pixel channel acts as a <strong>backup</strong>: OPC keeps the
+      object semantics <em>and</em> the background geometry, and is the only representation stable across <em>both</em> a
+      cosmetic recolor and a structural river change.</p>
+
+      <!-- TODO IMAGES  →  OPC pipeline / channel-construction diagram -->
+    <figure class="fig wide">
+      <img alt="OPC pipeline: object-based pathway builds binary channels, pixel pathway builds grayscale, concatenated into X" src="figures/fig2_pipeline.png">
+      <figcaption><strong>Figure 1.</strong> The OPC pipeline. Raw frames a represented twice: binary
+        object channels and a grayscale pixel channel, concatenated into a hybrid input for any standard DRL backbone.</figcaption>
+    </figure>
+
+    <figure class="fig wide">
+      <img alt="Riverraid frame decomposed into a grayscale pixel channel D and per-category binary object channels C, concatenated into the hybrid input X" src="figures/fig3_riverraid.png">
+      <figcaption><strong>Figure 2.</strong> Building the hybrid input <code>X = [D ; C]</code> in Riverraid. The frame
+        <code>I</code> (top: original; bottom: the <em>Linear River</em> variant) splits into a grayscale pixel channel
+        <code>D</code> and per-category binary object channels <code>C</code>. Sprites (player, enemies, fuel) become clean
+        masks; the river is a global background structure with no object.</figcaption>
+    </figure>
+  </section>
+
+  <section id="exp-perf">
+    <h2>Experiments: Performance and Robustness</h2>
+    <p><span class="sans" style="color:var(--muted);font-size:.92rem">Setup: train only on the original ROM, evaluate
+      zero-shot on HackAtari variants (10 games) PPO and Rainbow backbones. We use OCAtari as an oracle to identfy objects; As metrics we use IQM + human-normalized
+      score with 95% stratified-bootstrap CIs over 3 seeds, agents trained for 40M frames.</span></p>
+
+    <h3>Performance: Trained and tested on the original</h3>
+    <p>On the <strong>unmodified</strong> games, OPC matches or beats pixel PPO almost everywhere with the semantic anchors help
+      learning rather than constraining it.</p>
+    <div class="tw">
+      <table>
+        <caption><strong>Table 3.</strong> Default Atari, IQM episodic reward. Best per row highlighted.</caption>
+        <thead><tr><th>Game</th><th>PPO (pixel)</th><th>OPC</th><th>Semantic Vector</th></tr></thead>
+        <tbody>
+          <tr><td>Amidar</td><td>551</td><td class="best">903</td><td>209</td></tr>
+          <tr><td>Breakout</td><td>131</td><td class="best">280</td><td>37</td></tr>
+          <tr><td>MsPacman</td><td>3001</td><td class="best">5931</td><td>1919</td></tr>
+          <tr><td>Pong</td><td>15</td><td class="best">19</td><td>19</td></tr>
+          <tr><td>Riverraid</td><td>7668</td><td class="best">9753</td><td>3306</td></tr>
+          <tr><td>SpaceInvaders</td><td>744</td><td class="best">1594</td><td>358</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Robustness: Testing in a perturbed environment</h3>
+    <p>Under distribution shifts that leave the task dynamics untouched, pixel baselines suffer a
+    <strong>catastrophic generalization gap</strong> while OPC stays put. As an example:</p>
+    <ul>
+      <li><strong>Boxing → recolored boxers:</strong> PPO <span style="color:var(--bad)">95 → 4</span> (total collapse); OPC <span style="color:var(--good)">96 → 97</span>.</li>
+      <li><strong>Hidden-Opponent Pong:</strong> PPO <span style="color:var(--bad)">+15 → −18</span>; OPC <span style="color:var(--good)">+19 → +18</span>.</li>
+    </ul>
+    <p>The same picture holds across the suite. The symbolic <strong>Semantic Vector</strong> baseline shrugs off pure
+      recoloring but it pays for that abstraction with weak in-distribution scores, and it
+      collapses whenever the perturbation removes a cue it leaned on (the rendered opponent in Pong) or hides geometry
+      its object schema never modeled (Riverraid's riverbanks). OPC is the only representation that stays high on
+      <em>both</em> axes:</p>
+    <div class="tw">
+      <table>
+        <caption><strong>Table 4.</strong> Zero-shot robustness — original&nbsp;→&nbsp;perturbed IQM episodic reward (PPO
+          backbone), pixel PPO vs. OPC vs. Semantic Vector. Drops into red. From appendix Table 7.</caption>
+        <thead><tr><th>Game · variant</th><th>PPO (pixel)</th><th>OPC</th><th>Semantic Vector</th></tr></thead>
+        <tbody>
+          <tr><td>Boxing · recolored boxers</td><td>95 → <span style="color:var(--bad)">4</span></td><td class="best">96 → 97</td><td>93 → 91</td></tr>
+          <tr><td>Pong · hidden opponent</td><td>15 → <span style="color:var(--bad)">−18</span></td><td class="best">19 → 18</td><td>19 → <span style="color:var(--bad)">−21</span></td></tr>
+          <tr><td>Freeway · stop all cars</td><td>32 → <span style="color:var(--bad)">8</span></td><td class="best">33 → 33</td><td>31 → <span style="color:var(--bad)">0</span></td></tr>
+          <tr><td>Riverraid · color change</td><td>7668 → <span style="color:var(--bad)">441</span></td><td class="best">9786 → 9644</td><td>3306 → 3525</td></tr>
+          <tr><td>Riverraid · linear river</td><td>7668 → 6932</td><td class="best">9786 → 9634</td><td>3306 → <span style="color:var(--bad)">356</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <figure class="fig square">
+      <img alt="Scatter of HNS-IQM on clean training envs vs perturbed test envs; OPC sits near the diagonal in the upper right" src="figures/fig4_scatter.png">
+      <figcaption><strong>Figure 3.</strong> Clean (train) vs. perturbed (test) HNS-IQM per agent. Points near the
+        diagonal are robust; the upper-right-near-diagonal cluster is OPC. Ellipses are 95% CIs.</figcaption>
+    </figure>
+
+    <h3>Experiment 3: Capacity and Semantics?</h3>
+    <p>To rule out "OPC just has a wider first layer", we built <strong>Extendend PPO (Ex-PPO) </strong>: plain PPO whose input is widened
+      to OPC's channel count by <em>duplicating the grayscale channel</em>. Ex-PPO and OPC differ only in whether the
+      extra channels carry real object content — and Ex-PPO tracks the pixel baseline, collapsing on the same
+      perturbations. <strong>The gain is the semantics, not the capacity.</strong></p>
+    <div class="tw">
+      <table>
+        <caption><strong>Table 5.</strong> Capacity-matched control (Ex-PPO = OPC's width, duplicated pixels, no semantics).</caption>
+        <thead><tr><th>Game / variant</th><th>PPO</th><th>Ex-PPO</th><th>OPC</th></tr></thead>
+        <tbody>
+          <tr><td>Amidar</td><td>551</td><td>503</td><td class="best">907</td></tr>
+          <tr><td>Hidden-Opponent Pong</td><td class="neg">−18</td><td>−10</td><td class="best">+18</td></tr>
+          <tr><td>Riverraid · Color Change</td><td class="neg">441</td><td class="neg">244</td><td class="best">9644</td></tr>
+          <tr><td>MsPacman</td><td>3001</td><td>4188</td><td class="best">6305</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="exp-scale">
+    <h2>Experiment 4: Scalability and Efficiency</h2>
+    <p>Input depth grows with the number of object categories <code>|C|</code>, so the first conv layer and GPU memory
+      scale <strong>~linearly</strong> (Frostbite at 12 channels ≈ <strong>6.2× peak memory</strong> vs pixel PPO;
+      throughput drops accordingly).</p>
+    <p>But under a <strong>fixed 90-minute wall-clock budget</strong>, OPC still frequently <em>matches or beats</em>
+      pixel PPO despite processing fewer transitions. The semantic inductive bias takes care of the lost throughput. The cost
+      shifts the optimization burden <em>from discovering important elements to reasoning over them</em>: a good trade when object
+      sets are moderate, less so for large vocabularies (Riverraid).</p>
+
+    <figure class="fig">
+      <img alt="Learning curves of OPC (green) versus pixel PPO (blue) after 90min of learning MsPacman. Episodic reward against environment steps; OPC rises faster and finishes higher even though its curve ends after fewer steps (both had the same time limit). " src="media/scalability_fig.png">
+      <figcaption><strong>Figure 4.</strong> Sample efficiency on MsPacman: Episodic reward vs. environment steps for OPC
+        (green) and pixel PPO (blue). OPC climbs faster and reaches a higher reward in roughly half the steps. Under a
+        matched wall-clock budget of 90min its curve ends earlier (~4.5M steps) because the extra channels lower throughput, yet it
+        still finishes well above PPO — the semantic inductive bias buys back the lost speed. Faint traces are raw
+        episodic reward; bold lines are the smoothed mean.</figcaption>
+    </figure>
+
+    <div class="tw">
+      <table>
+        <caption><strong>Table 6.</strong> Fixed 90-minute budget, IQM episodic reward. <code>#Chn</code> = input channels. 
+        </caption>
+        <thead><tr><th>Game</th><th>#Chn</th><th>PPO</th><th>OPC</th></tr></thead>
+        <tbody>
+          <tr><td>Pong</td><td>5</td><td>16</td><td class="best">19</td></tr>
+          <tr><td>Breakout</td><td>6</td><td>131</td><td class="best">221</td></tr>
+          <tr><td>MsPacman</td><td>7</td><td>2515</td><td class="best">5066</td></tr>
+          <tr><td>SpaceInvaders</td><td>8</td><td>707</td><td class="best">1048</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="takeaways">
+    <h2>Take Aways</h2>
+    <ol class="principles">
+      <li><b>Prioritize spatial grounding.</b> Encode semantics as coordinate-aligned channels, not flattened vectors, so conv priors do the relational work.</li>
+      <li><b>Hybrid representations by default.</b> Pure abstraction goes blind to un-modeled background geometry; the pixel channel is the cheap insurance.</li>
+      <li><b>Build the representation that matters.</b> Abstraction should align with task structure, not minimize input size. "Seeing right" means preserving the invariant spatial relations between entities, however, information such as background color can be removed if they are not necessary for the task.</li>
+    </ol>
+  </section>
+
+  <section id="watch">
+    <h2>Watch OPC play</h2>
+    <p>Some examples in which OPC produced more robust agents across the test suite, with higher or same
+      performance on both the original and the perturbed games.</p>
+
+    <!-- OPC GALLERY  →  each cell = original (left) then OPC under the variant (right); _planes (object-channel) clips. Same 10 game/variant combos as the pixel grid in #problem. -->
+    <div class="grid duos">
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Pong_original_planes.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Pong_lazy_enemy_planes.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Pong · original → lazy opponent</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Boxing_original_planes.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Boxing_player_red_enemy_blue_planes.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Boxing · original → recolored boxers</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Freeway_original_planes.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Freeway_all_black_cars_planes.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Freeway · original → all cars black</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Freeway_original_planes.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Freeway_stop_all_cars_planes.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Freeway · original → stop all cars</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Riverraid_original_planes.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Riverraid_game_color_change01_planes.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Riverraid · original → color change</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Riverraid_original_planes.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Riverraid_linear_river_planes.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Riverraid · original → linear river</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Amidar_original_planes.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Amidar_paint_roller_player_planes.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Amidar · original → paint-roller player</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Frostbite_original_planes.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Frostbite_reposition_floes_easy_planes.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Frostbite · original → repositioned floes</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/Bowling_original_planes.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/Bowling_top_pins_planes.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>Bowling · original → pins on top</figcaption>
+      </figure>
+      <figure class="fig">
+        <div class="duo">
+          <video class="play" playsinline muted loop autoplay><source src="media/MsPacman_original_planes.mp4" type="video/mp4"></video>
+          <video class="play" playsinline muted loop autoplay><source src="media/MsPacman_set_level_1_planes.mp4" type="video/mp4"></video>
+        </div>
+        <figcaption>MsPacman · original → set to level 1</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="more-paper">
+    <h2>More in the paper</h2>
+    <p>This blog covers the core idea and the headline results. The full paper digs into several things we skipped here, such as real object detectors, more games, more baselines, more seeds and confidence intervals as well as multiple small ablations.</p>
+    <p>Read the full version on <a href="https://openreview.net/forum?id=7BFbso4B3R">OpenReview ↗</a> — code is available
+      <a href="https://github.com/VanillaWhey/object-pixel-channels">here ↗</a>.</p>
+  </section>
+
+  <footer>
+    <p><strong>Do Object Channels Improve Robustness in Deep Reinforcement Learning?</strong><br>
+      Blüml, Derstroff, Gregori, Dillies, Delfosse &amp; Kersting · Transactions on Machine Learning Research, 2026.</p>
+    <p>
+      <a href="https://openreview.net/forum?id=7BFbso4B3R">OpenReview</a> ·
+      <a href="https://github.com/VanillaWhey/object-pixel-channels">Code</a> ·
+      <a href="https://arxiv.org/abs/2406.03997">HackAtari</a> ·
+      <a href="https://oc-atari.readthedocs.io">OCAtari</a>
+    </p>
+  </footer>
+
+</div>
+
+<script>
+  // Replace any figure image that fails to load with a tasteful labeled placeholder.
+  document.querySelectorAll('figure.fig img').forEach(function(img){
+    img.addEventListener('error', function(){
+      if (img.dataset.fallback) return;
+      img.dataset.fallback = '1';
+      var src = img.getAttribute('src') || 'figure';
+      var ph = document.createElement('div');
+      ph.className = 'fig-placeholder';
+      ph.innerHTML = '<span class="tag">asset pending</span><code>' + src + '</code><small>drop this file in to replace</small>';
+      img.replaceWith(ph);
+    });
+  });
+</script>
+</body>
+</html>
