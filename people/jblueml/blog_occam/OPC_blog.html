@@ -353,13 +353,13 @@
 
       <!-- TODO IMAGES  →  OPC pipeline / channel-construction diagram -->
     <figure class="fig wide">
-      <img alt="OPC pipeline: object-based pathway builds binary channels, pixel pathway builds grayscale, concatenated into X" src="figures/fig2_pipeline.png">
+      <img alt="OPC pipeline: object-based pathway builds binary channels, pixel pathway builds grayscale, concatenated into X" src="media/fig2_pipeline.png">
       <figcaption><strong>Figure 1.</strong> The OPC pipeline. Raw frames a represented twice: binary
         object channels and a grayscale pixel channel, concatenated into a hybrid input for any standard DRL backbone.</figcaption>
     </figure>
 
     <figure class="fig wide">
-      <img alt="Riverraid frame decomposed into a grayscale pixel channel D and per-category binary object channels C, concatenated into the hybrid input X" src="figures/fig3_riverraid.png">
+      <img alt="Riverraid frame decomposed into a grayscale pixel channel D and per-category binary object channels C, concatenated into the hybrid input X" src="media/fig3_riverraid.png">
       <figcaption><strong>Figure 2.</strong> Building the hybrid input <code>X = [D ; C]</code> in Riverraid. The frame
         <code>I</code> (top: original; bottom: the <em>Linear River</em> variant) splits into a grayscale pixel channel
         <code>D</code> and per-category binary object channels <code>C</code>. Sprites (player, enemies, fuel) become clean
@@ -419,7 +419,7 @@
     </div>
 
     <figure class="fig square">
-      <img alt="Scatter of HNS-IQM on clean training envs vs perturbed test envs; OPC sits near the diagonal in the upper right" src="figures/fig4_scatter.png">
+      <img alt="Scatter of HNS-IQM on clean training envs vs perturbed test envs; OPC sits near the diagonal in the upper right" src="media/fig4_scatter.png">
       <figcaption><strong>Figure 3.</strong> Clean (train) vs. perturbed (test) HNS-IQM per agent. Points near the
         diagonal are robust; the upper-right-near-diagonal cluster is OPC. Ellipses are 95% CIs.</figcaption>
     </figure>
