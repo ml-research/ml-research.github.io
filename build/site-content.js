@@ -162,7 +162,8 @@ window.AIML_SITE_CONTENT = {
       "title": "Alumni",
       "description": "Former AIML Lab members shaping AI in academia and industry worldwide.",
       "people": [
-          { "id": "sbraun", "name": "Dr. Steven Braun", "role": "alumnus", "focus": "Consultance" },
+        { "id": "nstrem", "name": "Dr. Nika Strem", "role": "alumnus", "focus": "ABB Research Center Germany" },
+        { "id": "sbraun", "name": "Dr. Steven Braun", "role": "alumnus", "focus": "Consultance" },
         { "id": "jczech", "name": "Dr. Johannes Czech", "role": "Alumnus", "focus": "Hochschule Aalen" },
         { "id": "lstruppek", "name": "Dr. Lukas Struppek", "role": "Alumnus", "focus": "FAR.AI" },
         { "id": "mbrack", "name": "Dr. Manuel Brack", "role": "Alumnus", "focus": "ADOBE" },
