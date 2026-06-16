@@ -187,7 +187,7 @@
       architecture, no new loss, just a wider first conv layer. We show,</p>
 
     <ul>
-      <li><strong>Zero-shot robustness jumps.</strong> Where pixel PPO collapses under shifts, OPC barely does.</li>
+      <li><strong>Zero-shot robustness jumps.</strong> Where pixel PPO (<a href="https://arxiv.org/abs/1707.06347">Schulman et al., 2017</a>) collapses under shifts, OPC barely does.</li>
       <li><strong>In-distribution performance improves</strong>, OPC ≥ pixel PPO on 9/10 games.</li>
       <li><strong>It's the semantics, not the extra capacity.</strong> A capacity-matched pixel baseline — same channel budget, no object semantics — tracks plain PPO.</li>
       <li><strong>Need to keep the pixels.</strong> Pure object channels over-abstract and go blind to un-modeled information (Riverraid Linear-River: −75%); the hybrid keeps the pixels as "safety net" (Riverraid, −2%).</li>
@@ -195,10 +195,10 @@
   </section>
 
   <section id="problem">
-    <h2>The Problem: Agents that "win" for the wrong reasons</h2>
+    <h2>The Problem: Agents that "Win" for the Wrong Reasons</h2>
     <p>Deep RL from pixels routinely exploits spurious visual correlations, or learns shortcuts, i.e., low-entropy features
       that predict reward during training but have nothing to do with the task's causal structure. The canonical
-      demonstration is <strong>Hidden-Opponent Pong</strong> (Delfosse et al., 2024): during training the opponent
+      demonstration is <strong>Hidden-Opponent Pong</strong> (<a href="https://arxiv.org/abs/2406.03997">Delfosse et al., 2024</a>): during training the opponent
       paddle's motion is tightly correlated with the ball, so the policy quietly uses <em>the opponent's position</em> as
       a cheap predictor of ball direction. Hide the opponent and keep identical physics as well as identical reward and the policy
       collapses.</p>
@@ -229,7 +229,7 @@
         </tbody>
       </table>
     </div>
-    <p>The point isn't Pong specifically, as shown in HackAtari (Delfosse et al. 2025) and our work, its a general problem. Clips show a PPO agent, trained on the original environment and zero-shot tested on a perturbation of its environment.  </p>
+    <p>The point isn't Pong specifically, as shown in HackAtari (<a href="https://arxiv.org/abs/2406.03997">Delfosse et al., 2024</a>) and our work, it is a general problem. Clips show a PPO agent, trained on the original environment and zero-shot tested on a perturbation of its environment.  </p>
 
     <!-- PERTURBATION GALLERY  →  each cell = original (left) then modification (right), as separate H.264/.mp4 clips in media/ -->
     <div class="grid duos">
@@ -320,15 +320,15 @@
 
     <div class="callout">
       <span class="k">Object Channel Representations</span>
-      <strong>Davidson &amp; Lake (2020, CogSci)</strong>  concatenating object-segmentation masks as input channels, shown to accelerate learning and improve generalization in Frostbite. The lineage runs back to board-game agents (AlphaZero-style) that feed the board as binary per-piece planes.
+      <strong><a href="https://www.cognitivesciencesociety.org/cogsci20/papers/0466/">Davidson &amp; Lake (2020, CogSci)</a></strong>  concatenating object-segmentation masks as input channels, shown to accelerate learning and improve generalization in Frostbite. The lineage runs back to board-game agents (AlphaZero-style) that feed the board as binary per-piece planes.
     </div>
   </section>
 
   <section id="pixels">
-    <h2>Why we still need the pixels</h2>
+    <h2>Why We Still Need the Pixels</h2>
     <p>Pure object channels (<code>C</code>) maximize invariance by discarding pixels entirely. This is great, until a
       <em>task-relevant</em> feature isn't in the object ontology or our abstraction. In <strong>Riverraid</strong>, the riverbanks define
-      the navigable corridor, but OCAtari, which we use as an oracle for object extraction, doesn't treat them as objects, so a <code>C</code>-only agent is effectively
+      the navigable corridor, but OCAtari (<a href="https://rlj.cs.umass.edu/2024/papers/RLJ_RLC_2024_46.pdf">Delfosse et al., 2024</a>), which we use as an oracle for object extraction, doesn't treat them as objects, so a <code>C</code>-only agent is effectively
       <strong>blind to the terrain</strong>.</p>
 
     <div class="tw">
@@ -346,7 +346,7 @@
 
   <section id="approach">
     <h2>Our Approach</h2>
-    <p>Due to its strong performance, we propose to concatenate the grayscale pixel channel <code>D</code> (Mnih et al.) with the object channels to build the agent's
+    <p>Due to its strong performance, we propose to concatenate the grayscale pixel channel <code>D</code> (<a href="https://www.nature.com/articles/nature14236">Mnih et al., 2015</a>) with the object channels to build the agent's
       input <code>X = [D ; C]</code>. The pixel channel acts as a <strong>backup</strong>: OPC keeps the
       object semantics <em>and</em> the background geometry, and is the only representation stable across <em>both</em> a
       cosmetic recolor and a structural river change.</p>
@@ -370,10 +370,10 @@
   <section id="exp-perf">
     <h2>Experiments: Performance and Robustness</h2>
     <p><span class="sans" style="color:var(--muted);font-size:.92rem">Setup: train only on the original ROM, evaluate
-      zero-shot on HackAtari variants (10 games) PPO and Rainbow backbones. We use OCAtari as an oracle to identfy objects; As metrics we use IQM + human-normalized
+      zero-shot on HackAtari variants (10 games) PPO and Rainbow backbones. We use OCAtari (<a href="https://rlj.cs.umass.edu/2024/papers/RLJ_RLC_2024_46.pdf">Delfosse et al., 2024</a>) as an oracle to identify objects; As metrics we use IQM + human-normalized
       score with 95% stratified-bootstrap CIs over 3 seeds, agents trained for 40M frames.</span></p>
 
-    <h3>Performance: Trained and tested on the original</h3>
+    <h3>Performance: Trained and Tested on the Original</h3>
     <p>On the <strong>unmodified</strong> games, OPC matches or beats pixel PPO almost everywhere with the semantic anchors help
       learning rather than constraining it.</p>
     <div class="tw">
@@ -391,7 +391,7 @@
       </table>
     </div>
 
-    <h3>Robustness: Testing in a perturbed environment</h3>
+    <h3>Robustness: Testing in a Perturbed Environment</h3>
     <p>Under distribution shifts that leave the task dynamics untouched, pixel baselines suffer a
     <strong>catastrophic generalization gap</strong> while OPC stays put. As an example:</p>
     <ul>
@@ -478,7 +478,7 @@
   </section>
 
   <section id="takeaways">
-    <h2>Take Aways</h2>
+    <h2>Takeaways</h2>
     <ol class="principles">
       <li><b>Prioritize spatial grounding.</b> Encode semantics as coordinate-aligned channels, not flattened vectors, so conv priors do the relational work.</li>
       <li><b>Hybrid representations by default.</b> Pure abstraction goes blind to un-modeled background geometry; the pixel channel is the cheap insurance.</li>
@@ -487,7 +487,7 @@
   </section>
 
   <section id="watch">
-    <h2>Watch OPC play</h2>
+    <h2>Watch OPC Play</h2>
     <p>Some examples in which OPC produced more robust agents across the test suite, with higher or same
       performance on both the original and the perturbed games.</p>
 
@@ -567,7 +567,7 @@
   </section>
 
   <section id="more-paper">
-    <h2>More in the paper</h2>
+    <h2>More In the Paper</h2>
     <p>This blog covers the core idea and the headline results. The full paper digs into several things we skipped here, such as real object detectors, more games, more baselines, more seeds and confidence intervals as well as multiple small ablations.</p>
     <p>Read the full version on <a href="https://openreview.net/forum?id=7BFbso4B3R">OpenReview ↗</a> — code is available
       <a href="https://github.com/VanillaWhey/object-pixel-channels">here ↗</a>.</p>
@@ -579,8 +579,8 @@
     <p>
       <a href="https://openreview.net/forum?id=7BFbso4B3R">OpenReview</a> ·
       <a href="https://github.com/VanillaWhey/object-pixel-channels">Code</a> ·
-      <a href="https://arxiv.org/abs/2406.03997">HackAtari</a> ·
-      <a href="https://oc-atari.readthedocs.io">OCAtari</a>
+      <a href="https://github.com/k4ntz/hackatari">HackAtari</a> ·
+      <a href="https://github.com/k4ntz/OC_Atari">OCAtari</a>
     </p>
   </footer>
 
