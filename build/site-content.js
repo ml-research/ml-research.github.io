@@ -131,6 +131,7 @@ window.AIML_SITE_CONTENT = {
         { "id": "mkomisarczyk", "name": "Mieszko Komisarczyk", "role": "PhD Candidate", "focus": "Efficient Inference Approaches" },
         { "id": "mkraus", "name": "Maurice Kraus", "role": "PhD Candidate", "focus": "Interactive temporal modeling & large-scale models"},
         { "id": "rkamath", "name": "Roshni Kamath", "role": "PhD Candidate", "focus": "Continual Learning" },
+        { "id": "mmay", "name": "Marlon May", "role": "PhD Candidate", "focus": "Safety in Generative Agents" },
         { "id": "rmitchell", "name": "Rupert Mitchell", "role": "PhD Candidate", "focus": "Trustworthy AI" },
         { "id": "dochs", "name": "Daniel Ochs", "role": "PhD Candidate", "focus": "Neurosymbolic AI" },
         { "id": "vpfanschilling", "name": "Viktor Pfanschilling", "role": "PhD Candidate", "focus": "Probabilistic Programming" },
