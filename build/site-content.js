@@ -37,8 +37,8 @@ window.AIML_SITE_CONTENT = {
       "credits": "6 CP",
       "recommended": "Bachelor 4th semester or later.",
       "language": "English",
-      "lastTaught": "Summer 2025",
-      "link": "./lectures/dmml2025sose/index.html",
+      "lastTaught": "Summer 2026",
+      "link": "./lectures/dmml2026sose/index.html",
       "responsible": ["Course team"]
     },
     {
@@ -50,8 +50,8 @@ window.AIML_SITE_CONTENT = {
       "credits": "6 CP",
       "recommended": "After DMML or equivalent.",
       "language": "English",
-      "lastTaught": "Summer 2025",
-      "link": "./lectures/dl2025sose/index.html",
+      "lastTaught": "Summer 2026",
+      "link": "./lectures/dl2026sose/index.html",
       "responsible": ["Course team"]
     },
     {
