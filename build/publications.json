@@ -51,7 +51,7 @@
     "url": "https://ieeexplore.ieee.org/document/11536584",
     "doi": "https://doi.org/10.1109/CAI68641.2026.11536584",
     "typeLabel": "Conference paper",
-    "image": "./images/aiml2020small.png",
+    "image": "./images/strem2026cats.png",
     "topics": [],
     "topicsNormalized": [],
     "position": 1
@@ -25260,5 +25260,35 @@
       "robot-learning"
     ],
     "position": 632
+  },
+  {
+    "cite": "blueml2026do",
+    "title": "Do Object Channels Improve Robustness in Deep Reinforcement Learning?",
+    "authors": [
+      "Jannis Blüml",
+      "Cedric Derstroff",
+      "Bjarne Gregori",
+      "Elisabeth Dillies",
+      "Quentin Delfosse",
+      "Kristian Kersting"
+    ],
+    "year": "2026",
+    "yearDisplay": "2026",
+    "journal": "Transactions on Machine Learning Research",
+    "booktitle": "",
+    "publisher": "",
+    "howpublished": "",
+    "institution": "",
+    "organization": "",
+    "school": "",
+    "series": "",
+    "note": "",
+    "url": "https://openreview.net/forum?id=7BFbso4B3R",
+    "doi": "",
+    "typeLabel": "Journal article",
+    "image": "./images/aiml2020small.png",
+    "topics": [],
+    "topicsNormalized": [],
+    "position": 633
   }
 ]
