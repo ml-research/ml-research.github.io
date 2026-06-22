@@ -20,6 +20,30 @@
     .replace("*","")  // remove asterisks for multi-author highlighting; TODO: Add more possible markers for multi-author highlights
     .trim();
 
+  const fallbackCopy = (text) => {
+    try {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'absolute';
+      textarea.style.left = '-9999px';
+      document.body.appendChild(textarea);
+      textarea.select();
+      const ok = document.execCommand('copy');
+      document.body.removeChild(textarea);
+      return ok;
+    } catch (error) {
+      return false;
+    }
+  };
+
+  const copyToClipboard = (text) => {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(() => true).catch(() => fallbackCopy(text));
+    }
+    return Promise.resolve(fallbackCopy(text));
+  };
+
   const authorMatches = (author, term) => {
     if (!author || !term) return false;
     if (author === term) return true;
@@ -357,6 +381,32 @@
       icon.textContent = '→';
       meta.appendChild(icon);
     }
+
+    const bibtex = (publication.bibtex || '').trim();
+    if (bibtex) {
+      const bibButton = document.createElement('button');
+      bibButton.type = 'button';
+      bibButton.className = 'publication-card-bib';
+      const defaultLabel = 'Copy BibTeX';
+      bibButton.textContent = defaultLabel;
+      bibButton.setAttribute('aria-label', `Copy BibTeX entry for ${publication.title || 'this publication'}`);
+      let resetTimer = null;
+      bibButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        copyToClipboard(bibtex).then((ok) => {
+          bibButton.textContent = ok ? 'Copied!' : 'Copy failed';
+          bibButton.classList.toggle('is-copied', ok);
+          if (resetTimer) window.clearTimeout(resetTimer);
+          resetTimer = window.setTimeout(() => {
+            bibButton.textContent = defaultLabel;
+            bibButton.classList.remove('is-copied');
+          }, 2000);
+        });
+      });
+      meta.appendChild(bibButton);
+    }
+
     if (meta.childNodes.length) {
       content.appendChild(meta);
     }

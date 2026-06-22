@@ -47,6 +47,14 @@
           <p class="text-uppercase text-muted fw-semibold small letter-spacing">Publication Library</p>
           <h1 class="display-5 fw-semibold text-dark">Explore AIML Lab papers, talks, and resources.</h1>
           <p class="lead text-secondary mt-3">Filter by year or publication type to find the work most relevant to your interests. Direct links point to open access versions whenever possible.</p>
+          <a class="publication-download btn btn-outline-primary mt-3" id="downloadBib" href="../build/references.bib" download="references.bib" data-download-name="references.bib">
+            <svg class="publication-download-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span>Download BibTeX file</span>
+          </a>
         </div>
         <div class="col-lg-5">
           <figure class="hero-figure">
@@ -118,6 +126,67 @@
 <script src="../build/publications-data.js"></script>
 <script>
   document.getElementById('current-year').textContent = new Date().getFullYear();
+
+  const fallbackCopy = (text) => {
+    try {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'absolute';
+      textarea.style.left = '-9999px';
+      document.body.appendChild(textarea);
+      textarea.select();
+      const ok = document.execCommand('copy');
+      document.body.removeChild(textarea);
+      return ok;
+    } catch (error) {
+      return false;
+    }
+  };
+
+  const copyToClipboard = (text) => {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(() => true).catch(() => fallbackCopy(text));
+    }
+    return Promise.resolve(fallbackCopy(text));
+  };
+
+  (() => {
+    const trigger = document.getElementById('downloadBib');
+    if (!trigger) return;
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      const url = trigger.getAttribute('href');
+      const filename = trigger.dataset.downloadName || 'references.bib';
+      const saveBlob = (blob) => {
+        const objectUrl = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = objectUrl;
+        link.download = filename;
+        link.rel = 'noopener';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(objectUrl);
+      };
+      fetch(url)
+        .then((response) => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return response.text();
+        })
+        .then((text) => {
+          saveBlob(new Blob([text], { type: 'application/x-bibtex;charset=utf-8' }));
+        })
+        .catch(() => {
+          const entries = Array.isArray(window.AIML_PUBLICATIONS) ? window.AIML_PUBLICATIONS : [];
+          const text = entries
+            .map((pub) => (pub && pub.bibtex ? String(pub.bibtex).trim() : ''))
+            .filter(Boolean)
+            .join('\n\n');
+          saveBlob(new Blob([`${text}\n`], { type: 'application/x-bibtex;charset=utf-8' }));
+        });
+    });
+  })();
 
   (() => {
     const elements = {
@@ -338,6 +407,9 @@
         card.append(topicWrap);
       }
 
+      const actions = document.createElement('div');
+      actions.className = 'publication-card-actions';
+
       if (hasLink) {
         const cta = document.createElement('span');
         cta.className = 'publication-card-cta';
@@ -347,8 +419,35 @@
         icon.setAttribute('aria-hidden', 'true');
         icon.textContent = '→';
         cta.append(icon);
-        card.append(cta);
+        actions.append(cta);
       }
+
+      const bibtex = (publication.bibtex || '').trim();
+      if (bibtex) {
+        const bibButton = document.createElement('button');
+        bibButton.type = 'button';
+        bibButton.className = 'publication-card-bib';
+        const defaultLabel = 'Copy BibTeX';
+        bibButton.textContent = defaultLabel;
+        bibButton.setAttribute('aria-label', `Copy BibTeX entry for ${publication.title || 'this publication'}`);
+        let resetTimer = null;
+        bibButton.addEventListener('click', (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          copyToClipboard(bibtex).then((ok) => {
+            bibButton.textContent = ok ? 'Copied!' : 'Copy failed';
+            bibButton.classList.toggle('is-copied', ok);
+            if (resetTimer) window.clearTimeout(resetTimer);
+            resetTimer = window.setTimeout(() => {
+              bibButton.textContent = defaultLabel;
+              bibButton.classList.remove('is-copied');
+            }, 2000);
+          });
+        });
+        actions.append(bibButton);
+      }
+
+      if (actions.childNodes.length) card.append(actions);
 
       return card;
     };
