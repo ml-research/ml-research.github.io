@@ -1,3 +1,24 @@
+@inproceedings{blueml2026sing,
+	anote = {./images/blueml2026sing.png},
+	title={SING: Improving the Efficiency of MPC Protocol Assignment using Graph Neural Networks},
+	author={Jannis Blüml and Moritz Huppert and Nora Khayata and Joachim Schmidt and Thomas Schneider},
+	booktitle={USENIX Security Symposium},
+	year={2026},
+	url={https://eprint.iacr.org/2026/1237},
+	note={Secure Multi-Party Computation (MPC) enables private computation, but has significantly higher overhead than plaintext execution. Hybrid MPC compilers improve concrete efficiency by mapping distinct computation parts to contextually optimal MPC protocols. However, state-of-the-art systems like Silph (Chen et al., S&P’23) depend on deployment-specific cost models that are cumbersome to retune, and compute mappings via brittle heuristics or costly Integer Linear Programming (ILP), limiting scalability and portability across protocols and deployment settings. We present SING, the first machine-learning-based framework for hybrid MPC share assignment. SING leverages Graph Neural Networks (GNNs) for: (1) imitation of Silph’s assignments, accelerating share assignment by up to 76697x with comparable quality; and (2) cost-driven learning, where we train a GNN cost predictor on synthetic or empirical costs (e.g., runtime or communication), freeze it, and train the share-assigning GNN to minimize predicted costs. The latter supports expressive non-linear cost models, avoiding ILP's linearity constraints, and enables retargeting to new protocol suites and deployment settings by re-fitting the predictor. Finally, we release our synthetic benchmark resources, including a dataset of 704 MPC circuits with wide-ranging hybrid assignments.}
+}
+
+@article{blueml2026do,
+	anote = {./images/blueml2026occam_tmlr.png},
+	title={Do Object Channels Improve Robustness in Deep Reinforcement Learning?},
+	author={Jannis Blüml and Cedric Derstroff and Bjarne Gregori and Elisabeth Dillies and Quentin Delfosse and Kristian Kersting},
+	journal={Transactions on Machine Learning Research},
+	issn={2835-8856},
+	year={2026},
+	url={https://openreview.net/forum?id=7BFbso4B3R},
+	note={Pixel-based reinforcement learning agents often exploit spurious visual correlations, leading to brittle policies that fail under minor visual perturbations. We systematically investigate spatial grounded semantic channel representations, often called Feature Maps, Planes, or Object Channels, as a representation design principle for reducing shortcut learning. Object channels map detected entities into binary tensors aligned with the original coordinate frame, preserving compatibility with standard RL backbones without architectural modifications. Specifically, through systematic evaluation in Atari environments under controlled perturbations, we demonstrate that such channel representations substantially improve zero-shot robustness to distribution shifts while maintaining competitive in-distribution performance. We analyze the abstraction–fidelity trade-off and show that combining object channels with raw pixels improves robustness and sample efficiency compared to pure pixel-based approaches. The experimental results indicate that spatially grounded object-based encodings offer a practical mechanism for bridging pixel- and object-centric RL.}
+}
+
 @misc{komisarczyk2026recursiveinferencemachinesneural,
 	  anote = {./images/komisarczykrim.png},
       title={Recursive Inference Machines for Neural Reasoning},
@@ -7475,12 +7496,3 @@ tabular data, outperforming TabPFNs.},
 	year = {2024},
 	bdsk-url-1 = {https://doi.org/10.1109/ICRA57147.2024.10611321}}
 
-@article{blueml2026do,
-	title={Do Object Channels Improve Robustness in Deep Reinforcement Learning?},
-	author={Jannis Blüml and Cedric Derstroff and Bjarne Gregori and Elisabeth Dillies and Quentin Delfosse and Kristian Kersting},
-	journal={Transactions on Machine Learning Research},
-	issn={2835-8856},
-	year={2026},
-	url={https://openreview.net/forum?id=7BFbso4B3R},
-	note={}
-}
