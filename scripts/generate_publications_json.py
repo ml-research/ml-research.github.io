@@ -5,6 +5,8 @@ from pathlib import Path
 
 try:
     import bibtexparser
+    from bibtexparser.bibdatabase import BibDatabase
+    from bibtexparser.bwriter import BibTexWriter
 except ImportError as exc:
     raise SystemExit(
         "Missing dependency bibtexparser. Install with \n\n    pip install bibtexparser\n"
@@ -14,6 +16,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 BIB_PATH = REPO_ROOT / "references.bib"
 JSON_OUTPUT = REPO_ROOT / "build" / "publications.json"
 DATA_JS_OUTPUT = REPO_ROOT / "build" / "publications-data.js"
+BIB_EXPORT_OUTPUT = REPO_ROOT / "build" / "references.bib"
 IMAGES_DIR = REPO_ROOT / "images"
 DEFAULT_IMAGE = "aiml2020small.png"
 IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg", ".webp", ".svg", ".gif")
@@ -80,6 +83,34 @@ def normalize_url(url: str) -> str:
     return stripped
 
 
+# Internal fields used only by the website, stripped from exported BibTeX.
+BIBTEX_INTERNAL_FIELDS = ("anote", "bdsk-url-1", "bdsk-url-2")
+
+
+def clean_entry(entry):
+    """Drop website-only fields from a parsed entry."""
+    return {k: v for k, v in entry.items() if k.lower() not in BIBTEX_INTERNAL_FIELDS}
+
+
+def render_bibtex(entry) -> str:
+    """Serialize a single parsed entry back to a BibTeX string."""
+    database = BibDatabase()
+    database.entries = [clean_entry(entry)]
+    writer = BibTexWriter()
+    writer.indent = "  "
+    return bibtexparser.dumps(database, writer).strip()
+
+
+def render_bib_export(entries) -> str:
+    """Serialize all entries to a single cleaned BibTeX file, preserving source order."""
+    database = BibDatabase()
+    database.entries = [clean_entry(entry) for entry in entries]
+    writer = BibTexWriter()
+    writer.indent = "  "
+    writer.order_entries_by = None  # keep the original order of references.bib
+    return bibtexparser.dumps(database, writer)
+
+
 def main() -> None:
     if not BIB_PATH.exists():
         raise SystemExit(f"BibTeX file not found at {BIB_PATH}")
@@ -112,6 +143,7 @@ def main() -> None:
                 "image": extract_image(entry),
                 "topics": topics,
                 "topicsNormalized": topics_normalised,
+                "bibtex": render_bibtex(entry),
                 "position": position,
             }
         )
@@ -126,7 +158,11 @@ def main() -> None:
         json.dump(publications, data_js_file, ensure_ascii=False)
         data_js_file.write(";\n")
 
+    with BIB_EXPORT_OUTPUT.open("w", encoding="utf-8") as bib_file:
+        bib_file.write(render_bib_export(database.entries))
+
     print(f"Wrote {len(publications)} publications to {JSON_OUTPUT}")
+    print(f"Wrote cleaned BibTeX export to {BIB_EXPORT_OUTPUT}")
 
 
 if __name__ == "__main__":

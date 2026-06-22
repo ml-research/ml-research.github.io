@@ -2155,8 +2155,42 @@ body.has-fixed-header main {
   color: #005792;
 }
 
-.publication-card-cta {
+.publication-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border-radius: 999px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.publication-download:hover,
+.publication-download:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px -28px rgba(0, 87, 146, 0.46);
+}
+
+.publication-download-icon {
+  transition: transform 0.2s ease;
+}
+
+.publication-download:hover .publication-download-icon,
+.publication-download:focus-visible .publication-download-icon {
+  transform: translateY(2px);
+}
+
+.publication-card-actions {
   margin-top: auto;
+  padding-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+}
+
+.publication-card-cta {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -2165,6 +2199,36 @@ body.has-fixed-header main {
   font-size: 0.8rem;
   font-weight: 600;
   color: #005792;
+}
+
+.publication-card-bib {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: 1px solid rgba(0, 87, 146, 0.35);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #005792;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.publication-card-bib:hover,
+.publication-card-bib:focus-visible {
+  background-color: #005792;
+  color: #fff;
+  border-color: #005792;
+}
+
+.publication-card-bib.is-copied {
+  background-color: #1f8a4c;
+  border-color: #1f8a4c;
+  color: #fff;
 }
 
 .publication-card-icon {

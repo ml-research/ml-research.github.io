@@ -720,6 +720,8 @@
         card.append(noteWrap);
       }
 
+      const actions = Utils.createElement('div', { className: 'publication-card-actions' });
+
       if (hasLink) {
         const cta = Utils.createElement('span', {
           className: 'publication-card-cta',
@@ -730,10 +732,61 @@
           text: '→',
           attrs: { 'aria-hidden': 'true' }
         }));
-        card.append(cta);
+        actions.append(cta);
       }
 
+      const bibtex = (publication.bibtex || '').trim();
+      if (bibtex) {
+        const bibButton = document.createElement('button');
+        bibButton.type = 'button';
+        bibButton.className = 'publication-card-bib';
+        const defaultLabel = 'Copy BibTeX';
+        bibButton.textContent = defaultLabel;
+        bibButton.setAttribute('aria-label', `Copy BibTeX entry for ${publication.title || 'this publication'}`);
+        let resetTimer = null;
+        bibButton.addEventListener('click', (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          copyToClipboard(bibtex).then((ok) => {
+            bibButton.textContent = ok ? 'Copied!' : 'Copy failed';
+            bibButton.classList.toggle('is-copied', ok);
+            if (resetTimer) window.clearTimeout(resetTimer);
+            resetTimer = window.setTimeout(() => {
+              bibButton.textContent = defaultLabel;
+              bibButton.classList.remove('is-copied');
+            }, 2000);
+          });
+        });
+        actions.append(bibButton);
+      }
+
+      if (actions.childNodes.length) card.append(actions);
+
       return card;
+    }
+
+    function copyToClipboard(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        return navigator.clipboard.writeText(text).then(() => true).catch(() => fallbackCopy(text));
+      }
+      return Promise.resolve(fallbackCopy(text));
+    }
+
+    function fallbackCopy(text) {
+      try {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'absolute';
+        textarea.style.left = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.select();
+        const ok = document.execCommand('copy');
+        document.body.removeChild(textarea);
+        return ok;
+      } catch (error) {
+        return false;
+      }
     }
 
     function renderList() {
@@ -997,7 +1050,49 @@
     PublicationsModule.init();
     HeroPhotoModule.init();
     FooterModule.updateYear();
+    BibDownloadModule.init();
   }
+
+  const BibDownloadModule = {
+    init() {
+      const trigger = document.getElementById('downloadBib');
+      if (!trigger) return;
+      trigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        const url = trigger.getAttribute('href');
+        const filename = trigger.dataset.downloadName || 'references.bib';
+        const saveBlob = (blob) => {
+          const objectUrl = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = objectUrl;
+          link.download = filename;
+          link.rel = 'noopener';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          URL.revokeObjectURL(objectUrl);
+        };
+        fetch(url)
+          .then((response) => {
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            return response.text();
+          })
+          .then((text) => {
+            saveBlob(new Blob([text], { type: 'application/x-bibtex;charset=utf-8' }));
+          })
+          .catch(() => {
+            // Last resort: build the .bib from the already-loaded publication data
+            // so the click still downloads (never opens) the file.
+            const entries = Array.isArray(window.AIML_PUBLICATIONS) ? window.AIML_PUBLICATIONS : [];
+            const text = entries
+              .map((pub) => (pub && pub.bibtex ? String(pub.bibtex).trim() : ''))
+              .filter(Boolean)
+              .join('\n\n');
+            saveBlob(new Blob([`${text}\n`], { type: 'application/x-bibtex;charset=utf-8' }));
+          });
+      });
+    }
+  };
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', boot);
