@@ -1,9 +1,86 @@
 @inproceedings{blueml2026sing,
   author = {Jannis Blüml and Moritz Huppert and Nora Khayata and Joachim Schmidt and Thomas Schneider},
-  booktitle = {USENIX Security Symposium},
+  booktitle = {Proceedings of the USENIX Security Symposium},
   note = {Secure Multi-Party Computation (MPC) enables private computation, but has significantly higher overhead than plaintext execution. Hybrid MPC compilers improve concrete efficiency by mapping distinct computation parts to contextually optimal MPC protocols. However, state-of-the-art systems like Silph (Chen et al., S&P’23) depend on deployment-specific cost models that are cumbersome to retune, and compute mappings via brittle heuristics or costly Integer Linear Programming (ILP), limiting scalability and portability across protocols and deployment settings. We present SING, the first machine-learning-based framework for hybrid MPC share assignment. SING leverages Graph Neural Networks (GNNs) for: (1) imitation of Silph’s assignments, accelerating share assignment by up to 76697x with comparable quality; and (2) cost-driven learning, where we train a GNN cost predictor on synthetic or empirical costs (e.g., runtime or communication), freeze it, and train the share-assigning GNN to minimize predicted costs. The latter supports expressive non-linear cost models, avoiding ILP's linearity constraints, and enables retargeting to new protocol suites and deployment settings by re-fitting the predictor. Finally, we release our synthetic benchmark resources, including a dataset of 704 MPC circuits with wide-ranging hybrid assignments.},
   title = {SING: Improving the Efficiency of MPC Protocol Assignment using Graph Neural Networks},
   url = {https://eprint.iacr.org/2026/1237},
+  year = {2026}
+}
+
+@inproceedings{deng2026storm,
+  author = {Yu Deng and Teng Cao and Hikaru Shindo and Quentin Delfosse and Jiahong Xue and Kristian Kersting},
+  booktitle = {Proceedings of the 43rd International Conference on Machine Learning (ICML)},
+  keywords = {6D pose estimation, object tracking, single-image reference, attention fusion, robotics perception},
+  note = {Accurate 6D pose estimation and tracking are core capabilities for physical AI systems, yet real-world deployment remains brittle and labor-intensive. Many pipelines rely on CAD models, manual masking, or per-object adaptation, and still fail under occlusion or fast motion without a principled way to recognize failure. We propose STORM, a unified framework for reference-conditioned 6D tracking that can operate from a single reference image, with minimal manual input and improved robustness. STORM combines: (i) Hierarchical Spatial Fusion Attention (HSFA), a task-driven reference-query fusion architecture that supports both single-reference and multi-reference conditioning and can optionally use vision-language semantic conditioning to resolve instance ambiguities; and (ii) a BCE-trained tracking verifier whose continuous compatibility logit is used as an energy-like score to detect drift and trigger automatic re-initialization. Experiments on LM-O and YCB-Video show that STORM improves annotation-free pose tracking accuracy over strong baselines and recovers reliably from severe occlusions and rapid viewpoint changes with minimal overhead.},
+  title = {STORM: Segment, Track, and Object Re-Localization from a Single Image},
+  url = {https://openreview.net/pdf?id=oqUjAjGQY3},
+  year = {2026}
+}
+
+@inproceedings{kowalczuk2026finding,
+  author = {Antoni Kowalczuk and Dominik Hintersdorf and Lukas Struppek and Kristian Kersting and Adam Dziedzic and Franziska Boenisch},
+  booktitle = {Proceedings of the 43rd International Conference on Machine Learning (ICML)},
+  keywords = {diffusion models, memorization, data privacy, mitigation, text-to-image generation},
+  note = {Text-to-image diffusion models (DMs) have achieved remarkable success in image generation. However, concerns about data privacy and intellectual property remain due to their potential to inadvertently memorize and replicate training data. Recent mitigation efforts have focused on identifying and pruning weights responsible for triggering verbatim training data replication, based on the assumption that memorization can be localized. We challenge this assumption and demonstrate that, even after such pruning, small perturbations to the text embeddings of previously mitigated prompts can re-trigger data replication, revealing the fragility of such methods. Our further analysis then provides multiple indications that memorization is indeed not inherently local: (1) replication triggers for memorized images are distributed throughout text embedding space; (2) embeddings yielding the same replicated image produce divergent model activations; and (3) different pruning methods identify inconsistent sets of memorization-related weights for the same image. Finally, we show that bypassing the locality assumption enables more robust mitigation through adversarial fine-tuning. These findings provide new insights into the fundamental nature of memorization in text-to-image DMs and inform the future development of more reliable mitigation methods against DM memorization.},
+  title = {Finding DoRI: Discovery of Retained Images in Diffusion Models},
+  url = {https://openreview.net/pdf?id=F3uCTULtDZ},
+  year = {2026}
+}
+
+@inproceedings{turan2026neural,
+  author = {Berkant Turan and Suhrab Asadulla and David Steinmann and Kristian Kersting and Wolfgang Stammer and Sebastian Pokutta},
+  booktitle = {Proceedings of the 43rd International Conference on Machine Learning (ICML)},
+  keywords = {prover-verifier games, concept-based learning, interpretability, verifiable AI, nonlinear classification},
+  note = {While Prover-Verifier Games (PVGs) offer a promising path toward verifiability in nonlinear classification models, they have not yet been applied to complex inputs such as high-dimensional images. Conversely, expressive concept encodings effectively allow to translate such data into interpretable concepts but are often utilised in the context of low-capacity linear predictors. In this work, we push towards real-world verifiability by combining the strengths of both approaches. We introduce Neural Concept Verifier (NCV), a unified framework combining PVGs for formal verifiability with concept encodings to handle complex, high-dimensional inputs in an interpretable way. NCV achieves this by utilizing recent minimally supervised concept discovery models to extract structured concept encodings from raw inputs. A prover then selects a subset of these encodings, which a verifier, implemented as a nonlinear predictor, uses exclusively for decision-making. Our evaluations show that NCV outperforms classic concept-based models and pixel-based PVG classifier baselines on high-dimensional, logically complex datasets and helps mitigate shortcut behavior. Overall, we demonstrate NCV as a promising step toward concept-level, verifiable AI.},
+  title = {Neural Concept Verifier: Scaling Prover-Verifier Games via Concept Encodings},
+  url = {https://openreview.net/pdf?id=ThxAdzExdS},
+  year = {2026}
+}
+
+@inproceedings{mitchell2026multipole,
+  author = {Rupert Mitchell and Kristian Kersting},
+  booktitle = {Proceedings of the 43rd International Conference on Machine Learning (ICML)},
+  keywords = {attention mechanisms, transformer pretraining, long-context modeling, efficient attention, language models},
+  note = {Pretraining transformers on long sequences, such as entire code repositories or collections of related documents, is bottlenecked by quadratic attention costs. We present Multipole Semantic Attention (MuSe), which accelerates 64k-context pretraining by 36% while matching baseline loss, requiring no architectural changes. MuSe is a training-time approximation that clusters queries and keys separately in representation space. This yields query-specific summaries that substantially outperform spatial blocking at matched sparsity, while also enabling drop-in compatibility with existing pretrained models—we validate on Llama 3.1-8B and 3.2-1B without retraining. We pretrain language models up to 1B parameters at 64k context on code and scientific documents.},
+  title = {Multipole Semantic Attention: A Fast Approximation of Softmax Attention for Pretraining},
+  url = {https://openreview.net/pdf?id=2oft1bznyx},
+  year = {2026}
+}
+
+@inproceedings{zecevic2026clear,
+  author = {Matej Zečević and Devendra Singh Dhami and Kristian Kersting},
+  booktitle = {Proceedings of the 5th Conference on Causal Learning and Reasoning},
+  keywords = {causal explanation, structural causal model, interactive machine learning, large language model},
+  note = {In normative terms, a meaningful explanation should reflect how data is generated—this is precisely
+where causality becomes essential. Existing machine learning methods for explanation either miss
+this desideratum entirely or incorporate only partial causal knowledge. Large language models
+(LLMs), in particular, routinely produce fluent explanations that amount to unfaithful rationalizations of the underlying data-generating process. We therefore advocate a direct approach: derive
+explanations from the structural parameters and mechanisms of a causal model itself. To this end,
+we introduce Causal Articulation Theory (CAT), a formal account of how explanations can be articulated from a structural causal model (SCM). CAT addresses why-questions about individual units
+and uses a recursive articulation procedure that draws on both the graphical structure and causal
+effects encoded in the SCM. Using a small set of first-order articulation rules, we first develop CAT
+for static linear SCMs and show that it offers an appealing alternative to LLM rationalizations: CAT
+naturally distinguishes direct from indirect causes, captures the qualitative sign of causal effects,
+and remains robust to stochasticity in exogenous variables. To address ever-changing environments,
+we then extend CAT beyond static settings by relaxing initial assumptions to cover both temporal
+and agentic scenarios, yielding articulated explanations over time and action. For empirical corroboration, we present a series of experiments: (i) a user study examining the alignment between
+CAT-based articulations and human causal judgments in everyday domains, (ii) an investigation
+of CAT as a regularizer for causal discovery, and (iii) examples of articulated explanations in two
+temporal domains involving forecasting and a simple video game environment.},
+  title = {Causal Articulation Theory (CAT): Articulating Static and Temporal Causal Models Beyond LLM Rationalizations},
+  url = {https://openreview.net/pdf?id=X1fKZqAIfD},
+  year = {2026}
+}
+
+@article{sha2026nai,
+  author = {Jingyuan Sha and  Kristian Kersting and Devendra Singh Dhami},
+  journal = {Neurosymbolic Artificial Intelligence Journal (NAIJ)},
+  keywords = {Differentiable Reasoning, Inductive Logic Programming, Gestalt principles, Neuro-Symbolic AI, Object-centric Learning},
+  note = {Gestalt principles, established in the 1920s, describe how humans perceive individual elements as cohesive wholes. These principles, including proximity, similarity, closure, continuity, symmetry, and so on, play a fundamental role in human perception, enabling structured visual interpretation. Despite their significance, existing Artificial Intelligence (AI) benchmarks fail to assess models’ ability to infer patterns at the group level, where multiple objects following the same Gestalt principle are considered as a group using these principles. To address this gap, we introduce Gestalt Vision, a framework designed to evaluate AI models’ ability to not only identify groups within patterns but also reason about the underlying logical rules governing these patterns. Gestalt Vision provides structured visual tasks and baseline evaluations spanning neural and neural-symbolic approaches, uncovering key limitations in current models’ ability to perform human-like visual cognition. Our findings emphasize the necessity of incorporating richer perceptual mechanisms into AI reasoning frameworks. By bridging the gap between human perception and computational models, Gestalt Vision offers a crucial step toward developing AI systems with improved perceptual organization and visual reasoning capabilities.},
+  pages = {},
+  publisher = {IOS Press},
+  title = {Gestalt Vision: Evaluating Perceptual Grouping in Neural Visual Reasoning},
+  url = {https://journals.sagepub.com/doi/10.1177/29498732261469488},
   year = {2026}
 }
 
@@ -14,6 +91,44 @@
   note = {Pixel-based reinforcement learning agents often exploit spurious visual correlations, leading to brittle policies that fail under minor visual perturbations. We systematically investigate spatial grounded semantic channel representations, often called Feature Maps, Planes, or Object Channels, as a representation design principle for reducing shortcut learning. Object channels map detected entities into binary tensors aligned with the original coordinate frame, preserving compatibility with standard RL backbones without architectural modifications. Specifically, through systematic evaluation in Atari environments under controlled perturbations, we demonstrate that such channel representations substantially improve zero-shot robustness to distribution shifts while maintaining competitive in-distribution performance. We analyze the abstraction–fidelity trade-off and show that combining object channels with raw pixels improves robustness and sample efficiency compared to pure pixel-based approaches. The experimental results indicate that spatially grounded object-based encodings offer a practical mechanism for bridging pixel- and object-centric RL.},
   title = {Do Object Channels Improve Robustness in Deep Reinforcement Learning?},
   url = {https://openreview.net/forum?id=7BFbso4B3R},
+  year = {2026}
+}
+
+@article{schumann2026indian,
+  author = {Markus Schumann and Jonas Moske and Felix Divo and Antonia W{\"u}st and Kristian Kersting and Peter Groche},
+  journal = {Transactions of the Indian Institute of Metals},
+  keywords = {Sheet Metal Forming, Process Monitoring, Machine Learning, Explainable AI, Force Measurement},
+  note = {The predictive power of machine learning models for process monitoring in sheet metal forming depends strongly on the information content of the sensor signals. This study investigates how force signal characteristics represent process conditions in a multi-stage forming process consisting of deep drawing and ironing, in which surface roughness evolves with a downstream tendency. Indirect and direct force measurement concepts are compared: While indirect sensors are prone to noise, direct sensors often show more clarity. Neural networks are trained on datasets covering multiple roughness and process configurations. Model performance is analysed using classification metrics and explainable AI methods. The results reveal a counter-intuitive finding: Visually smooth force signals with high signal-to-noise ratio can provide limited or misleading information for convolutional neural networks due to temporal misalignment, whereas noisier signals with distributed dynamics show more robust predictions. The study shows the influence of signal clarity for data-driven process monitoring in Industry 4.0-enabled forming.},
+  number = {6},
+  pages = {140},
+  publisher = {Springer},
+  title = {Information Content Analysis of Direct and Indirect Force Measurements for Machine Learning-Based Process State Classification in Multi-stage Sheet Metal Forming},
+  url = {https://link.springer.com/article/10.1007/s12666-026-03839-4},
+  volume = {79},
+  year = {2026}
+}
+
+@article{schumann2026productionA,
+  author = {Markus Schumann and Jonas Moske and Antonia W{\"u}st and Kristian Kersting and Peter Groche},
+  journal = {Production Engineering},
+  note = {In progressive die deep drawing, small deviations in strip positioning and transport can accumulate across stages, leading to significant geometric variations and quality issues. Reliable datasets are therefore essential for data-driven modeling, yet process labels such as the nominal feed length are often affected by machine tolerances and thus introduce uncertainty. This work presents a camera-based methodology for automated feature extraction at the end of the deep drawing process. Using an inline profile projector, relevant geometric features such as circle distances, centroid positions, and local material widths are extracted from high-speed image data. The implemented algorithm combines edge detection, circle fitting, centroid analysis, and directional width measurements to generate consistent feature sets under industrial conditions. Challenges such as material reflections, asymmetric deformation, and non-ideal boundary conditions are addressed, and geometry-specific obstacles for feature detection are discussed. The extracted features are further analyzed with respect to their statistical variability across systematically varied feed length values. Results demonstrate that the variance of image-based features increases with higher feed length, indicating that nominal process labels do not always reflect the actual material position. The study highlights the importance of uncertainty quantification in dataset generation for machine learning in forming technology. By linking process variation to directly observable geometry features, the proposed approach provides both methodological guidance for feature extraction and conceptual insights into label quality in industrial datasets.},
+  number = {2},
+  pages = {66},
+  title = {Structured representation of simulation and annotation data for machine learning in forming technologies},
+  url = {https://link.springer.com/article/10.1007/s11740-026-01434-6},
+  volume = {20},
+  year = {2026}
+}
+
+@article{schumann2026productionB,
+  author = {Markus Schumann and Jonas Moske and Antonia W{\"u}st and Kristian Kersting and Peter Groche},
+  journal = {Production Engineering},
+  note = {In progressive die deep drawing, small deviations in strip positioning and transport can accumulate across stages, leading to significant geometric variations and quality issues. Reliable datasets are therefore essential for data-driven modeling, yet process labels such as the nominal feed length are often affected by machine tolerances and thus introduce uncertainty. This work presents a camera-based methodology for automated feature extraction at the end of the deep drawing process. Using an inline profile projector, relevant geometric features such as circle distances, centroid positions, and local material widths are extracted from high-speed image data. The implemented algorithm combines edge detection, circle fitting, centroid analysis, and directional width measurements to generate consistent feature sets under industrial conditions. Challenges such as material reflections, asymmetric deformation, and non-ideal boundary conditions are addressed, and geometry-specific obstacles for feature detection are discussed. The extracted features are further analyzed with respect to their statistical variability across systematically varied feed length values. Results demonstrate that the variance of image-based features increases with higher feed length, indicating that nominal process labels do not always reflect the actual material position. The study highlights the importance of uncertainty quantification in dataset generation for machine learning in forming technology. By linking process variation to directly observable geometry features, the proposed approach provides both methodological guidance for feature extraction and conceptual insights into label quality in industrial datasets.},
+  number = {2},
+  pages = {61},
+  title = {Camera-based feature extraction and uncertainty analysis in deep drawing in progressive dies},
+  url = {https://link.springer.com/article/10.1007/s11740-026-01434-6},
+  volume = {20},
   year = {2026}
 }
 
