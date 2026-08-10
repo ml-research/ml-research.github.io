@@ -18,63 +18,6 @@ demand structured perception.},
   year = {2026}
 }
 
-@inproceedings{prabhakar2026neurosymbolic,
-  author = {Nikhilesh Prabhakar and Varun Balaji and Athresh Karanam and Kristian Kersting and Sriraam Natarajan},
-  booktitle = {Proceedings of the 6th International Joint Conference on Learning and Reasoning (IJCLR)},
-  keywords = {neurosymbolic AI, imitation learning, privileged information, probabilistic logic},
-  note = {Imitation learning is widely used for learning to act in complex environments. While pure neural-based
-methods handle high dimensional data effectively, they suffer from the requirement of large number of
-samples and are prone to overfitting. Pure symbolic approaches, while generalize well, do not handle
-high-dimensional data effectively. We propose a neurosymbolic approach that achieves the best of both
-worlds, i.e, handling high-dimensional data while achieving generalization. The key advantage of our
-approach is that it can effectively exploit additional privileged information that is available only during
-training (in our case, gaze data). Our empirical evaluations demonstrate the effectiveness, efficiency and
-the generalization capability of our proposed approach.},
-  title = {Neurosymbolic Imitation Learning with Human Guidance: A Privileged Information Approach},
-  url = {https://arxiv.org/abs/2605.07166},
-  year = {2026}
-}
-
-@inproceedings{tenali2026contextspecific,
-  author = {Pranuthi Tenali and Sahil Sidheekh and Saurabh Mathur and Erik Blasch and Kristian Kersting and Sriraam Natarajan},
-  booktitle = {Proceedings of the 29th International Conference on Information Fusion},
-  keywords = {multimodal fusion, probabilistic circuits, credibility estimation, robustness},
-  note = {Multimodal fusion requires integrating information from multiple sources that may conflict depending on
-context. Existing fusion approaches typically rely on static assumptions about source reliability, limiting
-their ability to resolve conflicts when a modality becomes unreliable due to situational factors such as
-sensor degradation or class-specific corruption. We introduce C$^2$MF, a context-specific credibility-aware
-multimodal fusion framework that models per-instance source reliability using a Conditional Probabilistic
-Circuit (CPC). We formalize instance-level reliability through Context-Specific Information Credibility
-(CSIC), a KL-divergence-based measure computed exactly from the CPC. CSIC generalizes conventional
-static credibility estimates as a special case, enabling principled and adaptive reliability assessment. To
-evaluate robustness under cross-modal conflicts, we propose the Conflict benchmark, in which class-specific
-corruptions deliberately induce discrepancies between different modalities. Experimental results show that
-C$^2$MF improves predictive accuracy by up to 29\% over static-reliability baselines in high-noise settings.},
-  title = {Context-specific Credibility-aware Multimodal Fusion with Conditional Probabilistic Circuits},
-  url = {https://arxiv.org/abs/2603.26629},
-  year = {2026}
-}
-
-@inproceedings{darvishvand2026imitation,
-  author = {Fateme Golivand Darvishvand and Michael A. Skinner and Saurabh Mathur and Ameet Soni and Phillip Reeder and Kristian Kersting and Lakshmi Raman and Sriraam Natarajan},
-  booktitle = {24th International Conference on Artificial Intelligence in Medicine (AIME), Part II},
-  keywords = {imitation learning, clinical decision support, pediatric ECMO, tabular foundation models, TabPFN},
-  note = {Pediatric critical care is a dynamic, high-stakes process involving constant monitoring and adjustments
-in life-saving treatments. Modeling these interventions is crucial for effective decision support. To
-address the challenges of high complexity and data scarcity in pediatric Extracorporeal Membrane
-Oxygenation (ECMO), we frame clinical decision-making as learning to act from trajectories, i.e., imitation
-learning that learns action models from observational data, with a key feature that actions are not
-directly observed. We consider TabPFN, a recent transformer-based approach for tabular data, and
-traditional baselines including XGBoost and Multi-Layer Perceptrons (MLPs) on real-world pediatric ECMO
-data to learn the action models. We find that the TabPFN-based approach consistently outperforms these
-classical baselines, supporting its use as a strong clinician-behavior baseline for pediatric ECMO decision
-support.},
-  pages = {377--382},
-  title = {Imitation Learning for Clinical Decision Support in Pediatric ECMO},
-  url = {https://arxiv.org/abs/2605.16175},
-  year = {2026}
-}
-
 @inproceedings{blueml2026sing,
   author = {Jannis Blüml and Moritz Huppert and Nora Khayata and Joachim Schmidt and Thomas Schneider},
   booktitle = {Proceedings of the USENIX Security Symposium},
@@ -206,6 +149,63 @@ temporal domains involving forecasting and a simple video game environment.},
   title = {Camera-based feature extraction and uncertainty analysis in deep drawing in progressive dies},
   url = {https://link.springer.com/article/10.1007/s11740-026-01434-6},
   volume = {20},
+  year = {2026}
+}
+
+@inproceedings{prabhakar2026neurosymbolic,
+  author = {Nikhilesh Prabhakar and Varun Balaji and Athresh Karanam and Kristian Kersting and Sriraam Natarajan},
+  booktitle = {Proceedings of the 6th International Joint Conference on Learning and Reasoning (IJCLR)},
+  keywords = {neurosymbolic AI, imitation learning, privileged information, probabilistic logic},
+  note = {Imitation learning is widely used for learning to act in complex environments. While pure neural-based
+methods handle high dimensional data effectively, they suffer from the requirement of large number of
+samples and are prone to overfitting. Pure symbolic approaches, while generalize well, do not handle
+high-dimensional data effectively. We propose a neurosymbolic approach that achieves the best of both
+worlds, i.e, handling high-dimensional data while achieving generalization. The key advantage of our
+approach is that it can effectively exploit additional privileged information that is available only during
+training (in our case, gaze data). Our empirical evaluations demonstrate the effectiveness, efficiency and
+the generalization capability of our proposed approach.},
+  title = {Neurosymbolic Imitation Learning with Human Guidance: A Privileged Information Approach},
+  url = {https://arxiv.org/abs/2605.07166},
+  year = {2026}
+}
+
+@inproceedings{tenali2026contextspecific,
+  author = {Pranuthi Tenali and Sahil Sidheekh and Saurabh Mathur and Erik Blasch and Kristian Kersting and Sriraam Natarajan},
+  booktitle = {Proceedings of the 29th International Conference on Information Fusion},
+  keywords = {multimodal fusion, probabilistic circuits, credibility estimation, robustness},
+  note = {Multimodal fusion requires integrating information from multiple sources that may conflict depending on
+context. Existing fusion approaches typically rely on static assumptions about source reliability, limiting
+their ability to resolve conflicts when a modality becomes unreliable due to situational factors such as
+sensor degradation or class-specific corruption. We introduce C$^2$MF, a context-specific credibility-aware
+multimodal fusion framework that models per-instance source reliability using a Conditional Probabilistic
+Circuit (CPC). We formalize instance-level reliability through Context-Specific Information Credibility
+(CSIC), a KL-divergence-based measure computed exactly from the CPC. CSIC generalizes conventional
+static credibility estimates as a special case, enabling principled and adaptive reliability assessment. To
+evaluate robustness under cross-modal conflicts, we propose the Conflict benchmark, in which class-specific
+corruptions deliberately induce discrepancies between different modalities. Experimental results show that
+C$^2$MF improves predictive accuracy by up to 29\% over static-reliability baselines in high-noise settings.},
+  title = {Context-specific Credibility-aware Multimodal Fusion with Conditional Probabilistic Circuits},
+  url = {https://arxiv.org/abs/2603.26629},
+  year = {2026}
+}
+
+@inproceedings{darvishvand2026imitation,
+  author = {Fateme Golivand Darvishvand and Michael A. Skinner and Saurabh Mathur and Ameet Soni and Phillip Reeder and Kristian Kersting and Lakshmi Raman and Sriraam Natarajan},
+  booktitle = {24th International Conference on Artificial Intelligence in Medicine (AIME), Part II},
+  keywords = {imitation learning, clinical decision support, pediatric ECMO, tabular foundation models, TabPFN},
+  note = {Pediatric critical care is a dynamic, high-stakes process involving constant monitoring and adjustments
+in life-saving treatments. Modeling these interventions is crucial for effective decision support. To
+address the challenges of high complexity and data scarcity in pediatric Extracorporeal Membrane
+Oxygenation (ECMO), we frame clinical decision-making as learning to act from trajectories, i.e., imitation
+learning that learns action models from observational data, with a key feature that actions are not
+directly observed. We consider TabPFN, a recent transformer-based approach for tabular data, and
+traditional baselines including XGBoost and Multi-Layer Perceptrons (MLPs) on real-world pediatric ECMO
+data to learn the action models. We find that the TabPFN-based approach consistently outperforms these
+classical baselines, supporting its use as a strong clinician-behavior baseline for pediatric ECMO decision
+support.},
+  pages = {377--382},
+  title = {Imitation Learning for Clinical Decision Support in Pediatric ECMO},
+  url = {https://arxiv.org/abs/2605.16175},
   year = {2026}
 }
 
