@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="Probabilistic Graphical Models at TU Darmstadt - Bayesian networks, inference, learning, and temporal models with practical assignments."/>
+  <title>Probabilistic Graphical Models (PGM) · AIML Lab</title>
+  <link rel="icon" type="image/svg+xml" href="../../icons/logos/aimlCleanV2.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body class="site-body has-fixed-header">
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../../index.html">
+        <img src="../../icons/logos/aimlCleanV2.svg" alt="AIML Lab logo" class="navbar-brand-photo"/>
+        <span>AIML Lab</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="../../index.html#news">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#research">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#people">People</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#teaching">Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center mt-3 mt-lg-0 ms-lg-4 gap-2">
+          <a class="btn btn-outline-primary" href="https://www.tu-darmstadt.de/" target="_blank" rel="noopener">TU Darmstadt</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="hero-intro py-5 border-bottom bg-white">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7">
+          <p class="text-uppercase text-muted fw-semibold small letter-spacing">Winter Semester 2026/27</p>
+          <h1 class="display-5 fw-semibold text-dark">Probabilistic Graphical Models (PGM)</h1>
+          <p class="lead text-secondary mt-3">Bayesian networks, factor graphs, and temporal models for reasoning under uncertainty. Together, we develop the skills to build, train, and apply these models in practice.</p>
+          <div class="d-flex flex-wrap gap-3 align-items-center mt-4">
+            <a class="btn btn-primary" href="../../index.html#teaching">Back to Teaching Overview</a>
+            <a class="btn btn-outline-secondary" href="https://moodle.informatik.tu-darmstadt.de/" target="_blank" rel="noopener">Go to Moodle Course</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <figure class="hero-figure">
+            <img src="./images/pgm.png" alt="PGM illustration" class="img-fluid rounded"/>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-light-subtle">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+        <div class="col-lg-6">
+          <h2 class="h3">Organization</h2>
+          <ul class="list-unstyled text-secondary mt-3 d-flex flex-column gap-3">
+            <li><strong>Moodle:</strong> All announcements, materials, and submissions are handled via the <a href="https://moodle.informatik.tu-darmstadt.de/" target="_blank" rel="noopener">Moodle course</a>. Please enroll and enable notifications.</li>
+            <li><strong>Lecture:</strong> Mondays, 11:40&nbsp;&ndash;&nbsp;13:20, S1|15&nbsp;/&nbsp;133.</li>
+            <li><strong>Exercise:</strong> Fridays, 11:40&nbsp;&ndash;&nbsp;13:20, S1|03&nbsp;/&nbsp;221.</li>
+            <li><strong>Language:</strong> English.</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <h2 class="h3">Team &amp; Contact</h2>
+          <article class="card border-0 shadow-sm">
+            <div class="card-body text-secondary d-flex flex-column gap-2">
+              <div>
+                <strong>Responsible (Winter 2026/27):</strong><br/>Saurabh Mathur, Antonia Wüst · AIML Lab, TU Darmstadt
+              </div>
+              <div>
+                <strong>Contact:</strong><br/>Please ask questions via the Moodle course or by email to the TAs.
+              </div>
+              <div>
+                <strong>Registration:</strong><br/>Please also register in <a href="https://www.tucan.tu-darmstadt.de/" target="_blank" rel="noopener">TUCaN</a> for exam dates and ECTS credits.
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="section-header mb-4">
+        <h2 class="h3">Why Probabilistic Graphical Models?</h2>
+        <p class="text-secondary mb-0">PGMs combine graph theory and probability theory to model complex collections of random variables in a structured way. They are central to machine learning, robotics, computer vision, NLP, and bioinformatics.</p>
+      </div>
+      <p class="text-secondary">The course covers formal foundations, modeling principles, exact and approximate inference, and parameter and structure learning. This is complemented by applications, current research examples, and an outlook on generative models.</p>
+      <div class="row g-4 mt-1">
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h3 class="h6 text-uppercase text-muted">Bayesian Networks</h3>
+              <p class="text-secondary mb-0">Independencies, factorization, d-separation, and variable elimination.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h3 class="h6 text-uppercase text-muted">Learning</h3>
+              <p class="text-secondary mb-0">Maximum likelihood, EM, Bayesian parameter estimation, and structure learning.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h3 class="h6 text-uppercase text-muted">Temporal Models</h3>
+              <p class="text-secondary mb-0">Hidden Markov models, dynamic Bayesian networks, and recursive filters.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h3 class="h6 text-uppercase text-muted">Tractable &amp; Deep PGMs</h3>
+              <p class="text-secondary mb-0">Sum-product networks, probabilistic circuits, and deep generative models.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-padding bg-light-subtle" id="syllabus">
+    <div class="container">
+      <div class="section-header mb-4">
+        <h2 class="h3">Lecture Schedule</h2>
+        <p class="text-secondary mb-0">The table summarizes dates, topics, slides, recordings, and additional videos. Announcements, exercise material, and short-notice changes are published in the <a href="https://moodle.informatik.tu-darmstadt.de/" target="_blank" rel="noopener">Moodle course</a>.</p>
+        <p class="text-secondary small mt-3"><strong>Note:</strong> The recordings are from the winter semester 2020/21; a TU-ID is required to access them.</p>
+      </div>
+      <div class="table-responsive shadow-sm bg-white rounded-3">
+        <table class="table table-hover align-middle mb-0" style="table-layout: fixed; width: 100%; min-width: 1000px;">
+          <thead class="table-light">
+            <tr>
+              <th scope="col" style="width: 6%;">#</th>
+              <th scope="col" style="width: 12%;">Date</th>
+              <th scope="col" style="width: 26%;">Topic</th>
+              <th scope="col" style="width: 9%;">Slides</th>
+              <th scope="col" style="width: 10%;">Recordings<br/><span class="fw-normal small">Winter 20/21, TU-ID</span></th>
+              <th scope="col" style="width: 37%;">Additional Videos</th>
+            </tr>
+          </thead>
+          <tbody class="text-secondary">
+            <tr>
+              <td>1</td>
+              <td>Oct. 12, 2026</td>
+              <td>Course Introduction, Probability Theory</td>
+              <td>
+                <a href="./slides/01_tud_PGM01_intro.pdf" target="_blank">.pdf</a>
+              </td>
+              <td>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week1.mp4" target="_blank" rel="noopener">Video</a>
+              </td>
+              <td class="text-break">
+                <a href="https://www.youtube.com/watch?v=MhMSW3IvbsE&amp;list=PLzERW_Obpmv-_TkPEmCyzaJUGHtl7S01i&amp;index=2" target="_blank" rel="noopener">Intro, Koller, Stanford</a><br/>
+                <a href="https://www.youtube.com/watch?v=ju1Grt2hdko&amp;list=PLL0GjJzXhAWTRiW_ynFswMaiLSa0hjCZ3" target="_blank" rel="noopener">Overview PGMs, Bishop, MSR</a><br/>
+                <a href="https://www.youtube.com/watch?v=BosZK5E_q70" target="_blank" rel="noopener">Overview PGMs, Hennig, Tübingen</a><br/>
+                <a href="https://www.youtube.com/watch?v=5NMxiOGL39M" target="_blank" rel="noopener">How Bayes Theorem works, Rohrer</a>
+              </td>
+            </tr>
+            <tr>
+              <td>2&amp;3</td>
+              <td>Oct. 19 &amp; 26, 2026</td>
+              <td>Naive Bayes, Independency, Factorization, Local Markov Assumption, &hellip;</td>
+              <td>
+                <a href="./slides/02_tud_PGM02_BN1.pdf" target="_blank">.pdf</a>
+              </td>
+              <td>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week2.mp4" target="_blank" rel="noopener">Video 1</a><br/>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week3.mp4" target="_blank" rel="noopener">Video 2</a>
+              </td>
+              <td class="text-break">
+                <a href="https://www.youtube.com/watch?v=M59h7CFUwPU" target="_blank" rel="noopener">Naive Bayes, Littman/Isbell/Kohle, Georgia Tech</a><br/>
+                <a href="https://www.youtube.com/watch?v=cM1BqBv11U8" target="_blank" rel="noopener">Chain Rule, Bayes&#x27; Rule, Partition, mathematicalmonk</a><br/>
+                <a href="https://www.youtube.com/watch?v=N0xxCZP0KIc&amp;list=PLzERW_Obpmv-_TkPEmCyzaJUGHtl7S01i&amp;index=3" target="_blank" rel="noopener">Joint Distribution, Koller, Stanford</a><br/>
+                <a href="https://www.youtube.com/watch?v=6xBU74VWEuE&amp;list=PLzERW_Obpmv-_TkPEmCyzaJUGHtl7S01i&amp;index=8" target="_blank" rel="noopener">Naive Bayes, Koller, Stanford</a>
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Nov. 2, 2026</td>
+              <td>d-separation, context-specific independence, variable elimination, &hellip;</td>
+              <td>
+                <a href="./slides/03_tud_PGM03_BN2.pdf" target="_blank">.pdf</a>
+              </td>
+              <td>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week3.mp4" target="_blank" rel="noopener">Video 1</a><br/>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week4.mp4" target="_blank" rel="noopener">Video 2</a>
+              </td>
+              <td class="text-break">
+                <a href="https://www.youtube.com/watch?v=yDs_q6jKHb0" target="_blank" rel="noopener">d-separation, Abbeel, Berkeley</a><br/>
+                <a href="https://www.youtube.com/watch?v=_haafsCKsmY" target="_blank" rel="noopener">Variable elimination, Abbeel, Berkeley</a><br/>
+                <a href="https://www.youtube.com/watch?v=BLbvW6FVniU&amp;list=PLzERW_Obpmv-_TkPEmCyzaJUGHtl7S01i&amp;index=6" target="_blank" rel="noopener">Reasoning patterns, Koller, Stanford</a><br/>
+                <a href="https://www.youtube.com/watch?v=JSrNWurmyLU&amp;list=PLzERW_Obpmv-_TkPEmCyzaJUGHtl7S01i&amp;index=7" target="_blank" rel="noopener">Flow of probabilistic influence, Koller, Stanford</a><br/>
+                <a href="https://www.youtube.com/watch?v=Xhdpk9HZQuo" target="_blank" rel="noopener">Brute Force inference, De Freitas, UBC</a><br/>
+                <a href="https://www.youtube.com/watch?v=_haafsCKsmY&amp;t=2578s" target="_blank" rel="noopener">Variable elimination 2, Abbeel, Berkeley</a>
+              </td>
+            </tr>
+            <tr>
+              <td>5&amp;6</td>
+              <td>Nov. 9&nbsp;&ndash;&nbsp;23, 2026</td>
+              <td>MAP, MPE, complexity results, moralization, running intersection property, junction tree, &hellip;</td>
+              <td>
+                <a href="./slides/04_tud_PGM04_BN3.pdf" target="_blank">.pdf</a>
+              </td>
+              <td>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week5.mp4" target="_blank" rel="noopener">Video 1</a><br/>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week6.mp4" target="_blank" rel="noopener">Video 2</a><br/>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week7.mp4" target="_blank" rel="noopener">Video 3</a>
+              </td>
+              <td class="text-break">
+                <a href="https://www.youtube.com/watch?v=zGGGGlO8VFc" target="_blank" rel="noopener">BN inference, Andreas &amp; Foote, Berkeley</a><br/>
+                <a href="https://www.youtube.com/watch?v=7CU5uo2XwIc" target="_blank" rel="noopener">Computational Complexity of BNs, Kwisthout &amp; de Campos, Radboud &amp; Belfast</a><br/>
+                <a href="https://www.youtube.com/watch?v=TddbmU9dHgA" target="_blank" rel="noopener">Exact inference via junction tree, Bilmes, UW</a><br/>
+                <a href="https://www.youtube.com/watch?v=YJth2C5WIzU" target="_blank" rel="noopener">Junction Tree / Conditioning, Darwiche, UCLA</a>
+              </td>
+            </tr>
+            <tr>
+              <td>7&amp;8</td>
+              <td>Nov. 30, 2026</td>
+              <td>Parameter Estimation, MLE, Expectation Maximization (EM), Gradient, &hellip;</td>
+              <td>
+                <a href="./slides/05_tud_PGM05_BN4.pdf" target="_blank">.pdf</a>
+              </td>
+              <td>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week7.mp4" target="_blank" rel="noopener">Video 1</a><br/>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week8.mp4" target="_blank" rel="noopener">Video 2</a><br/>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week9.mp4" target="_blank" rel="noopener">Video 3</a>
+              </td>
+              <td class="text-break">
+                <a href="https://www.youtube.com/watch?v=NDoHheP2ww4&amp;list=PLlDG_zCuBub6ywAIrM1DfJp8xaeVjyvwx&amp;index=21" target="_blank" rel="noopener">Maximum Likelihood Approach, Darwiche, UCLA</a><br/>
+                <a href="https://www.youtube.com/watch?v=NDoHheP2ww4&amp;list=PLlDG_zCuBub6ywAIrM1DfJp8xaeVjyvwx&amp;index=22" target="_blank" rel="noopener">EM and Gradient, Darwiche, UCLA</a><br/>
+                <a href="https://www.youtube.com/watch?v=13wkyu5c-s4" target="_blank" rel="noopener">Maximum Likelihood Estimation, Mausam, IIT Delhi</a><br/>
+                <a href="https://www.youtube.com/watch?v=JZAESnbtKS4" target="_blank" rel="noopener">Maximum Likelihood, Gogate, UT Dallas</a>
+              </td>
+            </tr>
+            <tr>
+              <td>9&amp;10</td>
+              <td>Dec. 7 &amp; 14, 2026</td>
+              <td>Bayesian Parameter Estimation, Structure Learning, Local Search, Structural EM, &hellip;</td>
+              <td>
+                <a href="./slides/06_tud_PGM06_BN5.pdf" target="_blank">.pdf</a>
+              </td>
+              <td>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week9.mp4" target="_blank" rel="noopener">Video 1</a><br/>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week10.mp4" target="_blank" rel="noopener">Video 2</a>
+              </td>
+              <td class="text-break">
+                <a href="https://www.youtube.com/watch?v=2kF0H262CLQ" target="_blank" rel="noopener">Parameter Learning in BNs: Bayesian Approach, Gogate, UT Dallas</a><br/>
+                <a href="https://www.youtube.com/watch?v=8N0HsrBY7WI" target="_blank" rel="noopener">Structure Learning Algs for BNs, Gogate, UT Dallas</a><br/>
+                <a href="https://www.youtube.com/watch?v=RV2lInyq_bI" target="_blank" rel="noopener">Learning Network Structure, Darwiche, UCLA</a><br/>
+                <a href="https://www.youtube.com/watch?v=3-qjNObPEO4" target="_blank" rel="noopener">Structure Learning and EM, Mausam, IIT Delhi</a><br/>
+                <a href="https://www.youtube.com/watch?v=IkyffdZrNjo" target="_blank" rel="noopener">Learning in Bayesian Networks, Mausam, Berkeley</a><br/>
+                <a href="https://www.youtube.com/watch?v=a402ek-8oco" target="_blank" rel="noopener">Bayesian Parameter Estimation the hard way, Niemi</a><br/>
+                <a href="https://www.youtube.com/watch?v=TUgqL9c1jik" target="_blank" rel="noopener">Bayesian Estimation, Knudson</a>
+              </td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Jan. 11, 2027</td>
+              <td>Hidden Markov Models, Recursive Filters, Kalman Filter, Dynamic Bayesian Networks, &hellip;</td>
+              <td>
+                <a href="./slides/07_tud_PGM07_BN6.pdf" target="_blank">.pdf</a>
+              </td>
+              <td>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week11.mp4" target="_blank" rel="noopener">Video</a>
+              </td>
+              <td class="text-break">
+                <a href="https://youtu.be/lecy8kEjC3Q" target="_blank" rel="noopener">Dynamic Bayesian Networks, Koller, Stanford</a><br/>
+                <a href="https://youtu.be/5araDjcBHMQ" target="_blank" rel="noopener">Hidden Markov Models, Bobick, Udacity</a><br/>
+                <a href="https://youtu.be/0u80UvCAKVo" target="_blank" rel="noopener">Hidden Markov Models, Andreas, Berkeley</a><br/>
+                <a href="https://youtu.be/0lKHFJpaZvE" target="_blank" rel="noopener">Recursive Bayes Filter, Stachniss, U Bonn</a><br/>
+                <a href="https://youtu.be/E-6paM_Iwfc" target="_blank" rel="noopener">Kalman Filter and EKF, Stachniss, U Bonn</a>
+              </td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Jan. 18, 2027</td>
+              <td>(Loopy) Belief Propagation, Sampling, Rejection Sampling, GIBBS Sampling, Likelihood Weighting, &hellip;</td>
+              <td>
+                <a href="./slides/08_tud_PGM08_BN7.pdf" target="_blank">.pdf</a><br/>
+                <a href="./slides/08_tud_PGM08_BN7_old.pdf" target="_blank">.pdf (old)</a>
+              </td>
+              <td>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week10.mp4" target="_blank" rel="noopener">Video 1</a><br/>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week11.mp4" target="_blank" rel="noopener">Video 2</a>
+              </td>
+              <td class="text-break">
+                <a href="https://www.youtube.com/watch?v=r6zT6boHQbM" target="_blank" rel="noopener">Loopy Belief Propagation, Darwiche, UCLA</a><br/>
+                <a href="https://youtu.be/meBWAboEWQk" target="_blank" rel="noopener">Belief Propagation, Huang, Virginia Tech</a><br/>
+                <a href="https://www.youtube.com/watch?v=yWxjcmjkGu8" target="_blank" rel="noopener">Loopy Belief Propagation, Batmanghelich, CMU</a><br/>
+                <a href="https://www.youtube.com/watch?v=ogYaTTRguIw" target="_blank" rel="noopener">Sampling from BNs, Abbeel, Berkeley</a><br/>
+                <a href="https://www.youtube.com/watch?v=cpP66Ga44ng" target="_blank" rel="noopener">Likelihood Sampling, Mausam, IIT Delhi</a><br/>
+                <a href="https://www.youtube.com/watch?v=B_ahqu50VjY" target="_blank" rel="noopener">Belief Propagation, Matt Gormley, CMU</a>
+              </td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Jan. 25, 2027</td>
+              <td>Tractable Probabilistic Models, Sum-Product Networks, &hellip;</td>
+              <td>
+                <a href="./slides/09_tud_PGM09_probCircuits.pdf" target="_blank">.pdf</a>
+              </td>
+              <td>
+                <a href="https://moodleload.hrz.tu-darmstadt.de/FB20_DaMi/PGM_WiSe2020/Week12.mp4" target="_blank" rel="noopener">Video</a>
+              </td>
+              <td class="text-break">
+                <a href="https://youtu.be/2RAG5-L9R70" target="_blank" rel="noopener">Probabilistic Circuits, Vergari, Choi, Peharz, Van den Broeck, ECMLPKDD 2020 Tutorial</a><br/>
+                <a href="https://www.youtube.com/watch?v=eF0APeEIJNw" target="_blank" rel="noopener">Sum-Product Networks, Poupart, Waterloo</a><br/>
+                <a href="https://youtu.be/dCoCTVcGsEA" target="_blank" rel="noopener">Arithmetic Circuits and SPNs, Darwiche, UCLA</a><br/>
+                <a href="https://youtu.be/uxBQS8-ZmBA" target="_blank" rel="noopener">Random SPNs, Peharz, UAI 2019</a><br/>
+                <a href="https://youtu.be/QegQUBz99o4" target="_blank" rel="noopener">Sum-Product Networks, Domingos, UW</a>
+              </td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Feb. 1, 2027</td>
+              <td>Deep Neural Generative Models, Associative Neural Models, VAE, GAN, &hellip;</td>
+              <td>
+                <a href="./slides/10_tud_PGM10_DeepNeuralGenerativeModels.pdf" target="_blank">.pdf</a><br/>
+                <a href="./slides/10_tud_PGM10_DeepNeuralGenerativeModels_AdityaGrover.pdf" target="_blank">.pdf (Grover)</a>
+              </td>
+              <td>
+                <a href="https://www.youtube.com/watch?v=lCYdaa5F79c" target="_blank" rel="noopener">YouTube</a>
+              </td>
+              <td class="text-break">
+                <a href="https://www.youtube.com/watch?v=BUNl0To1IVw" target="_blank" rel="noopener">Deep Generative Modeling, Soleimany, MIT</a><br/>
+                <a href="https://www.youtube.com/watch?v=24oBV_s5ufQ" target="_blank" rel="noopener">What are Generative Models?, Lyu, U of Toronto</a><br/>
+                <a href="https://www.youtube.com/watch?v=5WoItGTWV54" target="_blank" rel="noopener">Generative Models, Yeung, Stanford</a>
+              </td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Feb. 8, 2027</td>
+              <td>Questions &amp; Answers on all topics of the lecture.</td>
+              <td>&ndash;</td>
+              <td>&ndash;</td>
+              <td>&ndash;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <article class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h3 class="h4">Assignments &amp; Exercises</h3>
+              <p class="text-secondary mb-0">In addition to the “5 Questions” homework, there are four written assignments (theory &amp; programming). Handing them in regularly earns a bonus for the final exam. All materials and deadlines are available in the <a href="https://moodle.informatik.tu-darmstadt.de/" target="_blank" rel="noopener">Moodle course</a> (login required).</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-lg-6">
+          <article class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h3 class="h4">Further Reading</h3>
+              <ul class="text-secondary mb-0 d-flex flex-column gap-2">
+                <li>Probabilistic Graphical Models: Principles and Techniques &ndash; Daphne Koller &amp; Nir Friedman.</li>
+                <li>Modeling and Reasoning with Bayesian Networks &ndash; Adnan Darwiche.</li>
+                <li>Pattern Recognition and Machine Learning &ndash; Christopher Bishop.</li>
+                <li>Machine Learning: A Probabilistic Perspective &ndash; Kevin P. Murphy.</li>
+                <li>Information Theory, Inference, and Learning Algorithms &ndash; David J. C. MacKay (online).</li>
+                <li>Bayesian Reasoning and Machine Learning &ndash; David Barber (online).</li>
+                <li>Graphical Models, Exponential Families, and Variational Inference &ndash; Wainwright &amp; Jordan (online).</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer bg-dark text-white" id="contact">
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <h2 class="h4">Contact</h2>
+        <p class="text-white-50 mb-1">Meetings by appointment, general consultation: Thursdays, 13:30&ndash;14:30.</p>
+        <address class="mb-0 text-white-50">
+          Artificial Intelligence and Machine Learning Lab<br/>
+          Computer Science Department &amp; Centre for Cognitive Science, TU Darmstadt<br/>
+          Altes Hauptgebäude, Room 074, Hochschulstrasse 1<br/>
+          64289 Darmstadt, Germany<br/>
+          <span class="d-block mt-3"><img src="../../images/phone.png" alt="Phone" class="icon-inline"/> +49-6151-16-24411</span>
+          <span class="d-block"><img src="../../images/mail.jpg" alt="Mail" class="icon-inline"/> kersting@cs.tu-darmstadt.de, kristian.kersting@cogsci.tu-darmstadt.de</span>
+        </address>
+      </div>
+      <div class="col-lg-6">
+        <h2 class="h4">Legal Information</h2>
+        <p class="text-white-50 mb-2">Technische Universitaet Darmstadt<br/>
+          Department of Computer Science<br/>
+          Hochschulstr. 1, 64289 Darmstadt, Germany</p>
+        <a class="btn btn-outline-light btn-sm" href="https://www.informatik.tu-darmstadt.de/impressum.en.jsp" target="_blank" rel="noopener">Legal info / Impressum</a>
+      </div>
+    </div>
+    <div class="mt-4 text-white-50 small">© <span id="current-year"></span> Artificial Intelligence and Machine Learning Lab. All rights reserved.</div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
