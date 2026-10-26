@@ -15,6 +15,36 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="../../css/style.css" rel="stylesheet">
     <link href="../../css/profile.css" rel="stylesheet">
+    <style>
+      .arcade-banner {
+        display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;
+        margin-top: 1.5rem; padding: 1rem 1.25rem; border-radius: 1rem;
+        background: rgba(0, 87, 146, 0.06); border: 1px solid rgba(0, 87, 146, 0.16);
+        box-shadow: 0 12px 26px -24px rgba(0, 42, 71, 0.5);
+      }
+      .arcade-banner .arcade-thumbs { display: flex; gap: 0.4rem; flex-shrink: 0; }
+      .arcade-banner .arcade-thumbs img {
+        width: 44px; aspect-ratio: 160 / 210; border-radius: 0.35rem;
+        image-rendering: pixelated; background: #000; box-shadow: 0 4px 10px -6px rgba(0, 0, 0, 0.6);
+      }
+      .arcade-banner .arcade-text { flex: 1 1 240px; min-width: 0; }
+      .arcade-banner .arcade-title { font-weight: 600; font-size: 1.05rem; color: #0f172a; }
+      .arcade-banner .arcade-sub { color: rgba(9, 43, 70, 0.7); font-size: 0.92rem; }
+      .arcade-banner .arcade-links { margin-top: 0.3rem; font-size: 0.88rem; font-weight: 500; }
+      .arcade-banner .arcade-links span { color: rgba(9, 43, 70, 0.4); margin: 0 0.35rem; }
+      #mission .arcade-banner a.arcade-play {
+        flex-shrink: 0; padding: 0.6rem 1.3rem; border-radius: 0.8rem; font-weight: 600;
+        color: #ffffff; text-decoration: none; letter-spacing: 0.02em;
+        background: linear-gradient(135deg, #0b8acb 0%, #005792 100%);
+        box-shadow: 0 16px 32px -24px rgba(0, 87, 146, 0.45);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      #mission .arcade-banner a.arcade-play:hover,
+      #mission .arcade-banner a.arcade-play:focus {
+        color: #ffffff; transform: translateY(-2px); box-shadow: 0 20px 38px -22px rgba(0, 87, 146, 0.55);
+      }
+      @media (max-width: 575px) { #mission .arcade-banner a.arcade-play { width: 100%; text-align: center; } }
+    </style>
 
 </head>
 
@@ -60,11 +90,25 @@
               <div style="float: right">
 </div>
         </div>
+        <div class="arcade-banner">
+            <div class="arcade-thumbs" aria-hidden="true">
+                <img src="jaxtari-arcade/games/pong/thumb.png" alt="">
+                <img src="jaxtari-arcade/games/breakout/thumb.png" alt="">
+                <img src="jaxtari-arcade/games/spaceinvaders/thumb.png" alt="">
+                <img src="jaxtari-arcade/games/mspacman/thumb.png" alt="">
+            </div>
+            <div class="arcade-text">
+                <div class="arcade-title">JAXtari Arcade</div>
+                <div class="arcade-sub">Play 70 Atari games from JAXtari, compiled to WebAssembly and running entirely in your browser.</div>
+                <div class="arcade-links"><a href="https://arxiv.org/abs/2610.23650" target="_blank">Paper</a><span>·</span><a href="https://github.com/k4ntz/JAXAtari" target="_blank">Code</a></div>
+            </div>
+            <a class="arcade-play" href="jaxtari-arcade/">Play in your browser →</a>
+        </div>
 	<br><br>
 	<!-- <b>News.</b>
 	<br><br> -->
         <b>Mission.</b> My research focuses on enhancing the interpretability of reinforcement learning agents and improving their robustness to distributional shifts, i.e., changes in the environment. Additionally, I am interested in uncertainty quantification and causal inference, particularly in the context of their integration with reinforcement learning.
-    <br><br> 
+    <br><br>
 
     <br>
     

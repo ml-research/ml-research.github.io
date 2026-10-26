@@ -1,0 +1,430 @@
+<!doctype html><html><head><meta charset=utf-8><title>JAXtari Arcade</title><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Chivo:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap" />
+<style>
+  /* Layout: a cartridge shelf (grid of title screens) that swaps to a cabinet view (screen + side console). */
+  /* Single deliberate look: a dark arcade room lit by an amber CRT glow. */
+  :root {
+    --bg: #0b0c10;
+    --panel: #14161d;
+    --panel-2: #1c1f29;
+    --line: #2a2e3b;
+    --text: #ece8df;
+    --muted: #9095a4;
+    --accent: #ffb000;
+    --accent-ink: #1a1200;
+    --danger: #ff6b5e;
+    --font-display: "Silkscreen", ui-monospace, monospace;
+    --font-body: "Chivo", ui-sans-serif, system-ui, sans-serif;
+    --font-data: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--text); }
+  body { font: 15px/1.5 var(--font-body); min-height: 100%; }
+  a { color: inherit; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding-inline: max(16px, 3vw); }
+
+  header { border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: baseline; gap: .4rem 1.25rem; flex-wrap: wrap; padding-block: 1.1rem; }
+  header h1 { margin: 0; font: 400 1.5rem/1 var(--font-display); letter-spacing: .02em; }
+  header h1 a { text-decoration: none; }
+  header h1 span { color: var(--accent); }
+  header p { margin: 0; color: var(--muted); font-size: .92rem; max-width: 62ch; }
+  main .wrap { padding-block: 1.5rem 3rem; }
+
+  kbd {
+    font: 700 .72rem var(--font-data); padding: .08rem .38rem; border-radius: 4px; color: var(--text);
+    background: var(--panel-2); border: 1px solid var(--line); border-bottom-width: 2px; white-space: nowrap;
+  }
+  button, select, input {
+    font: inherit; color: var(--text); background: var(--panel-2);
+    border: 1px solid var(--line); border-radius: 6px; padding: .45rem .8rem;
+  }
+  button { cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* ---------- shelf ---------- */
+  .toolbar { display: flex; gap: .75rem 1rem; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; }
+  .toolbar input { width: min(320px, 100%); }
+  .toolbar .count { color: var(--muted); font: 500 .85rem var(--font-data); }
+  .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  .card {
+    display: block; text-decoration: none; background: var(--panel); min-width: 0;
+    border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+    transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+  }
+  .card:hover, .card:focus-visible { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 6px 24px -8px rgba(255, 176, 0, .35); outline: none; }
+  .card img { display: block; width: 100%; max-width: 100%; aspect-ratio: 160 / 210; object-fit: cover; image-rendering: pixelated; background: #000; }
+  .card .name { padding: .5rem .65rem; font-weight: 600; font-size: .92rem; overflow-wrap: anywhere; }
+  .empty { color: var(--muted); }
+
+  /* ---------- cabinet ---------- */
+  #player[hidden], #picker[hidden] { display: none !important; }
+  #player { display: grid; grid-template-columns: minmax(0, 480px) minmax(240px, 300px); gap: 1.5rem; justify-content: center; align-items: start; }
+  @media (max-width: 780px) { #player { grid-template-columns: minmax(0, 1fr); } }
+  .screen {
+    position: relative; background: #000; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; line-height: 0;
+    box-shadow: 0 0 0 6px var(--panel), 0 0 60px -20px rgba(255, 176, 0, .35);
+  }
+  canvas { width: 100%; max-width: 100%; aspect-ratio: 160 / 210; height: auto; image-rendering: pixelated; display: block; }
+  .overlay {
+    position: absolute; inset: 0; display: grid; place-items: center; text-align: center;
+    background: rgba(0, 0, 0, .74); line-height: 1.5; padding: 1rem;
+  }
+  .overlay[hidden] { display: none; }
+  .overlay strong { display: block; font: 400 1.25rem var(--font-display); color: var(--accent); margin-bottom: .35rem; }
+  .overlay.err strong { color: var(--danger); }
+  .overlay .detail { color: var(--muted); font-size: .9rem; white-space: pre-wrap; max-width: 38ch; overflow-wrap: anywhere; }
+  .spin { display: inline-block; width: 1.1rem; height: 1.1rem; border: 2px solid var(--line); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; margin-bottom: .6rem; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .spin { animation: none; } .card { transition: none; } }
+
+  .side { display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
+  .titlebar { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; }
+  .titlebar h2 { margin: 0; font-size: 1.35rem; line-height: 1.2; text-wrap: balance; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 1rem; }
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+  .stat .label { color: var(--muted); font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; }
+  .stat .value { font: 700 1.15rem var(--font-data); font-variant-numeric: tabular-nums; }
+  .stat.big { grid-column: span 2; }
+  .stat.big .value { font: 400 2rem/1.1 var(--font-display); color: var(--accent); }
+  .row { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
+  .keys { display: grid; grid-template-columns: auto 1fr; gap: .45rem .8rem; font-size: .9rem; align-items: center; }
+  .keys span { color: var(--muted); }
+  .actions { color: var(--muted); font: 500 .78rem/1.6 var(--font-data); overflow-wrap: anywhere; }
+  .actions b { color: var(--text); font-weight: 700; }
+
+  /* touch pad (phones/tablets) */
+  .pad { display: none; grid-template-columns: repeat(3, 3.2rem) 1fr; grid-template-rows: repeat(3, 3.2rem); gap: .35rem; touch-action: none; user-select: none; -webkit-user-select: none; }
+  @media (pointer: coarse) { .pad { display: grid; } .keys { display: none; } }
+  .pad button { padding: 0; font: 700 1rem var(--font-data); touch-action: none; }
+  .pad button.on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .pad .fire { grid-column: 4; grid-row: 1 / span 3; justify-self: end; width: min(7rem, 100%); border-radius: 50%; aspect-ratio: 1; align-self: center; font-family: var(--font-display); font-weight: 400; }
+</style>
+
+<header>
+  <div class="wrap">
+    <h1><a href="#">JAX<span>tari</span> Arcade</a></h1>
+    <p>Atari games written in JAX, compiled to WebAssembly by whlo when you press play, and run entirely in your browser.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section id="picker">
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Search games" autocomplete="off" aria-label="Search games" />
+        <span class="count" id="count"></span>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section id="player" hidden>
+      <div class="side" style="gap:1rem">
+        <div class="screen">
+          <canvas id="screen" width="160" height="210"></canvas>
+          <div class="overlay" id="overlay" hidden><div><div class="spin" id="ov-spin"></div><strong id="ov-title"></strong><div class="detail" id="ov-detail"></div></div></div>
+        </div>
+        <div class="pad" id="pad" aria-label="Touch controls">
+          <button data-k="up,left" style="grid-column:1;grid-row:1">↖</button>
+          <button data-k="up" style="grid-column:2;grid-row:1">↑</button>
+          <button data-k="up,right" style="grid-column:3;grid-row:1">↗</button>
+          <button data-k="left" style="grid-column:1;grid-row:2">←</button>
+          <button data-k="right" style="grid-column:3;grid-row:2">→</button>
+          <button data-k="down,left" style="grid-column:1;grid-row:3">↙</button>
+          <button data-k="down" style="grid-column:2;grid-row:3">↓</button>
+          <button data-k="down,right" style="grid-column:3;grid-row:3">↘</button>
+          <button data-k="fire" class="fire">Fire</button>
+        </div>
+      </div>
+      <div class="side">
+        <div class="titlebar">
+          <button id="back">← All games</button>
+          <h2 id="title"></h2>
+        </div>
+        <div class="panel stats">
+          <div class="stat big"><div class="label">Score</div><div class="value" id="score">0</div></div>
+          <div class="stat"><div class="label">Frame</div><div class="value" id="frames">0</div></div>
+          <div class="stat"><div class="label">FPS</div><div class="value" id="fps">–</div></div>
+          <div class="stat"><div class="label">Step time</div><div class="value" id="stepms">–</div></div>
+          <div class="stat"><div class="label">Compile</div><div class="value" id="compilems">–</div></div>
+        </div>
+        <div class="panel row">
+          <label for="speed">Speed</label>
+          <select id="speed">
+            <option value="15">15 fps</option>
+            <option value="30" selected>30 fps</option>
+            <option value="60">60 fps</option>
+            <option value="120">120 fps</option>
+          </select>
+          <button id="pause">Pause</button>
+          <button id="reset">Restart</button>
+        </div>
+        <div class="panel keys">
+          <div><kbd>←</kbd> <kbd>↑</kbd> <kbd>→</kbd> <kbd>↓</kbd></div><span>Move</span>
+          <div><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></div><span>Move (alternative)</span>
+          <div><kbd>Space</kbd></div><span>Fire</span>
+          <div><kbd>P</kbd></div><span>Pause</span>
+          <div><kbd>R</kbd></div><span>Restart</span>
+          <div><kbd>Esc</kbd></div><span>Back to all games</span>
+        </div>
+        <div class="panel actions" id="actions"></div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script type="module">
+  const NAMES = {
+    airraid: "Air Raid", alien: "Alien", amidar: "Amidar", assault: "Assault", asterix: "Asterix",
+    asteroids: "Asteroids", atlantis: "Atlantis", backgammon: "Backgammon", bankheist: "Bank Heist",
+    basicmath: "Basic Math", beamrider: "Beamrider", berzerk: "Berzerk",
+    blackjack: "Blackjack", boxing: "Boxing", breakout: "Breakout", casinoblackjack: "Casino: Blackjack",
+    casinofivestudpoker: "Casino: Five-Card Stud", casinopokersolitaire: "Casino: Poker Solitaire",
+    centipede: "Centipede", choppercommand: "Chopper Command", donkeykong: "Donkey Kong",
+    enduro: "Enduro", fishingderby: "Fishing Derby", flagcapture: "Flag Capture", freeway: "Freeway",
+    frostbite: "Frostbite", galaxian: "Galaxian", gopher: "Gopher", gravitar: "Gravitar", hangman: "Hangman",
+    hauntedhouse: "Haunted House", humancannonball: "Human Cannonball", journeyescape: "Journey Escape",
+    kaboom: "Kaboom!", kangaroo: "Kangaroo", kingkong: "King Kong", klax: "Klax", lasergates: "Laser Gates",
+    miniaturegolf: "Miniature Golf", montezumarevenge: "Montezuma's Revenge", mspacman: "Ms. Pac-Man",
+    namethisgame: "Name This Game", othello: "Othello",
+    pacman: "Pac-Man", phoenix: "Phoenix", pong: "Pong", qbert: "Q*bert", riverraid: "River Raid",
+    roadrunner: "Road Runner",
+    seaquest: "Seaquest", sirlancelot: "Sir Lancelot", skiing: "Skiing", slotmachine: "Slot Machine",
+    spaceinvaders: "Space Invaders", spacewar: "Space War", surround: "Surround", tennis: "Tennis",
+    tetris: "Tetris", timepilot: "Time Pilot", tron: "Tron", turmoil: "Turmoil", upndown: "Up'n Down",
+    venture: "Venture", videocheckers: "Video Checkers", videochess: "Video Chess", videocube: "Video Cube",
+    videopinball: "Video Pinball", wizardofwor: "Wizard of Wor", wordzapper: "Word Zapper",
+    yarsrevenge: "Yars' Revenge",
+  };
+  const displayName = (n) => NAMES[n] ?? n.charAt(0).toUpperCase() + n.slice(1);
+
+  // Atari action constants (jaxtari.environment.JaxtariAction).
+  const A = {
+    NOOP: 0, FIRE: 1, UP: 2, RIGHT: 3, LEFT: 4, DOWN: 5, UPRIGHT: 6, UPLEFT: 7, DOWNRIGHT: 8,
+    DOWNLEFT: 9, UPFIRE: 10, RIGHTFIRE: 11, LEFTFIRE: 12, DOWNFIRE: 13, UPRIGHTFIRE: 14,
+    UPLEFTFIRE: 15, DOWNRIGHTFIRE: 16, DOWNLEFTFIRE: 17,
+  };
+  const ACTION_NAME = Object.fromEntries(Object.entries(A).map(([k, v]) => [v, k]));
+
+  function atariAction(up, down, left, right, fire) {
+    const name = (up ? "UP" : down ? "DOWN" : "") + (right ? "RIGHT" : left ? "LEFT" : "") + (fire ? "FIRE" : "");
+    return name ? A[name] : A.NOOP;
+  }
+
+  /** Held input -> index into the game's ACTION_SET, falling back to the
+   *  closest supported action: drop an axis, then fire, then NOOP. */
+  function actionIndex(actionSet, k) {
+    const up = k.up && !k.down, down = k.down && !k.up;
+    const left = k.left && !k.right, right = k.right && !k.left;
+    const tries = [
+      [up, down, left, right, k.fire],
+      [up, down, false, false, k.fire],
+      [false, false, left, right, k.fire],
+      [up, down, left, right, false],
+      [up, down, false, false, false],
+      [false, false, left, right, false],
+      [false, false, false, false, k.fire],
+    ];
+    for (const t of tries) {
+      const i = actionSet.indexOf(atariAction(...t));
+      if (i >= 0) return i;
+    }
+    return Math.max(0, actionSet.indexOf(A.NOOP));
+  }
+
+  const $ = (id) => document.getElementById(id);
+  const canvas = $("screen");
+  const ctx = canvas.getContext("2d");
+
+  // ---------- shelf ----------
+  let index = {};
+  try {
+    const res = await fetch("games/index.json");
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    index = await res.json();
+  } catch (e) {
+    $("grid").innerHTML = `<p class="empty">The game list didn't load (${e.message}). Reload the page to try again.</p>`;
+  }
+  const games = Object.keys(index).sort((a, b) => displayName(a).localeCompare(displayName(b)));
+
+  function renderGrid() {
+    const q = $("search").value.trim().toLowerCase();
+    const shown = games.filter((g) => !q || g.includes(q) || displayName(g).toLowerCase().includes(q));
+    $("grid").replaceChildren(...shown.map((g) => {
+      const a = document.createElement("a");
+      a.className = "card";
+      a.href = `#${g}`;
+      a.innerHTML = `<img loading="lazy" alt="" src="games/${g}/thumb.png"><div class="name"></div>`;
+      a.querySelector(".name").textContent = displayName(g);
+      return a;
+    }));
+    if (!shown.length && games.length) $("grid").innerHTML = `<p class="empty">No game matches “${q.replace(/[<>&]/g, "")}”.</p>`;
+    $("count").textContent = `${shown.length} of ${games.length} games`;
+  }
+  $("search").addEventListener("input", renderGrid);
+  renderGrid();
+
+  // ---------- cabinet ----------
+  const keys = { up: false, down: false, left: false, right: false, fire: false };
+  const KEYMAP = {
+    ArrowUp: "up", KeyW: "up", ArrowDown: "down", KeyS: "down",
+    ArrowLeft: "left", KeyA: "left", ArrowRight: "right", KeyD: "right", Space: "fire",
+  };
+
+  let worker = null;
+  let game = null;
+  let state = "idle"; // idle | loading | running | paused | over | error
+  let inFlight = false;
+  let lastSent = 0;
+  let score = 0, frames = 0;
+  let fpsCount = 0, fpsT0 = performance.now();
+  let imageData = ctx.createImageData(160, 210);
+
+  function overlay(title, detail = "", { err = false, spin = false } = {}) {
+    $("overlay").hidden = !title;
+    $("overlay").classList.toggle("err", err);
+    $("ov-spin").hidden = !spin;
+    $("ov-title").textContent = title ?? "";
+    $("ov-detail").textContent = detail;
+  }
+
+  function draw(frame) {
+    const [h, w] = index[game].frame_shape;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width = w; canvas.height = h;
+      canvas.style.aspectRatio = `${w} / ${h}`;
+    }
+    if (imageData.width !== w || imageData.height !== h) imageData = ctx.createImageData(w, h);
+    const px = imageData.data;
+    for (let i = 0, j = 0; i < frame.length; i += 3, j += 4) {
+      px[j] = frame[i]; px[j + 1] = frame[i + 1]; px[j + 2] = frame[i + 2]; px[j + 3] = 255;
+    }
+    ctx.putImageData(imageData, 0, 0);
+  }
+
+  function resetCounters() {
+    score = 0; frames = 0;
+    $("score").textContent = "0";
+    $("frames").textContent = "0";
+  }
+
+  function onMessage({ data }) {
+    if (data.type === "ready") {
+      $("compilems").textContent = `${data.compileMs.toFixed(0)} ms`;
+    } else if (data.type === "frame") {
+      inFlight = false;
+      draw(data.frame);
+      if (state === "loading") { state = "running"; overlay(null); return; }
+      frames++; fpsCount++;
+      score += data.reward;
+      $("score").textContent = Number.isInteger(score) ? score : score.toFixed(2);
+      $("frames").textContent = frames;
+      $("stepms").textContent = `${data.ms.toFixed(1)} ms`;
+      if (data.done && state === "running") {
+        state = "over";
+        overlay("Game over", `Score ${$("score").textContent}\nPress R or Restart to play again`);
+      }
+    } else if (data.type === "error") {
+      inFlight = false;
+      state = "error";
+      overlay("The game stopped", data.message, { err: true });
+    }
+  }
+
+  function openGame(name) {
+    if (!index[name]) { closeGame(); return; }
+    if (worker) worker.terminate();
+    game = name;
+    $("picker").hidden = true;
+    $("player").hidden = false;
+    $("title").textContent = displayName(name);
+    for (const id of ["compilems", "stepms", "fps"]) $(id).textContent = "–";
+    $("pause").textContent = "Pause";
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const set = index[name].action_set;
+    $("actions").innerHTML = `<b>${set.length} actions</b> · ` + set.map((a) => ACTION_NAME[a] ?? a).join(" · ");
+    resetCounters();
+    state = "loading";
+    inFlight = true;
+    overlay("Compiling", "Downloading the game's StableHLO and compiling it to WebAssembly", { spin: true });
+    worker = new Worker(new URL("./worker.mjs", import.meta.url), { type: "module" });
+    worker.onmessage = onMessage;
+    worker.onerror = (e) => onMessage({ data: { type: "error", message: e.message || "The game worker failed to start." } });
+    worker.postMessage({ type: "load", name });
+    scrollTo(0, 0);
+  }
+
+  function closeGame() {
+    if (worker) worker.terminate();
+    worker = null; game = null; state = "idle"; inFlight = false;
+    $("picker").hidden = false;
+    $("player").hidden = true;
+    overlay(null);
+  }
+
+  function resetGame() {
+    if (!worker || state === "loading" || state === "error") return;
+    resetCounters();
+    state = "loading";
+    inFlight = true;
+    overlay(null);
+    worker.postMessage({ type: "reset" });
+  }
+
+  function togglePause() {
+    if (state === "running") { state = "paused"; overlay("Paused", "Press P or Resume to continue"); $("pause").textContent = "Resume"; }
+    else if (state === "paused") { state = "running"; overlay(null); $("pause").textContent = "Pause"; }
+  }
+
+  function loop(now) {
+    requestAnimationFrame(loop);
+    if (state === "running" && !inFlight && now - lastSent >= 1000 / +$("speed").value - 1) {
+      lastSent = now;
+      inFlight = true;
+      worker.postMessage({ type: "step", action: actionIndex(index[game].action_set, keys) });
+    }
+    if (now - fpsT0 >= 500) {
+      if (state === "running") $("fps").textContent = Math.round((fpsCount * 1000) / (now - fpsT0));
+      fpsCount = 0; fpsT0 = now;
+    }
+  }
+  requestAnimationFrame(loop);
+
+  addEventListener("keydown", (e) => {
+    if (!game || e.target.tagName === "INPUT" || e.target.tagName === "SELECT") return;
+    if (KEYMAP[e.code]) { keys[KEYMAP[e.code]] = true; e.preventDefault(); }
+    else if (e.code === "KeyP") togglePause();
+    else if (e.code === "KeyR") resetGame();
+    else if (e.code === "Escape") location.hash = "";
+  });
+  addEventListener("keyup", (e) => { if (KEYMAP[e.code]) keys[KEYMAP[e.code]] = false; });
+  addEventListener("blur", () => { for (const k in keys) keys[k] = false; });
+
+  // Touch pad: each button holds one or two directions (or fire) while pressed.
+  for (const b of $("pad").querySelectorAll("button")) {
+    const ks = b.dataset.k.split(",");
+    const set = (on) => { for (const k of ks) keys[k] = on; b.classList.toggle("on", on); };
+    b.addEventListener("pointerdown", (e) => { e.preventDefault(); b.setPointerCapture(e.pointerId); set(true); });
+    for (const ev of ["pointerup", "pointercancel", "lostpointercapture"]) b.addEventListener(ev, () => set(false));
+    b.addEventListener("contextmenu", (e) => e.preventDefault());
+  }
+
+  $("back").onclick = () => (location.hash = "");
+  $("reset").onclick = (e) => { e.currentTarget.blur(); resetGame(); };
+  $("pause").onclick = (e) => { e.currentTarget.blur(); togglePause(); };
+  $("speed").onchange = (e) => e.currentTarget.blur();
+
+  function route() {
+    const name = decodeURIComponent(location.hash.slice(1));
+    if (name) { if (name !== game) openGame(name); } else closeGame();
+  }
+  addEventListener("hashchange", route);
+  route();
+</script>
+
+</body></html>
