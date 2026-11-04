@@ -11,7 +11,7 @@ from `references.bib`. Whenever this file (or the generator script) changes on
 `main`, the `update-publications` GitHub Actions workflow automatically runs
 `scripts/generate_publications_json.py`, commits the updated files in `build/`,
 and pushes the results back to the repository. You can also run the same script
-locally (requires `pip install bibtexparser`) before opening a PR:
+locally (requires `python -m pip install 'bibtexparser==1.4.3'`) before opening a PR:
 
 ```bash
 python scripts/generate_publications_json.py

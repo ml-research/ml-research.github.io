@@ -9,7 +9,8 @@ try:
     from bibtexparser.bwriter import BibTexWriter
 except ImportError as exc:
     raise SystemExit(
-        "Missing dependency bibtexparser. Install with \n\n    pip install bibtexparser\n"
+        "Missing or incompatible bibtexparser. Install with \n\n"
+        "    python -m pip install 'bibtexparser==1.4.3'\n"
     ) from exc
 
 REPO_ROOT = Path(__file__).resolve().parents[1]

@@ -1,3 +1,24 @@
+@misc{soofiteam2026sovereignopensourcefoundationmodel,
+  author = {Soofi-Team and Benedikt Droste and David Fitzek and Ruben Härle and Lukas Helff and Maximilian Idahl and Alex Jude and Abbas Goher Khan and Maurice Kraus and Timm Ruland and Richard Rutmann and Sebastian Sztwiertnia and Markus Frey and Daniil Gurgurov and Jan Pfister and Tom Röhr and Sebastian von Rohrscheidt and Jörg Bienert and Nicolas Flores-Herr and Simon Gottschalk and Andreas Hotho and Kristian Kersting and Joachim Köhler and Alexander Löser and Wolfgang Nejdl and Simon Ostermann and Jan Plogsties and Björn Plüster and Patrick Putzky and Mehdi Ali and Michael Fromm and Max Lübbering},
+  note = {We present Soofi S 30B-A3B, a sovereign, open-source Mixture-of-Experts (MoE) hybrid Mamba
+Transformer foundation model for German and English. Its hybrid design activates only 3B of 30B
+parameters per token and keeps the inference cache near-constant as context grows, giving it a
+decisive throughput advantage over dense models for long-context, high-concurrency deployment.
+Pretrained on roughly 27 trillion tokens with deliberately up-weighted German, Soofi S matches
+dense 14 to 27B models on aggregate English and German benchmarks while achieving the best
+code aggregates in both languages among 16 open base models, and outperforms every European
+sovereign baseline in our comparison, including ones far larger in active parameters. Among fully
+open models, Soofi S obtains the highest English and German evaluation scores, ahead of Olmo 3 32B
+and Apertus 70B. Soofi S was built end-to-end on the German Industrial AI Cloud, a sovereign HPCscale AI infrastructure operated by Deutsche Telekom in Munich. Soofi S will be released under
+highly permissive, open-access terms: weights, selected intermediate checkpoints1, full per-source
+data accounting, hyperparameters, and training and evaluation code. Where source licenses permit,
+data-construction artifacts are released under permissive licenses; commercially licensed sources are
+documented with aggregate statistics and exact mixture accounting.},
+  title = {A Sovereign, Open-Source Foundation Model for German and English},
+  url = {https://arxiv.org/abs/2607.09424},
+  year = {2026}
+}
+
 @inproceedings{sha2026birds,
   author = {Jingyuan Sha and Hikaru Shindo and Kristian Kersting and Devendra Singh Dhami},
   booktitle = {Proceedings of the 42nd Conference on Uncertainty in Artificial Intelligence (UAI)},
